@@ -86,7 +86,7 @@ context loss. Append, don't rewrite history.
       `src/lib/engine/rule-types.ts`, `src/lib/engine/tiers.ts`)
 - [ ] Slop engine + rule packs + unit tests — delegated (Sol xhigh, codex_account_3, task slop-shame-engine-r1)
 - [x] LinkedIn feed adapter + fixtures + Playwright harness — committed (aec40c1). Live: 8/8 real cards detected. Real-feed run: `SLOP_REAL=1 pnpm test:e2e --project=real-linkedin`; re-login: `pnpm linkedin:login`.
-  - [ ] Round 2 (same agent): cut mutation churn (class/characterData re-extraction), per-card cooldown, fast fingerprint; before/after live numbers
+  - [x] Round 2: mutation churn cut (240 → 0 re-extractions under simulated churn), committed
 - [x] Leaderboard store (IndexedDB, background) — done, reviewed, committed. Ranking: round(Σ(score−30)^1.3/10 + 3×slopocalypse posts) over posts ≥40. Titles: Slop Intern → Slop Emperor.
 - [ ] Assets (tier icons, buttons, shame art, mascot "Sloppy", extension icon) — delegated (Sol high, codex, slop-shame-assets-r1); art direction in the task prompt, prompts saved to assets-src/prompts/
 - [ ] UI: badge, Destroy eruption, Shame modal, popup, Hall of Slop page — delegated (Opus xhigh, claudeAgent_cash, slop-shame-ui-r2; r1 cancelled for running at medium)
