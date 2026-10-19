@@ -59,6 +59,8 @@ context loss. Append, don't rewrite history.
     dictionaries, calibration data and evals are about AI vs human text in
     general (all genres/registers). LinkedIn-specific code stays in the DOM
     adapter and UI.
+24. Scope stays LinkedIn-feed-only for now (Slop Lab page and right-click
+    "check any text" were offered and deferred).
 
 ## Decisions
 
@@ -106,6 +108,9 @@ context loss. Append, don't rewrite history.
   - [ ] Vendor external dictionaries → `src/lib/engine/packs/vendor/` (not registered yet) — delegated (Sol xhigh, codex_nush, slop-shame-dicts-ingest-r1)
   - [ ] Calibration dataset (human vs AI, hard human negatives: non-native, formal) + `pnpm eval` harness → `eval/`, `data/eval/` — delegated (Sol xhigh, codex_quaternary, slop-shame-calibration-r1)
   - [ ] Retune scoring with vendor packs + eval (needs engine r1 + both above)
+- [ ] Bug-hunt review of store + adapter (Sol xhigh, codex_account_3, slop-shame-review-store-adapter-r1) — review-only
+- Blocked on UI agent: content-script integration on real feed, perf soak vs real UI, README screenshots/GIFs. Then: final Opus review + security review.
+- Capacity note (15:20): claudeAgent_cash 66% of 5h (resets ~17:00); if UI agent hits stop threshold, resume it after reset.
 - ~~Research → `research/`:~~ slop-dictionaries.md (Grok), detection-methods.md (Grok), landscape.md incl. Chrome Web Store / LinkedIn ToS risks (Grok), frequency-evidence.md (Gemini), social-post-tells.md (Gemini)
 - [ ] Orchestrator review + integration + commit of each workstream; feed research findings into the engine (round 2)
 - [x] Owner logged in to LinkedIn once (profile `.playwright/linkedin-profile`, verified: feed loads)
