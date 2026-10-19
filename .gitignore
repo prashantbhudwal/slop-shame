@@ -30,3 +30,4 @@ web-ext.config.ts
 test-results/
 playwright-report/
 assets-src/raw/
+tests/fixtures/feed/captured/
