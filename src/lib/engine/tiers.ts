@@ -1,6 +1,6 @@
 import type { SlopTier, SlopTierId } from './types';
 
-/** Ordered low → high. Icons live at src/assets/tiers/<id>.png. */
+/** Ordered low → high. Icons live at public/assets/tiers/<id>.webp. */
 export const TIERS: readonly SlopTier[] = [
   { id: 'artisanal', label: 'Artisanal Human', min: 0, blurb: 'Hand-typed by a real person. Rare. Cherish it.' },
   { id: 'whiff', label: 'Faint Whiff', min: 20, blurb: 'Something smells a little… optimized.' },

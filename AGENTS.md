@@ -30,7 +30,7 @@ card for the post's author).
 | `src/entrypoints/linkedin.content/` | Content script wiring | |
 | `src/entrypoints/popup/` | Toolbar popup | |
 | `src/entrypoints/leaderboard/` | Hall of Slop full page | |
-| `src/assets/` | Final, optimized assets (bundled) | `tiers/<tierId>.png`, `ui/`, `shame/`. |
+| `public/assets/` | Final, optimized assets | `tiers/<tierId>.webp`, `ui/`, `fx/`, `shame/`, `mascot/`. Loaded in pages via `browser.runtime.getURL('/assets/…')`; must be listed in `web_accessible_resources` for linkedin.com. Extension icons: `public/icon/<size>.png`. |
 | `assets-src/` | Asset pipeline: `prompts/` (committed), `raw/` (gitignored), `processed/` | |
 
 ## Performance rules (the feed is infinite; we run on the main thread)
@@ -41,7 +41,7 @@ card for the post's author).
   post id.
 - One MutationObserver for the feed. When LinkedIn removes a post, unmount its
   Svelte component and drop every reference (no detached-DOM leaks).
-- Assets: small PNG/WebP, lazy-loaded via `browser.runtime.getURL`.
+- Assets: small WebP, lazy-loaded via `browser.runtime.getURL`.
 
 ## Commands
 
