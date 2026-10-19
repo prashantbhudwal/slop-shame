@@ -57,11 +57,12 @@ context loss. Append, don't rewrite history.
 
 - [x] Stack chosen, project scaffolded, contracts written (`src/lib/*/types.ts`,
       `src/lib/engine/rule-types.ts`, `src/lib/engine/tiers.ts`)
-- [ ] Slop engine + rule packs + unit tests
-- [ ] LinkedIn feed adapter + fixtures + Playwright harness
-- [ ] Leaderboard store (IndexedDB, background)
-- [ ] Assets (tier icons, buttons, shame art, extension icon)
-- [ ] UI: badge, Destroy eruption, Shame modal, popup, Hall of Slop page
+- [ ] Slop engine + rule packs + unit tests — delegated (Sol xhigh, codex_account_3, task slop-shame-engine-r1)
+- [ ] LinkedIn feed adapter + fixtures + Playwright harness — delegated (Sol xhigh, codex_quaternary, slop-shame-adapter-r1)
+- [ ] Leaderboard store (IndexedDB, background) — delegated (Sol xhigh, codex_nush, slop-shame-store-r1)
+- [ ] Assets (tier icons, buttons, shame art, mascot "Sloppy", extension icon) — delegated (Sol high, codex, slop-shame-assets-r1); art direction in the task prompt, prompts saved to assets-src/prompts/
+- [ ] UI: badge, Destroy eruption, Shame modal, popup, Hall of Slop page — delegated (Opus, claudeAgent_cash, slop-shame-ui-r1)
+- [ ] Orchestrator review + integration + commit of each workstream
 - [ ] End-to-end test on real LinkedIn (needs owner login once)
 
 ## Open questions for the owner
