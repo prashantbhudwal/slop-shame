@@ -54,6 +54,11 @@ context loss. Append, don't rewrite history.
 22. Shame is only offered when the engine says `shameable` (score ≥ 40, ≥ 40
     words, ≥ 1 phrase/discourse tell — style alone never qualifies). Destroy
     is always available on non-ad posts.
+23. **First principles: this is a general AI-text detection problem**, not a
+    LinkedIn text problem. LinkedIn is only the first surface. Engine rules,
+    dictionaries, calibration data and evals are about AI vs human text in
+    general (all genres/registers). LinkedIn-specific code stays in the DOM
+    adapter and UI.
 
 ## Decisions
 
