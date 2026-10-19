@@ -61,6 +61,15 @@ context loss. Append, don't rewrite history.
     adapter and UI.
 24. Scope stays LinkedIn-feed-only for now (Slop Lab page and right-click
     "check any text" were offered and deferred).
+25. Once a testable build exists, **install it on the owner's own Chrome**
+    (branded Chrome 155). Branded Chrome blocks `--load-extension` and
+    off-store `.crx`, so it is "Load unpacked" from a stable folder outside the
+    repo (agents' rebuilds can't break the owner's copy). Owner does the
+    one-time click; we give exact steps.
+26. Research how to **publish on the Chrome Web Store**: registration,
+    review, and the hurdles Google puts in the way. Also cover other Chromium
+    stores and sideloading. Reports go to `research/chrome-web-store-publishing.md`
+    and `research/other-chromium-stores.md`.
 
 ## Decisions
 
@@ -114,6 +123,8 @@ context loss. Append, don't rewrite history.
 - Capacity note (15:20): claudeAgent_cash 66% of 5h (resets ~17:00); if UI agent hits stop threshold, resume it after reset.
 - ~~Research → `research/`:~~ slop-dictionaries.md (Grok), detection-methods.md (Grok), landscape.md incl. Chrome Web Store / LinkedIn ToS risks (Grok), frequency-evidence.md (Gemini), social-post-tells.md (Gemini)
 - [ ] Orchestrator review + integration + commit of each workstream; feed research findings into the engine (round 2)
+- [ ] Install a testable build on the owner's Chrome (after UI r2 lands + passes e2e): copy `.output/chrome-mv3` to a stable folder outside the repo, owner does Load unpacked once, reload after updates.
+- [ ] Publishing research: CWS process + hurdles (Grok, cursor, slop-shame-research-cws-publish-r1); other Chromium stores + sideloading (Gemini, antigravity, slop-shame-research-other-stores-r1)
 - [x] Owner logged in to LinkedIn once (profile `.playwright/linkedin-profile`, verified: feed loads)
 - [ ] End-to-end test on real LinkedIn
   - Finding: the real feed uses LinkedIn's new SDUI markup (hashed classes, no `data-urn`). Stable hooks: `data-view-name` (`feed-full-update` = post card, `feed-commentary` = text, `feed-actor` = author), `componentkey` (`expanded<id>FeedType_MAIN_FEED_RELEVANCE`), `data-sdui-anchor-id="feed-header-urn:li:activity:<n>-0"`. Sent to the adapter agent as a steer.
