@@ -1,0 +1,152 @@
+[
+  {
+    "name": "sloppy",
+    "group": "mascot",
+    "size": 512,
+    "reference": false,
+    "prompt": "Die-cut vinyl sticker illustration. Bold, chunky, cartoon style with thick dark-navy (#1B1F3B) outlines, a clean 6px white sticker border around the whole silhouette, flat cel shading with one soft highlight, glossy. Saturated palette: slop green (#8BC34A to #5E8C1F, gooey, drippy, slightly translucent), corporate LinkedIn-ish blue (#0A66C2) for ties/lanyards/suits, warning orange/red for danger. Funny, expressive, readable at small sizes, centered single subject, no text unless specified, plain flat solid light grey (#E6E6E6) background, no shadows on the background.\n\nUse case: illustration-story.\nAsset: Sloppy base mascot, square 1024px composition. Sloppy is a gooey green blob of slop with big expressive cartoon eyes, a tiny navy-blue corporate necktie, a company lanyard badge, little drips falling off. Sloppy waves cheerfully with one little goo arm, smiling. Full body, centered single subject fills 85% of canvas. Badge is blank, no letters, no writing or stray text. Clear large eyes and simple recognizable silhouette. Preserve this design as the canonical identity for all future mascot poses. Solid grey backdrop for later removal."
+  },
+  {
+    "name": "artisanal",
+    "group": "tiers",
+    "size": 256,
+    "reference": false,
+    "prompt": "Die-cut vinyl sticker illustration. Bold, chunky, cartoon style with thick dark-navy (#1B1F3B) outlines, a clean 6px white sticker border around the whole silhouette, flat cel shading with one soft highlight, glossy. Saturated palette: slop green (#8BC34A to #5E8C1F, gooey, drippy, slightly translucent), corporate LinkedIn-ish blue (#0A66C2) for ties/lanyards/suits, warning orange/red for danger. Funny, expressive, readable at small sizes, centered single subject, no text unless specified, plain flat solid light grey (#E6E6E6) background, no shadows on the background.\n\nUse case: illustration-story.\nAsset: Artisanal Human: a proud, happy, hand-crafted wooden heart-shaped badge with a little leaf sprig and a tiny hand-stitched texture. Warm wood and cream tones, wholesome, clean, sparkling. The ONLY non-green tier icon, no slop or slime. Thick clear silhouette, minimal details remain legible at 24px.\nComposition: centered single subject, complete silhouette inside the canvas, subject fills about 85% of canvas with no cropping. Use a simple clear graphic for small-size readability. No stray text, no watermarks."
+  },
+  {
+    "name": "whiff",
+    "group": "tiers",
+    "size": 256,
+    "reference": false,
+    "prompt": "Die-cut vinyl sticker illustration. Bold, chunky, cartoon style with thick dark-navy (#1B1F3B) outlines, a clean 6px white sticker border around the whole silhouette, flat cel shading with one soft highlight, glossy. Saturated palette: slop green (#8BC34A to #5E8C1F, gooey, drippy, slightly translucent), corporate LinkedIn-ish blue (#0A66C2) for ties/lanyards/suits, warning orange/red for danger. Funny, expressive, readable at small sizes, centered single subject, no text unless specified, plain flat solid light grey (#E6E6E6) background, no shadows on the background.\n\nUse case: illustration-story.\nAsset: Faint Whiff: a small, mostly-clean cream coffee mug with a single faint wavy green stink line rising from it and a suspicious side-eye on the mug face. One large simple mug, clean silhouette and large expressive eyes legible at 24px.\nComposition: centered single subject, complete silhouette inside the canvas, subject fills about 85% of canvas with no cropping. Use a simple clear graphic for small-size readability. No stray text, no watermarks."
+  },
+  {
+    "name": "certified",
+    "group": "tiers",
+    "size": 256,
+    "reference": true,
+    "prompt": "Die-cut vinyl sticker illustration. Bold, chunky, cartoon style with thick dark-navy (#1B1F3B) outlines, a clean 6px white sticker border around the whole silhouette, flat cel shading with one soft highlight, glossy. Saturated palette: slop green (#8BC34A to #5E8C1F, gooey, drippy, slightly translucent), corporate LinkedIn-ish blue (#0A66C2) for ties/lanyards/suits, warning orange/red for danger. Funny, expressive, readable at small sizes, centered single subject, no text unless specified, plain flat solid light grey (#E6E6E6) background, no shadows on the background.\n\nUse case: illustration-story.\nAsset: Certified Slop: Sloppy the mascot sitting in a metal pig trough, wearing a gold rosette ribbon award, smug grin. Use reference image 1 as canonical Sloppy identity: green drippy blob, big eyes, tiny navy-blue corporate tie, blue lanyard with blank badge. His eyes and face are large. Simple front three-quarter silhouette, trough and gold rosette clearly distinguish this tier at 24px.\nComposition: centered single subject, complete silhouette inside the canvas, subject fills about 85% of canvas with no cropping. Use a simple clear graphic for small-size readability. No stray text, no watermarks.\n\nCritical expression direction: Sloppy must look SMUG, self-satisfied and insufferably proud: half-lidded eyes, one eyebrow raised, and a crooked closed-mouth smirk. Not a cheerful open-mouth smile. Maintain identical mascot identity and the complete composition requested above.",
+    "rerolls": 1
+  },
+  {
+    "name": "swamp",
+    "group": "tiers",
+    "size": 256,
+    "reference": false,
+    "prompt": "Die-cut vinyl sticker illustration. Bold, chunky, cartoon style with thick dark-navy (#1B1F3B) outlines, a clean 6px white sticker border around the whole silhouette, flat cel shading with one soft highlight, glossy. Saturated palette: slop green (#8BC34A to #5E8C1F, gooey, drippy, slightly translucent), corporate LinkedIn-ish blue (#0A66C2) for ties/lanyards/suits, warning orange/red for danger. Funny, expressive, readable at small sizes, centered single subject, no text unless specified, plain flat solid light grey (#E6E6E6) background, no shadows on the background.\n\nUse case: illustration-story.\nAsset: Slop Swamp: a swamp monster made of green slop rising out of a slop puddle, wearing a corporate blue business suit jacket, lanyard with blank badge and headset microphone, arms raised like a keynote speaker on a TED stage. No actual stage or background objects, no text. Large expressive monster face and raised arms, instantly recognizable at 24px.\nComposition: centered single subject, complete silhouette inside the canvas, subject fills about 85% of canvas with no cropping. Use a simple clear graphic for small-size readability. No stray text, no watermarks."
+  },
+  {
+    "name": "slopocalypse",
+    "group": "tiers",
+    "size": 256,
+    "reference": false,
+    "prompt": "Die-cut vinyl sticker illustration. Bold, chunky, cartoon style with thick dark-navy (#1B1F3B) outlines, a clean 6px white sticker border around the whole silhouette, flat cel shading with one soft highlight, glossy. Saturated palette: slop green (#8BC34A to #5E8C1F, gooey, drippy, slightly translucent), corporate LinkedIn-ish blue (#0A66C2) for ties/lanyards/suits, warning orange/red for danger. Funny, expressive, readable at small sizes, centered single subject, no text unless specified, plain flat solid light grey (#E6E6E6) background, no shadows on the background.\n\nUse case: illustration-story.\nAsset: SLOPOCALYPSE: a nuclear mushroom cloud made of glowing radioactive green slop, with a screaming face in the cloud, a navy necktie flapping in the blast, orange fire at the base. No text. Huge clear mushroom-cloud silhouette, simple large screaming face, readable at 24px.\nComposition: centered single subject, complete silhouette inside the canvas, subject fills about 85% of canvas with no cropping. Use a simple clear graphic for small-size readability. No stray text, no watermarks."
+  },
+  {
+    "name": "destroy",
+    "group": "ui",
+    "size": 256,
+    "reference": false,
+    "prompt": "Die-cut vinyl sticker illustration. Bold, chunky, cartoon style with thick dark-navy (#1B1F3B) outlines, a clean 6px white sticker border around the whole silhouette, flat cel shading with one soft highlight, glossy. Saturated palette: slop green (#8BC34A to #5E8C1F, gooey, drippy, slightly translucent), corporate LinkedIn-ish blue (#0A66C2) for ties/lanyards/suits, warning orange/red for danger. Funny, expressive, readable at small sizes, centered single subject, no text unless specified, plain flat solid light grey (#E6E6E6) background, no shadows on the background.\n\nUse case: illustration-story.\nAsset: A cartoon red TNT detonator plunger box with the plunger pushed halfway, small sparks. Clean chunky silhouette, three-quarter view, bold handle and red box. No lettering, no text.\nComposition: centered single subject, complete silhouette inside the canvas, subject fills about 85% of canvas with no cropping. Use a simple clear graphic for small-size readability. No stray text, no watermarks."
+  },
+  {
+    "name": "shame",
+    "group": "ui",
+    "size": 256,
+    "reference": false,
+    "prompt": "Die-cut vinyl sticker illustration. Bold, chunky, cartoon style with thick dark-navy (#1B1F3B) outlines, a clean 6px white sticker border around the whole silhouette, flat cel shading with one soft highlight, glossy. Saturated palette: slop green (#8BC34A to #5E8C1F, gooey, drippy, slightly translucent), corporate LinkedIn-ish blue (#0A66C2) for ties/lanyards/suits, warning orange/red for danger. Funny, expressive, readable at small sizes, centered single subject, no text unless specified, plain flat solid light grey (#E6E6E6) background, no shadows on the background.\n\nUse case: illustration-story.\nAsset: A brass hand bell mid-ring with motion lines, ringing lines in red. Funny Game-of-Thrones Shame! Shame! energy, but no text. A single shiny brass hand bell tilted as it rings, clear dark handle.\nComposition: centered single subject, complete silhouette inside the canvas, subject fills about 85% of canvas with no cropping. Use a simple clear graphic for small-size readability. No stray text, no watermarks."
+  },
+  {
+    "name": "crown",
+    "group": "ui",
+    "size": 256,
+    "reference": false,
+    "prompt": "Die-cut vinyl sticker illustration. Bold, chunky, cartoon style with thick dark-navy (#1B1F3B) outlines, a clean 6px white sticker border around the whole silhouette, flat cel shading with one soft highlight, glossy. Saturated palette: slop green (#8BC34A to #5E8C1F, gooey, drippy, slightly translucent), corporate LinkedIn-ish blue (#0A66C2) for ties/lanyards/suits, warning orange/red for danger. Funny, expressive, readable at small sizes, centered single subject, no text unless specified, plain flat solid light grey (#E6E6E6) background, no shadows on the background.\n\nUse case: illustration-story.\nAsset: A gold crown dripping green slop, for number one on a leaderboard. Single simple gold crown with three bold peaks and glossy green goo dripping over the rim.\nComposition: centered single subject, complete silhouette inside the canvas, subject fills about 85% of canvas with no cropping. Use a simple clear graphic for small-size readability. No stray text, no watermarks."
+  },
+  {
+    "name": "trophy",
+    "group": "ui",
+    "size": 256,
+    "reference": false,
+    "prompt": "Die-cut vinyl sticker illustration. Bold, chunky, cartoon style with thick dark-navy (#1B1F3B) outlines, a clean 6px white sticker border around the whole silhouette, flat cel shading with one soft highlight, glossy. Saturated palette: slop green (#8BC34A to #5E8C1F, gooey, drippy, slightly translucent), corporate LinkedIn-ish blue (#0A66C2) for ties/lanyards/suits, warning orange/red for danger. Funny, expressive, readable at small sizes, centered single subject, no text unless specified, plain flat solid light grey (#E6E6E6) background, no shadows on the background.\n\nUse case: illustration-story.\nAsset: The Golden Trough: a golden trophy shaped like a pig trough overflowing with green slop. Gold metal trough bowl on a trophy stem and pedestal. No text or engraved lettering.\nComposition: centered single subject, complete silhouette inside the canvas, subject fills about 85% of canvas with no cropping. Use a simple clear graphic for small-size readability. No stray text, no watermarks."
+  },
+  {
+    "name": "kaboom",
+    "group": "fx",
+    "size": 512,
+    "reference": false,
+    "prompt": "Die-cut vinyl sticker illustration. Bold, chunky, cartoon style with thick dark-navy (#1B1F3B) outlines, a clean 6px white sticker border around the whole silhouette, flat cel shading with one soft highlight, glossy. Saturated palette: slop green (#8BC34A to #5E8C1F, gooey, drippy, slightly translucent), corporate LinkedIn-ish blue (#0A66C2) for ties/lanyards/suits, warning orange/red for danger. Funny, expressive, readable at small sizes, centered single subject, no text unless specified, plain flat solid light grey (#E6E6E6) background, no shadows on the background.\n\nUse case: illustration-story.\nAsset: Comic-book explosion burst, jagged yellow/orange/red starburst with the text \"KA-SLOP!\" in big bold comic letters. TEXT REQUIRED, spelled exactly KA-SLOP! (K A hyphen S L O P exclamation mark). Only this text, no other words. Wide 4:3 composition; keep the complete burst and all lettering inside the canvas. Thick navy lettering with cream fill remains readable when small.\nComposition: centered single subject, complete silhouette inside the canvas, subject fills about 85% of canvas with no cropping. Use a simple clear graphic for small-size readability. No stray text, no watermarks."
+  },
+  {
+    "name": "splat-1",
+    "group": "fx",
+    "size": 256,
+    "reference": false,
+    "prompt": "Die-cut vinyl sticker illustration. Bold, chunky, cartoon style with thick dark-navy (#1B1F3B) outlines, a clean 6px white sticker border around the whole silhouette, flat cel shading with one soft highlight, glossy. Saturated palette: slop green (#8BC34A to #5E8C1F, gooey, drippy, slightly translucent), corporate LinkedIn-ish blue (#0A66C2) for ties/lanyards/suits, warning orange/red for danger. Funny, expressive, readable at small sizes, centered single subject, no text unless specified, plain flat solid light grey (#E6E6E6) background, no shadows on the background.\n\nUse case: illustration-story.\nAsset: A top-down green slop splatter particle, broad round central glossy goo puddle with five uneven rounded lobes and a few separate round droplets. SPECIAL OVERRIDE: NO white border and NO outline whatsoever. Just glossy saturated green goo on flat light grey. No face, no eyes, no text.\nComposition: centered single subject, complete silhouette inside the canvas, subject fills about 85% of canvas with no cropping. Use a simple clear graphic for small-size readability. No stray text, no watermarks."
+  },
+  {
+    "name": "splat-2",
+    "group": "fx",
+    "size": 256,
+    "reference": false,
+    "prompt": "Die-cut vinyl sticker illustration. Bold, chunky, cartoon style with thick dark-navy (#1B1F3B) outlines, a clean 6px white sticker border around the whole silhouette, flat cel shading with one soft highlight, glossy. Saturated palette: slop green (#8BC34A to #5E8C1F, gooey, drippy, slightly translucent), corporate LinkedIn-ish blue (#0A66C2) for ties/lanyards/suits, warning orange/red for danger. Funny, expressive, readable at small sizes, centered single subject, no text unless specified, plain flat solid light grey (#E6E6E6) background, no shadows on the background.\n\nUse case: illustration-story.\nAsset: A top-down green slop splatter particle, asymmetrical diagonal splash with a long stretched goo drip pointing toward the upper right and several separate round droplets. Clearly different from a round splat. SPECIAL OVERRIDE: NO white border and NO outline whatsoever. Just glossy saturated green goo on flat light grey. No face, no eyes, no text.\nComposition: centered single subject, complete silhouette inside the canvas, subject fills about 85% of canvas with no cropping. Use a simple clear graphic for small-size readability. No stray text, no watermarks."
+  },
+  {
+    "name": "splat-3",
+    "group": "fx",
+    "size": 256,
+    "reference": false,
+    "prompt": "Die-cut vinyl sticker illustration. Bold, chunky, cartoon style with thick dark-navy (#1B1F3B) outlines, a clean 6px white sticker border around the whole silhouette, flat cel shading with one soft highlight, glossy. Saturated palette: slop green (#8BC34A to #5E8C1F, gooey, drippy, slightly translucent), corporate LinkedIn-ish blue (#0A66C2) for ties/lanyards/suits, warning orange/red for danger. Funny, expressive, readable at small sizes, centered single subject, no text unless specified, plain flat solid light grey (#E6E6E6) background, no shadows on the background.\n\nUse case: illustration-story.\nAsset: A top-down green slop splatter particle, compact star-like splash of goo with seven short irregular tapered radiating arms and three detached droplets. Distinct from round puddle and long diagonal splat. SPECIAL OVERRIDE: NO white border and NO outline whatsoever. Just glossy saturated green goo on flat light grey. No face, no eyes, no text.\nComposition: centered single subject, complete silhouette inside the canvas, subject fills about 85% of canvas with no cropping. Use a simple clear graphic for small-size readability. No stray text, no watermarks."
+  },
+  {
+    "name": "stamp-shamed",
+    "group": "shame",
+    "size": 512,
+    "reference": false,
+    "prompt": "Die-cut vinyl sticker illustration. Bold, chunky, cartoon style with thick dark-navy (#1B1F3B) outlines, a clean 6px white sticker border around the whole silhouette, flat cel shading with one soft highlight, glossy. Saturated palette: slop green (#8BC34A to #5E8C1F, gooey, drippy, slightly translucent), corporate LinkedIn-ish blue (#0A66C2) for ties/lanyards/suits, warning orange/red for danger. Funny, expressive, readable at small sizes, centered single subject, no text unless specified, plain flat solid light grey (#E6E6E6) background, no shadows on the background.\n\nUse case: illustration-story.\nAsset: A red rubber-stamp impression reading \"SHAMED\". TEXT REQUIRED, spelled exactly SHAMED in large uppercase block letters inside a rectangular red stamp border, distressed ink texture, slightly rotated about 9 degrees. SPECIAL OVERRIDE: no white sticker border, no cartoon navy outline, only red distressed stamp ink on the flat grey background. No rubber stamp object, just the ink impression; no extra text.\nComposition: centered single subject, complete silhouette inside the canvas, subject fills about 85% of canvas with no cropping. Use a simple clear graphic for small-size readability. No stray text, no watermarks."
+  },
+  {
+    "name": "seal-slop",
+    "group": "shame",
+    "size": 512,
+    "reference": false,
+    "prompt": "Die-cut vinyl sticker illustration. Bold, chunky, cartoon style with thick dark-navy (#1B1F3B) outlines, a clean 6px white sticker border around the whole silhouette, flat cel shading with one soft highlight, glossy. Saturated palette: slop green (#8BC34A to #5E8C1F, gooey, drippy, slightly translucent), corporate LinkedIn-ish blue (#0A66C2) for ties/lanyards/suits, warning orange/red for danger. Funny, expressive, readable at small sizes, centered single subject, no text unless specified, plain flat solid light grey (#E6E6E6) background, no shadows on the background.\n\nUse case: illustration-story.\nAsset: A gold foil certificate seal / rosette with two gold ribbons. Required text \"CERTIFIED SLOP\" around the edge, spelled exactly CERTIFIED SLOP. Top arc CERTIFIED, bottom arc SLOP, large readable embossed uppercase letters. A green slop blob in the middle, no extra text. Glossy golden foil with crisp simple folds.\nComposition: centered single subject, complete silhouette inside the canvas, subject fills about 85% of canvas with no cropping. Use a simple clear graphic for small-size readability. No stray text, no watermarks."
+  },
+  {
+    "name": "wanted-frame",
+    "group": "shame",
+    "size": 1024,
+    "reference": false,
+    "prompt": "Die-cut vinyl sticker illustration. Bold, chunky, cartoon style with thick dark-navy (#1B1F3B) outlines, a clean 6px white sticker border around the whole silhouette, flat cel shading with one soft highlight, glossy. Saturated palette: slop green (#8BC34A to #5E8C1F, gooey, drippy, slightly translucent), corporate LinkedIn-ish blue (#0A66C2) for ties/lanyards/suits, warning orange/red for danger. Funny, expressive, readable at small sizes, centered single subject, no text unless specified, plain flat solid light grey (#E6E6E6) background, no shadows on the background.\n\nUse case: illustration-story.\nAsset: An old western WANTED poster paper texture: aged parchment, torn edges, nail holes, portrait 3:4 aspect. The word \"WANTED\" at the top in large bold old western uppercase type, spelled exactly WANTED. Large EMPTY area in the middle for later overlaying an author's portrait and shame text. No other lettering, no portrait, no doodles, no icons. SPECIAL OVERRIDE: this is a full rectangular 3:4 parchment background filling the whole image, keep its own opaque background, no white sticker border, no cartoon outlines. Warm aged paper with worn perimeter and very subtle paper texture in the large empty middle.\nComposition: centered single subject, complete silhouette inside the canvas, subject fills about 85% of canvas with no cropping. Use a simple clear graphic for small-size readability. No stray text, no watermarks."
+  },
+  {
+    "name": "sloppy-horrified",
+    "group": "mascot",
+    "size": 512,
+    "reference": true,
+    "prompt": "Die-cut vinyl sticker illustration. Bold, chunky, cartoon style with thick dark-navy (#1B1F3B) outlines, a clean 6px white sticker border around the whole silhouette, flat cel shading with one soft highlight, glossy. Saturated palette: slop green (#8BC34A to #5E8C1F, gooey, drippy, slightly translucent), corporate LinkedIn-ish blue (#0A66C2) for ties/lanyards/suits, warning orange/red for danger. Funny, expressive, readable at small sizes, centered single subject, no text unless specified, plain flat solid light grey (#E6E6E6) background, no shadows on the background.\n\nUse case: illustration-story.\nAsset: Sloppy horrified, hands on cheeks in the Home Alone face: huge shocked eyes, open oval screaming mouth, both goo hands against his cheeks. Use reference image 1 as canonical Sloppy identity: green drippy blob, big eyes with the same shape, tiny navy-blue corporate necktie, blue company lanyard and blank badge. Full body, little drips falling off. No text.\nComposition: centered single subject, complete silhouette inside the canvas, subject fills about 85% of canvas with no cropping. Use a simple clear graphic for small-size readability. No stray text, no watermarks."
+  },
+  {
+    "name": "sloppy-crowned",
+    "group": "mascot",
+    "size": 512,
+    "reference": true,
+    "prompt": "Die-cut vinyl sticker illustration. Bold, chunky, cartoon style with thick dark-navy (#1B1F3B) outlines, a clean 6px white sticker border around the whole silhouette, flat cel shading with one soft highlight, glossy. Saturated palette: slop green (#8BC34A to #5E8C1F, gooey, drippy, slightly translucent), corporate LinkedIn-ish blue (#0A66C2) for ties/lanyards/suits, warning orange/red for danger. Funny, expressive, readable at small sizes, centered single subject, no text unless specified, plain flat solid light grey (#E6E6E6) background, no shadows on the background.\n\nUse case: illustration-story.\nAsset: Sloppy wearing a gold crown dripping green slop, sitting on a throne made of office chairs, smug. Use reference image 1 as canonical Sloppy identity: same green drippy blob, expressive big eyes, tiny navy-blue corporate necktie, blue company lanyard and blank badge. Full throne and body visible, clear crown, office chair armrests and wheels. No text.\nComposition: centered single subject, complete silhouette inside the canvas, subject fills about 85% of canvas with no cropping. Use a simple clear graphic for small-size readability. No stray text, no watermarks.\n\nCritical expression direction: Sloppy must look SMUG, self-satisfied and insufferably proud: half-lidded eyes, one eyebrow raised, and a crooked closed-mouth smirk. Not a cheerful open-mouth smile. Maintain identical mascot identity and the complete composition requested above.",
+    "rerolls": 1
+  },
+  {
+    "name": "sloppy-exploded",
+    "group": "mascot",
+    "size": 512,
+    "reference": true,
+    "prompt": "Die-cut vinyl sticker illustration. Bold, chunky, cartoon style with thick dark-navy (#1B1F3B) outlines, a clean 6px white sticker border around the whole silhouette, flat cel shading with one soft highlight, glossy. Saturated palette: slop green (#8BC34A to #5E8C1F, gooey, drippy, slightly translucent), corporate LinkedIn-ish blue (#0A66C2) for ties/lanyards/suits, warning orange/red for danger. Funny, expressive, readable at small sizes, centered single subject, no text unless specified, plain flat solid light grey (#E6E6E6) background, no shadows on the background.\n\nUse case: illustration-story.\nAsset: Sloppy blown into pieces and splattered, with dizzy swirl eyes, tie still intact. Use reference image 1 as canonical Sloppy identity: same glossy green drippy blob, big expressive eyes, tiny navy-blue corporate necktie, blue company lanyard and blank badge. Comic non-gory goo explosion with separated blob fragments and droplets orbiting central dazed face. No fire, no text.\nComposition: centered single subject, complete silhouette inside the canvas, subject fills about 85% of canvas with no cropping. Use a simple clear graphic for small-size readability. No stray text, no watermarks."
+  },
+  {
+    "name": "icon",
+    "group": "icon",
+    "size": 1024,
+    "reference": true,
+    "prompt": "Die-cut vinyl sticker illustration. Bold, chunky, cartoon style with thick dark-navy (#1B1F3B) outlines, a clean 6px white sticker border around the whole silhouette, flat cel shading with one soft highlight, glossy. Saturated palette: slop green (#8BC34A to #5E8C1F, gooey, drippy, slightly translucent), corporate LinkedIn-ish blue (#0A66C2) for ties/lanyards/suits, warning orange/red for danger. Funny, expressive, readable at small sizes, centered single subject, no text unless specified, plain flat solid light grey (#E6E6E6) background, no shadows on the background.\n\nUse case: illustration-story.\nAsset: Extension icon: Sloppy's face, just the green head blob with large expressive cartoon eyes and small navy tie knot, on a rounded-square corporate blue badge with a bold RED circle-slash no symbol OVER it. Use reference image 1 as Sloppy identity. Generate a 1024 by 1024 square master. Must read at 16px: extremely simple, massive clean shapes, no small drips, no lanyard, no tiny details, no text. Red prohibition ring and slash very thick, clearly visible above green face; friendly blob eyes remain apparent. Rounded-square badge fills 94% of canvas. Outer flat grey background for removal.\nComposition: centered single subject, complete silhouette inside the canvas, subject fills about 85% of canvas with no cropping. Use a simple clear graphic for small-size readability. No stray text, no watermarks.\n\nReroll for true 16px legibility. Much BOLDER and SIMPLER than the first icon. One flat green head shape with two HUGE white eye ovals, each eye at least 25% of the whole badge width, each with a simple dark navy circular pupil. No mouth, no eyebrows, no iris gradients, no internal drips, no small highlights, no texture. Tiny simple navy tie knot only at bottom. Face takes almost the entire inside of the prohibition ring. Use a flat very thick pure red circle-slash, no highlight on the ring or slash, slash runs diagonally across the center with the two enormous white eyes positioned one on each side of it so both remain clearly visible. Strong green, white, navy, blue, red color blocks. Keep rounded square blue badge and the unified sticker style, but simplify to the minimum shapes needed to read at 16px.",
+    "rerolls": 1
+  }
+]

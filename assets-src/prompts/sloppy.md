@@ -4,3 +4,5 @@ Use case: illustration-story.
 Asset: Sloppy base mascot, square 1024px composition. Sloppy is a gooey green blob of slop with big expressive cartoon eyes, a tiny navy-blue corporate necktie, a company lanyard badge, little drips falling off. Sloppy waves cheerfully with one little goo arm, smiling. Full body, centered single subject fills 85% of canvas. Badge is blank, no letters, no writing or stray text. Clear large eyes and simple recognizable silhouette. Preserve this design as the canonical identity for all future mascot poses. Solid grey backdrop for later removal.
 
 Generation: built-in OpenAI image generation. Initial generation, no reference.
+
+Rerolls: none.
