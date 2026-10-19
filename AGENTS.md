@@ -58,3 +58,12 @@ pnpm check        # svelte-check / types
 Some AI-tell rules are adapted from
 [avoid-ai-writing](https://github.com/conorbronsdon/avoid-ai-writing) (MIT, ©
 Conor Bronsdon). Keep the attribution in the pack and in `THIRD_PARTY_NOTICES.md`.
+
+## Machine etiquette (several agents share the owner's Mac)
+
+- One Chromium/Playwright browser per agent at a time; Playwright `workers: 1`.
+  Close contexts and make sure the browser process tree is gone when done.
+- One `rembg`/onnxruntime process at a time, model loaded once per batch
+  (`rembg p` or a single `new_session()`), `OMP_NUM_THREADS=2`.
+- No full V8 heap snapshots of large pages unless essential (one, after GC).
+- Kill any long-running process you started before finishing your task.
