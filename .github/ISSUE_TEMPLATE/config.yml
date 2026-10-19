@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Security vulnerability
+    url: https://github.com/prashantbhudwal/slop-shame/security/advisories/new
+    about: Report security issues privately. Please don't open a public issue.
+  - name: How to add a rule yourself
+    url: https://github.com/prashantbhudwal/slop-shame/blob/main/src/lib/engine/packs/README.md
+    about: Most new slop phrases are a few lines of data. A PR beats an issue.

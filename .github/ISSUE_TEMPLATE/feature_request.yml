@@ -1,0 +1,24 @@
+name: Feature request
+description: Ideas for Slop Shame (new shame formats, effects, settings…).
+title: "[Feature]: "
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Slop Shame is local-only by design: no servers, no accounts, no network calls.
+        Ideas that need any of those are unlikely to land.
+  - type: textarea
+    id: problem
+    attributes:
+      label: What do you want, and why?
+    validations:
+      required: true
+  - type: textarea
+    id: solution
+    attributes:
+      label: How might it work?
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives you considered

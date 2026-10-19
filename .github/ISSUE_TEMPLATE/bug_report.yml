@@ -1,0 +1,63 @@
+name: Bug report
+description: Something broke (badge missing, Destroy didn't erupt, Hall of Slop is wrong, etc.).
+title: "[Bug]: "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reporting. If the problem is a score you disagree with, use the **Wrong score** form instead.
+        **Don't paste private information** (names, DMs, screenshots of people's profiles) into a public issue.
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+      description: What you did, what you expected, and what happened instead.
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1. Open https://www.linkedin.com/feed/
+        2. Scroll to …
+        3. Click …
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Slop Shame version
+      description: Shown on chrome://extensions, or the commit you built from.
+      placeholder: 0.1.0 / abc1234
+    validations:
+      required: true
+  - type: dropdown
+    id: browser
+    attributes:
+      label: Browser
+      options:
+        - Chrome
+        - Edge
+        - Brave
+        - Arc
+        - Other Chromium
+    validations:
+      required: true
+  - type: input
+    id: browser-version
+    attributes:
+      label: Browser version and OS
+      placeholder: Chrome 142, macOS 26
+  - type: textarea
+    id: console
+    attributes:
+      label: Console errors
+      description: Errors from DevTools on the LinkedIn tab, or from the extension's service worker (chrome://extensions → Slop Shame → "service worker").
+      render: text
+  - type: textarea
+    id: extra
+    attributes:
+      label: Anything else?
+      description: Screenshots are welcome. Blur names and faces first.

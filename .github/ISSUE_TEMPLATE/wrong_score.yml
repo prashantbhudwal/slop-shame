@@ -1,0 +1,79 @@
+name: Wrong score
+description: A human post got slopped (false positive) or obvious slop got a pass (false negative).
+title: "[Score]: "
+labels: ["scoring"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        We publicly shame posts, so false positives are the bugs we care about most. Thank you.
+
+        **Privacy first:** remove names, @mentions, company names, links and anything else that identifies a person.
+        Don't paste private posts, DMs or anything shared with you in confidence. Paraphrase if you need to.
+  - type: dropdown
+    id: kind
+    attributes:
+      label: What went wrong?
+      options:
+        - False positive (a human wrote it, but it scored as slop)
+        - False negative (obvious AI slop scored too low)
+    validations:
+      required: true
+  - type: textarea
+    id: post-text
+    attributes:
+      label: Post text (names removed)
+      description: Paste the post body with identifying details replaced by [NAME], [COMPANY], [LINK].
+      render: text
+    validations:
+      required: true
+  - type: input
+    id: score
+    attributes:
+      label: Slop Index shown
+      placeholder: "73"
+    validations:
+      required: true
+  - type: dropdown
+    id: shown-tier
+    attributes:
+      label: Tier shown
+      options:
+        - Artisanal Human (0–19)
+        - Faint Whiff (20–39)
+        - Certified Slop (40–59)
+        - Slop Swamp (60–79)
+        - SLOPOCALYPSE (80–100)
+    validations:
+      required: true
+  - type: dropdown
+    id: expected-tier
+    attributes:
+      label: Tier you expected
+      options:
+        - Artisanal Human (0–19)
+        - Faint Whiff (20–39)
+        - Certified Slop (40–59)
+        - Slop Swamp (60–79)
+        - SLOPOCALYPSE (80–100)
+    validations:
+      required: true
+  - type: textarea
+    id: signals
+    attributes:
+      label: Signals listed in the badge
+      description: The reasons Slop Shame gave (e.g. "Ended with 'Agree?'"). Helps us find the rule at fault.
+  - type: textarea
+    id: why
+    attributes:
+      label: Why do you think the score is wrong?
+      description: Which phrases are normal human writing, or which AI tells it missed.
+    validations:
+      required: true
+  - type: checkboxes
+    id: privacy
+    attributes:
+      label: Privacy check
+      options:
+        - label: I removed names and other identifying details, and this isn't a private post.
+          required: true

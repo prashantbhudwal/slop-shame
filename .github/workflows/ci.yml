@@ -1,0 +1,85 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    name: Check, test, build, zip
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: pnpm/action-setup@v6
+
+      - uses: actions/setup-node@v7
+        with:
+          node-version: lts/*
+          cache: pnpm
+
+      - name: Install
+        run: pnpm install --frozen-lockfile
+
+      - name: Type check
+        run: pnpm check
+
+      - name: Unit tests
+        run: pnpm test
+
+      - name: Build
+        run: pnpm build
+
+      - name: Zip
+        run: pnpm zip
+
+      - name: Upload extension zip
+        uses: actions/upload-artifact@v7
+        with:
+          name: slop-shame-chrome-mv3
+          path: .output/*.zip
+          if-no-files-found: error
+
+  e2e:
+    name: Playwright e2e (fixture feeds)
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    # Fixtures and UI are still landing, so a red e2e run doesn't block merges
+    # yet. Remove this once the fixture suite is stable.
+    continue-on-error: true
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: pnpm/action-setup@v6
+
+      - uses: actions/setup-node@v7
+        with:
+          node-version: lts/*
+          cache: pnpm
+
+      - name: Install
+        run: pnpm install --frozen-lockfile
+
+      - name: Install Playwright Chromium
+        run: pnpm exec playwright install --with-deps chromium
+
+      # Extensions need a real display when run headed; xvfb provides one.
+      # The real-linkedin project skips itself unless SLOP_REAL=1.
+      - name: E2E
+        run: xvfb-run --auto-servernum pnpm test:e2e
+
+      - name: Upload Playwright traces
+        if: failure()
+        uses: actions/upload-artifact@v7
+        with:
+          name: playwright-test-results
+          path: test-results/
+          if-no-files-found: ignore

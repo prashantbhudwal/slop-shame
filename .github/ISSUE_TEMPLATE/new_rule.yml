@@ -1,0 +1,71 @@
+name: New slop phrase / rule
+description: Suggest a phrase or pattern that gives away AI-written posts.
+title: "[Rule]: "
+labels: ["rule-suggestion"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Slop here means **AI-written text**, not just annoying LinkedIn genres.
+        Adding a phrase is usually a few lines of data. See
+        [src/lib/engine/packs/README.md](https://github.com/prashantbhudwal/slop-shame/blob/main/src/lib/engine/packs/README.md)
+        if you'd rather open a PR directly.
+  - type: textarea
+    id: phrase
+    attributes:
+      label: Phrase or pattern
+      description: The exact phrase(s), including the inflections you want matched.
+      placeholder: |
+        "in today's fast-paced world"
+        "in today's rapidly evolving landscape"
+    validations:
+      required: true
+  - type: dropdown
+    id: category
+    attributes:
+      label: Category (SlopCategory)
+      options:
+        - ai-vocabulary (delve, tapestry, testament, navigate the landscape)
+        - template-phrases (boilerplate, "Moreover,", filler, wordiness)
+        - chatbot-leak ("Certainly!", "As an AI", [Your Name], utm_source=chatgpt)
+        - negation-pivot ("It's not X, it's Y", staccato punchlines)
+        - inflation ("game-changing", hollow intensifiers)
+        - hedging (hedge stacks, "experts say")
+        - engagement-bait ("Agree?", formulaic openers, generic conclusions)
+        - formatting (em-dash storms, emoji bullets, hashtag stuffing)
+        - robotic-rhythm (uniform sentences, rule-of-three cadence)
+        - bypass-tricks (zero-width chars, homoglyphs)
+        - Not sure
+    validations:
+      required: true
+  - type: dropdown
+    id: weight
+    attributes:
+      label: Suggested strength
+      options:
+        - Faint tell (2) — humans say this too
+        - Clear tell (5) — a recognizable formula
+        - Smoking gun (10) — basically only a model writes this
+        - Not sure
+  - type: textarea
+    id: example
+    attributes:
+      label: Example
+      description: A short example sentence or post excerpt, with names removed.
+      render: text
+    validations:
+      required: true
+  - type: textarea
+    id: why-ai
+    attributes:
+      label: Why is it AI-ish?
+      description: Where it comes from (model habit, prompt template, "humanizer" tool…) and how often you see it.
+    validations:
+      required: true
+  - type: textarea
+    id: false-positive-risk
+    attributes:
+      label: False-positive risk
+      description: When would a real human plausibly write this? We shame people publicly, so precision beats recall.
+    validations:
+      required: true
