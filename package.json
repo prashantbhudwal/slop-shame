@@ -16,6 +16,7 @@
     "test": "vitest run",
     "test:watch": "vitest",
     "test:e2e": "pnpm build && playwright test",
+    "perf": "pnpm build && node scripts/perf/run.mjs",
     "linkedin:login": "node scripts/linkedin-login.mjs",
     "postinstall": "wxt prepare"
   },

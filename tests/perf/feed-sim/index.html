@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Slop Shame — deterministic SDUI infinite feed</title>
+  <style>
+    * { box-sizing: border-box; }
+    html { overflow-anchor: none; scroll-behavior: auto; }
+    body { margin: 0; background: #f3f2ef; color: #191919; font: 15px/1.45 system-ui, sans-serif; }
+    nav { height: 56px; padding: 16px 24px; background: white; border-bottom: 1px solid #ddd; }
+    main { width: 640px; max-width: 96vw; margin: 20px auto; }
+    .f91c3 { height: var(--slot-height); padding-bottom: 16px; }
+    .a72de { height: 100%; padding: 18px; border: 1px solid #ddd; border-radius: 9px; background: white; overflow: clip; }
+    .b18fa { display: flex; align-items: center; gap: 12px; min-height: 60px; }
+    .b18fa p { margin: 0; }
+    .b18fa img { height: 42px; width: 42px; border-radius: 50%; }
+    a { color: #27465c; text-decoration: none; }
+    .c87d2 { color: #666; font-size: 12px; margin: 0 0 8px; }
+    .d64ef { white-space: pre-wrap; display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 9; overflow: hidden; margin: 12px 0; }
+    .e32ab { display: flex; gap: 24px; border-top: 1px solid #eee; padding-top: 12px; }
+    button { border: 0; background: transparent; color: #555; font: inherit; }
+    #perf-progress { position: fixed; right: 8px; top: 8px; padding: 6px; background: #fff; color: #555; font-size: 11px; }
+  </style>
+  <script src="/__perf__/feed.js" defer></script>
+</head>
+<body>
+  <nav aria-label="Primary navigation">LinkedIn · Home · My Network · Jobs</nav>
+  <output id="perf-progress">Starting fixture…</output>
+  <main><section aria-label="Primary content">
+    <div id="perf-top-spacer" aria-hidden="true"></div>
+    <div id="perf-feed" componentkey="container-update-list_mainFeed-lazy-container" role="list"></div>
+    <div id="perf-bottom-spacer" aria-hidden="true"></div>
+  </section></main>
+</body>
+</html>
