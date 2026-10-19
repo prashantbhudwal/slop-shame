@@ -70,7 +70,7 @@
         {/each}
       </ul>
     {:else}
-      <p class="none">No AI tells found. A human was here.</p>
+      <p class="none">No AI tells found. That doesn’t prove a human wrote it.</p>
     {/if}
     {#if view.rank}
       <div class="rank">
@@ -143,7 +143,7 @@
     {:else if report && view.mode === 'chip'}
       <button class="chip" aria-expanded={view.expanded} aria-label="Slop Index {report.score}: {report.tier.label}" onclick={toggle}>
         <Sticker class="ico" src={tierIcon(report.tier.id)} emoji={look.emoji} size={20} />
-        <span>{report.tier.id === 'artisanal' ? 'Human-written' : report.tier.label}</span>
+        <span>{report.tier.label}</span>
         <span class="n">· {report.score}</span>
         {#if view.isAd}<span class="ad-chip">Ad</span>{/if}
       </button>

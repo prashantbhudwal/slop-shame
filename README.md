@@ -25,7 +25,7 @@ gave the post away ("It's not X, it's Y", "Agree?", seven em dashes,
 
 | | Tier | Score | Meaning |
 |---|---|---|---|
-| <img src="public/assets/tiers/artisanal.webp" width="40" alt=""> | **Artisanal Human** | 0–19 | Hand-typed by a real person. Rare. Cherish it. |
+| <img src="public/assets/tiers/artisanal.webp" width="40" alt=""> | **No Slop Found** | 0–19 | No AI tells found. That doesn’t prove a human wrote it. |
 | <img src="public/assets/tiers/whiff.webp" width="40" alt=""> | **Faint Whiff** | 20–39 | Something smells a little… optimized. |
 | <img src="public/assets/tiers/certified.webp" width="40" alt=""> | **Certified Slop** | 40–59 | Grade A, farm-raised LinkedIn slop. |
 | <img src="public/assets/tiers/swamp.webp" width="40" alt=""> | **Slop Swamp** | 60–79 | Wading waist-deep in thought leadership. |

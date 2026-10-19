@@ -4,6 +4,8 @@
 // Never clicks, types or automates anything on LinkedIn and never calls its
 // APIs: it only reads the feed DOM and draws on top of it.
 
+// First: Svelte creates a Trusted Types policy at load, which linkedin.com's CSP blocks.
+import './trusted-types';
 import { getDestroyedPosts, loadSettings, watchSettings } from '../../lib/settings';
 import { FeedController } from './controller';
 

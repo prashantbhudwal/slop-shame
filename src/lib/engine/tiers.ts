@@ -2,7 +2,8 @@ import type { SlopTier, SlopTierId } from './types';
 
 /** Ordered low → high. Icons live at public/assets/tiers/<id>.webp. */
 export const TIERS: readonly SlopTier[] = [
-  { id: 'artisanal', label: 'Artisanal Human', min: 0, blurb: 'Hand-typed by a real person. Rare. Cherish it.' },
+  // Low scores mean no evidence of slop, never proof of a human: we only call slop.
+  { id: 'artisanal', label: 'No Slop Found', min: 0, blurb: 'No AI tells found. That doesn’t prove a human wrote it.' },
   { id: 'whiff', label: 'Faint Whiff', min: 20, blurb: 'Something smells a little… optimized.' },
   { id: 'certified', label: 'Certified Slop', min: 40, blurb: 'Grade A, farm-raised LinkedIn slop.' },
   { id: 'swamp', label: 'Slop Swamp', min: 60, blurb: 'Wading waist-deep in thought leadership.' },

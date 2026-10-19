@@ -52,10 +52,16 @@ async function showcaseHtml(dark: boolean): Promise<string> {
   return html.replace('</style>', `${extra}</style>`);
 }
 
+/**
+ * linkedin.com allowlists Trusted Types policy names. Svelte creates its own
+ * policy at load, which used to kill the content script on the real site.
+ */
+const LINKEDIN_CSP = "trusted-types default jSecure 'allow-duplicates' dompurify highcharts goog#html ProseMirrorClipboard";
+
 async function openShowcase(page: Page, extensionId: string, dark = false): Promise<void> {
   const html = await showcaseHtml(dark);
   await page.route('https://www.linkedin.com/**', async (route) => {
-    if (route.request().isNavigationRequest()) await route.fulfill({ body: html, contentType: 'text/html; charset=utf-8' });
+    if (route.request().isNavigationRequest()) await route.fulfill({ body: html, contentType: 'text/html; charset=utf-8', headers: { 'content-security-policy': LINKEDIN_CSP } });
     else await route.fulfill({ status: 204, body: '' });
   });
   await page.setViewportSize({ width: 1100, height: 1000 });
