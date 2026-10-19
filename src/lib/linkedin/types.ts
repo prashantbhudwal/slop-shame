@@ -4,6 +4,19 @@
 
 import type { PostInput } from '../engine/types';
 
+export interface PostAuthor {
+  /**
+   * Stable identity: the profile/company URL path, e.g. "in/jane-doe" or
+   * "company/acme". Never the display name (names collide and change).
+   */
+  id: string;
+  name: string;
+  headline?: string;
+  profileUrl?: string;
+  avatarUrl?: string;
+  kind: 'person' | 'company' | 'unknown';
+}
+
 export interface FeedPost {
   /** Stable id for the post (urn:li:activity:… when available). */
   id: string;
@@ -16,6 +29,8 @@ export interface FeedPost {
    */
   mount: HTMLElement;
   input: PostInput;
+  /** Null when the adapter can't identify the author (e.g. some ads). */
+  author: PostAuthor | null;
 }
 
 export interface FeedWatcher {

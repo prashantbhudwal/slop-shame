@@ -1,0 +1,69 @@
+# Intentions
+
+The owner's intentions for Slop Shame, in the order they were given, plus the
+decisions they led to and where the build stands. Read this first after any
+context loss. Append, don't rewrite history.
+
+## Product intentions (from the owner)
+
+1. **Slop Shame** is a Chrome extension that works in Chrome and every
+   Chromium browser (Edge, Brave, Arc…). Name is final.
+2. Scope for now: the **LinkedIn home feed** only.
+3. Every post gets a **Slop Index** (a score) from a heuristic, dictionary-of-
+   phrases style detector. It should be **fun**.
+4. A **Destroy** button: the post *literally erupts* and is destroyed.
+5. A **Slop Shame** button: generates a funny shame using pre-written shame
+   formats. Must be genuinely funny.
+6. **Different icons for different slop levels** — lots of graphic, funny
+   assets. Assets are generated with OpenAI image models (via GPT-6.1-Sol on
+   Codex), cleaned up with CLI tools (background removal, etc.).
+7. The agent (Claude) builds **and tests everything itself**, using the
+   orchestration tools and subagents.
+8. **Public GitHub repository**, but **don't push/sync yet**.
+9. Base the heuristic on the owner's `~/Code/avoid-ai-writing` detector (and/or
+   `~/Code/blader/humanizer`) — but **don't copy it blindly**: improve it where
+   useful.
+10. The engine must be **pluggable** so other people can contribute rules, and
+    **scalable**.
+11. It runs in the browser, so it must be **extremely fast**.
+12. A **local leaderboard of top slop posters** ("Hall of Slop"). All data is
+    **local** — no database server. When the same person posts multiple
+    high-slop posts, they **climb the ranking**.
+13. Keep this file updated so work can resume after context loss.
+
+## Decisions
+
+| Decision | Choice | Why |
+|---|---|---|
+| Build framework | WXT (MV3) | Owner picked; Chromium-wide, typed manifest, HMR, zip. |
+| UI | Svelte 5 in Shadow DOM | Owner delegated. Built-in springs/transitions for fun UI; no VDOM; tiny runtime. Leaks are prevented by unmounting on post removal + one shared FX canvas. |
+| Package manager | pnpm | Owner picked. |
+| Testing | Playwright on saved feed fixtures + a dedicated Chromium profile the owner logs into once | Owner picked. |
+| Engine shape | Rule packs (`RulePack`): data-only `PhraseRule`s + `CustomRule`s over a shared, precomputed `PostContext` | Pluggable for contributors, fast (one tokenization, precompiled matchers). |
+| AI-tell rules | Adapted from avoid-ai-writing (MIT, credited) — ported as a rule pack, not vendored whole | Speed + improvement freedom. |
+| Leaderboard storage | IndexedDB in the extension origin, written only by the background worker via batched messages | Private to the extension (not linkedin.com's origin), indexed queries, scales to thousands of authors. |
+| Ranking | `slopPoints` per author, monotonic in slop posts; posts deduped by id | Repeat sloppers climb; re-scrolling never double-counts. |
+| Shame target | The post's author, rendered as a shareable card for the user | Interpretation — confirm with owner. |
+| License | MIT | Public repo default. |
+
+## Model routing (subagent-orchestrator)
+
+- Opus 5.5 (orchestrator, Claude Primary): architecture, contracts, review.
+- Opus 5.5 subagent (Claude Secondary): all UI, FX, shame copy, leaderboard page.
+- GPT-6.1-Sol (Codex accounts): engine + packs + tests; LinkedIn adapter +
+  Playwright harness; leaderboard store; image generation pipeline.
+
+## Status
+
+- [x] Stack chosen, project scaffolded, contracts written (`src/lib/*/types.ts`,
+      `src/lib/engine/rule-types.ts`, `src/lib/engine/tiers.ts`)
+- [ ] Slop engine + rule packs + unit tests
+- [ ] LinkedIn feed adapter + fixtures + Playwright harness
+- [ ] Leaderboard store (IndexedDB, background)
+- [ ] Assets (tier icons, buttons, shame art, extension icon)
+- [ ] UI: badge, Destroy eruption, Shame modal, popup, Hall of Slop page
+- [ ] End-to-end test on real LinkedIn (needs owner login once)
+
+## Open questions for the owner
+
+- Shame target: the post's author (current assumption) or something else?

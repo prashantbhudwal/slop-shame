@@ -1,5 +1,8 @@
 # Slop Shame — agent guide
 
+Read `INTENTIONS.md` first: the owner's intentions, decisions and build status.
+Keep it updated when intentions or status change.
+
 Chrome MV3 extension (works in any Chromium browser) that gives every LinkedIn
 home-feed post a **Slop Index** (0–100), a tier icon, a **Destroy** button
 (the post erupts and is gone) and a **Shame** button (a funny generated shame
@@ -22,9 +25,11 @@ card for the post's author).
 | `src/lib/ui/` | Svelte components injected into posts | Rendered inside Shadow DOM; never style LinkedIn's DOM directly. |
 | `src/lib/fx/` | Explosion/eruption effects | One shared, lazily created canvas overlay for all effects. |
 | `src/lib/shame/` | Shame formats + generator | Formats are data (`ShameFormat`). |
+| `src/lib/store/` | Hall of Slop leaderboard (IndexedDB, extension origin) | Contract: `types.ts`. Only the background worker writes; content scripts send `StoreMessage`s. |
 | `src/lib/settings/` | `browser.storage` backed settings | |
 | `src/entrypoints/linkedin.content/` | Content script wiring | |
 | `src/entrypoints/popup/` | Toolbar popup | |
+| `src/entrypoints/leaderboard/` | Hall of Slop full page | |
 | `src/assets/` | Final, optimized assets (bundled) | `tiers/<tierId>.png`, `ui/`, `shame/`. |
 | `assets-src/` | Asset pipeline: `prompts/` (committed), `raw/` (gitignored), `processed/` | |
 
