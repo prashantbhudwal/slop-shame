@@ -34,6 +34,15 @@ context loss. Append, don't rewrite history.
     default medium (recorded in the orchestrator's router.md too).
 15. Owner is unsure how roasting should work — proposed design below; awaiting
     their reaction.
+16. **Slop = AI-written text** (not LinkedIn genres). Base it on the AI-writing
+    dictionaries (avoid-ai-writing, humanizer, other maintained lists). The
+    Slop Index is a **ratio/density** of AI tells in the post. No special
+    LinkedIn phrase research needed.
+17. Wide web research on similar repos/dictionaries/methods: fan out multiple
+    Groks and Geminis, one angle each.
+18. Extra workstreams approved: category ("slop-type") icons (Sol), speed +
+    memory soak test (Sol), CI + contributor tooling + docs (Opus at medium —
+    Sol is bad at writing).
 
 ## Decisions
 
@@ -46,6 +55,7 @@ context loss. Append, don't rewrite history.
 | Engine shape | Rule packs (`RulePack`): data-only `PhraseRule`s + `CustomRule`s over a shared, precomputed `PostContext` | Pluggable for contributors, fast (one tokenization, precompiled matchers). |
 | AI-tell rules | Adapted from avoid-ai-writing (MIT, credited) — ported as a rule pack, not vendored whole | Speed + improvement freedom. |
 | Leaderboard storage | IndexedDB in the extension origin, written only by the background worker via batched messages | Private to the extension (not linkedin.com's origin), indexed queries, scales to thousands of authors. |
+| Slop categories | 10 AI-tell families grouping avoid-ai-writing's 48 detector types: ai-vocabulary, template-phrases, chatbot-leak, negation-pivot, inflation, hedging, engagement-bait, formatting, robotic-rhythm, bypass-tricks | Owner: slop = AI-written. LinkedIn-genre packs dropped; still pluggable for later. |
 | Ranking | `slopPoints` per author, monotonic in slop posts; posts deduped by id | Repeat sloppers climb; re-scrolling never double-counts. |
 | Shame target | The post's author, rendered as a shareable card for the user | Interpretation — confirm with owner. |
 | Roast mechanics (proposed) | Pre-written templates (40+) with slots filled from the real post (its actual slop quotes, score, tier, author, repeat-offender count), rendered into themed card layouts (wanted poster with author avatar, certificate with gold seal, parking-ticket citation, tabloid front page, report card, eulogy) using the generated art + Sloppy; downloadable as PNG. No AI at runtime — fully local. | Funny, specific, fast, private. |
@@ -68,7 +78,11 @@ context loss. Append, don't rewrite history.
 - [ ] Leaderboard store (IndexedDB, background) — delegated (Sol xhigh, codex_nush, slop-shame-store-r1)
 - [ ] Assets (tier icons, buttons, shame art, mascot "Sloppy", extension icon) — delegated (Sol high, codex, slop-shame-assets-r1); art direction in the task prompt, prompts saved to assets-src/prompts/
 - [ ] UI: badge, Destroy eruption, Shame modal, popup, Hall of Slop page — delegated (Opus xhigh, claudeAgent_cash, slop-shame-ui-r2; r1 cancelled for running at medium)
-- [ ] Orchestrator review + integration + commit of each workstream
+- [ ] Category icons (10) — queued as follow-up on the asset agent's thread
+- [ ] Perf + memory soak harness — delegated (Sol xhigh, codex, slop-shame-perf-r1)
+- [ ] CI, issue/PR templates, CONTRIBUTING, README, PRIVACY, SECURITY — delegated (Opus medium, claudeAgent_cash, slop-shame-docs-ci-r1)
+- [ ] Research → `research/`: slop-dictionaries.md (Grok), detection-methods.md (Grok), landscape.md incl. Chrome Web Store / LinkedIn ToS risks (Grok), frequency-evidence.md (Gemini), social-post-tells.md (Gemini)
+- [ ] Orchestrator review + integration + commit of each workstream; feed research findings into the engine (round 2)
 - [x] Owner logged in to LinkedIn once (profile `.playwright/linkedin-profile`, verified: feed loads)
 - [ ] End-to-end test on real LinkedIn
   - Finding: the real feed uses LinkedIn's new SDUI markup (hashed classes, no `data-urn`). Stable hooks: `data-view-name` (`feed-full-update` = post card, `feed-commentary` = text, `feed-actor` = author), `componentkey` (`expanded<id>FeedType_MAIN_FEED_RELEVANCE`), `data-sdui-anchor-id="feed-header-urn:li:activity:<n>-0"`. Sent to the adapter agent as a steer.

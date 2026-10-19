@@ -17,18 +17,22 @@ export interface PostInput {
   authorHeadline?: string;
 }
 
-/** Families of slop. The shame generator and icons key off these. */
+/**
+ * Families of slop. Slop = AI-written text (not LinkedIn genres). These group
+ * the avoid-ai-writing detector's tell types; the shame generator and the
+ * category icons (public/assets/categories/<category>.webp) key off them.
+ */
 export type SlopCategory =
-  | 'ai-tells' // delve, tapestry, em-dash storms, "it's not X, it's Y"
-  | 'broetry' // one. sentence. per. line.
-  | 'engagement-bait' // "Agree?", "Comment YES", "Repost if…"
-  | 'humblebrag' // "I'm humbled to announce…"
-  | 'fake-story' // "My 5yo taught me more about B2B sales than my MBA"
-  | 'thought-leadership' // "Unpopular opinion:", "Here's the thing nobody tells you"
-  | 'buzzwords' // synergy, leverage, game-changer, 10x
-  | 'emoji-abuse' // 🚀 bullets, ✅ lists, 👇 arrows
-  | 'hashtag-spam' // #Leadership #Growth #Mindset #Hustle
-  | 'listicle'; // "7 lessons I learned from…"
+  | 'ai-vocabulary' // delve, tapestry, testament, navigate the landscape, word clusters
+  | 'template-phrases' // boilerplate, AI transitions ("Moreover,"), filler, wordiness
+  | 'chatbot-leak' // "Certainly!", "As an AI", [Your Name], utm_source=chatgpt, sycophancy — smoking guns
+  | 'negation-pivot' // "It's not X, it's Y", false concessions, staccato manufactured punchlines
+  | 'inflation' // significance/novelty inflation, hollow intensifiers, "game-changing"
+  | 'hedging' // hedge stacks, parenthetical hedges, vague attribution ("experts say")
+  | 'engagement-bait' // CTA closers ("Agree?"), rhetorical/formulaic/speculative openers, generic conclusions
+  | 'formatting' // em-dash storms, emoji bullets, bare noun-phrase bullets, Title Case, hashtag stuffing
+  | 'robotic-rhythm' // uniform sentence lengths, low vocabulary diversity, rule-of-three cadence
+  | 'bypass-tricks'; // zero-width chars / homoglyphs — someone tried to "humanize" it
 
 export interface SlopSignal {
   /** Stable rule id, e.g. "bait.agree-question". */
