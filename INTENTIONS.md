@@ -91,14 +91,15 @@ context loss. Append, don't rewrite history.
 
 - [x] Stack chosen, project scaffolded, contracts written (`src/lib/*/types.ts`,
       `src/lib/engine/rule-types.ts`, `src/lib/engine/tiers.ts`)
-- [ ] Slop engine + rule packs + unit tests — delegated (Sol xhigh, codex_account_3, task slop-shame-engine-r1)
+- [x] Slop engine r1 committed: 10 AI-tell packs, Aho-Corasick + regex scanner, density scoring with family caps, `shameable`, 0.126 ms/post, 122 tests.
+  - [ ] Recall fix (same agent): orchestrator probes showed textbook AI post = 23, chatbot leak = 36 (core rules not firing; smoking-gun floor broken). Human probes = 0 (good).
 - [x] LinkedIn feed adapter + fixtures + Playwright harness — committed (aec40c1). Live: 8/8 real cards detected. Real-feed run: `SLOP_REAL=1 pnpm test:e2e --project=real-linkedin`; re-login: `pnpm linkedin:login`.
   - [x] Round 2: mutation churn cut (240 → 0 re-extractions under simulated churn), committed
 - [x] Leaderboard store (IndexedDB, background) — done, reviewed, committed. Ranking: round(Σ(score−30)^1.3/10 + 3×slopocalypse posts) over posts ≥40. Titles: Slop Intern → Slop Emperor.
 - [ ] Assets (tier icons, buttons, shame art, mascot "Sloppy", extension icon) — delegated (Sol high, codex, slop-shame-assets-r1); art direction in the task prompt, prompts saved to assets-src/prompts/
 - [ ] UI: badge, Destroy eruption, Shame modal, popup, Hall of Slop page — delegated (Opus xhigh, claudeAgent_cash, slop-shame-ui-r2; r1 cancelled for running at medium)
 - [ ] Category icons (10) — queued as follow-up on the asset agent's thread
-- [ ] Perf + memory soak harness — delegated (Sol xhigh, codex, slop-shame-perf-r1)
+- [x] Perf + memory soak harness committed (`pnpm perf`, `--full`). Heap growth gate changed to growth over baseline. First run INCOMPLETE (no UI yet); all budgets passed.
 - [x] CI, issue/PR templates, CONTRIBUTING, README, PRIVACY, SECURITY — done, reviewed, committed. Before going public: confirm GitHub owner `prashantbhudwal/slop-shame`; update PRIVACY.md if permissions change (e.g. captureVisibleTab/downloads); add screenshots to docs/.
 - [x] research/social-post-tells.md (Gemini) committed
 - [x] research/landscape.md, detection-methods.md, slop-dictionaries.md (Grok) committed. Top lists to vendor in engine round 2: Zero Slop patterns.json (MIT), Sam Paech weighted adjustments (Apache-2.0) + essay freq (MIT), vale-ai-tells (MIT), slop-radar (MIT), Kobak excess_words (MIT repo). NOT usable: Wikipedia signs (CC BY-SA), sloptells (no license), gptslop (AGPL).
