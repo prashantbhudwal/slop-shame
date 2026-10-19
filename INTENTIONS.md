@@ -96,7 +96,11 @@ context loss. Append, don't rewrite history.
 - [x] research/social-post-tells.md (Gemini) committed
 - [x] research/landscape.md, detection-methods.md, slop-dictionaries.md (Grok) committed. Top lists to vendor in engine round 2: Zero Slop patterns.json (MIT), Sam Paech weighted adjustments (Apache-2.0) + essay freq (MIT), vale-ai-tells (MIT), slop-radar (MIT), Kobak excess_words (MIT repo). NOT usable: Wikipedia signs (CC BY-SA), sloptells (no license), gptslop (AGPL).
 - [x] research/frequency-evidence.md (Gemini) committed — 152 markers with fold-ratios; suggests weight w = min(10, α·log2(ratio)). Em-dash evidence conflicts between reports → keep em-dash weak/corroborating.
-- [x] All 5 research reports in. NEXT: engine round 2 (vendor top dictionaries with ratio-derived weights, newer-model tells, false-positive guards) once engine round 1 lands.
+- [x] All 5 research reports in.
+- Engine round 2, split so independent parts start now:
+  - [ ] Vendor external dictionaries → `src/lib/engine/packs/vendor/` (not registered yet) — delegated (Sol xhigh, codex_nush, slop-shame-dicts-ingest-r1)
+  - [ ] Calibration dataset (human vs AI, hard human negatives: non-native, formal) + `pnpm eval` harness → `eval/`, `data/eval/` — delegated (Sol xhigh, codex_quaternary, slop-shame-calibration-r1)
+  - [ ] Retune scoring with vendor packs + eval (needs engine r1 + both above)
 - ~~Research → `research/`:~~ slop-dictionaries.md (Grok), detection-methods.md (Grok), landscape.md incl. Chrome Web Store / LinkedIn ToS risks (Grok), frequency-evidence.md (Gemini), social-post-tells.md (Gemini)
 - [ ] Orchestrator review + integration + commit of each workstream; feed research findings into the engine (round 2)
 - [x] Owner logged in to LinkedIn once (profile `.playwright/linkedin-profile`, verified: feed loads)
