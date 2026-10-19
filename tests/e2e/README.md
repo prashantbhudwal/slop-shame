@@ -45,3 +45,21 @@ Snapshots remove scripts/styles, event handlers, URL queries, and image sources.
 They retain other people's names and posts and are **not anonymized**. They stay
 in gitignored `tests/fixtures/feed/captured/`; never copy their content into the
 committed synthetic fixtures. The login profile is also gitignored.
+
+Mutation performance can be measured without adding production instrumentation:
+
+```sh
+SLOP_REAL=1 node tests/e2e/measure-adapter.mjs --label=after
+node tests/e2e/measure-adapter.mjs --fixture=sdui --churn --revision=aec40c1 --label=controlled-before
+node tests/e2e/measure-adapter.mjs --fixture=sdui --churn --label=controlled-after
+```
+
+The live run measures a warmed 30-second idle interval, then three 650 px scrolls
+with the pointer over the feed. It reports process/root lookup/extraction counts,
+total extraction time, viewport/video state, card coverage and actual scroll
+offsets. No video is played manually. A quiet live sample can legitimately report
+zero work before and after; it does not demonstrate an autoplay improvement.
+The fixture workload changes classes and reaction counts on 12 cards for 20
+ticks, without touching LinkedIn. `--revision` bundles the adapter and selectors
+from that local commit for a reproducible comparison. Results contain counts,
+not posts or names, and are written under the ignored capture directory.

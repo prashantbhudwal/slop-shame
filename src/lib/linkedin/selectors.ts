@@ -26,6 +26,7 @@ export const selectors = {
   ],
   // Some versions move the URN from the card to a descendant.
   identity: ['[data-sdui-anchor-id*="urn:li:"]', '[data-urn]', '[data-id]', '[componentkey]'],
+  identityAnchor: ['[data-sdui-anchor-id*="urn:li:"]'],
   sduiContent: ['[data-view-name="feed-full-update"]'],
   // SDUI's actor hooks are anchors, not enclosing header blocks. Find their
   // common ancestor with the avatar to include the unlabelled headline row.
@@ -89,6 +90,17 @@ export const selectors = {
     '[data-view-name="feed-open-identity-switcher"]',
   ],
   comments: ['[componentkey*="replaceableCommentTools"]', '[data-view-name="feed-comment-box"]', '[data-view-name="comment"]'],
+  // Structural hydration signals. Generic paragraphs/direction wrappers are
+  // considered only on cards without a registered body, never on live counters.
+  mutationContent: [
+    '[data-view-name="feed-commentary"]', '[data-view-name="feed-update-text"]',
+    '[data-view-name="feed-actor"]', '[data-view-name="feed-actor-image"]',
+    '[data-full-text]', '[data-ad-preview="message"]', '[data-test-id="actor"]',
+    '[data-test-id="main-feed-activity-card__commentary"]', '[data-testid="expandable-text-box"]',
+    'header', '.update-components-actor', '.feed-shared-actor', '.update-components-text',
+    '.feed-shared-update-v2__description', '.feed-shared-inline-show-more-text', '.feed-shared-text',
+  ],
+  processed: '[data-slop-shame-processed]',
   // Adapter-owned markup and non-content nodes are excluded from extraction.
   mount: '[data-slop-shame-mount]',
   ignoredText: 'button, script, style, noscript, .visually-hidden, [data-slop-shame-mount]',

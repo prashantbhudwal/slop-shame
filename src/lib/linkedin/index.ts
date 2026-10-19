@@ -4,6 +4,12 @@ import { postSelector, selectors } from './selectors';
 const marker = 'data-slop-shame-processed';
 const urnPattern = /urn:li:(?:activity|share|ugcPost):[\w-]+/;
 const blockTags = new Set(['DIV', 'P', 'LI', 'SECTION', 'BLOCKQUOTE']);
+const cooldownMs = 750;
+const identityAttributes = new Set(['data-urn', 'data-id', 'componentkey', 'data-sdui-anchor-id']);
+const ignoredMutations = [selectors.mount, ...selectors.comments, selectors.controls].join(',');
+const mutationContentSelector = selectors.mutationContent.join(',');
+const structuralBodySelector = selectors.structuralBody.join(',');
+const cardRemovalSelector = `${postSelector},${selectors.processed}`;
 
 function first(scope: ParentNode, fallbacks: readonly string[]): HTMLElement | null {
   for (const selector of fallbacks) {
@@ -63,7 +69,15 @@ function actorBlock(root: HTMLElement): HTMLElement | null {
   return actor.parentElement;
 }
 
-function extractAuthor(root: HTMLElement, actor: HTMLElement | null): PostAuthor | null {
+interface AuthorDetails {
+  author: PostAuthor;
+  profile: HTMLElement;
+  name: HTMLElement;
+  headline: HTMLElement | null;
+  avatar: HTMLElement | null;
+}
+
+function extractAuthor(root: HTMLElement, actor: HTMLElement | null): AuthorDetails | null {
   const scope = actor ?? root;
   const sduiActor = first(scope, selectors.actorLink);
   const links = sduiActor ? [sduiActor] : Array.from(scope.querySelectorAll<HTMLAnchorElement>(selectors.profile.join(',')));
@@ -81,24 +95,38 @@ function extractAuthor(root: HTMLElement, actor: HTMLElement | null): PostAuthor
       !p.closest(selectors.actorLink.join(',')) && !p.closest(selectors.actorCta.join(','))
       && !/^(?:(?:promoted|sponsored)\b|\d+\s*[smhdwy]\b)/i.test(cleanText(p)),
     ) ?? null : first(scope, selectors.headline);
-    return {
+    const author: PostAuthor = {
       id, name,
       headline: cleanText(headlineNode) || undefined,
       profileUrl: `https://www.linkedin.com/${id}`,
       avatarUrl: image?.getAttribute('src') ? new URL(image.getAttribute('src')!, location.href).href : undefined,
       kind: id.startsWith('company/') ? 'company' : 'person',
     };
+    return { author, profile: link, name: nameNode, headline: headlineNode, avatar: image };
   }
   return null;
 }
 
-function extract(root: HTMLElement): Omit<FeedPost, 'id' | 'mount'> | null {
+interface ContentNodes {
+  body: HTMLElement | null;
+  actor: HTMLElement | null;
+  profile: HTMLElement | null;
+  name: HTMLElement | null;
+  headline: HTMLElement | null;
+  avatar: HTMLElement | null;
+  ad: HTMLElement | null;
+}
+type ObservedNodes = { [Key in keyof ContentNodes]: WeakRef<HTMLElement> | null };
+interface ExtractedPost { value: Omit<FeedPost, 'id' | 'mount'>; nodes: ContentNodes }
+
+function extract(root: HTMLElement): ExtractedPost | null {
   const modules = selectors.module.join(',');
   if (root.matches(modules) || root.closest(modules) || root.querySelector(modules)) return null;
   const heading = cleanText(first(root, selectors.moduleHeading));
   if (/^(?:suggested follows|jobs recommended for you|add to your feed|people you may know)$/i.test(heading)) return null;
   const actor = actorBlock(root);
-  const author = extractAuthor(root, actor);
+  const details = extractAuthor(root, actor);
+  const author = details?.author ?? null;
   const nested = selectors.nestedPost.join(',');
   const candidates: HTMLElement[] = [];
   const sduiContent = root.matches(selectors.sduiContent.join(',')) ? root : first(root, selectors.sduiContent);
@@ -131,7 +159,7 @@ function extract(root: HTMLElement): Omit<FeedPost, 'id' | 'mount'> | null {
   const ad = first(root, selectors.adLabel);
   const isAd = Boolean(ad && /^(?:promoted|sponsored)(?:\b|$)/i.test(`${ad.getAttribute('aria-label') ?? ''} ${ad.textContent ?? ''}`.trim()))
     || /(?:^|\n)\s*(?:promoted|sponsored)\s*(?:$|\n)/i.test(actor ? textOf(actor) : '');
-  return {
+  const value: Omit<FeedPost, 'id' | 'mount'> = {
     root, author,
     input: {
       text, hashtags: [...new Set(text.match(/#[\p{L}\p{M}\p{N}_]+/gu) ?? [])],
@@ -139,10 +167,51 @@ function extract(root: HTMLElement): Omit<FeedPost, 'id' | 'mount'> | null {
       authorHeadline: author?.headline,
     },
   };
+  return { value, nodes: {
+    body, actor, profile: details?.profile ?? null, name: details?.name ?? null,
+    headline: details?.headline ?? null, avatar: details?.avatar ?? null, ad,
+  } };
 }
 
-interface ElementState { id: string; authorId?: string; mount: WeakRef<HTMLElement> }
+interface ElementState {
+  id: string;
+  authorId?: string;
+  mount: WeakRef<HTMLElement>;
+  nodes: ObservedNodes;
+  fingerprint: string;
+}
 interface ActivePost { root: WeakRef<HTMLElement>; signature: string }
+interface PendingPost { due: number; force: boolean }
+
+/** Native textContent + cached fields avoid selectors, recursive textOf and JSON.
+ * Keep exact raw text as well as metadata: length/prefix/suffix alone would miss
+ * same-length edits in the middle. Relative timestamps and counters are absent.
+ */
+function fingerprint(root: HTMLElement, nodes: ObservedNodes): string | null {
+  const current = {} as ContentNodes;
+  for (const key of Object.keys(nodes) as (keyof ContentNodes)[]) {
+    const ref = nodes[key];
+    const node = ref?.deref() ?? null;
+    if (ref && (!node || !root.contains(node))) return null;
+    current[key] = node;
+  }
+  return [
+    current.body?.getAttribute('data-full-text'), current.body?.textContent,
+    current.profile?.getAttribute('href'), current.name?.textContent, current.headline?.textContent,
+    current.avatar?.getAttribute('src'),
+    /^(?:promoted|sponsored)\b/i.test(`${current.ad?.getAttribute('aria-label') ?? ''} ${current.ad?.textContent ?? ''}`.trim()),
+    /\b(?:promoted|sponsored)\b/i.test(current.actor?.textContent ?? ''),
+  ].join('\u0000');
+}
+
+function attributeIdentity(name: string, value: string | null): string | undefined {
+  if (!value) return undefined;
+  if (name === 'data-sdui-anchor-id') return value.match(/urn:li:(?:activity|share|ugcPost):\d+/)?.[0];
+  const urn = value.match(urnPattern)?.[0];
+  if (urn) return urn;
+  if (name === 'componentkey') return value.match(/^(?:expanded|update-card-focus)(.+)FeedType_MAIN_FEED_RELEVANCE$/)?.[1];
+  return undefined;
+}
 
 /** Observe just the home feed. No history patching (content scripts are isolated). */
 export function watchFeed(opts: WatchFeedOptions): FeedWatcher {
@@ -152,9 +221,11 @@ export function watchFeed(opts: WatchFeedOptions): FeedWatcher {
   let container: WeakRef<HTMLElement> | null = null;
   let states = new WeakMap<HTMLElement, ElementState>();
   let processed = new WeakSet<HTMLElement>();
+  let regions = new WeakMap<Element, WeakRef<HTMLElement>>();
+  let lastProcessed = new WeakMap<HTMLElement, number>();
   const posts = new Map<string, ActivePost>();
-  const pending = new Set<HTMLElement>();
-  let scheduled: { kind: 'idle' | 'frame' | 'timer'; id: number } | null = null;
+  const pending = new Map<HTMLElement, PendingPost>();
+  let scheduled: { kind: 'idle' | 'frame' | 'timer'; id: number; due: number } | null = null;
   let needsPrune = false;
 
   function notifyRemove(id: string) {
@@ -166,10 +237,17 @@ export function watchFeed(opts: WatchFeedOptions): FeedWatcher {
     posts.delete(id);
     notifyRemove(id);
     if (root) {
-      states.get(root)?.mount.deref()?.remove();
+      const state = states.get(root);
+      state?.mount.deref()?.remove();
+      for (const ref of [state?.nodes.body, state?.nodes.actor]) {
+        const node = ref?.deref();
+        if (node) regions.delete(node);
+      }
       root.removeAttribute(marker);
       states.delete(root);
       processed.delete(root);
+      pending.delete(root);
+      lastProcessed.delete(root);
     }
   }
 
@@ -183,31 +261,43 @@ export function watchFeed(opts: WatchFeedOptions): FeedWatcher {
     return root;
   }
 
+  function queue(root: HTMLElement, force = false) {
+    const existing = pending.get(root);
+    if (existing) { existing.force ||= force; return; }
+    // Trailing throttle: hydrate with the latest state at the end of this
+    // card's cooldown. Continuous updates cannot postpone it indefinitely.
+    pending.set(root, { due: Math.max(performance.now(), (lastProcessed.get(root) ?? -cooldownMs) + cooldownMs), force });
+  }
+
   function collect(node: Node) {
-    if (!(node instanceof Element) || node.closest(selectors.mount)) return;
-    const root = rootFor(node);
-    if (root) {
-      pending.add(root);
-      return;
+    if (!(node instanceof Element) || node.closest(ignoredMutations)) return;
+    if (node.matches(postSelector)) {
+      const root = rootFor(node);
+      if (root) { queue(root, true); return; }
     }
     // Only newly added subtrees (or the initial feed), never a document rescan
     // for each mutation. Dedupe inner URN hooks and embedded reposts by root.
     for (const candidate of node.querySelectorAll(postSelector)) {
       const card = rootFor(candidate);
-      if (card) pending.add(card);
+      if (card) queue(card, true);
     }
   }
 
-  function process(root: HTMLElement) {
+  function process(root: HTMLElement, work: PendingPost) {
     try {
       const boundary = container?.deref();
       if (!root.isConnected || !boundary?.contains(root)) return;
-      const value = extract(root);
+      lastProcessed.set(root, performance.now());
       const previous = states.get(root);
-      if (!value) {
+      const fast = previous ? fingerprint(root, previous.nodes) : null;
+      if (previous && !work.force && fast !== null && fast === previous.fingerprint
+        && root.hasAttribute(marker) && root.contains(previous.mount.deref() ?? null)) return;
+      const extracted = extract(root);
+      if (!extracted) {
         if (previous) forget(previous.id);
         return;
       }
+      const { value, nodes } = extracted;
       const knownId = identity(root);
       const sameAuthor = previous?.authorId === value.author?.id;
       // Preserve fallback IDs during hydration/expansion; identity changes on
@@ -229,7 +319,14 @@ export function watchFeed(opts: WatchFeedOptions): FeedWatcher {
       if (!mount) return;
       processed.add(root);
       root.setAttribute(marker, '');
-      states.set(root, { id, authorId: value.author?.id, mount: new WeakRef(mount) });
+      for (const ref of [previous?.nodes.body, previous?.nodes.actor]) {
+        const node = ref?.deref();
+        if (node) regions.delete(node);
+      }
+      const observed = Object.fromEntries(Object.entries(nodes).map(([key, node]) => [key, node ? new WeakRef(node) : null])) as ObservedNodes;
+      for (const node of [nodes.body, nodes.actor]) if (node) regions.set(node, new WeakRef(root));
+      states.set(root, { id, authorId: value.author?.id, mount: new WeakRef(mount), nodes: observed, fingerprint: fingerprint(root, observed)! });
+      lastProcessed.set(root, performance.now());
       const signature = JSON.stringify([value.input, value.author]);
       if (posts.get(id)?.signature === signature && !missingMount) return;
       posts.set(id, { root: new WeakRef(root), signature });
@@ -252,9 +349,10 @@ export function watchFeed(opts: WatchFeedOptions): FeedWatcher {
     if (needsPrune) { needsPrune = false; prune(); }
     const start = performance.now();
     let count = 0;
-    for (const root of pending) {
+    for (const [root, work] of pending) {
+      if (work.due > performance.now()) continue;
       pending.delete(root);
-      process(root);
+      process(root, work);
       count++;
       if (count >= 20 || performance.now() - start >= 8 || (deadline && deadline.timeRemaining() < 1)) break;
     }
@@ -262,13 +360,27 @@ export function watchFeed(opts: WatchFeedOptions): FeedWatcher {
   }
 
   function schedule() {
-    if (scheduled || !active || stopped) return;
+    if (!active || stopped) return;
+    const now = performance.now();
+    let due = needsPrune ? now : Infinity;
+    for (const work of pending.values()) due = Math.min(due, work.due);
+    if (!Number.isFinite(due)) return;
+    if (scheduled) {
+      if (scheduled.kind !== 'timer' || scheduled.due <= due) return;
+      window.clearTimeout(scheduled.id);
+      scheduled = null;
+    }
+    // One shared wakeup, preempted when a new card or removal needs attention.
+    if (due > now + 1) {
+      scheduled = { kind: 'timer', due, id: window.setTimeout(() => { scheduled = null; schedule(); }, Math.ceil(due - now)) };
+      return;
+    }
     if (typeof requestIdleCallback === 'function') {
-      scheduled = { kind: 'idle', id: requestIdleCallback(flush, { timeout: 100 }) };
+      scheduled = { kind: 'idle', due, id: requestIdleCallback(flush, { timeout: 100 }) };
     } else if (typeof requestAnimationFrame === 'function') {
-      scheduled = { kind: 'frame', id: requestAnimationFrame(() => flush()) };
+      scheduled = { kind: 'frame', due, id: requestAnimationFrame(() => flush()) };
     } else {
-      scheduled = { kind: 'timer', id: window.setTimeout(() => flush(), 16) };
+      scheduled = { kind: 'timer', due, id: window.setTimeout(() => flush(), 16) };
     }
   }
 
@@ -281,20 +393,81 @@ export function watchFeed(opts: WatchFeedOptions): FeedWatcher {
     needsPrune = false;
   }
 
-  // Exactly one observer, re-targeted when the feed/main arrives or is replaced.
+  function mutationOwner(element: Element): { root: HTMLElement; region: Element | null } | null {
+    const boundary = container?.deref();
+    for (let node: Element | null = element; node && node !== boundary; node = node.parentElement) {
+      const root = regions.get(node)?.deref();
+      if (root) return { root, region: node };
+      if (node instanceof HTMLElement && states.has(node)) return { root: node, region: null };
+    }
+    return null;
+  }
+
+  function containsCard(node: Element): boolean {
+    return processed.has(node as HTMLElement) || node.matches(postSelector)
+      || (node.childElementCount > 0 && Boolean(node.querySelector(cardRemovalSelector)));
+  }
+
+  function contentHydrated(node: Element, structural: boolean): boolean {
+    return node.matches(mutationContentSelector) || (structural && node.matches(structuralBodySelector))
+      || (node.childElementCount > 0 && Boolean(node.querySelector(mutationContentSelector)));
+  }
+
+  // Exactly one observer. Cached region ownership rejects counters/players
+  // without rootFor() or a card scan; only new card/content subtrees are queried.
   const observer = new MutationObserver(records => {
     if (!active || stopped) return;
     for (const record of records) {
       const element = record.target instanceof Element ? record.target : record.target.parentElement;
-      if (element?.closest(selectors.mount)) continue;
-      const changed = [...record.addedNodes, ...record.removedNodes];
-      if (record.type === 'childList' && changed.length && changed.every(node => node instanceof Element && node.matches(selectors.mount))) continue;
-      if (element) {
-        const card = rootFor(element);
-        if (card) pending.add(card);
+      if (!element || element.closest(ignoredMutations)) continue;
+      if (record.type === 'attributes' && record.attributeName && identityAttributes.has(record.attributeName)) {
+        const before = attributeIdentity(record.attributeName, record.oldValue);
+        const after = attributeIdentity(record.attributeName, element.getAttribute(record.attributeName));
+        if (before !== after) {
+          const card = states.has(element as HTMLElement) ? element as HTMLElement : rootFor(element);
+          if (card) queue(card, true);
+        }
+        continue;
       }
-      for (const added of record.addedNodes) collect(added);
-      if (record.removedNodes.length) needsPrune = true;
+      const owner = mutationOwner(element);
+      if (record.type !== 'childList') {
+        if (owner?.region) queue(owner.root);
+        else if (!owner && element.closest(`${mutationContentSelector},${structuralBodySelector}`)) {
+          const card = rootFor(element);
+          if (card) queue(card, true);
+        }
+        continue;
+      }
+      const changed = [...record.addedNodes, ...record.removedNodes];
+      const removedNodes = new Set(record.removedNodes);
+      if (changed.length && changed.every(node => node instanceof Element && node.matches(selectors.mount))) continue;
+      if (owner?.region) {
+        // textContent does not encode line breaks/paragraph boundaries.
+        const body = states.get(owner.root)?.nodes.body?.deref();
+        const structureChanged = owner.region === body && changed.some(node =>
+          node instanceof Element && (node.tagName === 'BR' || blockTags.has(node.tagName)),
+        );
+        queue(owner.root, structureChanged);
+      }
+      for (const node of changed) {
+        if (!(node instanceof Element) || node.matches(ignoredMutations)) continue;
+        const removed = removedNodes.has(node);
+        if (containsCard(node)) {
+          if (removed) {
+            needsPrune = true;
+            if (owner?.root && owner.root !== node) queue(owner.root, true);
+          }
+          else collect(node);
+        }
+        const knownRegion = regions.get(node)?.deref();
+        if (knownRegion) queue(knownRegion, true);
+        const structural = !owner || !states.get(owner.root)?.nodes.body;
+        if (contentHydrated(node, structural) || node.matches(selectors.identityAnchor.join(','))
+          || (node.childElementCount > 0 && node.querySelector(selectors.identityAnchor.join(',')))) {
+          const card = owner?.root ?? rootFor(element) ?? (!removed ? rootFor(node) : null);
+          if (card) queue(card, true);
+        }
+      }
     }
     if (pending.size || needsPrune) schedule();
   });
@@ -307,6 +480,8 @@ export function watchFeed(opts: WatchFeedOptions): FeedWatcher {
     container = null;
     states = new WeakMap();
     processed = new WeakSet();
+    regions = new WeakMap();
+    lastProcessed = new WeakMap();
   }
 
   function checkLocation() {
@@ -325,7 +500,8 @@ export function watchFeed(opts: WatchFeedOptions): FeedWatcher {
     prune();
     observer.observe(next, {
       subtree: true, childList: true, characterData: true, attributes: true,
-      attributeFilter: ['data-urn', 'data-id', 'componentkey', 'data-full-text', 'aria-label', 'class', 'hidden', 'href', 'src'],
+      attributeOldValue: true,
+      attributeFilter: ['data-urn', 'data-id', 'componentkey', 'data-sdui-anchor-id', 'data-full-text', 'aria-label', 'hidden', 'href', 'src'],
     });
     collect(next);
     schedule();

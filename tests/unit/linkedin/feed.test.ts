@@ -299,3 +299,144 @@ describe('watcher lifecycle', () => {
     expect(onRemove).toHaveBeenCalledTimes(11);
   });
 });
+
+describe('mutation cost', () => {
+  function watchExtractions(root: HTMLElement) {
+    const scans = vi.spyOn(root, 'querySelectorAll');
+    return () => scans.mock.calls.filter(([selector]) => selector === selectors.media.join(',')).length;
+  }
+
+  it('does not re-extract for classes, reaction counts, video controls or non-actor image sources', async () => {
+    load('sdui');
+    const { onPost, byId } = start();
+    await eventually(() => expect(onPost).toHaveBeenCalledTimes(12));
+    const post = byId('urn:li:activity:1001');
+    const extractions = watchExtractions(post.root);
+    const body = post.root.querySelector<HTMLElement>(selectors.body[0]!)!;
+    const counter = document.createElement('a');
+    counter.setAttribute('data-view-name', 'view-likers');
+    const count = document.createElement('span');
+    counter.append(count);
+    const player = document.createElement('button');
+    const image = document.createElement('img');
+    post.root.append(counter, player, image);
+    for (let index = 0; index < 12; index++) {
+      post.root.classList.toggle('hovered');
+      body.classList.toggle('expanded');
+      count.textContent = `${index} reactions`;
+      player.setAttribute('aria-label', `Video ${index}`);
+      image.setAttribute('src', `data:image/png,${index}`);
+      await pause(15);
+    }
+    await pause(850);
+    expect(extractions()).toBe(0);
+    expect(onPost).toHaveBeenCalledTimes(12);
+  });
+
+  it('coalesces a hydration burst into one trailing extraction per 750 ms', async () => {
+    load('hashed');
+    const { onPost, byId } = start();
+    await eventually(() => expect(onPost).toHaveBeenCalledTimes(12));
+    const post = byId('urn:li:activity:1001');
+    const body = post.root.querySelector<HTMLElement>(selectors.body.join(','))!;
+    const extractions = watchExtractions(post.root);
+    for (let index = 0; index < 8; index++) {
+      body.firstChild!.textContent = `Hydrating version ${index}`;
+      await pause(25);
+    }
+    expect(extractions()).toBe(0);
+    await eventually(() => expect(onPost).toHaveBeenCalledTimes(13));
+    expect(extractions()).toBe(1);
+    expect(byId(post.id).input.text).toBe('Hydrating version 7');
+    body.firstChild!.textContent = 'Final hydrated version';
+    await pause(120);
+    expect(extractions()).toBe(1);
+    await eventually(() => expect(onPost).toHaveBeenCalledTimes(14));
+    expect(extractions()).toBe(2);
+    expect(byId(post.id).id).toBe(post.id);
+  });
+
+  it('handles see-more text appended with a class toggle, keeping the same id', async () => {
+    load('hashed');
+    const { onPost, byId } = start();
+    await eventually(() => expect(onPost).toHaveBeenCalledTimes(12));
+    const post = byId('urn:li:activity:1012');
+    const body = post.root.querySelector<HTMLElement>(selectors.body.join(','))!;
+    const original = byId(post.id).input.text;
+    const more = document.createElement('button');
+    more.textContent = '…more';
+    body.append(more);
+    more.onclick = () => {
+      more.remove();
+      body.classList.add('expanded');
+      body.firstChild!.textContent = original;
+      body.append(' Full text arrived from hydration. #Expanded');
+    };
+    more.click();
+    await eventually(() => expect(onPost).toHaveBeenCalledTimes(13));
+    expect(byId(post.id).input.text).toBe(`${original} Full text arrived from hydration. #Expanded`);
+    expect(byId(post.id).mount).toBe(post.mount);
+    expect(byId(post.id).input.hashtags).toEqual(['#Expanded']);
+  });
+
+  it('uses the fast fingerprint for timestamps and redundant body mutations without missing middle edits', async () => {
+    load('sdui');
+    const { onPost, byId } = start();
+    await eventually(() => expect(onPost).toHaveBeenCalledTimes(12));
+    const post = byId('urn:li:activity:1001');
+    const extractions = watchExtractions(post.root);
+    const actor = post.mount.previousElementSibling!;
+    const timestamp = [...actor.querySelectorAll('p')].find(p => p.textContent === '2h · Edited')!;
+    timestamp.firstChild!.textContent = '3h · Edited';
+    const body = post.root.querySelector<HTMLElement>(selectors.body[0]!)!;
+    const last = body.querySelector('a')!;
+    last.firstChild!.textContent = last.firstChild!.textContent;
+    await pause(850);
+    expect(extractions()).toBe(0);
+    body.textContent = `${'a'.repeat(40)} ORIGINAL ${'z'.repeat(40)}`;
+    await eventually(() => expect(onPost).toHaveBeenCalledTimes(13));
+    body.firstChild!.textContent = `${'a'.repeat(40)} MODIFIED ${'z'.repeat(40)}`;
+    await eventually(() => expect(onPost).toHaveBeenCalledTimes(14));
+    expect(byId(post.id).input.text).toContain('MODIFIED');
+    expect(extractions()).toBe(2);
+  });
+
+  it('notices identity-anchor hydration and replacement of body/actor subtrees', async () => {
+    load('sdui');
+    const { onPost, onRemove, byId } = start();
+    await eventually(() => expect(onPost).toHaveBeenCalledTimes(12));
+    const post = byId('sdui:syntheticPost02_opaque');
+    const body = post.root.querySelector<HTMLElement>(selectors.body[0]!)!;
+    const replacement = body.cloneNode(true) as HTMLElement;
+    body.replaceWith(replacement);
+    replacement.textContent = 'Replaced body. #Fresh';
+    await eventually(() => expect(onPost).toHaveBeenCalledTimes(13));
+    expect(byId(post.id).input.text).toBe('Replaced body. #Fresh');
+    const actor = post.mount.previousElementSibling!;
+    const newActor = actor.cloneNode(true) as HTMLElement;
+    actor.replaceWith(newActor);
+    newActor.querySelector(selectors.actorLink[0]!)!.querySelector('p')!.textContent = 'Ben Updated';
+    await eventually(() => expect(onPost).toHaveBeenCalledTimes(14));
+    expect(byId(post.id).author?.name).toBe('Ben Updated');
+    const anchor = document.createElement('span');
+    anchor.setAttribute('data-sdui-anchor-id', 'feed-header-urn:li:activity:2002-0');
+    post.root.prepend(anchor);
+    await eventually(() => expect(onPost).toHaveBeenCalledTimes(15));
+    expect(onRemove).toHaveBeenCalledWith(post.id);
+    expect(onPost.mock.calls.at(-1)?.[0].id).toBe('urn:li:activity:2002');
+  });
+
+  it('cancels trailing work when disconnected', async () => {
+    load('hashed');
+    const { onPost, byId } = start();
+    await eventually(() => expect(onPost).toHaveBeenCalledTimes(12));
+    const post = byId('urn:li:activity:1001');
+    const extractions = watchExtractions(post.root);
+    post.root.querySelector(selectors.body.join(','))!.append(' Pending text update.');
+    await pause(50);
+    watcher!.disconnect();
+    await pause(850);
+    expect(extractions()).toBe(0);
+    expect(onPost).toHaveBeenCalledTimes(12);
+  });
+});
