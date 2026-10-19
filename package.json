@@ -1,0 +1,32 @@
+{
+  "name": "slop-shame",
+  "description": "Rates every LinkedIn feed post with a Slop Index. Destroy the slop. Shame the slopper.",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "wxt",
+    "build": "wxt build",
+    "zip": "wxt zip",
+    "check": "svelte-check --tsconfig ./tsconfig.json",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:e2e": "pnpm build && playwright test",
+    "linkedin:login": "node scripts/linkedin-login.mjs",
+    "postinstall": "wxt prepare"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.64.1",
+    "@tsconfig/svelte": "^5.0.8",
+    "@wxt-dev/module-svelte": "^2.0.4",
+    "happy-dom": "^21.0.3",
+    "svelte": "^5.53.7",
+    "svelte-check": "^4.4.4",
+    "tslib": "^2.8.1",
+    "typescript": "^5.9.3",
+    "vite": "^8.1.5",
+    "vitest": "^5.0.5",
+    "web-ext": "^10.5.0",
+    "wxt": "^0.21.3"
+  }
+}
