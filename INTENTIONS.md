@@ -40,6 +40,17 @@ context loss. Append, don't rewrite history.
     LinkedIn phrase research needed.
 17. Wide web research on similar repos/dictionaries/methods: fan out multiple
     Groks and Geminis, one angle each.
+19. Roast cards: full name/avatar inside the extension; anything shared
+    (download/copy) blurs the avatar and uses initials by default, with an
+    opt-in toggle (defaults off each time). [Chrome Web Store bullying policy]
+20. Promoted posts: badge + Shame, but **no Destroy** (LinkedIn UA §8.2 bans
+    removing/covering ads).
+21. Testing: keep owner's real account, but only minimal gentle live checks;
+    fixtures for everything else. No automation, no LinkedIn API calls;
+    `use_dynamic_url` on web-accessible resources to resist extension probing.
+22. Shame is only offered when the engine says `shameable` (score ≥ 40, ≥ 40
+    words, ≥ 1 phrase/discourse tell — style alone never qualifies). Destroy
+    is always available on non-ad posts.
 18. Extra workstreams approved: category ("slop-type") icons (Sol), speed +
     memory soak test (Sol), CI + contributor tooling + docs (Opus at medium —
     Sol is bad at writing).
@@ -83,6 +94,7 @@ context loss. Append, don't rewrite history.
 - [ ] Perf + memory soak harness — delegated (Sol xhigh, codex, slop-shame-perf-r1)
 - [x] CI, issue/PR templates, CONTRIBUTING, README, PRIVACY, SECURITY — done, reviewed, committed. Before going public: confirm GitHub owner `prashantbhudwal/slop-shame`; update PRIVACY.md if permissions change (e.g. captureVisibleTab/downloads); add screenshots to docs/.
 - [x] research/social-post-tells.md (Gemini) committed
+- [x] research/landscape.md, detection-methods.md, slop-dictionaries.md (Grok) committed. Top lists to vendor in engine round 2: Zero Slop patterns.json (MIT), Sam Paech weighted adjustments (Apache-2.0) + essay freq (MIT), vale-ai-tells (MIT), slop-radar (MIT), Kobak excess_words (MIT repo). NOT usable: Wikipedia signs (CC BY-SA), sloptells (no license), gptslop (AGPL).
 - [ ] Research → `research/`: slop-dictionaries.md (Grok), detection-methods.md (Grok), landscape.md incl. Chrome Web Store / LinkedIn ToS risks (Grok), frequency-evidence.md (Gemini), social-post-tells.md (Gemini)
 - [ ] Orchestrator review + integration + commit of each workstream; feed research findings into the engine (round 2)
 - [x] Owner logged in to LinkedIn once (profile `.playwright/linkedin-profile`, verified: feed loads)
