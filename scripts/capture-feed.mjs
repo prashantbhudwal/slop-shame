@@ -18,7 +18,7 @@ try {
   context = await chromium.launchPersistentContext(profile, {
     channel: 'chromium', headless: false, viewport: { width: 1280, height: 900 },
     ignoreDefaultArgs: ['--enable-automation'],
-    args: ['--disable-blink-features=AutomationControlled', '--window-position=-2400,-2400'],
+    args: ['--disable-blink-features=AutomationControlled', '--window-position=2600,0'],
   });
   const page = context.pages()[0] ?? await context.newPage();
   await page.goto('https://www.linkedin.com/feed/', { waitUntil: 'domcontentloaded' });

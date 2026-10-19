@@ -61,6 +61,10 @@ Conor Bronsdon). Keep the attribution in the pack and in `THIRD_PARTY_NOTICES.md
 
 ## Machine etiquette (several agents share the owner's Mac)
 
+- Headed browsers (real-LinkedIn checks, probes) go on the owner's second
+  monitor, a portrait BenQ GW2480 at global x=2560: pass
+  `--window-position=2600,0`. Never on the main monitor (macOS clamps
+  off-screen positions like -2400,-2400 back onto it). Prefer headless.
 - One Chromium/Playwright browser per agent at a time; Playwright `workers: 1`.
   Close contexts and make sure the browser process tree is gone when done.
 - One `rembg`/onnxruntime process at a time, model loaded once per batch

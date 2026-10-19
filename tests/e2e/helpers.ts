@@ -17,7 +17,7 @@ export async function launchWithExtension(options: { profileDir?: string; headle
     ...(real ? { viewport: { width: 1280, height: 900 }, ignoreDefaultArgs: ['--enable-automation'] } : {}),
     args: [
       `--disable-extensions-except=${extensionPath}`, `--load-extension=${extensionPath}`,
-      ...(real ? ['--disable-blink-features=AutomationControlled', '--window-position=-2400,-2400'] : []),
+      ...(real ? ['--disable-blink-features=AutomationControlled', '--window-position=2600,0'] : []),
     ],
   });
 }
