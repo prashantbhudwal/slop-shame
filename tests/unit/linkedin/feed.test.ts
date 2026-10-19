@@ -29,6 +29,62 @@ function start() {
 beforeEach(() => { history.replaceState(null, '', '/feed/'); });
 afterEach(() => { watcher?.disconnect(); watcher = undefined; document.body.innerHTML = ''; vi.restoreAllMocks(); vi.unstubAllGlobals(); });
 
+describe('review regressions', () => {
+  it('discovers structural descendants inside a newly hydrated wrapper', async () => {
+    load('hashed');
+    const { onPost, byId } = start();
+    await eventually(() => expect(onPost).toHaveBeenCalledTimes(12));
+    const wrapper = document.createElement('div');
+    wrapper.innerHTML = '<div class="opaque-wrapper"><p>Hydrated structural body</p></div>';
+    document.querySelector('[data-urn="urn:li:activity:9999"]')!.append(wrapper);
+    await eventually(() => expect(byId('urn:li:activity:9999')?.input.text).toBe('Hydrated structural body'));
+  });
+
+  it.each([
+    ['media', '<figure><img src="data:image/png,fixture" alt="Post image"></figure>', 'hasMedia'],
+    ['poll', '<div><div role="group" aria-label="Community poll">Choices</div></div>', 'hasPoll'],
+  ] as const)('discovers a %s-only card after lazy hydration', async (_name, html, flag) => {
+    load('hashed');
+    const { onPost, byId } = start();
+    await eventually(() => expect(onPost).toHaveBeenCalledTimes(12));
+    const wrapper = document.createElement('div');
+    wrapper.innerHTML = html;
+    document.querySelector('[data-urn="urn:li:activity:9999"]')!.append(wrapper);
+    await eventually(() => expect(byId('urn:li:activity:9999')?.input[flag]).toBe(true));
+  });
+
+  it('updates media and poll flags when their subtrees are added and removed', async () => {
+    load('hashed');
+    const { onPost, byId } = start();
+    await eventually(() => expect(onPost).toHaveBeenCalledTimes(12));
+    const post = byId('urn:li:activity:1001');
+    const wrapper = document.createElement('div');
+    wrapper.innerHTML = '<figure><img src="data:image/png,fixture" alt="Post image"></figure><div role="group" aria-label="Community poll">Choices</div>';
+    post.root.append(wrapper);
+    await eventually(() => expect(byId(post.id).input).toMatchObject({ hasMedia: true, hasPoll: true }));
+    wrapper.remove();
+    await eventually(() => expect(byId(post.id).input).toMatchObject({ hasMedia: false, hasPoll: false }));
+    expect(onPost).toHaveBeenCalledTimes(14);
+  });
+
+  it.each([
+    ['line break', '<span>Alpha<br>Beta</span>', 'Alpha\nBeta'],
+    ['blocks', '<span><p>Alpha</p><p>Beta</p></span>', 'Alpha\n\nBeta'],
+  ])('notices nested %s changes with identical textContent', async (_name, html, expected) => {
+    load('hashed');
+    const { onPost, byId } = start();
+    await eventually(() => expect(onPost).toHaveBeenCalledTimes(12));
+    const post = byId('urn:li:activity:1001');
+    const body = post.root.querySelector<HTMLElement>(selectors.body.join(','))!;
+    body.innerHTML = '<span>AlphaBeta</span>';
+    await eventually(() => expect(byId(post.id).input.text).toBe('AlphaBeta'));
+    body.firstElementChild!.outerHTML = html!;
+    expect(body.textContent).toBe('AlphaBeta');
+    await eventually(() => expect(byId(post.id).input.text).toBe(expected));
+    expect(onPost).toHaveBeenCalledTimes(14);
+  });
+});
+
 describe.each(['classic', 'hashed'])('%s LinkedIn feed', variant => {
   it('detects 12 whole cards, skips suggestions/jobs/empty modules, and dedupes inner URNs', async () => {
     load(variant);
@@ -311,7 +367,6 @@ describe('mutation cost', () => {
     const { onPost, byId } = start();
     await eventually(() => expect(onPost).toHaveBeenCalledTimes(12));
     const post = byId('urn:li:activity:1001');
-    const extractions = watchExtractions(post.root);
     const body = post.root.querySelector<HTMLElement>(selectors.body[0]!)!;
     const counter = document.createElement('a');
     counter.setAttribute('data-view-name', 'view-likers');
@@ -320,6 +375,9 @@ describe('mutation cost', () => {
     const player = document.createElement('button');
     const image = document.createElement('img');
     post.root.append(counter, player, image);
+    // A new image is real media hydration; measure only the subsequent churn.
+    await eventually(() => expect(byId(post.id).input.hasMedia).toBe(true));
+    const extractions = watchExtractions(post.root);
     for (let index = 0; index < 12; index++) {
       post.root.classList.toggle('hovered');
       body.classList.toggle('expanded');
@@ -330,7 +388,7 @@ describe('mutation cost', () => {
     }
     await pause(850);
     expect(extractions()).toBe(0);
-    expect(onPost).toHaveBeenCalledTimes(12);
+    expect(onPost).toHaveBeenCalledTimes(13);
   });
 
   it('coalesces a hydration burst into one trailing extraction per 750 ms', async () => {

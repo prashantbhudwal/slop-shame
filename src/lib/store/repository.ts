@@ -2,9 +2,9 @@
 import { MAX_POSTS, POST_RETENTION_MS, requestResult, transaction } from './db';
 import type { PostRecord, StoredAuthor } from './model';
 import { slopPoints } from './ranking';
-import type { PostSighting, UserAction } from './types';
+import type { PostAction, PostSighting, UserAction } from './types';
 import { SLOP_THRESHOLD } from './types';
-import { parseExport, validateSighting } from './validation';
+import { parseExport, validateAction, validateSighting } from './validation';
 
 function newAuthor(s: PostSighting): StoredAuthor {
   return {
@@ -67,14 +67,23 @@ async function prunePosts(tx: IDBTransaction, now: number, cache: Map<string, St
 }
 
 export async function recordSightings(sightings: PostSighting[], now = Date.now()): Promise<boolean> {
+  return (await recordBatch(sightings, [], now)).wrote;
+}
+
+/** Upserts and actions commit together, so a retry can never observe half a batch. */
+export async function recordBatch(
+  sightings: PostSighting[], actions: PostAction[] = [], now = Date.now(),
+): Promise<{ wrote: boolean; pendingActions: PostAction[] }> {
   // One malformed adapter result must not poison a whole batch and retry forever.
   const valid = sightings.filter((sighting) => {
     try { validateSighting(sighting); return true; } catch { return false; }
   });
+  actions.forEach(validateAction);
   return transaction('readwrite', async (tx) => {
     const authors = tx.objectStore('authors');
     const posts = tx.objectStore('posts');
     const cache = new Map<string, StoredAuthor>();
+    const pendingActions: PostAction[] = [];
     for (const s of valid) {
       const old = await requestResult<PostRecord | undefined>(posts.get(s.postId));
       if (old && old.authorId !== s.author.id) continue;
@@ -104,9 +113,22 @@ export async function recordSightings(sightings: PostSighting[], now = Date.now(
       cache.set(author.id, author);
       await requestResult(posts.put(post));
     }
+    for (const action of actions) {
+      const post = await requestResult<PostRecord | undefined>(posts.get(action.postId));
+      if (!post || post.authorId !== action.authorId) { pendingActions.push(action); continue; }
+      if (post[action.action]) continue; // Already committed, including lost-ack retries.
+      const author = cache.get(action.authorId)
+        ?? await requestResult<StoredAuthor | undefined>(authors.get(action.authorId));
+      if (!author) { pendingActions.push(action); continue; }
+      post[action.action] = true;
+      author[action.action === 'destroyed' ? 'destroyedCount' : 'shamedCount']++;
+      cache.set(author.id, author);
+      await requestResult(posts.put(post));
+    }
     for (const author of cache.values()) {
       author.slopPoints = slopPoints(author);
-      author.maxScore = Math.max(0, ...Object.keys(author.scoreCounts).map(Number));
+      author.maxScore = Math.max(0, ...Object.entries(author.scoreCounts)
+        .filter(([, n]) => (n ?? 0) > 0).map(([score]) => Number(score)));
       const range = IDBKeyRange.bound([author.id, 0], [author.id, 100]);
       const best = (await requestResult(posts.index('authorScore').openCursor(range, 'prev')))?.value as PostRecord | undefined;
       const archived = author.archivedWorstPost;
@@ -115,7 +137,7 @@ export async function recordSightings(sightings: PostSighting[], now = Date.now(
       await requestResult(authors.put(author));
     }
     const pruned = await prunePosts(tx, now, cache);
-    return cache.size > 0 || pruned;
+    return { wrote: cache.size > 0 || pruned, pendingActions };
   });
 }
 

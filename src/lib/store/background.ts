@@ -1,8 +1,9 @@
-import { clearStore, importSnapshot, recordAction, recordSightings } from './repository';
+import { clearStore, importSnapshot, recordBatch } from './repository';
 import { getAuthor, getLeaderboard } from './query';
 import type { PageMessage } from './model';
 import type { StoreMessage } from './types';
 import type { StoreErrorReply } from './transport';
+import { validateAction } from './validation';
 
 /** One listener per service-worker lifetime. All durable state lives in IDB. */
 export function registerStoreHandlers(): void {
@@ -46,11 +47,19 @@ export function registerStoreHandlers(): void {
     switch (msg.type) {
       case 'store/sightings':
         if (!Array.isArray(msg.sightings)) return rejected('Invalid sightings batch');
-        return respond(recordSightings(msg.sightings).then((wrote) => { if (wrote) changed(); }));
+        if (msg.actions !== undefined && !Array.isArray(msg.actions)) return rejected('Invalid actions batch');
+        try { msg.actions?.forEach(validateAction); } catch { return rejected('Invalid store action'); }
+        return respond(recordBatch(msg.sightings, msg.actions).then(({ wrote, pendingActions }) => {
+          if (wrote) changed();
+          return { ok: true, pendingActions };
+        }));
       case 'store/action':
-        if (typeof msg.postId !== 'string' || typeof msg.authorId !== 'string'
-          || !['destroyed', 'shamed'].includes(msg.action)) return rejected('Invalid action');
-        return respond(recordAction(msg.postId, msg.authorId, msg.action).then((wrote) => { if (wrote) changed(); }));
+        try { validateAction(msg); } catch { return rejected('Invalid action'); }
+        return respond(recordBatch([], [{ postId: msg.postId, authorId: msg.authorId, action: msg.action }])
+          .then(({ wrote, pendingActions }) => {
+            if (wrote) changed();
+            return { ok: true, pendingActions };
+          }));
       case 'store/author':
         if (typeof msg.authorId !== 'string') return rejected('Invalid author identity');
         return respond(getAuthor(msg.authorId));

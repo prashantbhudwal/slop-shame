@@ -1,7 +1,8 @@
 # Hall of Slop store
 
 Implementation status: complete, with unit tests for persistence, ranking,
-retention, messaging and batching. The shared `types.ts` contract is unchanged.
+retention, messaging and batching. Public client and page function signatures
+are unchanged; sightings messages accept an optional `actions` array.
 
 Extension pages (popup and leaderboard) import:
 
@@ -37,12 +38,23 @@ await reportAction(postId, authorId, 'destroyed'); // or 'shamed'
 const author = await getAuthor(authorId);
 ```
 
-`flushSightings(): Promise<void>` is also available. Actions flush sightings
-first; author queries flush too so first-use shame cards see current totals.
+`flushSightings(): Promise<void>` is also available. Actions travel in sighting
+batches and commit in the same transaction, after the upserts. Replies contain
+`{ ok: true, pendingActions }`: unknown or conflicting targets remain queued
+until a matching sighting can be persisted. Failures reject the current flush
+without dropping actions; retries are idempotent. Legacy `store/action`
+messages remain supported and return the same acknowledgement shape.
+Author queries flush too so first-use shame cards see current totals.
 Extension-context invalidation stops the client without rejecting. Imports and
 clears notify open LinkedIn tabs to reset session dedupe; recent action targets
 can then be reported again. Malformed sightings or conflicting author identities
 are skipped individually without blocking a valid batch.
+
+Session dedupe uses a 2,000-entry LRU of score, tier, category, snippet and author
+metadata signatures. Unchanged posts can refresh `lastSeen` once every five
+minutes when reported again. A separate 500-entry snapshot cache supports
+actions after a database reset; pending actions retain their own target snapshot
+until acknowledged, independently of those bounded caches.
 
 DB `slop-shame`, version 1: `authors` keyed by `id` (indices `slopPoints`,
 `lastSeen`, `[slopPoints,maxScore]`); `posts` keyed by `postId` (indices

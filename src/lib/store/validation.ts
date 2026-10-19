@@ -1,5 +1,5 @@
 import type { SlopCategory, SlopTierId } from '../engine/types';
-import type { PostSighting } from './types';
+import type { PostAction, PostSighting } from './types';
 import { SLOP_THRESHOLD } from './types';
 import type { StoreExport } from './model';
 import { slopPoints } from './ranking';
@@ -32,6 +32,11 @@ export function validateSighting(value: unknown): asserts value is PostSighting 
   if (!record(value) || !id(value.postId) || !record(value.author) || !identity(value.author)
     || !score(value.score) || !tiers.has(String(value.tierId)) || !category(value.topCategory)
     || !text(value.snippet) || !count(value.seenAt)) throw new Error('Invalid post sighting');
+}
+
+export function validateAction(value: unknown): asserts value is PostAction {
+  if (!record(value) || !id(value.postId) || !id(value.authorId)
+    || (value.action !== 'destroyed' && value.action !== 'shamed')) throw new Error('Invalid store action');
 }
 
 /** Validate completely before opening a replacement transaction. */
@@ -100,7 +105,9 @@ export function parseExport(json: string): StoreExport {
   return {
     format: 'slop-shame', version: 1, exportedAt: snapshot.exportedAt,
     authors: snapshot.authors.map((author) => ({
-      ...publicAuthor(author), scoreCounts: author.scoreCounts, slopocalypsePosts: author.slopocalypsePosts,
+      ...publicAuthor(author),
+      scoreCounts: Object.fromEntries(Object.entries(author.scoreCounts).filter(([, n]) => (n ?? 0) > 0)),
+      slopocalypsePosts: author.slopocalypsePosts,
       ...(author.archivedWorstPost ? { archivedWorstPost: {
         postId: author.archivedWorstPost.postId, score: author.archivedWorstPost.score, snippet: author.archivedWorstPost.snippet,
       } } : {}),

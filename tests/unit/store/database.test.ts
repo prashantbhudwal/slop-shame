@@ -18,6 +18,32 @@ afterEach(async () => {
 });
 
 describe('Hall of Slop IndexedDB', () => {
+  it('drops zero-count histogram bins on import and preserves a reimportable maximum', async () => {
+    const s = sighting('zero-bins', 40);
+    await recordSightings([s]);
+    const snapshot = JSON.parse(await (await exportData()).text()) as StoreExport;
+    snapshot.authors[0]!.scoreCounts = { 0: 0, 40: 1, 100: 0 };
+    await importSnapshot(JSON.stringify(snapshot));
+    await recordSightings([{ ...s, seenAt: s.seenAt + 1 }]);
+    expect(await getAuthor(s.author.id)).toMatchObject({ maxScore: 40, totalScore: 40 });
+    const exported = JSON.parse(await (await exportData()).text()) as StoreExport;
+    expect(exported.authors[0]!.scoreCounts).toEqual({ 40: 1 });
+    await expect(importSnapshot(JSON.stringify(exported))).resolves.toBeUndefined();
+  });
+
+  it('ignores legacy zero-count bins when recomputing the maximum', async () => {
+    const s = sighting('legacy-zero', 40);
+    await recordSightings([s]);
+    await transaction('readwrite', async (tx) => {
+      const authors = tx.objectStore('authors');
+      const author = await requestResult<StoredAuthor>(authors.get(s.author.id));
+      author.scoreCounts[100] = 0;
+      await requestResult(authors.put(author));
+    });
+    await recordSightings([{ ...s, seenAt: s.seenAt + 1 }]);
+    expect((await getAuthor(s.author.id))!.maxScore).toBe(40);
+  });
+
   it('migrates an empty database and reopens after the worker connection closes', async () => {
     const db = await openDatabase();
     expect(db.version).toBe(DB_VERSION);

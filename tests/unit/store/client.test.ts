@@ -6,7 +6,7 @@ let resetListener: (message: unknown) => unknown;
 beforeEach(() => {
   vi.resetModules();
   vi.useFakeTimers();
-  sendMessage = vi.fn().mockResolvedValue(undefined);
+  sendMessage = vi.fn().mockResolvedValue({ ok: true, pendingActions: [] });
   vi.stubGlobal('browser', { runtime: { sendMessage, onMessage: { addListener: (fn: typeof resetListener) => { resetListener = fn; } } } });
 });
 afterEach(() => { vi.clearAllTimers(); vi.useRealTimers(); vi.unstubAllGlobals(); });
@@ -39,11 +39,12 @@ describe('content store client', () => {
     expect(sendMessage.mock.calls[1]![0].sightings[0].score).toBe(40);
   });
 
-  it('orders buffered sightings before actions and queries authors through messaging', async () => {
+  it('batches buffered sightings with actions and queries authors through messaging', async () => {
     const { reportSighting, reportAction, getAuthor } = await import('../../../src/lib/store/client');
     reportSighting(sighting());
     await reportAction('post-1', 'in/alice', 'destroyed');
-    expect(sendMessage.mock.calls.map(([m]) => m.type)).toEqual(['store/sightings', 'store/action']);
+    expect(sendMessage.mock.calls.map(([m]) => m.type)).toEqual(['store/sightings']);
+    expect(sendMessage.mock.calls[0]![0].actions).toEqual([{ postId: 'post-1', authorId: 'in/alice', action: 'destroyed' }]);
     sendMessage.mockResolvedValueOnce({ id: 'in/alice', postsSeen: 1 });
     expect(await getAuthor('in/alice')).toMatchObject({ id: 'in/alice' });
   });
@@ -89,7 +90,7 @@ describe('content store client', () => {
     expect(sendMessage.mock.calls.map(([m]) => m.type)).toEqual(['store/sightings', 'store/author']);
   });
 
-  it('drops permanent server rejections and still sends actions after a transient flush failure', async () => {
+  it('drops permanent sighting rejections and retains actions after a transient flush failure', async () => {
     const { reportSighting, flushSightings, reportAction } = await import('../../../src/lib/store/client');
     sendMessage.mockResolvedValueOnce({ type: 'store/error', error: 'Invalid batch', retryable: false });
     reportSighting(sighting());
@@ -98,8 +99,9 @@ describe('content store client', () => {
     expect(sendMessage).toHaveBeenCalledTimes(1);
     reportSighting(sighting('b'));
     sendMessage.mockRejectedValueOnce(new Error('Temporary storage error'));
-    await reportAction('stored-post', 'in/alice', 'shamed');
-    expect(sendMessage.mock.calls.at(-1)![0].type).toBe('store/action');
+    await expect(reportAction('stored-post', 'in/alice', 'shamed')).rejects.toThrow('Temporary storage');
+    await flushSightings();
+    expect(sendMessage.mock.calls.at(-1)![0].actions).toEqual([{ postId: 'stored-post', authorId: 'in/alice', action: 'shamed' }]);
   });
 
   it('clears session dedupe on reset and can re-report an action target after clearing', async () => {
@@ -108,7 +110,9 @@ describe('content store client', () => {
     await flushSightings();
     resetListener({ type: 'store/reset' });
     await reportAction('post-1', 'in/alice', 'destroyed');
-    expect(sendMessage.mock.calls.map(([m]) => m.type)).toEqual(['store/sightings', 'store/sightings', 'store/action']);
+    expect(sendMessage.mock.calls.map(([m]) => m.type)).toEqual(['store/sightings', 'store/sightings']);
+    expect(sendMessage.mock.calls[1]![0].sightings).toHaveLength(1);
+    expect(sendMessage.mock.calls[1]![0].actions).toEqual([{ postId: 'post-1', authorId: 'in/alice', action: 'destroyed' }]);
   });
 
   it('swallows invalidation while registering the reset listener after reload', async () => {

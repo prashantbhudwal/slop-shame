@@ -9,6 +9,9 @@ const identityAttributes = new Set(['data-urn', 'data-id', 'componentkey', 'data
 const ignoredMutations = [selectors.mount, ...selectors.comments, selectors.controls].join(',');
 const mutationContentSelector = selectors.mutationContent.join(',');
 const structuralBodySelector = selectors.structuralBody.join(',');
+const hydrationSelector = [...selectors.mutationContent, ...selectors.media, ...selectors.poll].join(',');
+const structuralHydrationSelector = `${hydrationSelector},${structuralBodySelector}`;
+const textStructureSelector = ['BR', ...blockTags].join(',');
 const cardRemovalSelector = `${postSelector},${selectors.processed}`;
 
 function first(scope: ParentNode, fallbacks: readonly string[]): HTMLElement | null {
@@ -409,8 +412,8 @@ export function watchFeed(opts: WatchFeedOptions): FeedWatcher {
   }
 
   function contentHydrated(node: Element, structural: boolean): boolean {
-    return node.matches(mutationContentSelector) || (structural && node.matches(structuralBodySelector))
-      || (node.childElementCount > 0 && Boolean(node.querySelector(mutationContentSelector)));
+    const selector = structural ? structuralHydrationSelector : hydrationSelector;
+    return node.matches(selector) || (node.childElementCount > 0 && Boolean(node.querySelector(selector)));
   }
 
   // Exactly one observer. Cached region ownership rejects counters/players
@@ -445,7 +448,9 @@ export function watchFeed(opts: WatchFeedOptions): FeedWatcher {
         // textContent does not encode line breaks/paragraph boundaries.
         const body = states.get(owner.root)?.nodes.body?.deref();
         const structureChanged = owner.region === body && changed.some(node =>
-          node instanceof Element && (node.tagName === 'BR' || blockTags.has(node.tagName)),
+          node instanceof Element && !node.matches(ignoredMutations)
+          && (node.tagName === 'BR' || blockTags.has(node.tagName)
+            || (node.childElementCount > 0 && Boolean(node.querySelector(textStructureSelector)))),
         );
         queue(owner.root, structureChanged);
       }

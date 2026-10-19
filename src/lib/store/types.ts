@@ -52,9 +52,21 @@ export const SLOP_THRESHOLD = 40;
 
 export type UserAction = 'destroyed' | 'shamed';
 
+export interface PostAction {
+  postId: string;
+  authorId: string;
+  action: UserAction;
+}
+
+/** Acknowledged only after commit; unresolved targets must stay in the client queue. */
+export interface StoreBatchReply {
+  ok: true;
+  pendingActions: PostAction[];
+}
+
 /** Messages content script → background. */
 export type StoreMessage =
-  | { type: 'store/sightings'; sightings: PostSighting[] }
-  | { type: 'store/action'; postId: string; authorId: string; action: UserAction }
+  | { type: 'store/sightings'; sightings: PostSighting[]; actions?: PostAction[] }
+  | ({ type: 'store/action' } & PostAction) // Legacy callers remain supported.
   | { type: 'store/author'; authorId: string } // reply: AuthorRecord | null
   | { type: 'store/leaderboard'; limit: number }; // reply: AuthorRecord[]
