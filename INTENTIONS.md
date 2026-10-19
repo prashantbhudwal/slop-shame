@@ -80,7 +80,8 @@ context loss. Append, don't rewrite history.
 - [ ] UI: badge, Destroy eruption, Shame modal, popup, Hall of Slop page — delegated (Opus xhigh, claudeAgent_cash, slop-shame-ui-r2; r1 cancelled for running at medium)
 - [ ] Category icons (10) — queued as follow-up on the asset agent's thread
 - [ ] Perf + memory soak harness — delegated (Sol xhigh, codex, slop-shame-perf-r1)
-- [ ] CI, issue/PR templates, CONTRIBUTING, README, PRIVACY, SECURITY — delegated (Opus medium, claudeAgent_cash, slop-shame-docs-ci-r1)
+- [x] CI, issue/PR templates, CONTRIBUTING, README, PRIVACY, SECURITY — done, reviewed, committed. Before going public: confirm GitHub owner `prashantbhudwal/slop-shame`; update PRIVACY.md if permissions change (e.g. captureVisibleTab/downloads); add screenshots to docs/.
+- [x] research/social-post-tells.md (Gemini) committed
 - [ ] Research → `research/`: slop-dictionaries.md (Grok), detection-methods.md (Grok), landscape.md incl. Chrome Web Store / LinkedIn ToS risks (Grok), frequency-evidence.md (Gemini), social-post-tells.md (Gemini)
 - [ ] Orchestrator review + integration + commit of each workstream; feed research findings into the engine (round 2)
 - [x] Owner logged in to LinkedIn once (profile `.playwright/linkedin-profile`, verified: feed loads)
