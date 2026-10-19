@@ -1,0 +1,42 @@
+[
+  {
+    "id": "ai-cert-onboarding",
+    "text": "In today's fast-paced world, onboarding matters more than ever. A seamless process is a testament to the care we put into our teams. We should delve into the details of the first week. The future looks bright when every new colleague has someone to ask for help. What would you add?",
+    "authorship": "ai",
+    "synthetic": true,
+    "expectTier": [
+      "certified",
+      "swamp"
+    ]
+  },
+  {
+    "id": "ai-cert-transition",
+    "text": "It is important to note that good communication begins with clarity. Moreover, the reality is that teams need a shared understanding of their goals. At its core, collaboration means making room for different views. In conclusion, the integration of feedback can help us work together. Only time will tell which habits last.",
+    "authorship": "ai",
+    "synthetic": true,
+    "expectTier": [
+      "certified",
+      "swamp"
+    ]
+  },
+  {
+    "id": "ai-cert-hedging",
+    "text": "Experts believe that flexible working could potentially improve team performance. This may eventually become a defining trend in the workplace. It is important to note that every organization has different needs. A holistic approach, though to be fair, requires careful planning. The future looks bright for teams willing to listen.",
+    "authorship": "ai",
+    "synthetic": true,
+    "expectTier": [
+      "certified",
+      "swamp"
+    ]
+  },
+  {
+    "id": "ai-cert-pivot",
+    "text": "It's not about more meetings, it's about better conversations. It's not just about productivity, it's about building trust. At its core, collaboration is a testament to our shared commitment. By taking a holistic approach, we can unlock the potential of every team member. Read that again. What would you add?",
+    "authorship": "ai",
+    "synthetic": true,
+    "expectTier": [
+      "certified",
+      "swamp"
+    ]
+  }
+]

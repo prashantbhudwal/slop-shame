@@ -10,8 +10,9 @@ export const TIERS: readonly SlopTier[] = [
 ];
 
 export function tierFor(score: number): SlopTier {
-  for (let i = TIERS.length - 1; i >= 0; i--) if (score >= TIERS[i].min) return TIERS[i];
-  return TIERS[0];
+  // The list is statically non-empty; loop bounds guarantee indexed entries.
+  for (let i = TIERS.length - 1; i >= 0; i--) if (score >= TIERS[i]!.min) return TIERS[i]!;
+  return TIERS[0]!;
 }
 
 export function tierById(id: SlopTierId): SlopTier {

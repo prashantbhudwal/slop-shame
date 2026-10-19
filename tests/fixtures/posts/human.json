@@ -1,0 +1,374 @@
+[
+  {
+    "id": "normal-job",
+    "text": "I started at Riverbank this week as a backend engineer. I'll be working on their payments service with Priya and Dan. Thanks to my old team for a good three years and for teaching me how to debug production without panicking.",
+    "authorHeadline": "Backend engineer at Riverbank",
+    "expectTier": [
+      "artisanal",
+      "whiff"
+    ],
+    "authorship": "human",
+    "synthetic": true
+  },
+  {
+    "id": "normal-technical",
+    "text": "We found the cause of yesterday's queue delay. A worker retried failed requests immediately, so one unavailable customer endpoint occupied the whole pool. We added exponential backoff and a separate retry queue. The patch is deployed; the incident report includes the graphs and the remaining work.",
+    "expectTier": [
+      "artisanal",
+      "whiff"
+    ],
+    "authorship": "human",
+    "synthetic": true
+  },
+  {
+    "id": "normal-event",
+    "text": "Forty people came to the accessibility meetup on Thursday. My favourite demo showed how a screen reader handles a table with missing column headers. Thanks to Lena for the room and to everyone who stayed to stack chairs. Slides are on the meetup page.",
+    "hashtags": [
+      "#Accessibility"
+    ],
+    "expectTier": [
+      "artisanal",
+      "whiff"
+    ],
+    "authorship": "human",
+    "synthetic": true
+  },
+  {
+    "id": "normal-question",
+    "text": "Has anyone moved a fairly large Postgres database between cloud providers without a long maintenance window? Ours is about two terabytes. Logical replication seems workable, but I'm worried about sequence values during cutover. I'd appreciate hearing what went wrong for you.",
+    "expectTier": [
+      "artisanal",
+      "whiff"
+    ],
+    "authorship": "human",
+    "synthetic": true
+  },
+  {
+    "id": "normal-hiring",
+    "text": "We're hiring a product designer in Pune. Most of the work is on forms used by hospital reception staff, often on old monitors. Salary is 24–32 lakh, with two office days a week. The job description has the interview steps and examples of the work.",
+    "expectTier": [
+      "artisanal",
+      "whiff"
+    ],
+    "authorship": "human",
+    "synthetic": true
+  },
+  {
+    "id": "normal-thanks",
+    "text": "Grateful for everyone who covered my shifts while I was looking after my dad. He's home now, and I'm back on Monday. I owe several people lunch, particularly Nisha, who took the Friday night call at almost no notice.",
+    "expectTier": [
+      "artisanal",
+      "whiff"
+    ],
+    "authorship": "human",
+    "synthetic": true
+  },
+  {
+    "id": "normal-poll",
+    "text": "Our local meetup room is unavailable on Wednesday next month. Which date can you make instead: Tuesday the 12th or Thursday the 14th? Both would start at six. I'll book the one that works for more people.",
+    "expectTier": [
+      "artisanal",
+      "whiff"
+    ],
+    "authorship": "human",
+    "synthetic": true
+  },
+  {
+    "id": "normal-ai-research",
+    "text": "I tested the AI summarizer on 120 support tickets. It missed dates in eleven summaries and invented a refund promise in two. We're keeping human review for now. I've attached the evaluation sheet, including the examples where the model did better than our existing template.",
+    "hashtags": [
+      "#AI",
+      "#Evaluation"
+    ],
+    "expectTier": [
+      "artisanal",
+      "whiff"
+    ],
+    "authorship": "human",
+    "synthetic": true
+  },
+  {
+    "id": "normal-dash",
+    "text": "I thought the migration was finished — then someone tried an account created in 2017. Those accounts have a different ID format. We fixed the parser and added a case to the migration checklist. I'm glad Jo checked before we removed the old lookup table.",
+    "expectTier": [
+      "artisanal",
+      "whiff"
+    ],
+    "authorship": "human",
+    "synthetic": true
+  },
+  {
+    "id": "normal-checklist",
+    "text": "The release checklist for tonight is short:\n1. Pause the scheduled import.\n2. Apply the schema migration.\n3. Restart the workers.\n4. Check the dashboard for failed jobs.\n5. Re-enable the import after the on-call engineer signs off.\nThe rollback script is in the same folder as the migration.",
+    "expectTier": [
+      "artisanal",
+      "whiff"
+    ],
+    "authorship": "human",
+    "synthetic": true
+  },
+  {
+    "id": "normal-offer-help",
+    "text": "My team was included in the layoffs yesterday. I worked on Android apps for the last six years, mostly offline sync and camera features. I'm looking for a remote role based in India. If your team needs that experience, my portfolio has two recent projects with code samples.",
+    "hashtags": [
+      "#OpenToWork"
+    ],
+    "expectTier": [
+      "artisanal",
+      "whiff"
+    ],
+    "authorship": "human",
+    "synthetic": true
+  },
+  {
+    "id": "normal-launch",
+    "text": "Our small library for reading damaged CSV files is now public. It preserves invalid rows in a separate file instead of dropping them. We wrote it because a vendor sends us exports with mismatched quotes every month. There are examples in the README; please file a bug if it eats your data.",
+    "expectTier": [
+      "artisanal",
+      "whiff"
+    ],
+    "authorship": "human",
+    "synthetic": true
+  },
+  {
+    "id": "normal-triple-list",
+    "text": "We ordered tea, coffee, and biscuits for the workshop. The projector didn't work, so we moved the chairs around one laptop and cut the session to forty minutes. It was awkward, but everybody managed to try the exercise before lunch.",
+    "expectTier": [
+      "artisanal",
+      "whiff"
+    ],
+    "authorship": "human",
+    "synthetic": true
+  },
+  {
+    "id": "normal-emoji",
+    "text": "The apprentice team passed their final assessment today 🎉. They rebuilt a broken water pump, documented the wiring, and found a leak that the rest of us had missed. I enjoyed working with them and hope they get some sleep tonight.",
+    "expectTier": [
+      "artisanal",
+      "whiff"
+    ],
+    "authorship": "human",
+    "synthetic": true
+  },
+  {
+    "id": "normal-terms",
+    "text": "In this mechanical setup, leverage depends on the length of the handle. The photos show the old handle beside the replacement. We tried three lengths before settling on this one because the longest version kept hitting the guard. The drawings include the clearance measurements.",
+    "expectTier": [
+      "artisanal",
+      "whiff"
+    ],
+    "authorship": "human",
+    "synthetic": true
+  },
+  {
+    "id": "normal-plain-promotion",
+    "text": "I was promoted to engineering manager this month. There are five people on the team, and two have been here longer than I have. My first job is to understand where reviews get stuck. I'm spending the next few weeks listening before changing the process.",
+    "expectTier": [
+      "artisanal",
+      "whiff"
+    ],
+    "authorship": "human",
+    "synthetic": true
+  },
+  {
+    "id": "normal-story-child",
+    "text": "My six-year-old helped label the cables on my desk yesterday. She gave the monitor a sticker shaped like a frog. No business lesson here; I can finally unplug the right thing without crawling under the table with a torch.",
+    "expectTier": [
+      "artisanal",
+      "whiff"
+    ],
+    "authorship": "human",
+    "synthetic": true
+  },
+  {
+    "id": "normal-headline",
+    "text": "I took notes from the planning meeting and put the three open questions in the shared document. We still need an estimate for the import work and a decision about the support rota. Please leave corrections there before Friday afternoon.",
+    "authorHeadline": "Engineering Manager | Payments | Bengaluru | Hiring",
+    "expectTier": [
+      "artisanal",
+      "whiff"
+    ],
+    "authorship": "human",
+    "synthetic": true
+  },
+  {
+    "id": "normal-short",
+    "text": "A good afternoon spent fixing the printer.",
+    "expectTier": [
+      "artisanal",
+      "whiff"
+    ],
+    "authorship": "human",
+    "synthetic": true
+  },
+  {
+    "id": "normal-empty",
+    "text": "",
+    "expectTier": [
+      "artisanal",
+      "whiff"
+    ],
+    "authorship": "human",
+    "synthetic": true
+  },
+  {
+    "id": "human-formal-non-native",
+    "text": "I am writing to inform my colleagues that the testing of the pump is completed. We have observed the same problem on two occasions. The pressure was falling after the third hour of operation. We have changed the seal and repeated the test. The result is acceptable according to the customer requirement. I thank the maintenance team for attending on Sunday. I will prepare the final report after receiving the calibration certificate from the supplier. Please advise if any additional measurement is required.",
+    "authorship": "human",
+    "synthetic": true,
+    "expectTier": [
+      "artisanal",
+      "whiff"
+    ]
+  },
+  {
+    "id": "human-casual-dashes",
+    "text": "spent most of today chasing a bug — thought it was the cache — wasn't the cache. turns out I'd set the wrong env var in staging. again. Jo spotted it about thirty seconds after I asked for help — so yeah, taking a walk now. the fix is literally one line and I'm leaving a comment for future me.",
+    "authorship": "human",
+    "synthetic": true,
+    "expectTier": [
+      "artisanal",
+      "whiff"
+    ]
+  },
+  {
+    "id": "human-broetry",
+    "text": "Got up late.\n\nMissed the bus.\n\nWalked to work in the rain.\n\nForgot my lunch.\n\nBorrowed five quid from Dan.\n\nHe bought chips for both of us.\n\nHonestly a pretty good day by the end.\n\nI've left his umbrella at reception because mine is still drying under my desk.",
+    "authorship": "human",
+    "synthetic": true,
+    "expectTier": [
+      "artisanal",
+      "whiff"
+    ]
+  },
+  {
+    "id": "human-typos",
+    "text": "quick update: the dashboard numbers were wrong this morning, sorry. I'd included test accounts in the export 🙃 fixed now and ive sent the corrected sheet to finance. if you downloaded it before 11 please use the new one. the totals differ by about 230 quid.",
+    "authorship": "human",
+    "synthetic": true,
+    "expectTier": [
+      "artisanal",
+      "whiff"
+    ]
+  },
+  {
+    "id": "human-ai-engineer",
+    "text": "As an AI engineer at a robotics startup, I spent the week cleaning my training data for the defect classifier. We found that a camera had moved during the second shift. Most of the new errors were pictures taken from that angle. We are collecting another batch before training again.",
+    "authorship": "human",
+    "synthetic": true,
+    "expectTier": [
+      "artisanal",
+      "whiff"
+    ]
+  },
+  {
+    "id": "human-share-certainly",
+    "text": "I wanted to share this with everyone who helped at the clinic on Saturday. We saw twenty-three patients and finished an hour late. Would I do it again? Certainly! But next time I'm bringing more chairs and asking someone else to sort out the parking permits.",
+    "authorship": "human",
+    "synthetic": true,
+    "expectTier": [
+      "artisanal",
+      "whiff"
+    ]
+  },
+  {
+    "id": "human-weaver",
+    "text": "My mother finished the tapestry she started during lockdown. It's a picture of our old house with the wrong number of windows, which makes me laugh every time I look at it. We hung it in the hall this weekend. The frame cost more than either of us expected.",
+    "authorship": "human",
+    "synthetic": true,
+    "expectTier": [
+      "artisanal",
+      "whiff"
+    ]
+  },
+  {
+    "id": "human-formal-engineering",
+    "text": "The review includes a comprehensive test of the backup pump and a robust check of the pressure sensor. We have recorded the values in the attached document. The measurements were repeated on Monday because the first gauge had not been calibrated. The supplier will send the certificate by Friday. No change to the operating limit is proposed at this time.",
+    "authorship": "human",
+    "synthetic": true,
+    "expectTier": [
+      "artisanal",
+      "whiff"
+    ]
+  },
+  {
+    "id": "human-negation-literal",
+    "text": "The patch updates not only the retry timer but also the queue cleanup task. We missed that second job in the previous release, which is why old tasks kept appearing in the dashboard after a successful retry. The test fixture now includes a completed task from the old schema. I have asked Mei to review the migration before we deploy it.",
+    "authorship": "human",
+    "synthetic": true,
+    "expectTier": [
+      "artisanal",
+      "whiff"
+    ]
+  },
+  {
+    "id": "human-emoji-checklist",
+    "text": "Packing list for tomorrow's site visit:\n✅ Hard hat and boots.\n✅ Printed wiring diagram.\n✅ Spare batteries for the meter.\nWe will meet outside the north gate at eight. Please bring lunch because the canteen is closed while the building work is going on. I can give two people a lift back to the station afterwards.",
+    "authorship": "human",
+    "synthetic": true,
+    "expectTier": [
+      "artisanal",
+      "whiff"
+    ]
+  },
+  {
+    "id": "human-maths-bold",
+    "text": "𝗔 𝗾𝘂𝗶𝗰𝗸 𝗿𝗲𝗺𝗶𝗻𝗱𝗲𝗿 for our evening class: there is no session tomorrow. The room has a broken heater and the college hasn't found another one. We'll use next week's first hour to finish the exercise. I've put the unfinished worksheet in the shared folder for anyone who wants to have a go at home.",
+    "authorship": "human",
+    "synthetic": true,
+    "expectTier": [
+      "artisanal",
+      "whiff"
+    ]
+  },
+  {
+    "id": "human-careful-hedge",
+    "text": "This could potentially affect the import job as well. I have not checked that path yet, so please do not treat this as a confirmed cause. The logs from Tuesday are still available in the shared folder. I will compare them with a successful import after the customer sends us permission to open the attachment.",
+    "authorship": "human",
+    "synthetic": true,
+    "expectTier": [
+      "artisanal",
+      "whiff"
+    ]
+  },
+  {
+    "id": "human-russian-mixed-slang",
+    "text": "Сегодня я отправил SMSку клиенту и получил ответ через десять минут после окончания нашей встречи в офисе в центре города. Я добавил новый номер телефона в список контактов и записал результат разговора в общий документ. Завтра мы проверим состояние заказа и сообщим клиенту точную дату доставки оборудования.",
+    "authorship": "human",
+    "synthetic": true,
+    "expectTier": [
+      "artisanal",
+      "whiff"
+    ]
+  },
+  {
+    "id": "human-editor-note",
+    "text": "Hiring! Send your CV to the address in the job ad. [insert link in comments] The role is based in Pune and the salary is in the description. We are looking for somebody who can answer customer emails and reproduce problems in the billing system. Interviews begin on Monday.",
+    "authorship": "human",
+    "synthetic": true,
+    "expectTier": [
+      "artisanal",
+      "whiff"
+    ]
+  },
+  {
+    "id": "human-code-any",
+    "text": "Never use type 'any' in TypeScript without checking whether unknown would work. We replaced three uses in the parser today. In each case the value came from a JSON file and needed validation before we could read a field from it. The patch adds that validation and a small test with a damaged input file.",
+    "authorship": "human",
+    "synthetic": true,
+    "expectTier": [
+      "artisanal",
+      "whiff"
+    ]
+  },
+  {
+    "id": "human-survey-title",
+    "text": "Agree? That was the heading on a survey we sent to the team last week. Most people asked for a smaller form and a clearer explanation of what we were collecting. We have removed the questions about travel and will keep the answers for a month. The updated version is in the shared folder if you need to check how the consent box works.",
+    "authorship": "human",
+    "synthetic": true,
+    "expectTier": [
+      "artisanal",
+      "whiff"
+    ]
+  }
+]

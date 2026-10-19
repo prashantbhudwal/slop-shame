@@ -1,0 +1,82 @@
+[
+  {
+    "id": "mixed-launch",
+    "text": "We released the new booking page on Monday. It has a smaller form and remembers your last clinic. I used a draft tool for the announcement and kept its final line: a seamless experience, a rich tapestry of possibilities, and a testament to our team's effort. Anyway, we fixed three bugs before lunch and the page now loads in under a second.",
+    "authorship": "mixed",
+    "synthetic": true,
+    "expectTier": [
+      "whiff",
+      "artisanal"
+    ]
+  },
+  {
+    "id": "mixed-meetup",
+    "text": "Thirty people came to the SQL meetup last night. My favourite bit was the demo where an index made the query slower. The event recap template called it a pivotal moment and a testament to the transformative potential of collaboration. Really it was mostly people arguing over a query plan, then getting pizza.",
+    "authorship": "mixed",
+    "synthetic": true,
+    "expectTier": [
+      "whiff",
+      "artisanal"
+    ]
+  },
+  {
+    "id": "mixed-hiring",
+    "text": "Our team needs one more support engineer in Chennai. The salary is in the job ad and we don't use take-home tests. The recruiter added a line about navigating the landscape and unlocking the potential of a seamless future. I would describe the work as answering difficult emails and writing good bug reports.",
+    "authorship": "mixed",
+    "synthetic": true,
+    "expectTier": [
+      "whiff",
+      "artisanal"
+    ]
+  },
+  {
+    "id": "mixed-edit",
+    "text": "I've cut most of the generated draft because it didn't say what the project does. It still says 'harness the power of a rich tapestry of data' in one place, which I forgot to remove. We actually joined two CSV files, found duplicate accounts, and emailed the owners. Took about three hours.",
+    "authorship": "mixed",
+    "synthetic": true,
+    "expectTier": [
+      "whiff",
+      "artisanal"
+    ]
+  },
+  {
+    "id": "mixed-report",
+    "text": "I used an assistant to outline our incident report. The timeline and measurements are mine. The conclusion still reads: 'This is a testament to the transformative potential of a holistic approach.' The practical change is that we page somebody when the retry queue gets older than ten minutes. We didn't have that alert before.",
+    "authorship": "mixed",
+    "synthetic": true,
+    "expectTier": [
+      "whiff",
+      "artisanal"
+    ]
+  },
+  {
+    "id": "mixed-course",
+    "text": "The training team sent me a generated course description. Most of it was fine after I added the actual exercises. It retained 'delve into a rich tapestry of learning' and 'a seamless journey' in the introduction. The workshop is two hours, mostly pair work, and costs nothing for current apprentices.",
+    "authorship": "mixed",
+    "synthetic": true,
+    "expectTier": [
+      "whiff",
+      "artisanal"
+    ]
+  },
+  {
+    "id": "mixed-clean-edit",
+    "text": "I had a tool draft this note, then rewrote nearly all of it. We're closing the office kitchen on Thursday because a pipe is leaking behind the sink. There's drinking water downstairs. Please take food out of the fridge before Wednesday evening; the plumbers will need to move it.",
+    "authorship": "mixed",
+    "synthetic": true,
+    "expectTier": [
+      "artisanal",
+      "whiff"
+    ]
+  },
+  {
+    "id": "mixed-technical",
+    "text": "I kept two sentences from the assistant's draft: 'It is important to note that this could potentially improve reliability. Moreover, the integration of checks is a significant step forward.' The actual result was a drop from eleven failed imports to two last week. That's promising, but we only have a week's worth of measurements.",
+    "authorship": "mixed",
+    "synthetic": true,
+    "expectTier": [
+      "whiff",
+      "artisanal"
+    ]
+  }
+]

@@ -59,6 +59,8 @@ export interface SlopTier {
 export interface SlopReport {
   /** Slop Index, integer 0–100. */
   score: number;
+  /** Score >=40, >=40 words, and positive phrase/discourse evidence. Style alone never permits Shame. */
+  shameable: boolean;
   tier: SlopTier;
   /** Signals sorted by weight, heaviest first. */
   signals: SlopSignal[];

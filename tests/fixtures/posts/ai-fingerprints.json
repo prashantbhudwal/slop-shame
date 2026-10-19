@@ -1,0 +1,30 @@
+[
+  {
+    "id": "ai-leaked-model",
+    "text": "Certainly! As an AI language model, I can help you write an engaging professional post. In today's fast-paced world, let's delve into the transformative potential of collaboration. This rich tapestry is a testament to the power of a holistic approach. It's not about working alone, it's about unlocking the potential of every team. I hope this helps!",
+    "authorship": "ai",
+    "synthetic": true,
+    "expectTier": "slopocalypse"
+  },
+  {
+    "id": "ai-leaked-template",
+    "text": "Here is your polished announcement for [Your Name]. In today's rapidly evolving landscape, we are thrilled to embark on a journey of innovation. A seamless experience is a testament to the transformative potential of a holistic approach. Together, we can unlock endless possibilities. Replace the placeholder with your name before publishing this post. Let me know if you'd like me to expand it.",
+    "authorship": "ai",
+    "synthetic": true,
+    "expectTier": "slopocalypse"
+  },
+  {
+    "id": "ai-leaked-url",
+    "text": "In today's fast-paced world, it is important to note that the integration of AI can unlock the potential of a seamless future. Let's delve into this rich tapestry of possibilities. It's not about replacing people, it's about transformative potential. The full report is here: https://example.com/report?utm_source=chatgpt.com . I hope this helps!",
+    "authorship": "ai",
+    "synthetic": true,
+    "expectTier": "slopocalypse"
+  },
+  {
+    "id": "ai-bypassed",
+    "text": "In today's fast-paced world, we must dеlve into a rich tаpestry of ideas. This is a testаment to the transformative potential of a holistic approach. It's not about technology, it's about unlocking the potential of human connection. Moreover, the future looks bright for those who navigate the landscape together. Agree?",
+    "authorship": "ai",
+    "synthetic": true,
+    "expectTier": "slopocalypse"
+  }
+]

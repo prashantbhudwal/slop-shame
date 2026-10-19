@@ -1,0 +1,13 @@
+import type { RulePack } from '../rule-types';
+import { aiVocabulary } from './ai-vocabulary';
+import { templatePhrases } from './template-phrases';
+import { chatbotLeak } from './chatbot-leak';
+import { negationPivot } from './negation-pivot';
+import { inflation } from './inflation';
+import { hedging } from './hedging';
+import { engagementBait } from './engagement-bait';
+import { formatting } from './formatting';
+import { roboticRhythm } from './robotic-rhythm';
+import { bypassTricks } from './bypass-tricks';
+export const packs: RulePack[] = [aiVocabulary, templatePhrases, chatbotLeak, negationPivot, inflation, hedging, engagementBait, formatting, roboticRhythm, bypassTricks];
+export { aiVocabulary, templatePhrases, chatbotLeak, negationPivot, inflation, hedging, engagementBait, formatting, roboticRhythm, bypassTricks };
