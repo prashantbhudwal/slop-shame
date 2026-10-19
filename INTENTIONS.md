@@ -75,7 +75,7 @@ context loss. Append, don't rewrite history.
       `src/lib/engine/rule-types.ts`, `src/lib/engine/tiers.ts`)
 - [ ] Slop engine + rule packs + unit tests — delegated (Sol xhigh, codex_account_3, task slop-shame-engine-r1)
 - [ ] LinkedIn feed adapter + fixtures + Playwright harness — delegated (Sol xhigh, codex_quaternary, slop-shame-adapter-r1)
-- [ ] Leaderboard store (IndexedDB, background) — delegated (Sol xhigh, codex_nush, slop-shame-store-r1)
+- [x] Leaderboard store (IndexedDB, background) — done, reviewed, committed. Ranking: round(Σ(score−30)^1.3/10 + 3×slopocalypse posts) over posts ≥40. Titles: Slop Intern → Slop Emperor.
 - [ ] Assets (tier icons, buttons, shame art, mascot "Sloppy", extension icon) — delegated (Sol high, codex, slop-shame-assets-r1); art direction in the task prompt, prompts saved to assets-src/prompts/
 - [ ] UI: badge, Destroy eruption, Shame modal, popup, Hall of Slop page — delegated (Opus xhigh, claudeAgent_cash, slop-shame-ui-r2; r1 cancelled for running at medium)
 - [ ] Category icons (10) — queued as follow-up on the asset agent's thread
