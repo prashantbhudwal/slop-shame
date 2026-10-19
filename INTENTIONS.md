@@ -40,6 +40,9 @@ context loss. Append, don't rewrite history.
     LinkedIn phrase research needed.
 17. Wide web research on similar repos/dictionaries/methods: fan out multiple
     Groks and Geminis, one angle each.
+18. Extra workstreams approved: category ("slop-type") icons (Sol), speed +
+    memory soak test (Sol), CI + contributor tooling + docs (Opus at medium —
+    Sol is bad at writing).
 19. Roast cards: full name/avatar inside the extension; anything shared
     (download/copy) blurs the avatar and uses initials by default, with an
     opt-in toggle (defaults off each time). [Chrome Web Store bullying policy]
@@ -51,9 +54,6 @@ context loss. Append, don't rewrite history.
 22. Shame is only offered when the engine says `shameable` (score ≥ 40, ≥ 40
     words, ≥ 1 phrase/discourse tell — style alone never qualifies). Destroy
     is always available on non-ad posts.
-18. Extra workstreams approved: category ("slop-type") icons (Sol), speed +
-    memory soak test (Sol), CI + contributor tooling + docs (Opus at medium —
-    Sol is bad at writing).
 
 ## Decisions
 
