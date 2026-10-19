@@ -30,6 +30,10 @@ context loss. Append, don't rewrite history.
     **local** — no database server. When the same person posts multiple
     high-slop posts, they **climb the ranking**.
 13. Keep this file updated so work can resume after context loss.
+14. Opus subagents must run at high or extra-high reasoning effort, never the
+    default medium (recorded in the orchestrator's router.md too).
+15. Owner is unsure how roasting should work — proposed design below; awaiting
+    their reaction.
 
 ## Decisions
 
@@ -44,6 +48,8 @@ context loss. Append, don't rewrite history.
 | Leaderboard storage | IndexedDB in the extension origin, written only by the background worker via batched messages | Private to the extension (not linkedin.com's origin), indexed queries, scales to thousands of authors. |
 | Ranking | `slopPoints` per author, monotonic in slop posts; posts deduped by id | Repeat sloppers climb; re-scrolling never double-counts. |
 | Shame target | The post's author, rendered as a shareable card for the user | Interpretation — confirm with owner. |
+| Roast mechanics (proposed) | Pre-written templates (40+) with slots filled from the real post (its actual slop quotes, score, tier, author, repeat-offender count), rendered into themed card layouts (wanted poster with author avatar, certificate with gold seal, parking-ticket citation, tabloid front page, report card, eulogy) using the generated art + Sloppy; downloadable as PNG. No AI at runtime — fully local. | Funny, specific, fast, private. |
+| Real-LinkedIn testing browser | Playwright Chromium (Chrome for Testing) with persistent profile `.playwright/linkedin-profile` | Branded Chrome no longer supports `--load-extension`. |
 | License | MIT | Public repo default. |
 
 ## Model routing (subagent-orchestrator)
@@ -61,9 +67,9 @@ context loss. Append, don't rewrite history.
 - [ ] LinkedIn feed adapter + fixtures + Playwright harness — delegated (Sol xhigh, codex_quaternary, slop-shame-adapter-r1)
 - [ ] Leaderboard store (IndexedDB, background) — delegated (Sol xhigh, codex_nush, slop-shame-store-r1)
 - [ ] Assets (tier icons, buttons, shame art, mascot "Sloppy", extension icon) — delegated (Sol high, codex, slop-shame-assets-r1); art direction in the task prompt, prompts saved to assets-src/prompts/
-- [ ] UI: badge, Destroy eruption, Shame modal, popup, Hall of Slop page — delegated (Opus, claudeAgent_cash, slop-shame-ui-r1)
+- [ ] UI: badge, Destroy eruption, Shame modal, popup, Hall of Slop page — delegated (Opus xhigh, claudeAgent_cash, slop-shame-ui-r2; r1 cancelled for running at medium)
 - [ ] Orchestrator review + integration + commit of each workstream
-- [ ] End-to-end test on real LinkedIn (needs owner login once)
+- [ ] End-to-end test on real LinkedIn — owner login window opened (profile .playwright/linkedin-profile)
 
 ## Open questions for the owner
 
