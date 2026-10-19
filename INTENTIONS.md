@@ -69,7 +69,9 @@ context loss. Append, don't rewrite history.
 - [ ] Assets (tier icons, buttons, shame art, mascot "Sloppy", extension icon) — delegated (Sol high, codex, slop-shame-assets-r1); art direction in the task prompt, prompts saved to assets-src/prompts/
 - [ ] UI: badge, Destroy eruption, Shame modal, popup, Hall of Slop page — delegated (Opus xhigh, claudeAgent_cash, slop-shame-ui-r2; r1 cancelled for running at medium)
 - [ ] Orchestrator review + integration + commit of each workstream
-- [ ] End-to-end test on real LinkedIn — owner login window opened (profile .playwright/linkedin-profile)
+- [x] Owner logged in to LinkedIn once (profile `.playwright/linkedin-profile`, verified: feed loads)
+- [ ] End-to-end test on real LinkedIn
+  - Finding: the real feed uses LinkedIn's new SDUI markup (hashed classes, no `data-urn`). Stable hooks: `data-view-name` (`feed-full-update` = post card, `feed-commentary` = text, `feed-actor` = author), `componentkey` (`expanded<id>FeedType_MAIN_FEED_RELEVANCE`), `data-sdui-anchor-id="feed-header-urn:li:activity:<n>-0"`. Sent to the adapter agent as a steer.
 
 ## Open questions for the owner
 
