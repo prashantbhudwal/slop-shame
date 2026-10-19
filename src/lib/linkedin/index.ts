@@ -13,6 +13,12 @@ const hydrationSelector = [...selectors.mutationContent, ...selectors.media, ...
 const structuralHydrationSelector = `${hydrationSelector},${structuralBodySelector}`;
 const textStructureSelector = ['BR', ...blockTags].join(',');
 const cardRemovalSelector = `${postSelector},${selectors.processed}`;
+const nestedPostSelector = selectors.nestedPost.join(',');
+const socialContextSelector = selectors.socialContext.join(',');
+const actorLinkSelector = selectors.actorLink.join(',');
+const profileSelector = selectors.profile.join(',');
+const bodySelector = selectors.body.join(',');
+const nonAuthorSelector = [socialContextSelector, ...selectors.comments, ...selectors.actorCta, selectors.mount, bodySelector].join(',');
 
 function first(scope: ParentNode, fallbacks: readonly string[]): HTMLElement | null {
   for (const selector of fallbacks) {
@@ -74,30 +80,62 @@ function actorBlock(root: HTMLElement): HTMLElement | null {
 
 interface AuthorDetails {
   author: PostAuthor;
+  actor: HTMLElement;
   profile: HTMLElement;
   name: HTMLElement;
   headline: HTMLElement | null;
   avatar: HTMLElement | null;
 }
 
-function extractAuthor(root: HTMLElement, actor: HTMLElement | null): AuthorDetails | null {
-  const scope = actor ?? root;
-  const sduiActor = first(scope, selectors.actorLink);
-  const links = sduiActor ? [sduiActor] : Array.from(scope.querySelectorAll<HTMLAnchorElement>(selectors.profile.join(',')));
+/** Resolve identity in the same post region as the text we score. A bare
+ * repost's body belongs to its embedded original; commentary belongs outside it.
+ */
+function extractAuthor(root: HTMLElement, body: HTMLElement | null): AuthorDetails | null {
+  const embedded = body?.closest<HTMLElement>(nestedPostSelector);
+  const scope = embedded && root.contains(embedded) ? embedded
+    : root.matches(selectors.sduiContent.join(',')) ? root : first(root, selectors.sduiContent) ?? root;
+  const nested = scope.closest(nestedPostSelector);
+  const belongs = (node: Element) => node.closest(nestedPostSelector) === nested
+    && !node.closest(nonAuthorSelector);
+  // Try every named actor anchor (SDUI also emits empty duplicate anchors),
+  // then profile links for classic markup or a partially hydrated actor hook.
+  const links = new Set([
+    ...scope.querySelectorAll<HTMLElement>(actorLinkSelector),
+    ...scope.querySelectorAll<HTMLElement>(profileSelector),
+  ]);
   for (const link of links) {
+    if (!belongs(link)) continue;
     const url = new URL(link.getAttribute('href') ?? '', location.href);
     if (!/(^|\.)linkedin\.com$/i.test(url.hostname)) continue;
     const id = url.pathname.match(/^\/(in|company)\/([^/]+)/)?.slice(1).join('/');
     if (!id) continue;
-    const nameNode = sduiActor ? first(link, selectors.actorParagraph) ?? link
-      : first(scope, selectors.authorName) ?? first(link, selectors.visibleName) ?? link;
+    const sduiActor = link.matches(actorLinkSelector);
+    const nameNode = (sduiActor ? first(link, selectors.actorParagraph) : null)
+      ?? first(link, selectors.authorName) ?? first(link, selectors.visibleName)
+      ?? first(link, selectors.actorParagraph) ?? link;
     const name = cleanText(nameNode).replace(/\s+/g, ' ');
     if (!name) continue; // A separate avatar link often has no text; try the next.
-    const image = first(scope, selectors.avatar) as HTMLImageElement | null;
-    const headlineNode = sduiActor ? Array.from(scope.querySelectorAll<HTMLElement>(selectors.actorParagraph.join(','))).find(p =>
-      !p.closest(selectors.actorLink.join(',')) && !p.closest(selectors.actorCta.join(','))
-      && !/^(?:(?:promoted|sponsored)\b|\d+\s*[smhdwy]\b)/i.test(cleanText(p)),
-    ) ?? null : first(scope, selectors.headline);
+    // Pair the name only with its own avatar. Searching the whole card for an
+    // avatar can join an embedded actor to the outer reposter's image and make
+    // their common ancestor include both posts and commentary.
+    const avatar = Array.from(scope.querySelectorAll<HTMLElement>(selectors.avatar.join(','))).find(image => {
+      if (!belongs(image)) return false;
+      const href = image.closest(profileSelector)?.getAttribute('href');
+      return href && new URL(href, location.href).pathname.replace(/\/$/, '') === url.pathname.replace(/\/$/, '');
+    });
+    let actor = link;
+    for (let parent = link.parentElement; parent && parent !== scope; parent = parent.parentElement) {
+      if (parent.querySelector(bodySelector) || parent.querySelector(socialContextSelector)) break;
+      actor = parent;
+      if (avatar ? parent.contains(avatar) : Array.from(parent.querySelectorAll(selectors.actorParagraph.join(','))).some(p => !link.contains(p))) break;
+    }
+    const image = first(actor, selectors.avatar) as HTMLImageElement | null;
+    const headlineNode = sduiActor || !actor.matches(selectors.actor.join(','))
+      ? Array.from(actor.querySelectorAll<HTMLElement>(selectors.actorParagraph.join(','))).find(p =>
+        !link.contains(p)
+        && !p.closest(selectors.actorLink.join(',')) && !p.closest(selectors.actorCta.join(','))
+        && !/^(?:(?:promoted|sponsored)\b|\d+\s*[smhdwy]\b)/i.test(cleanText(p)),
+      ) ?? null : first(actor, selectors.headline);
     const author: PostAuthor = {
       id, name,
       headline: cleanText(headlineNode) || undefined,
@@ -105,7 +143,7 @@ function extractAuthor(root: HTMLElement, actor: HTMLElement | null): AuthorDeta
       avatarUrl: image?.getAttribute('src') ? new URL(image.getAttribute('src')!, location.href).href : undefined,
       kind: id.startsWith('company/') ? 'company' : 'person',
     };
-    return { author, profile: link, name: nameNode, headline: headlineNode, avatar: image };
+    return { author, actor, profile: link, name: nameNode, headline: headlineNode, avatar: image };
   }
   return null;
 }
@@ -127,9 +165,8 @@ function extract(root: HTMLElement): ExtractedPost | null {
   if (root.matches(modules) || root.closest(modules) || root.querySelector(modules)) return null;
   const heading = cleanText(first(root, selectors.moduleHeading));
   if (/^(?:suggested follows|jobs recommended for you|add to your feed|people you may know)$/i.test(heading)) return null;
-  const actor = actorBlock(root);
-  const details = extractAuthor(root, actor);
-  const author = details?.author ?? null;
+  const ownDetails = extractAuthor(root, null);
+  const actor = ownDetails?.actor ?? null;
   const nested = selectors.nestedPost.join(',');
   const candidates: HTMLElement[] = [];
   const sduiContent = root.matches(selectors.sduiContent.join(',')) ? root : first(root, selectors.sduiContent);
@@ -138,7 +175,8 @@ function extract(root: HTMLElement): ExtractedPost | null {
   for (const selector of [...selectors.body, ...selectors.structuralBody]) {
     const matches = Array.from(scope.querySelectorAll<HTMLElement>(selector)).filter(node =>
       !actor?.contains(node) && !node.closest(selectors.controls) && !node.closest(selectors.mount)
-      && !node.closest(selectors.comments.join(',')),
+      && !node.closest(selectors.comments.join(','))
+      && !node.closest(socialContextSelector) && !node.querySelector(socialContextSelector),
     );
     if (matches.length) {
       candidates.push(...matches);
@@ -148,9 +186,12 @@ function extract(root: HTMLElement): ExtractedPost | null {
   }
   const ownBody = candidates.find(node => !node.closest(nested));
   const body = ownBody ?? candidates[0] ?? null;
+  const details = body?.closest(nestedPostSelector) ? extractAuthor(root, body) : ownDetails;
+  const author = details?.author ?? null;
+  const scoredActor = details?.actor ?? actor;
   const text = cleanText(body);
   const hasMedia = Array.from(root.querySelectorAll(selectors.media.join(','))).some(node =>
-    !actor?.contains(node) && !node.closest(selectors.mount)
+    !actor?.contains(node) && !scoredActor?.contains(node) && !node.closest(selectors.mount)
     && !node.closest(selectors.nonPostMedia.join(',')) && !node.closest(selectors.comments.join(',')),
   );
   const hasPoll = Boolean(first(root, selectors.poll));
@@ -161,7 +202,7 @@ function extract(root: HTMLElement): ExtractedPost | null {
   const isSduiBareRepost = Boolean(sduiContent && !first(root, selectors.nestedPost));
   const ad = first(root, selectors.adLabel);
   const isAd = Boolean(ad && /^(?:promoted|sponsored)(?:\b|$)/i.test(`${ad.getAttribute('aria-label') ?? ''} ${ad.textContent ?? ''}`.trim()))
-    || /(?:^|\n)\s*(?:promoted|sponsored)\s*(?:$|\n)/i.test(actor ? textOf(actor) : '');
+    || /(?:^|\n)\s*(?:promoted|sponsored)\s*(?:$|\n)/i.test(scoredActor ? textOf(scoredActor) : '');
   const value: Omit<FeedPost, 'id' | 'mount'> = {
     root, author,
     input: {
@@ -171,7 +212,7 @@ function extract(root: HTMLElement): ExtractedPost | null {
     },
   };
   return { value, nodes: {
-    body, actor, profile: details?.profile ?? null, name: details?.name ?? null,
+    body, actor: scoredActor, profile: details?.profile ?? null, name: details?.name ?? null,
     headline: details?.headline ?? null, avatar: details?.avatar ?? null, ad,
   } };
 }

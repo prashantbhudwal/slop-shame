@@ -68,6 +68,12 @@ export const selectors = {
     '.update-components-header__text-view', '.feed-shared-header__text-view',
   ],
   socialHeader: ['[data-view-name="feed-header-text"]'],
+  // Context profiles belong to a liker/reposter/follower, never the text's author.
+  socialContext: [
+    '[data-view-name="feed-header-text"]', '[data-view-name="feed-header-actor-image"]',
+    '[data-view-name="feed-reshare-context"]',
+    '.update-components-header__text-view', '.feed-shared-header__text-view',
+  ],
   adLabel: [
     '[aria-label="Promoted" i]', '[aria-label="Sponsored" i]', '[data-ad-preview="label"]',
     '.update-components-actor__sub-description', '.feed-shared-actor__sub-description',

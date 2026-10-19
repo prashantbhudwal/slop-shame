@@ -7,7 +7,7 @@ import { watchFeed } from '../../../src/lib/linkedin';
 import type { FeedPost, FeedWatcher } from '../../../src/lib/linkedin/types';
 import { selectors } from '../../../src/lib/linkedin/selectors';
 
-const fixtures = new Map(['sdui', 'classic', 'hashed'].map(name => [name,
+const fixtures = new Map(['sdui', 'classic', 'hashed', 'author-context'].map(name => [name,
   readFileSync(resolve('tests/fixtures/feed', `${name}.html`), 'utf8'),
 ]));
 let watcher: FeedWatcher | undefined;
@@ -28,6 +28,112 @@ function start() {
 
 beforeEach(() => { history.replaceState(null, '', '/feed/'); });
 afterEach(() => { watcher?.disconnect(); watcher = undefined; document.body.innerHTML = ''; vi.restoreAllMocks(); vi.unstubAllGlobals(); });
+
+describe('author of the scored text', () => {
+  function expectAuthor(post: FeedPost, id: string, name: string) {
+    expect(post.author).toMatchObject({ id, name, profileUrl: `https://www.linkedin.com/${id}` });
+  }
+
+  function setSocialAction(action: string) {
+    const label = document.getElementById('social-action')!;
+    label.textContent = action === 'Followed by' ? 'Followed by ' : ` ${action}`;
+    if (action === 'Followed by') label.parentElement!.prepend(label);
+  }
+
+  it.each([
+    'likes this', 'reposted this', 'celebrates this', 'commented on this', 'loves this',
+    'supports this', 'finds this insightful', 'finds this funny', 'follows', 'Followed by', 'is hiring',
+  ])('ignores the "%s" social-context person', async action => {
+    load('author-context');
+    setSocialAction(action);
+    const { onPost, byId } = start();
+    await eventually(() => expect(onPost).toHaveBeenCalledTimes(5));
+    expectAuthor(byId('urn:li:activity:8101'), 'in/mira-example', 'Mira Example');
+  });
+
+  it.each(['likes this', 'reposted this', 'celebrates this', 'commented on this', 'Followed by'])
+  ('excludes "%s" profile links when the author-link hook is absent', async action => {
+    load('author-context');
+    setSocialAction(action);
+    document.getElementById('likes-author')!.querySelectorAll(selectors.actorLink.join(',')).forEach(link => link.removeAttribute('data-view-name'));
+    const { onPost, byId } = start();
+    await eventually(() => expect(onPost).toHaveBeenCalledTimes(5));
+    expectAuthor(byId('urn:li:activity:8101'), 'in/mira-example', 'Mira Example');
+  });
+
+  it('uses the original company author for a bare repost with an outer reposter header', async () => {
+    load('author-context');
+    const { onPost, byId } = start();
+    await eventually(() => expect(onPost).toHaveBeenCalledTimes(5));
+    const post = byId('urn:li:activity:8102');
+    expect(post.input).toMatchObject({ text: 'Our new seed library opens on Saturday.', isBareRepost: true });
+    expectAuthor(post, 'company/cedar-workshop', 'Cedar Workshop');
+    expect(post.author?.headline).toBe('Tools for community gardens');
+  });
+
+  it.each([false, true])('uses the commentary writer for a repost (author hook absent: %s)', async missingHook => {
+    load('author-context');
+    if (missingHook) document.getElementById('commentary-author')!.querySelectorAll(selectors.actorLink.join(',')).forEach(link => link.removeAttribute('data-view-name'));
+    const { onPost, byId } = start();
+    await eventually(() => expect(onPost).toHaveBeenCalledTimes(5));
+    const post = byId('urn:li:activity:8103');
+    expect(post.input).toMatchObject({ text: 'I helped build these shelves and will bring some seeds.', isBareRepost: false });
+    expectAuthor(post, 'in/mira-example', 'Mira Example');
+    expect(post.author?.headline).toBe('Community gardener');
+  });
+
+  it('uses the post author below a celebration header', async () => {
+    load('author-context');
+    const { onPost, byId } = start();
+    await eventually(() => expect(onPost).toHaveBeenCalledTimes(5));
+    expectAuthor(byId('urn:li:activity:8104'), 'in/mira-example', 'Mira Example');
+  });
+
+  it('preserves the author of a plain company post', async () => {
+    load('author-context');
+    const { onPost, byId } = start();
+    await eventually(() => expect(onPost).toHaveBeenCalledTimes(5));
+    expectAuthor(byId('urn:li:activity:8105'), 'company/cedar-workshop', 'Cedar Workshop');
+  });
+
+  it('excludes a hiring company in social context when the author-link hook is absent', async () => {
+    load('author-context');
+    setSocialAction('is hiring');
+    document.getElementById('social-header')!.querySelectorAll(selectors.profile.join(',')).forEach(link => link.setAttribute('href', '/company/harbor-example/'));
+    document.getElementById('social-header')!.querySelector(selectors.socialHeader.join(','))!.textContent = 'Harbor Example';
+    document.getElementById('likes-author')!.querySelectorAll(selectors.actorLink.join(',')).forEach(link => link.removeAttribute('data-view-name'));
+    const { onPost, byId } = start();
+    await eventually(() => expect(onPost).toHaveBeenCalledTimes(5));
+    expectAuthor(byId('urn:li:activity:8101'), 'in/mira-example', 'Mira Example');
+  });
+
+  it('skips an empty duplicate actor anchor before the named actor', async () => {
+    load('author-context');
+    const row = document.getElementById('likes-author')!;
+    row.prepend(row.querySelectorAll(selectors.actorLink.join(','))[1]!.cloneNode(true));
+    const { onPost, byId } = start();
+    await eventually(() => expect(onPost).toHaveBeenCalledTimes(5));
+    expectAuthor(byId('urn:li:activity:8101'), 'in/mira-example', 'Mira Example');
+  });
+
+  it('leaves an unidentified author null instead of using context or commentary links', async () => {
+    load('author-context');
+    document.getElementById('likes-author')!.remove();
+    document.getElementById('likes-body')!.innerHTML = 'Thanks to <a href="/in/rowan-example/">Rowan Example</a> for the seeds.';
+    const { onPost, byId } = start();
+    await eventually(() => expect(onPost).toHaveBeenCalledTimes(5));
+    expect(byId('urn:li:activity:8101').author).toBeNull();
+  });
+
+  it('updates the scored original author after bare-repost hydration', async () => {
+    load('author-context');
+    const { onPost, byId } = start();
+    await eventually(() => expect(onPost).toHaveBeenCalledTimes(5));
+    document.getElementById('bare-author')!.querySelector(selectors.actorLink.join(','))!.querySelector('p')!.textContent = 'Cedar Workshop Updated';
+    await eventually(() => expectAuthor(byId('urn:li:activity:8102'), 'company/cedar-workshop', 'Cedar Workshop Updated'));
+    expect(onPost).toHaveBeenCalledTimes(6);
+  });
+});
 
 describe('review regressions', () => {
   it('discovers structural descendants inside a newly hydrated wrapper', async () => {
@@ -361,6 +467,30 @@ describe('mutation cost', () => {
     const scans = vi.spyOn(root, 'querySelectorAll');
     return () => scans.mock.calls.filter(([selector]) => selector === selectors.media.join(',')).length;
   }
+
+  it('keeps 12 cards at 0 re-extractions during 20 rounds of counter/class churn (240 card updates)', async () => {
+    load('sdui');
+    const { onPost } = start();
+    await eventually(() => expect(onPost).toHaveBeenCalledTimes(12));
+    const cards = onPost.mock.calls.map(([post]) => {
+      const counter = document.createElement('span');
+      counter.textContent = '0 reactions';
+      post.root.append(counter);
+      return { root: post.root, counter };
+    });
+    await pause();
+    const extractions = cards.map(({ root }) => watchExtractions(root));
+    for (let frame = 0; frame < 20; frame++) {
+      for (const { root, counter } of cards) {
+        root.classList.toggle('measurement-hover');
+        counter.firstChild!.textContent = `${frame} reactions`;
+      }
+      await pause(50);
+    }
+    await pause(850);
+    expect(extractions.reduce((sum, count) => sum + count(), 0)).toBe(0);
+    expect(onPost).toHaveBeenCalledTimes(12);
+  });
 
   it('does not re-extract for classes, reaction counts, video controls or non-actor image sources', async () => {
     load('sdui');
