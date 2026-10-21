@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Privacy policy · Slop Shame</title><meta name="description" content="How Slop Shame processes LinkedIn feed content, stores local data, and handles card exports."><link rel="icon" href="assets/icon.png"><link rel="stylesheet" href="style.css"></head>
+<body><header><a href="./" aria-label="Slop Shame home">Slop Shame</a><nav aria-label="Main navigation"><a href="privacy.html">Privacy</a><a href="support.html">Support</a></nav></header><main><h1>Slop Shame Privacy Policy</h1>
+<p>Last updated: 19 October 2026</p>
+<p>Slop Shame is a browser extension by Prashant Bhudwal for the LinkedIn home feed. This policy describes the current development version. We will check it against the release before submitting the extension to the Chrome Web Store.</p>
+<h2>Local processing</h2>
+<p>The extension reads feed post text and author information already present on the LinkedIn page: author identifiers, names, headlines, profile links, profile picture URLs, and whether an author is a person or company. It computes a Slop Index locally using bundled rules. The score is a heuristic about writing patterns, not proof of AI authorship.</p>
+<p>Post text and scores are not sent to the developer, an AI service, analytics, or a leaderboard server. Slop Shame has no separate account, telemetry, advertising service, or remote scoring service.</p>
+<h2>Data stored on your device</h2>
+<p>The extension uses its own IndexedDB database and browser local extension storage, separate from LinkedIn&#x27;s page storage. It stores:</p>
+<ul><li>Author identifiers and profile information, score/category aggregates, action counts, timestamps, and a worst-post identifier, score, and text snippet.</li><li>Post identifiers, scores, tiers, categories, up to 200 characters of post text, first/last seen times, and whether you used Destroy or Shame.</li><li>Settings and daily counts of scanned, high-scoring, destroyed, and shamed posts.</li><li>Up to 2,000 remembered destroyed post identifiers, only if you enable that setting; it is off by default.</li></ul>
+<p>The extension does not use browser sync for this data. The developer does not receive or have remote access to the local database.</p>
+<h2>Retention and deletion</h2>
+<p>Post-detail pruning runs when sightings are written or data is imported. It removes detail rows last seen more than 90 days ago and keeps at most 20,000 detail rows, removing the oldest first. This is not a scheduled daily deletion. Author aggregates and an archived worst-post snippet can remain after post details are pruned.</p>
+<p>The current development version has no user-facing leaderboard clear control. Uninstalling the extension removes its browser-managed local extension data. Files you downloaded and text you copied remain wherever you saved or pasted them; delete those separately. Settings and author history otherwise remain on the device until removed. Any additional deletion controls will be documented when they ship.</p>
+<h2>Network activity and profile images</h2>
+<p>Scoring and card generation run locally. Displaying a card can cause the browser to load the author&#x27;s existing image URL from LinkedIn or its image delivery provider. Exporting a card can fetch that image again, even when the output uses a pixelated photo. Those servers receive ordinary connection information such as your IP address and the requested image URL. Card preview images use a no-referrer policy; the export fetch omits credentials. LinkedIn also makes its normal page requests independently.</p>
+<p>Bundled extension artwork is loaded from the extension package. No remotely hosted executable code or AI model service is used.</p>
+<h2>Copying and downloading cards</h2>
+<p>Card previews inside the extension show author identity. Copy text and Download image are actions you choose. Each new card starts with identity sharing off: copied text uses initials, and downloaded images use initials and a pixelated photo. You can opt in to including the full name and photo.</p>
+<p>Initials and pixelation do not guarantee anonymity: cards can retain post quotes and other contextual information. Review an export before sharing it. The extension does not automatically post cards to LinkedIn or send them to the author.</p>
+<h2>Permissions</h2>
+<ul><li><code>storage</code>: save extension settings, daily counters, and optional remembered destroyed post identifiers locally.</li><li><code>https://www.linkedin.com/*</code>: attach the feed UI, read feed content for local scoring, and notify relevant tabs when local store data changes. The product&#x27;s intended surface is the home feed.</li></ul>
+<p>The current manifest requests no <code>tabs</code>, <code>activeTab</code>, <code>downloads</code>, or clipboard permission.</p>
+<h2>Website and support</h2>
+<p>The project website is hosted by GitHub Pages. GitHub processes ordinary website request information under the <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">GitHub Privacy Statement</a>. The site adds no analytics, tracking scripts, or forms.</p>
+<p>If you open a GitHub issue, the information you submit is handled by GitHub and may be public. Please omit private feed content and personal information. The developer can read information you choose to submit through support.</p>
+<h2>Data use</h2>
+<p>We do not sell data or use it for advertising, creditworthiness, or unrelated profiling. Locally handled data supports the extension&#x27;s feed scoring, cards, and local ranking features. The extension is not directed at children.</p>
+<h2>Contact and changes</h2>
+<p>For privacy questions, <a href="https://github.com/prashantbhudwal/slop-shame/issues">open a project issue</a>. Do not include sensitive information in a public issue. For vulnerabilities, use the repository&#x27;s private security reporting option.</p>
+<p>Policy changes will appear on the <a href="https://prashantbhudwal.github.io/slop-shame/privacy.html">privacy page</a> with an updated date.</p></main><footer>Independent project by Prashant Bhudwal. Not affiliated with LinkedIn or Google. <a href="privacy.html">Privacy policy</a></footer></body></html>

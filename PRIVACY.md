@@ -1,92 +1,63 @@
-# Privacy Policy
+# Slop Shame Privacy Policy
 
 _Last updated: 19 October 2026_
 
-Slop Shame is a browser extension that scores posts on your LinkedIn home feed
-for signs of AI-generated writing. It is designed so that nothing about you,
-or about the posts you read, leaves your computer.
+Slop Shame is a browser extension by Prashant Bhudwal for the LinkedIn home feed. This policy describes the current development version. We will check it against the release before submitting the extension to the Chrome Web Store.
 
-## Summary
+## Local processing
 
-- We do not collect, transmit, sell or share any data.
-- The extension sends no network requests of its own: no analytics, no
-  telemetry, no remote servers, no AI services.
-- Everything it stores stays in your browser, on your device.
-- There are no accounts.
+The extension reads feed post text and author information already present on the LinkedIn page: author identifiers, names, headlines, profile links, profile picture URLs, and whether an author is a person or company. It computes a Slop Index locally using bundled rules. The score is a heuristic about writing patterns, not proof of AI authorship.
 
-## What the extension processes
+Post text and scores are not sent to the developer, an AI service, analytics, or a leaderboard server. Slop Shame has no separate account, telemetry, advertising service, or remote scoring service.
 
-When you open the LinkedIn feed, the extension reads, **in your browser
-only**:
+## Data stored on your device
 
-- the text of posts visible in your feed, and
-- each post's author name, headline, profile link and profile picture link,
-  as already shown on the page.
+The extension uses its own IndexedDB database and browser local extension storage, separate from LinkedIn's page storage. It stores:
 
-Post text is scored on the spot by local pattern matching. It is never sent
-anywhere.
+- Author identifiers and profile information, score/category aggregates, action counts, timestamps, and a worst-post identifier, score, and text snippet.
+- Post identifiers, scores, tiers, categories, up to 200 characters of post text, first/last seen times, and whether you used Destroy or Shame.
+- Settings and daily counts of scanned, high-scoring, destroyed, and shamed posts.
+- Up to 2,000 remembered destroyed post identifiers, only if you enable that setting; it is off by default.
 
-## What the extension stores
+The extension does not use browser sync for this data. The developer does not receive or have remote access to the local database.
 
-To build the **Hall of Slop** leaderboard and remember your settings, the
-extension stores the following locally in its own IndexedDB database and in
-`chrome.storage.local`:
+## Retention and deletion
 
-- for each post author seen: name, headline, profile link, profile picture
-  link, and counts and scores of their posts you have scrolled past;
-- for scored posts: a post identifier, the score, its tier, the main slop
-  category, the first ~200 characters of the post, and when you saw it;
-- how many posts you destroyed or shamed;
-- your extension settings.
+Post-detail pruning runs when sightings are written or data is imported. It removes detail rows last seen more than 90 days ago and keeps at most 20,000 detail rows, removing the oldest first. This is not a scheduled daily deletion. Author aggregates and an archived worst-post snippet can remain after post details are pruned.
 
-This data lives in the extension's own storage area, separate from
-linkedin.com, on your device. Neither LinkedIn nor the extension's developers
-can read it. It is not synced to other devices.
+The current development version has no user-facing leaderboard clear control. Uninstalling the extension removes its browser-managed local extension data. Files you downloaded and text you copied remain wherever you saved or pasted them; delete those separately. Settings and author history otherwise remain on the device until removed. Any additional deletion controls will be documented when they ship.
 
-## Network activity
+## Network activity and profile images
 
-The extension itself never makes network requests. Two things to be aware
-of:
+Scoring and card generation run locally. Displaying a card can cause the browser to load the author's existing image URL from LinkedIn or its image delivery provider. Exporting a card can fetch that image again, even when the output uses a pixelated photo. Those servers receive ordinary connection information such as your IP address and the requested image URL. Card preview images use a no-referrer policy; the export fetch omits credentials. LinkedIn also makes its normal page requests independently.
 
-- It runs inside linkedin.com, which keeps making its own requests to
-  LinkedIn as usual. The extension does not add to or change them.
-- When the Hall of Slop page shows an author's profile picture, your browser
-  loads that image from LinkedIn's servers, exactly as it does when you view
-  the feed. No information from the extension is attached to that request.
+Bundled extension artwork is loaded from the extension package. No remotely hosted executable code or AI model service is used.
+
+## Copying and downloading cards
+
+Card previews inside the extension show author identity. Copy text and Download image are actions you choose. Each new card starts with identity sharing off: copied text uses initials, and downloaded images use initials and a pixelated photo. You can opt in to including the full name and photo.
+
+Initials and pixelation do not guarantee anonymity: cards can retain post quotes and other contextual information. Review an export before sharing it. The extension does not automatically post cards to LinkedIn or send them to the author.
 
 ## Permissions
 
-| Permission | Why |
-|---|---|
-| `storage` | Save your settings and the Hall of Slop on your device. |
-| Host access to `https://www.linkedin.com/*` | Read and score feed posts, and show the Slop Index, Destroy and Shame buttons on them. The extension does not run on any other site. |
+- `storage`: save extension settings, daily counters, and optional remembered destroyed post identifiers locally.
+- `https://www.linkedin.com/*`: attach the feed UI, read feed content for local scoring, and notify relevant tabs when local store data changes. The product's intended surface is the home feed.
 
-The extension requests no other permissions. If that changes, this policy
-will be updated before the change ships.
+The current manifest requests no `tabs`, `activeTab`, `downloads`, or clipboard permission.
 
-## Shame cards
+## Website and support
 
-Shame cards are generated locally. They are only saved or shared if you
-choose to download them yourself.
+The project website is hosted by GitHub Pages. GitHub processes ordinary website request information under the [GitHub Privacy Statement](https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement). The site adds no analytics, tracking scripts, or forms.
 
-## Deleting your data
+If you open a GitHub issue, the information you submit is handled by GitHub and may be public. Please omit private feed content and personal information. The developer can read information you choose to submit through support.
 
-- **Clear all** in the Hall of Slop deletes the leaderboard and all stored
-  post data.
-- **Uninstalling** the extension removes everything it stored.
+## Data use
 
-## Children
+We do not sell data or use it for advertising, creditworthiness, or unrelated profiling. Locally handled data supports the extension's feed scoring, cards, and local ranking features. The extension is not directed at children.
 
-The extension is not directed at children and collects no data from anyone.
+## Contact and changes
 
-## Changes
+For privacy questions, [open a project issue](https://github.com/prashantbhudwal/slop-shame/issues). Do not include sensitive information in a public issue. For vulnerabilities, use the repository's private security reporting option.
 
-Changes to this policy are published in this file in the
-[project repository](https://github.com/prashantbhudwal/slop-shame), with
-the date above updated.
-
-## Contact
-
-Questions or concerns: open an issue at
-<https://github.com/prashantbhudwal/slop-shame/issues>. For security issues,
-see [SECURITY.md](SECURITY.md).
+Policy changes will appear on the [privacy page](https://prashantbhudwal.github.io/slop-shame/privacy.html) with an updated date.
