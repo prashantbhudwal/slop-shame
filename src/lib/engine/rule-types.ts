@@ -38,11 +38,17 @@ export interface PostContext {
 }
 
 export interface RuleHit {
-  /** Snippets to quote back at the user (engine keeps at most 3). */
+  /** Candidate snippets; the engine selects at most 3 after exclusions. */
   matches: string[];
+  /** Actual occurrence ranges in ctx.text. Prefer these to snippet lookup;
+   * include every candidate, even when its display snippet is shortened. */
+  spans?: readonly (readonly [number, number])[];
   /** Optional multiplier on the rule's base weight (e.g. scale by count). Default 1. */
   scale?: number;
 }
+
+/** Evidence strength is separate from category and never changes on repetition. */
+export type EvidenceKind = 'phrase' | 'style' | 'fingerprint';
 
 interface RuleBase {
   /** Globally unique, namespaced by pack: "<pack>.<rule>", e.g. "bait.agree". */
@@ -52,6 +58,10 @@ interface RuleBase {
   label: string;
   /** Base points. Rough scale: 2 = faint tell, 5 = clear tell, 10 = smoking gun. */
   weight: number;
+  /** Default: phrase; formatting/rhythm/bypass categories default to style.
+   * Explicit assistant artifacts opt into fingerprint; a large weight alone
+   * never makes a rule a fingerprint. */
+  evidence?: EvidenceKind;
 }
 
 export interface PhraseRule extends RuleBase {
@@ -62,7 +72,7 @@ export interface PhraseRule extends RuleBase {
   patterns?: string[];
   /** How repeat matches add up. Default 'once'. */
   repeat?: 'once' | 'each' | 'sqrt';
-  /** Only counts if the match is in the first N or last N lines of the post. */
+  /** Opening: first two non-empty lines. Closing: last two prose lines, skipping trailing hashtag/emoji-only lines. */
   position?: 'opening' | 'closing';
 }
 

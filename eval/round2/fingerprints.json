@@ -1,0 +1,65 @@
+{
+  "rows": [
+    {
+      "id": "frozen-1",
+      "score": 80,
+      "shameable": true
+    },
+    {
+      "id": "frozen-2",
+      "score": 80,
+      "shameable": true
+    },
+    {
+      "id": "frozen-3",
+      "score": 80,
+      "shameable": true
+    },
+    {
+      "id": "frozen-4",
+      "score": 80,
+      "shameable": true
+    },
+    {
+      "id": "frozen-5",
+      "score": 80,
+      "shameable": true
+    },
+    {
+      "id": "frozen-6",
+      "score": 80,
+      "shameable": true
+    },
+    {
+      "id": "frozen-7",
+      "score": 80,
+      "shameable": true
+    },
+    {
+      "id": "frozen-8",
+      "score": 80,
+      "shameable": true
+    },
+    {
+      "id": "frozen-9",
+      "score": 80,
+      "shameable": true
+    },
+    {
+      "id": "frozen-10",
+      "score": 80,
+      "shameable": true
+    },
+    {
+      "id": "frozen-11",
+      "score": 80,
+      "shameable": true
+    },
+    {
+      "id": "frozen-12",
+      "score": 80,
+      "shameable": true
+    }
+  ],
+  "pass": true
+}

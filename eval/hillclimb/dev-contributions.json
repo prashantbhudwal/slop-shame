@@ -1,0 +1,4304 @@
+[
+  {
+    "id": "formatting.section-outline",
+    "aiPosts": 1281,
+    "humanPosts": 4,
+    "aiFlaggedPosts": 50,
+    "humanFPPosts": 0,
+    "aiPoints": 4401.207012801744,
+    "humanPoints": 12.938015628506792
+  },
+  {
+    "id": "measured.phrase-5e02bae01d13",
+    "aiPosts": 1415,
+    "humanPosts": 9,
+    "aiFlaggedPosts": 887,
+    "humanFPPosts": 0,
+    "aiPoints": 3030.929999999957,
+    "humanPoints": 19.278
+  },
+  {
+    "id": "robotic-rhythm.cross-para-burstiness",
+    "aiPosts": 722,
+    "humanPosts": 1,
+    "aiFlaggedPosts": 488,
+    "humanFPPosts": 0,
+    "aiPoints": 1925.129474143676,
+    "humanPoints": 2.993
+  },
+  {
+    "id": "formatting.bullet-np-list",
+    "aiPosts": 1067,
+    "humanPosts": 1,
+    "aiFlaggedPosts": 4,
+    "humanFPPosts": 0,
+    "aiPoints": 1767.7660314570473,
+    "humanPoints": 2.853745541022592
+  },
+  {
+    "id": "measured.phrase-4f80a0174999",
+    "aiPosts": 2297,
+    "humanPosts": 171,
+    "aiFlaggedPosts": 924,
+    "humanFPPosts": 0,
+    "aiPoints": 1543.5840000000478,
+    "humanPoints": 114.91199999999965
+  },
+  {
+    "id": "measured.phrase-fbef62e8bb3b",
+    "aiPosts": 545,
+    "humanPosts": 4,
+    "aiFlaggedPosts": 395,
+    "humanFPPosts": 0,
+    "aiPoints": 1375.0349999999949,
+    "humanPoints": 10.092
+  },
+  {
+    "id": "measured.phrase-1f0629cd3069",
+    "aiPosts": 1150,
+    "humanPosts": 40,
+    "aiFlaggedPosts": 531,
+    "humanFPPosts": 0,
+    "aiPoints": 1061.4500000000019,
+    "humanPoints": 36.92000000000004
+  },
+  {
+    "id": "measured.pattern-35275e7bcbfe",
+    "aiPosts": 822,
+    "humanPosts": 11,
+    "aiFlaggedPosts": 13,
+    "humanFPPosts": 0,
+    "aiPoints": 1030.9455610443167,
+    "humanPoints": 21.79215518269958
+  },
+  {
+    "id": "robotic-rhythm.uniformity",
+    "aiPosts": 1050,
+    "humanPosts": 137,
+    "aiFlaggedPosts": 266,
+    "humanFPPosts": 0,
+    "aiPoints": 955.2094495676489,
+    "humanPoints": 112.04100000000017
+  },
+  {
+    "id": "measured.phrase-fa401fb997bd",
+    "aiPosts": 1013,
+    "humanPosts": 22,
+    "aiFlaggedPosts": 591,
+    "humanFPPosts": 0,
+    "aiPoints": 942.0899999999801,
+    "humanPoints": 20.459999999999997
+  },
+  {
+    "id": "measured.phrase-34bb73890b28",
+    "aiPosts": 1107,
+    "humanPosts": 39,
+    "aiFlaggedPosts": 612,
+    "humanFPPosts": 0,
+    "aiPoints": 924.3450000000124,
+    "humanPoints": 32.56500000000002
+  },
+  {
+    "id": "measured.phrase-d9051501a72a",
+    "aiPosts": 1302,
+    "humanPosts": 100,
+    "aiFlaggedPosts": 537,
+    "humanFPPosts": 0,
+    "aiPoints": 907.4940000000033,
+    "humanPoints": 69.70000000000012
+  },
+  {
+    "id": "measured.phrase-615444d035fc",
+    "aiPosts": 430,
+    "humanPosts": 2,
+    "aiFlaggedPosts": 375,
+    "humanFPPosts": 0,
+    "aiPoints": 853.550000000005,
+    "humanPoints": 3.97
+  },
+  {
+    "id": "chatbot-leak.greeting",
+    "aiPosts": 413,
+    "humanPosts": 0,
+    "aiFlaggedPosts": 55,
+    "humanFPPosts": 0,
+    "aiPoints": 793.2504643024224,
+    "humanPoints": 0
+  },
+  {
+    "id": "measured.phrase-b478829c931b",
+    "aiPosts": 379,
+    "humanPosts": 9,
+    "aiFlaggedPosts": 251,
+    "humanFPPosts": 0,
+    "aiPoints": 790.5940000000039,
+    "humanPoints": 18.773999999999997
+  },
+  {
+    "id": "measured.phrase-cbcca998fa77",
+    "aiPosts": 1313,
+    "humanPosts": 83,
+    "aiFlaggedPosts": 588,
+    "humanFPPosts": 0,
+    "aiPoints": 723.4630000000088,
+    "humanPoints": 45.733000000000004
+  },
+  {
+    "id": "measured.phrase-c5ec29f70822",
+    "aiPosts": 380,
+    "humanPosts": 2,
+    "aiFlaggedPosts": 282,
+    "humanFPPosts": 0,
+    "aiPoints": 688.9399999999965,
+    "humanPoints": 3.626
+  },
+  {
+    "id": "measured.phrase-f72e79b1da5d",
+    "aiPosts": 308,
+    "humanPosts": 0,
+    "aiFlaggedPosts": 254,
+    "humanFPPosts": 0,
+    "aiPoints": 688.072000000001,
+    "humanPoints": 0
+  },
+  {
+    "id": "measured.phrase-52df1a1b931f",
+    "aiPosts": 568,
+    "humanPosts": 11,
+    "aiFlaggedPosts": 382,
+    "humanFPPosts": 0,
+    "aiPoints": 546.9840000000034,
+    "humanPoints": 10.592999999999998
+  },
+  {
+    "id": "measured.phrase-41ff9c6083cb",
+    "aiPosts": 389,
+    "humanPosts": 4,
+    "aiFlaggedPosts": 193,
+    "humanFPPosts": 0,
+    "aiPoints": 499.4759999999979,
+    "humanPoints": 5.136
+  },
+  {
+    "id": "measured.phrase-1e2a7f9bb3fc",
+    "aiPosts": 397,
+    "humanPosts": 0,
+    "aiFlaggedPosts": 291,
+    "humanFPPosts": 0,
+    "aiPoints": 495.8530000000039,
+    "humanPoints": 0
+  },
+  {
+    "id": "measured.phrase-5f799bb79f81",
+    "aiPosts": 242,
+    "humanPosts": 2,
+    "aiFlaggedPosts": 127,
+    "humanFPPosts": 0,
+    "aiPoints": 488.1139999999992,
+    "humanPoints": 4.034
+  },
+  {
+    "id": "measured.phrase-643a135882c7",
+    "aiPosts": 459,
+    "humanPosts": 18,
+    "aiFlaggedPosts": 171,
+    "humanFPPosts": 0,
+    "aiPoints": 476.9009999999959,
+    "humanPoints": 18.702
+  },
+  {
+    "id": "measured.phrase-3a636c189add",
+    "aiPosts": 322,
+    "humanPosts": 0,
+    "aiFlaggedPosts": 249,
+    "humanFPPosts": 0,
+    "aiPoints": 471.4079999999996,
+    "humanPoints": 0
+  },
+  {
+    "id": "measured.phrase-af571c122ed1",
+    "aiPosts": 204,
+    "humanPosts": 0,
+    "aiFlaggedPosts": 147,
+    "humanFPPosts": 0,
+    "aiPoints": 464.0999999999984,
+    "humanPoints": 0
+  },
+  {
+    "id": "measured.phrase-90dca6c85109",
+    "aiPosts": 811,
+    "humanPosts": 40,
+    "aiFlaggedPosts": 327,
+    "humanFPPosts": 0,
+    "aiPoints": 434.69600000000105,
+    "humanPoints": 21.440000000000005
+  },
+  {
+    "id": "measured.phrase-d3a6706e571c",
+    "aiPosts": 680,
+    "humanPosts": 44,
+    "aiFlaggedPosts": 285,
+    "humanFPPosts": 0,
+    "aiPoints": 424.320000000005,
+    "humanPoints": 27.45599999999998
+  },
+  {
+    "id": "measured.phrase-ea4e2e96307b",
+    "aiPosts": 2779,
+    "humanPosts": 348,
+    "aiFlaggedPosts": 890,
+    "humanFPPosts": 0,
+    "aiPoints": 411.2920000000214,
+    "humanPoints": 51.50400000000037
+  },
+  {
+    "id": "measured.phrase-0a8d482661fa",
+    "aiPosts": 375,
+    "humanPosts": 9,
+    "aiFlaggedPosts": 222,
+    "humanFPPosts": 0,
+    "aiPoints": 395.999999999999,
+    "humanPoints": 9.504000000000001
+  },
+  {
+    "id": "measured.phrase-7d55d5f3b072",
+    "aiPosts": 781,
+    "humanPosts": 31,
+    "aiFlaggedPosts": 384,
+    "humanFPPosts": 0,
+    "aiPoints": 395.96700000000317,
+    "humanPoints": 15.716999999999993
+  },
+  {
+    "id": "measured.phrase-01d31efb39e2",
+    "aiPosts": 612,
+    "humanPosts": 26,
+    "aiFlaggedPosts": 292,
+    "humanFPPosts": 0,
+    "aiPoints": 386.1719999999942,
+    "humanPoints": 16.406000000000002
+  },
+  {
+    "id": "measured.pattern-12fe03674612",
+    "aiPosts": 752,
+    "humanPosts": 47,
+    "aiFlaggedPosts": 325,
+    "humanFPPosts": 0,
+    "aiPoints": 375.2480000000039,
+    "humanPoints": 23.45299999999999
+  },
+  {
+    "id": "measured.phrase-96ea2f4dc373",
+    "aiPosts": 247,
+    "humanPosts": 2,
+    "aiFlaggedPosts": 144,
+    "humanFPPosts": 0,
+    "aiPoints": 348.7639999999993,
+    "humanPoints": 2.824
+  },
+  {
+    "id": "measured.phrase-0b3d977ad595",
+    "aiPosts": 653,
+    "humanPosts": 35,
+    "aiFlaggedPosts": 345,
+    "humanFPPosts": 0,
+    "aiPoints": 333.0299999999969,
+    "humanPoints": 17.85
+  },
+  {
+    "id": "measured.phrase-97f497f9c1ff",
+    "aiPosts": 170,
+    "humanPosts": 1,
+    "aiFlaggedPosts": 100,
+    "humanFPPosts": 0,
+    "aiPoints": 321.63999999999953,
+    "humanPoints": 1.892
+  },
+  {
+    "id": "measured.phrase-af92c28473f9",
+    "aiPosts": 192,
+    "humanPosts": 1,
+    "aiFlaggedPosts": 89,
+    "humanFPPosts": 0,
+    "aiPoints": 302.7839999999997,
+    "humanPoints": 1.577
+  },
+  {
+    "id": "measured.phrase-01bef619fb88",
+    "aiPosts": 222,
+    "humanPosts": 8,
+    "aiFlaggedPosts": 108,
+    "humanFPPosts": 0,
+    "aiPoints": 280.16400000000004,
+    "humanPoints": 10.096000000000002
+  },
+  {
+    "id": "measured.phrase-53de82555b42",
+    "aiPosts": 196,
+    "humanPosts": 4,
+    "aiFlaggedPosts": 66,
+    "humanFPPosts": 0,
+    "aiPoints": 274.9879999999997,
+    "humanPoints": 5.612
+  },
+  {
+    "id": "measured.phrase-5481fa766f54",
+    "aiPosts": 402,
+    "humanPosts": 18,
+    "aiFlaggedPosts": 192,
+    "humanFPPosts": 0,
+    "aiPoints": 265.3199999999992,
+    "humanPoints": 11.88
+  },
+  {
+    "id": "measured.phrase-926f1cb0a889",
+    "aiPosts": 159,
+    "humanPosts": 4,
+    "aiFlaggedPosts": 79,
+    "humanFPPosts": 0,
+    "aiPoints": 264.73499999999973,
+    "humanPoints": 6.66
+  },
+  {
+    "id": "measured.phrase-5fa9f82d5fcf",
+    "aiPosts": 975,
+    "humanPosts": 102,
+    "aiFlaggedPosts": 316,
+    "humanFPPosts": 0,
+    "aiPoints": 263.25000000000375,
+    "humanPoints": 27.539999999999964
+  },
+  {
+    "id": "measured.phrase-5b09dfdbdcdd",
+    "aiPosts": 1153,
+    "humanPosts": 119,
+    "aiFlaggedPosts": 398,
+    "humanFPPosts": 0,
+    "aiPoints": 254.81300000000263,
+    "humanPoints": 26.299000000000007
+  },
+  {
+    "id": "measured.phrase-368ed1c0e1ed",
+    "aiPosts": 550,
+    "humanPosts": 16,
+    "aiFlaggedPosts": 338,
+    "humanFPPosts": 0,
+    "aiPoints": 254.0999999999977,
+    "humanPoints": 7.391999999999999
+  },
+  {
+    "id": "measured.phrase-c5cc87e95664",
+    "aiPosts": 348,
+    "humanPosts": 12,
+    "aiFlaggedPosts": 193,
+    "humanFPPosts": 0,
+    "aiPoints": 248.47199999999958,
+    "humanPoints": 8.568000000000001
+  },
+  {
+    "id": "measured.phrase-5a7b370ef5a6",
+    "aiPosts": 328,
+    "humanPosts": 1,
+    "aiFlaggedPosts": 245,
+    "humanFPPosts": 0,
+    "aiPoints": 243.70399999999887,
+    "humanPoints": 0.743
+  },
+  {
+    "id": "measured.phrase-f034492f2c83",
+    "aiPosts": 152,
+    "humanPosts": 0,
+    "aiFlaggedPosts": 95,
+    "humanFPPosts": 0,
+    "aiPoints": 239.24800000000076,
+    "humanPoints": 0
+  },
+  {
+    "id": "measured.phrase-534ea8766ca8",
+    "aiPosts": 200,
+    "humanPosts": 1,
+    "aiFlaggedPosts": 92,
+    "humanFPPosts": 0,
+    "aiPoints": 235.39999999999966,
+    "humanPoints": 1.177
+  },
+  {
+    "id": "measured.phrase-27852e4bec94",
+    "aiPosts": 275,
+    "humanPosts": 17,
+    "aiFlaggedPosts": 133,
+    "humanFPPosts": 0,
+    "aiPoints": 228.25000000000128,
+    "humanPoints": 14.11
+  },
+  {
+    "id": "measured.phrase-06ca07569987",
+    "aiPosts": 309,
+    "humanPosts": 0,
+    "aiFlaggedPosts": 211,
+    "humanFPPosts": 0,
+    "aiPoints": 225.56999999999886,
+    "humanPoints": 0
+  },
+  {
+    "id": "measured.phrase-6f5b26cd33f7",
+    "aiPosts": 193,
+    "humanPosts": 7,
+    "aiFlaggedPosts": 95,
+    "humanFPPosts": 0,
+    "aiPoints": 215.77399999999938,
+    "humanPoints": 7.826000000000001
+  },
+  {
+    "id": "measured.phrase-8e59a315cd37",
+    "aiPosts": 440,
+    "humanPosts": 20,
+    "aiFlaggedPosts": 249,
+    "humanFPPosts": 0,
+    "aiPoints": 214.71999999999983,
+    "humanPoints": 9.759999999999994
+  },
+  {
+    "id": "measured.phrase-8da9e5633f45",
+    "aiPosts": 205,
+    "humanPosts": 1,
+    "aiFlaggedPosts": 144,
+    "humanFPPosts": 0,
+    "aiPoints": 209.5099999999996,
+    "humanPoints": 1.022
+  },
+  {
+    "id": "measured.phrase-ada6470ac780",
+    "aiPosts": 157,
+    "humanPosts": 4,
+    "aiFlaggedPosts": 101,
+    "humanFPPosts": 0,
+    "aiPoints": 204.57099999999966,
+    "humanPoints": 5.212
+  },
+  {
+    "id": "measured.phrase-39941d019ed4",
+    "aiPosts": 464,
+    "humanPosts": 29,
+    "aiFlaggedPosts": 277,
+    "humanFPPosts": 0,
+    "aiPoints": 193.95200000000187,
+    "humanPoints": 12.121999999999995
+  },
+  {
+    "id": "measured.phrase-535f51cac411",
+    "aiPosts": 352,
+    "humanPosts": 13,
+    "aiFlaggedPosts": 156,
+    "humanFPPosts": 0,
+    "aiPoints": 192.89600000000058,
+    "humanPoints": 7.1240000000000006
+  },
+  {
+    "id": "measured.phrase-faa0d301dde2",
+    "aiPosts": 156,
+    "humanPosts": 3,
+    "aiFlaggedPosts": 122,
+    "humanFPPosts": 0,
+    "aiPoints": 190.94399999999956,
+    "humanPoints": 3.6719999999999997
+  },
+  {
+    "id": "measured.phrase-108dd668af8f",
+    "aiPosts": 578,
+    "humanPosts": 60,
+    "aiFlaggedPosts": 244,
+    "humanFPPosts": 0,
+    "aiPoints": 182.069999999999,
+    "humanPoints": 18.900000000000006
+  },
+  {
+    "id": "measured.phrase-253eff0c6baa",
+    "aiPosts": 231,
+    "humanPosts": 0,
+    "aiFlaggedPosts": 146,
+    "humanFPPosts": 0,
+    "aiPoints": 167.70599999999982,
+    "humanPoints": 0
+  },
+  {
+    "id": "measured.pattern-946bcaeabe5d",
+    "aiPosts": 829,
+    "humanPosts": 74,
+    "aiFlaggedPosts": 410,
+    "humanFPPosts": 0,
+    "aiPoints": 165.79999999999913,
+    "humanPoints": 14.79999999999998
+  },
+  {
+    "id": "measured.phrase-9596a69e56c2",
+    "aiPosts": 111,
+    "humanPosts": 3,
+    "aiFlaggedPosts": 42,
+    "humanFPPosts": 0,
+    "aiPoints": 162.72599999999997,
+    "humanPoints": 4.398
+  },
+  {
+    "id": "measured.phrase-2f967540f5c1",
+    "aiPosts": 108,
+    "humanPosts": 1,
+    "aiFlaggedPosts": 71,
+    "humanFPPosts": 0,
+    "aiPoints": 160.38000000000025,
+    "humanPoints": 1.485
+  },
+  {
+    "id": "measured.phrase-a199488264f0",
+    "aiPosts": 647,
+    "humanPosts": 41,
+    "aiFlaggedPosts": 311,
+    "humanFPPosts": 0,
+    "aiPoints": 156.57399999999976,
+    "humanPoints": 9.922000000000004
+  },
+  {
+    "id": "measured.phrase-a43e70b289f1",
+    "aiPosts": 598,
+    "humanPosts": 53,
+    "aiFlaggedPosts": 222,
+    "humanFPPosts": 0,
+    "aiPoints": 139.33400000000094,
+    "humanPoints": 12.349000000000006
+  },
+  {
+    "id": "measured.phrase-3a8d4cc91a60",
+    "aiPosts": 357,
+    "humanPosts": 23,
+    "aiFlaggedPosts": 187,
+    "humanFPPosts": 0,
+    "aiPoints": 136.73099999999965,
+    "humanPoints": 8.808999999999997
+  },
+  {
+    "id": "measured.phrase-a6ac0906c0d2",
+    "aiPosts": 208,
+    "humanPosts": 4,
+    "aiFlaggedPosts": 131,
+    "humanFPPosts": 0,
+    "aiPoints": 125.42399999999955,
+    "humanPoints": 2.412
+  },
+  {
+    "id": "measured.phrase-20ed9d7806ec",
+    "aiPosts": 267,
+    "humanPosts": 5,
+    "aiFlaggedPosts": 98,
+    "humanFPPosts": 0,
+    "aiPoints": 124.9560000000007,
+    "humanPoints": 2.3400000000000003
+  },
+  {
+    "id": "measured.phrase-def8ca2d5347",
+    "aiPosts": 86,
+    "humanPosts": 4,
+    "aiFlaggedPosts": 26,
+    "humanFPPosts": 0,
+    "aiPoints": 123.32399999999986,
+    "humanPoints": 5.736
+  },
+  {
+    "id": "measured.phrase-8d5819505487",
+    "aiPosts": 85,
+    "humanPosts": 2,
+    "aiFlaggedPosts": 35,
+    "humanFPPosts": 0,
+    "aiPoints": 121.29500000000026,
+    "humanPoints": 2.854
+  },
+  {
+    "id": "measured.pattern-f34584576a40",
+    "aiPosts": 91,
+    "humanPosts": 8,
+    "aiFlaggedPosts": 25,
+    "humanFPPosts": 0,
+    "aiPoints": 118.57299999999984,
+    "humanPoints": 10.424
+  },
+  {
+    "id": "measured.phrase-2c66c3214227",
+    "aiPosts": 108,
+    "humanPosts": 0,
+    "aiFlaggedPosts": 40,
+    "humanFPPosts": 0,
+    "aiPoints": 116.31599999999983,
+    "humanPoints": 0
+  },
+  {
+    "id": "template-phrases.template",
+    "aiPosts": 233,
+    "humanPosts": 5,
+    "aiFlaggedPosts": 117,
+    "humanFPPosts": 0,
+    "aiPoints": 113.94799999999975,
+    "humanPoints": 2.335
+  },
+  {
+    "id": "measured.phrase-b5a18b6ed962",
+    "aiPosts": 626,
+    "humanPosts": 42,
+    "aiFlaggedPosts": 249,
+    "humanFPPosts": 0,
+    "aiPoints": 110.17600000000071,
+    "humanPoints": 7.392000000000004
+  },
+  {
+    "id": "measured.phrase-27572f979829",
+    "aiPosts": 306,
+    "humanPosts": 6,
+    "aiFlaggedPosts": 215,
+    "humanFPPosts": 0,
+    "aiPoints": 109.54800000000029,
+    "humanPoints": 2.148
+  },
+  {
+    "id": "measured.phrase-4f0c5892e548",
+    "aiPosts": 94,
+    "humanPosts": 7,
+    "aiFlaggedPosts": 56,
+    "humanFPPosts": 0,
+    "aiPoints": 108.47599999999976,
+    "humanPoints": 8.078
+  },
+  {
+    "id": "measured.phrase-0b8ee07df0e9",
+    "aiPosts": 182,
+    "humanPosts": 7,
+    "aiFlaggedPosts": 100,
+    "humanFPPosts": 0,
+    "aiPoints": 108.47200000000008,
+    "humanPoints": 4.172
+  },
+  {
+    "id": "measured.phrase-03f775474d1d",
+    "aiPosts": 99,
+    "humanPosts": 5,
+    "aiFlaggedPosts": 15,
+    "humanFPPosts": 0,
+    "aiPoints": 107.4149999999998,
+    "humanPoints": 5.425
+  },
+  {
+    "id": "measured.phrase-1bcbb7d582a7",
+    "aiPosts": 128,
+    "humanPosts": 0,
+    "aiFlaggedPosts": 72,
+    "humanFPPosts": 0,
+    "aiPoints": 107.26399999999973,
+    "humanPoints": 0
+  },
+  {
+    "id": "measured.phrase-beba7ce20712",
+    "aiPosts": 118,
+    "humanPosts": 0,
+    "aiFlaggedPosts": 87,
+    "humanFPPosts": 0,
+    "aiPoints": 107.02599999999971,
+    "humanPoints": 0
+  },
+  {
+    "id": "measured.phrase-bb9fe5f5cd85",
+    "aiPosts": 173,
+    "humanPosts": 2,
+    "aiFlaggedPosts": 110,
+    "humanFPPosts": 0,
+    "aiPoints": 104.83799999999975,
+    "humanPoints": 1.212
+  },
+  {
+    "id": "measured.phrase-517ec7c9e23f",
+    "aiPosts": 469,
+    "humanPosts": 24,
+    "aiFlaggedPosts": 279,
+    "humanFPPosts": 0,
+    "aiPoints": 104.58699999999962,
+    "humanPoints": 5.3519999999999985
+  },
+  {
+    "id": "measured.phrase-3084fd8c5a71",
+    "aiPosts": 117,
+    "humanPosts": 5,
+    "aiFlaggedPosts": 63,
+    "humanFPPosts": 0,
+    "aiPoints": 103.54500000000019,
+    "humanPoints": 4.425
+  },
+  {
+    "id": "measured.phrase-d14def3eea3d",
+    "aiPosts": 105,
+    "humanPosts": 2,
+    "aiFlaggedPosts": 48,
+    "humanFPPosts": 0,
+    "aiPoints": 103.42499999999995,
+    "humanPoints": 1.97
+  },
+  {
+    "id": "measured.phrase-20ad4cfc797b",
+    "aiPosts": 58,
+    "humanPosts": 0,
+    "aiFlaggedPosts": 27,
+    "humanFPPosts": 0,
+    "aiPoints": 102.83399999999997,
+    "humanPoints": 0
+  },
+  {
+    "id": "measured.phrase-d20830f938cf",
+    "aiPosts": 106,
+    "humanPosts": 5,
+    "aiFlaggedPosts": 29,
+    "humanFPPosts": 0,
+    "aiPoints": 100.16999999999975,
+    "humanPoints": 4.725
+  },
+  {
+    "id": "measured.phrase-416914df6b7c",
+    "aiPosts": 396,
+    "humanPosts": 46,
+    "aiFlaggedPosts": 170,
+    "humanFPPosts": 0,
+    "aiPoints": 96.22799999999954,
+    "humanPoints": 11.178000000000008
+  },
+  {
+    "id": "measured.phrase-42a150af40d5",
+    "aiPosts": 273,
+    "humanPosts": 10,
+    "aiFlaggedPosts": 147,
+    "humanFPPosts": 0,
+    "aiPoints": 95.82299999999978,
+    "humanPoints": 3.51
+  },
+  {
+    "id": "measured.phrase-dffffb602bdb",
+    "aiPosts": 119,
+    "humanPosts": 3,
+    "aiFlaggedPosts": 65,
+    "humanFPPosts": 0,
+    "aiPoints": 92.93900000000015,
+    "humanPoints": 2.343
+  },
+  {
+    "id": "measured.phrase-9d92c3d6ef6a",
+    "aiPosts": 222,
+    "humanPosts": 6,
+    "aiFlaggedPosts": 119,
+    "humanFPPosts": 0,
+    "aiPoints": 92.35199999999956,
+    "humanPoints": 2.496
+  },
+  {
+    "id": "measured.phrase-de942b88f5f6",
+    "aiPosts": 160,
+    "humanPosts": 8,
+    "aiFlaggedPosts": 64,
+    "humanFPPosts": 0,
+    "aiPoints": 91.67999999999971,
+    "humanPoints": 4.584
+  },
+  {
+    "id": "measured.phrase-bddc0cf961f5",
+    "aiPosts": 166,
+    "humanPosts": 6,
+    "aiFlaggedPosts": 85,
+    "humanFPPosts": 0,
+    "aiPoints": 91.6320000000003,
+    "humanPoints": 3.3120000000000003
+  },
+  {
+    "id": "ai-vocabulary.tier1",
+    "aiPosts": 154,
+    "humanPosts": 2,
+    "aiFlaggedPosts": 106,
+    "humanFPPosts": 0,
+    "aiPoints": 90.87999999999982,
+    "humanPoints": 1.136
+  },
+  {
+    "id": "measured.phrase-7db395be1738",
+    "aiPosts": 93,
+    "humanPosts": 0,
+    "aiFlaggedPosts": 73,
+    "humanFPPosts": 0,
+    "aiPoints": 90.0240000000002,
+    "humanPoints": 0
+  },
+  {
+    "id": "measured.phrase-9c02e6a6c9b1",
+    "aiPosts": 99,
+    "humanPosts": 3,
+    "aiFlaggedPosts": 61,
+    "humanFPPosts": 0,
+    "aiPoints": 88.60499999999999,
+    "humanPoints": 2.685
+  },
+  {
+    "id": "measured.pattern-d1135235d079",
+    "aiPosts": 69,
+    "humanPosts": 0,
+    "aiFlaggedPosts": 30,
+    "humanFPPosts": 0,
+    "aiPoints": 87.837,
+    "humanPoints": 0
+  },
+  {
+    "id": "measured.phrase-ff51a3421a72",
+    "aiPosts": 97,
+    "humanPosts": 1,
+    "aiFlaggedPosts": 54,
+    "humanFPPosts": 0,
+    "aiPoints": 87.30000000000007,
+    "humanPoints": 0.9
+  },
+  {
+    "id": "engagement-bait.generic-conclusion",
+    "aiPosts": 69,
+    "humanPosts": 0,
+    "aiFlaggedPosts": 33,
+    "humanFPPosts": 0,
+    "aiPoints": 86.80199999999996,
+    "humanPoints": 0
+  },
+  {
+    "id": "measured.phrase-8d3fabf95003",
+    "aiPosts": 152,
+    "humanPosts": 2,
+    "aiFlaggedPosts": 82,
+    "humanFPPosts": 0,
+    "aiPoints": 83.14399999999975,
+    "humanPoints": 1.094
+  },
+  {
+    "id": "measured.phrase-065d6a839c2c",
+    "aiPosts": 98,
+    "humanPosts": 1,
+    "aiFlaggedPosts": 63,
+    "humanFPPosts": 0,
+    "aiPoints": 82.32000000000019,
+    "humanPoints": 0.84
+  },
+  {
+    "id": "measured.phrase-2ad59223d2f9",
+    "aiPosts": 107,
+    "humanPosts": 4,
+    "aiFlaggedPosts": 52,
+    "humanFPPosts": 0,
+    "aiPoints": 81.96200000000002,
+    "humanPoints": 3.064
+  },
+  {
+    "id": "measured.phrase-7e331e0b96ca",
+    "aiPosts": 65,
+    "humanPosts": 4,
+    "aiFlaggedPosts": 20,
+    "humanFPPosts": 0,
+    "aiPoints": 79.88499999999996,
+    "humanPoints": 4.916
+  },
+  {
+    "id": "measured.phrase-8e9132166aeb",
+    "aiPosts": 215,
+    "humanPosts": 20,
+    "aiFlaggedPosts": 76,
+    "humanFPPosts": 0,
+    "aiPoints": 79.11999999999992,
+    "humanPoints": 7.360000000000002
+  },
+  {
+    "id": "measured.phrase-fcfe275d1900",
+    "aiPosts": 108,
+    "humanPosts": 0,
+    "aiFlaggedPosts": 79,
+    "humanFPPosts": 0,
+    "aiPoints": 77.97599999999997,
+    "humanPoints": 0
+  },
+  {
+    "id": "measured.phrase-8f11d61a95cc",
+    "aiPosts": 62,
+    "humanPosts": 0,
+    "aiFlaggedPosts": 24,
+    "humanFPPosts": 0,
+    "aiPoints": 77.80999999999999,
+    "humanPoints": 0
+  },
+  {
+    "id": "measured.phrase-4fb5a91fb4c0",
+    "aiPosts": 65,
+    "humanPosts": 1,
+    "aiFlaggedPosts": 42,
+    "humanFPPosts": 0,
+    "aiPoints": 76.11500000000004,
+    "humanPoints": 1.171
+  },
+  {
+    "id": "measured.phrase-77f53c130642",
+    "aiPosts": 91,
+    "humanPosts": 1,
+    "aiFlaggedPosts": 52,
+    "humanFPPosts": 0,
+    "aiPoints": 75.16599999999994,
+    "humanPoints": 0.826
+  },
+  {
+    "id": "measured.phrase-51f35cee89fb",
+    "aiPosts": 118,
+    "humanPosts": 3,
+    "aiFlaggedPosts": 52,
+    "humanFPPosts": 0,
+    "aiPoints": 74.69400000000003,
+    "humanPoints": 1.899
+  },
+  {
+    "id": "measured.phrase-a99d60c6817b",
+    "aiPosts": 65,
+    "humanPosts": 2,
+    "aiFlaggedPosts": 18,
+    "humanFPPosts": 0,
+    "aiPoints": 74.49000000000004,
+    "humanPoints": 2.292
+  },
+  {
+    "id": "measured.phrase-f241b4cdd278",
+    "aiPosts": 276,
+    "humanPosts": 29,
+    "aiFlaggedPosts": 117,
+    "humanFPPosts": 0,
+    "aiPoints": 74.24399999999993,
+    "humanPoints": 7.801000000000003
+  },
+  {
+    "id": "measured.phrase-da80cb56919b",
+    "aiPosts": 99,
+    "humanPosts": 4,
+    "aiFlaggedPosts": 56,
+    "humanFPPosts": 0,
+    "aiPoints": 73.953,
+    "humanPoints": 2.988
+  },
+  {
+    "id": "measured.phrase-ce2bea073e6a",
+    "aiPosts": 81,
+    "humanPosts": 2,
+    "aiFlaggedPosts": 52,
+    "humanFPPosts": 0,
+    "aiPoints": 73.95299999999986,
+    "humanPoints": 1.826
+  },
+  {
+    "id": "measured.phrase-f2a9094c7983",
+    "aiPosts": 116,
+    "humanPosts": 0,
+    "aiFlaggedPosts": 62,
+    "humanFPPosts": 0,
+    "aiPoints": 70.87599999999992,
+    "humanPoints": 0
+  },
+  {
+    "id": "measured.phrase-36095e7d2dd9",
+    "aiPosts": 136,
+    "humanPosts": 0,
+    "aiFlaggedPosts": 106,
+    "humanFPPosts": 0,
+    "aiPoints": 70.31200000000011,
+    "humanPoints": 0
+  },
+  {
+    "id": "measured.phrase-37a576ac55a8",
+    "aiPosts": 65,
+    "humanPosts": 1,
+    "aiFlaggedPosts": 34,
+    "humanFPPosts": 0,
+    "aiPoints": 70.13499999999999,
+    "humanPoints": 1.079
+  },
+  {
+    "id": "measured.phrase-342473b318b1",
+    "aiPosts": 174,
+    "humanPosts": 2,
+    "aiFlaggedPosts": 137,
+    "humanFPPosts": 0,
+    "aiPoints": 68.90400000000011,
+    "humanPoints": 0.792
+  },
+  {
+    "id": "measured.phrase-72ea7a3d930f",
+    "aiPosts": 170,
+    "humanPosts": 2,
+    "aiFlaggedPosts": 109,
+    "humanFPPosts": 0,
+    "aiPoints": 64.42999999999986,
+    "humanPoints": 0.758
+  },
+  {
+    "id": "measured.phrase-96012e80c71f",
+    "aiPosts": 60,
+    "humanPosts": 0,
+    "aiFlaggedPosts": 33,
+    "humanFPPosts": 0,
+    "aiPoints": 64.07999999999996,
+    "humanPoints": 0
+  },
+  {
+    "id": "measured.phrase-d78bf156acd0",
+    "aiPosts": 128,
+    "humanPosts": 7,
+    "aiFlaggedPosts": 68,
+    "humanFPPosts": 0,
+    "aiPoints": 63.872000000000114,
+    "humanPoints": 3.4930000000000003
+  },
+  {
+    "id": "measured.phrase-26c8e6c0b9d9",
+    "aiPosts": 311,
+    "humanPosts": 53,
+    "aiFlaggedPosts": 105,
+    "humanFPPosts": 0,
+    "aiPoints": 63.444000000000166,
+    "humanPoints": 10.812000000000005
+  },
+  {
+    "id": "measured.phrase-21d1330139ac",
+    "aiPosts": 322,
+    "humanPosts": 10,
+    "aiFlaggedPosts": 189,
+    "humanFPPosts": 0,
+    "aiPoints": 63.11199999999978,
+    "humanPoints": 1.9599999999999997
+  },
+  {
+    "id": "measured.phrase-f56f4f3249b4",
+    "aiPosts": 58,
+    "humanPosts": 0,
+    "aiFlaggedPosts": 31,
+    "humanFPPosts": 0,
+    "aiPoints": 63.10400000000005,
+    "humanPoints": 0
+  },
+  {
+    "id": "measured.phrase-8c8820a62e72",
+    "aiPosts": 204,
+    "humanPosts": 10,
+    "aiFlaggedPosts": 64,
+    "humanFPPosts": 0,
+    "aiPoints": 61.199999999999775,
+    "humanPoints": 2.9999999999999996
+  },
+  {
+    "id": "measured.pattern-59dc56d8d2d7",
+    "aiPosts": 59,
+    "humanPosts": 2,
+    "aiFlaggedPosts": 28,
+    "humanFPPosts": 0,
+    "aiPoints": 61.18299999999995,
+    "humanPoints": 2.074
+  },
+  {
+    "id": "measured.phrase-2a0f1c836390",
+    "aiPosts": 158,
+    "humanPosts": 12,
+    "aiFlaggedPosts": 77,
+    "humanFPPosts": 0,
+    "aiPoints": 60.355999999999895,
+    "humanPoints": 4.5840000000000005
+  },
+  {
+    "id": "measured.phrase-9f565fa97362",
+    "aiPosts": 113,
+    "humanPosts": 10,
+    "aiFlaggedPosts": 55,
+    "humanFPPosts": 0,
+    "aiPoints": 59.55100000000007,
+    "humanPoints": 5.2700000000000005
+  },
+  {
+    "id": "measured.phrase-74045c964864",
+    "aiPosts": 119,
+    "humanPosts": 1,
+    "aiFlaggedPosts": 88,
+    "humanFPPosts": 0,
+    "aiPoints": 59.261999999999894,
+    "humanPoints": 0.498
+  },
+  {
+    "id": "measured.phrase-80cd171910c4",
+    "aiPosts": 94,
+    "humanPosts": 0,
+    "aiFlaggedPosts": 60,
+    "humanFPPosts": 0,
+    "aiPoints": 57.246000000000116,
+    "humanPoints": 0
+  },
+  {
+    "id": "measured.pattern-e865dbc5f44e",
+    "aiPosts": 55,
+    "humanPosts": 1,
+    "aiFlaggedPosts": 33,
+    "humanFPPosts": 0,
+    "aiPoints": 57.089999999999925,
+    "humanPoints": 1.038
+  },
+  {
+    "id": "measured.phrase-72ccc8604e14",
+    "aiPosts": 689,
+    "humanPosts": 68,
+    "aiFlaggedPosts": 276,
+    "humanFPPosts": 0,
+    "aiPoints": 54.43100000000035,
+    "humanPoints": 5.371999999999999
+  },
+  {
+    "id": "measured.phrase-c26f0fe4644b",
+    "aiPosts": 67,
+    "humanPosts": 0,
+    "aiFlaggedPosts": 42,
+    "humanFPPosts": 0,
+    "aiPoints": 52.728999999999964,
+    "humanPoints": 0
+  },
+  {
+    "id": "measured.phrase-4a2636dc0078",
+    "aiPosts": 62,
+    "humanPosts": 0,
+    "aiFlaggedPosts": 44,
+    "humanFPPosts": 0,
+    "aiPoints": 52.514000000000046,
+    "humanPoints": 0
+  },
+  {
+    "id": "measured.phrase-64e9320203f3",
+    "aiPosts": 100,
+    "humanPosts": 2,
+    "aiFlaggedPosts": 52,
+    "humanFPPosts": 0,
+    "aiPoints": 52.1999999999999,
+    "humanPoints": 1.044
+  },
+  {
+    "id": "measured.phrase-3ab316f75a04",
+    "aiPosts": 79,
+    "humanPosts": 0,
+    "aiFlaggedPosts": 57,
+    "humanFPPosts": 0,
+    "aiPoints": 50.32300000000003,
+    "humanPoints": 0
+  },
+  {
+    "id": "measured.phrase-f9a99d3e129b",
+    "aiPosts": 43,
+    "humanPosts": 1,
+    "aiFlaggedPosts": 14,
+    "humanFPPosts": 0,
+    "aiPoints": 49.36400000000005,
+    "humanPoints": 1.148
+  },
+  {
+    "id": "measured.phrase-fd471d502995",
+    "aiPosts": 89,
+    "humanPosts": 0,
+    "aiFlaggedPosts": 60,
+    "humanFPPosts": 0,
+    "aiPoints": 48.94999999999994,
+    "humanPoints": 0
+  },
+  {
+    "id": "measured.phrase-8ca3c5210214",
+    "aiPosts": 70,
+    "humanPosts": 0,
+    "aiFlaggedPosts": 52,
+    "humanFPPosts": 0,
+    "aiPoints": 48.71999999999998,
+    "humanPoints": 0
+  },
+  {
+    "id": "measured.phrase-3e5f1e74f114",
+    "aiPosts": 40,
+    "humanPosts": 0,
+    "aiFlaggedPosts": 11,
+    "humanFPPosts": 0,
+    "aiPoints": 48.600000000000044,
+    "humanPoints": 0
+  },
+  {
+    "id": "measured.phrase-c8ca696edd2c",
+    "aiPosts": 166,
+    "humanPosts": 30,
+    "aiFlaggedPosts": 24,
+    "humanFPPosts": 0,
+    "aiPoints": 47.80799999999984,
+    "humanPoints": 8.640000000000002
+  },
+  {
+    "id": "measured.phrase-42275fc8e7f3",
+    "aiPosts": 298,
+    "humanPosts": 23,
+    "aiFlaggedPosts": 95,
+    "humanFPPosts": 0,
+    "aiPoints": 47.67999999999969,
+    "humanPoints": 3.680000000000001
+  },
+  {
+    "id": "measured.phrase-d21035ca66f1",
+    "aiPosts": 74,
+    "humanPosts": 0,
+    "aiFlaggedPosts": 35,
+    "humanFPPosts": 0,
+    "aiPoints": 47.43399999999991,
+    "humanPoints": 0
+  },
+  {
+    "id": "measured.phrase-86eadd191711",
+    "aiPosts": 140,
+    "humanPosts": 3,
+    "aiFlaggedPosts": 84,
+    "humanFPPosts": 0,
+    "aiPoints": 47.03999999999987,
+    "humanPoints": 1.008
+  },
+  {
+    "id": "measured.phrase-554c8030c708",
+    "aiPosts": 46,
+    "humanPosts": 2,
+    "aiFlaggedPosts": 30,
+    "humanFPPosts": 0,
+    "aiPoints": 46.78200000000003,
+    "humanPoints": 2.034
+  },
+  {
+    "id": "measured.phrase-f073817a209a",
+    "aiPosts": 47,
+    "humanPosts": 1,
+    "aiFlaggedPosts": 23,
+    "humanFPPosts": 0,
+    "aiPoints": 45.261000000000024,
+    "humanPoints": 0.963
+  },
+  {
+    "id": "measured.phrase-f03dcbb9fb49",
+    "aiPosts": 223,
+    "humanPosts": 10,
+    "aiFlaggedPosts": 103,
+    "humanFPPosts": 0,
+    "aiPoints": 45.04600000000002,
+    "humanPoints": 2.02
+  },
+  {
+    "id": "measured.phrase-01d2330dacbe",
+    "aiPosts": 126,
+    "humanPosts": 3,
+    "aiFlaggedPosts": 61,
+    "humanFPPosts": 0,
+    "aiPoints": 44.981999999999935,
+    "humanPoints": 1.071
+  },
+  {
+    "id": "measured.phrase-d436d9f72656",
+    "aiPosts": 74,
+    "humanPosts": 0,
+    "aiFlaggedPosts": 24,
+    "humanFPPosts": 0,
+    "aiPoints": 44.40000000000006,
+    "humanPoints": 0
+  },
+  {
+    "id": "measured.phrase-ef43096042b8",
+    "aiPosts": 127,
+    "humanPosts": 7,
+    "aiFlaggedPosts": 50,
+    "humanFPPosts": 0,
+    "aiPoints": 44.322999999999894,
+    "humanPoints": 2.4429999999999996
+  },
+  {
+    "id": "measured.phrase-813acdf4f6e5",
+    "aiPosts": 244,
+    "humanPosts": 15,
+    "aiFlaggedPosts": 94,
+    "humanFPPosts": 0,
+    "aiPoints": 44.163999999999874,
+    "humanPoints": 2.7150000000000003
+  },
+  {
+    "id": "measured.phrase-9b82e656f752",
+    "aiPosts": 43,
+    "humanPosts": 1,
+    "aiFlaggedPosts": 19,
+    "humanFPPosts": 0,
+    "aiPoints": 44.16100000000002,
+    "humanPoints": 1.027
+  },
+  {
+    "id": "measured.phrase-267daa24ff51",
+    "aiPosts": 145,
+    "humanPosts": 5,
+    "aiFlaggedPosts": 71,
+    "humanFPPosts": 0,
+    "aiPoints": 42.91999999999993,
+    "humanPoints": 1.48
+  },
+  {
+    "id": "measured.phrase-a2df5c520e3d",
+    "aiPosts": 70,
+    "humanPosts": 10,
+    "aiFlaggedPosts": 18,
+    "humanFPPosts": 0,
+    "aiPoints": 42.21000000000006,
+    "humanPoints": 6.0299999999999985
+  },
+  {
+    "id": "measured.phrase-d74667991209",
+    "aiPosts": 124,
+    "humanPosts": 6,
+    "aiFlaggedPosts": 60,
+    "humanFPPosts": 0,
+    "aiPoints": 41.663999999999895,
+    "humanPoints": 2.016
+  },
+  {
+    "id": "measured.phrase-93739ac63991",
+    "aiPosts": 49,
+    "humanPosts": 0,
+    "aiFlaggedPosts": 28,
+    "humanFPPosts": 0,
+    "aiPoints": 40.37600000000001,
+    "humanPoints": 0
+  },
+  {
+    "id": "measured.phrase-42f43e2fe76a",
+    "aiPosts": 74,
+    "humanPosts": 3,
+    "aiFlaggedPosts": 41,
+    "humanFPPosts": 0,
+    "aiPoints": 39.88600000000006,
+    "humanPoints": 1.617
+  },
+  {
+    "id": "measured.phrase-06fb3258de19",
+    "aiPosts": 107,
+    "humanPosts": 0,
+    "aiFlaggedPosts": 66,
+    "humanFPPosts": 0,
+    "aiPoints": 39.16199999999997,
+    "humanPoints": 0
+  },
+  {
+    "id": "measured.phrase-d73e47a1e0d8",
+    "aiPosts": 39,
+    "humanPosts": 5,
+    "aiFlaggedPosts": 7,
+    "humanFPPosts": 0,
+    "aiPoints": 37.82999999999998,
+    "humanPoints": 4.85
+  },
+  {
+    "id": "measured.phrase-142a208ce14e",
+    "aiPosts": 50,
+    "humanPosts": 0,
+    "aiFlaggedPosts": 34,
+    "humanFPPosts": 0,
+    "aiPoints": 37.550000000000004,
+    "humanPoints": 0
+  },
+  {
+    "id": "measured.phrase-a65fba3b0f15",
+    "aiPosts": 218,
+    "humanPosts": 7,
+    "aiFlaggedPosts": 150,
+    "humanFPPosts": 0,
+    "aiPoints": 37.2779999999999,
+    "humanPoints": 1.197
+  },
+  {
+    "id": "measured.pattern-69b89c65012e",
+    "aiPosts": 62,
+    "humanPosts": 4,
+    "aiFlaggedPosts": 27,
+    "humanFPPosts": 0,
+    "aiPoints": 36.76600000000002,
+    "humanPoints": 2.372
+  },
+  {
+    "id": "measured.phrase-6f47ad6c7746",
+    "aiPosts": 80,
+    "humanPosts": 1,
+    "aiFlaggedPosts": 45,
+    "humanFPPosts": 0,
+    "aiPoints": 36.08000000000003,
+    "humanPoints": 0.451
+  },
+  {
+    "id": "measured.phrase-8ca4e55a9434",
+    "aiPosts": 146,
+    "humanPosts": 15,
+    "aiFlaggedPosts": 47,
+    "humanFPPosts": 0,
+    "aiPoints": 35.91599999999997,
+    "humanPoints": 3.69
+  },
+  {
+    "id": "measured.phrase-cec25ff316af",
+    "aiPosts": 79,
+    "humanPosts": 0,
+    "aiFlaggedPosts": 52,
+    "humanFPPosts": 0,
+    "aiPoints": 34.286000000000016,
+    "humanPoints": 0
+  },
+  {
+    "id": "measured.phrase-8b7747ffa385",
+    "aiPosts": 62,
+    "humanPosts": 1,
+    "aiFlaggedPosts": 33,
+    "humanFPPosts": 0,
+    "aiPoints": 34.100000000000016,
+    "humanPoints": 0.55
+  },
+  {
+    "id": "measured.phrase-2ef5a33b2d01",
+    "aiPosts": 178,
+    "humanPosts": 13,
+    "aiFlaggedPosts": 62,
+    "humanFPPosts": 0,
+    "aiPoints": 33.99799999999996,
+    "humanPoints": 2.483
+  },
+  {
+    "id": "measured.phrase-7c7080e7046e",
+    "aiPosts": 77,
+    "humanPosts": 2,
+    "aiFlaggedPosts": 25,
+    "humanFPPosts": 0,
+    "aiPoints": 33.88000000000003,
+    "humanPoints": 0.88
+  },
+  {
+    "id": "hedging.vague-attribution",
+    "aiPosts": 48,
+    "humanPosts": 4,
+    "aiFlaggedPosts": 16,
+    "humanFPPosts": 0,
+    "aiPoints": 33.695999999999955,
+    "humanPoints": 2.808
+  },
+  {
+    "id": "measured.phrase-cf5144db155c",
+    "aiPosts": 65,
+    "humanPosts": 0,
+    "aiFlaggedPosts": 41,
+    "humanFPPosts": 0,
+    "aiPoints": 33.60499999999999,
+    "humanPoints": 0
+  },
+  {
+    "id": "measured.phrase-d661ef2c98a0",
+    "aiPosts": 53,
+    "humanPosts": 8,
+    "aiFlaggedPosts": 19,
+    "humanFPPosts": 0,
+    "aiPoints": 33.60200000000001,
+    "humanPoints": 5.072
+  },
+  {
+    "id": "measured.phrase-48f7d5b713e6",
+    "aiPosts": 52,
+    "humanPosts": 0,
+    "aiFlaggedPosts": 29,
+    "humanFPPosts": 0,
+    "aiPoints": 32.39600000000002,
+    "humanPoints": 0
+  },
+  {
+    "id": "measured.phrase-c8597b765d83",
+    "aiPosts": 125,
+    "humanPosts": 9,
+    "aiFlaggedPosts": 58,
+    "humanFPPosts": 0,
+    "aiPoints": 32.24999999999992,
+    "humanPoints": 2.322
+  },
+  {
+    "id": "measured.phrase-6cd7038d3362",
+    "aiPosts": 105,
+    "humanPosts": 17,
+    "aiFlaggedPosts": 45,
+    "humanFPPosts": 0,
+    "aiPoints": 32.02499999999998,
+    "humanPoints": 5.185
+  },
+  {
+    "id": "measured.phrase-e130b3640776",
+    "aiPosts": 35,
+    "humanPosts": 3,
+    "aiFlaggedPosts": 18,
+    "humanFPPosts": 0,
+    "aiPoints": 31.85,
+    "humanPoints": 2.73
+  },
+  {
+    "id": "measured.phrase-5fcc7609fa7e",
+    "aiPosts": 73,
+    "humanPosts": 10,
+    "aiFlaggedPosts": 38,
+    "humanFPPosts": 0,
+    "aiPoints": 31.535999999999962,
+    "humanPoints": 4.32
+  },
+  {
+    "id": "measured.phrase-cacccd762b5a",
+    "aiPosts": 45,
+    "humanPosts": 1,
+    "aiFlaggedPosts": 33,
+    "humanFPPosts": 0,
+    "aiPoints": 31.410000000000014,
+    "humanPoints": 0.698
+  },
+  {
+    "id": "measured.phrase-65b4cd3d2c03",
+    "aiPosts": 159,
+    "humanPosts": 16,
+    "aiFlaggedPosts": 43,
+    "humanFPPosts": 0,
+    "aiPoints": 31.1640000000001,
+    "humanPoints": 3.1360000000000006
+  },
+  {
+    "id": "measured.phrase-c3e9a5692ac3",
+    "aiPosts": 180,
+    "humanPosts": 3,
+    "aiFlaggedPosts": 106,
+    "humanFPPosts": 0,
+    "aiPoints": 30.779999999999923,
+    "humanPoints": 0.513
+  },
+  {
+    "id": "measured.phrase-1c750d94bab1",
+    "aiPosts": 38,
+    "humanPosts": 1,
+    "aiFlaggedPosts": 12,
+    "humanFPPosts": 0,
+    "aiPoints": 30.66599999999998,
+    "humanPoints": 0.807
+  },
+  {
+    "id": "measured.phrase-382d6ee32efb",
+    "aiPosts": 124,
+    "humanPosts": 11,
+    "aiFlaggedPosts": 50,
+    "humanFPPosts": 0,
+    "aiPoints": 29.883999999999965,
+    "humanPoints": 2.6510000000000007
+  },
+  {
+    "id": "measured.phrase-3907fb5e3fd1",
+    "aiPosts": 41,
+    "humanPosts": 0,
+    "aiFlaggedPosts": 30,
+    "humanFPPosts": 0,
+    "aiPoints": 29.64299999999999,
+    "humanPoints": 0
+  },
+  {
+    "id": "measured.phrase-b42239aac7a1",
+    "aiPosts": 46,
+    "humanPosts": 4,
+    "aiFlaggedPosts": 18,
+    "humanFPPosts": 0,
+    "aiPoints": 29.57800000000002,
+    "humanPoints": 2.572
+  },
+  {
+    "id": "ai-vocabulary.tier3",
+    "aiPosts": 97,
+    "humanPosts": 2,
+    "aiFlaggedPosts": 72,
+    "humanFPPosts": 0,
+    "aiPoints": 29.35350015287217,
+    "humanPoints": 0.9135819612930195
+  },
+  {
+    "id": "measured.phrase-b01b4dbb822e",
+    "aiPosts": 39,
+    "humanPosts": 5,
+    "aiFlaggedPosts": 11,
+    "humanFPPosts": 0,
+    "aiPoints": 28.938000000000024,
+    "humanPoints": 3.71
+  },
+  {
+    "id": "measured.phrase-9290eab00f49",
+    "aiPosts": 28,
+    "humanPosts": 1,
+    "aiFlaggedPosts": 11,
+    "humanFPPosts": 0,
+    "aiPoints": 28.896,
+    "humanPoints": 1.032
+  },
+  {
+    "id": "measured.phrase-c87a5db74de0",
+    "aiPosts": 405,
+    "humanPosts": 64,
+    "aiFlaggedPosts": 137,
+    "humanFPPosts": 0,
+    "aiPoints": 27.540000000000173,
+    "humanPoints": 4.352000000000001
+  },
+  {
+    "id": "measured.phrase-4f33fbd89139",
+    "aiPosts": 59,
+    "humanPosts": 1,
+    "aiFlaggedPosts": 26,
+    "humanFPPosts": 0,
+    "aiPoints": 27.140000000000036,
+    "humanPoints": 0.46
+  },
+  {
+    "id": "measured.pattern-a30b5003b379",
+    "aiPosts": 18,
+    "humanPosts": 0,
+    "aiFlaggedPosts": 4,
+    "humanFPPosts": 0,
+    "aiPoints": 27.018000000000004,
+    "humanPoints": 0
+  },
+  {
+    "id": "measured.phrase-27fa49866460",
+    "aiPosts": 42,
+    "humanPosts": 2,
+    "aiFlaggedPosts": 10,
+    "humanFPPosts": 0,
+    "aiPoints": 26.71199999999998,
+    "humanPoints": 1.272
+  },
+  {
+    "id": "measured.phrase-3a06a0154a49",
+    "aiPosts": 67,
+    "humanPosts": 1,
+    "aiFlaggedPosts": 40,
+    "humanFPPosts": 0,
+    "aiPoints": 26.532000000000036,
+    "humanPoints": 0.396
+  },
+  {
+    "id": "measured.phrase-8e7bb77d1991",
+    "aiPosts": 161,
+    "humanPosts": 12,
+    "aiFlaggedPosts": 52,
+    "humanFPPosts": 0,
+    "aiPoints": 26.404000000000075,
+    "humanPoints": 1.9679999999999997
+  },
+  {
+    "id": "measured.phrase-a9291910e83a",
+    "aiPosts": 91,
+    "humanPosts": 9,
+    "aiFlaggedPosts": 28,
+    "humanFPPosts": 0,
+    "aiPoints": 26.02600000000003,
+    "humanPoints": 2.574
+  },
+  {
+    "id": "measured.phrase-501d50c84bd9",
+    "aiPosts": 39,
+    "humanPosts": 2,
+    "aiFlaggedPosts": 13,
+    "humanFPPosts": 0,
+    "aiPoints": 25.03799999999999,
+    "humanPoints": 1.284
+  },
+  {
+    "id": "measured.phrase-5704d77ef728",
+    "aiPosts": 39,
+    "humanPosts": 0,
+    "aiFlaggedPosts": 31,
+    "humanFPPosts": 0,
+    "aiPoints": 24.96000000000001,
+    "humanPoints": 0
+  },
+  {
+    "id": "measured.phrase-d7b5f03e74ef",
+    "aiPosts": 77,
+    "humanPosts": 8,
+    "aiFlaggedPosts": 25,
+    "humanFPPosts": 0,
+    "aiPoints": 24.94800000000004,
+    "humanPoints": 2.592
+  },
+  {
+    "id": "measured.phrase-fe3b9eb2f902",
+    "aiPosts": 24,
+    "humanPosts": 0,
+    "aiFlaggedPosts": 18,
+    "humanFPPosts": 0,
+    "aiPoints": 24.887999999999984,
+    "humanPoints": 0
+  },
+  {
+    "id": "measured.phrase-d5169b9484e9",
+    "aiPosts": 50,
+    "humanPosts": 0,
+    "aiFlaggedPosts": 34,
+    "humanFPPosts": 0,
+    "aiPoints": 24.849999999999998,
+    "humanPoints": 0
+  },
+  {
+    "id": "measured.phrase-2e9fbfa1b928",
+    "aiPosts": 74,
+    "humanPosts": 4,
+    "aiFlaggedPosts": 43,
+    "humanFPPosts": 0,
+    "aiPoints": 24.34600000000003,
+    "humanPoints": 1.316
+  },
+  {
+    "id": "measured.phrase-fe1a5b309d03",
+    "aiPosts": 72,
+    "humanPosts": 3,
+    "aiFlaggedPosts": 38,
+    "humanFPPosts": 0,
+    "aiPoints": 24.19199999999997,
+    "humanPoints": 1.008
+  },
+  {
+    "id": "measured.phrase-233c4af464ac",
+    "aiPosts": 38,
+    "humanPosts": 0,
+    "aiFlaggedPosts": 18,
+    "humanFPPosts": 0,
+    "aiPoints": 24.09200000000001,
+    "humanPoints": 0
+  },
+  {
+    "id": "measured.phrase-47233f13e909",
+    "aiPosts": 39,
+    "humanPosts": 1,
+    "aiFlaggedPosts": 16,
+    "humanFPPosts": 0,
+    "aiPoints": 22.85399999999999,
+    "humanPoints": 0.586
+  },
+  {
+    "id": "measured.phrase-711c79fa89f5",
+    "aiPosts": 42,
+    "humanPosts": 2,
+    "aiFlaggedPosts": 23,
+    "humanFPPosts": 0,
+    "aiPoints": 22.67999999999998,
+    "humanPoints": 1.08
+  },
+  {
+    "id": "ai-vocabulary.explainer-idioms",
+    "aiPosts": 64,
+    "humanPosts": 3,
+    "aiFlaggedPosts": 31,
+    "humanFPPosts": 0,
+    "aiPoints": 22.647524434927103,
+    "humanPoints": 1.1608326112068525
+  },
+  {
+    "id": "measured.phrase-97247aca4f8e",
+    "aiPosts": 195,
+    "humanPosts": 20,
+    "aiFlaggedPosts": 67,
+    "humanFPPosts": 0,
+    "aiPoints": 22.619999999999948,
+    "humanPoints": 2.320000000000001
+  },
+  {
+    "id": "measured.pattern-b10f8cffbdbd",
+    "aiPosts": 17,
+    "humanPosts": 0,
+    "aiFlaggedPosts": 3,
+    "humanFPPosts": 0,
+    "aiPoints": 22.457000000000004,
+    "humanPoints": 0
+  },
+  {
+    "id": "measured.phrase-0d439df1a2db",
+    "aiPosts": 42,
+    "humanPosts": 0,
+    "aiFlaggedPosts": 28,
+    "humanFPPosts": 0,
+    "aiPoints": 22.175999999999995,
+    "humanPoints": 0
+  },
+  {
+    "id": "measured.phrase-ae09128b23b7",
+    "aiPosts": 39,
+    "humanPosts": 4,
+    "aiFlaggedPosts": 13,
+    "humanFPPosts": 0,
+    "aiPoints": 21.761999999999997,
+    "humanPoints": 2.232
+  },
+  {
+    "id": "measured.phrase-e1a419456446",
+    "aiPosts": 324,
+    "humanPosts": 11,
+    "aiFlaggedPosts": 136,
+    "humanFPPosts": 0,
+    "aiPoints": 21.708000000000048,
+    "humanPoints": 0.7369999999999999
+  },
+  {
+    "id": "measured.phrase-7cc1bc318d27",
+    "aiPosts": 57,
+    "humanPosts": 3,
+    "aiFlaggedPosts": 33,
+    "humanFPPosts": 0,
+    "aiPoints": 21.546000000000003,
+    "humanPoints": 1.134
+  },
+  {
+    "id": "measured.phrase-195f4f396e4b",
+    "aiPosts": 22,
+    "humanPosts": 0,
+    "aiFlaggedPosts": 6,
+    "humanFPPosts": 0,
+    "aiPoints": 21.450000000000003,
+    "humanPoints": 0
+  },
+  {
+    "id": "measured.phrase-4ced4bd5ca95",
+    "aiPosts": 52,
+    "humanPosts": 4,
+    "aiFlaggedPosts": 21,
+    "humanFPPosts": 0,
+    "aiPoints": 21.372000000000007,
+    "humanPoints": 1.644
+  },
+  {
+    "id": "measured.phrase-d26ae296f6b7",
+    "aiPosts": 63,
+    "humanPosts": 1,
+    "aiFlaggedPosts": 35,
+    "humanFPPosts": 0,
+    "aiPoints": 21.293999999999997,
+    "humanPoints": 0.338
+  },
+  {
+    "id": "measured.phrase-ed9292237d2a",
+    "aiPosts": 25,
+    "humanPosts": 3,
+    "aiFlaggedPosts": 12,
+    "humanFPPosts": 0,
+    "aiPoints": 21.225,
+    "humanPoints": 2.5469999999999997
+  },
+  {
+    "id": "measured.phrase-59e94ffbafb6",
+    "aiPosts": 173,
+    "humanPosts": 5,
+    "aiFlaggedPosts": 69,
+    "humanFPPosts": 0,
+    "aiPoints": 20.413999999999977,
+    "humanPoints": 0.59
+  },
+  {
+    "id": "measured.phrase-4193b51bbb21",
+    "aiPosts": 35,
+    "humanPosts": 0,
+    "aiFlaggedPosts": 11,
+    "humanFPPosts": 0,
+    "aiPoints": 20.22999999999999,
+    "humanPoints": 0
+  },
+  {
+    "id": "measured.phrase-d6939e3b6775",
+    "aiPosts": 94,
+    "humanPosts": 7,
+    "aiFlaggedPosts": 36,
+    "humanFPPosts": 0,
+    "aiPoints": 18.517999999999958,
+    "humanPoints": 1.3790000000000002
+  },
+  {
+    "id": "measured.phrase-43d3883328a9",
+    "aiPosts": 47,
+    "humanPosts": 3,
+    "aiFlaggedPosts": 26,
+    "humanFPPosts": 0,
+    "aiPoints": 18.37699999999999,
+    "humanPoints": 1.173
+  },
+  {
+    "id": "measured.phrase-665f4491f971",
+    "aiPosts": 56,
+    "humanPosts": 6,
+    "aiFlaggedPosts": 24,
+    "humanFPPosts": 0,
+    "aiPoints": 18.25600000000001,
+    "humanPoints": 1.9560000000000002
+  },
+  {
+    "id": "measured.phrase-a2188c97c8c9",
+    "aiPosts": 61,
+    "humanPosts": 3,
+    "aiFlaggedPosts": 20,
+    "humanFPPosts": 0,
+    "aiPoints": 17.995000000000008,
+    "humanPoints": 0.885
+  },
+  {
+    "id": "measured.phrase-439c358f4857",
+    "aiPosts": 107,
+    "humanPosts": 1,
+    "aiFlaggedPosts": 76,
+    "humanFPPosts": 0,
+    "aiPoints": 17.76200000000003,
+    "humanPoints": 0.166
+  },
+  {
+    "id": "measured.phrase-7ffcfca851d8",
+    "aiPosts": 32,
+    "humanPosts": 0,
+    "aiFlaggedPosts": 11,
+    "humanFPPosts": 0,
+    "aiPoints": 17.50400000000001,
+    "humanPoints": 0
+  },
+  {
+    "id": "measured.phrase-17bce3cc5409",
+    "aiPosts": 23,
+    "humanPosts": 3,
+    "aiFlaggedPosts": 10,
+    "humanFPPosts": 0,
+    "aiPoints": 17.25,
+    "humanPoints": 2.25
+  },
+  {
+    "id": "measured.phrase-29c95fd091ec",
+    "aiPosts": 51,
+    "humanPosts": 5,
+    "aiFlaggedPosts": 25,
+    "humanFPPosts": 0,
+    "aiPoints": 17.03399999999999,
+    "humanPoints": 1.6700000000000002
+  },
+  {
+    "id": "measured.phrase-b008901caa88",
+    "aiPosts": 45,
+    "humanPosts": 5,
+    "aiFlaggedPosts": 21,
+    "humanFPPosts": 0,
+    "aiPoints": 16.965000000000007,
+    "humanPoints": 1.885
+  },
+  {
+    "id": "measured.phrase-b34e2f61ed66",
+    "aiPosts": 37,
+    "humanPosts": 0,
+    "aiFlaggedPosts": 17,
+    "humanFPPosts": 0,
+    "aiPoints": 16.909000000000013,
+    "humanPoints": 0
+  },
+  {
+    "id": "measured.phrase-9c0df25f95df",
+    "aiPosts": 58,
+    "humanPosts": 0,
+    "aiFlaggedPosts": 31,
+    "humanFPPosts": 0,
+    "aiPoints": 16.819999999999975,
+    "humanPoints": 0
+  },
+  {
+    "id": "measured.phrase-262eb52e69bb",
+    "aiPosts": 40,
+    "humanPosts": 3,
+    "aiFlaggedPosts": 29,
+    "humanFPPosts": 0,
+    "aiPoints": 16.43999999999999,
+    "humanPoints": 1.2329999999999999
+  },
+  {
+    "id": "measured.phrase-f7fdb43c6749",
+    "aiPosts": 40,
+    "humanPosts": 1,
+    "aiFlaggedPosts": 26,
+    "humanFPPosts": 0,
+    "aiPoints": 16.16,
+    "humanPoints": 0.404
+  },
+  {
+    "id": "measured.phrase-b45569cd2c41",
+    "aiPosts": 224,
+    "humanPosts": 41,
+    "aiFlaggedPosts": 60,
+    "humanFPPosts": 0,
+    "aiPoints": 16.127999999999915,
+    "humanPoints": 2.9520000000000013
+  },
+  {
+    "id": "measured.phrase-efffbb25d591",
+    "aiPosts": 31,
+    "humanPosts": 3,
+    "aiFlaggedPosts": 15,
+    "humanFPPosts": 0,
+    "aiPoints": 16.026999999999994,
+    "humanPoints": 1.5510000000000002
+  },
+  {
+    "id": "measured.phrase-5252e7b3d375",
+    "aiPosts": 32,
+    "humanPosts": 0,
+    "aiFlaggedPosts": 11,
+    "humanFPPosts": 0,
+    "aiPoints": 15.64800000000001,
+    "humanPoints": 0
+  },
+  {
+    "id": "measured.phrase-2f31dea3d077",
+    "aiPosts": 20,
+    "humanPosts": 2,
+    "aiFlaggedPosts": 12,
+    "humanFPPosts": 0,
+    "aiPoints": 15.440000000000003,
+    "humanPoints": 1.544
+  },
+  {
+    "id": "measured.phrase-fffb30507260",
+    "aiPosts": 25,
+    "humanPosts": 1,
+    "aiFlaggedPosts": 12,
+    "humanFPPosts": 0,
+    "aiPoints": 15.249999999999995,
+    "humanPoints": 0.61
+  },
+  {
+    "id": "measured.phrase-9e63a6523d27",
+    "aiPosts": 86,
+    "humanPosts": 1,
+    "aiFlaggedPosts": 65,
+    "humanFPPosts": 0,
+    "aiPoints": 15.221999999999976,
+    "humanPoints": 0.177
+  },
+  {
+    "id": "measured.phrase-7f5aacadf014",
+    "aiPosts": 35,
+    "humanPosts": 1,
+    "aiFlaggedPosts": 19,
+    "humanFPPosts": 0,
+    "aiPoints": 14.665000000000003,
+    "humanPoints": 0.419
+  },
+  {
+    "id": "measured.phrase-ddb44db3c3d7",
+    "aiPosts": 24,
+    "humanPosts": 0,
+    "aiFlaggedPosts": 16,
+    "humanFPPosts": 0,
+    "aiPoints": 14.495999999999992,
+    "humanPoints": 0
+  },
+  {
+    "id": "measured.phrase-a98e373baad6",
+    "aiPosts": 21,
+    "humanPosts": 0,
+    "aiFlaggedPosts": 7,
+    "humanFPPosts": 0,
+    "aiPoints": 14.363999999999994,
+    "humanPoints": 0
+  },
+  {
+    "id": "measured.phrase-4aa6c9359a7e",
+    "aiPosts": 67,
+    "humanPosts": 0,
+    "aiFlaggedPosts": 48,
+    "humanFPPosts": 0,
+    "aiPoints": 14.270999999999978,
+    "humanPoints": 0
+  },
+  {
+    "id": "chatbot-leak.cutoff",
+    "aiPosts": 1,
+    "humanPosts": 0,
+    "aiFlaggedPosts": 1,
+    "humanFPPosts": 0,
+    "aiPoints": 14,
+    "humanPoints": 0
+  },
+  {
+    "id": "measured.phrase-b9994141b554",
+    "aiPosts": 79,
+    "humanPosts": 7,
+    "aiFlaggedPosts": 35,
+    "humanFPPosts": 0,
+    "aiPoints": 13.98299999999998,
+    "humanPoints": 1.239
+  },
+  {
+    "id": "measured.phrase-96a2fd5058e8",
+    "aiPosts": 29,
+    "humanPosts": 0,
+    "aiFlaggedPosts": 16,
+    "humanFPPosts": 0,
+    "aiPoints": 13.717000000000008,
+    "humanPoints": 0
+  },
+  {
+    "id": "measured.phrase-0dffcb39311a",
+    "aiPosts": 73,
+    "humanPosts": 6,
+    "aiFlaggedPosts": 35,
+    "humanFPPosts": 0,
+    "aiPoints": 13.431999999999983,
+    "humanPoints": 1.1039999999999999
+  },
+  {
+    "id": "measured.phrase-3685f702129d",
+    "aiPosts": 40,
+    "humanPosts": 1,
+    "aiFlaggedPosts": 22,
+    "humanFPPosts": 0,
+    "aiPoints": 13.35999999999999,
+    "humanPoints": 0.334
+  },
+  {
+    "id": "measured.phrase-4082bef1c488",
+    "aiPosts": 79,
+    "humanPosts": 5,
+    "aiFlaggedPosts": 25,
+    "humanFPPosts": 0,
+    "aiPoints": 13.27199999999998,
+    "humanPoints": 0.8400000000000001
+  },
+  {
+    "id": "measured.phrase-fd6594668a90",
+    "aiPosts": 38,
+    "humanPosts": 4,
+    "aiFlaggedPosts": 15,
+    "humanFPPosts": 0,
+    "aiPoints": 12.957999999999993,
+    "humanPoints": 1.364
+  },
+  {
+    "id": "measured.phrase-78f97618b0a6",
+    "aiPosts": 29,
+    "humanPosts": 0,
+    "aiFlaggedPosts": 22,
+    "humanFPPosts": 0,
+    "aiPoints": 12.759999999999998,
+    "humanPoints": 0
+  },
+  {
+    "id": "measured.phrase-d203283200d0",
+    "aiPosts": 209,
+    "humanPosts": 40,
+    "aiFlaggedPosts": 68,
+    "humanFPPosts": 0,
+    "aiPoints": 12.74899999999999,
+    "humanPoints": 2.439999999999998
+  },
+  {
+    "id": "measured.phrase-9958021343c7",
+    "aiPosts": 49,
+    "humanPosts": 0,
+    "aiFlaggedPosts": 35,
+    "humanFPPosts": 0,
+    "aiPoints": 12.495000000000012,
+    "humanPoints": 0
+  },
+  {
+    "id": "measured.phrase-5e6446b69c16",
+    "aiPosts": 32,
+    "humanPosts": 1,
+    "aiFlaggedPosts": 21,
+    "humanFPPosts": 0,
+    "aiPoints": 12.480000000000004,
+    "humanPoints": 0.39
+  },
+  {
+    "id": "template-phrases.boilerplate",
+    "aiPosts": 31,
+    "humanPosts": 2,
+    "aiFlaggedPosts": 18,
+    "humanFPPosts": 0,
+    "aiPoints": 12.36900000000001,
+    "humanPoints": 1.197
+  },
+  {
+    "id": "measured.phrase-86ce364364cd",
+    "aiPosts": 44,
+    "humanPosts": 0,
+    "aiFlaggedPosts": 30,
+    "humanFPPosts": 0,
+    "aiPoints": 12.364000000000006,
+    "humanPoints": 0
+  },
+  {
+    "id": "measured.phrase-3dfeb88c65a9",
+    "aiPosts": 22,
+    "humanPosts": 1,
+    "aiFlaggedPosts": 12,
+    "humanFPPosts": 0,
+    "aiPoints": 12.363999999999999,
+    "humanPoints": 0.562
+  },
+  {
+    "id": "measured.phrase-2758674d4c70",
+    "aiPosts": 25,
+    "humanPosts": 0,
+    "aiFlaggedPosts": 10,
+    "humanFPPosts": 0,
+    "aiPoints": 12.225000000000005,
+    "humanPoints": 0
+  },
+  {
+    "id": "measured.phrase-d2a033324d8f",
+    "aiPosts": 30,
+    "humanPosts": 2,
+    "aiFlaggedPosts": 14,
+    "humanFPPosts": 0,
+    "aiPoints": 12.209999999999999,
+    "humanPoints": 0.814
+  },
+  {
+    "id": "measured.phrase-db09765dd4b5",
+    "aiPosts": 40,
+    "humanPosts": 2,
+    "aiFlaggedPosts": 29,
+    "humanFPPosts": 0,
+    "aiPoints": 12.160000000000005,
+    "humanPoints": 0.608
+  },
+  {
+    "id": "measured.pattern-22dab060de13",
+    "aiPosts": 36,
+    "humanPosts": 0,
+    "aiFlaggedPosts": 27,
+    "humanFPPosts": 0,
+    "aiPoints": 12.131999999999996,
+    "humanPoints": 0
+  },
+  {
+    "id": "measured.phrase-7bd176895139",
+    "aiPosts": 43,
+    "humanPosts": 4,
+    "aiFlaggedPosts": 25,
+    "humanFPPosts": 0,
+    "aiPoints": 11.910999999999992,
+    "humanPoints": 1.108
+  },
+  {
+    "id": "measured.phrase-0b2c26b70476",
+    "aiPosts": 115,
+    "humanPosts": 11,
+    "aiFlaggedPosts": 45,
+    "humanFPPosts": 0,
+    "aiPoints": 11.730000000000022,
+    "humanPoints": 1.122
+  },
+  {
+    "id": "robotic-rhythm.punct-distribution",
+    "aiPosts": 9,
+    "humanPosts": 1,
+    "aiFlaggedPosts": 1,
+    "humanFPPosts": 0,
+    "aiPoints": 11.601,
+    "humanPoints": 0.885
+  },
+  {
+    "id": "measured.phrase-06d1ca4970b7",
+    "aiPosts": 24,
+    "humanPosts": 1,
+    "aiFlaggedPosts": 7,
+    "humanFPPosts": 0,
+    "aiPoints": 11.471999999999996,
+    "humanPoints": 0.478
+  },
+  {
+    "id": "measured.phrase-0a5b14056258",
+    "aiPosts": 36,
+    "humanPosts": 0,
+    "aiFlaggedPosts": 24,
+    "humanFPPosts": 0,
+    "aiPoints": 11.34,
+    "humanPoints": 0
+  },
+  {
+    "id": "measured.phrase-0080334fadf1",
+    "aiPosts": 92,
+    "humanPosts": 3,
+    "aiFlaggedPosts": 50,
+    "humanFPPosts": 0,
+    "aiPoints": 11.223999999999991,
+    "humanPoints": 0.366
+  },
+  {
+    "id": "measured.phrase-1fe0f5c746d3",
+    "aiPosts": 17,
+    "humanPosts": 0,
+    "aiFlaggedPosts": 6,
+    "humanFPPosts": 0,
+    "aiPoints": 11.22,
+    "humanPoints": 0
+  },
+  {
+    "id": "measured.phrase-532cedb398b3",
+    "aiPosts": 33,
+    "humanPosts": 0,
+    "aiFlaggedPosts": 19,
+    "humanFPPosts": 0,
+    "aiPoints": 11.088000000000005,
+    "humanPoints": 0
+  },
+  {
+    "id": "measured.phrase-d17d7e381ccd",
+    "aiPosts": 31,
+    "humanPosts": 4,
+    "aiFlaggedPosts": 10,
+    "humanFPPosts": 0,
+    "aiPoints": 11.035999999999998,
+    "humanPoints": 1.424
+  },
+  {
+    "id": "measured.phrase-887471903db1",
+    "aiPosts": 44,
+    "humanPosts": 1,
+    "aiFlaggedPosts": 24,
+    "humanFPPosts": 0,
+    "aiPoints": 10.867999999999997,
+    "humanPoints": 0.247
+  },
+  {
+    "id": "measured.phrase-3a83edda7efd",
+    "aiPosts": 76,
+    "humanPosts": 6,
+    "aiFlaggedPosts": 40,
+    "humanFPPosts": 0,
+    "aiPoints": 10.791999999999998,
+    "humanPoints": 0.852
+  },
+  {
+    "id": "measured.phrase-7135254a5580",
+    "aiPosts": 40,
+    "humanPosts": 0,
+    "aiFlaggedPosts": 26,
+    "humanFPPosts": 0,
+    "aiPoints": 10.559999999999999,
+    "humanPoints": 0
+  },
+  {
+    "id": "measured.phrase-7e9b570a272b",
+    "aiPosts": 14,
+    "humanPosts": 0,
+    "aiFlaggedPosts": 5,
+    "humanFPPosts": 0,
+    "aiPoints": 10.5,
+    "humanPoints": 0
+  },
+  {
+    "id": "measured.phrase-ed79c5929fda",
+    "aiPosts": 28,
+    "humanPosts": 0,
+    "aiFlaggedPosts": 13,
+    "humanFPPosts": 0,
+    "aiPoints": 10.443999999999999,
+    "humanPoints": 0
+  },
+  {
+    "id": "measured.phrase-2a38bf089f7f",
+    "aiPosts": 48,
+    "humanPosts": 0,
+    "aiFlaggedPosts": 33,
+    "humanFPPosts": 0,
+    "aiPoints": 10.175999999999995,
+    "humanPoints": 0
+  },
+  {
+    "id": "measured.phrase-7db23c090afc",
+    "aiPosts": 97,
+    "humanPosts": 11,
+    "aiFlaggedPosts": 43,
+    "humanFPPosts": 0,
+    "aiPoints": 10.08799999999999,
+    "humanPoints": 1.1440000000000001
+  },
+  {
+    "id": "measured.phrase-7fd3b98c2bbc",
+    "aiPosts": 271,
+    "humanPosts": 15,
+    "aiFlaggedPosts": 151,
+    "humanFPPosts": 0,
+    "aiPoints": 10.02700000000003,
+    "humanPoints": 0.5549999999999999
+  },
+  {
+    "id": "measured.phrase-ef73b3d5e6f2",
+    "aiPosts": 25,
+    "humanPosts": 1,
+    "aiFlaggedPosts": 16,
+    "humanFPPosts": 0,
+    "aiPoints": 10.024999999999997,
+    "humanPoints": 0.401
+  },
+  {
+    "id": "measured.phrase-ffc5a1644a61",
+    "aiPosts": 26,
+    "humanPosts": 0,
+    "aiFlaggedPosts": 19,
+    "humanFPPosts": 0,
+    "aiPoints": 10.009999999999996,
+    "humanPoints": 0
+  },
+  {
+    "id": "measured.phrase-e6e1bb700933",
+    "aiPosts": 31,
+    "humanPosts": 1,
+    "aiFlaggedPosts": 15,
+    "humanFPPosts": 0,
+    "aiPoints": 9.920000000000003,
+    "humanPoints": 0.32
+  },
+  {
+    "id": "measured.phrase-9b3461b374d2",
+    "aiPosts": 27,
+    "humanPosts": 1,
+    "aiFlaggedPosts": 16,
+    "humanFPPosts": 0,
+    "aiPoints": 9.881999999999996,
+    "humanPoints": 0.366
+  },
+  {
+    "id": "measured.phrase-27de839ef39b",
+    "aiPosts": 73,
+    "humanPosts": 13,
+    "aiFlaggedPosts": 34,
+    "humanFPPosts": 0,
+    "aiPoints": 9.854999999999988,
+    "humanPoints": 1.7550000000000001
+  },
+  {
+    "id": "measured.phrase-71ca77eb8555",
+    "aiPosts": 18,
+    "humanPosts": 0,
+    "aiFlaggedPosts": 12,
+    "humanFPPosts": 0,
+    "aiPoints": 9.719999999999999,
+    "humanPoints": 0
+  },
+  {
+    "id": "measured.phrase-bb1f8ec2ed49",
+    "aiPosts": 13,
+    "humanPosts": 0,
+    "aiFlaggedPosts": 7,
+    "humanFPPosts": 0,
+    "aiPoints": 9.659000000000002,
+    "humanPoints": 0
+  },
+  {
+    "id": "measured.phrase-e9479646d101",
+    "aiPosts": 42,
+    "humanPosts": 2,
+    "aiFlaggedPosts": 13,
+    "humanFPPosts": 0,
+    "aiPoints": 9.408000000000007,
+    "humanPoints": 0.448
+  },
+  {
+    "id": "measured.phrase-163e9659ad07",
+    "aiPosts": 20,
+    "humanPosts": 0,
+    "aiFlaggedPosts": 10,
+    "humanFPPosts": 0,
+    "aiPoints": 9.399999999999999,
+    "humanPoints": 0
+  },
+  {
+    "id": "measured.phrase-fd3f9d7a0b9a",
+    "aiPosts": 19,
+    "humanPosts": 0,
+    "aiFlaggedPosts": 6,
+    "humanFPPosts": 0,
+    "aiPoints": 9.215,
+    "humanPoints": 0
+  },
+  {
+    "id": "measured.phrase-2f0e3662fabc",
+    "aiPosts": 40,
+    "humanPosts": 1,
+    "aiFlaggedPosts": 24,
+    "humanFPPosts": 0,
+    "aiPoints": 9.159999999999998,
+    "humanPoints": 0.229
+  },
+  {
+    "id": "measured.pattern-b1703c00e67a",
+    "aiPosts": 35,
+    "humanPosts": 0,
+    "aiFlaggedPosts": 21,
+    "humanFPPosts": 0,
+    "aiPoints": 9.099999999999994,
+    "humanPoints": 0
+  },
+  {
+    "id": "measured.phrase-ffaf59957566",
+    "aiPosts": 20,
+    "humanPosts": 1,
+    "aiFlaggedPosts": 10,
+    "humanFPPosts": 0,
+    "aiPoints": 9.06,
+    "humanPoints": 0.453
+  },
+  {
+    "id": "inflation.significance",
+    "aiPosts": 33,
+    "humanPosts": 0,
+    "aiFlaggedPosts": 18,
+    "humanFPPosts": 0,
+    "aiPoints": 8.909999999999993,
+    "humanPoints": 0
+  },
+  {
+    "id": "measured.phrase-73794356faf6",
+    "aiPosts": 28,
+    "humanPosts": 2,
+    "aiFlaggedPosts": 13,
+    "humanFPPosts": 0,
+    "aiPoints": 8.876000000000003,
+    "humanPoints": 0.634
+  },
+  {
+    "id": "measured.phrase-1909989c600d",
+    "aiPosts": 57,
+    "humanPosts": 12,
+    "aiFlaggedPosts": 15,
+    "humanFPPosts": 0,
+    "aiPoints": 8.777999999999997,
+    "humanPoints": 1.8479999999999996
+  },
+  {
+    "id": "measured.phrase-2b2f870d3977",
+    "aiPosts": 12,
+    "humanPosts": 1,
+    "aiFlaggedPosts": 3,
+    "humanFPPosts": 0,
+    "aiPoints": 8.760000000000002,
+    "humanPoints": 0.73
+  },
+  {
+    "id": "measured.phrase-8e491def6de5",
+    "aiPosts": 20,
+    "humanPosts": 1,
+    "aiFlaggedPosts": 10,
+    "humanFPPosts": 0,
+    "aiPoints": 8.72,
+    "humanPoints": 0.436
+  },
+  {
+    "id": "measured.phrase-d6362420366b",
+    "aiPosts": 30,
+    "humanPosts": 0,
+    "aiFlaggedPosts": 9,
+    "humanFPPosts": 0,
+    "aiPoints": 8.699999999999998,
+    "humanPoints": 0
+  },
+  {
+    "id": "measured.phrase-43d6648cb75a",
+    "aiPosts": 41,
+    "humanPosts": 2,
+    "aiFlaggedPosts": 19,
+    "humanFPPosts": 0,
+    "aiPoints": 8.691999999999997,
+    "humanPoints": 0.424
+  },
+  {
+    "id": "measured.phrase-be08d947e5a0",
+    "aiPosts": 12,
+    "humanPosts": 1,
+    "aiFlaggedPosts": 6,
+    "humanFPPosts": 0,
+    "aiPoints": 8.58,
+    "humanPoints": 0.715
+  },
+  {
+    "id": "measured.phrase-0642b968a6c4",
+    "aiPosts": 178,
+    "humanPosts": 13,
+    "aiFlaggedPosts": 93,
+    "humanFPPosts": 0,
+    "aiPoints": 8.365999999999985,
+    "humanPoints": 0.611
+  },
+  {
+    "id": "measured.phrase-8222f1861f3b",
+    "aiPosts": 84,
+    "humanPosts": 0,
+    "aiFlaggedPosts": 46,
+    "humanFPPosts": 0,
+    "aiPoints": 8.148000000000016,
+    "humanPoints": 0
+  },
+  {
+    "id": "measured.phrase-14f1992ddd22",
+    "aiPosts": 30,
+    "humanPosts": 0,
+    "aiFlaggedPosts": 25,
+    "humanFPPosts": 0,
+    "aiPoints": 8.129999999999999,
+    "humanPoints": 0
+  },
+  {
+    "id": "measured.phrase-2520b5b95540",
+    "aiPosts": 44,
+    "humanPosts": 1,
+    "aiFlaggedPosts": 24,
+    "humanFPPosts": 0,
+    "aiPoints": 8.008000000000008,
+    "humanPoints": 0.182
+  },
+  {
+    "id": "measured.phrase-3facdeb3fd2e",
+    "aiPosts": 21,
+    "humanPosts": 0,
+    "aiFlaggedPosts": 4,
+    "humanFPPosts": 0,
+    "aiPoints": 7.979999999999999,
+    "humanPoints": 0
+  },
+  {
+    "id": "measured.pattern-1899e226c4f9",
+    "aiPosts": 14,
+    "humanPosts": 3,
+    "aiFlaggedPosts": 2,
+    "humanFPPosts": 0,
+    "aiPoints": 7.9380000000000015,
+    "humanPoints": 1.7009999999999998
+  },
+  {
+    "id": "measured.phrase-7d67840b8cc0",
+    "aiPosts": 23,
+    "humanPosts": 0,
+    "aiFlaggedPosts": 11,
+    "humanFPPosts": 0,
+    "aiPoints": 7.889,
+    "humanPoints": 0
+  },
+  {
+    "id": "measured.phrase-30b3be859c5e",
+    "aiPosts": 10,
+    "humanPosts": 0,
+    "aiFlaggedPosts": 2,
+    "humanFPPosts": 0,
+    "aiPoints": 7.859999999999999,
+    "humanPoints": 0
+  },
+  {
+    "id": "measured.pattern-0f0ded98f71f",
+    "aiPosts": 11,
+    "humanPosts": 0,
+    "aiFlaggedPosts": 4,
+    "humanFPPosts": 0,
+    "aiPoints": 7.788000000000001,
+    "humanPoints": 0
+  },
+  {
+    "id": "measured.phrase-f42b67b7825f",
+    "aiPosts": 15,
+    "humanPosts": 0,
+    "aiFlaggedPosts": 6,
+    "humanFPPosts": 0,
+    "aiPoints": 7.769999999999998,
+    "humanPoints": 0
+  },
+  {
+    "id": "measured.phrase-124820d10c89",
+    "aiPosts": 20,
+    "humanPosts": 2,
+    "aiFlaggedPosts": 6,
+    "humanFPPosts": 0,
+    "aiPoints": 7.6999999999999975,
+    "humanPoints": 0.77
+  },
+  {
+    "id": "measured.phrase-d8ccb999e2be",
+    "aiPosts": 26,
+    "humanPosts": 1,
+    "aiFlaggedPosts": 10,
+    "humanFPPosts": 0,
+    "aiPoints": 7.618000000000002,
+    "humanPoints": 0.293
+  },
+  {
+    "id": "measured.phrase-8c916fe66ac7",
+    "aiPosts": 95,
+    "humanPosts": 4,
+    "aiFlaggedPosts": 45,
+    "humanFPPosts": 0,
+    "aiPoints": 7.600000000000005,
+    "humanPoints": 0.32
+  },
+  {
+    "id": "measured.phrase-43ab58f667e2",
+    "aiPosts": 7,
+    "humanPosts": 1,
+    "aiFlaggedPosts": 1,
+    "humanFPPosts": 0,
+    "aiPoints": 7.490000000000001,
+    "humanPoints": 1.07
+  },
+  {
+    "id": "measured.phrase-4ece31cc1bc0",
+    "aiPosts": 33,
+    "humanPosts": 2,
+    "aiFlaggedPosts": 15,
+    "humanFPPosts": 0,
+    "aiPoints": 7.326000000000006,
+    "humanPoints": 0.444
+  },
+  {
+    "id": "measured.phrase-f4011a13be92",
+    "aiPosts": 24,
+    "humanPosts": 0,
+    "aiFlaggedPosts": 6,
+    "humanFPPosts": 0,
+    "aiPoints": 7.296000000000002,
+    "humanPoints": 0
+  },
+  {
+    "id": "measured.phrase-6ba14139714a",
+    "aiPosts": 52,
+    "humanPosts": 2,
+    "aiFlaggedPosts": 29,
+    "humanFPPosts": 0,
+    "aiPoints": 7.279999999999995,
+    "humanPoints": 0.28
+  },
+  {
+    "id": "measured.phrase-ee752d0c1173",
+    "aiPosts": 139,
+    "humanPosts": 2,
+    "aiFlaggedPosts": 81,
+    "humanFPPosts": 0,
+    "aiPoints": 7.227999999999978,
+    "humanPoints": 0.104
+  },
+  {
+    "id": "measured.phrase-aca42abe3155",
+    "aiPosts": 23,
+    "humanPosts": 0,
+    "aiFlaggedPosts": 12,
+    "humanFPPosts": 0,
+    "aiPoints": 7.083999999999998,
+    "humanPoints": 0
+  },
+  {
+    "id": "measured.phrase-7e10d2220573",
+    "aiPosts": 17,
+    "humanPosts": 1,
+    "aiFlaggedPosts": 9,
+    "humanFPPosts": 0,
+    "aiPoints": 6.8169999999999975,
+    "humanPoints": 0.401
+  },
+  {
+    "id": "measured.phrase-a94ea31bee64",
+    "aiPosts": 64,
+    "humanPosts": 5,
+    "aiFlaggedPosts": 30,
+    "humanFPPosts": 0,
+    "aiPoints": 6.4639999999999995,
+    "humanPoints": 0.505
+  },
+  {
+    "id": "measured.phrase-2248ed061727",
+    "aiPosts": 43,
+    "humanPosts": 2,
+    "aiFlaggedPosts": 27,
+    "humanFPPosts": 0,
+    "aiPoints": 6.450000000000005,
+    "humanPoints": 0.3
+  },
+  {
+    "id": "measured.phrase-afbcb536360c",
+    "aiPosts": 10,
+    "humanPosts": 1,
+    "aiFlaggedPosts": 1,
+    "humanFPPosts": 0,
+    "aiPoints": 6.449999999999999,
+    "humanPoints": 0.645
+  },
+  {
+    "id": "measured.phrase-5545c65811d2",
+    "aiPosts": 47,
+    "humanPosts": 0,
+    "aiFlaggedPosts": 24,
+    "humanFPPosts": 0,
+    "aiPoints": 6.392000000000005,
+    "humanPoints": 0
+  },
+  {
+    "id": "measured.phrase-aacd06ffa05a",
+    "aiPosts": 18,
+    "humanPosts": 1,
+    "aiFlaggedPosts": 9,
+    "humanFPPosts": 0,
+    "aiPoints": 6.390000000000002,
+    "humanPoints": 0.355
+  },
+  {
+    "id": "measured.phrase-152f0caaab83",
+    "aiPosts": 20,
+    "humanPosts": 0,
+    "aiFlaggedPosts": 9,
+    "humanFPPosts": 0,
+    "aiPoints": 6.259999999999999,
+    "humanPoints": 0
+  },
+  {
+    "id": "measured.phrase-699fd47f8640",
+    "aiPosts": 34,
+    "humanPosts": 1,
+    "aiFlaggedPosts": 26,
+    "humanFPPosts": 0,
+    "aiPoints": 6.256000000000003,
+    "humanPoints": 0.184
+  },
+  {
+    "id": "measured.phrase-b3c4932ceccd",
+    "aiPosts": 13,
+    "humanPosts": 0,
+    "aiFlaggedPosts": 4,
+    "humanFPPosts": 0,
+    "aiPoints": 6.162000000000002,
+    "humanPoints": 0
+  },
+  {
+    "id": "measured.phrase-3af0236d42f9",
+    "aiPosts": 143,
+    "humanPosts": 13,
+    "aiFlaggedPosts": 40,
+    "humanFPPosts": 0,
+    "aiPoints": 6.1490000000000125,
+    "humanPoints": 0.5589999999999999
+  },
+  {
+    "id": "measured.phrase-552a6cb914e8",
+    "aiPosts": 41,
+    "humanPosts": 2,
+    "aiFlaggedPosts": 18,
+    "humanFPPosts": 0,
+    "aiPoints": 6.109,
+    "humanPoints": 0.298
+  },
+  {
+    "id": "measured.phrase-21794cd5db60",
+    "aiPosts": 116,
+    "humanPosts": 9,
+    "aiFlaggedPosts": 53,
+    "humanFPPosts": 0,
+    "aiPoints": 5.916000000000011,
+    "humanPoints": 0.45899999999999996
+  },
+  {
+    "id": "measured.phrase-443f2fc8c9f9",
+    "aiPosts": 35,
+    "humanPosts": 6,
+    "aiFlaggedPosts": 11,
+    "humanFPPosts": 0,
+    "aiPoints": 5.914999999999996,
+    "humanPoints": 1.014
+  },
+  {
+    "id": "measured.phrase-c9f27977e094",
+    "aiPosts": 8,
+    "humanPosts": 0,
+    "aiFlaggedPosts": 0,
+    "humanFPPosts": 0,
+    "aiPoints": 5.863999999999999,
+    "humanPoints": 0
+  },
+  {
+    "id": "chatbot-leak.placeholder",
+    "aiPosts": 10,
+    "humanPosts": 0,
+    "aiFlaggedPosts": 3,
+    "humanFPPosts": 0,
+    "aiPoints": 5.809999999999997,
+    "humanPoints": 0
+  },
+  {
+    "id": "measured.phrase-558b2887b0cb",
+    "aiPosts": 50,
+    "humanPosts": 13,
+    "aiFlaggedPosts": 17,
+    "humanFPPosts": 0,
+    "aiPoints": 5.799999999999997,
+    "humanPoints": 1.5080000000000005
+  },
+  {
+    "id": "measured.phrase-dc1db519758d",
+    "aiPosts": 21,
+    "humanPosts": 0,
+    "aiFlaggedPosts": 18,
+    "humanFPPosts": 0,
+    "aiPoints": 5.586,
+    "humanPoints": 0
+  },
+  {
+    "id": "measured.phrase-115d1de3c608",
+    "aiPosts": 45,
+    "humanPosts": 0,
+    "aiFlaggedPosts": 33,
+    "humanFPPosts": 0,
+    "aiPoints": 5.579999999999998,
+    "humanPoints": 0
+  },
+  {
+    "id": "measured.phrase-6645ff8f2b77",
+    "aiPosts": 39,
+    "humanPosts": 1,
+    "aiFlaggedPosts": 20,
+    "humanFPPosts": 0,
+    "aiPoints": 5.576999999999995,
+    "humanPoints": 0.143
+  },
+  {
+    "id": "measured.phrase-6f22ef241fb6",
+    "aiPosts": 23,
+    "humanPosts": 0,
+    "aiFlaggedPosts": 15,
+    "humanFPPosts": 0,
+    "aiPoints": 5.405,
+    "humanPoints": 0
+  },
+  {
+    "id": "measured.phrase-bb614c8e0b1a",
+    "aiPosts": 30,
+    "humanPosts": 0,
+    "aiFlaggedPosts": 19,
+    "humanFPPosts": 0,
+    "aiPoints": 5.37,
+    "humanPoints": 0
+  },
+  {
+    "id": "measured.phrase-1af49df75524",
+    "aiPosts": 16,
+    "humanPosts": 1,
+    "aiFlaggedPosts": 7,
+    "humanFPPosts": 0,
+    "aiPoints": 5.183999999999999,
+    "humanPoints": 0.324
+  },
+  {
+    "id": "ai-vocabulary.collocations",
+    "aiPosts": 14,
+    "humanPosts": 0,
+    "aiFlaggedPosts": 10,
+    "humanFPPosts": 0,
+    "aiPoints": 5.180000000000001,
+    "humanPoints": 0
+  },
+  {
+    "id": "measured.phrase-cad62bcf170b",
+    "aiPosts": 15,
+    "humanPosts": 0,
+    "aiFlaggedPosts": 11,
+    "humanFPPosts": 0,
+    "aiPoints": 5.174999999999998,
+    "humanPoints": 0
+  },
+  {
+    "id": "measured.phrase-810b84d3c325",
+    "aiPosts": 20,
+    "humanPosts": 2,
+    "aiFlaggedPosts": 12,
+    "humanFPPosts": 0,
+    "aiPoints": 5.14,
+    "humanPoints": 0.514
+  },
+  {
+    "id": "measured.phrase-21e75451e899",
+    "aiPosts": 20,
+    "humanPosts": 1,
+    "aiFlaggedPosts": 9,
+    "humanFPPosts": 0,
+    "aiPoints": 5.060000000000001,
+    "humanPoints": 0.253
+  },
+  {
+    "id": "measured.phrase-1e815a3b20bd",
+    "aiPosts": 27,
+    "humanPosts": 0,
+    "aiFlaggedPosts": 26,
+    "humanFPPosts": 0,
+    "aiPoints": 5.021999999999999,
+    "humanPoints": 0
+  },
+  {
+    "id": "measured.phrase-22e80a638cc9",
+    "aiPosts": 16,
+    "humanPosts": 0,
+    "aiFlaggedPosts": 7,
+    "humanFPPosts": 0,
+    "aiPoints": 4.848,
+    "humanPoints": 0
+  },
+  {
+    "id": "measured.pattern-2ba2a7d899cf",
+    "aiPosts": 8,
+    "humanPosts": 1,
+    "aiFlaggedPosts": 2,
+    "humanFPPosts": 0,
+    "aiPoints": 4.832,
+    "humanPoints": 0.604
+  },
+  {
+    "id": "measured.phrase-bb9888fb3893",
+    "aiPosts": 38,
+    "humanPosts": 0,
+    "aiFlaggedPosts": 23,
+    "humanFPPosts": 0,
+    "aiPoints": 4.75,
+    "humanPoints": 0
+  },
+  {
+    "id": "measured.phrase-7d70a4560e7b",
+    "aiPosts": 28,
+    "humanPosts": 0,
+    "aiFlaggedPosts": 23,
+    "humanFPPosts": 0,
+    "aiPoints": 4.5920000000000005,
+    "humanPoints": 0
+  },
+  {
+    "id": "measured.phrase-ed60371e467e",
+    "aiPosts": 34,
+    "humanPosts": 1,
+    "aiFlaggedPosts": 24,
+    "humanFPPosts": 0,
+    "aiPoints": 4.589999999999996,
+    "humanPoints": 0.135
+  },
+  {
+    "id": "measured.phrase-0dcd7aca9274",
+    "aiPosts": 21,
+    "humanPosts": 0,
+    "aiFlaggedPosts": 9,
+    "humanFPPosts": 0,
+    "aiPoints": 4.557,
+    "humanPoints": 0
+  },
+  {
+    "id": "measured.phrase-a0ba7bbeb195",
+    "aiPosts": 13,
+    "humanPosts": 0,
+    "aiFlaggedPosts": 6,
+    "humanFPPosts": 0,
+    "aiPoints": 4.4849999999999985,
+    "humanPoints": 0
+  },
+  {
+    "id": "measured.phrase-20d26cb464b6",
+    "aiPosts": 9,
+    "humanPosts": 0,
+    "aiFlaggedPosts": 4,
+    "humanFPPosts": 0,
+    "aiPoints": 4.445999999999999,
+    "humanPoints": 0
+  },
+  {
+    "id": "measured.phrase-67143d429028",
+    "aiPosts": 19,
+    "humanPosts": 0,
+    "aiFlaggedPosts": 9,
+    "humanFPPosts": 0,
+    "aiPoints": 4.370000000000001,
+    "humanPoints": 0
+  },
+  {
+    "id": "measured.phrase-63c75de926c9",
+    "aiPosts": 23,
+    "humanPosts": 2,
+    "aiFlaggedPosts": 15,
+    "humanFPPosts": 0,
+    "aiPoints": 4.347,
+    "humanPoints": 0.378
+  },
+  {
+    "id": "measured.phrase-8df587f334fe",
+    "aiPosts": 20,
+    "humanPosts": 1,
+    "aiFlaggedPosts": 8,
+    "humanFPPosts": 0,
+    "aiPoints": 4.320000000000002,
+    "humanPoints": 0.216
+  },
+  {
+    "id": "measured.phrase-447ede7de536",
+    "aiPosts": 16,
+    "humanPosts": 0,
+    "aiFlaggedPosts": 6,
+    "humanFPPosts": 0,
+    "aiPoints": 4.32,
+    "humanPoints": 0
+  },
+  {
+    "id": "measured.phrase-be93f66463e5",
+    "aiPosts": 15,
+    "humanPosts": 0,
+    "aiFlaggedPosts": 7,
+    "humanFPPosts": 0,
+    "aiPoints": 4.275,
+    "humanPoints": 0
+  },
+  {
+    "id": "measured.phrase-a26b983cad53",
+    "aiPosts": 9,
+    "humanPosts": 0,
+    "aiFlaggedPosts": 2,
+    "humanFPPosts": 0,
+    "aiPoints": 4.220999999999999,
+    "humanPoints": 0
+  },
+  {
+    "id": "measured.phrase-bb925c5462b2",
+    "aiPosts": 22,
+    "humanPosts": 1,
+    "aiFlaggedPosts": 9,
+    "humanFPPosts": 0,
+    "aiPoints": 4.201999999999999,
+    "humanPoints": 0.191
+  },
+  {
+    "id": "measured.phrase-5a41241212a8",
+    "aiPosts": 26,
+    "humanPosts": 0,
+    "aiFlaggedPosts": 10,
+    "humanFPPosts": 0,
+    "aiPoints": 4.056000000000001,
+    "humanPoints": 0
+  },
+  {
+    "id": "measured.phrase-8ecd9508c377",
+    "aiPosts": 16,
+    "humanPosts": 1,
+    "aiFlaggedPosts": 12,
+    "humanFPPosts": 0,
+    "aiPoints": 4.031999999999998,
+    "humanPoints": 0.252
+  },
+  {
+    "id": "measured.phrase-56d6375bc62c",
+    "aiPosts": 20,
+    "humanPosts": 1,
+    "aiFlaggedPosts": 11,
+    "humanFPPosts": 0,
+    "aiPoints": 3.979999999999999,
+    "humanPoints": 0.199
+  },
+  {
+    "id": "measured.phrase-27733105ab9c",
+    "aiPosts": 40,
+    "humanPosts": 5,
+    "aiFlaggedPosts": 12,
+    "humanFPPosts": 0,
+    "aiPoints": 3.919999999999998,
+    "humanPoints": 0.49
+  },
+  {
+    "id": "measured.phrase-4b8ca8607f00",
+    "aiPosts": 15,
+    "humanPosts": 0,
+    "aiFlaggedPosts": 5,
+    "humanFPPosts": 0,
+    "aiPoints": 3.884999999999999,
+    "humanPoints": 0
+  },
+  {
+    "id": "measured.phrase-ce181a00daf1",
+    "aiPosts": 51,
+    "humanPosts": 3,
+    "aiFlaggedPosts": 22,
+    "humanFPPosts": 0,
+    "aiPoints": 3.876000000000002,
+    "humanPoints": 0.22799999999999998
+  },
+  {
+    "id": "measured.phrase-fefd7104f80b",
+    "aiPosts": 32,
+    "humanPosts": 0,
+    "aiFlaggedPosts": 22,
+    "humanFPPosts": 0,
+    "aiPoints": 3.8400000000000025,
+    "humanPoints": 0
+  },
+  {
+    "id": "measured.phrase-c090f4a1f01e",
+    "aiPosts": 9,
+    "humanPosts": 0,
+    "aiFlaggedPosts": 6,
+    "humanFPPosts": 0,
+    "aiPoints": 3.7439999999999998,
+    "humanPoints": 0
+  },
+  {
+    "id": "measured.phrase-0310cdf0982e",
+    "aiPosts": 17,
+    "humanPosts": 0,
+    "aiFlaggedPosts": 14,
+    "humanFPPosts": 0,
+    "aiPoints": 3.7229999999999994,
+    "humanPoints": 0
+  },
+  {
+    "id": "measured.phrase-0ce6c0a8bc47",
+    "aiPosts": 14,
+    "humanPosts": 1,
+    "aiFlaggedPosts": 10,
+    "humanFPPosts": 0,
+    "aiPoints": 3.639999999999999,
+    "humanPoints": 0.26
+  },
+  {
+    "id": "measured.phrase-b5b89b86dce3",
+    "aiPosts": 10,
+    "humanPosts": 1,
+    "aiFlaggedPosts": 3,
+    "humanFPPosts": 0,
+    "aiPoints": 3.5400000000000005,
+    "humanPoints": 0.354
+  },
+  {
+    "id": "measured.phrase-850772c13ef1",
+    "aiPosts": 9,
+    "humanPosts": 0,
+    "aiFlaggedPosts": 5,
+    "humanFPPosts": 0,
+    "aiPoints": 3.519,
+    "humanPoints": 0
+  },
+  {
+    "id": "measured.phrase-145c35daf520",
+    "aiPosts": 269,
+    "humanPosts": 12,
+    "aiFlaggedPosts": 141,
+    "humanFPPosts": 0,
+    "aiPoints": 3.4969999999999817,
+    "humanPoints": 0.15600000000000003
+  },
+  {
+    "id": "measured.phrase-d114faf1be44",
+    "aiPosts": 14,
+    "humanPosts": 1,
+    "aiFlaggedPosts": 9,
+    "humanFPPosts": 0,
+    "aiPoints": 3.457999999999999,
+    "humanPoints": 0.247
+  },
+  {
+    "id": "measured.phrase-f5e29727a936",
+    "aiPosts": 12,
+    "humanPosts": 1,
+    "aiFlaggedPosts": 8,
+    "humanFPPosts": 0,
+    "aiPoints": 3.372000000000001,
+    "humanPoints": 0.281
+  },
+  {
+    "id": "measured.phrase-6bd95ef4f9ef",
+    "aiPosts": 8,
+    "humanPosts": 0,
+    "aiFlaggedPosts": 4,
+    "humanFPPosts": 0,
+    "aiPoints": 3.2800000000000002,
+    "humanPoints": 0
+  },
+  {
+    "id": "measured.phrase-e161646134d7",
+    "aiPosts": 11,
+    "humanPosts": 0,
+    "aiFlaggedPosts": 7,
+    "humanFPPosts": 0,
+    "aiPoints": 3.278,
+    "humanPoints": 0
+  },
+  {
+    "id": "measured.phrase-dc6ac82701dd",
+    "aiPosts": 6,
+    "humanPosts": 0,
+    "aiFlaggedPosts": 0,
+    "humanFPPosts": 0,
+    "aiPoints": 3.2640000000000002,
+    "humanPoints": 0
+  },
+  {
+    "id": "measured.phrase-8dcf849984e4",
+    "aiPosts": 14,
+    "humanPosts": 1,
+    "aiFlaggedPosts": 10,
+    "humanFPPosts": 0,
+    "aiPoints": 3.262000000000001,
+    "humanPoints": 0.233
+  },
+  {
+    "id": "measured.phrase-8e8a94eb17df",
+    "aiPosts": 11,
+    "humanPosts": 0,
+    "aiFlaggedPosts": 7,
+    "humanFPPosts": 0,
+    "aiPoints": 3.2449999999999997,
+    "humanPoints": 0
+  },
+  {
+    "id": "measured.pattern-06f7fe5c4f6a",
+    "aiPosts": 9,
+    "humanPosts": 0,
+    "aiFlaggedPosts": 3,
+    "humanFPPosts": 0,
+    "aiPoints": 3.231,
+    "humanPoints": 0
+  },
+  {
+    "id": "measured.phrase-a7d7d89d2158",
+    "aiPosts": 12,
+    "humanPosts": 2,
+    "aiFlaggedPosts": 4,
+    "humanFPPosts": 0,
+    "aiPoints": 3.228000000000001,
+    "humanPoints": 0.538
+  },
+  {
+    "id": "measured.phrase-253ff7b1a1db",
+    "aiPosts": 18,
+    "humanPosts": 1,
+    "aiFlaggedPosts": 12,
+    "humanFPPosts": 0,
+    "aiPoints": 3.2039999999999993,
+    "humanPoints": 0.178
+  },
+  {
+    "id": "measured.phrase-f807f9248da8",
+    "aiPosts": 49,
+    "humanPosts": 7,
+    "aiFlaggedPosts": 25,
+    "humanFPPosts": 0,
+    "aiPoints": 3.184999999999998,
+    "humanPoints": 0.455
+  },
+  {
+    "id": "measured.phrase-3f75b91f2b23",
+    "aiPosts": 19,
+    "humanPosts": 0,
+    "aiFlaggedPosts": 8,
+    "humanFPPosts": 0,
+    "aiPoints": 3.1160000000000005,
+    "humanPoints": 0
+  },
+  {
+    "id": "measured.phrase-539ef1150a61",
+    "aiPosts": 27,
+    "humanPosts": 0,
+    "aiFlaggedPosts": 14,
+    "humanFPPosts": 0,
+    "aiPoints": 3.105000000000002,
+    "humanPoints": 0
+  },
+  {
+    "id": "measured.phrase-b084e770d31e",
+    "aiPosts": 18,
+    "humanPosts": 1,
+    "aiFlaggedPosts": 9,
+    "humanFPPosts": 0,
+    "aiPoints": 3.0960000000000005,
+    "humanPoints": 0.172
+  },
+  {
+    "id": "measured.phrase-d7b22ae3adeb",
+    "aiPosts": 12,
+    "humanPosts": 2,
+    "aiFlaggedPosts": 6,
+    "humanFPPosts": 0,
+    "aiPoints": 3.036000000000001,
+    "humanPoints": 0.506
+  },
+  {
+    "id": "measured.phrase-d9d0d922a2c4",
+    "aiPosts": 17,
+    "humanPosts": 0,
+    "aiFlaggedPosts": 7,
+    "humanFPPosts": 0,
+    "aiPoints": 2.8560000000000003,
+    "humanPoints": 0
+  },
+  {
+    "id": "measured.phrase-8e8bfe72f555",
+    "aiPosts": 7,
+    "humanPosts": 1,
+    "aiFlaggedPosts": 1,
+    "humanFPPosts": 0,
+    "aiPoints": 2.8489999999999998,
+    "humanPoints": 0.407
+  },
+  {
+    "id": "measured.phrase-c8e40807ccc4",
+    "aiPosts": 11,
+    "humanPosts": 1,
+    "aiFlaggedPosts": 7,
+    "humanFPPosts": 0,
+    "aiPoints": 2.827000000000001,
+    "humanPoints": 0.257
+  },
+  {
+    "id": "measured.phrase-f3ba0fddcd39",
+    "aiPosts": 9,
+    "humanPosts": 0,
+    "aiFlaggedPosts": 4,
+    "humanFPPosts": 0,
+    "aiPoints": 2.826,
+    "humanPoints": 0
+  },
+  {
+    "id": "measured.phrase-856ce3247def",
+    "aiPosts": 35,
+    "humanPosts": 3,
+    "aiFlaggedPosts": 15,
+    "humanFPPosts": 0,
+    "aiPoints": 2.694999999999999,
+    "humanPoints": 0.23099999999999998
+  },
+  {
+    "id": "measured.phrase-1c6ecb1d7c19",
+    "aiPosts": 7,
+    "humanPosts": 0,
+    "aiFlaggedPosts": 1,
+    "humanFPPosts": 0,
+    "aiPoints": 2.6599999999999997,
+    "humanPoints": 0
+  },
+  {
+    "id": "measured.phrase-aa9fbb882219",
+    "aiPosts": 20,
+    "humanPosts": 0,
+    "aiFlaggedPosts": 15,
+    "humanFPPosts": 0,
+    "aiPoints": 2.6400000000000015,
+    "humanPoints": 0
+  },
+  {
+    "id": "measured.phrase-7c6646faf074",
+    "aiPosts": 17,
+    "humanPosts": 1,
+    "aiFlaggedPosts": 13,
+    "humanFPPosts": 0,
+    "aiPoints": 2.6179999999999994,
+    "humanPoints": 0.154
+  },
+  {
+    "id": "measured.phrase-36712918c0d8",
+    "aiPosts": 22,
+    "humanPosts": 0,
+    "aiFlaggedPosts": 17,
+    "humanFPPosts": 0,
+    "aiPoints": 2.6179999999999986,
+    "humanPoints": 0
+  },
+  {
+    "id": "measured.phrase-f8f407337c8e",
+    "aiPosts": 15,
+    "humanPosts": 2,
+    "aiFlaggedPosts": 5,
+    "humanFPPosts": 0,
+    "aiPoints": 2.6099999999999994,
+    "humanPoints": 0.348
+  },
+  {
+    "id": "measured.phrase-d6d21bb20838",
+    "aiPosts": 26,
+    "humanPosts": 2,
+    "aiFlaggedPosts": 14,
+    "humanFPPosts": 0,
+    "aiPoints": 2.5740000000000007,
+    "humanPoints": 0.198
+  },
+  {
+    "id": "measured.phrase-b46330a8fba0",
+    "aiPosts": 13,
+    "humanPosts": 1,
+    "aiFlaggedPosts": 2,
+    "humanFPPosts": 0,
+    "aiPoints": 2.444,
+    "humanPoints": 0.188
+  },
+  {
+    "id": "measured.phrase-70ff8cc00e8c",
+    "aiPosts": 13,
+    "humanPosts": 2,
+    "aiFlaggedPosts": 8,
+    "humanFPPosts": 0,
+    "aiPoints": 2.444,
+    "humanPoints": 0.376
+  },
+  {
+    "id": "measured.phrase-f4bb5255061c",
+    "aiPosts": 55,
+    "humanPosts": 12,
+    "aiFlaggedPosts": 18,
+    "humanFPPosts": 0,
+    "aiPoints": 2.4200000000000013,
+    "humanPoints": 0.5279999999999999
+  },
+  {
+    "id": "measured.phrase-ff21f9705e84",
+    "aiPosts": 27,
+    "humanPosts": 3,
+    "aiFlaggedPosts": 13,
+    "humanFPPosts": 0,
+    "aiPoints": 2.4029999999999996,
+    "humanPoints": 0.267
+  },
+  {
+    "id": "measured.phrase-2a6938c0109c",
+    "aiPosts": 10,
+    "humanPosts": 0,
+    "aiFlaggedPosts": 3,
+    "humanFPPosts": 0,
+    "aiPoints": 2.4000000000000004,
+    "humanPoints": 0
+  },
+  {
+    "id": "measured.phrase-c92c76aecae3",
+    "aiPosts": 12,
+    "humanPosts": 0,
+    "aiFlaggedPosts": 8,
+    "humanFPPosts": 0,
+    "aiPoints": 2.4,
+    "humanPoints": 0
+  },
+  {
+    "id": "measured.phrase-5a1a17d6c3ca",
+    "aiPosts": 6,
+    "humanPosts": 0,
+    "aiFlaggedPosts": 2,
+    "humanFPPosts": 0,
+    "aiPoints": 2.3880000000000003,
+    "humanPoints": 0
+  },
+  {
+    "id": "measured.phrase-5a6ca7f9c687",
+    "aiPosts": 70,
+    "humanPosts": 10,
+    "aiFlaggedPosts": 27,
+    "humanFPPosts": 0,
+    "aiPoints": 2.3799999999999994,
+    "humanPoints": 0.3400000000000001
+  },
+  {
+    "id": "measured.phrase-8671e51dca5b",
+    "aiPosts": 23,
+    "humanPosts": 1,
+    "aiFlaggedPosts": 12,
+    "humanFPPosts": 0,
+    "aiPoints": 2.2080000000000006,
+    "humanPoints": 0.096
+  },
+  {
+    "id": "measured.phrase-b1d29c8eba79",
+    "aiPosts": 20,
+    "humanPosts": 0,
+    "aiFlaggedPosts": 13,
+    "humanFPPosts": 0,
+    "aiPoints": 2.2000000000000006,
+    "humanPoints": 0
+  },
+  {
+    "id": "measured.phrase-2e44fece732a",
+    "aiPosts": 13,
+    "humanPosts": 1,
+    "aiFlaggedPosts": 5,
+    "humanFPPosts": 0,
+    "aiPoints": 2.1319999999999997,
+    "humanPoints": 0.164
+  },
+  {
+    "id": "measured.phrase-f80e4ab2f389",
+    "aiPosts": 24,
+    "humanPosts": 0,
+    "aiFlaggedPosts": 9,
+    "humanFPPosts": 0,
+    "aiPoints": 2.0879999999999996,
+    "humanPoints": 0
+  },
+  {
+    "id": "measured.phrase-577e7ba68232",
+    "aiPosts": 42,
+    "humanPosts": 5,
+    "aiFlaggedPosts": 17,
+    "humanFPPosts": 0,
+    "aiPoints": 2.016000000000001,
+    "humanPoints": 0.24
+  },
+  {
+    "id": "measured.phrase-ae2462ddca06",
+    "aiPosts": 24,
+    "humanPosts": 1,
+    "aiFlaggedPosts": 14,
+    "humanFPPosts": 0,
+    "aiPoints": 2.0160000000000005,
+    "humanPoints": 0.084
+  },
+  {
+    "id": "measured.phrase-560be7b3310b",
+    "aiPosts": 10,
+    "humanPosts": 0,
+    "aiFlaggedPosts": 6,
+    "humanFPPosts": 0,
+    "aiPoints": 1.9199999999999997,
+    "humanPoints": 0
+  },
+  {
+    "id": "measured.phrase-44dca9c8487a",
+    "aiPosts": 6,
+    "humanPosts": 1,
+    "aiFlaggedPosts": 1,
+    "humanFPPosts": 0,
+    "aiPoints": 1.8840000000000001,
+    "humanPoints": 0.314
+  },
+  {
+    "id": "measured.phrase-cafa287a568f",
+    "aiPosts": 7,
+    "humanPosts": 0,
+    "aiFlaggedPosts": 1,
+    "humanFPPosts": 0,
+    "aiPoints": 1.8689999999999998,
+    "humanPoints": 0
+  },
+  {
+    "id": "measured.phrase-34f312f337ed",
+    "aiPosts": 18,
+    "humanPosts": 4,
+    "aiFlaggedPosts": 10,
+    "humanFPPosts": 0,
+    "aiPoints": 1.8539999999999999,
+    "humanPoints": 0.412
+  },
+  {
+    "id": "measured.phrase-5bb0707050ba",
+    "aiPosts": 20,
+    "humanPosts": 2,
+    "aiFlaggedPosts": 13,
+    "humanFPPosts": 0,
+    "aiPoints": 1.8199999999999996,
+    "humanPoints": 0.182
+  },
+  {
+    "id": "measured.phrase-de2c315aa8fc",
+    "aiPosts": 37,
+    "humanPosts": 2,
+    "aiFlaggedPosts": 22,
+    "humanFPPosts": 0,
+    "aiPoints": 1.776000000000001,
+    "humanPoints": 0.096
+  },
+  {
+    "id": "measured.phrase-0ba28fbd708d",
+    "aiPosts": 24,
+    "humanPosts": 0,
+    "aiFlaggedPosts": 12,
+    "humanFPPosts": 0,
+    "aiPoints": 1.7760000000000005,
+    "humanPoints": 0
+  },
+  {
+    "id": "measured.phrase-6ff31ffafde1",
+    "aiPosts": 10,
+    "humanPosts": 0,
+    "aiFlaggedPosts": 4,
+    "humanFPPosts": 0,
+    "aiPoints": 1.7700000000000002,
+    "humanPoints": 0
+  },
+  {
+    "id": "measured.phrase-c96911fba254",
+    "aiPosts": 6,
+    "humanPosts": 0,
+    "aiFlaggedPosts": 0,
+    "humanFPPosts": 0,
+    "aiPoints": 1.74,
+    "humanPoints": 0
+  },
+  {
+    "id": "measured.phrase-a70bdd1cd702",
+    "aiPosts": 14,
+    "humanPosts": 0,
+    "aiFlaggedPosts": 9,
+    "humanFPPosts": 0,
+    "aiPoints": 1.722,
+    "humanPoints": 0
+  },
+  {
+    "id": "measured.phrase-8e52d60e0608",
+    "aiPosts": 4,
+    "humanPosts": 0,
+    "aiFlaggedPosts": 1,
+    "humanFPPosts": 0,
+    "aiPoints": 1.716,
+    "humanPoints": 0
+  },
+  {
+    "id": "measured.phrase-e11bc36debc3",
+    "aiPosts": 48,
+    "humanPosts": 4,
+    "aiFlaggedPosts": 29,
+    "humanFPPosts": 0,
+    "aiPoints": 1.679999999999999,
+    "humanPoints": 0.14
+  },
+  {
+    "id": "measured.phrase-8e75860fa306",
+    "aiPosts": 7,
+    "humanPosts": 0,
+    "aiFlaggedPosts": 3,
+    "humanFPPosts": 0,
+    "aiPoints": 1.568,
+    "humanPoints": 0
+  },
+  {
+    "id": "measured.phrase-6862d38bdca6",
+    "aiPosts": 21,
+    "humanPosts": 0,
+    "aiFlaggedPosts": 13,
+    "humanFPPosts": 0,
+    "aiPoints": 1.5120000000000002,
+    "humanPoints": 0
+  },
+  {
+    "id": "measured.phrase-b6506d59f9f2",
+    "aiPosts": 31,
+    "humanPosts": 1,
+    "aiFlaggedPosts": 12,
+    "humanFPPosts": 0,
+    "aiPoints": 1.4880000000000007,
+    "humanPoints": 0.048
+  },
+  {
+    "id": "measured.phrase-b218c9745195",
+    "aiPosts": 7,
+    "humanPosts": 0,
+    "aiFlaggedPosts": 3,
+    "humanFPPosts": 0,
+    "aiPoints": 1.463,
+    "humanPoints": 0
+  },
+  {
+    "id": "measured.phrase-40d43c64e3b9",
+    "aiPosts": 12,
+    "humanPosts": 0,
+    "aiFlaggedPosts": 3,
+    "humanFPPosts": 0,
+    "aiPoints": 1.452,
+    "humanPoints": 0
+  },
+  {
+    "id": "measured.phrase-56b0aa922772",
+    "aiPosts": 10,
+    "humanPosts": 3,
+    "aiFlaggedPosts": 6,
+    "humanFPPosts": 0,
+    "aiPoints": 1.4000000000000004,
+    "humanPoints": 0.42000000000000004
+  },
+  {
+    "id": "measured.phrase-5b9e5c9b61a8",
+    "aiPosts": 6,
+    "humanPosts": 0,
+    "aiFlaggedPosts": 3,
+    "humanFPPosts": 0,
+    "aiPoints": 1.3860000000000001,
+    "humanPoints": 0
+  },
+  {
+    "id": "measured.phrase-302f142bc57b",
+    "aiPosts": 8,
+    "humanPosts": 0,
+    "aiFlaggedPosts": 3,
+    "humanFPPosts": 0,
+    "aiPoints": 1.328,
+    "humanPoints": 0
+  },
+  {
+    "id": "measured.phrase-7939027463c6",
+    "aiPosts": 7,
+    "humanPosts": 0,
+    "aiFlaggedPosts": 2,
+    "humanFPPosts": 0,
+    "aiPoints": 1.3159999999999998,
+    "humanPoints": 0
+  },
+  {
+    "id": "measured.phrase-51d300bf9c88",
+    "aiPosts": 6,
+    "humanPosts": 0,
+    "aiFlaggedPosts": 2,
+    "humanFPPosts": 0,
+    "aiPoints": 1.26,
+    "humanPoints": 0
+  },
+  {
+    "id": "measured.phrase-89e88c31eec9",
+    "aiPosts": 112,
+    "humanPosts": 4,
+    "aiFlaggedPosts": 49,
+    "humanFPPosts": 0,
+    "aiPoints": 1.2319999999999984,
+    "humanPoints": 0.044
+  },
+  {
+    "id": "measured.phrase-3d446720379f",
+    "aiPosts": 111,
+    "humanPosts": 12,
+    "aiFlaggedPosts": 48,
+    "humanFPPosts": 0,
+    "aiPoints": 1.2209999999999985,
+    "humanPoints": 0.13199999999999998
+  },
+  {
+    "id": "measured.phrase-48e807d49a9f",
+    "aiPosts": 11,
+    "humanPosts": 1,
+    "aiFlaggedPosts": 7,
+    "humanFPPosts": 0,
+    "aiPoints": 1.2100000000000002,
+    "humanPoints": 0.11
+  },
+  {
+    "id": "measured.phrase-9966a407b73d",
+    "aiPosts": 3,
+    "humanPosts": 1,
+    "aiFlaggedPosts": 0,
+    "humanFPPosts": 0,
+    "aiPoints": 1.17,
+    "humanPoints": 0.39
+  },
+  {
+    "id": "negation-pivot.not-x-but-y",
+    "aiPosts": 108,
+    "humanPosts": 18,
+    "aiFlaggedPosts": 43,
+    "humanFPPosts": 0,
+    "aiPoints": 1.0956047793231514,
+    "humanPoints": 0.18414213562373097
+  },
+  {
+    "id": "measured.phrase-c438b1924d09",
+    "aiPosts": 11,
+    "humanPosts": 0,
+    "aiFlaggedPosts": 7,
+    "humanFPPosts": 0,
+    "aiPoints": 1.0779999999999998,
+    "humanPoints": 0
+  },
+  {
+    "id": "measured.phrase-693694586c02",
+    "aiPosts": 15,
+    "humanPosts": 1,
+    "aiFlaggedPosts": 4,
+    "humanFPPosts": 0,
+    "aiPoints": 1.0649999999999997,
+    "humanPoints": 0.071
+  },
+  {
+    "id": "measured.phrase-7c8c2e5cc692",
+    "aiPosts": 8,
+    "humanPosts": 0,
+    "aiFlaggedPosts": 2,
+    "humanFPPosts": 0,
+    "aiPoints": 1.056,
+    "humanPoints": 0
+  },
+  {
+    "id": "measured.phrase-46fba787a86e",
+    "aiPosts": 17,
+    "humanPosts": 1,
+    "aiFlaggedPosts": 9,
+    "humanFPPosts": 0,
+    "aiPoints": 1.0540000000000005,
+    "humanPoints": 0.062
+  },
+  {
+    "id": "measured.phrase-1438298f31c5",
+    "aiPosts": 8,
+    "humanPosts": 2,
+    "aiFlaggedPosts": 2,
+    "humanFPPosts": 0,
+    "aiPoints": 1.024,
+    "humanPoints": 0.256
+  },
+  {
+    "id": "measured.phrase-36fedcc10a6f",
+    "aiPosts": 5,
+    "humanPosts": 6,
+    "aiFlaggedPosts": 1,
+    "humanFPPosts": 0,
+    "aiPoints": 1.02,
+    "humanPoints": 1.224
+  },
+  {
+    "id": "measured.phrase-b23835d47a77",
+    "aiPosts": 10,
+    "humanPosts": 0,
+    "aiFlaggedPosts": 5,
+    "humanFPPosts": 0,
+    "aiPoints": 0.9599999999999999,
+    "humanPoints": 0
+  },
+  {
+    "id": "measured.phrase-389bfa4cf7ff",
+    "aiPosts": 4,
+    "humanPosts": 0,
+    "aiFlaggedPosts": 3,
+    "humanFPPosts": 0,
+    "aiPoints": 0.932,
+    "humanPoints": 0
+  },
+  {
+    "id": "measured.phrase-039c58456e3e",
+    "aiPosts": 4,
+    "humanPosts": 0,
+    "aiFlaggedPosts": 1,
+    "humanFPPosts": 0,
+    "aiPoints": 0.904,
+    "humanPoints": 0
+  },
+  {
+    "id": "measured.phrase-b31cc9a9db61",
+    "aiPosts": 5,
+    "humanPosts": 0,
+    "aiFlaggedPosts": 2,
+    "humanFPPosts": 0,
+    "aiPoints": 0.875,
+    "humanPoints": 0
+  },
+  {
+    "id": "measured.phrase-7cf5034cbcec",
+    "aiPosts": 13,
+    "humanPosts": 0,
+    "aiFlaggedPosts": 5,
+    "humanFPPosts": 0,
+    "aiPoints": 0.8709999999999998,
+    "humanPoints": 0
+  },
+  {
+    "id": "measured.phrase-1c44539289c0",
+    "aiPosts": 29,
+    "humanPosts": 0,
+    "aiFlaggedPosts": 15,
+    "humanFPPosts": 0,
+    "aiPoints": 0.8700000000000006,
+    "humanPoints": 0
+  },
+  {
+    "id": "measured.phrase-00295f29ffad",
+    "aiPosts": 11,
+    "humanPosts": 0,
+    "aiFlaggedPosts": 8,
+    "humanFPPosts": 0,
+    "aiPoints": 0.8579999999999999,
+    "humanPoints": 0
+  },
+  {
+    "id": "measured.phrase-ff159b5e1d99",
+    "aiPosts": 9,
+    "humanPosts": 2,
+    "aiFlaggedPosts": 1,
+    "humanFPPosts": 0,
+    "aiPoints": 0.8549999999999999,
+    "humanPoints": 0.19
+  },
+  {
+    "id": "measured.phrase-03636d311f61",
+    "aiPosts": 9,
+    "humanPosts": 0,
+    "aiFlaggedPosts": 7,
+    "humanFPPosts": 0,
+    "aiPoints": 0.8099999999999998,
+    "humanPoints": 0
+  },
+  {
+    "id": "measured.phrase-5af2dfd7b636",
+    "aiPosts": 8,
+    "humanPosts": 0,
+    "aiFlaggedPosts": 4,
+    "humanFPPosts": 0,
+    "aiPoints": 0.7999999999999999,
+    "humanPoints": 0
+  },
+  {
+    "id": "measured.phrase-d4ff312c49c2",
+    "aiPosts": 30,
+    "humanPosts": 2,
+    "aiFlaggedPosts": 14,
+    "humanFPPosts": 0,
+    "aiPoints": 0.7800000000000005,
+    "humanPoints": 0.052
+  },
+  {
+    "id": "measured.phrase-382e69be5568",
+    "aiPosts": 6,
+    "humanPosts": 1,
+    "aiFlaggedPosts": 2,
+    "humanFPPosts": 0,
+    "aiPoints": 0.756,
+    "humanPoints": 0.126
+  },
+  {
+    "id": "measured.phrase-0096953b889f",
+    "aiPosts": 15,
+    "humanPosts": 0,
+    "aiFlaggedPosts": 9,
+    "humanFPPosts": 0,
+    "aiPoints": 0.6900000000000001,
+    "humanPoints": 0
+  },
+  {
+    "id": "measured.phrase-c13524f9b9f8",
+    "aiPosts": 26,
+    "humanPosts": 0,
+    "aiFlaggedPosts": 12,
+    "humanFPPosts": 0,
+    "aiPoints": 0.6760000000000004,
+    "humanPoints": 0
+  },
+  {
+    "id": "measured.phrase-cb156f9cd791",
+    "aiPosts": 6,
+    "humanPosts": 2,
+    "aiFlaggedPosts": 2,
+    "humanFPPosts": 0,
+    "aiPoints": 0.63,
+    "humanPoints": 0.21
+  },
+  {
+    "id": "measured.phrase-b5b31382bc31",
+    "aiPosts": 3,
+    "humanPosts": 0,
+    "aiFlaggedPosts": 3,
+    "humanFPPosts": 0,
+    "aiPoints": 0.624,
+    "humanPoints": 0
+  },
+  {
+    "id": "measured.phrase-0753b056405c",
+    "aiPosts": 7,
+    "humanPosts": 0,
+    "aiFlaggedPosts": 5,
+    "humanFPPosts": 0,
+    "aiPoints": 0.6159999999999999,
+    "humanPoints": 0
+  },
+  {
+    "id": "measured.phrase-6c1ed8783168",
+    "aiPosts": 3,
+    "humanPosts": 0,
+    "aiFlaggedPosts": 3,
+    "humanFPPosts": 0,
+    "aiPoints": 0.615,
+    "humanPoints": 0
+  },
+  {
+    "id": "measured.phrase-f0f1fc5f23d9",
+    "aiPosts": 26,
+    "humanPosts": 7,
+    "aiFlaggedPosts": 17,
+    "humanFPPosts": 0,
+    "aiPoints": 0.5460000000000002,
+    "humanPoints": 0.147
+  },
+  {
+    "id": "measured.phrase-d244af736177",
+    "aiPosts": 5,
+    "humanPosts": 0,
+    "aiFlaggedPosts": 2,
+    "humanFPPosts": 0,
+    "aiPoints": 0.525,
+    "humanPoints": 0
+  },
+  {
+    "id": "measured.phrase-8fc923261925",
+    "aiPosts": 3,
+    "humanPosts": 0,
+    "aiFlaggedPosts": 1,
+    "humanFPPosts": 0,
+    "aiPoints": 0.522,
+    "humanPoints": 0
+  },
+  {
+    "id": "measured.phrase-8bc2754a92c0",
+    "aiPosts": 15,
+    "humanPosts": 2,
+    "aiFlaggedPosts": 11,
+    "humanFPPosts": 0,
+    "aiPoints": 0.4800000000000002,
+    "humanPoints": 0.064
+  },
+  {
+    "id": "measured.phrase-fd5c5431c87c",
+    "aiPosts": 4,
+    "humanPosts": 0,
+    "aiFlaggedPosts": 3,
+    "humanFPPosts": 0,
+    "aiPoints": 0.472,
+    "humanPoints": 0
+  },
+  {
+    "id": "measured.phrase-d2dd627d321a",
+    "aiPosts": 40,
+    "humanPosts": 1,
+    "aiFlaggedPosts": 18,
+    "humanFPPosts": 0,
+    "aiPoints": 0.4400000000000002,
+    "humanPoints": 0.011
+  },
+  {
+    "id": "measured.pattern-8c0954b865a2",
+    "aiPosts": 2,
+    "humanPosts": 0,
+    "aiFlaggedPosts": 0,
+    "humanFPPosts": 0,
+    "aiPoints": 0.432,
+    "humanPoints": 0
+  },
+  {
+    "id": "measured.phrase-499e06142de3",
+    "aiPosts": 6,
+    "humanPosts": 0,
+    "aiFlaggedPosts": 2,
+    "humanFPPosts": 0,
+    "aiPoints": 0.402,
+    "humanPoints": 0
+  },
+  {
+    "id": "measured.phrase-4faaa6776dd9",
+    "aiPosts": 5,
+    "humanPosts": 0,
+    "aiFlaggedPosts": 3,
+    "humanFPPosts": 0,
+    "aiPoints": 0.38,
+    "humanPoints": 0
+  },
+  {
+    "id": "measured.phrase-5b052f8cc1f7",
+    "aiPosts": 8,
+    "humanPosts": 0,
+    "aiFlaggedPosts": 5,
+    "humanFPPosts": 0,
+    "aiPoints": 0.36799999999999994,
+    "humanPoints": 0
+  },
+  {
+    "id": "measured.phrase-98ab52bda028",
+    "aiPosts": 5,
+    "humanPosts": 0,
+    "aiFlaggedPosts": 2,
+    "humanFPPosts": 0,
+    "aiPoints": 0.365,
+    "humanPoints": 0
+  },
+  {
+    "id": "measured.phrase-30ceb2764951",
+    "aiPosts": 18,
+    "humanPosts": 0,
+    "aiFlaggedPosts": 8,
+    "humanFPPosts": 0,
+    "aiPoints": 0.342,
+    "humanPoints": 0
+  },
+  {
+    "id": "measured.phrase-51b96709f23f",
+    "aiPosts": 4,
+    "humanPosts": 0,
+    "aiFlaggedPosts": 1,
+    "humanFPPosts": 0,
+    "aiPoints": 0.332,
+    "humanPoints": 0
+  },
+  {
+    "id": "measured.phrase-96bdc7b445d6",
+    "aiPosts": 2,
+    "humanPosts": 0,
+    "aiFlaggedPosts": 0,
+    "humanFPPosts": 0,
+    "aiPoints": 0.214,
+    "humanPoints": 0
+  },
+  {
+    "id": "measured.phrase-6f516f59d0f1",
+    "aiPosts": 4,
+    "humanPosts": 0,
+    "aiFlaggedPosts": 2,
+    "humanFPPosts": 0,
+    "aiPoints": 0.192,
+    "humanPoints": 0
+  },
+  {
+    "id": "measured.phrase-e1a1062476a1",
+    "aiPosts": 1,
+    "humanPosts": 0,
+    "aiFlaggedPosts": 1,
+    "humanFPPosts": 0,
+    "aiPoints": 0.187,
+    "humanPoints": 0
+  },
+  {
+    "id": "measured.phrase-0f0b01f0bcbd",
+    "aiPosts": 1,
+    "humanPosts": 0,
+    "aiFlaggedPosts": 0,
+    "humanFPPosts": 0,
+    "aiPoints": 0.185,
+    "humanPoints": 0
+  },
+  {
+    "id": "measured.phrase-4875ccef67ec",
+    "aiPosts": 13,
+    "humanPosts": 0,
+    "aiFlaggedPosts": 3,
+    "humanFPPosts": 0,
+    "aiPoints": 0.18200000000000005,
+    "humanPoints": 0
+  },
+  {
+    "id": "measured.phrase-91f7a1ca881e",
+    "aiPosts": 10,
+    "humanPosts": 3,
+    "aiFlaggedPosts": 6,
+    "humanFPPosts": 0,
+    "aiPoints": 0.17999999999999997,
+    "humanPoints": 0.05399999999999999
+  },
+  {
+    "id": "measured.phrase-1d242cac2edc",
+    "aiPosts": 8,
+    "humanPosts": 1,
+    "aiFlaggedPosts": 1,
+    "humanFPPosts": 0,
+    "aiPoints": 0.128,
+    "humanPoints": 0.016
+  },
+  {
+    "id": "measured.phrase-10630f4143ec",
+    "aiPosts": 3,
+    "humanPosts": 0,
+    "aiFlaggedPosts": 3,
+    "humanFPPosts": 0,
+    "aiPoints": 0.126,
+    "humanPoints": 0
+  },
+  {
+    "id": "measured.phrase-c068e0b86c62",
+    "aiPosts": 1,
+    "humanPosts": 0,
+    "aiFlaggedPosts": 0,
+    "humanFPPosts": 0,
+    "aiPoints": 0.1,
+    "humanPoints": 0
+  }
+]

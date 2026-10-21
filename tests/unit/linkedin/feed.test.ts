@@ -7,7 +7,7 @@ import { watchFeed } from '../../../src/lib/linkedin';
 import type { FeedPost, FeedWatcher } from '../../../src/lib/linkedin/types';
 import { selectors } from '../../../src/lib/linkedin/selectors';
 
-const fixtures = new Map(['sdui', 'classic', 'hashed', 'author-context'].map(name => [name,
+const fixtures = new Map(['sdui', 'classic', 'hashed', 'author-context', 'activity'].map(name => [name,
   readFileSync(resolve('tests/fixtures/feed', `${name}.html`), 'utf8'),
 ]));
 let watcher: FeedWatcher | undefined;
@@ -28,6 +28,22 @@ function start() {
 
 beforeEach(() => { history.replaceState(null, '', '/feed/'); });
 afterEach(() => { watcher?.disconnect(); watcher = undefined; document.body.innerHTML = ''; vi.restoreAllMocks(); vi.unstubAllGlobals(); });
+
+describe('activity pages', () => {
+  it('treats a no-commentary repost as bare, so its unidentified original stays out of the Hall', async () => {
+    history.replaceState(null, '', '/in/jane-doe/recent-activity/all/');
+    load('activity');
+    const { onPost, byId } = start();
+    await eventually(() => expect(byId('urn:li:activity:7004')).toBeDefined());
+    const repost = byId('urn:li:activity:7004');
+    expect(repost.author?.id).toBe('in/rowan-example');
+    expect(repost.input.isBareRepost).toBe(true);
+    expect(repost.sourceId).toBeUndefined();
+    const own = onPost.mock.calls.map(([post]) => post).filter(post => post.author?.id === 'in/jane-doe');
+    expect(own.length).toBeGreaterThan(0);
+    expect(own.every(post => !post.input.isBareRepost)).toBe(true);
+  });
+});
 
 describe('author of the scored text', () => {
   function expectAuthor(post: FeedPost, id: string, name: string) {
@@ -627,4 +643,99 @@ describe('mutation cost', () => {
     expect(extractions()).toBe(0);
     expect(onPost).toHaveBeenCalledTimes(12);
   });
+});
+
+describe('UI slots: action bar chip, name-line tag, avatar frame', () => {
+  const bar = (root: Element) => root.querySelector<HTMLElement>('.r7ya')!;
+  const flexBars = () => document.querySelectorAll<HTMLElement>('.r7ya').forEach(row => { row.style.display = 'flex'; });
+
+  it('puts the chip host in the action bar, right after Send', async () => {
+    load('sdui');
+    flexBars();
+    const { onPost, byId } = start();
+    await eventually(() => expect(onPost).toHaveBeenCalledTimes(12));
+    const post = byId('urn:li:activity:1001');
+    expect(post.mount.getAttribute('data-slot')).toBe('bar');
+    expect(post.mount.parentElement).toBe(bar(post.root));
+    expect(post.mount.previousElementSibling?.matches(selectors.actionBarAnchor[0]!)).toBe(true);
+    expect(post.root.querySelectorAll(selectors.chipMount)).toHaveLength(1);
+  });
+
+  it('moves the chip into the action bar when the bar hydrates after the text', async () => {
+    load('sdui');
+    const late = document.querySelector('#expandedsyntheticPost01_opaqueFeedType_MAIN_FEED_RELEVANCE .r7ya')!;
+    const parent = late.parentElement!;
+    late.remove();
+    const { onPost, byId } = start();
+    await eventually(() => expect(onPost).toHaveBeenCalledTimes(12));
+    const before = byId('urn:li:activity:1001');
+    expect(before.mount.hasAttribute('data-slot')).toBe(false);
+    (late as HTMLElement).style.display = 'flex';
+    parent.append(late);
+    await eventually(() => expect(byId('urn:li:activity:1001').mount.getAttribute('data-slot')).toBe('bar'));
+    const after = byId('urn:li:activity:1001');
+    expect(after.mount).toBe(before.mount);
+    expect(after.mount.parentElement).toBe(late);
+    expect(after.root.querySelectorAll(selectors.chipMount)).toHaveLength(1);
+  });
+
+  it('creates the name-line tag host on demand, once, and removes it with the post', async () => {
+    load('sdui');
+    document.querySelectorAll<HTMLElement>('[data-view-name="feed-actor"] > div[aria-label]').forEach(line => { line.style.display = 'flex'; });
+    const { onPost, onRemove, byId } = start();
+    await eventually(() => expect(onPost).toHaveBeenCalledTimes(12));
+    const post = byId('urn:li:activity:1001');
+    expect(post.root.querySelector(selectors.tagMount)).toBeNull();
+    const host = post.tagHost()!;
+    expect(host.getAttribute('data-slot')).toBe('name');
+    expect(host.previousElementSibling?.textContent).toContain('2nd');
+    expect(post.tagHost()).toBe(host);
+    await pause();
+    expect(onPost).toHaveBeenCalledTimes(12); // our own host never re-triggers extraction
+    post.root.remove();
+    await eventually(() => expect(onRemove).toHaveBeenCalledWith(post.id));
+    expect(post.root.contains(host)).toBe(false); // a recycled card element keeps no host of ours
+  });
+
+  it('rings the element that clips the photo, not the clipped image', async () => {
+    load('sdui');
+    const figure = document.querySelector<HTMLElement>('#expandedsyntheticPost01_opaqueFeedType_MAIN_FEED_RELEVANCE figure[data-view-name="feed-actor-image"]')!;
+    Object.assign(figure.style, { overflow: 'hidden', borderRadius: '999px' });
+    const { onPost, byId } = start();
+    await eventually(() => expect(onPost).toHaveBeenCalledTimes(12));
+    expect(byId('urn:li:activity:1001').avatarFrame()).toBe(figure);
+  });
+
+  it('keeps exactly one decoration host, inside the current card frame, and removes it with the post', async () => {
+    load('sdui');
+    const { onPost, onRemove, byId } = start();
+    await eventually(() => expect(onPost).toHaveBeenCalledTimes(12));
+    const post = byId('urn:li:activity:1001');
+    const frame = post.cardFrame!();
+    const host = post.decorationHost!()!;
+    expect(host.parentElement).toBe(frame);
+    expect(frame.lastElementChild).toBe(host);
+    expect(post.decorationHost!()).toBe(host);
+    // A stale host left elsewhere by a re-render is dropped, never duplicated.
+    const stale = host.cloneNode() as HTMLElement;
+    frame.firstElementChild!.append(stale);
+    expect(post.decorationHost!()).toBe(host);
+    expect(stale.isConnected).toBe(false);
+    await pause();
+    expect(onPost).toHaveBeenCalledTimes(12); // our own host never re-triggers extraction
+    post.root.remove();
+    expect(post.decorationHost!()).toBeNull();
+    await eventually(() => expect(onRemove).toHaveBeenCalledWith(post.id));
+    expect(post.root.contains(host)).toBe(false); // a recycled card element keeps no host of ours
+  });
+});
+
+
+it('scores posts on any author recent-activity page', async () => {
+  history.replaceState(null, '', '/in/synthetic-author/recent-activity/all/');
+  load('sdui');
+  document.body.innerHTML = document.body.innerHTML.replaceAll('FeedType_MAIN_FEED_RELEVANCE', 'FeedType_CREATOR_PROFILE_ALL_CONTENT_VIEW');
+  document.querySelectorAll('[data-view-name]').forEach(el => el.removeAttribute('data-view-name'));
+  const { onPost } = start();
+  await eventually(() => expect(onPost).toHaveBeenCalledTimes(12));
 });

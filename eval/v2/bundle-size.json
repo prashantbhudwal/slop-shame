@@ -1,0 +1,10 @@
+{
+  "file": ".output/chrome-mv3/content-scripts/linkedin.js",
+  "bytes": 940820,
+  "decimalMB": 0.94082,
+  "targetBytes": 1000000,
+  "pass": true,
+  "sha256": "3de2f7b41b0c5c9ca6c244d7837e404cb591fcedcac79839c4c4b8d8cb6f2fd3",
+  "isolated": "/tmp/slop-shame-v2-build.1kFctf",
+  "installed": false
+}

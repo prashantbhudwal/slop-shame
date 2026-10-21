@@ -1,0 +1,302 @@
+[
+  {
+    "set": "effortful",
+    "id": "linkedin-ai/claude-opus-5-5.jsonl#p14",
+    "score": 89,
+    "tells": 4
+  },
+  {
+    "set": "effortful",
+    "id": "linkedin-ai/claude-opus-5-5.jsonl#p26",
+    "score": 82,
+    "tells": 6
+  },
+  {
+    "set": "linkedinHoldout",
+    "id": "li-influencers:32222",
+    "score": 67,
+    "tells": 8
+  },
+  {
+    "set": "effortful",
+    "id": "linkedin-ai/claude-opus-5-5.jsonl#p06",
+    "score": 62,
+    "tells": 5
+  },
+  {
+    "set": "linkedinHoldout",
+    "id": "li-influencers:25409",
+    "score": 62,
+    "tells": 10
+  },
+  {
+    "set": "external",
+    "id": "wi:1-164820",
+    "score": 61,
+    "tells": 15
+  },
+  {
+    "set": "linkedinHoldout",
+    "id": "li-influencers:31984",
+    "score": 60,
+    "tells": 7
+  },
+  {
+    "set": "raidTest",
+    "id": "114aa0d6-8db7-4613-a284-8f89a5715abd",
+    "score": 57,
+    "tells": 8
+  },
+  {
+    "set": "effortful",
+    "id": "linkedin-ai/claude-opus-5-5.jsonl#p01",
+    "score": 56,
+    "tells": 8
+  },
+  {
+    "set": "linkedinHoldout",
+    "id": "li-influencers:28642",
+    "score": 55,
+    "tells": 14
+  },
+  {
+    "set": "linkedinHoldout",
+    "id": "li-influencers:32023",
+    "score": 55,
+    "tells": 4
+  },
+  {
+    "set": "linkedinHoldout",
+    "id": "li-influencers:25480",
+    "score": 54,
+    "tells": 9
+  },
+  {
+    "set": "effortful",
+    "id": "linkedin-ai/claude-opus-5-5.jsonl#p11",
+    "score": 53,
+    "tells": 10
+  },
+  {
+    "set": "linkedinHoldout",
+    "id": "li-influencers:29638",
+    "score": 53,
+    "tells": 14
+  },
+  {
+    "set": "linkedinHoldout",
+    "id": "li-influencers:32100",
+    "score": 53,
+    "tells": 7
+  },
+  {
+    "set": "linkedinHoldout",
+    "id": "li-influencers:32127",
+    "score": 53,
+    "tells": 7
+  },
+  {
+    "set": "external",
+    "id": "wi:1-231049",
+    "score": 52,
+    "tells": 6
+  },
+  {
+    "set": "linkedinHoldout",
+    "id": "li-influencers:29652",
+    "score": 52,
+    "tells": 8
+  },
+  {
+    "set": "linkedinHoldout",
+    "id": "li-influencers:30327",
+    "score": 52,
+    "tells": 10
+  },
+  {
+    "set": "external",
+    "id": "wi:1-302728",
+    "score": 51,
+    "tells": 5
+  },
+  {
+    "set": "linkedinHoldout",
+    "id": "li-influencers:17490",
+    "score": 50,
+    "tells": 4
+  },
+  {
+    "set": "raidTest",
+    "id": "6ee11d77-0a5f-49a8-8b76-df91ad37d6a8",
+    "score": 49,
+    "tells": 22
+  },
+  {
+    "set": "linkedinHoldout",
+    "id": "li-influencers:31255",
+    "score": 48,
+    "tells": 7
+  },
+  {
+    "set": "linkedinHoldout",
+    "id": "li-influencers:14336",
+    "score": 46,
+    "tells": 8
+  },
+  {
+    "set": "linkedinHoldout",
+    "id": "li-influencers:31249",
+    "score": 46,
+    "tells": 16
+  },
+  {
+    "set": "linkedinHoldout",
+    "id": "li-influencers:32253",
+    "score": 46,
+    "tells": 3
+  },
+  {
+    "set": "external",
+    "id": "raid:e41fdf62-c408-419a-b4d7-dcaab1d28493",
+    "score": 45,
+    "tells": 30
+  },
+  {
+    "set": "linkedinHoldout",
+    "id": "li-influencers:15260",
+    "score": 45,
+    "tells": 5
+  },
+  {
+    "set": "linkedinHoldout",
+    "id": "li-influencers:17682",
+    "score": 45,
+    "tells": 4
+  },
+  {
+    "set": "linkedinHoldout",
+    "id": "li-influencers:18628",
+    "score": 45,
+    "tells": 3
+  },
+  {
+    "set": "linkedinHoldout",
+    "id": "li-influencers:4286",
+    "score": 45,
+    "tells": 5
+  },
+  {
+    "set": "raidTest",
+    "id": "08aa4615-5e5d-499f-a731-c4ad68065b93",
+    "score": 45,
+    "tells": 16
+  },
+  {
+    "set": "raidTest",
+    "id": "79632f7c-1511-43d6-968e-806f924674a2",
+    "score": 45,
+    "tells": 22
+  },
+  {
+    "set": "raidTest",
+    "id": "ff5083ad-660b-4237-ba1a-d34b4794657e",
+    "score": 44,
+    "tells": 16
+  },
+  {
+    "set": "linkedinHoldout",
+    "id": "li-influencers:17960",
+    "score": 43,
+    "tells": 4
+  },
+  {
+    "set": "linkedinHoldout",
+    "id": "li-influencers:29703",
+    "score": 43,
+    "tells": 4
+  },
+  {
+    "set": "raidTest",
+    "id": "1a23e0d6-ff7e-491c-8601-382f429f817f",
+    "score": 43,
+    "tells": 20
+  },
+  {
+    "set": "linkedinHoldout",
+    "id": "li-influencers:18711",
+    "score": 42,
+    "tells": 3
+  },
+  {
+    "set": "linkedinHoldout",
+    "id": "li-influencers:18799",
+    "score": 42,
+    "tells": 9
+  },
+  {
+    "set": "linkedinHoldout",
+    "id": "li-influencers:24634",
+    "score": 42,
+    "tells": 5
+  },
+  {
+    "set": "linkedinHoldout",
+    "id": "li-influencers:28315",
+    "score": 42,
+    "tells": 4
+  },
+  {
+    "set": "raidTest",
+    "id": "753a5181-81bb-48b1-91c7-107d12621049",
+    "score": 42,
+    "tells": 15
+  },
+  {
+    "set": "external",
+    "id": "aeslc:arnold-j_inbox_68.subject",
+    "score": 41,
+    "tells": 8
+  },
+  {
+    "set": "linkedinHoldout",
+    "id": "li-influencers:14919",
+    "score": 41,
+    "tells": 15
+  },
+  {
+    "set": "linkedinHoldout",
+    "id": "li-influencers:17578",
+    "score": 41,
+    "tells": 4
+  },
+  {
+    "set": "wayback",
+    "id": "linkedin-wayback-aa2e22383b7c428ae1ea4ebb",
+    "score": 41,
+    "tells": 19
+  },
+  {
+    "set": "external",
+    "id": "wi:1-91123",
+    "score": 40,
+    "tells": 22
+  },
+  {
+    "set": "linkedinHoldout",
+    "id": "li-influencers:14976",
+    "score": 40,
+    "tells": 3
+  },
+  {
+    "set": "linkedinHoldout",
+    "id": "li-influencers:16949",
+    "score": 40,
+    "tells": 9
+  },
+  {
+    "set": "linkedinHoldout",
+    "id": "li-influencers:17996",
+    "score": 40,
+    "tells": 3
+  }
+]

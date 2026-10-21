@@ -1,0 +1,64 @@
+{
+  "engineHash": "83be54ab0db0bd46f287537ef037aeba42f49f9582639b13487856109fe38316",
+  "round2Hash": "e33028e19032921ae7c4e3b7b4714ed010b7f86a8b70658e68d311f90535b6db",
+  "created": "2026-10-21T10:31:42.245Z",
+  "threshold": {
+    "threshold": 3.637338348115496,
+    "minThreshold": 2.5,
+    "habitCap": 1.5,
+    "habitCapFraction": 0.4123894607652185,
+    "allowedLinkedinHits": 3,
+    "linkedInTargetUpper95": 0.001,
+    "polishedTargetUpper95": 0.02,
+    "polishedSampleSizeSufficient": false,
+    "results": {
+      "linkedinVeto": {
+        "n": 8189,
+        "hits": 3,
+        "upper95": 0.0009465632329701187
+      },
+      "polishedFit": {
+        "n": 80,
+        "hits": 0,
+        "upper95": 0.0367541977799823
+      },
+      "targetTune": {
+        "n": 290,
+        "hits": 39,
+        "upper95": 0.17196747270047608,
+        "smell": {
+          "obvious": {
+            "n": 157,
+            "hits": 34
+          },
+          "some": {
+            "n": 133,
+            "hits": 5
+          },
+          "none": {
+            "n": 0,
+            "hits": 0
+          }
+        }
+      },
+      "raidDev": {
+        "n": 2354,
+        "hits": 1,
+        "upper95": 0.0020136337315122517
+      },
+      "permissiveFit": {
+        "n": 267,
+        "hits": 0,
+        "upper95": 0.011157261937327516
+      },
+      "wayback": {
+        "n": 300,
+        "hits": 1,
+        "upper95": 0.01571455489158395
+      }
+    },
+    "policy": "Smallest threshold >=2.5 satisfying pointwise CP95 veto criterion; no repeated veto optimization. Polished training half empirical zero safeguard; bound infeasible at n=80."
+  },
+  "fitHash": "3d8c8e5236462681f9b71e6492463da8a459eb11b61331e12bf91bdb460b5922",
+  "evaluationPolicy": "One final evaluation and baseline, including all predeclared ablations; no selection on final results."
+}

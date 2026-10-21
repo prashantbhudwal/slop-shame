@@ -20,6 +20,7 @@ export default defineConfig({
   projects: [
     { name: 'fixture-feed', testMatch: 'fixture-feed.spec.ts' },
     { name: 'ui', testMatch: 'ui.spec.ts' },
+    { name: 'profile', testMatch: 'profile.spec.ts' },
     { name: 'real-linkedin', testMatch: 'real-linkedin.spec.ts', use: { headless: false } },
   ],
 });

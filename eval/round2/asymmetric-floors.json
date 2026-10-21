@@ -1,0 +1,2138 @@
+{
+  "defaults": {
+    "ai-vocabulary.explainer-idioms": 2,
+    "ai-vocabulary.tier1": 3,
+    "ai-vocabulary.tier1-common": 1.2,
+    "ai-vocabulary.collocations": 4,
+    "ai-vocabulary.tier2": 2,
+    "ai-vocabulary.tier3": 1.5,
+    "template-phrases.explainer-scaffold": 3,
+    "template-phrases.labeled-fields": 2,
+    "template-phrases.transition": 1.5,
+    "template-phrases.clarity": 1,
+    "template-phrases.filler": 3,
+    "template-phrases.lets-construction": 2,
+    "template-phrases.template": 3,
+    "template-phrases.boilerplate": 2,
+    "chatbot-leak.greeting": 2,
+    "chatbot-leak.assistant-preamble": 14,
+    "chatbot-leak.sycophantic": 5,
+    "chatbot-leak.assistant-closer": 8,
+    "chatbot-leak.cutoff": 14,
+    "chatbot-leak.model-identity": 14,
+    "chatbot-leak.update": 3,
+    "chatbot-leak.reasoning": 8,
+    "chatbot-leak.reasoning-block": 14,
+    "chatbot-leak.reasoning-channel": 14,
+    "chatbot-leak.instruction-template": 14,
+    "chatbot-leak.chat-protocol": 14,
+    "chatbot-leak.role-transcript": 14,
+    "chatbot-leak.tool-transcript": 14,
+    "chatbot-leak.generated-boundary": 14,
+    "chatbot-leak.acknowledgment": 3,
+    "chatbot-leak.placeholder": 5,
+    "chatbot-leak.editor-note": 4,
+    "chatbot-leak.tracking": 4,
+    "chatbot-leak.citation": 14,
+    "negation-pivot.not-x-but-y": 6,
+    "negation-pivot.one-size-fits-all": 2,
+    "negation-pivot.audience-contrast": 4,
+    "negation-pivot.not-only": 3,
+    "negation-pivot.countdown": 5,
+    "negation-pivot.false-concession": 2,
+    "inflation.significance": 4,
+    "inflation.novelty": 3,
+    "inflation.hollow": 1,
+    "inflation.emotional-flatline": 2,
+    "inflation.lingering-attention": 2,
+    "inflation.real-actual": 2,
+    "inflation.future-narrative": 4,
+    "inflation.promotional": 2,
+    "hedging.stack": 4,
+    "hedging.parenthetical": 3,
+    "hedging.vague-attribution": 2,
+    "hedging.confidence": 1,
+    "engagement-bait.repost-follow": 4,
+    "engagement-bait.reader-question": 2,
+    "engagement-bait.social-closer": 3,
+    "engagement-bait.keyword-closer": 5,
+    "engagement-bait.rhetorical-question": 2,
+    "engagement-bait.formulaic-opener": 5,
+    "engagement-bait.speculative-opener": 4,
+    "engagement-bait.generic-conclusion": 3,
+    "formatting.em-dash": 1,
+    "formatting.unicode-bold": 4,
+    "formatting.section-outline": 1,
+    "formatting.arrow-chain": 2,
+    "formatting.emoji-bullets": 4,
+    "formatting.emoji-density": 3,
+    "formatting.hashtag-stuff": 4,
+    "formatting.bullet-np-list": 3,
+    "formatting.title-case-header": 1.5,
+    "formatting.smart-punct-signature": 1.5,
+    "robotic-rhythm.parallel-pair": 4,
+    "robotic-rhythm.uniformity": 4,
+    "robotic-rhythm.rule-of-three": 3,
+    "robotic-rhythm.cross-para-burstiness": 3,
+    "robotic-rhythm.punct-distribution": 2,
+    "bypass-tricks.homoglyphs": 3,
+    "bypass-tricks.zero-width": 3,
+    "pasted-output.template-labels": 12,
+    "pasted-output.unfilled-slot": 8,
+    "pasted-output.markdown-bold": 3,
+    "pasted-output.markdown-heading": 3,
+    "pasted-output.asterisk-list": 2,
+    "pasted-output.labeled-list": 1.5,
+    "pasted-output.closing-question": 1.5,
+    "pasted-output.audience-callout": 1,
+    "pasted-output.aphorism-tail": 1.5,
+    "pasted-output.imperative-triplet": 1.5,
+    "pasted-output.fragment-triplet": 1,
+    "pasted-output.repeated-openings": 1,
+    "pasted-output.listicle-hook": 2,
+    "pasted-output.story-turn": 2,
+    "pasted-output.lesson-formula": 2,
+    "pasted-output.motivational-stock": 1.5,
+    "pasted-output.takeaway-label": 1.5,
+    "pasted-output.save-cta": 1.5,
+    "pasted-output.keyword-request": 3,
+    "pasted-output.stat-hook": 1,
+    "pasted-output.possible-draft": 12,
+    "pasted-output.assistant-offer": 12,
+    "pasted-output.writing-advice": 8,
+    "pasted-output.sure-opener": 2,
+    "pasted-output.title-label": 2
+  },
+  "floors": {
+    "ai-vocabulary.explainer-idioms": 0.25,
+    "ai-vocabulary.tier1": 0.25,
+    "ai-vocabulary.tier1-common": 0.25,
+    "ai-vocabulary.collocations": 0.25,
+    "ai-vocabulary.tier2": 0.25,
+    "ai-vocabulary.tier3": 0.25,
+    "template-phrases.explainer-scaffold": 3,
+    "template-phrases.labeled-fields": 2,
+    "template-phrases.transition": 0.25,
+    "template-phrases.clarity": 0.25,
+    "template-phrases.filler": 0.25,
+    "template-phrases.lets-construction": 2,
+    "template-phrases.template": 0.25,
+    "template-phrases.boilerplate": 0.25,
+    "chatbot-leak.greeting": 2,
+    "chatbot-leak.assistant-preamble": 14,
+    "chatbot-leak.sycophantic": 5,
+    "chatbot-leak.assistant-closer": 8,
+    "chatbot-leak.cutoff": 14,
+    "chatbot-leak.model-identity": 14,
+    "chatbot-leak.update": 3,
+    "chatbot-leak.reasoning": 8,
+    "chatbot-leak.reasoning-block": 14,
+    "chatbot-leak.reasoning-channel": 14,
+    "chatbot-leak.instruction-template": 14,
+    "chatbot-leak.chat-protocol": 14,
+    "chatbot-leak.role-transcript": 14,
+    "chatbot-leak.tool-transcript": 14,
+    "chatbot-leak.generated-boundary": 14,
+    "chatbot-leak.acknowledgment": 3,
+    "chatbot-leak.placeholder": 5,
+    "chatbot-leak.editor-note": 4,
+    "chatbot-leak.tracking": 4,
+    "chatbot-leak.citation": 14,
+    "negation-pivot.not-x-but-y": 0.25,
+    "negation-pivot.one-size-fits-all": 2,
+    "negation-pivot.audience-contrast": 4,
+    "negation-pivot.not-only": 0.25,
+    "negation-pivot.countdown": 5,
+    "negation-pivot.false-concession": 2,
+    "inflation.significance": 4,
+    "inflation.novelty": 3,
+    "inflation.hollow": 0.25,
+    "inflation.emotional-flatline": 2,
+    "inflation.lingering-attention": 2,
+    "inflation.real-actual": 2,
+    "inflation.future-narrative": 4,
+    "inflation.promotional": 0.25,
+    "hedging.stack": 0.25,
+    "hedging.parenthetical": 0.25,
+    "hedging.vague-attribution": 2,
+    "hedging.confidence": 0.25,
+    "engagement-bait.repost-follow": 4,
+    "engagement-bait.reader-question": 2,
+    "engagement-bait.social-closer": 3,
+    "engagement-bait.keyword-closer": 5,
+    "engagement-bait.rhetorical-question": 2,
+    "engagement-bait.formulaic-opener": 0.25,
+    "engagement-bait.speculative-opener": 4,
+    "engagement-bait.generic-conclusion": 3,
+    "formatting.em-dash": 1,
+    "formatting.unicode-bold": 4,
+    "formatting.section-outline": 0.25,
+    "formatting.arrow-chain": 2,
+    "formatting.emoji-bullets": 4,
+    "formatting.emoji-density": 3,
+    "formatting.hashtag-stuff": 4,
+    "formatting.bullet-np-list": 3,
+    "formatting.title-case-header": 1.5,
+    "formatting.smart-punct-signature": 1.5,
+    "robotic-rhythm.parallel-pair": 4,
+    "robotic-rhythm.uniformity": 0.25,
+    "robotic-rhythm.rule-of-three": 0.25,
+    "robotic-rhythm.cross-para-burstiness": 3,
+    "robotic-rhythm.punct-distribution": 2,
+    "bypass-tricks.homoglyphs": 3,
+    "bypass-tricks.zero-width": 3,
+    "pasted-output.template-labels": 12,
+    "pasted-output.unfilled-slot": 8,
+    "pasted-output.markdown-bold": 0.25,
+    "pasted-output.markdown-heading": 3,
+    "pasted-output.asterisk-list": 2,
+    "pasted-output.labeled-list": 1.5,
+    "pasted-output.closing-question": 0.25,
+    "pasted-output.audience-callout": 1,
+    "pasted-output.aphorism-tail": 0.25,
+    "pasted-output.imperative-triplet": 1.5,
+    "pasted-output.fragment-triplet": 0.25,
+    "pasted-output.repeated-openings": 0.25,
+    "pasted-output.listicle-hook": 2,
+    "pasted-output.story-turn": 2,
+    "pasted-output.lesson-formula": 2,
+    "pasted-output.motivational-stock": 1.5,
+    "pasted-output.takeaway-label": 1.5,
+    "pasted-output.save-cta": 1.5,
+    "pasted-output.keyword-request": 3,
+    "pasted-output.stat-hook": 1,
+    "pasted-output.possible-draft": 12,
+    "pasted-output.assistant-offer": 12,
+    "pasted-output.writing-advice": 8,
+    "pasted-output.sure-opener": 0.25,
+    "pasted-output.title-label": 2
+  },
+  "humanFalseAlarmEvidence": {
+    "inflation.hollow": [
+      {
+        "dataset": "raidTrain",
+        "id": "024512c9-c1c2-4e8c-97ff-d516c49bac48",
+        "score": 44
+      },
+      {
+        "dataset": "raidTrain",
+        "id": "024fb2f8-b6f7-4ed3-8452-b3a5da46b4c4",
+        "score": 61
+      },
+      {
+        "dataset": "raidTrain",
+        "id": "3df3d166-9667-4c46-98c9-fc6274b49890",
+        "score": 49
+      },
+      {
+        "dataset": "raidTrain",
+        "id": "3f91fb91-1dff-4935-adc4-7bd486ed3f55",
+        "score": 57
+      },
+      {
+        "dataset": "raidTrain",
+        "id": "4ece2f54-d604-44cf-bcdb-ec439104b138",
+        "score": 44
+      },
+      {
+        "dataset": "raidTrain",
+        "id": "59995157-75d6-41e2-958b-c99bd6565d32",
+        "score": 46
+      },
+      {
+        "dataset": "raidTrain",
+        "id": "5db78fcd-b35e-44d7-a46a-6329499d6dda",
+        "score": 47
+      },
+      {
+        "dataset": "raidTrain",
+        "id": "65fb7ff7-2170-4e17-8d7d-9160c9bb7e88",
+        "score": 44
+      },
+      {
+        "dataset": "raidTrain",
+        "id": "739d8a19-6e3b-4400-b6c0-bf8e8e1ad5bf",
+        "score": 57
+      },
+      {
+        "dataset": "raidTrain",
+        "id": "8388a58a-0c38-41c7-9f80-07ce02fd4fd7",
+        "score": 40
+      },
+      {
+        "dataset": "raidTrain",
+        "id": "86ede68a-0017-436f-89e5-3f86af526e0d",
+        "score": 61
+      },
+      {
+        "dataset": "raidTrain",
+        "id": "9e3079a3-6778-4f7b-8f15-ea09593f93b9",
+        "score": 61
+      },
+      {
+        "dataset": "raidTrain",
+        "id": "a01d4131-603e-48d3-b048-99ab8872deb3",
+        "score": 49
+      },
+      {
+        "dataset": "raidTrain",
+        "id": "b112dea1-0044-424f-83c6-53ac62ba0d96",
+        "score": 51
+      },
+      {
+        "dataset": "raidTrain",
+        "id": "b8b6abf3-7ab2-48ff-a1ad-9bd8a271d68d",
+        "score": 70
+      },
+      {
+        "dataset": "raidTrain",
+        "id": "c9481a76-b4ce-46e8-ac3a-4c499a497254",
+        "score": 49
+      },
+      {
+        "dataset": "raidTrain",
+        "id": "cd93f4f0-89a5-4817-92ed-14be051ba09b",
+        "score": 42
+      },
+      {
+        "dataset": "raidTrain",
+        "id": "d28d9992-7587-4bdf-83d7-080a703b96fa",
+        "score": 44
+      },
+      {
+        "dataset": "raidTrain",
+        "id": "dac08af7-2126-405f-9b92-3d4ec1d7e6e0",
+        "score": 61
+      },
+      {
+        "dataset": "raidTrain",
+        "id": "f1d4ac7a-95de-478b-8902-2a020b861b7d",
+        "score": 44
+      },
+      {
+        "dataset": "raidTrain",
+        "id": "f29ba0f4-d1d6-4049-b28e-451683c94491",
+        "score": 44
+      },
+      {
+        "dataset": "raidTrain",
+        "id": "fd9cb785-9233-4113-b079-159aac4b7a51",
+        "score": 49
+      },
+      {
+        "dataset": "raidDev",
+        "id": "0ff1f2d0-2906-4838-ad94-8de7c5229137",
+        "score": 44
+      },
+      {
+        "dataset": "raidDev",
+        "id": "1cbad4d4-ec42-42bd-859a-82e146714ee1",
+        "score": 65
+      },
+      {
+        "dataset": "raidDev",
+        "id": "3c564ab9-fbb5-4f87-b977-4c633928886e",
+        "score": 44
+      },
+      {
+        "dataset": "raidDev",
+        "id": "9fc456aa-3019-4769-a9e0-d35722b72ca9",
+        "score": 44
+      },
+      {
+        "dataset": "raidDev",
+        "id": "fd22b81c-20aa-4cae-98c8-a0e5814b53cc",
+        "score": 61
+      },
+      {
+        "dataset": "permissive",
+        "id": "plos:10.1371/journal.pbio.3000818",
+        "score": 52
+      },
+      {
+        "dataset": "polished",
+        "id": "gemini-3.8-flash-medium.jsonl#f7cceffc-35d6-47c4-b8ed-a455d0a9502c",
+        "score": 44
+      }
+    ],
+    "negation-pivot.not-x-but-y": [
+      {
+        "dataset": "raidTrain",
+        "id": "024512c9-c1c2-4e8c-97ff-d516c49bac48",
+        "score": 44
+      },
+      {
+        "dataset": "raidTrain",
+        "id": "024fb2f8-b6f7-4ed3-8452-b3a5da46b4c4",
+        "score": 61
+      },
+      {
+        "dataset": "raidTrain",
+        "id": "044e4957-0891-46ef-baac-9e87109b5c98",
+        "score": 53
+      },
+      {
+        "dataset": "raidTrain",
+        "id": "2d4e9b51-06ca-4d28-9290-19fcfaf7e278",
+        "score": 64
+      },
+      {
+        "dataset": "raidTrain",
+        "id": "380ccbee-696c-46d1-95f7-3c4f69dfd45f",
+        "score": 51
+      },
+      {
+        "dataset": "raidTrain",
+        "id": "3f91fb91-1dff-4935-adc4-7bd486ed3f55",
+        "score": 57
+      },
+      {
+        "dataset": "raidTrain",
+        "id": "4ece2f54-d604-44cf-bcdb-ec439104b138",
+        "score": 44
+      },
+      {
+        "dataset": "raidTrain",
+        "id": "59995157-75d6-41e2-958b-c99bd6565d32",
+        "score": 46
+      },
+      {
+        "dataset": "raidTrain",
+        "id": "5d0cd832-1f62-4c83-a6e3-1f4460df68da",
+        "score": 60
+      },
+      {
+        "dataset": "raidTrain",
+        "id": "7b190f93-d6b6-4541-841f-9f99d477763c",
+        "score": 44
+      },
+      {
+        "dataset": "raidTrain",
+        "id": "7dba4b4b-88e8-4b31-ba95-cb1f3d656d3b",
+        "score": 53
+      },
+      {
+        "dataset": "raidTrain",
+        "id": "972f6a8d-ce0e-48f3-a605-fbed57afd07f",
+        "score": 53
+      },
+      {
+        "dataset": "raidTrain",
+        "id": "9e3079a3-6778-4f7b-8f15-ea09593f93b9",
+        "score": 61
+      },
+      {
+        "dataset": "raidTrain",
+        "id": "9e9ccebf-3f46-47a0-b921-3e30bb9dab02",
+        "score": 63
+      },
+      {
+        "dataset": "raidTrain",
+        "id": "ae21f1aa-9034-4c9a-bdbb-7969111feee4",
+        "score": 44
+      },
+      {
+        "dataset": "raidTrain",
+        "id": "b112dea1-0044-424f-83c6-53ac62ba0d96",
+        "score": 51
+      },
+      {
+        "dataset": "raidTrain",
+        "id": "b2197454-a00b-4971-af86-6be60c5f5cc9",
+        "score": 67
+      },
+      {
+        "dataset": "raidTrain",
+        "id": "b8b6abf3-7ab2-48ff-a1ad-9bd8a271d68d",
+        "score": 70
+      },
+      {
+        "dataset": "raidTrain",
+        "id": "bf16831e-c75f-4196-8421-03054c7fcb7a",
+        "score": 44
+      },
+      {
+        "dataset": "raidTrain",
+        "id": "c0906021-6fb8-4021-af2b-25ae80cc58eb",
+        "score": 57
+      },
+      {
+        "dataset": "raidTrain",
+        "id": "d66bf503-0aef-4e75-8bbd-4852f20837c5",
+        "score": 53
+      },
+      {
+        "dataset": "raidTrain",
+        "id": "d7f990c3-8d1b-4dd9-802c-3642616633a2",
+        "score": 50
+      },
+      {
+        "dataset": "raidTrain",
+        "id": "dac08af7-2126-405f-9b92-3d4ec1d7e6e0",
+        "score": 61
+      },
+      {
+        "dataset": "raidTrain",
+        "id": "e7667a05-4905-4dec-9a7d-ee6f6b35ed1b",
+        "score": 44
+      },
+      {
+        "dataset": "raidTrain",
+        "id": "eb76307e-f969-4523-9943-52da0e3f78a8",
+        "score": 53
+      },
+      {
+        "dataset": "raidTrain",
+        "id": "f29ba0f4-d1d6-4049-b28e-451683c94491",
+        "score": 44
+      },
+      {
+        "dataset": "raidTrain",
+        "id": "f4678c31-b347-49dd-b9b9-f6b78a34f6c1",
+        "score": 53
+      },
+      {
+        "dataset": "raidTrain",
+        "id": "f74d7f8e-6e56-4f88-b7ba-e37ab30c1fd3",
+        "score": 49
+      },
+      {
+        "dataset": "raidDev",
+        "id": "097ed575-2864-41cc-bad9-502c712b89a7",
+        "score": 57
+      },
+      {
+        "dataset": "raidDev",
+        "id": "0ff1f2d0-2906-4838-ad94-8de7c5229137",
+        "score": 44
+      },
+      {
+        "dataset": "raidDev",
+        "id": "1cbad4d4-ec42-42bd-859a-82e146714ee1",
+        "score": 65
+      },
+      {
+        "dataset": "raidDev",
+        "id": "3c564ab9-fbb5-4f87-b977-4c633928886e",
+        "score": 44
+      },
+      {
+        "dataset": "raidDev",
+        "id": "4dc440dc-d207-4087-86fe-6d0bca9488c5",
+        "score": 44
+      },
+      {
+        "dataset": "raidDev",
+        "id": "664e2272-236e-46cf-9518-fb6d1efa3565",
+        "score": 53
+      },
+      {
+        "dataset": "raidDev",
+        "id": "6e16a07e-3471-46a2-9bce-716643ffc5de",
+        "score": 44
+      },
+      {
+        "dataset": "raidDev",
+        "id": "81e57adc-03a9-4179-a0e5-60ca2daef6fd",
+        "score": 53
+      },
+      {
+        "dataset": "raidDev",
+        "id": "9fc456aa-3019-4769-a9e0-d35722b72ca9",
+        "score": 44
+      },
+      {
+        "dataset": "raidDev",
+        "id": "b665594a-1577-4f9b-b056-ef1a9b8eed7b",
+        "score": 49
+      },
+      {
+        "dataset": "raidDev",
+        "id": "bce60dfc-4291-483c-a726-08b85ed94940",
+        "score": 63
+      },
+      {
+        "dataset": "raidDev",
+        "id": "bd37fc55-7f71-478e-b813-05a4a7ec2168",
+        "score": 49
+      },
+      {
+        "dataset": "raidDev",
+        "id": "e774a17a-c547-4115-af53-c86b48e89441",
+        "score": 57
+      },
+      {
+        "dataset": "raidDev",
+        "id": "fc672e9a-bb62-4475-90a6-59d08a9dde07",
+        "score": 62
+      },
+      {
+        "dataset": "polished",
+        "id": "gpt-6-luna-medium.jsonl#c6c3fd9a-7ca2-4b01-995c-6009139b9a39",
+        "score": 53
+      }
+    ],
+    "robotic-rhythm.rule-of-three": [
+      {
+        "dataset": "raidTrain",
+        "id": "024fb2f8-b6f7-4ed3-8452-b3a5da46b4c4",
+        "score": 61
+      },
+      {
+        "dataset": "raidTrain",
+        "id": "044e4957-0891-46ef-baac-9e87109b5c98",
+        "score": 53
+      },
+      {
+        "dataset": "raidTrain",
+        "id": "12511f77-c1f2-4f6d-8f3b-616e3dbef3fc",
+        "score": 44
+      },
+      {
+        "dataset": "raidTrain",
+        "id": "1ee8c2bd-7cb7-4147-92de-7a6809eb53a8",
+        "score": 57
+      },
+      {
+        "dataset": "raidTrain",
+        "id": "2183baca-5132-4f8f-8044-f43ebd5936ec",
+        "score": 42
+      },
+      {
+        "dataset": "raidTrain",
+        "id": "2217f253-df35-40fb-8c13-6e6fe947c53c",
+        "score": 53
+      },
+      {
+        "dataset": "raidTrain",
+        "id": "25689644-8159-4de0-8167-2efea735f75b",
+        "score": 46
+      },
+      {
+        "dataset": "raidTrain",
+        "id": "25ec00ca-1a72-4cdb-9b87-0438eaa368fd",
+        "score": 54
+      },
+      {
+        "dataset": "raidTrain",
+        "id": "2a3ef129-4305-4e24-82f2-37676af27ff6",
+        "score": 63
+      },
+      {
+        "dataset": "raidTrain",
+        "id": "2ba6af82-006a-44cf-9857-c0b6aecd1e7a",
+        "score": 44
+      },
+      {
+        "dataset": "raidTrain",
+        "id": "2d4e9b51-06ca-4d28-9290-19fcfaf7e278",
+        "score": 64
+      },
+      {
+        "dataset": "raidTrain",
+        "id": "2df6255b-aebc-4134-a9a0-1304b1d31c3a",
+        "score": 61
+      },
+      {
+        "dataset": "raidTrain",
+        "id": "2f8b6668-f343-45ed-a762-d44c8002cfed",
+        "score": 49
+      },
+      {
+        "dataset": "raidTrain",
+        "id": "33990fb9-7202-4e37-8d52-b1df461a4951",
+        "score": 70
+      },
+      {
+        "dataset": "raidTrain",
+        "id": "362f3285-ec55-442d-a04d-f2ab889ee4c6",
+        "score": 71
+      },
+      {
+        "dataset": "raidTrain",
+        "id": "382eacbc-5a04-4653-b19a-bd4a8ae6fb6e",
+        "score": 53
+      },
+      {
+        "dataset": "raidTrain",
+        "id": "3f91fb91-1dff-4935-adc4-7bd486ed3f55",
+        "score": 57
+      },
+      {
+        "dataset": "raidTrain",
+        "id": "443ff87f-8441-43f5-9685-b5720cfce21b",
+        "score": 50
+      },
+      {
+        "dataset": "raidTrain",
+        "id": "4f72dde4-9d71-4c2c-a9e9-19c831d3d2b4",
+        "score": 46
+      },
+      {
+        "dataset": "raidTrain",
+        "id": "57f8f8aa-31e2-49c8-90b7-ab6bb2d56bca",
+        "score": 44
+      },
+      {
+        "dataset": "raidTrain",
+        "id": "588ef2a6-62b6-4fbf-a9ea-845a67a36566",
+        "score": 40
+      },
+      {
+        "dataset": "raidTrain",
+        "id": "5cee4b99-1bf9-4fbd-9db2-6e0ecb0a95ca",
+        "score": 49
+      },
+      {
+        "dataset": "raidTrain",
+        "id": "5db78fcd-b35e-44d7-a46a-6329499d6dda",
+        "score": 47
+      },
+      {
+        "dataset": "raidTrain",
+        "id": "602d3ced-0fad-4e28-9504-73debc904d91",
+        "score": 67
+      },
+      {
+        "dataset": "raidTrain",
+        "id": "65fb7ff7-2170-4e17-8d7d-9160c9bb7e88",
+        "score": 44
+      },
+      {
+        "dataset": "raidTrain",
+        "id": "69171c6a-6dd0-4ec3-8d58-f62378cfeaf1",
+        "score": 57
+      },
+      {
+        "dataset": "raidTrain",
+        "id": "739d8a19-6e3b-4400-b6c0-bf8e8e1ad5bf",
+        "score": 57
+      },
+      {
+        "dataset": "raidTrain",
+        "id": "7dba4b4b-88e8-4b31-ba95-cb1f3d656d3b",
+        "score": 53
+      },
+      {
+        "dataset": "raidTrain",
+        "id": "8388a58a-0c38-41c7-9f80-07ce02fd4fd7",
+        "score": 40
+      },
+      {
+        "dataset": "raidTrain",
+        "id": "86ede68a-0017-436f-89e5-3f86af526e0d",
+        "score": 61
+      },
+      {
+        "dataset": "raidTrain",
+        "id": "8ad31978-d20e-4954-8ba2-fb1d12e9fbce",
+        "score": 50
+      },
+      {
+        "dataset": "raidTrain",
+        "id": "8f2b081c-337a-4566-94fb-b9b690720070",
+        "score": 57
+      },
+      {
+        "dataset": "raidTrain",
+        "id": "972f6a8d-ce0e-48f3-a605-fbed57afd07f",
+        "score": 53
+      },
+      {
+        "dataset": "raidTrain",
+        "id": "9c27dfc8-9a1b-4063-b8a2-c6555cc631e0",
+        "score": 44
+      },
+      {
+        "dataset": "raidTrain",
+        "id": "9e3079a3-6778-4f7b-8f15-ea09593f93b9",
+        "score": 61
+      },
+      {
+        "dataset": "raidTrain",
+        "id": "9e9ccebf-3f46-47a0-b921-3e30bb9dab02",
+        "score": 63
+      },
+      {
+        "dataset": "raidTrain",
+        "id": "a01d4131-603e-48d3-b048-99ab8872deb3",
+        "score": 49
+      },
+      {
+        "dataset": "raidTrain",
+        "id": "ab973741-c831-4676-b463-3c916b5a4050",
+        "score": 83
+      },
+      {
+        "dataset": "raidTrain",
+        "id": "ae82e245-eb12-4b58-9ddc-b2693ae5889e",
+        "score": 44
+      },
+      {
+        "dataset": "raidTrain",
+        "id": "b2197454-a00b-4971-af86-6be60c5f5cc9",
+        "score": 67
+      },
+      {
+        "dataset": "raidTrain",
+        "id": "b8b6abf3-7ab2-48ff-a1ad-9bd8a271d68d",
+        "score": 70
+      },
+      {
+        "dataset": "raidTrain",
+        "id": "c0906021-6fb8-4021-af2b-25ae80cc58eb",
+        "score": 57
+      },
+      {
+        "dataset": "raidTrain",
+        "id": "c1ec85bc-0e74-4f70-9ee5-0feecdbfffd1",
+        "score": 46
+      },
+      {
+        "dataset": "raidTrain",
+        "id": "c22fe005-225b-4447-9e24-83a3d0f46844",
+        "score": 46
+      },
+      {
+        "dataset": "raidTrain",
+        "id": "c9481a76-b4ce-46e8-ac3a-4c499a497254",
+        "score": 49
+      },
+      {
+        "dataset": "raidTrain",
+        "id": "d2121f0a-8fca-4160-a2ca-0238c3aabd56",
+        "score": 42
+      },
+      {
+        "dataset": "raidTrain",
+        "id": "d28d9992-7587-4bdf-83d7-080a703b96fa",
+        "score": 44
+      },
+      {
+        "dataset": "raidTrain",
+        "id": "d66bf503-0aef-4e75-8bbd-4852f20837c5",
+        "score": 53
+      },
+      {
+        "dataset": "raidTrain",
+        "id": "d7279c70-e1b9-4c9d-8b33-38414779a02e",
+        "score": 53
+      },
+      {
+        "dataset": "raidTrain",
+        "id": "d870074d-2288-46f5-a9b6-0ab52bc59cad",
+        "score": 50
+      },
+      {
+        "dataset": "raidTrain",
+        "id": "dac08af7-2126-405f-9b92-3d4ec1d7e6e0",
+        "score": 61
+      },
+      {
+        "dataset": "raidTrain",
+        "id": "dbf989b1-62b6-446d-941a-8080fd2a9139",
+        "score": 45
+      },
+      {
+        "dataset": "raidTrain",
+        "id": "dcadc854-72f3-4745-a730-2305da7dcbe0",
+        "score": 53
+      },
+      {
+        "dataset": "raidTrain",
+        "id": "e004a8bf-085e-4e9e-b517-9994a0fab447",
+        "score": 49
+      },
+      {
+        "dataset": "raidTrain",
+        "id": "e77fd92a-6788-4dc2-bd28-fe3b3bf23a01",
+        "score": 57
+      },
+      {
+        "dataset": "raidTrain",
+        "id": "ea20bcc2-0678-463c-a2b9-c9b537cf7e75",
+        "score": 42
+      },
+      {
+        "dataset": "raidTrain",
+        "id": "eb76307e-f969-4523-9943-52da0e3f78a8",
+        "score": 53
+      },
+      {
+        "dataset": "raidTrain",
+        "id": "edeb2d81-8e9b-48ae-9f31-d968c5952f57",
+        "score": 63
+      },
+      {
+        "dataset": "raidTrain",
+        "id": "f1d4ac7a-95de-478b-8902-2a020b861b7d",
+        "score": 44
+      },
+      {
+        "dataset": "raidTrain",
+        "id": "fd9cb785-9233-4113-b079-159aac4b7a51",
+        "score": 49
+      },
+      {
+        "dataset": "raidDev",
+        "id": "005e74ce-4f9e-4d73-b800-390cfdfd25fd",
+        "score": 57
+      },
+      {
+        "dataset": "raidDev",
+        "id": "0848437e-33d4-4ede-b6b2-fc3594c8c7cd",
+        "score": 50
+      },
+      {
+        "dataset": "raidDev",
+        "id": "097ed575-2864-41cc-bad9-502c712b89a7",
+        "score": 57
+      },
+      {
+        "dataset": "raidDev",
+        "id": "1cbad4d4-ec42-42bd-859a-82e146714ee1",
+        "score": 65
+      },
+      {
+        "dataset": "raidDev",
+        "id": "2b479aed-a3be-4e10-8bed-e4240c9015ad",
+        "score": 50
+      },
+      {
+        "dataset": "raidDev",
+        "id": "439ecd7e-9102-46c7-9419-ff4da9c807a9",
+        "score": 44
+      },
+      {
+        "dataset": "raidDev",
+        "id": "4441f453-fa12-45d7-a27d-0cfe8137669c",
+        "score": 46
+      },
+      {
+        "dataset": "raidDev",
+        "id": "55803c23-e9a0-419b-94b2-bec6207603a6",
+        "score": 53
+      },
+      {
+        "dataset": "raidDev",
+        "id": "64dfd596-0bb4-41a8-9d02-0b3ec28d996a",
+        "score": 49
+      },
+      {
+        "dataset": "raidDev",
+        "id": "664e2272-236e-46cf-9518-fb6d1efa3565",
+        "score": 53
+      },
+      {
+        "dataset": "raidDev",
+        "id": "6a1106cc-36cd-40ca-a965-23ecbc8d9ac8",
+        "score": 54
+      },
+      {
+        "dataset": "raidDev",
+        "id": "76434357-f919-41f9-86b4-9ef8c72dfdbb",
+        "score": 61
+      },
+      {
+        "dataset": "raidDev",
+        "id": "771f8e8c-a41a-410b-bb61-2b0e70467c95",
+        "score": 43
+      },
+      {
+        "dataset": "raidDev",
+        "id": "7abb9d43-d95b-4add-8a1e-73cd1b616db2",
+        "score": 44
+      },
+      {
+        "dataset": "raidDev",
+        "id": "81e57adc-03a9-4179-a0e5-60ca2daef6fd",
+        "score": 53
+      },
+      {
+        "dataset": "raidDev",
+        "id": "ab55a7c6-280b-4258-81e4-f12bbde4c094",
+        "score": 49
+      },
+      {
+        "dataset": "raidDev",
+        "id": "b386980c-b7fb-4842-89b5-d0d310a0a715",
+        "score": 44
+      },
+      {
+        "dataset": "raidDev",
+        "id": "bce60dfc-4291-483c-a726-08b85ed94940",
+        "score": 63
+      },
+      {
+        "dataset": "raidDev",
+        "id": "c18a0d77-f6ff-4849-8d33-7fa44851bd4b",
+        "score": 49
+      },
+      {
+        "dataset": "raidDev",
+        "id": "c730b1bd-2b5d-4a5e-9144-3903bd4e961d",
+        "score": 58
+      },
+      {
+        "dataset": "raidDev",
+        "id": "e774a17a-c547-4115-af53-c86b48e89441",
+        "score": 57
+      },
+      {
+        "dataset": "raidDev",
+        "id": "f3703834-c4f0-4159-b970-e314977103fb",
+        "score": 45
+      },
+      {
+        "dataset": "raidDev",
+        "id": "fc672e9a-bb62-4475-90a6-59d08a9dde07",
+        "score": 62
+      },
+      {
+        "dataset": "raidDev",
+        "id": "fd22b81c-20aa-4cae-98c8-a0e5814b53cc",
+        "score": 61
+      },
+      {
+        "dataset": "permissive",
+        "id": "plos:10.1371/journal.pbio.3000748",
+        "score": 44
+      },
+      {
+        "dataset": "permissive",
+        "id": "plos:10.1371/journal.pbio.3000782",
+        "score": 51
+      },
+      {
+        "dataset": "permissive",
+        "id": "plos:10.1371/journal.pbio.3000818",
+        "score": 52
+      },
+      {
+        "dataset": "permissive",
+        "id": "plos:10.1371/journal.pbio.3000830",
+        "score": 52
+      },
+      {
+        "dataset": "polished",
+        "id": "gemini-3.8-flash-medium.jsonl#f7cceffc-35d6-47c4-b8ed-a455d0a9502c",
+        "score": 44
+      },
+      {
+        "dataset": "polished",
+        "id": "gpt-6-luna-medium.jsonl#c6c3fd9a-7ca2-4b01-995c-6009139b9a39",
+        "score": 53
+      }
+    ],
+    "ai-vocabulary.collocations": [
+      {
+        "dataset": "raidTrain",
+        "id": "12511f77-c1f2-4f6d-8f3b-616e3dbef3fc",
+        "score": 44
+      },
+      {
+        "dataset": "raidTrain",
+        "id": "e004a8bf-085e-4e9e-b517-9994a0fab447",
+        "score": 49
+      },
+      {
+        "dataset": "raidDev",
+        "id": "c18a0d77-f6ff-4849-8d33-7fa44851bd4b",
+        "score": 49
+      }
+    ],
+    "template-phrases.clarity": [
+      {
+        "dataset": "raidTrain",
+        "id": "172237dd-dfd6-4a81-974d-a8f505e59492",
+        "score": 43
+      },
+      {
+        "dataset": "raidTrain",
+        "id": "2d4e9b51-06ca-4d28-9290-19fcfaf7e278",
+        "score": 64
+      },
+      {
+        "dataset": "raidTrain",
+        "id": "2f8b6668-f343-45ed-a762-d44c8002cfed",
+        "score": 49
+      },
+      {
+        "dataset": "raidTrain",
+        "id": "49e7b13b-72f8-4b41-9b92-2528bbd8c592",
+        "score": 42
+      },
+      {
+        "dataset": "raidTrain",
+        "id": "5090cdee-b7f1-4512-9ffc-31b4ceda9cca",
+        "score": 45
+      },
+      {
+        "dataset": "raidTrain",
+        "id": "712ce581-7f4a-4a6b-afb3-dd1ba77af6b6",
+        "score": 42
+      },
+      {
+        "dataset": "raidTrain",
+        "id": "739d8a19-6e3b-4400-b6c0-bf8e8e1ad5bf",
+        "score": 57
+      },
+      {
+        "dataset": "raidTrain",
+        "id": "8f2b081c-337a-4566-94fb-b9b690720070",
+        "score": 57
+      },
+      {
+        "dataset": "raidTrain",
+        "id": "bfc76195-7ca1-4da2-ac57-a8944e39a669",
+        "score": 44
+      },
+      {
+        "dataset": "raidTrain",
+        "id": "c0906021-6fb8-4021-af2b-25ae80cc58eb",
+        "score": 57
+      },
+      {
+        "dataset": "raidTrain",
+        "id": "e77fd92a-6788-4dc2-bd28-fe3b3bf23a01",
+        "score": 57
+      },
+      {
+        "dataset": "raidDev",
+        "id": "0848437e-33d4-4ede-b6b2-fc3594c8c7cd",
+        "score": 50
+      },
+      {
+        "dataset": "raidDev",
+        "id": "2b479aed-a3be-4e10-8bed-e4240c9015ad",
+        "score": 50
+      },
+      {
+        "dataset": "raidDev",
+        "id": "771f8e8c-a41a-410b-bb61-2b0e70467c95",
+        "score": 43
+      },
+      {
+        "dataset": "raidDev",
+        "id": "7abb9d43-d95b-4add-8a1e-73cd1b616db2",
+        "score": 44
+      },
+      {
+        "dataset": "raidDev",
+        "id": "ebe10b1d-603d-4997-99e0-705a38eec080",
+        "score": 46
+      }
+    ],
+    "ai-vocabulary.tier2": [
+      {
+        "dataset": "raidTrain",
+        "id": "172237dd-dfd6-4a81-974d-a8f505e59492",
+        "score": 43
+      },
+      {
+        "dataset": "raidTrain",
+        "id": "57f8f8aa-31e2-49c8-90b7-ab6bb2d56bca",
+        "score": 44
+      }
+    ],
+    "ai-vocabulary.tier1": [
+      {
+        "dataset": "raidTrain",
+        "id": "1ee8c2bd-7cb7-4147-92de-7a6809eb53a8",
+        "score": 57
+      },
+      {
+        "dataset": "raidTrain",
+        "id": "25689644-8159-4de0-8167-2efea735f75b",
+        "score": 46
+      },
+      {
+        "dataset": "raidTrain",
+        "id": "25ec00ca-1a72-4cdb-9b87-0438eaa368fd",
+        "score": 54
+      },
+      {
+        "dataset": "raidTrain",
+        "id": "2a3ef129-4305-4e24-82f2-37676af27ff6",
+        "score": 63
+      },
+      {
+        "dataset": "raidTrain",
+        "id": "33990fb9-7202-4e37-8d52-b1df461a4951",
+        "score": 70
+      },
+      {
+        "dataset": "raidTrain",
+        "id": "362f3285-ec55-442d-a04d-f2ab889ee4c6",
+        "score": 71
+      },
+      {
+        "dataset": "raidTrain",
+        "id": "382eacbc-5a04-4653-b19a-bd4a8ae6fb6e",
+        "score": 53
+      },
+      {
+        "dataset": "raidTrain",
+        "id": "602d3ced-0fad-4e28-9504-73debc904d91",
+        "score": 67
+      },
+      {
+        "dataset": "raidTrain",
+        "id": "9eb7685b-b367-4845-b1a1-2f930bba74af",
+        "score": 53
+      },
+      {
+        "dataset": "raidTrain",
+        "id": "ab973741-c831-4676-b463-3c916b5a4050",
+        "score": 83
+      },
+      {
+        "dataset": "raidTrain",
+        "id": "ae82e245-eb12-4b58-9ddc-b2693ae5889e",
+        "score": 44
+      },
+      {
+        "dataset": "raidTrain",
+        "id": "b62f5bad-f434-4b38-9844-f73c5ae323ce",
+        "score": 46
+      },
+      {
+        "dataset": "raidTrain",
+        "id": "dcadc854-72f3-4745-a730-2305da7dcbe0",
+        "score": 53
+      },
+      {
+        "dataset": "raidTrain",
+        "id": "edeb2d81-8e9b-48ae-9f31-d968c5952f57",
+        "score": 63
+      },
+      {
+        "dataset": "raidDev",
+        "id": "76434357-f919-41f9-86b4-9ef8c72dfdbb",
+        "score": 61
+      },
+      {
+        "dataset": "permissive",
+        "id": "plos:10.1371/journal.pbio.3000745",
+        "score": 53
+      },
+      {
+        "dataset": "permissive",
+        "id": "plos:10.1371/journal.pbio.3000830",
+        "score": 52
+      },
+      {
+        "dataset": "permissive",
+        "id": "plos:10.1371/journal.pbio.3000863",
+        "score": 45
+      }
+    ],
+    "ai-vocabulary.tier1-common": [
+      {
+        "dataset": "raidTrain",
+        "id": "2183baca-5132-4f8f-8044-f43ebd5936ec",
+        "score": 42
+      },
+      {
+        "dataset": "raidTrain",
+        "id": "2ba6af82-006a-44cf-9857-c0b6aecd1e7a",
+        "score": 44
+      },
+      {
+        "dataset": "raidTrain",
+        "id": "2d4e9b51-06ca-4d28-9290-19fcfaf7e278",
+        "score": 64
+      },
+      {
+        "dataset": "raidTrain",
+        "id": "443ff87f-8441-43f5-9685-b5720cfce21b",
+        "score": 50
+      },
+      {
+        "dataset": "raidTrain",
+        "id": "49e7b13b-72f8-4b41-9b92-2528bbd8c592",
+        "score": 42
+      },
+      {
+        "dataset": "raidTrain",
+        "id": "5090cdee-b7f1-4512-9ffc-31b4ceda9cca",
+        "score": 45
+      },
+      {
+        "dataset": "raidTrain",
+        "id": "50d15887-60ef-45c7-9b77-7fbe9f9070aa",
+        "score": 44
+      },
+      {
+        "dataset": "raidTrain",
+        "id": "583ae53b-28f3-4c53-9ebf-351347773660",
+        "score": 45
+      },
+      {
+        "dataset": "raidTrain",
+        "id": "588ef2a6-62b6-4fbf-a9ea-845a67a36566",
+        "score": 40
+      },
+      {
+        "dataset": "raidTrain",
+        "id": "5db78fcd-b35e-44d7-a46a-6329499d6dda",
+        "score": 47
+      },
+      {
+        "dataset": "raidTrain",
+        "id": "712ce581-7f4a-4a6b-afb3-dd1ba77af6b6",
+        "score": 42
+      },
+      {
+        "dataset": "raidTrain",
+        "id": "a5251cdf-e973-4a19-8c07-3bd0ebdbc0d6",
+        "score": 42
+      },
+      {
+        "dataset": "raidTrain",
+        "id": "cd93f4f0-89a5-4817-92ed-14be051ba09b",
+        "score": 42
+      },
+      {
+        "dataset": "raidTrain",
+        "id": "d870074d-2288-46f5-a9b6-0ab52bc59cad",
+        "score": 50
+      },
+      {
+        "dataset": "raidTrain",
+        "id": "dbf989b1-62b6-446d-941a-8080fd2a9139",
+        "score": 45
+      },
+      {
+        "dataset": "raidTrain",
+        "id": "ea20bcc2-0678-463c-a2b9-c9b537cf7e75",
+        "score": 42
+      },
+      {
+        "dataset": "raidDev",
+        "id": "2b479aed-a3be-4e10-8bed-e4240c9015ad",
+        "score": 50
+      },
+      {
+        "dataset": "raidDev",
+        "id": "6a1106cc-36cd-40ca-a965-23ecbc8d9ac8",
+        "score": 54
+      },
+      {
+        "dataset": "raidDev",
+        "id": "771f8e8c-a41a-410b-bb61-2b0e70467c95",
+        "score": 43
+      },
+      {
+        "dataset": "raidDev",
+        "id": "ae139668-9309-44be-b5a3-8f82f9b7bdd0",
+        "score": 45
+      },
+      {
+        "dataset": "raidDev",
+        "id": "ebe10b1d-603d-4997-99e0-705a38eec080",
+        "score": 46
+      },
+      {
+        "dataset": "raidDev",
+        "id": "f3703834-c4f0-4159-b970-e314977103fb",
+        "score": 45
+      },
+      {
+        "dataset": "raidDev",
+        "id": "fd22b81c-20aa-4cae-98c8-a0e5814b53cc",
+        "score": 61
+      },
+      {
+        "dataset": "permissive",
+        "id": "plos:10.1371/journal.pbio.3000830",
+        "score": 52
+      },
+      {
+        "dataset": "permissive",
+        "id": "plos:10.1371/journal.pbio.3000863",
+        "score": 45
+      }
+    ],
+    "hedging.parenthetical": [
+      {
+        "dataset": "raidTrain",
+        "id": "2217f253-df35-40fb-8c13-6e6fe947c53c",
+        "score": 53
+      }
+    ],
+    "pasted-output.aphorism-tail": [
+      {
+        "dataset": "raidTrain",
+        "id": "2217f253-df35-40fb-8c13-6e6fe947c53c",
+        "score": 53
+      }
+    ],
+    "pasted-output.fragment-triplet": [
+      {
+        "dataset": "raidTrain",
+        "id": "2217f253-df35-40fb-8c13-6e6fe947c53c",
+        "score": 53
+      },
+      {
+        "dataset": "raidTrain",
+        "id": "49e7b13b-72f8-4b41-9b92-2528bbd8c592",
+        "score": 42
+      },
+      {
+        "dataset": "raidTrain",
+        "id": "69171c6a-6dd0-4ec3-8d58-f62378cfeaf1",
+        "score": 57
+      },
+      {
+        "dataset": "raidTrain",
+        "id": "7b190f93-d6b6-4541-841f-9f99d477763c",
+        "score": 44
+      },
+      {
+        "dataset": "raidTrain",
+        "id": "8ad31978-d20e-4954-8ba2-fb1d12e9fbce",
+        "score": 50
+      },
+      {
+        "dataset": "raidTrain",
+        "id": "8c9cafc4-fe7b-4b95-9ed7-ac1e5f2cafea",
+        "score": 44
+      },
+      {
+        "dataset": "raidTrain",
+        "id": "bf16831e-c75f-4196-8421-03054c7fcb7a",
+        "score": 44
+      },
+      {
+        "dataset": "raidTrain",
+        "id": "d7f990c3-8d1b-4dd9-802c-3642616633a2",
+        "score": 50
+      },
+      {
+        "dataset": "raidTrain",
+        "id": "e7667a05-4905-4dec-9a7d-ee6f6b35ed1b",
+        "score": 44
+      },
+      {
+        "dataset": "raidTrain",
+        "id": "f74d7f8e-6e56-4f88-b7ba-e37ab30c1fd3",
+        "score": 49
+      },
+      {
+        "dataset": "raidDev",
+        "id": "5f3d4bde-12f7-45c8-a0f0-92e1662851c9",
+        "score": 44
+      },
+      {
+        "dataset": "raidDev",
+        "id": "6e16a07e-3471-46a2-9bce-716643ffc5de",
+        "score": 44
+      },
+      {
+        "dataset": "raidDev",
+        "id": "76434357-f919-41f9-86b4-9ef8c72dfdbb",
+        "score": 61
+      },
+      {
+        "dataset": "raidDev",
+        "id": "ab55a7c6-280b-4258-81e4-f12bbde4c094",
+        "score": 49
+      },
+      {
+        "dataset": "raidDev",
+        "id": "b665594a-1577-4f9b-b056-ef1a9b8eed7b",
+        "score": 49
+      },
+      {
+        "dataset": "raidDev",
+        "id": "bd37fc55-7f71-478e-b813-05a4a7ec2168",
+        "score": 49
+      },
+      {
+        "dataset": "raidDev",
+        "id": "f3703834-c4f0-4159-b970-e314977103fb",
+        "score": 45
+      }
+    ],
+    "pasted-output.closing-question": [
+      {
+        "dataset": "raidTrain",
+        "id": "25689644-8159-4de0-8167-2efea735f75b",
+        "score": 46
+      }
+    ],
+    "negation-pivot.not-only": [
+      {
+        "dataset": "raidTrain",
+        "id": "25ec00ca-1a72-4cdb-9b87-0438eaa368fd",
+        "score": 54
+      },
+      {
+        "dataset": "raidTrain",
+        "id": "3df3d166-9667-4c46-98c9-fc6274b49890",
+        "score": 49
+      },
+      {
+        "dataset": "raidTrain",
+        "id": "3f2255c4-dd69-440f-8260-cd523a6b7007",
+        "score": 57
+      },
+      {
+        "dataset": "raidTrain",
+        "id": "4f72dde4-9d71-4c2c-a9e9-19c831d3d2b4",
+        "score": 46
+      },
+      {
+        "dataset": "raidTrain",
+        "id": "65fb7ff7-2170-4e17-8d7d-9160c9bb7e88",
+        "score": 44
+      },
+      {
+        "dataset": "raidTrain",
+        "id": "739d8a19-6e3b-4400-b6c0-bf8e8e1ad5bf",
+        "score": 57
+      },
+      {
+        "dataset": "raidTrain",
+        "id": "8388a58a-0c38-41c7-9f80-07ce02fd4fd7",
+        "score": 40
+      },
+      {
+        "dataset": "raidTrain",
+        "id": "86ede68a-0017-436f-89e5-3f86af526e0d",
+        "score": 61
+      },
+      {
+        "dataset": "raidTrain",
+        "id": "8ad31978-d20e-4954-8ba2-fb1d12e9fbce",
+        "score": 50
+      },
+      {
+        "dataset": "raidTrain",
+        "id": "a01d4131-603e-48d3-b048-99ab8872deb3",
+        "score": 49
+      },
+      {
+        "dataset": "raidTrain",
+        "id": "b2197454-a00b-4971-af86-6be60c5f5cc9",
+        "score": 67
+      },
+      {
+        "dataset": "raidTrain",
+        "id": "b62f5bad-f434-4b38-9844-f73c5ae323ce",
+        "score": 46
+      },
+      {
+        "dataset": "raidTrain",
+        "id": "cd93f4f0-89a5-4817-92ed-14be051ba09b",
+        "score": 42
+      },
+      {
+        "dataset": "raidTrain",
+        "id": "d7279c70-e1b9-4c9d-8b33-38414779a02e",
+        "score": 53
+      },
+      {
+        "dataset": "raidTrain",
+        "id": "dbf989b1-62b6-446d-941a-8080fd2a9139",
+        "score": 45
+      },
+      {
+        "dataset": "raidTrain",
+        "id": "f1d4ac7a-95de-478b-8902-2a020b861b7d",
+        "score": 44
+      },
+      {
+        "dataset": "raidTrain",
+        "id": "f4678c31-b347-49dd-b9b9-f6b78a34f6c1",
+        "score": 53
+      },
+      {
+        "dataset": "raidTrain",
+        "id": "fd9cb785-9233-4113-b079-159aac4b7a51",
+        "score": 49
+      },
+      {
+        "dataset": "raidDev",
+        "id": "0848437e-33d4-4ede-b6b2-fc3594c8c7cd",
+        "score": 50
+      },
+      {
+        "dataset": "raidDev",
+        "id": "0d375a9e-c6dc-49a9-8089-648c2abd80e7",
+        "score": 45
+      },
+      {
+        "dataset": "raidDev",
+        "id": "76434357-f919-41f9-86b4-9ef8c72dfdbb",
+        "score": 61
+      },
+      {
+        "dataset": "raidDev",
+        "id": "7abb9d43-d95b-4add-8a1e-73cd1b616db2",
+        "score": 44
+      },
+      {
+        "dataset": "raidDev",
+        "id": "fd22b81c-20aa-4cae-98c8-a0e5814b53cc",
+        "score": 61
+      },
+      {
+        "dataset": "permissive",
+        "id": "plos:10.1371/journal.pbio.3000748",
+        "score": 44
+      },
+      {
+        "dataset": "permissive",
+        "id": "plos:10.1371/journal.pbio.3000863",
+        "score": 45
+      },
+      {
+        "dataset": "polished",
+        "id": "gemini-3.8-flash-medium.jsonl#f7cceffc-35d6-47c4-b8ed-a455d0a9502c",
+        "score": 44
+      }
+    ],
+    "template-phrases.transition": [
+      {
+        "dataset": "raidTrain",
+        "id": "2ba6af82-006a-44cf-9857-c0b6aecd1e7a",
+        "score": 44
+      },
+      {
+        "dataset": "raidTrain",
+        "id": "2f8b6668-f343-45ed-a762-d44c8002cfed",
+        "score": 49
+      },
+      {
+        "dataset": "raidTrain",
+        "id": "33990fb9-7202-4e37-8d52-b1df461a4951",
+        "score": 70
+      },
+      {
+        "dataset": "raidTrain",
+        "id": "4f72dde4-9d71-4c2c-a9e9-19c831d3d2b4",
+        "score": 46
+      },
+      {
+        "dataset": "raidTrain",
+        "id": "5090cdee-b7f1-4512-9ffc-31b4ceda9cca",
+        "score": 45
+      },
+      {
+        "dataset": "raidTrain",
+        "id": "50d15887-60ef-45c7-9b77-7fbe9f9070aa",
+        "score": 44
+      },
+      {
+        "dataset": "raidTrain",
+        "id": "712ce581-7f4a-4a6b-afb3-dd1ba77af6b6",
+        "score": 42
+      },
+      {
+        "dataset": "raidTrain",
+        "id": "8f2b081c-337a-4566-94fb-b9b690720070",
+        "score": 57
+      },
+      {
+        "dataset": "raidTrain",
+        "id": "a5251cdf-e973-4a19-8c07-3bd0ebdbc0d6",
+        "score": 42
+      },
+      {
+        "dataset": "raidTrain",
+        "id": "b112dea1-0044-424f-83c6-53ac62ba0d96",
+        "score": 51
+      },
+      {
+        "dataset": "raidTrain",
+        "id": "b62f5bad-f434-4b38-9844-f73c5ae323ce",
+        "score": 46
+      },
+      {
+        "dataset": "raidTrain",
+        "id": "c1ec85bc-0e74-4f70-9ee5-0feecdbfffd1",
+        "score": 46
+      },
+      {
+        "dataset": "raidTrain",
+        "id": "c22fe005-225b-4447-9e24-83a3d0f46844",
+        "score": 46
+      },
+      {
+        "dataset": "raidTrain",
+        "id": "d2121f0a-8fca-4160-a2ca-0238c3aabd56",
+        "score": 42
+      },
+      {
+        "dataset": "raidDev",
+        "id": "005e74ce-4f9e-4d73-b800-390cfdfd25fd",
+        "score": 57
+      },
+      {
+        "dataset": "raidDev",
+        "id": "4441f453-fa12-45d7-a27d-0cfe8137669c",
+        "score": 46
+      },
+      {
+        "dataset": "raidDev",
+        "id": "55803c23-e9a0-419b-94b2-bec6207603a6",
+        "score": 53
+      },
+      {
+        "dataset": "raidDev",
+        "id": "6a1106cc-36cd-40ca-a965-23ecbc8d9ac8",
+        "score": 54
+      },
+      {
+        "dataset": "raidDev",
+        "id": "771f8e8c-a41a-410b-bb61-2b0e70467c95",
+        "score": 43
+      },
+      {
+        "dataset": "raidDev",
+        "id": "c730b1bd-2b5d-4a5e-9144-3903bd4e961d",
+        "score": 58
+      },
+      {
+        "dataset": "raidDev",
+        "id": "ebe10b1d-603d-4997-99e0-705a38eec080",
+        "score": 46
+      },
+      {
+        "dataset": "permissive",
+        "id": "plos:10.1371/journal.pbio.3000745",
+        "score": 53
+      },
+      {
+        "dataset": "permissive",
+        "id": "plos:10.1371/journal.pbio.3000782",
+        "score": 51
+      },
+      {
+        "dataset": "permissive",
+        "id": "plos:10.1371/journal.pbio.3000818",
+        "score": 52
+      },
+      {
+        "dataset": "permissive",
+        "id": "plos:10.1371/journal.pbio.3000830",
+        "score": 52
+      }
+    ],
+    "hedging.confidence": [
+      {
+        "dataset": "raidTrain",
+        "id": "2d4e9b51-06ca-4d28-9290-19fcfaf7e278",
+        "score": 64
+      },
+      {
+        "dataset": "raidTrain",
+        "id": "2f8b6668-f343-45ed-a762-d44c8002cfed",
+        "score": 49
+      },
+      {
+        "dataset": "raidTrain",
+        "id": "3f2255c4-dd69-440f-8260-cd523a6b7007",
+        "score": 57
+      },
+      {
+        "dataset": "raidTrain",
+        "id": "49e7b13b-72f8-4b41-9b92-2528bbd8c592",
+        "score": 42
+      },
+      {
+        "dataset": "raidTrain",
+        "id": "5d0cd832-1f62-4c83-a6e3-1f4460df68da",
+        "score": 60
+      },
+      {
+        "dataset": "raidTrain",
+        "id": "5db78fcd-b35e-44d7-a46a-6329499d6dda",
+        "score": 47
+      },
+      {
+        "dataset": "raidTrain",
+        "id": "9c27dfc8-9a1b-4063-b8a2-c6555cc631e0",
+        "score": 44
+      },
+      {
+        "dataset": "raidTrain",
+        "id": "ae82e245-eb12-4b58-9ddc-b2693ae5889e",
+        "score": 44
+      },
+      {
+        "dataset": "raidTrain",
+        "id": "c9481a76-b4ce-46e8-ac3a-4c499a497254",
+        "score": 49
+      },
+      {
+        "dataset": "raidDev",
+        "id": "64dfd596-0bb4-41a8-9d02-0b3ec28d996a",
+        "score": 49
+      },
+      {
+        "dataset": "raidDev",
+        "id": "c18a0d77-f6ff-4849-8d33-7fa44851bd4b",
+        "score": 49
+      },
+      {
+        "dataset": "raidDev",
+        "id": "fd22b81c-20aa-4cae-98c8-a0e5814b53cc",
+        "score": 61
+      },
+      {
+        "dataset": "permissive",
+        "id": "plos:10.1371/journal.pbio.3000748",
+        "score": 44
+      },
+      {
+        "dataset": "permissive",
+        "id": "plos:10.1371/journal.pbio.3000782",
+        "score": 51
+      }
+    ],
+    "template-phrases.filler": [
+      {
+        "dataset": "raidTrain",
+        "id": "2df6255b-aebc-4134-a9a0-1304b1d31c3a",
+        "score": 61
+      },
+      {
+        "dataset": "raidTrain",
+        "id": "33990fb9-7202-4e37-8d52-b1df461a4951",
+        "score": 70
+      },
+      {
+        "dataset": "raidTrain",
+        "id": "3f2255c4-dd69-440f-8260-cd523a6b7007",
+        "score": 57
+      },
+      {
+        "dataset": "raidTrain",
+        "id": "5090cdee-b7f1-4512-9ffc-31b4ceda9cca",
+        "score": 45
+      },
+      {
+        "dataset": "raidTrain",
+        "id": "50d15887-60ef-45c7-9b77-7fbe9f9070aa",
+        "score": 44
+      },
+      {
+        "dataset": "raidTrain",
+        "id": "69171c6a-6dd0-4ec3-8d58-f62378cfeaf1",
+        "score": 57
+      },
+      {
+        "dataset": "raidTrain",
+        "id": "6d3ffcf8-6dcf-47c1-8579-0928ba563c73",
+        "score": 45
+      },
+      {
+        "dataset": "raidTrain",
+        "id": "86ede68a-0017-436f-89e5-3f86af526e0d",
+        "score": 61
+      },
+      {
+        "dataset": "raidTrain",
+        "id": "8f2b081c-337a-4566-94fb-b9b690720070",
+        "score": 57
+      },
+      {
+        "dataset": "raidTrain",
+        "id": "9c27dfc8-9a1b-4063-b8a2-c6555cc631e0",
+        "score": 44
+      },
+      {
+        "dataset": "raidTrain",
+        "id": "c1ec85bc-0e74-4f70-9ee5-0feecdbfffd1",
+        "score": 46
+      },
+      {
+        "dataset": "raidTrain",
+        "id": "c22fe005-225b-4447-9e24-83a3d0f46844",
+        "score": 46
+      },
+      {
+        "dataset": "raidTrain",
+        "id": "d7279c70-e1b9-4c9d-8b33-38414779a02e",
+        "score": 53
+      },
+      {
+        "dataset": "raidTrain",
+        "id": "d870074d-2288-46f5-a9b6-0ab52bc59cad",
+        "score": 50
+      },
+      {
+        "dataset": "raidTrain",
+        "id": "e77fd92a-6788-4dc2-bd28-fe3b3bf23a01",
+        "score": 57
+      },
+      {
+        "dataset": "raidDev",
+        "id": "005e74ce-4f9e-4d73-b800-390cfdfd25fd",
+        "score": 57
+      },
+      {
+        "dataset": "raidDev",
+        "id": "0d375a9e-c6dc-49a9-8089-648c2abd80e7",
+        "score": 45
+      },
+      {
+        "dataset": "raidDev",
+        "id": "2b479aed-a3be-4e10-8bed-e4240c9015ad",
+        "score": 50
+      },
+      {
+        "dataset": "raidDev",
+        "id": "4441f453-fa12-45d7-a27d-0cfe8137669c",
+        "score": 46
+      },
+      {
+        "dataset": "raidDev",
+        "id": "55803c23-e9a0-419b-94b2-bec6207603a6",
+        "score": 53
+      },
+      {
+        "dataset": "raidDev",
+        "id": "5f3d4bde-12f7-45c8-a0f0-92e1662851c9",
+        "score": 44
+      },
+      {
+        "dataset": "raidDev",
+        "id": "ae139668-9309-44be-b5a3-8f82f9b7bdd0",
+        "score": 45
+      },
+      {
+        "dataset": "raidDev",
+        "id": "c730b1bd-2b5d-4a5e-9144-3903bd4e961d",
+        "score": 58
+      },
+      {
+        "dataset": "permissive",
+        "id": "plos:10.1371/journal.pbio.3000782",
+        "score": 51
+      }
+    ],
+    "pasted-output.repeated-openings": [
+      {
+        "dataset": "raidTrain",
+        "id": "2df6255b-aebc-4134-a9a0-1304b1d31c3a",
+        "score": 61
+      },
+      {
+        "dataset": "raidTrain",
+        "id": "ae21f1aa-9034-4c9a-bdbb-7969111feee4",
+        "score": 44
+      },
+      {
+        "dataset": "raidTrain",
+        "id": "e004a8bf-085e-4e9e-b517-9994a0fab447",
+        "score": 49
+      },
+      {
+        "dataset": "raidTrain",
+        "id": "f74d7f8e-6e56-4f88-b7ba-e37ab30c1fd3",
+        "score": 49
+      },
+      {
+        "dataset": "raidTrain",
+        "id": "fd9cb785-9233-4113-b079-159aac4b7a51",
+        "score": 49
+      },
+      {
+        "dataset": "raidDev",
+        "id": "1cbad4d4-ec42-42bd-859a-82e146714ee1",
+        "score": 65
+      },
+      {
+        "dataset": "raidDev",
+        "id": "4dc440dc-d207-4087-86fe-6d0bca9488c5",
+        "score": 44
+      },
+      {
+        "dataset": "raidDev",
+        "id": "ab55a7c6-280b-4258-81e4-f12bbde4c094",
+        "score": 49
+      },
+      {
+        "dataset": "raidDev",
+        "id": "b665594a-1577-4f9b-b056-ef1a9b8eed7b",
+        "score": 49
+      },
+      {
+        "dataset": "raidDev",
+        "id": "bce60dfc-4291-483c-a726-08b85ed94940",
+        "score": 63
+      },
+      {
+        "dataset": "raidDev",
+        "id": "bd37fc55-7f71-478e-b813-05a4a7ec2168",
+        "score": 49
+      },
+      {
+        "dataset": "raidDev",
+        "id": "e774a17a-c547-4115-af53-c86b48e89441",
+        "score": 57
+      }
+    ],
+    "robotic-rhythm.uniformity": [
+      {
+        "dataset": "raidTrain",
+        "id": "33990fb9-7202-4e37-8d52-b1df461a4951",
+        "score": 70
+      },
+      {
+        "dataset": "raidTrain",
+        "id": "583ae53b-28f3-4c53-9ebf-351347773660",
+        "score": 45
+      },
+      {
+        "dataset": "raidTrain",
+        "id": "9e9ccebf-3f46-47a0-b921-3e30bb9dab02",
+        "score": 63
+      },
+      {
+        "dataset": "raidDev",
+        "id": "bce60dfc-4291-483c-a726-08b85ed94940",
+        "score": 63
+      },
+      {
+        "dataset": "raidDev",
+        "id": "ebe10b1d-603d-4997-99e0-705a38eec080",
+        "score": 46
+      }
+    ],
+    "hedging.stack": [
+      {
+        "dataset": "raidTrain",
+        "id": "3df3d166-9667-4c46-98c9-fc6274b49890",
+        "score": 49
+      },
+      {
+        "dataset": "raidTrain",
+        "id": "5cee4b99-1bf9-4fbd-9db2-6e0ecb0a95ca",
+        "score": 49
+      },
+      {
+        "dataset": "raidTrain",
+        "id": "5d0cd832-1f62-4c83-a6e3-1f4460df68da",
+        "score": 60
+      },
+      {
+        "dataset": "raidDev",
+        "id": "439ecd7e-9102-46c7-9419-ff4da9c807a9",
+        "score": 44
+      },
+      {
+        "dataset": "raidDev",
+        "id": "ab55a7c6-280b-4258-81e4-f12bbde4c094",
+        "score": 49
+      }
+    ],
+    "template-phrases.template": [
+      {
+        "dataset": "raidTrain",
+        "id": "443ff87f-8441-43f5-9685-b5720cfce21b",
+        "score": 50
+      },
+      {
+        "dataset": "raidTrain",
+        "id": "8c9cafc4-fe7b-4b95-9ed7-ac1e5f2cafea",
+        "score": 44
+      }
+    ],
+    "inflation.promotional": [
+      {
+        "dataset": "raidTrain",
+        "id": "588ef2a6-62b6-4fbf-a9ea-845a67a36566",
+        "score": 40
+      },
+      {
+        "dataset": "raidTrain",
+        "id": "bfc76195-7ca1-4da2-ac57-a8944e39a669",
+        "score": 44
+      },
+      {
+        "dataset": "raidTrain",
+        "id": "ea9061b6-43a0-4bb4-ba02-4cae075f8c92",
+        "score": 44
+      },
+      {
+        "dataset": "raidDev",
+        "id": "fd22b81c-20aa-4cae-98c8-a0e5814b53cc",
+        "score": 61
+      }
+    ],
+    "ai-vocabulary.tier3": [
+      {
+        "dataset": "raidTrain",
+        "id": "6d3ffcf8-6dcf-47c1-8579-0928ba563c73",
+        "score": 45
+      },
+      {
+        "dataset": "raidTrain",
+        "id": "d2121f0a-8fca-4160-a2ca-0238c3aabd56",
+        "score": 42
+      },
+      {
+        "dataset": "permissive",
+        "id": "plos:10.1371/journal.pbio.3000818",
+        "score": 52
+      }
+    ],
+    "ai-vocabulary.explainer-idioms": [
+      {
+        "dataset": "raidTrain",
+        "id": "739d8a19-6e3b-4400-b6c0-bf8e8e1ad5bf",
+        "score": 57
+      }
+    ],
+    "pasted-output.markdown-bold": [
+      {
+        "dataset": "raidTrain",
+        "id": "c9481a76-b4ce-46e8-ac3a-4c499a497254",
+        "score": 49
+      },
+      {
+        "dataset": "raidTrain",
+        "id": "d28d9992-7587-4bdf-83d7-080a703b96fa",
+        "score": 44
+      },
+      {
+        "dataset": "raidDev",
+        "id": "64dfd596-0bb4-41a8-9d02-0b3ec28d996a",
+        "score": 49
+      }
+    ],
+    "formatting.section-outline": [
+      {
+        "dataset": "raidTrain",
+        "id": "d7f990c3-8d1b-4dd9-802c-3642616633a2",
+        "score": 50
+      }
+    ],
+    "engagement-bait.formulaic-opener": [
+      {
+        "dataset": "raidTrain",
+        "id": "ea9061b6-43a0-4bb4-ba02-4cae075f8c92",
+        "score": 44
+      }
+    ],
+    "pasted-output.sure-opener": [
+      {
+        "dataset": "raidTrain",
+        "id": "fd9cb785-9233-4113-b079-159aac4b7a51",
+        "score": 49
+      }
+    ],
+    "template-phrases.boilerplate": [
+      {
+        "dataset": "raidDev",
+        "id": "b386980c-b7fb-4842-89b5-d0d310a0a715",
+        "score": 44
+      }
+    ]
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "test": {
+    "command": "pnpm test --maxWorkers=2",
+    "exitCode": 1,
+    "seconds": 32.91511297225952,
+    "log": "data/eval/raw/hillclimb/validation-test.log"
+  },
+  "check": {
+    "command": "pnpm check",
+    "exitCode": 0,
+    "seconds": 3.366791009902954,
+    "log": "data/eval/raw/hillclimb/validation-check.log"
+  },
+  "scratchRemoved": true,
+  "counts": {
+    "failed": 35,
+    "passed": 562,
+    "skipped": 1,
+    "failedFiles": 6
+  }
+}

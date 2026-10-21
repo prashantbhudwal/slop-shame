@@ -50,6 +50,7 @@
   }
 
   function again() {
+    includeName = false;
     shame = generateShame(subject);
     roll++;
   }

@@ -1,0 +1,420 @@
+{
+  "schemaVersion": 1,
+  "verifiedDate": "2026-10-19",
+  "note": "Raw byte hashes for mutable publisher pages may change; normalized output must match. Counts are before cross-file text deduplication.",
+  "upstreamSnapshots": [
+    {
+      "url": "https://api.plos.org/search?q=publication_date%3A%5B2020-01-01T00%3A00%3A00Z+TO+2020-12-31T23%3A59%3A59Z%5D+AND+article_type%3A%22Research+Article%22+AND+doc_type%3Afull&fl=id%2Ctitle%2Cauthor%2Cabstract%2Cpublication_date&rows=200&sort=id+asc",
+      "file": "data/eval/raw/downloads/plos-2020.json",
+      "sha256": "6fb3841df9374baba77aab4211aa3b2d3892b3b9750805755bbbf54e5a47e928",
+      "immutable": false
+    },
+    {
+      "url": "https://archive.ics.uci.edu/static/public/331/sentiment+labelled+sentences.zip",
+      "file": "data/eval/raw/downloads/uci-sentiment.zip",
+      "sha256": "afc26626d710899948693e1a61405dce197f57ffa719fa1130d346b4cc095343",
+      "immutable": true
+    },
+    {
+      "url": "https://codeload.github.com/ryanzhumich/AESLC/tar.gz/7afc087a1cc234d07121f0d4a2d87102ddceabc2",
+      "file": "data/eval/raw/downloads/aeslc.tar.gz",
+      "sha256": "f2a1cde210dbf626b54af6bcaf430d48a99a84f55887d5d7cc558f945bed8d38",
+      "immutable": true
+    },
+    {
+      "url": "https://dataset.raid-bench.xyz/train_none.csv",
+      "file": "data/eval/raw/downloads/raid-train_none.csv",
+      "sha256": "c5467bca6fc7f5c728c676450c7f84ce401df6c6ccc6d82c47e3b5f3c6d6fce4",
+      "immutable": true
+    },
+    {
+      "url": "https://federalreserve.gov/newsevents/pressreleases/monetary20190130a.htm",
+      "file": "data/eval/raw/downloads/fed-20190130.html",
+      "sha256": "f93ddf3dd35485476ac6b761edc5d1776777daf27591803c564e2cbb4d143b0b",
+      "immutable": false
+    },
+    {
+      "url": "https://federalreserve.gov/newsevents/pressreleases/monetary20190320a.htm",
+      "file": "data/eval/raw/downloads/fed-20190320.html",
+      "sha256": "83f20a3ac5326cfb1c871ba0874b0b79716eb6498ee6542aac4456660ea04a10",
+      "immutable": false
+    },
+    {
+      "url": "https://federalreserve.gov/newsevents/pressreleases/monetary20190501a.htm",
+      "file": "data/eval/raw/downloads/fed-20190501.html",
+      "sha256": "7adf238d455f7c13a323b5ce0a4ef20180ce84c3c6def1b22f012d380ad553e9",
+      "immutable": false
+    },
+    {
+      "url": "https://federalreserve.gov/newsevents/pressreleases/monetary20190619a.htm",
+      "file": "data/eval/raw/downloads/fed-20190619.html",
+      "sha256": "0a70f48c4bdaaafcfa61580c89ec21d173cc02cdfd495916a9007042cd47ae74",
+      "immutable": false
+    },
+    {
+      "url": "https://federalreserve.gov/newsevents/pressreleases/monetary20190731a.htm",
+      "file": "data/eval/raw/downloads/fed-20190731.html",
+      "sha256": "ca90c25ede79c25692bd42ae1fb46bc5ecb52543da299a1451ff7dd9ac262300",
+      "immutable": false
+    },
+    {
+      "url": "https://federalreserve.gov/newsevents/pressreleases/monetary20190918a.htm",
+      "file": "data/eval/raw/downloads/fed-20190918.html",
+      "sha256": "7ed9165e9f9bdd2b128917157cac0577c2e51fb736a6a69f07714e5fdcb5ac81",
+      "immutable": false
+    },
+    {
+      "url": "https://federalreserve.gov/newsevents/pressreleases/monetary20191030a.htm",
+      "file": "data/eval/raw/downloads/fed-20191030.html",
+      "sha256": "ea051a337ce4cb7c35b9ead786f4ddbf7fbd7a898968e3b7f5527161d65be80e",
+      "immutable": false
+    },
+    {
+      "url": "https://federalreserve.gov/newsevents/pressreleases/monetary20191211a.htm",
+      "file": "data/eval/raw/downloads/fed-20191211.html",
+      "sha256": "1e0f64a5c73b2a3e604656112cd6f55a3e8db4fa7019d2bc4a4b1c4f1fbba0c6",
+      "immutable": false
+    },
+    {
+      "url": "https://federalreserve.gov/newsevents/pressreleases/monetary20200129a.htm",
+      "file": "data/eval/raw/downloads/fed-20200129.html",
+      "sha256": "a07572473351f0099feffe7e220f765796de32dc2456c0524cb9de03067dfd8a",
+      "immutable": false
+    },
+    {
+      "url": "https://federalreserve.gov/newsevents/pressreleases/monetary20200303a.htm",
+      "file": "data/eval/raw/downloads/fed-20200303.html",
+      "sha256": "cad989bb31002468814e7eb694b5ae1947cd1ce1231cdd41abcb9f4f5c2fc1d0",
+      "immutable": false
+    },
+    {
+      "url": "https://federalreserve.gov/newsevents/pressreleases/monetary20200315a.htm",
+      "file": "data/eval/raw/downloads/fed-20200315.html",
+      "sha256": "d66f562407eb315297d43961d572642656d95e9dbd674eae5cfaf4be12d7857a",
+      "immutable": false
+    },
+    {
+      "url": "https://federalreserve.gov/newsevents/pressreleases/monetary20200429a.htm",
+      "file": "data/eval/raw/downloads/fed-20200429.html",
+      "sha256": "6dfa18a17ca1c1be2bc051de4079f1d4518260fd7e9b292f6bdb784eece56de2",
+      "immutable": false
+    },
+    {
+      "url": "https://federalreserve.gov/newsevents/pressreleases/monetary20200610a.htm",
+      "file": "data/eval/raw/downloads/fed-20200610.html",
+      "sha256": "c7bd76740106c9dd2a474a963edf38a6c5a778aa613fe544a8bd73f1cbfeb454",
+      "immutable": false
+    },
+    {
+      "url": "https://federalreserve.gov/newsevents/pressreleases/monetary20200729a.htm",
+      "file": "data/eval/raw/downloads/fed-20200729.html",
+      "sha256": "3d4f6b9767c07cf63e87fdbebc8b9180226307b3d3ae955317955f0884254185",
+      "immutable": false
+    },
+    {
+      "url": "https://federalreserve.gov/newsevents/pressreleases/monetary20200916a.htm",
+      "file": "data/eval/raw/downloads/fed-20200916.html",
+      "sha256": "a4212b4e118607c4c908d7561aa940460a98062471874d219126f999ddf853dd",
+      "immutable": false
+    },
+    {
+      "url": "https://federalreserve.gov/newsevents/pressreleases/monetary20201105a.htm",
+      "file": "data/eval/raw/downloads/fed-20201105.html",
+      "sha256": "fb43a6c697cb2682900d3e964334ff0e0d61a2be52104b710ccbc4bc5c0ae84d",
+      "immutable": false
+    },
+    {
+      "url": "https://federalreserve.gov/newsevents/pressreleases/monetary20201216a.htm",
+      "file": "data/eval/raw/downloads/fed-20201216.html",
+      "sha256": "e1935540122cce6a4c4b5887c9faa19aba7fcc0d9db768f329b97f9603bff95d",
+      "immutable": false
+    },
+    {
+      "url": "https://federalreserve.gov/newsevents/pressreleases/monetary20210127a.htm",
+      "file": "data/eval/raw/downloads/fed-20210127.html",
+      "sha256": "33ae65bef68c9d05da783638b69f06b4c76ece0568bb0054b4d966393231de56",
+      "immutable": false
+    },
+    {
+      "url": "https://federalreserve.gov/newsevents/pressreleases/monetary20210317a.htm",
+      "file": "data/eval/raw/downloads/fed-20210317.html",
+      "sha256": "53afcc1cf8b39c4f45cec861c5dd5d3879c0247a6426083441665405425e1b45",
+      "immutable": false
+    },
+    {
+      "url": "https://federalreserve.gov/newsevents/pressreleases/monetary20210428a.htm",
+      "file": "data/eval/raw/downloads/fed-20210428.html",
+      "sha256": "5921defe81ed6e6b5a3342fd4b99cfc48310850ea867c966ef4add77322c8348",
+      "immutable": false
+    },
+    {
+      "url": "https://federalreserve.gov/newsevents/pressreleases/monetary20210616a.htm",
+      "file": "data/eval/raw/downloads/fed-20210616.html",
+      "sha256": "8bf68f483e49cf3a44157e00dc275e47a98fd7a5175d1807a19803dfacf21144",
+      "immutable": false
+    },
+    {
+      "url": "https://federalreserve.gov/newsevents/pressreleases/monetary20210728a.htm",
+      "file": "data/eval/raw/downloads/fed-20210728.html",
+      "sha256": "ad92a5f5340723e50bb5de0a7ce11567f90fcd27052ef3f7d0de5c095e8dc7a5",
+      "immutable": false
+    },
+    {
+      "url": "https://federalreserve.gov/newsevents/pressreleases/monetary20210922a.htm",
+      "file": "data/eval/raw/downloads/fed-20210922.html",
+      "sha256": "1b83598f627b512eb009638e5e871670a4f5247135feaa66c63277af92b3b02d",
+      "immutable": false
+    },
+    {
+      "url": "https://federalreserve.gov/newsevents/pressreleases/monetary20211103a.htm",
+      "file": "data/eval/raw/downloads/fed-20211103.html",
+      "sha256": "3bc9ca5b6f9f6c9cfacfe9374b52227b1612cf4f1005437eae2aeb413c3dd2ba",
+      "immutable": false
+    },
+    {
+      "url": "https://federalreserve.gov/newsevents/pressreleases/monetary20211215a.htm",
+      "file": "data/eval/raw/downloads/fed-20211215.html",
+      "sha256": "8509faf713bdbf7b4b7a3df7b92ab74c4103a9b6f32dd2edc255e6d7a403d42c",
+      "immutable": false
+    },
+    {
+      "url": "https://huggingface.co/datasets/redasers/Unmasking-the-Imposters/resolve/48d1eee50c389d12f49bb0af285a37dba4d23a6a/Meta-Llama-3-8B-Instruct/test.json",
+      "file": "data/eval/raw/downloads/tweets-Meta-Llama-3-8B-Instruct.json",
+      "sha256": "207896b18d2e69ce2307f89ade474d4fdced47fd11676afe8c5621a5ef8fa880",
+      "immutable": true
+    },
+    {
+      "url": "https://huggingface.co/datasets/redasers/Unmasking-the-Imposters/resolve/48d1eee50c389d12f49bb0af285a37dba4d23a6a/Mistral-7B-Instruct-v0.2/test.json",
+      "file": "data/eval/raw/downloads/tweets-Mistral-7B-Instruct-v0.2.json",
+      "sha256": "e892ee4a05abf5d2e3194a726a62987556d2233a243a3dbf1704584adadea0b4",
+      "immutable": true
+    },
+    {
+      "url": "https://huggingface.co/datasets/redasers/Unmasking-the-Imposters/resolve/48d1eee50c389d12f49bb0af285a37dba4d23a6a/Qwen2-7B-Instruct/test.json",
+      "file": "data/eval/raw/downloads/tweets-Qwen2-7B-Instruct.json",
+      "sha256": "c8913e93e3cfb5dd264ee0127be79349a1e19fbe0f780c0834356f9d35090dc3",
+      "immutable": true
+    },
+    {
+      "url": "https://huggingface.co/datasets/redasers/Unmasking-the-Imposters/resolve/48d1eee50c389d12f49bb0af285a37dba4d23a6a/gpt4o/test.json",
+      "file": "data/eval/raw/downloads/tweets-gpt4o.json",
+      "sha256": "9db6151afcc64782467d734f4d2a7a1997479313d6e05e32485f98913cb8219e",
+      "immutable": true
+    },
+    {
+      "url": "https://raw.githubusercontent.com/jenna-russell/human_detectors/afcf03d14d2da4a038d8d0fafa5ec779dd858181/human_detectors.json",
+      "file": "data/eval/raw/downloads/human-detectors-pinned.json",
+      "sha256": "7ee1dc56d71b7cc5a185286f71818060a93ca20c4e93a90520ca78a0109619b5",
+      "immutable": true
+    },
+    {
+      "url": "https://www.cl.cam.ac.uk/research/nl/bea2019st/data/wi+locness_v2.1.bea19.tar.gz",
+      "file": "data/eval/raw/downloads/wi-locness-2.1.tar.gz",
+      "sha256": "d5cbf68cda3da0c3af69dd672614d07287bfe996b87da0c75051d5349d76c666",
+      "immutable": true
+    }
+  ],
+  "normalized": [
+    {
+      "file": "data/eval/samples/unmasking.jsonl",
+      "sha256": "1ad9b299b654ddca912b575990b6c7c0699966dfd4e1768aebcc295c2ef5c792",
+      "items": 117,
+      "labels": {
+        "ai": 93,
+        "human": 24
+      },
+      "subsets": {
+        "casual": 24,
+        "social-ai": 93
+      },
+      "genres": {
+        "social-post": 117
+      },
+      "registers": {
+        "casual": 117
+      },
+      "redistribution": "small licensed sample; see MANIFEST.md"
+    },
+    {
+      "file": "data/eval/samples/plos.jsonl",
+      "sha256": "325de3e0bb712cc6f6fc292af8fb44f6aeea8bfc1e30322003d776bbadef170c",
+      "items": 160,
+      "labels": {
+        "human": 160
+      },
+      "subsets": {
+        "formal": 160
+      },
+      "genres": {
+        "academic-abstract": 160
+      },
+      "registers": {
+        "formal": 160
+      },
+      "redistribution": "small licensed sample; see MANIFEST.md"
+    },
+    {
+      "file": "data/eval/samples/official-releases.jsonl",
+      "sha256": "6258f80ce6e539883bd119bf49346acc8b16a9c1795ccf4e09ff48312c887ea7",
+      "items": 25,
+      "labels": {
+        "human": 25
+      },
+      "subsets": {
+        "formal": 25
+      },
+      "genres": {
+        "professional-release": 25
+      },
+      "registers": {
+        "formal": 25
+      },
+      "redistribution": "small licensed sample; see MANIFEST.md"
+    },
+    {
+      "file": "data/eval/samples/uci-reviews.jsonl",
+      "sha256": "2fb512859a4ca511d7114cba92e0b036a64c2a26286f956c5a1cd990b46c3f39",
+      "items": 86,
+      "labels": {
+        "human": 86
+      },
+      "subsets": {
+        "casual": 86
+      },
+      "genres": {
+        "product-review": 2,
+        "review": 80,
+        "service-review": 4
+      },
+      "registers": {
+        "casual": 86
+      },
+      "redistribution": "small licensed sample; see MANIFEST.md"
+    },
+    {
+      "file": "data/eval/samples/synthetic-general.jsonl",
+      "sha256": "80febd273c839e72814e255dd6622a34df7b212c15f5187da5d6b63bd52ef577",
+      "items": 120,
+      "labels": {
+        "ai": 60,
+        "mixed": 60
+      },
+      "subsets": {
+        "synthetic-ai": 60,
+        "synthetic-mixed": 60
+      },
+      "genres": {
+        "academic-abstract": 10,
+        "email": 10,
+        "essay": 10,
+        "forum": 10,
+        "instructions": 10,
+        "letter": 10,
+        "narrative": 10,
+        "news": 10,
+        "product-review": 10,
+        "professional-release": 10,
+        "reference": 10,
+        "social-post": 10
+      },
+      "registers": {
+        "casual": 30,
+        "formal": 50,
+        "instructional": 10,
+        "literary": 10,
+        "personal": 10,
+        "professional": 10
+      },
+      "redistribution": "small licensed sample; see MANIFEST.md"
+    },
+    {
+      "file": "data/eval/raw/normalized/wi.jsonl",
+      "sha256": "ab97c8aaf12cd8696cebe2092573a8cfd81a7ae21673d16f0fbc7eae7b2de938",
+      "items": 298,
+      "labels": {
+        "human": 298
+      },
+      "subsets": {
+        "non-native": 298
+      },
+      "genres": {
+        "essay": 255,
+        "letter": 43
+      },
+      "registers": {
+        "learner": 298
+      },
+      "redistribution": "evaluation-only; do not commit"
+    },
+    {
+      "file": "data/eval/raw/normalized/raid.jsonl",
+      "sha256": "446f21a8aff37937bc970cd0a3c44d11988ab10eac70679b32fac4389049afd2",
+      "items": 1280,
+      "labels": {
+        "ai": 640,
+        "human": 640
+      },
+      "subsets": {
+        "casual": 160,
+        "creative": 80,
+        "dataset-ai": 640,
+        "formal": 240,
+        "instructions": 80,
+        "narrative": 80
+      },
+      "genres": {
+        "academic-abstract": 160,
+        "forum": 160,
+        "instructions": 160,
+        "narrative": 160,
+        "news": 160,
+        "poetry": 160,
+        "reference": 160,
+        "review": 160
+      },
+      "registers": {
+        "casual": 320,
+        "formal": 480,
+        "instructional": 160,
+        "literary": 320
+      },
+      "redistribution": "evaluation-only; do not commit"
+    },
+    {
+      "file": "data/eval/raw/normalized/aeslc.jsonl",
+      "sha256": "3f60286490543e60c4742daa2f79c6d0a45c86ac9223aec6205cae536fb4e1df",
+      "items": 120,
+      "labels": {
+        "human": 120
+      },
+      "subsets": {
+        "professional": 120
+      },
+      "genres": {
+        "email": 120
+      },
+      "registers": {
+        "professional": 120
+      },
+      "redistribution": "evaluation-only; do not commit"
+    },
+    {
+      "file": "data/eval/raw/normalized/human-detectors-ai.jsonl",
+      "sha256": "662c1bb3e62991bc0b7be10d8f171b350de62b254c50ac7cd4ad92a7fbd8fc86",
+      "items": 41,
+      "labels": {
+        "ai": 41
+      },
+      "subsets": {
+        "dataset-ai": 41
+      },
+      "genres": {
+        "news": 41
+      },
+      "registers": {
+        "formal": 41
+      },
+      "redistribution": "evaluation-only; do not commit"
+    }
+  ]
+}

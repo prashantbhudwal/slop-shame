@@ -5,11 +5,16 @@ export interface CalibrationPost extends PostInput {
   id: string;
   authorship: 'human' | 'ai' | 'mixed';
   synthetic: boolean;
+  evaluation?: 'holdout' | 'regression';
+  provenance?: string;
   expectTier: SlopTierId | SlopTierId[];
 }
 const folder = new URL('../../fixtures/posts/', import.meta.url);
 export const corpus: CalibrationPost[] = readdirSync(folder).filter((file) => file.endsWith('.json')).sort()
   .flatMap((file) => JSON.parse(readFileSync(new URL(file, folder), 'utf8')) as CalibrationPost[]);
+/** Unfitted challenge samples never inflate the editorial tier-accuracy metric. */
+export const calibrationCorpus = corpus.filter((post) => !post.evaluation);
+export const holdoutCorpus = corpus.filter((post) => post.evaluation === 'holdout');
 
 export function allowedTiers(post: CalibrationPost): SlopTierId[] {
   return Array.isArray(post.expectTier) ? post.expectTier : [post.expectTier];

@@ -1,0 +1,119 @@
+[
+  {
+    "name": "em-dash-abuse",
+    "pattern": "\\u2014[^\\u2014\\n]*\\u2014[^\\u2014\\n]*\\u2014[^\\n]*",
+    "weight": 5,
+    "description": "Excessive em-dash usage (3+ per paragraph) is a strong AI writing signal"
+  },
+  {
+    "name": "let-me-starter",
+    "pattern": "^\\s*let me \\w+",
+    "flags": "im",
+    "weight": 3,
+    "description": "\"Let me [verb]\" sentence starters are characteristic of AI assistants"
+  },
+  {
+    "name": "heres-the-thing",
+    "pattern": "here'?s (the thing|what|the deal|the kicker)",
+    "flags": "i",
+    "weight": 3,
+    "description": "\"Here's the thing/what\" openers mimic conversational AI tone"
+  },
+  {
+    "name": "binary-contrast",
+    "pattern": "not (just|only|merely|simply) .{2,40}?,? but (also )?",
+    "flags": "i",
+    "weight": 3,
+    "description": "Binary contrast structures (\"Not just X, but Y\", \"not only X but also Y\") are over-used by AI"
+  },
+  {
+    "name": "negation-pivot",
+    "pattern": "\\b(?:it|this|that)(?:'s not| is not| was not| isn't| wasn't) (?:just |only |merely |simply |about )*[^.!?\\n]{2,60}?(?:[,;:\\u2014\\u2013]|\\.\\s+)\\s*(?:it|this|that)(?:'s| is| was)\\b",
+    "flags": "gi",
+    "weight": 3,
+    "maxCount": 3,
+    "description": "\"It's not X, it's Y\" pivots (\"This isn't a tool. It's a teammate.\") are a signature AI rhetorical move"
+  },
+  {
+    "name": "binary-contrast-de",
+    "pattern": "\\bnicht nur\\b[^.!?\\n]{2,60}?,?\\s+sondern auch\\b",
+    "flags": "giu",
+    "weight": 3,
+    "description": "German binary contrast (\"nicht nur X, sondern auch Y\") is over-used by AI"
+  },
+  {
+    "name": "wh-starters",
+    "pattern": "^\\s*(what makes this|why this matters|why it matters|how this works|what this means|where this gets interesting)",
+    "flags": "im",
+    "weight": 4,
+    "description": "Wh- question starters used as section headers are an AI pattern"
+  },
+  {
+    "name": "bullet-overload",
+    "pattern": "(^\\s*[-*]\\s.+\\n){6,}",
+    "flags": "m",
+    "weight": 4,
+    "description": "Long bullet-point lists (6+) without prose are a structural AI pattern",
+    "maxCount": 3
+  },
+  {
+    "name": "triple-adjective",
+    "pattern": "\\b\\w+(?:ly)?\\b,\\s+\\b\\w+(?:ly)?\\b,\\s+(?:and\\s+)?\\b\\w+(?:ly)?\\b\\s+\\w+",
+    "flags": "i",
+    "weight": 2,
+    "description": "Triple adjective chains before nouns are more common in AI writing",
+    "maxCount": 1
+  },
+  {
+    "name": "meta-reference",
+    "pattern": "in this (article|post|guide|blog|piece|section|tutorial|overview|essay)",
+    "flags": "i",
+    "weight": 3,
+    "description": "Self-referencing meta text is common in AI-generated content"
+  },
+  {
+    "name": "passive-voice-density",
+    "pattern": "\\b(is|are|was|were|been|being)\\s+\\w+ed\\b",
+    "flags": "gi",
+    "weight": 1,
+    "description": "Individual passive voice instance (aggregated for density check)"
+  },
+  {
+    "name": "worth-noting",
+    "pattern": "^\\s*it('s|\\s+is)\\s+worth\\s+(noting|mentioning|highlighting|pointing out)",
+    "flags": "im",
+    "weight": 4,
+    "description": "\"It's worth noting\" as a sentence opener is a strong AI signal"
+  },
+  {
+    "name": "colon-list-intro",
+    "pattern": ":\\s*\\n\\s*[-*1]",
+    "flags": "m",
+    "weight": 2,
+    "description": "Colon followed by a list is a common AI formatting pattern",
+    "maxCount": 3
+  },
+  {
+    "name": "emoji-header",
+    "pattern": "^\\s*(?:#{1,6}\\s+\\p{Extended_Pictographic}|\\p{Extended_Pictographic}\\uFE0F?\\s+\\*\\*)",
+    "flags": "mu",
+    "weight": 5,
+    "description": "Emoji used as header markers (\"🚀 **Speed**\", \"## ✅ Done\") are a strong AI formatting signal",
+    "maxCount": 3
+  },
+  {
+    "name": "number-list-pattern",
+    "pattern": "^\\s*\\d+\\.\\s+\\*\\*.+\\*\\*",
+    "flags": "m",
+    "weight": 2,
+    "description": "Numbered lists with bold items are commonly AI-generated",
+    "maxCount": 3
+  },
+  {
+    "name": "tldr-pattern",
+    "pattern": "(tl;?dr|key takeaway|bottom line|in a nutshell)\\s*:?\\s*\\n",
+    "flags": "im",
+    "weight": 3,
+    "description": "TL;DR / key takeaway sections are AI structural patterns"
+  }
+]

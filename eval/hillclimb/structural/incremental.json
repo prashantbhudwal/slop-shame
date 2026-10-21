@@ -1,0 +1,1271 @@
+{
+  "baseline": {
+    "overall": {
+      "human": 2354,
+      "ai": 10800,
+      "fp": 29,
+      "tp": 1206,
+      "fpRate": 0.01231945624468989,
+      "recall": 0.11166666666666666,
+      "shameFP": 26
+    },
+    "domain": {
+      "abstracts": {
+        "human": 304,
+        "ai": 1350,
+        "fp": 11,
+        "tp": 174,
+        "fpRate": 0.03618421052631579,
+        "recall": 0.1288888888888889,
+        "shameFP": 8
+      },
+      "books": {
+        "human": 257,
+        "ai": 1350,
+        "fp": 3,
+        "tp": 159,
+        "fpRate": 0.011673151750972763,
+        "recall": 0.11777777777777777,
+        "shameFP": 3
+      },
+      "news": {
+        "human": 332,
+        "ai": 1350,
+        "fp": 0,
+        "tp": 149,
+        "fpRate": 0,
+        "recall": 0.11037037037037037,
+        "shameFP": 0
+      },
+      "poetry": {
+        "human": 303,
+        "ai": 1350,
+        "fp": 5,
+        "tp": 198,
+        "fpRate": 0.0165016501650165,
+        "recall": 0.14666666666666667,
+        "shameFP": 5
+      },
+      "recipes": {
+        "human": 353,
+        "ai": 1350,
+        "fp": 0,
+        "tp": 3,
+        "fpRate": 0,
+        "recall": 0.0022222222222222222,
+        "shameFP": 0
+      },
+      "reddit": {
+        "human": 341,
+        "ai": 1350,
+        "fp": 3,
+        "tp": 63,
+        "fpRate": 0.008797653958944282,
+        "recall": 0.04666666666666667,
+        "shameFP": 3
+      },
+      "reviews": {
+        "human": 151,
+        "ai": 1350,
+        "fp": 6,
+        "tp": 307,
+        "fpRate": 0.039735099337748346,
+        "recall": 0.22740740740740742,
+        "shameFP": 6
+      },
+      "wiki": {
+        "human": 313,
+        "ai": 1350,
+        "fp": 1,
+        "tp": 153,
+        "fpRate": 0.003194888178913738,
+        "recall": 0.11333333333333333,
+        "shameFP": 1
+      }
+    },
+    "model": {
+      "chatgpt": {
+        "human": 2354,
+        "ai": 1200,
+        "fp": 29,
+        "tp": 275,
+        "fpRate": 0.01231945624468989,
+        "recall": 0.22916666666666666,
+        "shameFP": 26
+      },
+      "cohere-chat": {
+        "human": 2354,
+        "ai": 1200,
+        "fp": 29,
+        "tp": 50,
+        "fpRate": 0.01231945624468989,
+        "recall": 0.041666666666666664,
+        "shameFP": 26
+      },
+      "gpt4": {
+        "human": 2354,
+        "ai": 1200,
+        "fp": 29,
+        "tp": 291,
+        "fpRate": 0.01231945624468989,
+        "recall": 0.2425,
+        "shameFP": 26
+      },
+      "llama-chat": {
+        "human": 2354,
+        "ai": 2400,
+        "fp": 29,
+        "tp": 354,
+        "fpRate": 0.01231945624468989,
+        "recall": 0.1475,
+        "shameFP": 26
+      },
+      "mistral-chat": {
+        "human": 2354,
+        "ai": 2400,
+        "fp": 29,
+        "tp": 145,
+        "fpRate": 0.01231945624468989,
+        "recall": 0.06041666666666667,
+        "shameFP": 26
+      },
+      "mpt-chat": {
+        "human": 2354,
+        "ai": 2400,
+        "fp": 29,
+        "tp": 91,
+        "fpRate": 0.01231945624468989,
+        "recall": 0.03791666666666667,
+        "shameFP": 26
+      }
+    }
+  },
+  "measured-structural.vague-platitude-count": {
+    "overall": {
+      "human": 2354,
+      "ai": 10800,
+      "fp": 29,
+      "tp": 1206,
+      "fpRate": 0.01231945624468989,
+      "recall": 0.11166666666666666,
+      "shameFP": 26
+    },
+    "domain": {
+      "abstracts": {
+        "human": 304,
+        "ai": 1350,
+        "fp": 11,
+        "tp": 174,
+        "fpRate": 0.03618421052631579,
+        "recall": 0.1288888888888889,
+        "shameFP": 8
+      },
+      "books": {
+        "human": 257,
+        "ai": 1350,
+        "fp": 3,
+        "tp": 159,
+        "fpRate": 0.011673151750972763,
+        "recall": 0.11777777777777777,
+        "shameFP": 3
+      },
+      "news": {
+        "human": 332,
+        "ai": 1350,
+        "fp": 0,
+        "tp": 149,
+        "fpRate": 0,
+        "recall": 0.11037037037037037,
+        "shameFP": 0
+      },
+      "poetry": {
+        "human": 303,
+        "ai": 1350,
+        "fp": 5,
+        "tp": 198,
+        "fpRate": 0.0165016501650165,
+        "recall": 0.14666666666666667,
+        "shameFP": 5
+      },
+      "recipes": {
+        "human": 353,
+        "ai": 1350,
+        "fp": 0,
+        "tp": 3,
+        "fpRate": 0,
+        "recall": 0.0022222222222222222,
+        "shameFP": 0
+      },
+      "reddit": {
+        "human": 341,
+        "ai": 1350,
+        "fp": 3,
+        "tp": 63,
+        "fpRate": 0.008797653958944282,
+        "recall": 0.04666666666666667,
+        "shameFP": 3
+      },
+      "reviews": {
+        "human": 151,
+        "ai": 1350,
+        "fp": 6,
+        "tp": 307,
+        "fpRate": 0.039735099337748346,
+        "recall": 0.22740740740740742,
+        "shameFP": 6
+      },
+      "wiki": {
+        "human": 313,
+        "ai": 1350,
+        "fp": 1,
+        "tp": 153,
+        "fpRate": 0.003194888178913738,
+        "recall": 0.11333333333333333,
+        "shameFP": 1
+      }
+    },
+    "model": {
+      "chatgpt": {
+        "human": 2354,
+        "ai": 1200,
+        "fp": 29,
+        "tp": 275,
+        "fpRate": 0.01231945624468989,
+        "recall": 0.22916666666666666,
+        "shameFP": 26
+      },
+      "cohere-chat": {
+        "human": 2354,
+        "ai": 1200,
+        "fp": 29,
+        "tp": 50,
+        "fpRate": 0.01231945624468989,
+        "recall": 0.041666666666666664,
+        "shameFP": 26
+      },
+      "gpt4": {
+        "human": 2354,
+        "ai": 1200,
+        "fp": 29,
+        "tp": 291,
+        "fpRate": 0.01231945624468989,
+        "recall": 0.2425,
+        "shameFP": 26
+      },
+      "llama-chat": {
+        "human": 2354,
+        "ai": 2400,
+        "fp": 29,
+        "tp": 354,
+        "fpRate": 0.01231945624468989,
+        "recall": 0.1475,
+        "shameFP": 26
+      },
+      "mistral-chat": {
+        "human": 2354,
+        "ai": 2400,
+        "fp": 29,
+        "tp": 145,
+        "fpRate": 0.01231945624468989,
+        "recall": 0.06041666666666667,
+        "shameFP": 26
+      },
+      "mpt-chat": {
+        "human": 2354,
+        "ai": 2400,
+        "fp": 29,
+        "tp": 91,
+        "fpRate": 0.01231945624468989,
+        "recall": 0.03791666666666667,
+        "shameFP": 26
+      }
+    }
+  },
+  "measured-structural.visible-markdown-headers": {
+    "overall": {
+      "human": 2354,
+      "ai": 10800,
+      "fp": 29,
+      "tp": 1206,
+      "fpRate": 0.01231945624468989,
+      "recall": 0.11166666666666666,
+      "shameFP": 26
+    },
+    "domain": {
+      "abstracts": {
+        "human": 304,
+        "ai": 1350,
+        "fp": 11,
+        "tp": 174,
+        "fpRate": 0.03618421052631579,
+        "recall": 0.1288888888888889,
+        "shameFP": 8
+      },
+      "books": {
+        "human": 257,
+        "ai": 1350,
+        "fp": 3,
+        "tp": 159,
+        "fpRate": 0.011673151750972763,
+        "recall": 0.11777777777777777,
+        "shameFP": 3
+      },
+      "news": {
+        "human": 332,
+        "ai": 1350,
+        "fp": 0,
+        "tp": 149,
+        "fpRate": 0,
+        "recall": 0.11037037037037037,
+        "shameFP": 0
+      },
+      "poetry": {
+        "human": 303,
+        "ai": 1350,
+        "fp": 5,
+        "tp": 198,
+        "fpRate": 0.0165016501650165,
+        "recall": 0.14666666666666667,
+        "shameFP": 5
+      },
+      "recipes": {
+        "human": 353,
+        "ai": 1350,
+        "fp": 0,
+        "tp": 3,
+        "fpRate": 0,
+        "recall": 0.0022222222222222222,
+        "shameFP": 0
+      },
+      "reddit": {
+        "human": 341,
+        "ai": 1350,
+        "fp": 3,
+        "tp": 63,
+        "fpRate": 0.008797653958944282,
+        "recall": 0.04666666666666667,
+        "shameFP": 3
+      },
+      "reviews": {
+        "human": 151,
+        "ai": 1350,
+        "fp": 6,
+        "tp": 307,
+        "fpRate": 0.039735099337748346,
+        "recall": 0.22740740740740742,
+        "shameFP": 6
+      },
+      "wiki": {
+        "human": 313,
+        "ai": 1350,
+        "fp": 1,
+        "tp": 153,
+        "fpRate": 0.003194888178913738,
+        "recall": 0.11333333333333333,
+        "shameFP": 1
+      }
+    },
+    "model": {
+      "chatgpt": {
+        "human": 2354,
+        "ai": 1200,
+        "fp": 29,
+        "tp": 275,
+        "fpRate": 0.01231945624468989,
+        "recall": 0.22916666666666666,
+        "shameFP": 26
+      },
+      "cohere-chat": {
+        "human": 2354,
+        "ai": 1200,
+        "fp": 29,
+        "tp": 50,
+        "fpRate": 0.01231945624468989,
+        "recall": 0.041666666666666664,
+        "shameFP": 26
+      },
+      "gpt4": {
+        "human": 2354,
+        "ai": 1200,
+        "fp": 29,
+        "tp": 291,
+        "fpRate": 0.01231945624468989,
+        "recall": 0.2425,
+        "shameFP": 26
+      },
+      "llama-chat": {
+        "human": 2354,
+        "ai": 2400,
+        "fp": 29,
+        "tp": 354,
+        "fpRate": 0.01231945624468989,
+        "recall": 0.1475,
+        "shameFP": 26
+      },
+      "mistral-chat": {
+        "human": 2354,
+        "ai": 2400,
+        "fp": 29,
+        "tp": 145,
+        "fpRate": 0.01231945624468989,
+        "recall": 0.06041666666666667,
+        "shameFP": 26
+      },
+      "mpt-chat": {
+        "human": 2354,
+        "ai": 2400,
+        "fp": 29,
+        "tp": 91,
+        "fpRate": 0.01231945624468989,
+        "recall": 0.03791666666666667,
+        "shameFP": 26
+      }
+    }
+  },
+  "measured-structural.visible-markdown-bold": {
+    "overall": {
+      "human": 2354,
+      "ai": 10800,
+      "fp": 29,
+      "tp": 1206,
+      "fpRate": 0.01231945624468989,
+      "recall": 0.11166666666666666,
+      "shameFP": 26
+    },
+    "domain": {
+      "abstracts": {
+        "human": 304,
+        "ai": 1350,
+        "fp": 11,
+        "tp": 174,
+        "fpRate": 0.03618421052631579,
+        "recall": 0.1288888888888889,
+        "shameFP": 8
+      },
+      "books": {
+        "human": 257,
+        "ai": 1350,
+        "fp": 3,
+        "tp": 159,
+        "fpRate": 0.011673151750972763,
+        "recall": 0.11777777777777777,
+        "shameFP": 3
+      },
+      "news": {
+        "human": 332,
+        "ai": 1350,
+        "fp": 0,
+        "tp": 149,
+        "fpRate": 0,
+        "recall": 0.11037037037037037,
+        "shameFP": 0
+      },
+      "poetry": {
+        "human": 303,
+        "ai": 1350,
+        "fp": 5,
+        "tp": 198,
+        "fpRate": 0.0165016501650165,
+        "recall": 0.14666666666666667,
+        "shameFP": 5
+      },
+      "recipes": {
+        "human": 353,
+        "ai": 1350,
+        "fp": 0,
+        "tp": 3,
+        "fpRate": 0,
+        "recall": 0.0022222222222222222,
+        "shameFP": 0
+      },
+      "reddit": {
+        "human": 341,
+        "ai": 1350,
+        "fp": 3,
+        "tp": 63,
+        "fpRate": 0.008797653958944282,
+        "recall": 0.04666666666666667,
+        "shameFP": 3
+      },
+      "reviews": {
+        "human": 151,
+        "ai": 1350,
+        "fp": 6,
+        "tp": 307,
+        "fpRate": 0.039735099337748346,
+        "recall": 0.22740740740740742,
+        "shameFP": 6
+      },
+      "wiki": {
+        "human": 313,
+        "ai": 1350,
+        "fp": 1,
+        "tp": 153,
+        "fpRate": 0.003194888178913738,
+        "recall": 0.11333333333333333,
+        "shameFP": 1
+      }
+    },
+    "model": {
+      "chatgpt": {
+        "human": 2354,
+        "ai": 1200,
+        "fp": 29,
+        "tp": 275,
+        "fpRate": 0.01231945624468989,
+        "recall": 0.22916666666666666,
+        "shameFP": 26
+      },
+      "cohere-chat": {
+        "human": 2354,
+        "ai": 1200,
+        "fp": 29,
+        "tp": 50,
+        "fpRate": 0.01231945624468989,
+        "recall": 0.041666666666666664,
+        "shameFP": 26
+      },
+      "gpt4": {
+        "human": 2354,
+        "ai": 1200,
+        "fp": 29,
+        "tp": 291,
+        "fpRate": 0.01231945624468989,
+        "recall": 0.2425,
+        "shameFP": 26
+      },
+      "llama-chat": {
+        "human": 2354,
+        "ai": 2400,
+        "fp": 29,
+        "tp": 354,
+        "fpRate": 0.01231945624468989,
+        "recall": 0.1475,
+        "shameFP": 26
+      },
+      "mistral-chat": {
+        "human": 2354,
+        "ai": 2400,
+        "fp": 29,
+        "tp": 145,
+        "fpRate": 0.01231945624468989,
+        "recall": 0.06041666666666667,
+        "shameFP": 26
+      },
+      "mpt-chat": {
+        "human": 2354,
+        "ai": 2400,
+        "fp": 29,
+        "tp": 91,
+        "fpRate": 0.01231945624468989,
+        "recall": 0.03791666666666667,
+        "shameFP": 26
+      }
+    }
+  },
+  "measured-structural.visible-bold-headings": {
+    "overall": {
+      "human": 2354,
+      "ai": 10800,
+      "fp": 29,
+      "tp": 1206,
+      "fpRate": 0.01231945624468989,
+      "recall": 0.11166666666666666,
+      "shameFP": 26
+    },
+    "domain": {
+      "abstracts": {
+        "human": 304,
+        "ai": 1350,
+        "fp": 11,
+        "tp": 174,
+        "fpRate": 0.03618421052631579,
+        "recall": 0.1288888888888889,
+        "shameFP": 8
+      },
+      "books": {
+        "human": 257,
+        "ai": 1350,
+        "fp": 3,
+        "tp": 159,
+        "fpRate": 0.011673151750972763,
+        "recall": 0.11777777777777777,
+        "shameFP": 3
+      },
+      "news": {
+        "human": 332,
+        "ai": 1350,
+        "fp": 0,
+        "tp": 149,
+        "fpRate": 0,
+        "recall": 0.11037037037037037,
+        "shameFP": 0
+      },
+      "poetry": {
+        "human": 303,
+        "ai": 1350,
+        "fp": 5,
+        "tp": 198,
+        "fpRate": 0.0165016501650165,
+        "recall": 0.14666666666666667,
+        "shameFP": 5
+      },
+      "recipes": {
+        "human": 353,
+        "ai": 1350,
+        "fp": 0,
+        "tp": 3,
+        "fpRate": 0,
+        "recall": 0.0022222222222222222,
+        "shameFP": 0
+      },
+      "reddit": {
+        "human": 341,
+        "ai": 1350,
+        "fp": 3,
+        "tp": 63,
+        "fpRate": 0.008797653958944282,
+        "recall": 0.04666666666666667,
+        "shameFP": 3
+      },
+      "reviews": {
+        "human": 151,
+        "ai": 1350,
+        "fp": 6,
+        "tp": 307,
+        "fpRate": 0.039735099337748346,
+        "recall": 0.22740740740740742,
+        "shameFP": 6
+      },
+      "wiki": {
+        "human": 313,
+        "ai": 1350,
+        "fp": 1,
+        "tp": 153,
+        "fpRate": 0.003194888178913738,
+        "recall": 0.11333333333333333,
+        "shameFP": 1
+      }
+    },
+    "model": {
+      "chatgpt": {
+        "human": 2354,
+        "ai": 1200,
+        "fp": 29,
+        "tp": 275,
+        "fpRate": 0.01231945624468989,
+        "recall": 0.22916666666666666,
+        "shameFP": 26
+      },
+      "cohere-chat": {
+        "human": 2354,
+        "ai": 1200,
+        "fp": 29,
+        "tp": 50,
+        "fpRate": 0.01231945624468989,
+        "recall": 0.041666666666666664,
+        "shameFP": 26
+      },
+      "gpt4": {
+        "human": 2354,
+        "ai": 1200,
+        "fp": 29,
+        "tp": 291,
+        "fpRate": 0.01231945624468989,
+        "recall": 0.2425,
+        "shameFP": 26
+      },
+      "llama-chat": {
+        "human": 2354,
+        "ai": 2400,
+        "fp": 29,
+        "tp": 354,
+        "fpRate": 0.01231945624468989,
+        "recall": 0.1475,
+        "shameFP": 26
+      },
+      "mistral-chat": {
+        "human": 2354,
+        "ai": 2400,
+        "fp": 29,
+        "tp": 145,
+        "fpRate": 0.01231945624468989,
+        "recall": 0.06041666666666667,
+        "shameFP": 26
+      },
+      "mpt-chat": {
+        "human": 2354,
+        "ai": 2400,
+        "fp": 29,
+        "tp": 91,
+        "fpRate": 0.01231945624468989,
+        "recall": 0.03791666666666667,
+        "shameFP": 26
+      }
+    }
+  },
+  "measured-structural.transition-share": {
+    "overall": {
+      "human": 2354,
+      "ai": 10800,
+      "fp": 29,
+      "tp": 1209,
+      "fpRate": 0.01231945624468989,
+      "recall": 0.11194444444444444,
+      "shameFP": 26
+    },
+    "domain": {
+      "abstracts": {
+        "human": 304,
+        "ai": 1350,
+        "fp": 11,
+        "tp": 177,
+        "fpRate": 0.03618421052631579,
+        "recall": 0.13111111111111112,
+        "shameFP": 8
+      },
+      "books": {
+        "human": 257,
+        "ai": 1350,
+        "fp": 3,
+        "tp": 159,
+        "fpRate": 0.011673151750972763,
+        "recall": 0.11777777777777777,
+        "shameFP": 3
+      },
+      "news": {
+        "human": 332,
+        "ai": 1350,
+        "fp": 0,
+        "tp": 149,
+        "fpRate": 0,
+        "recall": 0.11037037037037037,
+        "shameFP": 0
+      },
+      "poetry": {
+        "human": 303,
+        "ai": 1350,
+        "fp": 5,
+        "tp": 198,
+        "fpRate": 0.0165016501650165,
+        "recall": 0.14666666666666667,
+        "shameFP": 5
+      },
+      "recipes": {
+        "human": 353,
+        "ai": 1350,
+        "fp": 0,
+        "tp": 3,
+        "fpRate": 0,
+        "recall": 0.0022222222222222222,
+        "shameFP": 0
+      },
+      "reddit": {
+        "human": 341,
+        "ai": 1350,
+        "fp": 3,
+        "tp": 63,
+        "fpRate": 0.008797653958944282,
+        "recall": 0.04666666666666667,
+        "shameFP": 3
+      },
+      "reviews": {
+        "human": 151,
+        "ai": 1350,
+        "fp": 6,
+        "tp": 307,
+        "fpRate": 0.039735099337748346,
+        "recall": 0.22740740740740742,
+        "shameFP": 6
+      },
+      "wiki": {
+        "human": 313,
+        "ai": 1350,
+        "fp": 1,
+        "tp": 153,
+        "fpRate": 0.003194888178913738,
+        "recall": 0.11333333333333333,
+        "shameFP": 1
+      }
+    },
+    "model": {
+      "chatgpt": {
+        "human": 2354,
+        "ai": 1200,
+        "fp": 29,
+        "tp": 275,
+        "fpRate": 0.01231945624468989,
+        "recall": 0.22916666666666666,
+        "shameFP": 26
+      },
+      "cohere-chat": {
+        "human": 2354,
+        "ai": 1200,
+        "fp": 29,
+        "tp": 50,
+        "fpRate": 0.01231945624468989,
+        "recall": 0.041666666666666664,
+        "shameFP": 26
+      },
+      "gpt4": {
+        "human": 2354,
+        "ai": 1200,
+        "fp": 29,
+        "tp": 291,
+        "fpRate": 0.01231945624468989,
+        "recall": 0.2425,
+        "shameFP": 26
+      },
+      "llama-chat": {
+        "human": 2354,
+        "ai": 2400,
+        "fp": 29,
+        "tp": 354,
+        "fpRate": 0.01231945624468989,
+        "recall": 0.1475,
+        "shameFP": 26
+      },
+      "mistral-chat": {
+        "human": 2354,
+        "ai": 2400,
+        "fp": 29,
+        "tp": 148,
+        "fpRate": 0.01231945624468989,
+        "recall": 0.06166666666666667,
+        "shameFP": 26
+      },
+      "mpt-chat": {
+        "human": 2354,
+        "ai": 2400,
+        "fp": 29,
+        "tp": 91,
+        "fpRate": 0.01231945624468989,
+        "recall": 0.03791666666666667,
+        "shameFP": 26
+      }
+    }
+  },
+  "measured-structural.transition-count": {
+    "overall": {
+      "human": 2354,
+      "ai": 10800,
+      "fp": 29,
+      "tp": 1206,
+      "fpRate": 0.01231945624468989,
+      "recall": 0.11166666666666666,
+      "shameFP": 26
+    },
+    "domain": {
+      "abstracts": {
+        "human": 304,
+        "ai": 1350,
+        "fp": 11,
+        "tp": 174,
+        "fpRate": 0.03618421052631579,
+        "recall": 0.1288888888888889,
+        "shameFP": 8
+      },
+      "books": {
+        "human": 257,
+        "ai": 1350,
+        "fp": 3,
+        "tp": 159,
+        "fpRate": 0.011673151750972763,
+        "recall": 0.11777777777777777,
+        "shameFP": 3
+      },
+      "news": {
+        "human": 332,
+        "ai": 1350,
+        "fp": 0,
+        "tp": 149,
+        "fpRate": 0,
+        "recall": 0.11037037037037037,
+        "shameFP": 0
+      },
+      "poetry": {
+        "human": 303,
+        "ai": 1350,
+        "fp": 5,
+        "tp": 198,
+        "fpRate": 0.0165016501650165,
+        "recall": 0.14666666666666667,
+        "shameFP": 5
+      },
+      "recipes": {
+        "human": 353,
+        "ai": 1350,
+        "fp": 0,
+        "tp": 3,
+        "fpRate": 0,
+        "recall": 0.0022222222222222222,
+        "shameFP": 0
+      },
+      "reddit": {
+        "human": 341,
+        "ai": 1350,
+        "fp": 3,
+        "tp": 63,
+        "fpRate": 0.008797653958944282,
+        "recall": 0.04666666666666667,
+        "shameFP": 3
+      },
+      "reviews": {
+        "human": 151,
+        "ai": 1350,
+        "fp": 6,
+        "tp": 307,
+        "fpRate": 0.039735099337748346,
+        "recall": 0.22740740740740742,
+        "shameFP": 6
+      },
+      "wiki": {
+        "human": 313,
+        "ai": 1350,
+        "fp": 1,
+        "tp": 153,
+        "fpRate": 0.003194888178913738,
+        "recall": 0.11333333333333333,
+        "shameFP": 1
+      }
+    },
+    "model": {
+      "chatgpt": {
+        "human": 2354,
+        "ai": 1200,
+        "fp": 29,
+        "tp": 275,
+        "fpRate": 0.01231945624468989,
+        "recall": 0.22916666666666666,
+        "shameFP": 26
+      },
+      "cohere-chat": {
+        "human": 2354,
+        "ai": 1200,
+        "fp": 29,
+        "tp": 50,
+        "fpRate": 0.01231945624468989,
+        "recall": 0.041666666666666664,
+        "shameFP": 26
+      },
+      "gpt4": {
+        "human": 2354,
+        "ai": 1200,
+        "fp": 29,
+        "tp": 291,
+        "fpRate": 0.01231945624468989,
+        "recall": 0.2425,
+        "shameFP": 26
+      },
+      "llama-chat": {
+        "human": 2354,
+        "ai": 2400,
+        "fp": 29,
+        "tp": 354,
+        "fpRate": 0.01231945624468989,
+        "recall": 0.1475,
+        "shameFP": 26
+      },
+      "mistral-chat": {
+        "human": 2354,
+        "ai": 2400,
+        "fp": 29,
+        "tp": 145,
+        "fpRate": 0.01231945624468989,
+        "recall": 0.06041666666666667,
+        "shameFP": 26
+      },
+      "mpt-chat": {
+        "human": 2354,
+        "ai": 2400,
+        "fp": 29,
+        "tp": 91,
+        "fpRate": 0.01231945624468989,
+        "recall": 0.03791666666666667,
+        "shameFP": 26
+      }
+    }
+  },
+  "measured-structural.summary-tail": {
+    "overall": {
+      "human": 2354,
+      "ai": 10800,
+      "fp": 29,
+      "tp": 1218,
+      "fpRate": 0.01231945624468989,
+      "recall": 0.11277777777777778,
+      "shameFP": 26
+    },
+    "domain": {
+      "abstracts": {
+        "human": 304,
+        "ai": 1350,
+        "fp": 11,
+        "tp": 180,
+        "fpRate": 0.03618421052631579,
+        "recall": 0.13333333333333333,
+        "shameFP": 8
+      },
+      "books": {
+        "human": 257,
+        "ai": 1350,
+        "fp": 3,
+        "tp": 160,
+        "fpRate": 0.011673151750972763,
+        "recall": 0.11851851851851852,
+        "shameFP": 3
+      },
+      "news": {
+        "human": 332,
+        "ai": 1350,
+        "fp": 0,
+        "tp": 149,
+        "fpRate": 0,
+        "recall": 0.11037037037037037,
+        "shameFP": 0
+      },
+      "poetry": {
+        "human": 303,
+        "ai": 1350,
+        "fp": 5,
+        "tp": 198,
+        "fpRate": 0.0165016501650165,
+        "recall": 0.14666666666666667,
+        "shameFP": 5
+      },
+      "recipes": {
+        "human": 353,
+        "ai": 1350,
+        "fp": 0,
+        "tp": 3,
+        "fpRate": 0,
+        "recall": 0.0022222222222222222,
+        "shameFP": 0
+      },
+      "reddit": {
+        "human": 341,
+        "ai": 1350,
+        "fp": 3,
+        "tp": 65,
+        "fpRate": 0.008797653958944282,
+        "recall": 0.04814814814814815,
+        "shameFP": 3
+      },
+      "reviews": {
+        "human": 151,
+        "ai": 1350,
+        "fp": 6,
+        "tp": 310,
+        "fpRate": 0.039735099337748346,
+        "recall": 0.22962962962962963,
+        "shameFP": 6
+      },
+      "wiki": {
+        "human": 313,
+        "ai": 1350,
+        "fp": 1,
+        "tp": 153,
+        "fpRate": 0.003194888178913738,
+        "recall": 0.11333333333333333,
+        "shameFP": 1
+      }
+    },
+    "model": {
+      "chatgpt": {
+        "human": 2354,
+        "ai": 1200,
+        "fp": 29,
+        "tp": 275,
+        "fpRate": 0.01231945624468989,
+        "recall": 0.22916666666666666,
+        "shameFP": 26
+      },
+      "cohere-chat": {
+        "human": 2354,
+        "ai": 1200,
+        "fp": 29,
+        "tp": 50,
+        "fpRate": 0.01231945624468989,
+        "recall": 0.041666666666666664,
+        "shameFP": 26
+      },
+      "gpt4": {
+        "human": 2354,
+        "ai": 1200,
+        "fp": 29,
+        "tp": 292,
+        "fpRate": 0.01231945624468989,
+        "recall": 0.24333333333333335,
+        "shameFP": 26
+      },
+      "llama-chat": {
+        "human": 2354,
+        "ai": 2400,
+        "fp": 29,
+        "tp": 359,
+        "fpRate": 0.01231945624468989,
+        "recall": 0.14958333333333335,
+        "shameFP": 26
+      },
+      "mistral-chat": {
+        "human": 2354,
+        "ai": 2400,
+        "fp": 29,
+        "tp": 150,
+        "fpRate": 0.01231945624468989,
+        "recall": 0.0625,
+        "shameFP": 26
+      },
+      "mpt-chat": {
+        "human": 2354,
+        "ai": 2400,
+        "fp": 29,
+        "tp": 92,
+        "fpRate": 0.01231945624468989,
+        "recall": 0.03833333333333333,
+        "shameFP": 26
+      }
+    }
+  },
+  "combined": {
+    "overall": {
+      "human": 2354,
+      "ai": 10800,
+      "fp": 29,
+      "tp": 1225,
+      "fpRate": 0.01231945624468989,
+      "recall": 0.11342592592592593,
+      "shameFP": 26
+    },
+    "domain": {
+      "abstracts": {
+        "human": 304,
+        "ai": 1350,
+        "fp": 11,
+        "tp": 182,
+        "fpRate": 0.03618421052631579,
+        "recall": 0.1348148148148148,
+        "shameFP": 8
+      },
+      "books": {
+        "human": 257,
+        "ai": 1350,
+        "fp": 3,
+        "tp": 160,
+        "fpRate": 0.011673151750972763,
+        "recall": 0.11851851851851852,
+        "shameFP": 3
+      },
+      "news": {
+        "human": 332,
+        "ai": 1350,
+        "fp": 0,
+        "tp": 152,
+        "fpRate": 0,
+        "recall": 0.11259259259259259,
+        "shameFP": 0
+      },
+      "poetry": {
+        "human": 303,
+        "ai": 1350,
+        "fp": 5,
+        "tp": 198,
+        "fpRate": 0.0165016501650165,
+        "recall": 0.14666666666666667,
+        "shameFP": 5
+      },
+      "recipes": {
+        "human": 353,
+        "ai": 1350,
+        "fp": 0,
+        "tp": 3,
+        "fpRate": 0,
+        "recall": 0.0022222222222222222,
+        "shameFP": 0
+      },
+      "reddit": {
+        "human": 341,
+        "ai": 1350,
+        "fp": 3,
+        "tp": 67,
+        "fpRate": 0.008797653958944282,
+        "recall": 0.04962962962962963,
+        "shameFP": 3
+      },
+      "reviews": {
+        "human": 151,
+        "ai": 1350,
+        "fp": 6,
+        "tp": 310,
+        "fpRate": 0.039735099337748346,
+        "recall": 0.22962962962962963,
+        "shameFP": 6
+      },
+      "wiki": {
+        "human": 313,
+        "ai": 1350,
+        "fp": 1,
+        "tp": 153,
+        "fpRate": 0.003194888178913738,
+        "recall": 0.11333333333333333,
+        "shameFP": 1
+      }
+    },
+    "model": {
+      "chatgpt": {
+        "human": 2354,
+        "ai": 1200,
+        "fp": 29,
+        "tp": 276,
+        "fpRate": 0.01231945624468989,
+        "recall": 0.23,
+        "shameFP": 26
+      },
+      "cohere-chat": {
+        "human": 2354,
+        "ai": 1200,
+        "fp": 29,
+        "tp": 50,
+        "fpRate": 0.01231945624468989,
+        "recall": 0.041666666666666664,
+        "shameFP": 26
+      },
+      "gpt4": {
+        "human": 2354,
+        "ai": 1200,
+        "fp": 29,
+        "tp": 292,
+        "fpRate": 0.01231945624468989,
+        "recall": 0.24333333333333335,
+        "shameFP": 26
+      },
+      "llama-chat": {
+        "human": 2354,
+        "ai": 2400,
+        "fp": 29,
+        "tp": 360,
+        "fpRate": 0.01231945624468989,
+        "recall": 0.15,
+        "shameFP": 26
+      },
+      "mistral-chat": {
+        "human": 2354,
+        "ai": 2400,
+        "fp": 29,
+        "tp": 152,
+        "fpRate": 0.01231945624468989,
+        "recall": 0.06333333333333334,
+        "shameFP": 26
+      },
+      "mpt-chat": {
+        "human": 2354,
+        "ai": 2400,
+        "fp": 29,
+        "tp": 95,
+        "fpRate": 0.01231945624468989,
+        "recall": 0.03958333333333333,
+        "shameFP": 26
+      }
+    }
+  }
+}

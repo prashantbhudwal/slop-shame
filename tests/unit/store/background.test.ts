@@ -57,11 +57,30 @@ afterEach(async () => {
 });
 
 describe('background message handlers and page API', () => {
+  it('returns conflicting author actions as terminal rejections', async () => {
+    await dispatch({ type: 'store/sightings', sightings: [sighting()] });
+    const action = { postId: 'post-1', authorId: 'in/somebody-else', action: 'destroyed' as const };
+    expect(await dispatch({ type: 'store/action', ...action })).toMatchObject({
+      ok: true, pendingActions: [], rejectedActions: [action],
+    });
+    expect(await dispatch({ type: 'store/author', authorId: 'in/alice' })).toMatchObject({ destroyedCount: 0 });
+  });
+
+  it('rejects oversized batches and identities before opening a write transaction', async () => {
+    await expect(dispatch({ type: 'store/sightings', sightings: Array(101).fill(sighting()) })).rejects.toThrow(/limit|large/i);
+    await expect(dispatch({ type: 'store/sightings', sightings: [], actions: Array(101).fill({ postId: 'p', authorId: 'a', action: 'destroyed' }) })).rejects.toThrow(/limit|large/i);
+    await expect(dispatch({ type: 'store/author', authorId: 'x'.repeat(1024 * 1024) })).rejects.toThrow('Invalid');
+    expect((await getStats()).postsScanned).toBe(0);
+  });
+
   it('returns requested authors/leaderboards after durable writes and coalesces broadcasts', async () => {
     vi.useFakeTimers({ toFake: ['setTimeout', 'clearTimeout'] });
     await dispatch({ type: 'store/sightings', sightings: [sighting()] });
     await dispatch({ type: 'store/action', postId: 'post-1', authorId: 'in/alice', action: 'shamed' });
     expect(await dispatch({ type: 'store/author', authorId: 'in/alice' })).toMatchObject({ postsSeen: 1, shamedCount: 1 });
+    // One slop post is no sample: nobody is named yet.
+    expect(await dispatch({ type: 'store/leaderboard', limit: 10 })).toHaveLength(0);
+    await dispatch({ type: 'store/sightings', sightings: [sighting('post-2'), sighting('post-3')] });
     expect(await dispatch({ type: 'store/leaderboard', limit: 10 })).toHaveLength(1);
     expect(await dispatch({ type: 'store/author', authorId: 'missing' })).toBeNull();
     expect(sendMessage).not.toHaveBeenCalled();

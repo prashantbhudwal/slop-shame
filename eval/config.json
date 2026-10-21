@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "minWords": 30,
+  "maxWords": 600,
+  "falsePositiveThreshold": 40,
+  "falsePositiveTarget": 0.05,
+  "hardHumanSubsets": ["non-native", "formal"],
+  "files": [
+    "data/eval/samples/unmasking.jsonl",
+    "data/eval/samples/plos.jsonl",
+    "data/eval/samples/official-releases.jsonl",
+    "data/eval/samples/uci-reviews.jsonl",
+    "data/eval/samples/synthetic-general.jsonl"
+  ],
+  "optionalFiles": [
+    "data/eval/raw/normalized/wi.jsonl",
+    "data/eval/raw/normalized/raid.jsonl",
+    "data/eval/raw/normalized/aeslc.jsonl",
+    "data/eval/raw/normalized/human-detectors-ai.jsonl"
+  ]
+}

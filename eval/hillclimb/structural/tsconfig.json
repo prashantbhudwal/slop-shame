@@ -1,0 +1,8 @@
+{
+  "compilerOptions": {
+    "target": "ES2022", "module": "ESNext", "moduleResolution": "Bundler",
+    "strict": true, "skipLibCheck": true, "noEmit": true,
+    "lib": ["ES2022", "DOM"], "types": []
+  },
+  "files": ["../../../src/lib/engine/packs/measured/structural.ts", "features.ts", "visible-features.ts", "specific-features.ts"]
+}

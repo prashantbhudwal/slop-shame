@@ -1,0 +1,1706 @@
+{
+  "engineHash": "83be54ab0db0bd46f287537ef037aeba42f49f9582639b13487856109fe38316",
+  "sets": {
+    "targetHoldout": {
+      "main": {
+        "n": 160,
+        "flags": 18,
+        "human": 0,
+        "fp": 0,
+        "ai": 160,
+        "tp": 18,
+        "smell": {
+          "obvious": {
+            "n": 106,
+            "flags": 18
+          },
+          "some": {
+            "n": 53,
+            "flags": 0
+          },
+          "none": {
+            "n": 1,
+            "flags": 0
+          }
+        }
+      },
+      "withoutDictionary-all": {
+        "n": 160,
+        "flags": 18,
+        "human": 0,
+        "fp": 0,
+        "ai": 160,
+        "tp": 18,
+        "smell": {
+          "obvious": {
+            "n": 106,
+            "flags": 18
+          },
+          "some": {
+            "n": 53,
+            "flags": 0
+          },
+          "none": {
+            "n": 1,
+            "flags": 0
+          }
+        }
+      },
+      "withoutDictionary-gun": {
+        "n": 160,
+        "flags": 18,
+        "human": 0,
+        "fp": 0,
+        "ai": 160,
+        "tp": 18,
+        "smell": {
+          "obvious": {
+            "n": 106,
+            "flags": 18
+          },
+          "some": {
+            "n": 53,
+            "flags": 0
+          },
+          "none": {
+            "n": 1,
+            "flags": 0
+          }
+        }
+      },
+      "withoutDictionary-habit": {
+        "n": 160,
+        "flags": 18,
+        "human": 0,
+        "fp": 0,
+        "ai": 160,
+        "tp": 18,
+        "smell": {
+          "obvious": {
+            "n": 106,
+            "flags": 18
+          },
+          "some": {
+            "n": 53,
+            "flags": 0
+          },
+          "none": {
+            "n": 1,
+            "flags": 0
+          }
+        }
+      },
+      "withoutDictionary-vocabulary": {
+        "n": 160,
+        "flags": 18,
+        "human": 0,
+        "fp": 0,
+        "ai": 160,
+        "tp": 18,
+        "smell": {
+          "obvious": {
+            "n": 106,
+            "flags": 18
+          },
+          "some": {
+            "n": 53,
+            "flags": 0
+          },
+          "none": {
+            "n": 1,
+            "flags": 0
+          }
+        }
+      },
+      "withoutFamily-ai-vocabulary": {
+        "n": 160,
+        "flags": 18,
+        "human": 0,
+        "fp": 0,
+        "ai": 160,
+        "tp": 18,
+        "smell": {
+          "obvious": {
+            "n": 106,
+            "flags": 18
+          },
+          "some": {
+            "n": 53,
+            "flags": 0
+          },
+          "none": {
+            "n": 1,
+            "flags": 0
+          }
+        }
+      },
+      "withoutFamily-chatbot-leak": {
+        "n": 160,
+        "flags": 18,
+        "human": 0,
+        "fp": 0,
+        "ai": 160,
+        "tp": 18,
+        "smell": {
+          "obvious": {
+            "n": 106,
+            "flags": 18
+          },
+          "some": {
+            "n": 53,
+            "flags": 0
+          },
+          "none": {
+            "n": 1,
+            "flags": 0
+          }
+        }
+      },
+      "withoutFamily-draft-habit": {
+        "n": 160,
+        "flags": 18,
+        "human": 0,
+        "fp": 0,
+        "ai": 160,
+        "tp": 18,
+        "smell": {
+          "obvious": {
+            "n": 106,
+            "flags": 18
+          },
+          "some": {
+            "n": 53,
+            "flags": 0
+          },
+          "none": {
+            "n": 1,
+            "flags": 0
+          }
+        }
+      },
+      "withoutFamily-engagement": {
+        "n": 160,
+        "flags": 18,
+        "human": 0,
+        "fp": 0,
+        "ai": 160,
+        "tp": 18,
+        "smell": {
+          "obvious": {
+            "n": 106,
+            "flags": 18
+          },
+          "some": {
+            "n": 53,
+            "flags": 0
+          },
+          "none": {
+            "n": 1,
+            "flags": 0
+          }
+        }
+      },
+      "withoutFamily-engagement-bait": {
+        "n": 160,
+        "flags": 18,
+        "human": 0,
+        "fp": 0,
+        "ai": 160,
+        "tp": 18,
+        "smell": {
+          "obvious": {
+            "n": 106,
+            "flags": 18
+          },
+          "some": {
+            "n": 53,
+            "flags": 0
+          },
+          "none": {
+            "n": 1,
+            "flags": 0
+          }
+        }
+      },
+      "withoutFamily-hedging": {
+        "n": 160,
+        "flags": 18,
+        "human": 0,
+        "fp": 0,
+        "ai": 160,
+        "tp": 18,
+        "smell": {
+          "obvious": {
+            "n": 106,
+            "flags": 18
+          },
+          "some": {
+            "n": 53,
+            "flags": 0
+          },
+          "none": {
+            "n": 1,
+            "flags": 0
+          }
+        }
+      },
+      "withoutFamily-inflation": {
+        "n": 160,
+        "flags": 18,
+        "human": 0,
+        "fp": 0,
+        "ai": 160,
+        "tp": 18,
+        "smell": {
+          "obvious": {
+            "n": 106,
+            "flags": 18
+          },
+          "some": {
+            "n": 53,
+            "flags": 0
+          },
+          "none": {
+            "n": 1,
+            "flags": 0
+          }
+        }
+      },
+      "withoutFamily-list-structure": {
+        "n": 160,
+        "flags": 18,
+        "human": 0,
+        "fp": 0,
+        "ai": 160,
+        "tp": 18,
+        "smell": {
+          "obvious": {
+            "n": 106,
+            "flags": 18
+          },
+          "some": {
+            "n": 53,
+            "flags": 0
+          },
+          "none": {
+            "n": 1,
+            "flags": 0
+          }
+        }
+      },
+      "withoutFamily-negation-pivot": {
+        "n": 160,
+        "flags": 18,
+        "human": 0,
+        "fp": 0,
+        "ai": 160,
+        "tp": 18,
+        "smell": {
+          "obvious": {
+            "n": 106,
+            "flags": 18
+          },
+          "some": {
+            "n": 53,
+            "flags": 0
+          },
+          "none": {
+            "n": 1,
+            "flags": 0
+          }
+        }
+      },
+      "withoutFamily-presentation": {
+        "n": 160,
+        "flags": 18,
+        "human": 0,
+        "fp": 0,
+        "ai": 160,
+        "tp": 18,
+        "smell": {
+          "obvious": {
+            "n": 106,
+            "flags": 18
+          },
+          "some": {
+            "n": 53,
+            "flags": 0
+          },
+          "none": {
+            "n": 1,
+            "flags": 0
+          }
+        }
+      },
+      "withoutFamily-stock-story": {
+        "n": 160,
+        "flags": 18,
+        "human": 0,
+        "fp": 0,
+        "ai": 160,
+        "tp": 18,
+        "smell": {
+          "obvious": {
+            "n": 106,
+            "flags": 18
+          },
+          "some": {
+            "n": 53,
+            "flags": 0
+          },
+          "none": {
+            "n": 1,
+            "flags": 0
+          }
+        }
+      },
+      "withoutFamily-template-phrases": {
+        "n": 160,
+        "flags": 18,
+        "human": 0,
+        "fp": 0,
+        "ai": 160,
+        "tp": 18,
+        "smell": {
+          "obvious": {
+            "n": 106,
+            "flags": 18
+          },
+          "some": {
+            "n": 53,
+            "flags": 0
+          },
+          "none": {
+            "n": 1,
+            "flags": 0
+          }
+        }
+      }
+    },
+    "fresh": {
+      "main": {
+        "n": 351,
+        "flags": 7,
+        "human": 0,
+        "fp": 0,
+        "ai": 351,
+        "tp": 7,
+        "smell": {}
+      },
+      "withoutDictionary-all": {
+        "n": 351,
+        "flags": 7,
+        "human": 0,
+        "fp": 0,
+        "ai": 351,
+        "tp": 7,
+        "smell": {}
+      },
+      "withoutDictionary-gun": {
+        "n": 351,
+        "flags": 7,
+        "human": 0,
+        "fp": 0,
+        "ai": 351,
+        "tp": 7,
+        "smell": {}
+      },
+      "withoutDictionary-habit": {
+        "n": 351,
+        "flags": 7,
+        "human": 0,
+        "fp": 0,
+        "ai": 351,
+        "tp": 7,
+        "smell": {}
+      },
+      "withoutDictionary-vocabulary": {
+        "n": 351,
+        "flags": 7,
+        "human": 0,
+        "fp": 0,
+        "ai": 351,
+        "tp": 7,
+        "smell": {}
+      },
+      "withoutFamily-ai-vocabulary": {
+        "n": 351,
+        "flags": 7,
+        "human": 0,
+        "fp": 0,
+        "ai": 351,
+        "tp": 7,
+        "smell": {}
+      },
+      "withoutFamily-chatbot-leak": {
+        "n": 351,
+        "flags": 7,
+        "human": 0,
+        "fp": 0,
+        "ai": 351,
+        "tp": 7,
+        "smell": {}
+      },
+      "withoutFamily-draft-habit": {
+        "n": 351,
+        "flags": 7,
+        "human": 0,
+        "fp": 0,
+        "ai": 351,
+        "tp": 7,
+        "smell": {}
+      },
+      "withoutFamily-engagement": {
+        "n": 351,
+        "flags": 7,
+        "human": 0,
+        "fp": 0,
+        "ai": 351,
+        "tp": 7,
+        "smell": {}
+      },
+      "withoutFamily-engagement-bait": {
+        "n": 351,
+        "flags": 8,
+        "human": 0,
+        "fp": 0,
+        "ai": 351,
+        "tp": 8,
+        "smell": {}
+      },
+      "withoutFamily-hedging": {
+        "n": 351,
+        "flags": 7,
+        "human": 0,
+        "fp": 0,
+        "ai": 351,
+        "tp": 7,
+        "smell": {}
+      },
+      "withoutFamily-inflation": {
+        "n": 351,
+        "flags": 7,
+        "human": 0,
+        "fp": 0,
+        "ai": 351,
+        "tp": 7,
+        "smell": {}
+      },
+      "withoutFamily-list-structure": {
+        "n": 351,
+        "flags": 7,
+        "human": 0,
+        "fp": 0,
+        "ai": 351,
+        "tp": 7,
+        "smell": {}
+      },
+      "withoutFamily-negation-pivot": {
+        "n": 351,
+        "flags": 7,
+        "human": 0,
+        "fp": 0,
+        "ai": 351,
+        "tp": 7,
+        "smell": {}
+      },
+      "withoutFamily-presentation": {
+        "n": 351,
+        "flags": 7,
+        "human": 0,
+        "fp": 0,
+        "ai": 351,
+        "tp": 7,
+        "smell": {}
+      },
+      "withoutFamily-stock-story": {
+        "n": 351,
+        "flags": 7,
+        "human": 0,
+        "fp": 0,
+        "ai": 351,
+        "tp": 7,
+        "smell": {}
+      },
+      "withoutFamily-template-phrases": {
+        "n": 351,
+        "flags": 7,
+        "human": 0,
+        "fp": 0,
+        "ai": 351,
+        "tp": 7,
+        "smell": {}
+      }
+    },
+    "linkedinHoldout": {
+      "main": {
+        "n": 9743,
+        "flags": 38,
+        "human": 9743,
+        "fp": 38,
+        "ai": 0,
+        "tp": 0,
+        "smell": {}
+      },
+      "withoutDictionary-all": {
+        "n": 9743,
+        "flags": 0,
+        "human": 9743,
+        "fp": 0,
+        "ai": 0,
+        "tp": 0,
+        "smell": {}
+      },
+      "withoutDictionary-gun": {
+        "n": 9743,
+        "flags": 5,
+        "human": 9743,
+        "fp": 5,
+        "ai": 0,
+        "tp": 0,
+        "smell": {}
+      },
+      "withoutDictionary-habit": {
+        "n": 9743,
+        "flags": 33,
+        "human": 9743,
+        "fp": 33,
+        "ai": 0,
+        "tp": 0,
+        "smell": {}
+      },
+      "withoutDictionary-vocabulary": {
+        "n": 9743,
+        "flags": 35,
+        "human": 9743,
+        "fp": 35,
+        "ai": 0,
+        "tp": 0,
+        "smell": {}
+      },
+      "withoutFamily-ai-vocabulary": {
+        "n": 9743,
+        "flags": 35,
+        "human": 9743,
+        "fp": 35,
+        "ai": 0,
+        "tp": 0,
+        "smell": {}
+      },
+      "withoutFamily-chatbot-leak": {
+        "n": 9743,
+        "flags": 38,
+        "human": 9743,
+        "fp": 38,
+        "ai": 0,
+        "tp": 0,
+        "smell": {}
+      },
+      "withoutFamily-draft-habit": {
+        "n": 9743,
+        "flags": 38,
+        "human": 9743,
+        "fp": 38,
+        "ai": 0,
+        "tp": 0,
+        "smell": {}
+      },
+      "withoutFamily-engagement": {
+        "n": 9743,
+        "flags": 36,
+        "human": 9743,
+        "fp": 36,
+        "ai": 0,
+        "tp": 0,
+        "smell": {}
+      },
+      "withoutFamily-engagement-bait": {
+        "n": 9743,
+        "flags": 36,
+        "human": 9743,
+        "fp": 36,
+        "ai": 0,
+        "tp": 0,
+        "smell": {}
+      },
+      "withoutFamily-hedging": {
+        "n": 9743,
+        "flags": 37,
+        "human": 9743,
+        "fp": 37,
+        "ai": 0,
+        "tp": 0,
+        "smell": {}
+      },
+      "withoutFamily-inflation": {
+        "n": 9743,
+        "flags": 35,
+        "human": 9743,
+        "fp": 35,
+        "ai": 0,
+        "tp": 0,
+        "smell": {}
+      },
+      "withoutFamily-list-structure": {
+        "n": 9743,
+        "flags": 38,
+        "human": 9743,
+        "fp": 38,
+        "ai": 0,
+        "tp": 0,
+        "smell": {}
+      },
+      "withoutFamily-negation-pivot": {
+        "n": 9743,
+        "flags": 34,
+        "human": 9743,
+        "fp": 34,
+        "ai": 0,
+        "tp": 0,
+        "smell": {}
+      },
+      "withoutFamily-presentation": {
+        "n": 9743,
+        "flags": 35,
+        "human": 9743,
+        "fp": 35,
+        "ai": 0,
+        "tp": 0,
+        "smell": {}
+      },
+      "withoutFamily-stock-story": {
+        "n": 9743,
+        "flags": 38,
+        "human": 9743,
+        "fp": 38,
+        "ai": 0,
+        "tp": 0,
+        "smell": {}
+      },
+      "withoutFamily-template-phrases": {
+        "n": 9743,
+        "flags": 33,
+        "human": 9743,
+        "fp": 33,
+        "ai": 0,
+        "tp": 0,
+        "smell": {}
+      }
+    },
+    "wayback": {
+      "main": {
+        "n": 410,
+        "flags": 1,
+        "human": 410,
+        "fp": 1,
+        "ai": 0,
+        "tp": 0,
+        "smell": {}
+      },
+      "withoutDictionary-all": {
+        "n": 410,
+        "flags": 0,
+        "human": 410,
+        "fp": 0,
+        "ai": 0,
+        "tp": 0,
+        "smell": {}
+      },
+      "withoutDictionary-gun": {
+        "n": 410,
+        "flags": 1,
+        "human": 410,
+        "fp": 1,
+        "ai": 0,
+        "tp": 0,
+        "smell": {}
+      },
+      "withoutDictionary-habit": {
+        "n": 410,
+        "flags": 0,
+        "human": 410,
+        "fp": 0,
+        "ai": 0,
+        "tp": 0,
+        "smell": {}
+      },
+      "withoutDictionary-vocabulary": {
+        "n": 410,
+        "flags": 1,
+        "human": 410,
+        "fp": 1,
+        "ai": 0,
+        "tp": 0,
+        "smell": {}
+      },
+      "withoutFamily-ai-vocabulary": {
+        "n": 410,
+        "flags": 1,
+        "human": 410,
+        "fp": 1,
+        "ai": 0,
+        "tp": 0,
+        "smell": {}
+      },
+      "withoutFamily-chatbot-leak": {
+        "n": 410,
+        "flags": 1,
+        "human": 410,
+        "fp": 1,
+        "ai": 0,
+        "tp": 0,
+        "smell": {}
+      },
+      "withoutFamily-draft-habit": {
+        "n": 410,
+        "flags": 1,
+        "human": 410,
+        "fp": 1,
+        "ai": 0,
+        "tp": 0,
+        "smell": {}
+      },
+      "withoutFamily-engagement": {
+        "n": 410,
+        "flags": 1,
+        "human": 410,
+        "fp": 1,
+        "ai": 0,
+        "tp": 0,
+        "smell": {}
+      },
+      "withoutFamily-engagement-bait": {
+        "n": 410,
+        "flags": 1,
+        "human": 410,
+        "fp": 1,
+        "ai": 0,
+        "tp": 0,
+        "smell": {}
+      },
+      "withoutFamily-hedging": {
+        "n": 410,
+        "flags": 1,
+        "human": 410,
+        "fp": 1,
+        "ai": 0,
+        "tp": 0,
+        "smell": {}
+      },
+      "withoutFamily-inflation": {
+        "n": 410,
+        "flags": 0,
+        "human": 410,
+        "fp": 0,
+        "ai": 0,
+        "tp": 0,
+        "smell": {}
+      },
+      "withoutFamily-list-structure": {
+        "n": 410,
+        "flags": 1,
+        "human": 410,
+        "fp": 1,
+        "ai": 0,
+        "tp": 0,
+        "smell": {}
+      },
+      "withoutFamily-negation-pivot": {
+        "n": 410,
+        "flags": 0,
+        "human": 410,
+        "fp": 0,
+        "ai": 0,
+        "tp": 0,
+        "smell": {}
+      },
+      "withoutFamily-presentation": {
+        "n": 410,
+        "flags": 0,
+        "human": 410,
+        "fp": 0,
+        "ai": 0,
+        "tp": 0,
+        "smell": {}
+      },
+      "withoutFamily-stock-story": {
+        "n": 410,
+        "flags": 1,
+        "human": 410,
+        "fp": 1,
+        "ai": 0,
+        "tp": 0,
+        "smell": {}
+      },
+      "withoutFamily-template-phrases": {
+        "n": 410,
+        "flags": 0,
+        "human": 410,
+        "fp": 0,
+        "ai": 0,
+        "tp": 0,
+        "smell": {}
+      }
+    },
+    "raidTest": {
+      "main": {
+        "n": 2342,
+        "flags": 7,
+        "human": 2342,
+        "fp": 7,
+        "ai": 0,
+        "tp": 0,
+        "smell": {}
+      },
+      "withoutDictionary-all": {
+        "n": 2342,
+        "flags": 0,
+        "human": 2342,
+        "fp": 0,
+        "ai": 0,
+        "tp": 0,
+        "smell": {}
+      },
+      "withoutDictionary-gun": {
+        "n": 2342,
+        "flags": 6,
+        "human": 2342,
+        "fp": 6,
+        "ai": 0,
+        "tp": 0,
+        "smell": {}
+      },
+      "withoutDictionary-habit": {
+        "n": 2342,
+        "flags": 1,
+        "human": 2342,
+        "fp": 1,
+        "ai": 0,
+        "tp": 0,
+        "smell": {}
+      },
+      "withoutDictionary-vocabulary": {
+        "n": 2342,
+        "flags": 6,
+        "human": 2342,
+        "fp": 6,
+        "ai": 0,
+        "tp": 0,
+        "smell": {}
+      },
+      "withoutFamily-ai-vocabulary": {
+        "n": 2342,
+        "flags": 5,
+        "human": 2342,
+        "fp": 5,
+        "ai": 0,
+        "tp": 0,
+        "smell": {}
+      },
+      "withoutFamily-chatbot-leak": {
+        "n": 2342,
+        "flags": 7,
+        "human": 2342,
+        "fp": 7,
+        "ai": 0,
+        "tp": 0,
+        "smell": {}
+      },
+      "withoutFamily-draft-habit": {
+        "n": 2342,
+        "flags": 6,
+        "human": 2342,
+        "fp": 6,
+        "ai": 0,
+        "tp": 0,
+        "smell": {}
+      },
+      "withoutFamily-engagement": {
+        "n": 2342,
+        "flags": 7,
+        "human": 2342,
+        "fp": 7,
+        "ai": 0,
+        "tp": 0,
+        "smell": {}
+      },
+      "withoutFamily-engagement-bait": {
+        "n": 2342,
+        "flags": 7,
+        "human": 2342,
+        "fp": 7,
+        "ai": 0,
+        "tp": 0,
+        "smell": {}
+      },
+      "withoutFamily-hedging": {
+        "n": 2342,
+        "flags": 4,
+        "human": 2342,
+        "fp": 4,
+        "ai": 0,
+        "tp": 0,
+        "smell": {}
+      },
+      "withoutFamily-inflation": {
+        "n": 2342,
+        "flags": 6,
+        "human": 2342,
+        "fp": 6,
+        "ai": 0,
+        "tp": 0,
+        "smell": {}
+      },
+      "withoutFamily-list-structure": {
+        "n": 2342,
+        "flags": 7,
+        "human": 2342,
+        "fp": 7,
+        "ai": 0,
+        "tp": 0,
+        "smell": {}
+      },
+      "withoutFamily-negation-pivot": {
+        "n": 2342,
+        "flags": 1,
+        "human": 2342,
+        "fp": 1,
+        "ai": 0,
+        "tp": 0,
+        "smell": {}
+      },
+      "withoutFamily-presentation": {
+        "n": 2342,
+        "flags": 6,
+        "human": 2342,
+        "fp": 6,
+        "ai": 0,
+        "tp": 0,
+        "smell": {}
+      },
+      "withoutFamily-stock-story": {
+        "n": 2342,
+        "flags": 7,
+        "human": 2342,
+        "fp": 7,
+        "ai": 0,
+        "tp": 0,
+        "smell": {}
+      },
+      "withoutFamily-template-phrases": {
+        "n": 2342,
+        "flags": 2,
+        "human": 2342,
+        "fp": 2,
+        "ai": 0,
+        "tp": 0,
+        "smell": {}
+      }
+    },
+    "external": {
+      "main": {
+        "n": 2245,
+        "flags": 126,
+        "human": 1351,
+        "fp": 6,
+        "ai": 894,
+        "tp": 120,
+        "smell": {}
+      },
+      "withoutDictionary-all": {
+        "n": 2245,
+        "flags": 5,
+        "human": 1351,
+        "fp": 0,
+        "ai": 894,
+        "tp": 5,
+        "smell": {}
+      },
+      "withoutDictionary-gun": {
+        "n": 2245,
+        "flags": 118,
+        "human": 1351,
+        "fp": 3,
+        "ai": 894,
+        "tp": 115,
+        "smell": {}
+      },
+      "withoutDictionary-habit": {
+        "n": 2245,
+        "flags": 17,
+        "human": 1351,
+        "fp": 3,
+        "ai": 894,
+        "tp": 14,
+        "smell": {}
+      },
+      "withoutDictionary-vocabulary": {
+        "n": 2245,
+        "flags": 87,
+        "human": 1351,
+        "fp": 4,
+        "ai": 894,
+        "tp": 83,
+        "smell": {}
+      },
+      "withoutFamily-ai-vocabulary": {
+        "n": 2245,
+        "flags": 67,
+        "human": 1351,
+        "fp": 4,
+        "ai": 894,
+        "tp": 63,
+        "smell": {}
+      },
+      "withoutFamily-chatbot-leak": {
+        "n": 2245,
+        "flags": 125,
+        "human": 1351,
+        "fp": 6,
+        "ai": 894,
+        "tp": 119,
+        "smell": {}
+      },
+      "withoutFamily-draft-habit": {
+        "n": 2245,
+        "flags": 125,
+        "human": 1351,
+        "fp": 6,
+        "ai": 894,
+        "tp": 119,
+        "smell": {}
+      },
+      "withoutFamily-engagement": {
+        "n": 2245,
+        "flags": 122,
+        "human": 1351,
+        "fp": 5,
+        "ai": 894,
+        "tp": 117,
+        "smell": {}
+      },
+      "withoutFamily-engagement-bait": {
+        "n": 2245,
+        "flags": 122,
+        "human": 1351,
+        "fp": 6,
+        "ai": 894,
+        "tp": 116,
+        "smell": {}
+      },
+      "withoutFamily-hedging": {
+        "n": 2245,
+        "flags": 118,
+        "human": 1351,
+        "fp": 4,
+        "ai": 894,
+        "tp": 114,
+        "smell": {}
+      },
+      "withoutFamily-inflation": {
+        "n": 2245,
+        "flags": 64,
+        "human": 1351,
+        "fp": 5,
+        "ai": 894,
+        "tp": 59,
+        "smell": {}
+      },
+      "withoutFamily-list-structure": {
+        "n": 2245,
+        "flags": 117,
+        "human": 1351,
+        "fp": 6,
+        "ai": 894,
+        "tp": 111,
+        "smell": {}
+      },
+      "withoutFamily-negation-pivot": {
+        "n": 2245,
+        "flags": 106,
+        "human": 1351,
+        "fp": 4,
+        "ai": 894,
+        "tp": 102,
+        "smell": {}
+      },
+      "withoutFamily-presentation": {
+        "n": 2245,
+        "flags": 78,
+        "human": 1351,
+        "fp": 5,
+        "ai": 894,
+        "tp": 73,
+        "smell": {}
+      },
+      "withoutFamily-stock-story": {
+        "n": 2245,
+        "flags": 126,
+        "human": 1351,
+        "fp": 6,
+        "ai": 894,
+        "tp": 120,
+        "smell": {}
+      },
+      "withoutFamily-template-phrases": {
+        "n": 2245,
+        "flags": 36,
+        "human": 1351,
+        "fp": 3,
+        "ai": 894,
+        "tp": 33,
+        "smell": {}
+      }
+    },
+    "polishedAudit": {
+      "main": {
+        "n": 80,
+        "flags": 0,
+        "human": 80,
+        "fp": 0,
+        "ai": 0,
+        "tp": 0,
+        "smell": {}
+      },
+      "withoutDictionary-all": {
+        "n": 80,
+        "flags": 0,
+        "human": 80,
+        "fp": 0,
+        "ai": 0,
+        "tp": 0,
+        "smell": {}
+      },
+      "withoutDictionary-gun": {
+        "n": 80,
+        "flags": 0,
+        "human": 80,
+        "fp": 0,
+        "ai": 0,
+        "tp": 0,
+        "smell": {}
+      },
+      "withoutDictionary-habit": {
+        "n": 80,
+        "flags": 0,
+        "human": 80,
+        "fp": 0,
+        "ai": 0,
+        "tp": 0,
+        "smell": {}
+      },
+      "withoutDictionary-vocabulary": {
+        "n": 80,
+        "flags": 0,
+        "human": 80,
+        "fp": 0,
+        "ai": 0,
+        "tp": 0,
+        "smell": {}
+      },
+      "withoutFamily-ai-vocabulary": {
+        "n": 80,
+        "flags": 0,
+        "human": 80,
+        "fp": 0,
+        "ai": 0,
+        "tp": 0,
+        "smell": {}
+      },
+      "withoutFamily-chatbot-leak": {
+        "n": 80,
+        "flags": 0,
+        "human": 80,
+        "fp": 0,
+        "ai": 0,
+        "tp": 0,
+        "smell": {}
+      },
+      "withoutFamily-draft-habit": {
+        "n": 80,
+        "flags": 0,
+        "human": 80,
+        "fp": 0,
+        "ai": 0,
+        "tp": 0,
+        "smell": {}
+      },
+      "withoutFamily-engagement": {
+        "n": 80,
+        "flags": 0,
+        "human": 80,
+        "fp": 0,
+        "ai": 0,
+        "tp": 0,
+        "smell": {}
+      },
+      "withoutFamily-engagement-bait": {
+        "n": 80,
+        "flags": 0,
+        "human": 80,
+        "fp": 0,
+        "ai": 0,
+        "tp": 0,
+        "smell": {}
+      },
+      "withoutFamily-hedging": {
+        "n": 80,
+        "flags": 0,
+        "human": 80,
+        "fp": 0,
+        "ai": 0,
+        "tp": 0,
+        "smell": {}
+      },
+      "withoutFamily-inflation": {
+        "n": 80,
+        "flags": 0,
+        "human": 80,
+        "fp": 0,
+        "ai": 0,
+        "tp": 0,
+        "smell": {}
+      },
+      "withoutFamily-list-structure": {
+        "n": 80,
+        "flags": 0,
+        "human": 80,
+        "fp": 0,
+        "ai": 0,
+        "tp": 0,
+        "smell": {}
+      },
+      "withoutFamily-negation-pivot": {
+        "n": 80,
+        "flags": 0,
+        "human": 80,
+        "fp": 0,
+        "ai": 0,
+        "tp": 0,
+        "smell": {}
+      },
+      "withoutFamily-presentation": {
+        "n": 80,
+        "flags": 0,
+        "human": 80,
+        "fp": 0,
+        "ai": 0,
+        "tp": 0,
+        "smell": {}
+      },
+      "withoutFamily-stock-story": {
+        "n": 80,
+        "flags": 0,
+        "human": 80,
+        "fp": 0,
+        "ai": 0,
+        "tp": 0,
+        "smell": {}
+      },
+      "withoutFamily-template-phrases": {
+        "n": 80,
+        "flags": 0,
+        "human": 80,
+        "fp": 0,
+        "ai": 0,
+        "tp": 0,
+        "smell": {}
+      }
+    },
+    "effortful": {
+      "main": {
+        "n": 210,
+        "flags": 23,
+        "human": 142,
+        "fp": 5,
+        "ai": 68,
+        "tp": 18,
+        "smell": {
+          "none": {
+            "n": 77,
+            "flags": 0
+          },
+          "some": {
+            "n": 65,
+            "flags": 5
+          },
+          "obvious": {
+            "n": 68,
+            "flags": 18
+          }
+        }
+      },
+      "withoutDictionary-all": {
+        "n": 210,
+        "flags": 15,
+        "human": 142,
+        "fp": 5,
+        "ai": 68,
+        "tp": 10,
+        "smell": {
+          "none": {
+            "n": 77,
+            "flags": 0
+          },
+          "some": {
+            "n": 65,
+            "flags": 5
+          },
+          "obvious": {
+            "n": 68,
+            "flags": 10
+          }
+        }
+      },
+      "withoutDictionary-gun": {
+        "n": 210,
+        "flags": 18,
+        "human": 142,
+        "fp": 5,
+        "ai": 68,
+        "tp": 13,
+        "smell": {
+          "none": {
+            "n": 77,
+            "flags": 0
+          },
+          "some": {
+            "n": 65,
+            "flags": 5
+          },
+          "obvious": {
+            "n": 68,
+            "flags": 13
+          }
+        }
+      },
+      "withoutDictionary-habit": {
+        "n": 210,
+        "flags": 20,
+        "human": 142,
+        "fp": 5,
+        "ai": 68,
+        "tp": 15,
+        "smell": {
+          "none": {
+            "n": 77,
+            "flags": 0
+          },
+          "some": {
+            "n": 65,
+            "flags": 5
+          },
+          "obvious": {
+            "n": 68,
+            "flags": 15
+          }
+        }
+      },
+      "withoutDictionary-vocabulary": {
+        "n": 210,
+        "flags": 21,
+        "human": 142,
+        "fp": 5,
+        "ai": 68,
+        "tp": 16,
+        "smell": {
+          "none": {
+            "n": 77,
+            "flags": 0
+          },
+          "some": {
+            "n": 65,
+            "flags": 5
+          },
+          "obvious": {
+            "n": 68,
+            "flags": 16
+          }
+        }
+      },
+      "withoutFamily-ai-vocabulary": {
+        "n": 210,
+        "flags": 21,
+        "human": 142,
+        "fp": 5,
+        "ai": 68,
+        "tp": 16,
+        "smell": {
+          "none": {
+            "n": 77,
+            "flags": 0
+          },
+          "some": {
+            "n": 65,
+            "flags": 5
+          },
+          "obvious": {
+            "n": 68,
+            "flags": 16
+          }
+        }
+      },
+      "withoutFamily-chatbot-leak": {
+        "n": 210,
+        "flags": 23,
+        "human": 142,
+        "fp": 5,
+        "ai": 68,
+        "tp": 18,
+        "smell": {
+          "none": {
+            "n": 77,
+            "flags": 0
+          },
+          "some": {
+            "n": 65,
+            "flags": 5
+          },
+          "obvious": {
+            "n": 68,
+            "flags": 18
+          }
+        }
+      },
+      "withoutFamily-draft-habit": {
+        "n": 210,
+        "flags": 23,
+        "human": 142,
+        "fp": 5,
+        "ai": 68,
+        "tp": 18,
+        "smell": {
+          "none": {
+            "n": 77,
+            "flags": 0
+          },
+          "some": {
+            "n": 65,
+            "flags": 5
+          },
+          "obvious": {
+            "n": 68,
+            "flags": 18
+          }
+        }
+      },
+      "withoutFamily-engagement": {
+        "n": 210,
+        "flags": 21,
+        "human": 142,
+        "fp": 5,
+        "ai": 68,
+        "tp": 16,
+        "smell": {
+          "none": {
+            "n": 77,
+            "flags": 0
+          },
+          "some": {
+            "n": 65,
+            "flags": 5
+          },
+          "obvious": {
+            "n": 68,
+            "flags": 16
+          }
+        }
+      },
+      "withoutFamily-engagement-bait": {
+        "n": 210,
+        "flags": 21,
+        "human": 142,
+        "fp": 5,
+        "ai": 68,
+        "tp": 16,
+        "smell": {
+          "none": {
+            "n": 77,
+            "flags": 0
+          },
+          "some": {
+            "n": 65,
+            "flags": 5
+          },
+          "obvious": {
+            "n": 68,
+            "flags": 16
+          }
+        }
+      },
+      "withoutFamily-hedging": {
+        "n": 210,
+        "flags": 22,
+        "human": 142,
+        "fp": 5,
+        "ai": 68,
+        "tp": 17,
+        "smell": {
+          "none": {
+            "n": 77,
+            "flags": 0
+          },
+          "some": {
+            "n": 65,
+            "flags": 5
+          },
+          "obvious": {
+            "n": 68,
+            "flags": 17
+          }
+        }
+      },
+      "withoutFamily-inflation": {
+        "n": 210,
+        "flags": 22,
+        "human": 142,
+        "fp": 5,
+        "ai": 68,
+        "tp": 17,
+        "smell": {
+          "none": {
+            "n": 77,
+            "flags": 0
+          },
+          "some": {
+            "n": 65,
+            "flags": 5
+          },
+          "obvious": {
+            "n": 68,
+            "flags": 17
+          }
+        }
+      },
+      "withoutFamily-list-structure": {
+        "n": 210,
+        "flags": 20,
+        "human": 142,
+        "fp": 5,
+        "ai": 68,
+        "tp": 15,
+        "smell": {
+          "none": {
+            "n": 77,
+            "flags": 0
+          },
+          "some": {
+            "n": 65,
+            "flags": 5
+          },
+          "obvious": {
+            "n": 68,
+            "flags": 15
+          }
+        }
+      },
+      "withoutFamily-negation-pivot": {
+        "n": 210,
+        "flags": 21,
+        "human": 142,
+        "fp": 5,
+        "ai": 68,
+        "tp": 16,
+        "smell": {
+          "none": {
+            "n": 77,
+            "flags": 0
+          },
+          "some": {
+            "n": 65,
+            "flags": 5
+          },
+          "obvious": {
+            "n": 68,
+            "flags": 16
+          }
+        }
+      },
+      "withoutFamily-presentation": {
+        "n": 210,
+        "flags": 22,
+        "human": 142,
+        "fp": 5,
+        "ai": 68,
+        "tp": 17,
+        "smell": {
+          "none": {
+            "n": 77,
+            "flags": 0
+          },
+          "some": {
+            "n": 65,
+            "flags": 5
+          },
+          "obvious": {
+            "n": 68,
+            "flags": 17
+          }
+        }
+      },
+      "withoutFamily-stock-story": {
+        "n": 210,
+        "flags": 23,
+        "human": 142,
+        "fp": 5,
+        "ai": 68,
+        "tp": 18,
+        "smell": {
+          "none": {
+            "n": 77,
+            "flags": 0
+          },
+          "some": {
+            "n": 65,
+            "flags": 5
+          },
+          "obvious": {
+            "n": 68,
+            "flags": 18
+          }
+        }
+      },
+      "withoutFamily-template-phrases": {
+        "n": 210,
+        "flags": 20,
+        "human": 142,
+        "fp": 5,
+        "ai": 68,
+        "tp": 15,
+        "smell": {
+          "none": {
+            "n": 77,
+            "flags": 0
+          },
+          "some": {
+            "n": 65,
+            "flags": 5
+          },
+          "obvious": {
+            "n": 68,
+            "flags": 15
+          }
+        }
+      }
+    }
+  },
+  "variants": [
+    "main",
+    "withoutDictionary-all",
+    "withoutDictionary-gun",
+    "withoutDictionary-habit",
+    "withoutDictionary-vocabulary",
+    "withoutFamily-ai-vocabulary",
+    "withoutFamily-chatbot-leak",
+    "withoutFamily-draft-habit",
+    "withoutFamily-engagement",
+    "withoutFamily-engagement-bait",
+    "withoutFamily-hedging",
+    "withoutFamily-inflation",
+    "withoutFamily-list-structure",
+    "withoutFamily-negation-pivot",
+    "withoutFamily-presentation",
+    "withoutFamily-stock-story",
+    "withoutFamily-template-phrases"
+  ]
+}

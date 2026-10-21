@@ -1,0 +1,1226 @@
+[
+  {
+    "kind": "phrase",
+    "id": "ai-vocabulary.explainer-idioms",
+    "category": "ai-vocabulary",
+    "label": "The explainer reached for the stock phrase drawer",
+    "weight": 0.25,
+    "repeat": "sqrt",
+    "phrases": [
+      "hitting a wall",
+      "best of both worlds",
+      "connecting the dots",
+      "production-grade",
+      "one-size-fits-all",
+      "transforming how",
+      "the real magic",
+      "unlock",
+      "game-changer"
+    ]
+  },
+  {
+    "kind": "phrase",
+    "id": "ai-vocabulary.tier1",
+    "category": "ai-vocabulary",
+    "label": "A rich tapestry of autocomplete",
+    "weight": 3,
+    "repeat": "each",
+    "phrases": [
+      "delve",
+      "delving",
+      "tapestry",
+      "beacon",
+      "intricacies",
+      "meticulously",
+      "ever-evolving",
+      "holistically",
+      "learnings",
+      "symphony",
+      "interplay"
+    ]
+  },
+  {
+    "kind": "phrase",
+    "id": "ai-vocabulary.tier1-common",
+    "category": "ai-vocabulary",
+    "label": "The adjective drawer is unusually busy",
+    "weight": 1.2,
+    "repeat": "each",
+    "phrases": [
+      "paradigm",
+      "robust",
+      "comprehensive",
+      "cutting-edge",
+      "pivotal",
+      "meticulous",
+      "seamless",
+      "seamlessly",
+      "nestled",
+      "vibrant",
+      "thriving",
+      "bustling",
+      "intricate",
+      "enduring",
+      "daunting",
+      "holistic",
+      "actionable",
+      "impactful",
+      "leverage",
+      "leveraging",
+      "synergy",
+      "synergies",
+      "showcase",
+      "showcasing",
+      "underscoring",
+      "unpack"
+    ]
+  },
+  {
+    "kind": "phrase",
+    "id": "ai-vocabulary.collocations",
+    "category": "ai-vocabulary",
+    "label": "Navigating the landscape of saying things",
+    "weight": 4,
+    "repeat": "sqrt",
+    "phrases": [
+      "testament to",
+      "harness the power",
+      "unlock the potential",
+      "navigate the landscape",
+      "navigating the landscape",
+      "embark on a journey",
+      "intricate interplay",
+      "rich tapestry",
+      "delve into the realm"
+    ],
+    "patterns": [
+      "\\bnavigat(?:e|es|ing|ed)\\s+(?:the|this|an?)\\s+(?:(?:ever[ ‐‑–—-]evolving|rapidly (?:changing|evolving)|digital|complex|evolving|changing)\\s+){0,3}landscape\\b",
+      "\\bunlock(?:ing|s|ed)?\\s+(?:(?:the|your|our|their|its)\\s+)?(?:full|true|limitless|untapped)\\s+potential\\b"
+    ]
+  },
+  {
+    "kind": "custom",
+    "id": "ai-vocabulary.tier2",
+    "category": "ai-vocabulary",
+    "label": "The word cluster has achieved sentience",
+    "weight": 1
+  },
+  {
+    "kind": "custom",
+    "id": "ai-vocabulary.tier3",
+    "category": "ai-vocabulary",
+    "label": "Every noun brought an impressive adjective",
+    "weight": 1.5
+  },
+  {
+    "kind": "phrase",
+    "id": "template-phrases.explainer-scaffold",
+    "category": "template-phrases",
+    "label": "The explainer came with assembly instructions",
+    "weight": 3,
+    "repeat": "sqrt",
+    "patterns": [
+      "\\bhere(?:'?s| is)\\s+(?:a |the )?breakdown\\b",
+      "\\bhere'?s what (?:actually |really )?separates\\b",
+      "\\bthe (?:critical|key|crucial) distinction (?:most|many) (?:teams|people|engineers) miss\\b"
+    ]
+  },
+  {
+    "kind": "custom",
+    "id": "template-phrases.labeled-fields",
+    "category": "template-phrases",
+    "label": "Every section filled in the same form",
+    "weight": 2,
+    "evidence": "style"
+  },
+  {
+    "kind": "phrase",
+    "id": "template-phrases.transition",
+    "category": "template-phrases",
+    "label": "A transition without new information",
+    "weight": 1.5,
+    "repeat": "each",
+    "phrases": [
+      "moreover",
+      "furthermore",
+      "additionally",
+      "in an era where",
+      "it's worth noting that",
+      "in conclusion",
+      "in summary",
+      "to summarize",
+      "at the end of the day",
+      "that being said"
+    ]
+  },
+  {
+    "kind": "phrase",
+    "id": "template-phrases.clarity",
+    "category": "template-phrases",
+    "label": "Several words doing the job of one",
+    "weight": 1,
+    "repeat": "sqrt",
+    "phrases": [
+      "in order to",
+      "due to the fact that",
+      "serves as",
+      "commence",
+      "ascertain",
+      "utilize",
+      "utilizing"
+    ]
+  },
+  {
+    "kind": "phrase",
+    "id": "template-phrases.filler",
+    "category": "template-phrases",
+    "label": "Padding with a business-casual dress code",
+    "weight": 3,
+    "repeat": "each",
+    "phrases": [
+      "it is important to note that",
+      "it's important to note that",
+      "the reality is that",
+      "in terms of",
+      "at its core",
+      "here's the thing",
+      "let that sink in"
+    ]
+  },
+  {
+    "kind": "phrase",
+    "id": "template-phrases.lets-construction",
+    "category": "template-phrases",
+    "label": "Announcing the paragraph before writing it",
+    "weight": 2,
+    "repeat": "sqrt",
+    "phrases": [
+      "let's explore",
+      "let's delve into",
+      "let's break this down",
+      "let's examine",
+      "without further ado",
+      "here's what you need to know"
+    ]
+  },
+  {
+    "kind": "phrase",
+    "id": "template-phrases.template",
+    "category": "template-phrases",
+    "label": "A sentence off the template rack",
+    "weight": 3,
+    "repeat": "each",
+    "phrases": [
+      "i recently had the pleasure of",
+      "a significant step forward",
+      "a pivotal step towards",
+      "whether you are a seasoned professional",
+      "whether you're a seasoned professional",
+      "a wide range of",
+      "in the ever-changing world"
+    ]
+  },
+  {
+    "kind": "phrase",
+    "id": "template-phrases.boilerplate",
+    "category": "template-phrases",
+    "label": "The boilerplate is becoming structural",
+    "weight": 2,
+    "repeat": "each",
+    "phrases": [
+      "at the intersection of",
+      "the integration of",
+      "long-term sustainability",
+      "tokenized incentive structures",
+      "designed for long-term",
+      "community-driven innovation",
+      "emerging sector",
+      "emerging space",
+      "decentralized compute",
+      "sustainable reward emissions"
+    ]
+  },
+  {
+    "kind": "phrase",
+    "id": "chatbot-leak.greeting",
+    "category": "chatbot-leak",
+    "label": "Forgot to delete the assistant greeting",
+    "weight": 2,
+    "evidence": "style",
+    "patterns": [
+      "^\\s*(?:certainly!|absolutely!|sure[,!]\\s+here(?:'s| is))"
+    ]
+  },
+  {
+    "kind": "phrase",
+    "id": "chatbot-leak.assistant-preamble",
+    "category": "chatbot-leak",
+    "label": "The assistant is introducing its deliverable",
+    "weight": 14,
+    "evidence": "fingerprint",
+    "patterns": [
+      "(?:^|(?<=[.!?\\n]))\\s{0,32}(?:(?:certainly|absolutely|sure)\\s{0,8}[,!—–-]\\s{0,16})?here(?:'s|\\s{1,16}(?:is|are))\\s{1,16}(?:a|an|your|the)\\s{1,16}(?:(?:linkedin|twitter|facebook|instagram|social[ -]media|polished|revised|professional|engaging|draft|sample|rewritten|updated|edited|cleaner|shorter)\\s{1,16}){0,3}(?:post|draft|announcement|email|caption|response|article|message)\\s{1,16}(?:about|for|on|you\\s{1,16}requested)\\b",
+      "(?:^|(?<=[.!?\\n]))\\s{0,32}(?:(?:certainly|absolutely|sure)\\s{0,8}[,!—–-]\\s{0,16})?here(?:'s|\\s{1,16}(?:is|are))\\s{1,16}(?:a|an|your|the)\\s{1,16}(?:(?:linkedin|twitter|facebook|instagram|social[ -]media|polished|revised|professional|engaging|draft|sample|rewritten|updated|edited|cleaner|shorter)\\s{1,16}){0,2}(?:polished|revised|rewritten|updated|edited|cleaner|shorter)\\s{1,16}(?:(?:linkedin|twitter|facebook|instagram|social[ -]media|polished|revised|professional|engaging|draft|sample|rewritten|updated|edited|cleaner|shorter)\\s{1,16}){0,2}(?:post|draft|announcement|email|caption|response|article|message)\\s{0,16}:",
+      "(?:^|(?<=[.!?\\n]))\\s{0,32}(?:(?:certainly|absolutely|sure)\\s{0,8}[,!—–-]\\s{0,16})?here(?:'s|\\s{1,16}(?:is|are))\\s{1,16}(?:a|an|your|the)\\s{1,16}(?:(?:polished|revised|rewritten|updated|edited|cleaner|shorter)\\s{1,16}){1,3}version\\s{1,16}of\\s{1,16}(?:your|the)\\s{1,16}(?:(?:linkedin|twitter|facebook|instagram|social[ -]media|polished|revised|professional|engaging|draft|sample|rewritten|updated|edited|cleaner|shorter)\\s{1,16}){0,2}(?:post|draft|announcement|email|caption|response|article|message)\\s{0,16}:"
+    ]
+  },
+  {
+    "kind": "phrase",
+    "id": "chatbot-leak.sycophantic",
+    "category": "chatbot-leak",
+    "label": "Your chatbot thinks you are brilliant",
+    "weight": 5,
+    "position": "opening",
+    "patterns": [
+      "^\\s*(?:you're absolutely right|that's a really insightful|that's a great question|excellent question!|excellent point!|great question!)"
+    ]
+  },
+  {
+    "kind": "phrase",
+    "id": "chatbot-leak.assistant-closer",
+    "category": "chatbot-leak",
+    "label": "The post offers to write another draft",
+    "weight": 8,
+    "position": "closing",
+    "patterns": [
+      "(?:^|(?<=[.!?\\n]))[^\\S\\n]*(?:i hope this helps|let me know if you'd like me to|let me know if you would like me to|would you like me to expand|feel free to ask for more details)[^\\n]{0,160}$"
+    ]
+  },
+  {
+    "kind": "phrase",
+    "id": "chatbot-leak.cutoff",
+    "category": "chatbot-leak",
+    "label": "The author has a knowledge cutoff",
+    "weight": 14,
+    "evidence": "fingerprint",
+    "phrases": [
+      "as an ai language model",
+      "as a large language model",
+      "as an artificial intelligence model",
+      "as an ai assistant",
+      "as of my knowledge cutoff",
+      "my training data only goes up to",
+      "my training data ends in"
+    ],
+    "patterns": [
+      "\\bas an ai[,;]\\s+i\\s+(?:cannot|can't|do not|don't)\\b"
+    ]
+  },
+  {
+    "kind": "phrase",
+    "id": "chatbot-leak.model-identity",
+    "category": "chatbot-leak",
+    "label": "The assistant identifies itself as a model",
+    "weight": 14,
+    "evidence": "fingerprint",
+    "patterns": [
+      "(?:^|(?<=[.!?\\n]))[\\t ]{0,16}(?:i(?:'m|\\s{1,8}am)|my\\s{1,8}name\\s{1,8}is)\\s{1,8}(?:(?:chatgpt|claude|gemini|copilot|grok)\\s{0,8},\\s{0,8})?an?\\s{1,8}(?:ai\\s{1,8}(?:assistant|language\\s{1,8}model)|large\\s{1,8}language\\s{1,8}model)\\b"
+    ]
+  },
+  {
+    "kind": "phrase",
+    "id": "chatbot-leak.update",
+    "category": "chatbot-leak",
+    "label": "A stock update qualifier",
+    "weight": 3,
+    "phrases": [
+      "as of my last update"
+    ]
+  },
+  {
+    "kind": "phrase",
+    "id": "chatbot-leak.reasoning",
+    "category": "chatbot-leak",
+    "label": "The reasoning scaffold escaped",
+    "weight": 8,
+    "phrases": [
+      "let me think step by step",
+      "to approach this systematically",
+      "here's my thought process",
+      "working through this logically"
+    ]
+  },
+  {
+    "kind": "custom",
+    "id": "chatbot-leak.reasoning-block",
+    "category": "chatbot-leak",
+    "label": "A paired reasoning block escaped",
+    "weight": 14,
+    "evidence": "fingerprint"
+  },
+  {
+    "kind": "custom",
+    "id": "chatbot-leak.reasoning-channel",
+    "category": "chatbot-leak",
+    "label": "Analysis and final answer channels escaped",
+    "weight": 14,
+    "evidence": "fingerprint"
+  },
+  {
+    "kind": "custom",
+    "id": "chatbot-leak.instruction-template",
+    "category": "chatbot-leak",
+    "label": "An instruction template escaped with the answer",
+    "weight": 14,
+    "evidence": "fingerprint"
+  },
+  {
+    "kind": "phrase",
+    "id": "chatbot-leak.chat-protocol",
+    "category": "chatbot-leak",
+    "label": "An assistant protocol header escaped",
+    "weight": 14,
+    "evidence": "fingerprint",
+    "patterns": [
+      "<\\|im_start\\|>[ \\t]{0,16}assistant\\b",
+      "<\\|start_header_id\\|>\\s{0,16}assistant\\s{0,16}<\\|end_header_id\\|>",
+      "<\\|start\\|>assistant(?:<\\|(?:channel|meta_sep)\\|>[a-z_]{1,32})?<\\|message\\|>"
+    ]
+  },
+  {
+    "kind": "custom",
+    "id": "chatbot-leak.role-transcript",
+    "category": "chatbot-leak",
+    "label": "Serialized assistant turns escaped",
+    "weight": 14,
+    "evidence": "fingerprint"
+  },
+  {
+    "kind": "custom",
+    "id": "chatbot-leak.tool-transcript",
+    "category": "chatbot-leak",
+    "label": "An assistant tool-call transcript escaped",
+    "weight": 14,
+    "evidence": "fingerprint"
+  },
+  {
+    "kind": "phrase",
+    "id": "chatbot-leak.generated-boundary",
+    "category": "chatbot-leak",
+    "label": "The generated answer kept its editing tail",
+    "weight": 14,
+    "evidence": "fingerprint",
+    "patterns": [
+      "(?:^|(?<=\\n))[\\t ]{0,16}\\[(?:end|start)\\s{1,8}of\\s{1,8}(?:the\\s{1,8})?(?:generated|assistant)\\s{1,8}(?:response|answer|output)\\][\\t ]{0,16}\\n\\s{0,32}(?:i(?:'ve|\\s{1,8}have)?\\s{1,8}(?:removed|revised|edited|rewrote|rewritten|kept|preserved|shortened|adjusted)\\b|would\\s{1,8}you\\s{1,8}like\\s{1,8}me\\s{1,8}to\\b)"
+    ]
+  },
+  {
+    "kind": "phrase",
+    "id": "chatbot-leak.acknowledgment",
+    "category": "chatbot-leak",
+    "label": "Repeating the prompt back to the audience",
+    "weight": 3,
+    "phrases": [
+      "you're asking about",
+      "to answer your question",
+      "the question of whether"
+    ]
+  },
+  {
+    "kind": "phrase",
+    "id": "chatbot-leak.placeholder",
+    "category": "chatbot-leak",
+    "label": "Insert authentic human experience here",
+    "weight": 5,
+    "evidence": "style",
+    "patterns": [
+      "\\[(?:your\\s+(?:name|company|product|project|role|story)|(?:company|product|project|recipient) name|(?:insert|add) (?:your )?(?:name|company name|product name|project name|role|story))\\]"
+    ]
+  },
+  {
+    "kind": "phrase",
+    "id": "chatbot-leak.editor-note",
+    "category": "chatbot-leak",
+    "label": "An editing note was left in the published draft",
+    "weight": 4,
+    "evidence": "style",
+    "patterns": [
+      "\\[(?!(?:insert|add) (?:your )?(?:name|company name|role|story)\\])(?:insert|fill in|add)[^\\]\\n]{1,60}\\]",
+      "<!--\\s*(?:insert|add|fill in|todo|placeholder)[^>]{0,100}-->"
+    ]
+  },
+  {
+    "kind": "phrase",
+    "id": "chatbot-leak.tracking",
+    "category": "chatbot-leak",
+    "label": "ChatGPT left its receipt in the URL",
+    "weight": 4,
+    "evidence": "style",
+    "patterns": [
+      "[?&]utm_source=(?:chatgpt|openai|claude|copilot|perplexity|gemini|grok)(?:\\.com|\\.ai)?\\b",
+      "[?&]referrer=(?:chatgpt|copilot|grok|claude|gemini|perplexity)\\.(?:com|ai)\\b"
+    ]
+  },
+  {
+    "kind": "phrase",
+    "id": "chatbot-leak.citation",
+    "category": "chatbot-leak",
+    "label": "Citation markup escaped containment",
+    "weight": 14,
+    "evidence": "fingerprint",
+    "patterns": [
+      "\\b(?:cite)?turn\\d+(?:search|news)\\d+\\b",
+      "\\b(?:oai_citation|grok_card)\\b",
+      "contentReference\\s*\\[oaicite:[^\\]]{1,60}\\]",
+      "\\[attached_file:\\d+\\]"
+    ]
+  },
+  {
+    "kind": "phrase",
+    "id": "negation-pivot.not-x-but-y",
+    "category": "negation-pivot",
+    "label": "It's not a sentence. It's a formula.",
+    "weight": 4,
+    "repeat": "sqrt",
+    "patterns": [
+      "\\b(?:it'?s|this\\s+is|that'?s)\\s+not\\s+(?:just\\s+|only\\s+|merely\\s+)?[^.!?\\n]{1,75}[,;.!–—-]\\s*(?:it'?s|this\\s+is|it\\s+is)\\s+[^.!?\\n]{1,65}",
+      "\\b(?:isn't|aren't|wasn't|weren't|is not|are not|was not|were not)\\s+(?:just\\s+|only\\s+|merely\\s+)?about\\s+[^.!?\\n]{1,75}(?:[,;.!–—-]|\\bbut\\b)\\s*(?:it'?s|it is|they're|they are|about)\\s+[^.!?\\n]{1,65}",
+      "\\b(?:isn't|isnt|is not)\\s+(?:usually\\s+)?[^.!?\\n]{1,65}(?:[.!]\\s+|[\\t ]*\\n[\\t ]*)(?:it'?s|it is)\\s+(?!still\\b|not\\b|missing\\b)[^.!?\\n]{1,85}"
+    ]
+  },
+  {
+    "kind": "phrase",
+    "id": "negation-pivot.one-size-fits-all",
+    "category": "negation-pivot",
+    "label": "A universal caveat opened the explainer",
+    "weight": 2,
+    "phrases": [
+      "is not \"one-size-fits-all",
+      "is not one-size-fits-all",
+      "isn't one-size-fits-all",
+      "isn’t \"one-size-fits-all"
+    ]
+  },
+  {
+    "kind": "phrase",
+    "id": "negation-pivot.audience-contrast",
+    "category": "negation-pivot",
+    "label": "Most people versus the people who get it",
+    "weight": 4,
+    "repeat": "sqrt",
+    "patterns": [
+      "\\bmost people (?:treat|think|see|use|focus on) [^.!?\\n]{1,90}[.!]\\s*(?:engineers|experts|leaders|the best teams|great teams|professionals) (?:treat|think|see|use|focus on) [^.!?\\n]{1,90}"
+    ]
+  },
+  {
+    "kind": "phrase",
+    "id": "negation-pivot.not-only",
+    "category": "negation-pivot",
+    "label": "Every claim brought a compulsory contrast",
+    "weight": 3,
+    "repeat": "sqrt",
+    "patterns": [
+      "\\bnot\\s+(?:just|only|merely)\\s+[^.!?\\n]{1,65}\\bbut\\s+(?:also\\s+)?[^.!?\\n]{1,60}"
+    ]
+  },
+  {
+    "kind": "phrase",
+    "id": "negation-pivot.countdown",
+    "category": "negation-pivot",
+    "label": "Three negations in a motivational trench coat",
+    "weight": 5,
+    "patterns": [
+      "\\bnot [^.!?\\n]{1,30}[.!]\\s*not [^.!?\\n]{1,30}[.!]\\s*(?:just|only|but) [^.!?\\n]{1,50}"
+    ]
+  },
+  {
+    "kind": "phrase",
+    "id": "negation-pivot.false-concession",
+    "category": "negation-pivot",
+    "label": "A concession with no concession inside",
+    "weight": 2,
+    "repeat": "sqrt",
+    "patterns": [
+      "\\bwhile [a-z -]{1,35} is impressive\\b",
+      "\\balthough [a-z -]{1,35} has made strides\\b",
+      "\\bdespite (?:these|its|the) challenges[^.!?\\n]{0,60}continues? to thrive\\b"
+    ]
+  },
+  {
+    "kind": "phrase",
+    "id": "inflation.significance",
+    "category": "inflation",
+    "label": "A pivotal moment in paragraph history",
+    "weight": 4,
+    "repeat": "each",
+    "phrases": [
+      "marking a pivotal moment",
+      "marking a significant moment",
+      "a watershed moment",
+      "an enduring testament",
+      "a defining moment in",
+      "indelible mark",
+      "vital role in shaping",
+      "transformative potential"
+    ]
+  },
+  {
+    "kind": "phrase",
+    "id": "inflation.novelty",
+    "category": "inflation",
+    "label": "A secret nobody has stopped posting about",
+    "weight": 3,
+    "repeat": "sqrt",
+    "phrases": [
+      "the failure mode nobody's naming",
+      "a problem nobody talks about",
+      "the insight everyone's missing",
+      "what nobody tells you"
+    ]
+  },
+  {
+    "kind": "phrase",
+    "id": "inflation.hollow",
+    "category": "inflation",
+    "label": "The intensifiers are doing all the work",
+    "weight": 1,
+    "repeat": "sqrt",
+    "phrases": [
+      "truly",
+      "genuinely",
+      "quite frankly",
+      "let's be clear",
+      "profoundly",
+      "nothing short of"
+    ]
+  },
+  {
+    "kind": "phrase",
+    "id": "inflation.emotional-flatline",
+    "category": "inflation",
+    "label": "An emotion announcement instead of an emotion",
+    "weight": 2,
+    "repeat": "sqrt",
+    "phrases": [
+      "what surprised me most",
+      "i was fascinated to",
+      "what struck me was",
+      "i was excited to learn",
+      "the most interesting aspect",
+      "the most interesting part"
+    ]
+  },
+  {
+    "kind": "phrase",
+    "id": "inflation.lingering-attention",
+    "category": "inflation",
+    "label": "This thought has apparently rented a room",
+    "weight": 2,
+    "repeat": "sqrt",
+    "phrases": [
+      "the line i keep coming back to",
+      "the one quote i keep coming back to",
+      "still thinking about this one",
+      "i've been chewing on this",
+      "rattling around in my head"
+    ]
+  },
+  {
+    "kind": "phrase",
+    "id": "inflation.real-actual",
+    "category": "inflation",
+    "label": "Abstract nouns have been certified real",
+    "weight": 2,
+    "repeat": "sqrt",
+    "patterns": [
+      "\\b(?:real|actual|genuine|true)\\s+(?:on-?chain\\s+)?(?:tokenomics|utility|adoption|sustainability|impact|fundamentals|innovation|traction)\\b"
+    ]
+  },
+  {
+    "kind": "phrase",
+    "id": "inflation.future-narrative",
+    "category": "inflation",
+    "label": "The future was upgraded to a narrative",
+    "weight": 4,
+    "patterns": [
+      "\\b(?:may|could|will|is poised to) become (?:one of )?(?:the )?(?:most )?[a-z]+ (?:narratives?|developments?|trends?|movements?|chapters?|themes?|forces?)\\b"
+    ]
+  },
+  {
+    "kind": "phrase",
+    "id": "inflation.promotional",
+    "category": "inflation",
+    "label": "A press release swallowed a superlative",
+    "weight": 2,
+    "repeat": "each",
+    "phrases": [
+      "game-changing",
+      "game-changer",
+      "revolutionary",
+      "groundbreaking innovation",
+      "unparalleled",
+      "unprecedented opportunity",
+      "boundless potential",
+      "limitless possibilities",
+      "unlock unprecedented",
+      "redefine the future"
+    ]
+  },
+  {
+    "kind": "phrase",
+    "id": "hedging.stack",
+    "category": "hedging",
+    "label": "This could potentially maybe be a sentence",
+    "weight": 4,
+    "repeat": "sqrt",
+    "patterns": [
+      "\\b(?:could|may|might)\\s+(?:(?!not\\b|never\\b|hardly\\b|scarcely\\b|barely\\b)[a-z]+\\s+)?(?:potentially|eventually|ultimately|possibly|conceivably)\\b",
+      "\\b(?:potentially|eventually|ultimately)\\s+(?:could|may|might)\\b"
+    ]
+  },
+  {
+    "kind": "phrase",
+    "id": "hedging.parenthetical",
+    "category": "hedging",
+    "label": "Thoughtfulness added in parentheses",
+    "weight": 0.25,
+    "repeat": "sqrt",
+    "patterns": [
+      "\\(\\s*(?:and\\s+)?(?:increasingly|notably|importantly|crucially|interestingly|perhaps),?\\s+[^)\\n]{3,60}\\)",
+      "\\(\\s*or more (?:precisely|accurately|specifically),?\\s+[^)\\n]{3,60}\\)",
+      "\\(\\s*though to be fair,?\\s+[^)\\n]{3,60}\\)"
+    ]
+  },
+  {
+    "kind": "phrase",
+    "id": "hedging.vague-attribution",
+    "category": "hedging",
+    "label": "Experts, unavailable for comment",
+    "weight": 2,
+    "repeat": "sqrt",
+    "phrases": [
+      "experts believe",
+      "experts say",
+      "experts suggest",
+      "industry leaders agree",
+      "industry observers note",
+      "some critics argue",
+      "studies suggest",
+      "research indicates"
+    ]
+  },
+  {
+    "kind": "phrase",
+    "id": "hedging.confidence",
+    "category": "hedging",
+    "label": "Certainty delivered in adverb form",
+    "weight": 1,
+    "repeat": "sqrt",
+    "phrases": [
+      "interestingly",
+      "surprisingly",
+      "importantly",
+      "undoubtedly",
+      "without a doubt",
+      "it could be argued that"
+    ]
+  },
+  {
+    "kind": "phrase",
+    "id": "engagement-bait.repost-follow",
+    "category": "engagement-bait",
+    "label": "The explainer ended in a distribution request",
+    "weight": 4,
+    "repeat": "sqrt",
+    "patterns": [
+      "\\b(?:repost|share)\\s+(?:this\\s+)?(?:if|to help|with your network)\\b[^.!?\\n]{0,65}",
+      "\\bfollow(?:\\s+[a-z][a-z .'-]{0,45})?\\s+for more\\b"
+    ]
+  },
+  {
+    "kind": "phrase",
+    "id": "engagement-bait.reader-question",
+    "category": "engagement-bait",
+    "label": "A closing question handed out engagement homework",
+    "weight": 2,
+    "position": "closing",
+    "patterns": [
+      "\\b(?:which|what)\\s+[^.!?\\n]{1,60}\\b(?:are you|do you|would you)\\s+[^.!?\\n]{1,60}\\?\\s*$"
+    ]
+  },
+  {
+    "kind": "phrase",
+    "id": "engagement-bait.social-closer",
+    "category": "engagement-bait",
+    "label": "Engagement homework for the audience",
+    "weight": 3,
+    "position": "closing",
+    "patterns": [
+      "\\b(?:agree\\?|thoughts\\?|what (?:would you add|do you think)\\?|save this for later[.!]?|follow me for more[.!]?|read that again[.!]?|thank me later[.!]?|this one is worth your time[.!]?|do yourself a favor and read this[.!]?|don't sleep on this[.!]?)\\s*(?:👇\\s*)?$"
+    ]
+  },
+  {
+    "kind": "phrase",
+    "id": "engagement-bait.keyword-closer",
+    "category": "engagement-bait",
+    "label": "A PDF held hostage for comments",
+    "weight": 5,
+    "patterns": [
+      "\\b(?:comment|drop|reply)\\s+['\"][a-z0-9_-]{1,20}['\"]",
+      "\\bcomment\\s+[a-z0-9_-]{1,20}\\s+(?:below\\s+)?(?:and\\s+)?(?:i'll|i will|we'll|we will)\\s+(?:send|dm|share)\\b"
+    ]
+  },
+  {
+    "kind": "phrase",
+    "id": "engagement-bait.rhetorical-question",
+    "category": "engagement-bait",
+    "label": "A rhetorical question requested the microphone",
+    "weight": 2,
+    "phrases": [
+      "but what does this mean for",
+      "so why should you care",
+      "what's next?",
+      "the question is:"
+    ]
+  },
+  {
+    "kind": "phrase",
+    "id": "engagement-bait.formulaic-opener",
+    "category": "engagement-bait",
+    "label": "The world evolves at the speed of a template",
+    "weight": 0.25,
+    "patterns": [
+      "(?:^|(?<=[.!?\\n]))[^\\S\\n]*in\\s+today's\\s+(?:(?:fast[ ‐‑–—-]paced|rapidly\\s+(?:evolving|changing)|ever[ ‐‑–—-]evolving|digital)\\s+){1,3}(?:world|landscape|era)\\b",
+      "(?:^|(?<=[.!?\\n]))[^\\S\\n]*in the (?:rapidly |ever[ ‐‑–—-]?)?(?:evolving|changing|expanding|growing|shifting) (?:world|landscape|realm|space|field|era) of\\b",
+      "(?:^|(?<=[.!?\\n]))[^\\S\\n]*in (?:an?|the) (?:digital )?age (?:where|of)\\b"
+    ]
+  },
+  {
+    "kind": "phrase",
+    "id": "engagement-bait.speculative-opener",
+    "category": "engagement-bait",
+    "label": "Imagine a world where this gets to the point",
+    "weight": 4,
+    "patterns": [
+      "(?:^|(?<=[.!?\\n]))[^\\S\\n]*(?:imagine|picture|envision)(?:, [^,\\n]{1,30},)? a (?:world|future|reality) (?:where|in which)\\b"
+    ]
+  },
+  {
+    "kind": "phrase",
+    "id": "engagement-bait.generic-conclusion",
+    "category": "engagement-bait",
+    "label": "The future is conveniently unspecific",
+    "weight": 3,
+    "repeat": "sqrt",
+    "phrases": [
+      "the future looks bright",
+      "only time will tell",
+      "one thing is certain",
+      "as we move forward",
+      "exciting times lie ahead",
+      "together, we can shape the future",
+      "as we continue this journey",
+      "endless possibilities"
+    ]
+  },
+  {
+    "kind": "custom",
+    "id": "formatting.em-dash",
+    "category": "formatting",
+    "label": "An em dash has been appointed co-author",
+    "weight": 1
+  },
+  {
+    "kind": "custom",
+    "id": "formatting.unicode-bold",
+    "category": "formatting",
+    "label": "The alphabet put on a ghostwriting costume",
+    "weight": 4
+  },
+  {
+    "kind": "custom",
+    "id": "formatting.section-outline",
+    "category": "formatting",
+    "label": "The outline arrived in numbered costumes",
+    "weight": 1
+  },
+  {
+    "kind": "custom",
+    "id": "formatting.arrow-chain",
+    "category": "formatting",
+    "label": "Every idea came with a process diagram",
+    "weight": 2
+  },
+  {
+    "kind": "custom",
+    "id": "formatting.emoji-bullets",
+    "category": "formatting",
+    "label": "Every bullet got an emotional support emoji",
+    "weight": 4
+  },
+  {
+    "kind": "custom",
+    "id": "formatting.emoji-density",
+    "category": "formatting",
+    "label": "Words are the minority shareholders",
+    "weight": 3
+  },
+  {
+    "kind": "custom",
+    "id": "formatting.hashtag-stuff",
+    "category": "formatting",
+    "label": "The footer is a keyword landfill",
+    "weight": 4
+  },
+  {
+    "kind": "custom",
+    "id": "formatting.bullet-np-list",
+    "category": "formatting",
+    "label": "Nouns pretending to be an explanation",
+    "weight": 3
+  },
+  {
+    "kind": "custom",
+    "id": "formatting.title-case-header",
+    "category": "formatting",
+    "label": "Every Heading Has Been Promoted",
+    "weight": 1.5
+  },
+  {
+    "kind": "custom",
+    "id": "formatting.smart-punct-signature",
+    "category": "formatting",
+    "label": "Suspiciously perfect typography attendance",
+    "weight": 1.5
+  },
+  {
+    "kind": "custom",
+    "id": "robotic-rhythm.parallel-pair",
+    "category": "robotic-rhythm",
+    "label": "Two abstract maxims marching in step",
+    "weight": 4
+  },
+  {
+    "kind": "custom",
+    "id": "robotic-rhythm.uniformity",
+    "category": "robotic-rhythm",
+    "label": "Every sentence clocks in for the same shift",
+    "weight": 4
+  },
+  {
+    "kind": "custom",
+    "id": "robotic-rhythm.rule-of-three",
+    "category": "robotic-rhythm",
+    "label": "Every idea has two mandatory siblings",
+    "weight": 1.5
+  },
+  {
+    "kind": "custom",
+    "id": "robotic-rhythm.cross-para-burstiness",
+    "category": "robotic-rhythm",
+    "label": "Paragraphs in identical shipping containers",
+    "weight": 3
+  },
+  {
+    "kind": "custom",
+    "id": "robotic-rhythm.punct-distribution",
+    "category": "robotic-rhythm",
+    "label": "The commas have a recurring calendar invite",
+    "weight": 2
+  },
+  {
+    "kind": "custom",
+    "id": "bypass-tricks.homoglyphs",
+    "category": "bypass-tricks",
+    "label": "The alphabet is wearing a fake moustache",
+    "weight": 3,
+    "evidence": "style"
+  },
+  {
+    "kind": "custom",
+    "id": "bypass-tricks.zero-width",
+    "category": "bypass-tricks",
+    "label": "Invisible ink inside ordinary letters",
+    "weight": 3,
+    "evidence": "style"
+  },
+  {
+    "kind": "custom",
+    "id": "pasted-output.template-labels",
+    "category": "chatbot-leak",
+    "label": "Prompt framework labels remain in the post",
+    "weight": 12,
+    "evidence": "fingerprint"
+  },
+  {
+    "kind": "custom",
+    "id": "pasted-output.unfilled-slot",
+    "category": "chatbot-leak",
+    "label": "An unfinished template slot remains",
+    "weight": 8,
+    "evidence": "phrase"
+  },
+  {
+    "kind": "custom",
+    "id": "pasted-output.markdown-bold",
+    "category": "formatting",
+    "label": "Literal Markdown bold markers remain",
+    "weight": 4.5,
+    "evidence": "phrase"
+  },
+  {
+    "kind": "custom",
+    "id": "pasted-output.markdown-heading",
+    "category": "formatting",
+    "label": "Literal Markdown heading markers remain",
+    "weight": 4.5,
+    "evidence": "phrase"
+  },
+  {
+    "kind": "custom",
+    "id": "pasted-output.asterisk-list",
+    "category": "formatting",
+    "label": "Three literal asterisk bullets remain",
+    "weight": 2,
+    "evidence": "style"
+  },
+  {
+    "kind": "custom",
+    "id": "pasted-output.labeled-list",
+    "category": "formatting",
+    "label": "A list repeats short label and explanation headings",
+    "weight": 3,
+    "evidence": "style"
+  },
+  {
+    "kind": "custom",
+    "id": "pasted-output.closing-question",
+    "category": "engagement-bait",
+    "label": "The final sentence asks the audience to respond",
+    "weight": 3,
+    "evidence": "phrase"
+  },
+  {
+    "kind": "custom",
+    "id": "pasted-output.audience-callout",
+    "category": "engagement-bait",
+    "label": "An audience call-out precedes the engagement question",
+    "weight": 2,
+    "evidence": "phrase"
+  },
+  {
+    "kind": "custom",
+    "id": "pasted-output.aphorism-tail",
+    "category": "template-phrases",
+    "label": "The ending uses a stock motivational maxim",
+    "weight": 1.5,
+    "evidence": "phrase"
+  },
+  {
+    "kind": "custom",
+    "id": "pasted-output.imperative-triplet",
+    "category": "robotic-rhythm",
+    "label": "Three short commands repeat the same motivational cadence",
+    "weight": 2.25,
+    "evidence": "style"
+  },
+  {
+    "kind": "custom",
+    "id": "pasted-output.fragment-triplet",
+    "category": "robotic-rhythm",
+    "label": "Three short fragments repeat the same clipped cadence",
+    "weight": 0.25,
+    "evidence": "style"
+  },
+  {
+    "kind": "custom",
+    "id": "pasted-output.repeated-openings",
+    "category": "robotic-rhythm",
+    "label": "Three adjacent lines or sentences repeat their opening word",
+    "weight": 1,
+    "evidence": "style"
+  },
+  {
+    "kind": "phrase",
+    "id": "pasted-output.listicle-hook",
+    "category": "template-phrases",
+    "label": "A numbered tips or lessons formula introduces a list",
+    "weight": 2,
+    "repeat": "once",
+    "patterns": [
+      "(?:^|(?<=[.!?\\n]))[\\t ]*(?:here (?:are|is)[\\t ]+(?:(?:my|the|top)[\\t ]+)?|here'?s[\\t ]+)?(?:[1-9]|10|three|four|five|six|seven|eight|nine|ten)[\\t ]+(?:(?:simple|practical|key|powerful|essential|hard-won|quick|daily|real)[\\t ]+){0,3}(?:ways|habits|lessons|rules|tips|steps|things|strategies|principles|reasons|tools|actions)\\b",
+      "\\bhere (?:are|is)[\\t ]+(?:(?:the|my|top)[\\t ]+){0,2}(?:[1-9]|10|three|four|five|six|seven|eight|nine|ten)[\\t ]+(?:[a-z-]{2,18}[\\t ]+){0,3}(?:ways|habits|lessons|rules|tips|steps|things|strategies|principles|reasons|tools)\\b"
+    ]
+  },
+  {
+    "kind": "phrase",
+    "id": "pasted-output.story-turn",
+    "category": "template-phrases",
+    "label": "The story uses a stock turning-point sentence",
+    "weight": 3,
+    "repeat": "once",
+    "phrases": [
+      "the turning point came when",
+      "that is when everything changed",
+      "that's when everything changed",
+      "the counterintuitive truth",
+      "three hard-won principles followed"
+    ]
+  },
+  {
+    "kind": "phrase",
+    "id": "pasted-output.lesson-formula",
+    "category": "template-phrases",
+    "label": "A stock lesson or counterintuitive insight introduces the advice",
+    "weight": 2,
+    "repeat": "once",
+    "phrases": [
+      "here's what i've actually found",
+      "the counterintuitive move",
+      "the biggest shift came when",
+      "one lesson i'm carrying with me",
+      "stupidly simple",
+      "to replicate it:",
+      "my journey into"
+    ],
+    "patterns": [
+      "\\b(?:the lesson|my takeaway|the takeaway|the operational lesson)[\\t ]+for[\\t ]+[a-z &-]{2,65}:"
+    ]
+  },
+  {
+    "kind": "phrase",
+    "id": "pasted-output.motivational-stock",
+    "category": "template-phrases",
+    "label": "The advice repeats stock motivational slogans",
+    "weight": 3,
+    "repeat": "sqrt",
+    "phrases": [
+      "keep showing up",
+      "keep learning",
+      "your future self will thank you",
+      "the future belongs to",
+      "rejection is simply redirection",
+      "consistency beats intensity",
+      "small improvements compound",
+      "small, consistent steps",
+      "let the results compound",
+      "trust the process",
+      "progress over perfection",
+      "progress, not perfection",
+      "take the first step",
+      "one step at a time",
+      "staircase to take the first step",
+      "do the heavy lifting",
+      "let compound interest",
+      "a small reminder for anyone",
+      "a good reminder for today"
+    ]
+  },
+  {
+    "kind": "phrase",
+    "id": "pasted-output.takeaway-label",
+    "category": "template-phrases",
+    "label": "A labeled takeaway spells out the story moral",
+    "weight": 1.5,
+    "repeat": "once",
+    "patterns": [
+      "(?:^|(?<=[.!?\\n]))[\\t ]*(?:my (?:practical )?(?:takeaway|reflection)|the (?:operational )?(?:lesson|takeaway)(?: for [a-z &-]{2,65})?|here(?:'s| is) (?:the|my) (?:lesson|takeaway))[\\t ]*:"
+    ]
+  },
+  {
+    "kind": "phrase",
+    "id": "pasted-output.save-cta",
+    "category": "engagement-bait",
+    "label": "The post asks for a save, bookmark or direct message",
+    "weight": 1.5,
+    "repeat": "once",
+    "patterns": [
+      "\\b(?:save|bookmark)[\\t ]+(?:this|the post)\\b",
+      "\\b(?:dm|message)[\\t ]+me[\\t ]+(?:for|to|if|and|the|a)\\b"
+    ]
+  },
+  {
+    "kind": "phrase",
+    "id": "pasted-output.keyword-request",
+    "category": "engagement-bait",
+    "label": "The post asks for a quoted keyword in comments or messages",
+    "weight": 3,
+    "repeat": "once",
+    "patterns": [
+      "\\b(?:comment|drop|reply|dm me|message me)[\\t ]+['\"][^'\"\\n]{1,24}['\"]"
+    ]
+  },
+  {
+    "kind": "phrase",
+    "id": "pasted-output.stat-hook",
+    "category": "hedging",
+    "label": "A percentage hook opens the post",
+    "weight": 3,
+    "evidence": "phrase",
+    "position": "opening",
+    "patterns": [
+      "^[\\t ]*\\d{1,2}(?:\\.\\d)?%[\\t ]+of\\b"
+    ]
+  },
+  {
+    "kind": "phrase",
+    "id": "pasted-output.possible-draft",
+    "category": "chatbot-leak",
+    "label": "The assistant introduces a possible draft",
+    "weight": 12,
+    "evidence": "fingerprint",
+    "patterns": [
+      "^[\\t \\n]*(?:(?:sure|certainly|absolutely)[,!][\\t ]*)?here'?s[\\t ]+(?:a[\\t ]+)?possible[\\t ]+(?:linkedin[\\t ]+)?(?:post|draft|caption|version)\\b",
+      "^[\\t \\n]*(?:(?:sure|certainly|absolutely)[,!][\\t ]*)?here(?:'s| is)[\\t ]+(?:a|your|the)[\\t ]+linkedin[\\t ]+post\\b"
+    ]
+  },
+  {
+    "kind": "phrase",
+    "id": "pasted-output.assistant-offer",
+    "category": "chatbot-leak",
+    "label": "An editing offer remains after the draft",
+    "weight": 4,
+    "evidence": "phrase",
+    "position": "closing",
+    "patterns": [
+      "(?:^|(?<=[.!?\\n]))[\\t ]*(?:let me know if you'?d like[\\t ]+(?:(?:me[\\t ]+to[\\t ]+)?(?:revise|rewrite|adjust|expand|shorten|customi[sz]e|tweak)|a[\\t ]+(?:shorter|longer|different|revised)[\\t ]+(?:version|draft))|feel free to (?:adjust|customi[sz]e|tweak)[\\t ]+(?:this|the)[\\t ]+(?:post|draft|caption))\\b"
+    ]
+  },
+  {
+    "kind": "phrase",
+    "id": "pasted-output.live-search-disclaimer",
+    "category": "chatbot-leak",
+    "label": "The pasted answer explains its live browsing limitation",
+    "weight": 12,
+    "evidence": "fingerprint",
+    "patterns": [
+      "(?:^|(?<=[.!?\\n]))[\\t ]*i (?:can'?t|cannot)[\\t ]+(?:search|browse|access)[\\t ]+(?:live|the (?:web|internet))\\b"
+    ]
+  },
+  {
+    "kind": "phrase",
+    "id": "pasted-output.writing-advice",
+    "category": "chatbot-leak",
+    "label": "Writing instructions were pasted instead of the finished post",
+    "weight": 8,
+    "evidence": "phrase",
+    "patterns": [
+      "\\b(?:start|open)[\\t ]+with[\\t ]+(?:a|an)[\\t ]+(?:strong|compelling|attention-grabbing|engaging)[\\t ]+hook\\b",
+      "\\b(?:end|close)[\\t ]+with[\\t ]+(?:a|an)[\\t ]+(?:clear[\\t ]+)?(?:call to action|engagement question)\\b",
+      "\\bhooks tend to land when\\b",
+      "\\ba reusable (?:post |hook )?structure is[\\t ]*:"
+    ]
+  },
+  {
+    "kind": "phrase",
+    "id": "pasted-output.sure-opener",
+    "category": "chatbot-leak",
+    "label": "An assistant-style acknowledgement opens the draft",
+    "weight": 2,
+    "evidence": "style",
+    "patterns": [
+      "^[\\t \\n]*sure[,!]"
+    ]
+  },
+  {
+    "kind": "phrase",
+    "id": "pasted-output.title-label",
+    "category": "chatbot-leak",
+    "label": "A title field opens the pasted draft",
+    "weight": 2,
+    "evidence": "style",
+    "patterns": [
+      "^[\\t \\n]*title[\\t ]*:"
+    ]
+  }
+]

@@ -1,0 +1,36 @@
+[
+  {
+    "id": "probe-textbook-ai",
+    "authorship": "ai",
+    "synthetic": true,
+    "expectTier": [
+      "swamp",
+      "slopocalypse"
+    ],
+    "minimumScore": 70,
+    "mustBeShameable": true,
+    "text": "I'm thrilled to share a lesson that changed everything for me.\n\nLeadership isn't about having all the answers — it's about asking the right questions.\n\nIn today's fast-paced world, we must navigate the ever-evolving landscape of work with empathy, resilience, and purpose.\n\nHere's the thing: true growth happens outside your comfort zone.\n\nLet that sink in.\n\nWhat do you think? Agree? 👇\n\n#Leadership #Growth #Mindset",
+    "evaluation": "regression"
+  },
+  {
+    "id": "probe-chatbot-launch",
+    "authorship": "ai",
+    "synthetic": true,
+    "expectTier": "slopocalypse",
+    "minimumScore": 85,
+    "mustBeShameable": true,
+    "text": "Certainly! Here's a LinkedIn post about our product launch:\n\nWe're excited to announce [Product Name], a game-changing solution that empowers teams to unlock their full potential. This is a testament to our unwavering commitment to innovation.",
+    "evaluation": "regression"
+  },
+  {
+    "id": "probe-subtle-modern",
+    "authorship": "ai",
+    "synthetic": true,
+    "expectTier": [
+      "artisanal",
+      "whiff"
+    ],
+    "text": "Most teams don't have a tooling problem. They have a clarity problem. … The real unlock is quietly aligning on what matters — and then genuinely protecting that focus.",
+    "evaluation": "regression"
+  }
+]

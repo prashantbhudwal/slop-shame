@@ -1,0 +1,58 @@
+[
+  {
+    "kind": "custom",
+    "id": "measured-structural.vague-platitude-count",
+    "category": "robotic-rhythm",
+    "label": "Generic advice with no detected specifics",
+    "evidence": "style",
+    "weight": 1
+  },
+  {
+    "kind": "custom",
+    "id": "measured-structural.visible-markdown-headers",
+    "category": "formatting",
+    "label": "Markdown headings were pasted into the post",
+    "evidence": "style",
+    "weight": 2
+  },
+  {
+    "kind": "custom",
+    "id": "measured-structural.visible-markdown-bold",
+    "category": "formatting",
+    "label": "Bold markers are still visible in multiple lines",
+    "evidence": "style",
+    "weight": 2
+  },
+  {
+    "kind": "custom",
+    "id": "measured-structural.visible-bold-headings",
+    "category": "formatting",
+    "label": "A bold-heading template is still showing its markup",
+    "evidence": "style",
+    "weight": 2.5
+  },
+  {
+    "kind": "custom",
+    "id": "measured-structural.transition-share",
+    "category": "robotic-rhythm",
+    "label": "The transitions are taking turns at the microphone",
+    "evidence": "style",
+    "weight": 0.5
+  },
+  {
+    "kind": "custom",
+    "id": "measured-structural.transition-count",
+    "category": "robotic-rhythm",
+    "label": "Four transitions have joined the same committee",
+    "evidence": "style",
+    "weight": 0.75
+  },
+  {
+    "kind": "custom",
+    "id": "measured-structural.summary-tail",
+    "category": "robotic-rhythm",
+    "label": "The ending filed a summary of the meeting",
+    "evidence": "style",
+    "weight": 0.5
+  }
+]

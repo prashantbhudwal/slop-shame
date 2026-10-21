@@ -1,0 +1,10 @@
+{
+  "replicates": 2000,
+  "seed": 20261021,
+  "resamplingUnit": "source_id",
+  "deltaRecall40": 0.12074074074074075,
+  "percentile95": [
+    0.11060665638489284,
+    0.13074617016782544
+  ]
+}

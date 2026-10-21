@@ -1,0 +1,13 @@
+{
+  "train": {
+    "rows": 35966,
+    "sources": 7663
+  },
+  "dev": {
+    "rows": 13154,
+    "sources": 2529
+  },
+  "baselineParity": 13154,
+  "extractorRuntimeParity": 49120,
+  "sourceOverlap": 0
+}

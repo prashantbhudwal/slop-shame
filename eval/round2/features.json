@@ -1,0 +1,12 @@
+{
+  "engineHash": "d725beed5406eeef7db59e8c943e339f4dc015c86d9471e4d6cd3eaad6a995df",
+  "totals": {
+    "targetTune": 290,
+    "raidDev": 13154,
+    "raidTrain": 35966,
+    "permissive": 271,
+    "linkedinVeto": 8189,
+    "polished": 240
+  },
+  "ruleCount": 102
+}

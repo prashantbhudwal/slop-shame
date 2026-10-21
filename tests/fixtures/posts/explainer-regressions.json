@@ -1,0 +1,20 @@
+[
+  {
+    "id": "probe-synthetic-cache-explainer",
+    "authorship": "ai",
+    "synthetic": true,
+    "evaluation": "regression",
+    "provenance": "Synthetic paraphrase of the structural patterns in the owner's local RAG probe; no real post text copied.",
+    "text": "Caching is not \"one-size-fits-all.\"\n\nIf your service is hitting a wall, adding memory is rarely the complete answer. Production-grade systems need an approach that matches their traffic. Here is a breakdown of the 4 Most Important caching strategies transforming how teams deliver responses:\n\n🔍 1. LOCAL CACHE\nBest for: Small objects, stable settings, and repeated reads.\nHow it works: Each process keeps a copy near the code. This gives you the best of both worlds when a shared layer handles invalidation. Measure memory use before increasing the limits.\n\n🕸️ 2. SHARED CACHE\nBest for: Several workers that need the same data.\nHow it works: A separate service stores entries with an expiry time, connecting the dots between requests that would otherwise repeat database work. Record misses and compare them with the underlying query cost.\n\n🔍 3. EDGE CACHE\nBest for: Public responses with predictable freshness requirements.\nHow it works: Copies sit close to readers so requests avoid a long trip to the application. Start with static responses before expanding the policy to personalized endpoints.",
+    "expectTier": ["swamp", "slopocalypse"]
+  },
+  {
+    "id": "probe-synthetic-evaluation-explainer",
+    "authorship": "ai",
+    "synthetic": true,
+    "evaluation": "regression",
+    "provenance": "Synthetic paraphrase of the structural patterns in the owner's local prompting probe; no real post text copied.",
+    "text": "Think evaluation is just about collecting scores? That is why your releases still surprise you.\n\n𝐇𝐞𝐫𝐞𝐬 𝐰𝐡𝐚𝐭 𝐚𝐜𝐭𝐮𝐚𝐥𝐥𝐲 𝐬𝐞𝐩𝐚𝐫𝐚𝐭𝐞𝐬 reliable checks from fragile demos:\nEvaluation isn't a leaderboard.\nIts a system for making decisions.\nMost people treat tests like a report. Engineers treat them like a release gate.\n\nHere's the breakdown you need:\n\n𝟏. 𝐑𝐞𝐠𝐫𝐞𝐬𝐬𝐢𝐨𝐧 𝐂𝐡𝐞𝐜𝐤𝐬\nPattern:\nInput → Recorded output → Comparison\nUse it when: A change might break an established behavior. Run the suite before shipping and keep the examples small enough to inspect when something fails.\n\n𝟐. 𝐇𝐮𝐦𝐚𝐧 𝐑𝐞𝐯𝐢𝐞𝐰\nPattern:\nSample → Review → Discussion → Decision\nUse it when: The result needs judgment that a numeric check cannot supply. Ask reviewers to write down the reason for their decision and keep disagreements visible.\n\n𝟑. 𝐋𝐢𝐯𝐞 𝐌𝐨𝐧𝐢𝐭𝐨𝐫𝐢𝐧𝐠\nPattern:\nRequest → Measurement → Alert\nUse it when: Conditions change after deployment. Keep the alert tied to an action somebody can take and review whether it caught an actual problem.\n\nThe Critical Distinction Most Teams Miss:\nTests guide releases. Feedback shapes priorities.\nThe issue isn't usually the dashboard.\nIts that you're measuring the wrong outcome.\n\nWhich check are you underusing right now?\n♻️ Repost this to help your network\n➕ Follow for more",
+    "expectTier": ["swamp", "slopocalypse"]
+  }
+]

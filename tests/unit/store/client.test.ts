@@ -51,7 +51,7 @@ describe('content store client', () => {
 
   it('keeps newer sightings that arrive while a batch is in flight', async () => {
     let release!: () => void;
-    sendMessage.mockImplementationOnce(() => new Promise<void>((resolve) => { release = resolve; }));
+    sendMessage.mockImplementationOnce(() => new Promise((resolve) => { release = () => resolve({ ok: true, pendingActions: [] }); }));
     const { reportSighting, flushSightings } = await import('../../../src/lib/store/client');
     reportSighting(sighting('a', 40));
     const inFlight = flushSightings();

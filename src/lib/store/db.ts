@@ -1,10 +1,14 @@
+import { canonicalAuthorId } from '../linkedin/author-id';
+import { canonicalizeAuthors } from './aliases';
+import type { PostRecord, StoredAuthor } from './model';
+
 export const DB_NAME = 'slop-shame';
-export const DB_VERSION = 1;
+export const DB_VERSION = 2;
 export const POST_RETENTION_MS = 90 * 24 * 60 * 60 * 1_000;
 export const MAX_POSTS = 20_000;
 
 /** All schema changes belong here; future migrations branch on oldVersion. */
-export function migrateDatabase(db: IDBDatabase, _tx: IDBTransaction, oldVersion: number): void {
+export function migrateDatabase(db: IDBDatabase, tx: IDBTransaction, oldVersion: number): void {
   if (oldVersion < 1) {
     const authors = db.createObjectStore('authors', { keyPath: 'id' });
     authors.createIndex('slopPoints', 'slopPoints');
@@ -16,6 +20,31 @@ export function migrateDatabase(db: IDBDatabase, _tx: IDBTransaction, oldVersion
     posts.createIndex('authorScore', ['authorId', 'score']);
     posts.createIndex('authorLastSeen', ['authorId', 'lastSeen']);
   }
+  if (oldVersion === 1) canonicalizeStoredAuthors(tx);
+}
+
+/**
+ * v2: author ids became canonical. Re-key every author stored under another
+ * spelling, merging aliases, and point their posts at the canonical id. Runs
+ * inside the upgrade transaction: any failure aborts it and keeps v1 intact.
+ */
+function canonicalizeStoredAuthors(tx: IDBTransaction): void {
+  const authors = tx.objectStore('authors');
+  const posts = tx.objectStore('posts');
+  void (async () => {
+    const stored = await requestResult<StoredAuthor[]>(authors.getAll());
+    const stale = stored.filter((author) => canonicalAuthorId(author.id) !== author.id);
+    if (!stale.length) return;
+    const groups = new Set(stale.map((author) => canonicalAuthorId(author.id)));
+    const owned: PostRecord[] = [];
+    for (const author of stale) owned.push(...await requestResult<PostRecord[]>(posts.index('authorId').getAll(author.id)));
+    const merged = canonicalizeAuthors(stored.filter((author) => groups.has(canonicalAuthorId(author.id))), owned);
+    for (const author of stale) await requestResult(authors.delete(author.id));
+    for (const author of merged.authors) await requestResult(authors.put(author));
+    for (const post of merged.posts) await requestResult(posts.put(post));
+  })().catch(() => {
+    try { tx.abort(); } catch { /* Already finished. */ }
+  });
 }
 
 let connection: Promise<IDBDatabase> | undefined;
@@ -94,16 +123,26 @@ export async function transaction<T>(
   }
 }
 
-export function collectCursor<T>(request: IDBRequest<IDBCursorWithValue | null>, limit: number, offset = 0): Promise<T[]> {
+/** `keep` filters rows before `offset` and `limit` apply (offset counts kept rows). */
+export function collectCursor<T>(request: IDBRequest<IDBCursorWithValue | null>, limit: number, offset = 0, keep?: (row: T) => boolean): Promise<T[]> {
   return new Promise((resolve, reject) => {
     const rows: T[] = [];
     let skipped = false;
+    let toSkip = offset;
     request.onerror = () => reject(request.error);
     request.onsuccess = () => {
       const cursor = request.result;
       if (!cursor || rows.length >= limit) { resolve(rows); return; }
-      if (offset > 0 && !skipped) { skipped = true; cursor.advance(offset); return; }
-      rows.push(cursor.value as T);
+      if (keep) {
+        const row = cursor.value as T;
+        if (keep(row)) {
+          if (toSkip > 0) toSkip--;
+          else rows.push(row);
+        }
+      } else {
+        if (offset > 0 && !skipped) { skipped = true; cursor.advance(offset); return; }
+        rows.push(cursor.value as T);
+      }
       if (rows.length >= limit) resolve(rows);
       else cursor.continue();
     };

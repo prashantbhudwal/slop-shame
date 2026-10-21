@@ -10,6 +10,7 @@ const MATH_BOLD = /[\u{1D400}-\u{1D7FF}]+/gu;
 const SMART_QUOTE = /[“”]/;
 const OXFORD_COMMA = /, and /;
 const SMART_PUNCT = /[“”—]/;
+const SECTION = /^(?:[\p{Extended_Pictographic}\uFE0F\s]*\d{1,2}[.)]\s*\p{L}|[A-Z][A-Z \d-]{5,}:?$)/u;
 const c = 'formatting';
 export const formatting: RulePack = {
   id: c, name: 'The formatting department', description: 'Formatting clusters are weak corroboration, never authorship proof.', attribution: ATTRIBUTION,
@@ -20,7 +21,15 @@ export const formatting: RulePack = {
     }),
     custom(c, 'unicode-bold', 'The alphabet put on a ghostwriting costume', 4, (ctx) => {
       const matches = ctx.input.text.match(MATH_BOLD) ?? [];
-      return matches.reduce((sum, match) => sum + Array.from(match).length, 0) >= 8 ? { matches: matches.slice(0, 3) } : null;
+      return matches.reduce((sum, match) => sum + Array.from(match).length, 0) >= 8 ? { matches: matches.slice(0, 3), scale: Math.min(3, Math.sqrt(matches.length)) } : null;
+    }),
+    custom(c, 'section-outline', 'The outline arrived in numbered costumes', 1, (ctx) => {
+      const matches = ctx.lines.filter((line) => SECTION.test(line));
+      return matches.length >= 2 ? { matches, scale: Math.sqrt(matches.length) } : null;
+    }),
+    custom(c, 'arrow-chain', 'Every idea came with a process diagram', 2, (ctx) => {
+      const matches = ctx.lines.filter((line) => (line.match(/[→⇒⟶]/gu) ?? []).length >= 2);
+      return matches.length ? { matches, scale: Math.sqrt(matches.length) } : null;
     }),
     custom(c, 'emoji-bullets', 'Every bullet got an emotional support emoji', 4, (ctx) => {
       const count = structureOf(ctx).emojiBullets;
@@ -29,7 +38,9 @@ export const formatting: RulePack = {
     custom(c, 'emoji-density', 'Words are the minority shareholders', 3, (ctx) => ctx.emojiCount >= 6 && ctx.emojiCount / ctx.wordCount >= 0.15 ? { matches: ctx.lines.slice(0, 3), scale: Math.min(3, ctx.emojiCount / ctx.wordCount / 0.15) } : null),
     custom(c, 'hashtag-stuff', 'The footer is a keyword landfill', 4, (ctx) => {
       const generic = ctx.hashtags.filter((tag) => GENERIC.has(tag));
-      return ctx.hashtags.length >= 6 && (TAG_LINE.test(ctx.lines.at(-1) ?? '') || generic.length >= 4) ? { matches: ctx.hashtags.slice(0, 3), scale: Math.min(3, Math.sqrt(ctx.hashtags.length - 4)) } : null;
+      const wall = TAG_LINE.test(ctx.lines.at(-1) ?? '');
+      if (ctx.hashtags.length >= 6 && (wall || generic.length >= 4)) return { matches: ctx.hashtags.slice(0, 3), scale: Math.min(3, Math.sqrt(ctx.hashtags.length - 4)) };
+      return wall && generic.length >= 3 ? { matches: generic.slice(0, 3), scale: 0.5 } : null;
     }),
     custom(c, 'bullet-np-list', 'Nouns pretending to be an explanation', 3, (ctx) => {
       const matches = ctx.lines.filter((line, i) => BARE_BULLET.test(line) && structureOf(ctx).lineWordCounts[i]! <= 7);

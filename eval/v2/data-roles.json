@@ -1,0 +1,30 @@
+{
+  "snapshotHash": "e33028e19032921ae7c4e3b7b4714ed010b7f86a8b70658e68d311f90535b6db",
+  "totals": {
+    "targetTune": 290,
+    "humanFit": 7166,
+    "permissiveFit": 267,
+    "polishedFit": 80,
+    "raidDev": 2354,
+    "linkedinVeto": 8189,
+    "wayback": 300,
+    "contextControls": 56
+  },
+  "polished": {
+    "fit": 80,
+    "audit": 80,
+    "fitGroups": 40,
+    "auditGroups": 40
+  },
+  "excludedPolishedSourceGroups": 120,
+  "linkedIn": "CHECK ONLY: excluded from features, base rates and optimizer. Veto threshold authorized separately.",
+  "fitHashes": {
+    "targetTune": "6786fc54a4c2c2601d1e2fdcf1c3676ad3e8fa00a744c2529adc6617ac4cd585",
+    "humanFit": "1b851c574598adf11cf206f603a978a15efc96e2b1fd4110c03f16d5d2f63ca6",
+    "permissiveFit": "92be271a39b4b7f84a8f9a948ee74433a1b125f57661ad1869bfb8a7dd8b0e4b",
+    "polishedFit": "9b9707bf33d3babe9a712242e845fffce25b329b21581d062cc697d1f100fb7e",
+    "raidDev": "f10a68c635a5ffc3ab7d3bbc6c70b9c2947643edf4bec9cbc1c9ff1b028f13eb",
+    "linkedinVeto": "b6b2467a35217d575555b75839b008be3ab1f1c02d40bd5c60c7aef20683209f",
+    "wayback": "e4667dd42f44e1986bac13d36c1f99c659bafec6c128327bda56ba0435b08cc3"
+  }
+}

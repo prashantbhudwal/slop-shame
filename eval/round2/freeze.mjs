@@ -1,0 +1,17 @@
+import {resolve}from'node:path';
+import{readFileSync,readdirSync,existsSync,cpSync}from'node:fs';
+import{ROOT,CACHE,OUT,json,save,hash,digest}from'./common.mjs';
+const engineHash=digest(resolve(ROOT,'src/lib/engine')),dev=json(resolve(OUT,'dev.json'));
+if(dev.engineHash!==engineHash)throw Error('Run public dev evaluation after the last source change');
+const r=dev.sets;
+if(r.linkedinVeto.overall.fp>22||r.linkedinVeto.overall.shameFP>20||r.raidDev.overall.fp>29||Object.values(r.raidDev.domain).some(d=>d.human&&d.fpRate>.025)||r.permissive.overall.fp>6||r.polished.mode.light.fp!==0)throw Error('Dev gate failed');
+const pb=json(resolve(OUT,'baseline-polished-complete.json'));
+for(const file of pb.receipts)if(hash(readFileSync(resolve(ROOT,'data/eval/raw/polished',file.file)))!==file.sha256)throw Error('Polished file changed after complete baseline');
+const inputs=[];
+for(const dir of ['data/eval/generated/linkedin-ai-loweffort','data/eval/generated/linkedin-ai-realprompts','data/eval/generated/linkedin-ai-fresh','data/eval/generated/linkedin-ai','data/eval/raw/polished'])for(const file of readdirSync(resolve(ROOT,dir)).filter(f=>f.endsWith('.jsonl')).sort())inputs.push(dir+'/'+file);
+for(const path of ['data/eval/raw/judge/panel-labels.json','data/eval/raw/hillclimb/train.jsonl','data/eval/raw/hillclimb/dev.jsonl','data/eval/raw/hillclimb/test.jsonl','data/eval/raw/hillclimb/detectrlx-test.jsonl','data/eval/raw/normalized/linkedin-influencers.jsonl','data/eval/raw/normalized/linkedin-influencers-split.json',...json(resolve(ROOT,'eval/config.json')).files,...json(resolve(ROOT,'eval/config.json')).optionalFiles.filter(existsSync)])inputs.push(path);
+const receipts=[...new Set(inputs)].sort().map(file=>({file,sha256:hash(readFileSync(resolve(ROOT,file)))}));
+if(existsSync(resolve(OUT,'frozen.json')))throw Error('Candidate already frozen');
+cpSync(resolve(ROOT,'src/lib/engine'),resolve(CACHE,'engine-final'),{recursive:true});
+save(resolve(OUT,'frozen.json'),{created:new Date().toISOString(),engineHash,baselineEngineHash:digest(resolve(CACHE,'engine-base')),inputs:receipts,selectedSearch:'conservative-search.json',qaAdjustments:json(resolve(OUT,'best.json')).qaAdjustments,devGates:'pass',holdoutProtocol:'baseline once; final once; no corrective holdout selection'});
+console.log('Frozen',engineHash);

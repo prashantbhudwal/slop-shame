@@ -17,6 +17,8 @@ export const selectors = {
   // let the adapter walk out to the entire card, including a reshare's wrapper.
   post: [
     '[data-view-name="feed-full-update"]',
+    '[componentkey^="expanded"][componentkey*="FeedType_CREATOR_PROFILE_"]',
+    '[componentkey^="update-card-focus"][componentkey*="FeedType_CREATOR_PROFILE_"]',
     '[componentkey^="expanded"][componentkey$="FeedType_MAIN_FEED_RELEVANCE"]',
     '[componentkey^="update-card-focus"][componentkey$="FeedType_MAIN_FEED_RELEVANCE"]',
     '[data-urn*="urn:li:activity:"]', '[data-urn*="urn:li:share:"]', '[data-urn*="urn:li:ugcPost:"]',
@@ -67,9 +69,10 @@ export const selectors = {
     '[data-view-name="feed-reshare-context"]', '[aria-label*="reposted" i]',
     '.update-components-header__text-view', '.feed-shared-header__text-view',
   ],
-  socialHeader: ['[data-view-name="feed-header-text"]'],
+  socialHeader: ['[data-view-name="feed-header-text"]', '[data-sdui-anchor-id^="feed-header-"]'],
   // Context profiles belong to a liker/reposter/follower, never the text's author.
   socialContext: [
+    '[data-sdui-anchor-id^="feed-header-"]',
     '[data-view-name="feed-header-text"]', '[data-view-name="feed-header-actor-image"]',
     '[data-view-name="feed-reshare-context"]',
     '.update-components-header__text-view', '.feed-shared-header__text-view',
@@ -95,7 +98,10 @@ export const selectors = {
     '[data-view-name="feed-actor-image"]', '[data-view-name="feed-header-actor-image"]',
     '[data-view-name="feed-open-identity-switcher"]',
   ],
-  comments: ['[componentkey*="replaceableCommentTools"]', '[data-view-name="feed-comment-box"]', '[data-view-name="comment"]'],
+  comments: [
+    '[componentkey*="replaceableCommentTools"]', '[data-view-name="feed-comment-box"]', '[data-view-name="comment"]',
+    '.comments-comments-list', '.comments-comment-item',
+  ],
   // Structural hydration signals. Generic paragraphs/direction wrappers are
   // considered only on cards without a registered body, never on live counters.
   mutationContent: [
@@ -106,9 +112,27 @@ export const selectors = {
     'header', '.update-components-actor', '.feed-shared-actor', '.update-components-text',
     '.feed-shared-update-v2__description', '.feed-shared-inline-show-more-text', '.feed-shared-text',
   ],
+  // The post's action bar is the flex row holding these (Like · Comment ·
+  // Repost · Send, then empty space, then the reactions summary). Our chip
+  // goes right after the last action found here, in that empty space.
+  actionBarAnchor: [
+    'a[aria-label="Send" i]',
+    '[data-view-name="feed-send-as-message-button"]', '[data-view-name="feed-share-button"]',
+    '[data-view-name="feed-comment-button"]',
+  ],
+  cardFrame: ['[componentkey^="update-card-focus"]', '.feed-shared-update-v2', '[role="article"]'],
+  // Activity pages: the left rail holds the owner's profile card (cover, round
+  // photo, name, followers), sticky while the posts scroll. The adapter finds
+  // the card as the rounded, clipped box around the rail's round photo.
+  profileRail: ['aside[aria-label="Sidebar" i]', 'main aside', '.scaffold-layout__sidebar'],
+  profilePhoto: ['figure img', 'img'],
   processed: '[data-slop-shame-processed]',
   // Adapter-owned markup and non-content nodes are excluded from extraction.
   mount: '[data-slop-shame-mount]',
+  chipMount: '[data-slop-shame-mount="chip"]',
+  tagMount: '[data-slop-shame-mount="tag"]',
+  decorationMount: '[data-slop-shame-mount="decoration"]',
+  summaryMount: '[data-slop-shame-mount="summary"]',
   ignoredText: 'button, script, style, noscript, .visually-hidden, [data-slop-shame-mount]',
   controls: 'button, nav, footer, [role="button"], [data-slop-shame-mount]',
   all: '*',

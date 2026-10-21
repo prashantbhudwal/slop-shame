@@ -1,14 +1,19 @@
 // Background-only mutations. Page readers import query.ts instead.
+import { canonicalAuthorId } from '../linkedin/author-id';
+import { canonicalizeAuthors } from './aliases';
 import { MAX_POSTS, POST_RETENTION_MS, requestResult, transaction } from './db';
 import type { PostRecord, StoredAuthor } from './model';
 import { slopPoints } from './ranking';
 import type { PostAction, PostSighting, UserAction } from './types';
 import { SLOP_THRESHOLD } from './types';
 import { parseExport, validateAction, validateSighting } from './validation';
+import { MAX_BATCH_SIZE, SNIPPET_LENGTH } from './limits';
 
 function newAuthor(s: PostSighting): StoredAuthor {
   return {
-    ...s.author, postsSeen: 0, slopPosts: 0, totalScore: 0, maxScore: 0, slopPoints: 0,
+    id: s.author.id, name: s.author.name, kind: s.author.kind,
+    headline: s.author.headline, profileUrl: s.author.profileUrl, avatarUrl: s.author.avatarUrl,
+    postsSeen: 0, slopPosts: 0, totalScore: 0, maxScore: 0, slopPoints: 0,
     categoryCounts: {}, destroyedCount: 0, shamedCount: 0,
     firstSeen: s.seenAt, lastSeen: s.seenAt, scoreCounts: {}, slopocalypsePosts: 0,
   };
@@ -73,10 +78,14 @@ export async function recordSightings(sightings: PostSighting[], now = Date.now(
 /** Upserts and actions commit together, so a retry can never observe half a batch. */
 export async function recordBatch(
   sightings: PostSighting[], actions: PostAction[] = [], now = Date.now(),
-): Promise<{ wrote: boolean; pendingActions: PostAction[] }> {
+): Promise<{ wrote: boolean; pendingActions: PostAction[]; rejectedActions: PostAction[] }> {
+  if (sightings.length > MAX_BATCH_SIZE || actions.length > MAX_BATCH_SIZE) throw new Error('Store batch exceeds size limit');
   // One malformed adapter result must not poison a whole batch and retry forever.
   const valid = sightings.filter((sighting) => {
     try { validateSighting(sighting); return true; } catch { return false; }
+  }).map((s) => {
+    const id = canonicalAuthorId(s.author.id);
+    return id === s.author.id ? s : { ...s, author: { ...s.author, id } };
   });
   actions.forEach(validateAction);
   return transaction('readwrite', async (tx) => {
@@ -84,6 +93,7 @@ export async function recordBatch(
     const posts = tx.objectStore('posts');
     const cache = new Map<string, StoredAuthor>();
     const pendingActions: PostAction[] = [];
+    const rejectedActions: PostAction[] = [];
     for (const s of valid) {
       const old = await requestResult<PostRecord | undefined>(posts.get(s.postId));
       if (old && old.authorId !== s.author.id) continue;
@@ -102,7 +112,7 @@ export async function recordBatch(
         ? { ...old, firstSeen: Math.min(old.firstSeen, s.seenAt) }
         : {
           postId: s.postId, authorId: s.author.id, score: s.score, tierId: s.tierId,
-          topCategory: s.topCategory, snippet: s.snippet.slice(0, 200),
+          topCategory: s.topCategory, snippet: s.snippet.slice(0, SNIPPET_LENGTH),
           firstSeen: old ? Math.min(old.firstSeen, s.seenAt) : s.seenAt,
           lastSeen: old ? Math.max(old.lastSeen, s.seenAt) : s.seenAt,
           ...(old?.destroyed ? { destroyed: true } : {}), ...(old?.shamed ? { shamed: true } : {}),
@@ -113,12 +123,15 @@ export async function recordBatch(
       cache.set(author.id, author);
       await requestResult(posts.put(post));
     }
+    // Replies name actions exactly as the caller sent them.
     for (const action of actions) {
+      const authorId = canonicalAuthorId(action.authorId);
       const post = await requestResult<PostRecord | undefined>(posts.get(action.postId));
-      if (!post || post.authorId !== action.authorId) { pendingActions.push(action); continue; }
+      if (!post) { pendingActions.push(action); continue; }
+      if (post.authorId !== authorId) { rejectedActions.push(action); continue; }
       if (post[action.action]) continue; // Already committed, including lost-ack retries.
-      const author = cache.get(action.authorId)
-        ?? await requestResult<StoredAuthor | undefined>(authors.get(action.authorId));
+      const author = cache.get(authorId)
+        ?? await requestResult<StoredAuthor | undefined>(authors.get(authorId));
       if (!author) { pendingActions.push(action); continue; }
       post[action.action] = true;
       author[action.action === 'destroyed' ? 'destroyedCount' : 'shamedCount']++;
@@ -137,12 +150,13 @@ export async function recordBatch(
       await requestResult(authors.put(author));
     }
     const pruned = await prunePosts(tx, now, cache);
-    return { wrote: cache.size > 0 || pruned, pendingActions };
+    return { wrote: cache.size > 0 || pruned, pendingActions, rejectedActions };
   });
 }
 
-export async function recordAction(postId: string, authorId: string, action: UserAction): Promise<boolean> {
+export async function recordAction(postId: string, rawAuthorId: string, action: UserAction): Promise<boolean> {
   if (action !== 'destroyed' && action !== 'shamed') throw new Error('Invalid store action');
+  const authorId = canonicalAuthorId(rawAuthorId);
   return transaction('readwrite', async (tx) => {
     const posts = tx.objectStore('posts');
     const authors = tx.objectStore('authors');
@@ -160,7 +174,9 @@ export async function recordAction(postId: string, authorId: string, action: Use
 
 /** Import replaces the local snapshot atomically; merging would double-count history. */
 export async function importSnapshot(json: string): Promise<void> {
-  const snapshot = parseExport(json);
+  const parsed = parseExport(json);
+  // Older exports may split one author across id spellings.
+  const snapshot = canonicalizeAuthors(parsed.authors, parsed.posts);
   await transaction('readwrite', async (tx) => {
     const authors = tx.objectStore('authors');
     const posts = tx.objectStore('posts');

@@ -1,0 +1,122 @@
+{
+  "engineHash": "e33028e19032921ae7c4e3b7b4714ed010b7f86a8b70658e68d311f90535b6db",
+  "sets": {
+    "targetHoldout": {
+      "main": {
+        "n": 160,
+        "flags": 51,
+        "human": 0,
+        "fp": 0,
+        "ai": 160,
+        "tp": 51,
+        "smell": {
+          "obvious": {
+            "n": 106,
+            "flags": 49
+          },
+          "some": {
+            "n": 53,
+            "flags": 2
+          },
+          "none": {
+            "n": 1,
+            "flags": 0
+          }
+        }
+      }
+    },
+    "fresh": {
+      "main": {
+        "n": 351,
+        "flags": 61,
+        "human": 0,
+        "fp": 0,
+        "ai": 351,
+        "tp": 61,
+        "smell": {}
+      }
+    },
+    "linkedinHoldout": {
+      "main": {
+        "n": 9743,
+        "flags": 43,
+        "human": 9743,
+        "fp": 43,
+        "ai": 0,
+        "tp": 0,
+        "smell": {}
+      }
+    },
+    "wayback": {
+      "main": {
+        "n": 410,
+        "flags": 2,
+        "human": 410,
+        "fp": 2,
+        "ai": 0,
+        "tp": 0,
+        "smell": {}
+      }
+    },
+    "raidTest": {
+      "main": {
+        "n": 2342,
+        "flags": 24,
+        "human": 2342,
+        "fp": 24,
+        "ai": 0,
+        "tp": 0,
+        "smell": {}
+      }
+    },
+    "external": {
+      "main": {
+        "n": 2245,
+        "flags": 120,
+        "human": 1351,
+        "fp": 13,
+        "ai": 894,
+        "tp": 107,
+        "smell": {}
+      }
+    },
+    "polishedAudit": {
+      "main": {
+        "n": 80,
+        "flags": 0,
+        "human": 80,
+        "fp": 0,
+        "ai": 0,
+        "tp": 0,
+        "smell": {}
+      }
+    },
+    "effortful": {
+      "main": {
+        "n": 210,
+        "flags": 30,
+        "human": 142,
+        "fp": 10,
+        "ai": 68,
+        "tp": 20,
+        "smell": {
+          "none": {
+            "n": 77,
+            "flags": 0
+          },
+          "some": {
+            "n": 65,
+            "flags": 10
+          },
+          "obvious": {
+            "n": 68,
+            "flags": 20
+          }
+        }
+      }
+    }
+  },
+  "variants": [
+    "main"
+  ]
+}

@@ -34,3 +34,6 @@ tests/fixtures/feed/captured/
 data/eval/raw/
 assets-src/processed/*
 !assets-src/processed/asset-report.md
+
+# Python bytecode
+__pycache__/

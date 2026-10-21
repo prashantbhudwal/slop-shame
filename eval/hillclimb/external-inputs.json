@@ -1,0 +1,42 @@
+{
+  "receipts": [
+    {
+      "file": "data/eval/samples/unmasking.jsonl",
+      "sha256": "1ad9b299b654ddca912b575990b6c7c0699966dfd4e1768aebcc295c2ef5c792"
+    },
+    {
+      "file": "data/eval/samples/plos.jsonl",
+      "sha256": "325de3e0bb712cc6f6fc292af8fb44f6aeea8bfc1e30322003d776bbadef170c"
+    },
+    {
+      "file": "data/eval/samples/official-releases.jsonl",
+      "sha256": "6258f80ce6e539883bd119bf49346acc8b16a9c1795ccf4e09ff48312c887ea7"
+    },
+    {
+      "file": "data/eval/samples/uci-reviews.jsonl",
+      "sha256": "2fb512859a4ca511d7114cba92e0b036a64c2a26286f956c5a1cd990b46c3f39"
+    },
+    {
+      "file": "data/eval/samples/synthetic-general.jsonl",
+      "sha256": "80febd273c839e72814e255dd6622a34df7b212c15f5187da5d6b63bd52ef577"
+    },
+    {
+      "file": "data/eval/raw/normalized/wi.jsonl",
+      "sha256": "ab97c8aaf12cd8696cebe2092573a8cfd81a7ae21673d16f0fbc7eae7b2de938"
+    },
+    {
+      "file": "data/eval/raw/normalized/raid.jsonl",
+      "sha256": "446f21a8aff37937bc970cd0a3c44d11988ab10eac70679b32fac4389049afd2"
+    },
+    {
+      "file": "data/eval/raw/normalized/aeslc.jsonl",
+      "sha256": "3f60286490543e60c4742daa2f79c6d0a45c86ac9223aec6205cae536fb4e1df"
+    },
+    {
+      "file": "data/eval/raw/normalized/human-detectors-ai.jsonl",
+      "sha256": "662c1bb3e62991bc0b7be10d8f171b350de62b254c50ac7cd4ad92a7fbd8fc86"
+    }
+  ],
+  "duplicates": 2,
+  "missing": []
+}

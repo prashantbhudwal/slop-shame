@@ -1,0 +1,102 @@
+[
+  {
+    "file": "score.ts",
+    "identical": true,
+    "sha256": "faa2f6a1245ae6b73cb16acf4279bd1beeb281210edcd8c892f7aaff8a61ae37"
+  },
+  {
+    "file": "tiers.ts",
+    "identical": true,
+    "sha256": "593f835a47e136769825d54579866031c69259bde65596fc9deca0e57b9837e7"
+  },
+  {
+    "file": "compile.ts",
+    "identical": true,
+    "sha256": "d45033d8d1151dc5617ea9b773985a4d31490633a931cbd51342b79588b7f1b6"
+  },
+  {
+    "file": "context.ts",
+    "identical": true,
+    "sha256": "e51ab7a1cd0902b16e677937c04271082ae6a556b39b14743c866d9ae963418f"
+  },
+  {
+    "file": "types.ts",
+    "identical": true,
+    "sha256": "356f6dd556389422bc4ba9d52a6496ebf6c6ff4cfb2fcaefc16f4bc97f4f5d48"
+  },
+  {
+    "file": "rules.ts",
+    "identical": true,
+    "sha256": "bad19b8a5205813693890e8054697e2b6df3aed77650f787d3cedf2e3ad25a30"
+  },
+  {
+    "file": "rule-types.ts",
+    "identical": true,
+    "sha256": "c8628d23fb82aa5f533db77c4bbdcd93d966a060bc467c5ecda62bf61981f71a"
+  },
+  {
+    "file": "index.ts",
+    "identical": true,
+    "sha256": "697562338c688bafdafa9ee2cfcc8233af7548d262140183226ff6b7bf8ae620"
+  },
+  {
+    "file": "packs/chatbot-leak.ts",
+    "identical": true,
+    "sha256": "de0c24d9507a8c92ffdfb428c6f1d8add5e5c8461811512c7a514fecb54aabdf"
+  },
+  {
+    "file": "packs/upstream-map.ts",
+    "identical": true,
+    "sha256": "9ca3131a55f60d98d21aa30522abbf0ab8cd7d2d32202a1fbd87a81a0a1fbe30"
+  },
+  {
+    "file": "packs/engagement-bait.ts",
+    "identical": true,
+    "sha256": "6d215ded708ed5525f1e3525a998112d1154569de593e7b98062a9e9bc5c2bf4"
+  },
+  {
+    "file": "packs/template-phrases.ts",
+    "identical": true,
+    "sha256": "1cc5e44e7694ce6a9825962ff9347b973a24143c465fd46e16142fe55fbe4bb9"
+  },
+  {
+    "file": "packs/negation-pivot.ts",
+    "identical": true,
+    "sha256": "d2295ed10e82afb286feca54ead33f4ad43bec3a188c7833aa8c6b8242a2d445"
+  },
+  {
+    "file": "packs/formatting.ts",
+    "identical": true,
+    "sha256": "ecf5895ae17ec2c6d29545d4c1d30e33f4abd428309a748d5e240ef23db87cab"
+  },
+  {
+    "file": "packs/bypass-tricks.ts",
+    "identical": true,
+    "sha256": "befce67c66cf23df5e376f4de54ac4f559820942690f6061a4766b97114a1a13"
+  },
+  {
+    "file": "packs/inflation.ts",
+    "identical": true,
+    "sha256": "2c73306a7adae8c193cd3a04fcf247d5325fed922cae8e9a0a5c4bbf883d2c03"
+  },
+  {
+    "file": "packs/robotic-rhythm.ts",
+    "identical": true,
+    "sha256": "6065d677daf3387a07a668339caa15d569349fe94b694e6e72c0d5fb4d9f8710"
+  },
+  {
+    "file": "packs/index.ts",
+    "identical": true,
+    "sha256": "8ebaf593394ab67e2db013f6728e245a0fcabcd4f4953067899ddad44da53abf"
+  },
+  {
+    "file": "packs/hedging.ts",
+    "identical": true,
+    "sha256": "a618cd298b14bf213392e3223120a19fb8fc1da464a68e551a79fceadc548904"
+  },
+  {
+    "file": "packs/ai-vocabulary.ts",
+    "identical": true,
+    "sha256": "ad03cfcb55f78d390c91f5c0964abdc04f397c231ed31bafafa405dd19838308"
+  }
+]

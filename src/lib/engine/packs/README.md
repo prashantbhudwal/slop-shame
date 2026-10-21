@@ -1,8 +1,10 @@
 # Add an AI-writing tell in 30 seconds
 
-Slop currently means **AI-written text**. The default packs describe AI tells,
-not whether somebody announces a job, tells a story, uses short paragraphs,
-or has an enthusiastic headline. Those genres have human authors too.
+Slop means **zero-effort pasted model output with visible, nameable smells**.
+Careful AI-assisted writing and clean output without a tell are outside the
+target. Every point must have a snippet or visible pattern the reader can
+inspect. A job announcement, a story, short paragraphs or an enthusiastic
+headline alone do not establish slop. See INTENTIONS item 31.
 
 Find the matching pack, add a data-only rule, then run `pnpm test`:
 
@@ -15,7 +17,7 @@ Find the matching pack, add a data-only rule, then run `pnpm test`:
   weight: 3,
   phrases: ['without further ado'],
   repeat: 'once',
-  position: 'opening', // optional: first/last TWO non-empty lines
+  position: 'opening', // optional: first TWO non-empty lines
 }
 ```
 
@@ -42,7 +44,9 @@ its square root. Alternatives at the same start count once (longest wins),
 and overlapping occurrences within one rule are greedily collapsed. Different
 rules may overlap. Display snippets stop at three, but ALL phrase spans feed
 the sentence coverage calculation. `opening`/`closing` requires the whole span
-to lie in the first/last two non-empty lines, including hashtag footer lines.
+to lie in the first two non-empty lines / last two prose lines. Closing rules
+skip trailing hashtag and emoji-only lines. Closing regex `$` anchors run on
+that prose prefix, with offsets preserved into the complete display text.
 Built-in greeting/CTA rules add sentence or line anchors, because the line
 window alone cannot distinguish the ends of a one-paragraph post.
 
@@ -50,8 +54,9 @@ For non-literal patterns, use `patterns: ['\\bfoo\\s+bar\\b']` in TypeScript.
 Regex sources use `gi`, as specified in the contract, and do not get automatic
 boundaries. `\b` is ASCII; use literals when Unicode word boundaries matter.
 Regexes run against a precomputed straight-quote text of identical length, so
-quote classes and snippets keep correct offsets. Non-capturing groups join one
-candidate scanner; sticky per-source checks preserve overlapping rule hits.
+quote classes and snippets keep correct offsets. Non-capturing groups join two
+bounded candidate batches (full text and closing prose); sticky per-source checks
+preserve overlapping rule hits.
 Captures and backreferences use isolated matchers so group numbers stay local.
 Avoid nullable patterns (rejected), nested quantifiers, unbounded backreference
 patterns, and broad `.*` chains. Contribution code is trusted, not sandboxed.
@@ -61,10 +66,10 @@ Base weights are evidence strengths, not percentages:
 | Weight | Appropriate use |
 | --- | --- |
 | 1–1.5 | Common professional vocabulary; weak corroboration |
-| 2–3 | A recognizable phrase or density-gated vocabulary cluster |
+| 2–3 | A recognizable phrase or vocabulary cluster |
 | 4–6 | A specific discourse construction or conspicuous formatting skeleton |
 | 7–8 | Assistant boilerplate or reasoning scaffolding |
-| 10–14 | Explicit model disclaimer, placeholder, citation token, or bypass pattern |
+| 10–14 | Direct model disclaimer, assistant preamble or distinctive generation artifact |
 
 Avoid duplicate IDs or counting identical evidence under several new rules.
 Common technical words are weak; secondary/tertiary word lists need clusters.
@@ -83,34 +88,47 @@ to their instance; contributed functions remain responsible for their state.
 
 # Scoring and the Shame gate
 
-Scoring uses strength-weighted sentence coverage, blended with tells per 100
-words, then family caps and a saturating curve. See the documented formula in
-`../score.ts`. Normalize density **before** capping so duplicating equally
-dense paragraphs does not change a 100-word result into a 300-word false clean.
-The raw evidence entering the final curve is capped by these shared buckets:
+Evidence adds up without dividing by post length. Rules apply their declared
+`once`, `each`, or `sqrt` repeat behavior. Competing rules describing the same
+lexical occurrence contribute once; a stronger collocation replaces its
+contained vocabulary tell. A grammatical contrast may also provide independent
+construction evidence. Quoted and fenced code examples do not become evidence
+that the surrounding author is speaking as a chatbot.
 
-| Bucket | Cap | Families |
-| --- | --- | --- |
-| Phrases/vocabulary | 24 | ai-vocabulary, template-phrases, inflation, hedging |
-| Discourse | 12 | negation-pivot, engagement-bait, repeated rule-of-three |
-| Formatting | 8 | formatting, including fake bold and em dash corroboration |
-| Rhythm | 8 | remaining robotic-rhythm rules |
-| Fingerprints | Exempt | chatbot-leak, bypass-tricks |
+`score.ts` applies category caps and a saturating curve:
+`100 * (1 - exp(-evidence / K))`. The scale is editorial, not an authorship
+probability. Category caps are vocabulary 20, template phrases 20, contrasts 16,
+inflation 16, hedging 12, engagement 16, formatting 12, rhythm 8, chatbot 20,
+and bypass typography 8. Three or more distinct phrase-evidence categories earn
+one corroboration point per category beyond two, capped at two extra points.
+This bonus is distributed proportionally across the visible phrase signals.
+`weight` and `categoryWeights` report counted contributions, including that
+corroboration, after occurrence, category, and style limits. K remains 12;
+short-post K and lower style ceilings were tested and rejected on dev gates.
 
-Signal `weight` and `categoryWeights` expose the actual apportioned, capped
-contribution before the final curve, not uncapped dictionary counts. An em dash
-needs another positive phrase/discourse family and contributes at most two.
-There are no positive low-TTR, entropy/perplexity, missing-contraction, or
-formal-grammar rules. Rhythm needs at least 80 words and 4+ sentences; current
-uniformity uses six sentences for additional caution. Human broetry is not a
-rule. Mathematical fake bold is moderate formatting evidence, not a fingerprint.
+Rule `evidence` can be `phrase`, `style`, or `fingerprint`. Formatting, rhythm,
+and bypass categories default to style; other categories default to phrase.
+Repeated labels, generic greetings, tracking URLs and unusual characters are
+style evidence. Explicit unfinished slots and unrendered Markdown are phrase
+evidence in the new `pasted-output` pack. Prompt-framework labels, explicit
+assistant deliverables and live-browsing disclaimers can opt into fingerprint.
+Ordinary editing offers remain weak phrase evidence. Direct model identity,
+assistant revision preambles and distinctive generation artifacts retain their
+fingerprint floor.
+A high rule weight or repetition never changes that classification.
 
-`shameable` is true only when score >=40, wordCount >=40, AND a signal from
-ai-vocabulary, template-phrases, chatbot-leak, negation-pivot, inflation, hedging,
-or engagement-bait fired. Style-only results and short posts cannot enable
-Shame. Bodies below eight words return a clean report. Author headlines do not
-contribute. These are comedy-oriented heuristic tells, not a probability or
-proof of authorship.
+Style-only evidence tops out at 39 and cannot permit Shame. A weak phrase cannot
+unlock arbitrary formatting points: style can contribute only as much as its
+independent phrase support, or retain its own bounded style index, whichever
+is higher. Em dashes and list cadence need phrase support. Vocabulary clusters
+use counts, not whole-document percentages; ordinary appended prose cannot
+erase an existing tell. All matching is local and dependency-free.
+
+Ordinary `shameable` requires score >=40, >=40 words and at least four counted
+phrase-evidence points. An explicit fingerprint has a score floor of 80 and
+permits Shame from eight words. Shorter text still retains its evidence and
+score. Empty bodies and author headlines add no evidence. These heuristic
+signals identify AI-like slop; a low score never establishes human authorship.
 
 # Upstream coverage
 
@@ -129,8 +147,10 @@ mixed-script words and repeated invisible characters inside Latin words. Emoji
 ZWJ sequences and pure non-Latin writing are not bypass evidence.
 Homoglyph fingerprints additionally require mostly Latin prose and a mostly
 Latin word with an internal script substitution; bilingual suffixes are skipped.
-Only specific identity placeholders get a fingerprint weight. Generic editing
-notes such as `[insert link in comments]` are weak assistant-formatting evidence.
+Unfinished slots such as `[Company]`, `[link]`, `{name}` and `<insert company>`
+are strong draft-residue evidence (8 points), without an automatic fingerprint
+floor. This includes `[insert link in comments]`: an unfinished draft is the
+owner's explicit round-two target. Quoted or fenced examples remain protected.
 
 # Testing and calibration
 
@@ -138,13 +158,23 @@ Add positive and innocent-negative examples to `tests/unit/engine/packs.test.ts`
 Add realistic posts under `tests/fixtures/posts/`, with fields `{ id, text,
 authorship: 'human'|'ai'|'mixed', synthetic: true, expectTier, hashtags?,
 authorHeadline? }`. `expectTier` is one tier or adjacent acceptable tiers.
-Every human example must stay <=whiff and `shameable:false`; preserve formal
-non-native prose, casual em-dash usage, and human broetry as guardrails.
+Human controls must stay <=whiff and `shameable:false`; preserve formal
+non-native prose, casual em-dash usage, and human broetry as guardrails. The
+historical synthetic `human-editor-note` is explicitly an unfinished draft,
+now checked for visible slot evidence rather than treated as a clean negative.
 
 The synthetic labels describe the intended writing style, **not independently
 verified provenance**. High tier-calibration accuracy here is not real-world
 AI detection accuracy. Lightly edited AI may score low; that is preferable to
 accusing human writers. Keep tier sets editorial and fixed before scoring.
+The independent `adversarial-realism.json` holdout and the orchestrator probes
+have `evaluation` labels and are excluded from that calibration percentage.
+Holdout recall is printed separately. All 85 fixtures are evaluated before and
+after in `tests/unit/engine/RECALL_REPORT.md` and `recall-before-after.json`.
+Regenerate those artifacts by setting `SLOP_BASELINE_ENGINE` to a frozen old
+`index.ts` path and optionally `SLOP_BASELINE_REVISION`, then running
+`pnpm exec vitest run tests/unit/engine/recall-report.test.ts --silent=false`.
+The report generator is skipped during ordinary unit runs.
 
 `pnpm test` exercises context, compiler, every pack, contributor errors, the
 full corpus, caps/gating, and 2,000 posts of 50–400 words. Budget: <0.5ms/post

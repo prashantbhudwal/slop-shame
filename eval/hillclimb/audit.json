@@ -1,0 +1,19 @@
+{
+  "completed": "2026-10-21T07:53:01.425591+00:00",
+  "existingEngineFilesChanged": [],
+  "proposalRegistered": false,
+  "scratchCopiesRemaining": 0,
+  "harnessTestsPassed": 5,
+  "noTaskProcessesRemain": true,
+  "prior": {
+    "presentAtCompletion": true,
+    "usedForFittingOrSelection": false,
+    "reason": "Absent at fitting and pre-final checks; arrived after candidate freeze. Do not reopen selection.",
+    "sha256": "235513f320a0741e31db25c18b1685d5ace09a9dca80ebb81c4b3f03968439e9",
+    "rows": 8806,
+    "coverage": {
+      "unavailable": 6011,
+      "exact": 2795
+    }
+  }
+}

@@ -140,3 +140,10 @@ Final engine run:
 
 The orchestrator owns those integration fixes, updating `INTENTIONS.md`, and
 committing the reviewed implementation.
+
+
+## Follow-up: recall repairs
+
+This initial report describes the committed first-pass engine. The current
+recall repairs, policy changes, every-fixture before/after table, challenge-set
+limitations, and latest verification are in [RECALL_REPORT.md](./RECALL_REPORT.md).

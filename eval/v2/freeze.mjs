@@ -1,0 +1,3 @@
+import{resolve}from'node:path';import{existsSync,cpSync,readFileSync}from'node:fs';import{ROOT,CACHE,OUT,engine,json,save,digest,hash}from'./common.mjs';
+if(existsSync(resolve(OUT,'frozen.json')))throw Error('Already frozen');if(!json(resolve(OUT,'matcher-parity.json')).pass)throw Error('Matcher parity failed');
+cpSync(engine,resolve(CACHE,'engine-final'),{recursive:true});save(resolve(OUT,'frozen.json'),{engineHash:digest(engine),round2Hash:digest(resolve(CACHE,'engine-r2')),created:new Date().toISOString(),threshold:json(resolve(OUT,'threshold.json')),fitHash:hash(readFileSync(resolve(OUT,'fit.json'))),evaluationPolicy:'One final evaluation and baseline, including all predeclared ablations; no selection on final results.'});

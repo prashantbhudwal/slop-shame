@@ -1,0 +1,5 @@
+{
+  "devPublicVsCachedScoreMismatches": 0,
+  "threshold40Mismatches": 0,
+  "note": "Public API predictions are authoritative; cached binary/span search is validated on baseline and final threshold decisions."
+}

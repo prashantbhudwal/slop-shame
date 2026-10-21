@@ -1,0 +1,8442 @@
+{
+  "version": 1,
+  "csvSha256": "c5467bca6fc7f5c728c676450c7f84ce401df6c6ccc6d82c47e3b5f3c6d6fce4",
+  "split": "sha256(slop-hillclimb-v1:source_id)[0:16] modulo 100; 60/20/20",
+  "sample": "lowest sha256(sample-v1:id) per domain/model/decoding/penalty, 200 train / 75 dev,test; base 12 informational",
+  "excludedExternalIds": 1280,
+  "excludedExternalSources": 649,
+  "excludedRows": 22581,
+  "splits": {
+    "train": {
+      "count": 35966,
+      "labels": {
+        "chat": 28800,
+        "human": 7166
+      },
+      "sha256": "4ce51a65a5a1823587b643bd1209e0a1fc5641cfa38a5fd1fc0a5182f22d38fc",
+      "sources": 7663
+    },
+    "dev": {
+      "count": 14690,
+      "labels": {
+        "chat": 10800,
+        "base": 1536,
+        "human": 2354
+      },
+      "sha256": "1bfee384a122da663d5206863b01830ac867f5fa23cce6514227974eab376805",
+      "sources": 2530
+    },
+    "test": {
+      "count": 14678,
+      "labels": {
+        "chat": 10800,
+        "base": 1536,
+        "human": 2342
+      },
+      "sha256": "f00f7f7bdf4adf4ea69b8af26f70a5299cc3eace6913561ba07ef7cd949e65fe",
+      "sources": 2521
+    }
+  },
+  "eligibleStrata": [
+    {
+      "key": [
+        "dev",
+        "abstracts",
+        "chatgpt",
+        "greedy",
+        "no"
+      ],
+      "n": 304
+    },
+    {
+      "key": [
+        "dev",
+        "abstracts",
+        "chatgpt",
+        "sampling",
+        "no"
+      ],
+      "n": 304
+    },
+    {
+      "key": [
+        "dev",
+        "abstracts",
+        "cohere",
+        "greedy",
+        "no"
+      ],
+      "n": 303
+    },
+    {
+      "key": [
+        "dev",
+        "abstracts",
+        "cohere",
+        "sampling",
+        "no"
+      ],
+      "n": 303
+    },
+    {
+      "key": [
+        "dev",
+        "abstracts",
+        "cohere-chat",
+        "greedy",
+        "no"
+      ],
+      "n": 302
+    },
+    {
+      "key": [
+        "dev",
+        "abstracts",
+        "cohere-chat",
+        "sampling",
+        "no"
+      ],
+      "n": 301
+    },
+    {
+      "key": [
+        "dev",
+        "abstracts",
+        "gpt2",
+        "greedy",
+        "no"
+      ],
+      "n": 304
+    },
+    {
+      "key": [
+        "dev",
+        "abstracts",
+        "gpt2",
+        "greedy",
+        "yes"
+      ],
+      "n": 304
+    },
+    {
+      "key": [
+        "dev",
+        "abstracts",
+        "gpt2",
+        "sampling",
+        "no"
+      ],
+      "n": 301
+    },
+    {
+      "key": [
+        "dev",
+        "abstracts",
+        "gpt2",
+        "sampling",
+        "yes"
+      ],
+      "n": 296
+    },
+    {
+      "key": [
+        "dev",
+        "abstracts",
+        "gpt3",
+        "greedy",
+        "no"
+      ],
+      "n": 301
+    },
+    {
+      "key": [
+        "dev",
+        "abstracts",
+        "gpt3",
+        "sampling",
+        "no"
+      ],
+      "n": 300
+    },
+    {
+      "key": [
+        "dev",
+        "abstracts",
+        "gpt4",
+        "greedy",
+        "no"
+      ],
+      "n": 304
+    },
+    {
+      "key": [
+        "dev",
+        "abstracts",
+        "gpt4",
+        "sampling",
+        "no"
+      ],
+      "n": 304
+    },
+    {
+      "key": [
+        "dev",
+        "abstracts",
+        "human",
+        "",
+        ""
+      ],
+      "n": 304
+    },
+    {
+      "key": [
+        "dev",
+        "abstracts",
+        "llama-chat",
+        "greedy",
+        "no"
+      ],
+      "n": 304
+    },
+    {
+      "key": [
+        "dev",
+        "abstracts",
+        "llama-chat",
+        "greedy",
+        "yes"
+      ],
+      "n": 304
+    },
+    {
+      "key": [
+        "dev",
+        "abstracts",
+        "llama-chat",
+        "sampling",
+        "no"
+      ],
+      "n": 304
+    },
+    {
+      "key": [
+        "dev",
+        "abstracts",
+        "llama-chat",
+        "sampling",
+        "yes"
+      ],
+      "n": 304
+    },
+    {
+      "key": [
+        "dev",
+        "abstracts",
+        "mistral",
+        "greedy",
+        "no"
+      ],
+      "n": 304
+    },
+    {
+      "key": [
+        "dev",
+        "abstracts",
+        "mistral",
+        "greedy",
+        "yes"
+      ],
+      "n": 304
+    },
+    {
+      "key": [
+        "dev",
+        "abstracts",
+        "mistral",
+        "sampling",
+        "no"
+      ],
+      "n": 304
+    },
+    {
+      "key": [
+        "dev",
+        "abstracts",
+        "mistral",
+        "sampling",
+        "yes"
+      ],
+      "n": 304
+    },
+    {
+      "key": [
+        "dev",
+        "abstracts",
+        "mistral-chat",
+        "greedy",
+        "no"
+      ],
+      "n": 304
+    },
+    {
+      "key": [
+        "dev",
+        "abstracts",
+        "mistral-chat",
+        "greedy",
+        "yes"
+      ],
+      "n": 304
+    },
+    {
+      "key": [
+        "dev",
+        "abstracts",
+        "mistral-chat",
+        "sampling",
+        "no"
+      ],
+      "n": 303
+    },
+    {
+      "key": [
+        "dev",
+        "abstracts",
+        "mistral-chat",
+        "sampling",
+        "yes"
+      ],
+      "n": 301
+    },
+    {
+      "key": [
+        "dev",
+        "abstracts",
+        "mpt",
+        "greedy",
+        "no"
+      ],
+      "n": 303
+    },
+    {
+      "key": [
+        "dev",
+        "abstracts",
+        "mpt",
+        "greedy",
+        "yes"
+      ],
+      "n": 303
+    },
+    {
+      "key": [
+        "dev",
+        "abstracts",
+        "mpt",
+        "sampling",
+        "no"
+      ],
+      "n": 303
+    },
+    {
+      "key": [
+        "dev",
+        "abstracts",
+        "mpt",
+        "sampling",
+        "yes"
+      ],
+      "n": 288
+    },
+    {
+      "key": [
+        "dev",
+        "abstracts",
+        "mpt-chat",
+        "greedy",
+        "no"
+      ],
+      "n": 303
+    },
+    {
+      "key": [
+        "dev",
+        "abstracts",
+        "mpt-chat",
+        "greedy",
+        "yes"
+      ],
+      "n": 304
+    },
+    {
+      "key": [
+        "dev",
+        "abstracts",
+        "mpt-chat",
+        "sampling",
+        "no"
+      ],
+      "n": 304
+    },
+    {
+      "key": [
+        "dev",
+        "abstracts",
+        "mpt-chat",
+        "sampling",
+        "yes"
+      ],
+      "n": 303
+    },
+    {
+      "key": [
+        "dev",
+        "books",
+        "chatgpt",
+        "greedy",
+        "no"
+      ],
+      "n": 325
+    },
+    {
+      "key": [
+        "dev",
+        "books",
+        "chatgpt",
+        "sampling",
+        "no"
+      ],
+      "n": 325
+    },
+    {
+      "key": [
+        "dev",
+        "books",
+        "cohere",
+        "greedy",
+        "no"
+      ],
+      "n": 325
+    },
+    {
+      "key": [
+        "dev",
+        "books",
+        "cohere",
+        "sampling",
+        "no"
+      ],
+      "n": 325
+    },
+    {
+      "key": [
+        "dev",
+        "books",
+        "cohere-chat",
+        "greedy",
+        "no"
+      ],
+      "n": 323
+    },
+    {
+      "key": [
+        "dev",
+        "books",
+        "cohere-chat",
+        "sampling",
+        "no"
+      ],
+      "n": 322
+    },
+    {
+      "key": [
+        "dev",
+        "books",
+        "gpt2",
+        "greedy",
+        "no"
+      ],
+      "n": 325
+    },
+    {
+      "key": [
+        "dev",
+        "books",
+        "gpt2",
+        "greedy",
+        "yes"
+      ],
+      "n": 325
+    },
+    {
+      "key": [
+        "dev",
+        "books",
+        "gpt2",
+        "sampling",
+        "no"
+      ],
+      "n": 323
+    },
+    {
+      "key": [
+        "dev",
+        "books",
+        "gpt2",
+        "sampling",
+        "yes"
+      ],
+      "n": 320
+    },
+    {
+      "key": [
+        "dev",
+        "books",
+        "gpt3",
+        "greedy",
+        "no"
+      ],
+      "n": 325
+    },
+    {
+      "key": [
+        "dev",
+        "books",
+        "gpt3",
+        "sampling",
+        "no"
+      ],
+      "n": 325
+    },
+    {
+      "key": [
+        "dev",
+        "books",
+        "gpt4",
+        "greedy",
+        "no"
+      ],
+      "n": 325
+    },
+    {
+      "key": [
+        "dev",
+        "books",
+        "gpt4",
+        "sampling",
+        "no"
+      ],
+      "n": 325
+    },
+    {
+      "key": [
+        "dev",
+        "books",
+        "human",
+        "",
+        ""
+      ],
+      "n": 257
+    },
+    {
+      "key": [
+        "dev",
+        "books",
+        "llama-chat",
+        "greedy",
+        "no"
+      ],
+      "n": 325
+    },
+    {
+      "key": [
+        "dev",
+        "books",
+        "llama-chat",
+        "greedy",
+        "yes"
+      ],
+      "n": 325
+    },
+    {
+      "key": [
+        "dev",
+        "books",
+        "llama-chat",
+        "sampling",
+        "no"
+      ],
+      "n": 325
+    },
+    {
+      "key": [
+        "dev",
+        "books",
+        "llama-chat",
+        "sampling",
+        "yes"
+      ],
+      "n": 325
+    },
+    {
+      "key": [
+        "dev",
+        "books",
+        "mistral",
+        "greedy",
+        "no"
+      ],
+      "n": 325
+    },
+    {
+      "key": [
+        "dev",
+        "books",
+        "mistral",
+        "greedy",
+        "yes"
+      ],
+      "n": 325
+    },
+    {
+      "key": [
+        "dev",
+        "books",
+        "mistral",
+        "sampling",
+        "no"
+      ],
+      "n": 325
+    },
+    {
+      "key": [
+        "dev",
+        "books",
+        "mistral",
+        "sampling",
+        "yes"
+      ],
+      "n": 325
+    },
+    {
+      "key": [
+        "dev",
+        "books",
+        "mistral-chat",
+        "greedy",
+        "no"
+      ],
+      "n": 325
+    },
+    {
+      "key": [
+        "dev",
+        "books",
+        "mistral-chat",
+        "greedy",
+        "yes"
+      ],
+      "n": 325
+    },
+    {
+      "key": [
+        "dev",
+        "books",
+        "mistral-chat",
+        "sampling",
+        "no"
+      ],
+      "n": 325
+    },
+    {
+      "key": [
+        "dev",
+        "books",
+        "mistral-chat",
+        "sampling",
+        "yes"
+      ],
+      "n": 325
+    },
+    {
+      "key": [
+        "dev",
+        "books",
+        "mpt",
+        "greedy",
+        "no"
+      ],
+      "n": 325
+    },
+    {
+      "key": [
+        "dev",
+        "books",
+        "mpt",
+        "greedy",
+        "yes"
+      ],
+      "n": 323
+    },
+    {
+      "key": [
+        "dev",
+        "books",
+        "mpt",
+        "sampling",
+        "no"
+      ],
+      "n": 325
+    },
+    {
+      "key": [
+        "dev",
+        "books",
+        "mpt",
+        "sampling",
+        "yes"
+      ],
+      "n": 312
+    },
+    {
+      "key": [
+        "dev",
+        "books",
+        "mpt-chat",
+        "greedy",
+        "no"
+      ],
+      "n": 325
+    },
+    {
+      "key": [
+        "dev",
+        "books",
+        "mpt-chat",
+        "greedy",
+        "yes"
+      ],
+      "n": 325
+    },
+    {
+      "key": [
+        "dev",
+        "books",
+        "mpt-chat",
+        "sampling",
+        "no"
+      ],
+      "n": 325
+    },
+    {
+      "key": [
+        "dev",
+        "books",
+        "mpt-chat",
+        "sampling",
+        "yes"
+      ],
+      "n": 325
+    },
+    {
+      "key": [
+        "dev",
+        "news",
+        "chatgpt",
+        "greedy",
+        "no"
+      ],
+      "n": 365
+    },
+    {
+      "key": [
+        "dev",
+        "news",
+        "chatgpt",
+        "sampling",
+        "no"
+      ],
+      "n": 365
+    },
+    {
+      "key": [
+        "dev",
+        "news",
+        "cohere",
+        "greedy",
+        "no"
+      ],
+      "n": 365
+    },
+    {
+      "key": [
+        "dev",
+        "news",
+        "cohere",
+        "sampling",
+        "no"
+      ],
+      "n": 365
+    },
+    {
+      "key": [
+        "dev",
+        "news",
+        "cohere-chat",
+        "greedy",
+        "no"
+      ],
+      "n": 365
+    },
+    {
+      "key": [
+        "dev",
+        "news",
+        "cohere-chat",
+        "sampling",
+        "no"
+      ],
+      "n": 365
+    },
+    {
+      "key": [
+        "dev",
+        "news",
+        "gpt2",
+        "greedy",
+        "no"
+      ],
+      "n": 365
+    },
+    {
+      "key": [
+        "dev",
+        "news",
+        "gpt2",
+        "greedy",
+        "yes"
+      ],
+      "n": 364
+    },
+    {
+      "key": [
+        "dev",
+        "news",
+        "gpt2",
+        "sampling",
+        "no"
+      ],
+      "n": 365
+    },
+    {
+      "key": [
+        "dev",
+        "news",
+        "gpt2",
+        "sampling",
+        "yes"
+      ],
+      "n": 363
+    },
+    {
+      "key": [
+        "dev",
+        "news",
+        "gpt3",
+        "greedy",
+        "no"
+      ],
+      "n": 365
+    },
+    {
+      "key": [
+        "dev",
+        "news",
+        "gpt3",
+        "sampling",
+        "no"
+      ],
+      "n": 364
+    },
+    {
+      "key": [
+        "dev",
+        "news",
+        "gpt4",
+        "greedy",
+        "no"
+      ],
+      "n": 365
+    },
+    {
+      "key": [
+        "dev",
+        "news",
+        "gpt4",
+        "sampling",
+        "no"
+      ],
+      "n": 365
+    },
+    {
+      "key": [
+        "dev",
+        "news",
+        "human",
+        "",
+        ""
+      ],
+      "n": 332
+    },
+    {
+      "key": [
+        "dev",
+        "news",
+        "llama-chat",
+        "greedy",
+        "no"
+      ],
+      "n": 365
+    },
+    {
+      "key": [
+        "dev",
+        "news",
+        "llama-chat",
+        "greedy",
+        "yes"
+      ],
+      "n": 365
+    },
+    {
+      "key": [
+        "dev",
+        "news",
+        "llama-chat",
+        "sampling",
+        "no"
+      ],
+      "n": 365
+    },
+    {
+      "key": [
+        "dev",
+        "news",
+        "llama-chat",
+        "sampling",
+        "yes"
+      ],
+      "n": 365
+    },
+    {
+      "key": [
+        "dev",
+        "news",
+        "mistral",
+        "greedy",
+        "no"
+      ],
+      "n": 365
+    },
+    {
+      "key": [
+        "dev",
+        "news",
+        "mistral",
+        "greedy",
+        "yes"
+      ],
+      "n": 365
+    },
+    {
+      "key": [
+        "dev",
+        "news",
+        "mistral",
+        "sampling",
+        "no"
+      ],
+      "n": 365
+    },
+    {
+      "key": [
+        "dev",
+        "news",
+        "mistral",
+        "sampling",
+        "yes"
+      ],
+      "n": 365
+    },
+    {
+      "key": [
+        "dev",
+        "news",
+        "mistral-chat",
+        "greedy",
+        "no"
+      ],
+      "n": 365
+    },
+    {
+      "key": [
+        "dev",
+        "news",
+        "mistral-chat",
+        "greedy",
+        "yes"
+      ],
+      "n": 365
+    },
+    {
+      "key": [
+        "dev",
+        "news",
+        "mistral-chat",
+        "sampling",
+        "no"
+      ],
+      "n": 363
+    },
+    {
+      "key": [
+        "dev",
+        "news",
+        "mistral-chat",
+        "sampling",
+        "yes"
+      ],
+      "n": 362
+    },
+    {
+      "key": [
+        "dev",
+        "news",
+        "mpt",
+        "greedy",
+        "no"
+      ],
+      "n": 365
+    },
+    {
+      "key": [
+        "dev",
+        "news",
+        "mpt",
+        "greedy",
+        "yes"
+      ],
+      "n": 337
+    },
+    {
+      "key": [
+        "dev",
+        "news",
+        "mpt",
+        "sampling",
+        "no"
+      ],
+      "n": 364
+    },
+    {
+      "key": [
+        "dev",
+        "news",
+        "mpt",
+        "sampling",
+        "yes"
+      ],
+      "n": 335
+    },
+    {
+      "key": [
+        "dev",
+        "news",
+        "mpt-chat",
+        "greedy",
+        "no"
+      ],
+      "n": 365
+    },
+    {
+      "key": [
+        "dev",
+        "news",
+        "mpt-chat",
+        "greedy",
+        "yes"
+      ],
+      "n": 365
+    },
+    {
+      "key": [
+        "dev",
+        "news",
+        "mpt-chat",
+        "sampling",
+        "no"
+      ],
+      "n": 364
+    },
+    {
+      "key": [
+        "dev",
+        "news",
+        "mpt-chat",
+        "sampling",
+        "yes"
+      ],
+      "n": 364
+    },
+    {
+      "key": [
+        "dev",
+        "poetry",
+        "chatgpt",
+        "greedy",
+        "no"
+      ],
+      "n": 331
+    },
+    {
+      "key": [
+        "dev",
+        "poetry",
+        "chatgpt",
+        "sampling",
+        "no"
+      ],
+      "n": 331
+    },
+    {
+      "key": [
+        "dev",
+        "poetry",
+        "cohere",
+        "greedy",
+        "no"
+      ],
+      "n": 331
+    },
+    {
+      "key": [
+        "dev",
+        "poetry",
+        "cohere",
+        "sampling",
+        "no"
+      ],
+      "n": 329
+    },
+    {
+      "key": [
+        "dev",
+        "poetry",
+        "cohere-chat",
+        "greedy",
+        "no"
+      ],
+      "n": 331
+    },
+    {
+      "key": [
+        "dev",
+        "poetry",
+        "cohere-chat",
+        "sampling",
+        "no"
+      ],
+      "n": 330
+    },
+    {
+      "key": [
+        "dev",
+        "poetry",
+        "gpt2",
+        "greedy",
+        "no"
+      ],
+      "n": 331
+    },
+    {
+      "key": [
+        "dev",
+        "poetry",
+        "gpt2",
+        "greedy",
+        "yes"
+      ],
+      "n": 331
+    },
+    {
+      "key": [
+        "dev",
+        "poetry",
+        "gpt2",
+        "sampling",
+        "no"
+      ],
+      "n": 329
+    },
+    {
+      "key": [
+        "dev",
+        "poetry",
+        "gpt2",
+        "sampling",
+        "yes"
+      ],
+      "n": 324
+    },
+    {
+      "key": [
+        "dev",
+        "poetry",
+        "gpt3",
+        "greedy",
+        "no"
+      ],
+      "n": 316
+    },
+    {
+      "key": [
+        "dev",
+        "poetry",
+        "gpt3",
+        "sampling",
+        "no"
+      ],
+      "n": 315
+    },
+    {
+      "key": [
+        "dev",
+        "poetry",
+        "gpt4",
+        "greedy",
+        "no"
+      ],
+      "n": 331
+    },
+    {
+      "key": [
+        "dev",
+        "poetry",
+        "gpt4",
+        "sampling",
+        "no"
+      ],
+      "n": 331
+    },
+    {
+      "key": [
+        "dev",
+        "poetry",
+        "human",
+        "",
+        ""
+      ],
+      "n": 303
+    },
+    {
+      "key": [
+        "dev",
+        "poetry",
+        "llama-chat",
+        "greedy",
+        "no"
+      ],
+      "n": 331
+    },
+    {
+      "key": [
+        "dev",
+        "poetry",
+        "llama-chat",
+        "greedy",
+        "yes"
+      ],
+      "n": 331
+    },
+    {
+      "key": [
+        "dev",
+        "poetry",
+        "llama-chat",
+        "sampling",
+        "no"
+      ],
+      "n": 331
+    },
+    {
+      "key": [
+        "dev",
+        "poetry",
+        "llama-chat",
+        "sampling",
+        "yes"
+      ],
+      "n": 331
+    },
+    {
+      "key": [
+        "dev",
+        "poetry",
+        "mistral",
+        "greedy",
+        "no"
+      ],
+      "n": 331
+    },
+    {
+      "key": [
+        "dev",
+        "poetry",
+        "mistral",
+        "greedy",
+        "yes"
+      ],
+      "n": 331
+    },
+    {
+      "key": [
+        "dev",
+        "poetry",
+        "mistral",
+        "sampling",
+        "no"
+      ],
+      "n": 331
+    },
+    {
+      "key": [
+        "dev",
+        "poetry",
+        "mistral",
+        "sampling",
+        "yes"
+      ],
+      "n": 331
+    },
+    {
+      "key": [
+        "dev",
+        "poetry",
+        "mistral-chat",
+        "greedy",
+        "no"
+      ],
+      "n": 331
+    },
+    {
+      "key": [
+        "dev",
+        "poetry",
+        "mistral-chat",
+        "greedy",
+        "yes"
+      ],
+      "n": 331
+    },
+    {
+      "key": [
+        "dev",
+        "poetry",
+        "mistral-chat",
+        "sampling",
+        "no"
+      ],
+      "n": 330
+    },
+    {
+      "key": [
+        "dev",
+        "poetry",
+        "mistral-chat",
+        "sampling",
+        "yes"
+      ],
+      "n": 330
+    },
+    {
+      "key": [
+        "dev",
+        "poetry",
+        "mpt",
+        "greedy",
+        "no"
+      ],
+      "n": 331
+    },
+    {
+      "key": [
+        "dev",
+        "poetry",
+        "mpt",
+        "greedy",
+        "yes"
+      ],
+      "n": 319
+    },
+    {
+      "key": [
+        "dev",
+        "poetry",
+        "mpt",
+        "sampling",
+        "no"
+      ],
+      "n": 331
+    },
+    {
+      "key": [
+        "dev",
+        "poetry",
+        "mpt",
+        "sampling",
+        "yes"
+      ],
+      "n": 315
+    },
+    {
+      "key": [
+        "dev",
+        "poetry",
+        "mpt-chat",
+        "greedy",
+        "no"
+      ],
+      "n": 331
+    },
+    {
+      "key": [
+        "dev",
+        "poetry",
+        "mpt-chat",
+        "greedy",
+        "yes"
+      ],
+      "n": 327
+    },
+    {
+      "key": [
+        "dev",
+        "poetry",
+        "mpt-chat",
+        "sampling",
+        "no"
+      ],
+      "n": 331
+    },
+    {
+      "key": [
+        "dev",
+        "poetry",
+        "mpt-chat",
+        "sampling",
+        "yes"
+      ],
+      "n": 323
+    },
+    {
+      "key": [
+        "dev",
+        "recipes",
+        "chatgpt",
+        "greedy",
+        "no"
+      ],
+      "n": 358
+    },
+    {
+      "key": [
+        "dev",
+        "recipes",
+        "chatgpt",
+        "sampling",
+        "no"
+      ],
+      "n": 358
+    },
+    {
+      "key": [
+        "dev",
+        "recipes",
+        "cohere",
+        "greedy",
+        "no"
+      ],
+      "n": 357
+    },
+    {
+      "key": [
+        "dev",
+        "recipes",
+        "cohere",
+        "sampling",
+        "no"
+      ],
+      "n": 358
+    },
+    {
+      "key": [
+        "dev",
+        "recipes",
+        "cohere-chat",
+        "greedy",
+        "no"
+      ],
+      "n": 358
+    },
+    {
+      "key": [
+        "dev",
+        "recipes",
+        "cohere-chat",
+        "sampling",
+        "no"
+      ],
+      "n": 358
+    },
+    {
+      "key": [
+        "dev",
+        "recipes",
+        "gpt2",
+        "greedy",
+        "no"
+      ],
+      "n": 358
+    },
+    {
+      "key": [
+        "dev",
+        "recipes",
+        "gpt2",
+        "greedy",
+        "yes"
+      ],
+      "n": 358
+    },
+    {
+      "key": [
+        "dev",
+        "recipes",
+        "gpt2",
+        "sampling",
+        "no"
+      ],
+      "n": 357
+    },
+    {
+      "key": [
+        "dev",
+        "recipes",
+        "gpt2",
+        "sampling",
+        "yes"
+      ],
+      "n": 351
+    },
+    {
+      "key": [
+        "dev",
+        "recipes",
+        "gpt3",
+        "greedy",
+        "no"
+      ],
+      "n": 358
+    },
+    {
+      "key": [
+        "dev",
+        "recipes",
+        "gpt3",
+        "sampling",
+        "no"
+      ],
+      "n": 358
+    },
+    {
+      "key": [
+        "dev",
+        "recipes",
+        "gpt4",
+        "greedy",
+        "no"
+      ],
+      "n": 358
+    },
+    {
+      "key": [
+        "dev",
+        "recipes",
+        "gpt4",
+        "sampling",
+        "no"
+      ],
+      "n": 358
+    },
+    {
+      "key": [
+        "dev",
+        "recipes",
+        "human",
+        "",
+        ""
+      ],
+      "n": 353
+    },
+    {
+      "key": [
+        "dev",
+        "recipes",
+        "llama-chat",
+        "greedy",
+        "no"
+      ],
+      "n": 358
+    },
+    {
+      "key": [
+        "dev",
+        "recipes",
+        "llama-chat",
+        "greedy",
+        "yes"
+      ],
+      "n": 358
+    },
+    {
+      "key": [
+        "dev",
+        "recipes",
+        "llama-chat",
+        "sampling",
+        "no"
+      ],
+      "n": 358
+    },
+    {
+      "key": [
+        "dev",
+        "recipes",
+        "llama-chat",
+        "sampling",
+        "yes"
+      ],
+      "n": 358
+    },
+    {
+      "key": [
+        "dev",
+        "recipes",
+        "mistral",
+        "greedy",
+        "no"
+      ],
+      "n": 358
+    },
+    {
+      "key": [
+        "dev",
+        "recipes",
+        "mistral",
+        "greedy",
+        "yes"
+      ],
+      "n": 358
+    },
+    {
+      "key": [
+        "dev",
+        "recipes",
+        "mistral",
+        "sampling",
+        "no"
+      ],
+      "n": 358
+    },
+    {
+      "key": [
+        "dev",
+        "recipes",
+        "mistral",
+        "sampling",
+        "yes"
+      ],
+      "n": 358
+    },
+    {
+      "key": [
+        "dev",
+        "recipes",
+        "mistral-chat",
+        "greedy",
+        "no"
+      ],
+      "n": 358
+    },
+    {
+      "key": [
+        "dev",
+        "recipes",
+        "mistral-chat",
+        "greedy",
+        "yes"
+      ],
+      "n": 358
+    },
+    {
+      "key": [
+        "dev",
+        "recipes",
+        "mistral-chat",
+        "sampling",
+        "no"
+      ],
+      "n": 357
+    },
+    {
+      "key": [
+        "dev",
+        "recipes",
+        "mistral-chat",
+        "sampling",
+        "yes"
+      ],
+      "n": 358
+    },
+    {
+      "key": [
+        "dev",
+        "recipes",
+        "mpt",
+        "greedy",
+        "no"
+      ],
+      "n": 358
+    },
+    {
+      "key": [
+        "dev",
+        "recipes",
+        "mpt",
+        "greedy",
+        "yes"
+      ],
+      "n": 353
+    },
+    {
+      "key": [
+        "dev",
+        "recipes",
+        "mpt",
+        "sampling",
+        "no"
+      ],
+      "n": 358
+    },
+    {
+      "key": [
+        "dev",
+        "recipes",
+        "mpt",
+        "sampling",
+        "yes"
+      ],
+      "n": 352
+    },
+    {
+      "key": [
+        "dev",
+        "recipes",
+        "mpt-chat",
+        "greedy",
+        "no"
+      ],
+      "n": 358
+    },
+    {
+      "key": [
+        "dev",
+        "recipes",
+        "mpt-chat",
+        "greedy",
+        "yes"
+      ],
+      "n": 357
+    },
+    {
+      "key": [
+        "dev",
+        "recipes",
+        "mpt-chat",
+        "sampling",
+        "no"
+      ],
+      "n": 358
+    },
+    {
+      "key": [
+        "dev",
+        "recipes",
+        "mpt-chat",
+        "sampling",
+        "yes"
+      ],
+      "n": 356
+    },
+    {
+      "key": [
+        "dev",
+        "reddit",
+        "chatgpt",
+        "greedy",
+        "no"
+      ],
+      "n": 341
+    },
+    {
+      "key": [
+        "dev",
+        "reddit",
+        "chatgpt",
+        "sampling",
+        "no"
+      ],
+      "n": 341
+    },
+    {
+      "key": [
+        "dev",
+        "reddit",
+        "cohere",
+        "greedy",
+        "no"
+      ],
+      "n": 335
+    },
+    {
+      "key": [
+        "dev",
+        "reddit",
+        "cohere",
+        "sampling",
+        "no"
+      ],
+      "n": 336
+    },
+    {
+      "key": [
+        "dev",
+        "reddit",
+        "cohere-chat",
+        "greedy",
+        "no"
+      ],
+      "n": 335
+    },
+    {
+      "key": [
+        "dev",
+        "reddit",
+        "cohere-chat",
+        "sampling",
+        "no"
+      ],
+      "n": 335
+    },
+    {
+      "key": [
+        "dev",
+        "reddit",
+        "gpt2",
+        "greedy",
+        "no"
+      ],
+      "n": 342
+    },
+    {
+      "key": [
+        "dev",
+        "reddit",
+        "gpt2",
+        "greedy",
+        "yes"
+      ],
+      "n": 342
+    },
+    {
+      "key": [
+        "dev",
+        "reddit",
+        "gpt2",
+        "sampling",
+        "no"
+      ],
+      "n": 342
+    },
+    {
+      "key": [
+        "dev",
+        "reddit",
+        "gpt2",
+        "sampling",
+        "yes"
+      ],
+      "n": 339
+    },
+    {
+      "key": [
+        "dev",
+        "reddit",
+        "gpt3",
+        "greedy",
+        "no"
+      ],
+      "n": 319
+    },
+    {
+      "key": [
+        "dev",
+        "reddit",
+        "gpt3",
+        "sampling",
+        "no"
+      ],
+      "n": 329
+    },
+    {
+      "key": [
+        "dev",
+        "reddit",
+        "gpt4",
+        "greedy",
+        "no"
+      ],
+      "n": 339
+    },
+    {
+      "key": [
+        "dev",
+        "reddit",
+        "gpt4",
+        "sampling",
+        "no"
+      ],
+      "n": 340
+    },
+    {
+      "key": [
+        "dev",
+        "reddit",
+        "human",
+        "",
+        ""
+      ],
+      "n": 341
+    },
+    {
+      "key": [
+        "dev",
+        "reddit",
+        "llama-chat",
+        "greedy",
+        "no"
+      ],
+      "n": 342
+    },
+    {
+      "key": [
+        "dev",
+        "reddit",
+        "llama-chat",
+        "greedy",
+        "yes"
+      ],
+      "n": 342
+    },
+    {
+      "key": [
+        "dev",
+        "reddit",
+        "llama-chat",
+        "sampling",
+        "no"
+      ],
+      "n": 342
+    },
+    {
+      "key": [
+        "dev",
+        "reddit",
+        "llama-chat",
+        "sampling",
+        "yes"
+      ],
+      "n": 342
+    },
+    {
+      "key": [
+        "dev",
+        "reddit",
+        "mistral",
+        "greedy",
+        "no"
+      ],
+      "n": 342
+    },
+    {
+      "key": [
+        "dev",
+        "reddit",
+        "mistral",
+        "greedy",
+        "yes"
+      ],
+      "n": 342
+    },
+    {
+      "key": [
+        "dev",
+        "reddit",
+        "mistral",
+        "sampling",
+        "no"
+      ],
+      "n": 342
+    },
+    {
+      "key": [
+        "dev",
+        "reddit",
+        "mistral",
+        "sampling",
+        "yes"
+      ],
+      "n": 342
+    },
+    {
+      "key": [
+        "dev",
+        "reddit",
+        "mistral-chat",
+        "greedy",
+        "no"
+      ],
+      "n": 337
+    },
+    {
+      "key": [
+        "dev",
+        "reddit",
+        "mistral-chat",
+        "greedy",
+        "yes"
+      ],
+      "n": 340
+    },
+    {
+      "key": [
+        "dev",
+        "reddit",
+        "mistral-chat",
+        "sampling",
+        "no"
+      ],
+      "n": 339
+    },
+    {
+      "key": [
+        "dev",
+        "reddit",
+        "mistral-chat",
+        "sampling",
+        "yes"
+      ],
+      "n": 337
+    },
+    {
+      "key": [
+        "dev",
+        "reddit",
+        "mpt",
+        "greedy",
+        "no"
+      ],
+      "n": 342
+    },
+    {
+      "key": [
+        "dev",
+        "reddit",
+        "mpt",
+        "greedy",
+        "yes"
+      ],
+      "n": 339
+    },
+    {
+      "key": [
+        "dev",
+        "reddit",
+        "mpt",
+        "sampling",
+        "no"
+      ],
+      "n": 342
+    },
+    {
+      "key": [
+        "dev",
+        "reddit",
+        "mpt",
+        "sampling",
+        "yes"
+      ],
+      "n": 318
+    },
+    {
+      "key": [
+        "dev",
+        "reddit",
+        "mpt-chat",
+        "greedy",
+        "no"
+      ],
+      "n": 327
+    },
+    {
+      "key": [
+        "dev",
+        "reddit",
+        "mpt-chat",
+        "greedy",
+        "yes"
+      ],
+      "n": 334
+    },
+    {
+      "key": [
+        "dev",
+        "reddit",
+        "mpt-chat",
+        "sampling",
+        "no"
+      ],
+      "n": 325
+    },
+    {
+      "key": [
+        "dev",
+        "reddit",
+        "mpt-chat",
+        "sampling",
+        "yes"
+      ],
+      "n": 329
+    },
+    {
+      "key": [
+        "dev",
+        "reviews",
+        "chatgpt",
+        "greedy",
+        "no"
+      ],
+      "n": 192
+    },
+    {
+      "key": [
+        "dev",
+        "reviews",
+        "chatgpt",
+        "sampling",
+        "no"
+      ],
+      "n": 192
+    },
+    {
+      "key": [
+        "dev",
+        "reviews",
+        "cohere",
+        "greedy",
+        "no"
+      ],
+      "n": 192
+    },
+    {
+      "key": [
+        "dev",
+        "reviews",
+        "cohere",
+        "sampling",
+        "no"
+      ],
+      "n": 192
+    },
+    {
+      "key": [
+        "dev",
+        "reviews",
+        "cohere-chat",
+        "greedy",
+        "no"
+      ],
+      "n": 192
+    },
+    {
+      "key": [
+        "dev",
+        "reviews",
+        "cohere-chat",
+        "sampling",
+        "no"
+      ],
+      "n": 192
+    },
+    {
+      "key": [
+        "dev",
+        "reviews",
+        "gpt2",
+        "greedy",
+        "no"
+      ],
+      "n": 192
+    },
+    {
+      "key": [
+        "dev",
+        "reviews",
+        "gpt2",
+        "greedy",
+        "yes"
+      ],
+      "n": 192
+    },
+    {
+      "key": [
+        "dev",
+        "reviews",
+        "gpt2",
+        "sampling",
+        "no"
+      ],
+      "n": 191
+    },
+    {
+      "key": [
+        "dev",
+        "reviews",
+        "gpt2",
+        "sampling",
+        "yes"
+      ],
+      "n": 187
+    },
+    {
+      "key": [
+        "dev",
+        "reviews",
+        "gpt3",
+        "greedy",
+        "no"
+      ],
+      "n": 191
+    },
+    {
+      "key": [
+        "dev",
+        "reviews",
+        "gpt3",
+        "sampling",
+        "no"
+      ],
+      "n": 190
+    },
+    {
+      "key": [
+        "dev",
+        "reviews",
+        "gpt4",
+        "greedy",
+        "no"
+      ],
+      "n": 192
+    },
+    {
+      "key": [
+        "dev",
+        "reviews",
+        "gpt4",
+        "sampling",
+        "no"
+      ],
+      "n": 192
+    },
+    {
+      "key": [
+        "dev",
+        "reviews",
+        "human",
+        "",
+        ""
+      ],
+      "n": 151
+    },
+    {
+      "key": [
+        "dev",
+        "reviews",
+        "llama-chat",
+        "greedy",
+        "no"
+      ],
+      "n": 192
+    },
+    {
+      "key": [
+        "dev",
+        "reviews",
+        "llama-chat",
+        "greedy",
+        "yes"
+      ],
+      "n": 192
+    },
+    {
+      "key": [
+        "dev",
+        "reviews",
+        "llama-chat",
+        "sampling",
+        "no"
+      ],
+      "n": 192
+    },
+    {
+      "key": [
+        "dev",
+        "reviews",
+        "llama-chat",
+        "sampling",
+        "yes"
+      ],
+      "n": 192
+    },
+    {
+      "key": [
+        "dev",
+        "reviews",
+        "mistral",
+        "greedy",
+        "no"
+      ],
+      "n": 192
+    },
+    {
+      "key": [
+        "dev",
+        "reviews",
+        "mistral",
+        "greedy",
+        "yes"
+      ],
+      "n": 192
+    },
+    {
+      "key": [
+        "dev",
+        "reviews",
+        "mistral",
+        "sampling",
+        "no"
+      ],
+      "n": 192
+    },
+    {
+      "key": [
+        "dev",
+        "reviews",
+        "mistral",
+        "sampling",
+        "yes"
+      ],
+      "n": 192
+    },
+    {
+      "key": [
+        "dev",
+        "reviews",
+        "mistral-chat",
+        "greedy",
+        "no"
+      ],
+      "n": 192
+    },
+    {
+      "key": [
+        "dev",
+        "reviews",
+        "mistral-chat",
+        "greedy",
+        "yes"
+      ],
+      "n": 192
+    },
+    {
+      "key": [
+        "dev",
+        "reviews",
+        "mistral-chat",
+        "sampling",
+        "no"
+      ],
+      "n": 192
+    },
+    {
+      "key": [
+        "dev",
+        "reviews",
+        "mistral-chat",
+        "sampling",
+        "yes"
+      ],
+      "n": 192
+    },
+    {
+      "key": [
+        "dev",
+        "reviews",
+        "mpt",
+        "greedy",
+        "no"
+      ],
+      "n": 192
+    },
+    {
+      "key": [
+        "dev",
+        "reviews",
+        "mpt",
+        "greedy",
+        "yes"
+      ],
+      "n": 192
+    },
+    {
+      "key": [
+        "dev",
+        "reviews",
+        "mpt",
+        "sampling",
+        "no"
+      ],
+      "n": 191
+    },
+    {
+      "key": [
+        "dev",
+        "reviews",
+        "mpt",
+        "sampling",
+        "yes"
+      ],
+      "n": 176
+    },
+    {
+      "key": [
+        "dev",
+        "reviews",
+        "mpt-chat",
+        "greedy",
+        "no"
+      ],
+      "n": 192
+    },
+    {
+      "key": [
+        "dev",
+        "reviews",
+        "mpt-chat",
+        "greedy",
+        "yes"
+      ],
+      "n": 192
+    },
+    {
+      "key": [
+        "dev",
+        "reviews",
+        "mpt-chat",
+        "sampling",
+        "no"
+      ],
+      "n": 192
+    },
+    {
+      "key": [
+        "dev",
+        "reviews",
+        "mpt-chat",
+        "sampling",
+        "yes"
+      ],
+      "n": 192
+    },
+    {
+      "key": [
+        "dev",
+        "wiki",
+        "chatgpt",
+        "greedy",
+        "no"
+      ],
+      "n": 313
+    },
+    {
+      "key": [
+        "dev",
+        "wiki",
+        "chatgpt",
+        "sampling",
+        "no"
+      ],
+      "n": 312
+    },
+    {
+      "key": [
+        "dev",
+        "wiki",
+        "cohere",
+        "greedy",
+        "no"
+      ],
+      "n": 313
+    },
+    {
+      "key": [
+        "dev",
+        "wiki",
+        "cohere",
+        "sampling",
+        "no"
+      ],
+      "n": 313
+    },
+    {
+      "key": [
+        "dev",
+        "wiki",
+        "cohere-chat",
+        "greedy",
+        "no"
+      ],
+      "n": 313
+    },
+    {
+      "key": [
+        "dev",
+        "wiki",
+        "cohere-chat",
+        "sampling",
+        "no"
+      ],
+      "n": 312
+    },
+    {
+      "key": [
+        "dev",
+        "wiki",
+        "gpt2",
+        "greedy",
+        "no"
+      ],
+      "n": 313
+    },
+    {
+      "key": [
+        "dev",
+        "wiki",
+        "gpt2",
+        "greedy",
+        "yes"
+      ],
+      "n": 313
+    },
+    {
+      "key": [
+        "dev",
+        "wiki",
+        "gpt2",
+        "sampling",
+        "no"
+      ],
+      "n": 312
+    },
+    {
+      "key": [
+        "dev",
+        "wiki",
+        "gpt2",
+        "sampling",
+        "yes"
+      ],
+      "n": 308
+    },
+    {
+      "key": [
+        "dev",
+        "wiki",
+        "gpt3",
+        "greedy",
+        "no"
+      ],
+      "n": 311
+    },
+    {
+      "key": [
+        "dev",
+        "wiki",
+        "gpt3",
+        "sampling",
+        "no"
+      ],
+      "n": 311
+    },
+    {
+      "key": [
+        "dev",
+        "wiki",
+        "gpt4",
+        "greedy",
+        "no"
+      ],
+      "n": 313
+    },
+    {
+      "key": [
+        "dev",
+        "wiki",
+        "gpt4",
+        "sampling",
+        "no"
+      ],
+      "n": 313
+    },
+    {
+      "key": [
+        "dev",
+        "wiki",
+        "human",
+        "",
+        ""
+      ],
+      "n": 313
+    },
+    {
+      "key": [
+        "dev",
+        "wiki",
+        "llama-chat",
+        "greedy",
+        "no"
+      ],
+      "n": 313
+    },
+    {
+      "key": [
+        "dev",
+        "wiki",
+        "llama-chat",
+        "greedy",
+        "yes"
+      ],
+      "n": 313
+    },
+    {
+      "key": [
+        "dev",
+        "wiki",
+        "llama-chat",
+        "sampling",
+        "no"
+      ],
+      "n": 313
+    },
+    {
+      "key": [
+        "dev",
+        "wiki",
+        "llama-chat",
+        "sampling",
+        "yes"
+      ],
+      "n": 313
+    },
+    {
+      "key": [
+        "dev",
+        "wiki",
+        "mistral",
+        "greedy",
+        "no"
+      ],
+      "n": 313
+    },
+    {
+      "key": [
+        "dev",
+        "wiki",
+        "mistral",
+        "greedy",
+        "yes"
+      ],
+      "n": 313
+    },
+    {
+      "key": [
+        "dev",
+        "wiki",
+        "mistral",
+        "sampling",
+        "no"
+      ],
+      "n": 313
+    },
+    {
+      "key": [
+        "dev",
+        "wiki",
+        "mistral",
+        "sampling",
+        "yes"
+      ],
+      "n": 313
+    },
+    {
+      "key": [
+        "dev",
+        "wiki",
+        "mistral-chat",
+        "greedy",
+        "no"
+      ],
+      "n": 313
+    },
+    {
+      "key": [
+        "dev",
+        "wiki",
+        "mistral-chat",
+        "greedy",
+        "yes"
+      ],
+      "n": 312
+    },
+    {
+      "key": [
+        "dev",
+        "wiki",
+        "mistral-chat",
+        "sampling",
+        "no"
+      ],
+      "n": 311
+    },
+    {
+      "key": [
+        "dev",
+        "wiki",
+        "mistral-chat",
+        "sampling",
+        "yes"
+      ],
+      "n": 313
+    },
+    {
+      "key": [
+        "dev",
+        "wiki",
+        "mpt",
+        "greedy",
+        "no"
+      ],
+      "n": 313
+    },
+    {
+      "key": [
+        "dev",
+        "wiki",
+        "mpt",
+        "greedy",
+        "yes"
+      ],
+      "n": 303
+    },
+    {
+      "key": [
+        "dev",
+        "wiki",
+        "mpt",
+        "sampling",
+        "no"
+      ],
+      "n": 313
+    },
+    {
+      "key": [
+        "dev",
+        "wiki",
+        "mpt",
+        "sampling",
+        "yes"
+      ],
+      "n": 287
+    },
+    {
+      "key": [
+        "dev",
+        "wiki",
+        "mpt-chat",
+        "greedy",
+        "no"
+      ],
+      "n": 313
+    },
+    {
+      "key": [
+        "dev",
+        "wiki",
+        "mpt-chat",
+        "greedy",
+        "yes"
+      ],
+      "n": 313
+    },
+    {
+      "key": [
+        "dev",
+        "wiki",
+        "mpt-chat",
+        "sampling",
+        "no"
+      ],
+      "n": 313
+    },
+    {
+      "key": [
+        "dev",
+        "wiki",
+        "mpt-chat",
+        "sampling",
+        "yes"
+      ],
+      "n": 313
+    },
+    {
+      "key": [
+        "test",
+        "abstracts",
+        "chatgpt",
+        "greedy",
+        "no"
+      ],
+      "n": 344
+    },
+    {
+      "key": [
+        "test",
+        "abstracts",
+        "chatgpt",
+        "sampling",
+        "no"
+      ],
+      "n": 344
+    },
+    {
+      "key": [
+        "test",
+        "abstracts",
+        "cohere",
+        "greedy",
+        "no"
+      ],
+      "n": 343
+    },
+    {
+      "key": [
+        "test",
+        "abstracts",
+        "cohere",
+        "sampling",
+        "no"
+      ],
+      "n": 343
+    },
+    {
+      "key": [
+        "test",
+        "abstracts",
+        "cohere-chat",
+        "greedy",
+        "no"
+      ],
+      "n": 343
+    },
+    {
+      "key": [
+        "test",
+        "abstracts",
+        "cohere-chat",
+        "sampling",
+        "no"
+      ],
+      "n": 344
+    },
+    {
+      "key": [
+        "test",
+        "abstracts",
+        "gpt2",
+        "greedy",
+        "no"
+      ],
+      "n": 344
+    },
+    {
+      "key": [
+        "test",
+        "abstracts",
+        "gpt2",
+        "greedy",
+        "yes"
+      ],
+      "n": 344
+    },
+    {
+      "key": [
+        "test",
+        "abstracts",
+        "gpt2",
+        "sampling",
+        "no"
+      ],
+      "n": 344
+    },
+    {
+      "key": [
+        "test",
+        "abstracts",
+        "gpt2",
+        "sampling",
+        "yes"
+      ],
+      "n": 336
+    },
+    {
+      "key": [
+        "test",
+        "abstracts",
+        "gpt3",
+        "greedy",
+        "no"
+      ],
+      "n": 343
+    },
+    {
+      "key": [
+        "test",
+        "abstracts",
+        "gpt3",
+        "sampling",
+        "no"
+      ],
+      "n": 343
+    },
+    {
+      "key": [
+        "test",
+        "abstracts",
+        "gpt4",
+        "greedy",
+        "no"
+      ],
+      "n": 344
+    },
+    {
+      "key": [
+        "test",
+        "abstracts",
+        "gpt4",
+        "sampling",
+        "no"
+      ],
+      "n": 344
+    },
+    {
+      "key": [
+        "test",
+        "abstracts",
+        "human",
+        "",
+        ""
+      ],
+      "n": 344
+    },
+    {
+      "key": [
+        "test",
+        "abstracts",
+        "llama-chat",
+        "greedy",
+        "no"
+      ],
+      "n": 344
+    },
+    {
+      "key": [
+        "test",
+        "abstracts",
+        "llama-chat",
+        "greedy",
+        "yes"
+      ],
+      "n": 344
+    },
+    {
+      "key": [
+        "test",
+        "abstracts",
+        "llama-chat",
+        "sampling",
+        "no"
+      ],
+      "n": 344
+    },
+    {
+      "key": [
+        "test",
+        "abstracts",
+        "llama-chat",
+        "sampling",
+        "yes"
+      ],
+      "n": 344
+    },
+    {
+      "key": [
+        "test",
+        "abstracts",
+        "mistral",
+        "greedy",
+        "no"
+      ],
+      "n": 344
+    },
+    {
+      "key": [
+        "test",
+        "abstracts",
+        "mistral",
+        "greedy",
+        "yes"
+      ],
+      "n": 344
+    },
+    {
+      "key": [
+        "test",
+        "abstracts",
+        "mistral",
+        "sampling",
+        "no"
+      ],
+      "n": 343
+    },
+    {
+      "key": [
+        "test",
+        "abstracts",
+        "mistral",
+        "sampling",
+        "yes"
+      ],
+      "n": 342
+    },
+    {
+      "key": [
+        "test",
+        "abstracts",
+        "mistral-chat",
+        "greedy",
+        "no"
+      ],
+      "n": 344
+    },
+    {
+      "key": [
+        "test",
+        "abstracts",
+        "mistral-chat",
+        "greedy",
+        "yes"
+      ],
+      "n": 344
+    },
+    {
+      "key": [
+        "test",
+        "abstracts",
+        "mistral-chat",
+        "sampling",
+        "no"
+      ],
+      "n": 344
+    },
+    {
+      "key": [
+        "test",
+        "abstracts",
+        "mistral-chat",
+        "sampling",
+        "yes"
+      ],
+      "n": 341
+    },
+    {
+      "key": [
+        "test",
+        "abstracts",
+        "mpt",
+        "greedy",
+        "no"
+      ],
+      "n": 344
+    },
+    {
+      "key": [
+        "test",
+        "abstracts",
+        "mpt",
+        "greedy",
+        "yes"
+      ],
+      "n": 340
+    },
+    {
+      "key": [
+        "test",
+        "abstracts",
+        "mpt",
+        "sampling",
+        "no"
+      ],
+      "n": 342
+    },
+    {
+      "key": [
+        "test",
+        "abstracts",
+        "mpt",
+        "sampling",
+        "yes"
+      ],
+      "n": 328
+    },
+    {
+      "key": [
+        "test",
+        "abstracts",
+        "mpt-chat",
+        "greedy",
+        "no"
+      ],
+      "n": 344
+    },
+    {
+      "key": [
+        "test",
+        "abstracts",
+        "mpt-chat",
+        "greedy",
+        "yes"
+      ],
+      "n": 344
+    },
+    {
+      "key": [
+        "test",
+        "abstracts",
+        "mpt-chat",
+        "sampling",
+        "no"
+      ],
+      "n": 344
+    },
+    {
+      "key": [
+        "test",
+        "abstracts",
+        "mpt-chat",
+        "sampling",
+        "yes"
+      ],
+      "n": 341
+    },
+    {
+      "key": [
+        "test",
+        "books",
+        "chatgpt",
+        "greedy",
+        "no"
+      ],
+      "n": 335
+    },
+    {
+      "key": [
+        "test",
+        "books",
+        "chatgpt",
+        "sampling",
+        "no"
+      ],
+      "n": 335
+    },
+    {
+      "key": [
+        "test",
+        "books",
+        "cohere",
+        "greedy",
+        "no"
+      ],
+      "n": 335
+    },
+    {
+      "key": [
+        "test",
+        "books",
+        "cohere",
+        "sampling",
+        "no"
+      ],
+      "n": 334
+    },
+    {
+      "key": [
+        "test",
+        "books",
+        "cohere-chat",
+        "greedy",
+        "no"
+      ],
+      "n": 335
+    },
+    {
+      "key": [
+        "test",
+        "books",
+        "cohere-chat",
+        "sampling",
+        "no"
+      ],
+      "n": 335
+    },
+    {
+      "key": [
+        "test",
+        "books",
+        "gpt2",
+        "greedy",
+        "no"
+      ],
+      "n": 335
+    },
+    {
+      "key": [
+        "test",
+        "books",
+        "gpt2",
+        "greedy",
+        "yes"
+      ],
+      "n": 335
+    },
+    {
+      "key": [
+        "test",
+        "books",
+        "gpt2",
+        "sampling",
+        "no"
+      ],
+      "n": 332
+    },
+    {
+      "key": [
+        "test",
+        "books",
+        "gpt2",
+        "sampling",
+        "yes"
+      ],
+      "n": 330
+    },
+    {
+      "key": [
+        "test",
+        "books",
+        "gpt3",
+        "greedy",
+        "no"
+      ],
+      "n": 335
+    },
+    {
+      "key": [
+        "test",
+        "books",
+        "gpt3",
+        "sampling",
+        "no"
+      ],
+      "n": 335
+    },
+    {
+      "key": [
+        "test",
+        "books",
+        "gpt4",
+        "greedy",
+        "no"
+      ],
+      "n": 335
+    },
+    {
+      "key": [
+        "test",
+        "books",
+        "gpt4",
+        "sampling",
+        "no"
+      ],
+      "n": 335
+    },
+    {
+      "key": [
+        "test",
+        "books",
+        "human",
+        "",
+        ""
+      ],
+      "n": 264
+    },
+    {
+      "key": [
+        "test",
+        "books",
+        "llama-chat",
+        "greedy",
+        "no"
+      ],
+      "n": 335
+    },
+    {
+      "key": [
+        "test",
+        "books",
+        "llama-chat",
+        "greedy",
+        "yes"
+      ],
+      "n": 335
+    },
+    {
+      "key": [
+        "test",
+        "books",
+        "llama-chat",
+        "sampling",
+        "no"
+      ],
+      "n": 335
+    },
+    {
+      "key": [
+        "test",
+        "books",
+        "llama-chat",
+        "sampling",
+        "yes"
+      ],
+      "n": 335
+    },
+    {
+      "key": [
+        "test",
+        "books",
+        "mistral",
+        "greedy",
+        "no"
+      ],
+      "n": 335
+    },
+    {
+      "key": [
+        "test",
+        "books",
+        "mistral",
+        "greedy",
+        "yes"
+      ],
+      "n": 335
+    },
+    {
+      "key": [
+        "test",
+        "books",
+        "mistral",
+        "sampling",
+        "no"
+      ],
+      "n": 335
+    },
+    {
+      "key": [
+        "test",
+        "books",
+        "mistral",
+        "sampling",
+        "yes"
+      ],
+      "n": 335
+    },
+    {
+      "key": [
+        "test",
+        "books",
+        "mistral-chat",
+        "greedy",
+        "no"
+      ],
+      "n": 335
+    },
+    {
+      "key": [
+        "test",
+        "books",
+        "mistral-chat",
+        "greedy",
+        "yes"
+      ],
+      "n": 335
+    },
+    {
+      "key": [
+        "test",
+        "books",
+        "mistral-chat",
+        "sampling",
+        "no"
+      ],
+      "n": 335
+    },
+    {
+      "key": [
+        "test",
+        "books",
+        "mistral-chat",
+        "sampling",
+        "yes"
+      ],
+      "n": 335
+    },
+    {
+      "key": [
+        "test",
+        "books",
+        "mpt",
+        "greedy",
+        "no"
+      ],
+      "n": 335
+    },
+    {
+      "key": [
+        "test",
+        "books",
+        "mpt",
+        "greedy",
+        "yes"
+      ],
+      "n": 335
+    },
+    {
+      "key": [
+        "test",
+        "books",
+        "mpt",
+        "sampling",
+        "no"
+      ],
+      "n": 334
+    },
+    {
+      "key": [
+        "test",
+        "books",
+        "mpt",
+        "sampling",
+        "yes"
+      ],
+      "n": 323
+    },
+    {
+      "key": [
+        "test",
+        "books",
+        "mpt-chat",
+        "greedy",
+        "no"
+      ],
+      "n": 335
+    },
+    {
+      "key": [
+        "test",
+        "books",
+        "mpt-chat",
+        "greedy",
+        "yes"
+      ],
+      "n": 335
+    },
+    {
+      "key": [
+        "test",
+        "books",
+        "mpt-chat",
+        "sampling",
+        "no"
+      ],
+      "n": 335
+    },
+    {
+      "key": [
+        "test",
+        "books",
+        "mpt-chat",
+        "sampling",
+        "yes"
+      ],
+      "n": 335
+    },
+    {
+      "key": [
+        "test",
+        "news",
+        "chatgpt",
+        "greedy",
+        "no"
+      ],
+      "n": 339
+    },
+    {
+      "key": [
+        "test",
+        "news",
+        "chatgpt",
+        "sampling",
+        "no"
+      ],
+      "n": 339
+    },
+    {
+      "key": [
+        "test",
+        "news",
+        "cohere",
+        "greedy",
+        "no"
+      ],
+      "n": 339
+    },
+    {
+      "key": [
+        "test",
+        "news",
+        "cohere",
+        "sampling",
+        "no"
+      ],
+      "n": 339
+    },
+    {
+      "key": [
+        "test",
+        "news",
+        "cohere-chat",
+        "greedy",
+        "no"
+      ],
+      "n": 339
+    },
+    {
+      "key": [
+        "test",
+        "news",
+        "cohere-chat",
+        "sampling",
+        "no"
+      ],
+      "n": 339
+    },
+    {
+      "key": [
+        "test",
+        "news",
+        "gpt2",
+        "greedy",
+        "no"
+      ],
+      "n": 339
+    },
+    {
+      "key": [
+        "test",
+        "news",
+        "gpt2",
+        "greedy",
+        "yes"
+      ],
+      "n": 339
+    },
+    {
+      "key": [
+        "test",
+        "news",
+        "gpt2",
+        "sampling",
+        "no"
+      ],
+      "n": 338
+    },
+    {
+      "key": [
+        "test",
+        "news",
+        "gpt2",
+        "sampling",
+        "yes"
+      ],
+      "n": 336
+    },
+    {
+      "key": [
+        "test",
+        "news",
+        "gpt3",
+        "greedy",
+        "no"
+      ],
+      "n": 339
+    },
+    {
+      "key": [
+        "test",
+        "news",
+        "gpt3",
+        "sampling",
+        "no"
+      ],
+      "n": 339
+    },
+    {
+      "key": [
+        "test",
+        "news",
+        "gpt4",
+        "greedy",
+        "no"
+      ],
+      "n": 339
+    },
+    {
+      "key": [
+        "test",
+        "news",
+        "gpt4",
+        "sampling",
+        "no"
+      ],
+      "n": 339
+    },
+    {
+      "key": [
+        "test",
+        "news",
+        "human",
+        "",
+        ""
+      ],
+      "n": 299
+    },
+    {
+      "key": [
+        "test",
+        "news",
+        "llama-chat",
+        "greedy",
+        "no"
+      ],
+      "n": 339
+    },
+    {
+      "key": [
+        "test",
+        "news",
+        "llama-chat",
+        "greedy",
+        "yes"
+      ],
+      "n": 339
+    },
+    {
+      "key": [
+        "test",
+        "news",
+        "llama-chat",
+        "sampling",
+        "no"
+      ],
+      "n": 339
+    },
+    {
+      "key": [
+        "test",
+        "news",
+        "llama-chat",
+        "sampling",
+        "yes"
+      ],
+      "n": 339
+    },
+    {
+      "key": [
+        "test",
+        "news",
+        "mistral",
+        "greedy",
+        "no"
+      ],
+      "n": 339
+    },
+    {
+      "key": [
+        "test",
+        "news",
+        "mistral",
+        "greedy",
+        "yes"
+      ],
+      "n": 339
+    },
+    {
+      "key": [
+        "test",
+        "news",
+        "mistral",
+        "sampling",
+        "no"
+      ],
+      "n": 339
+    },
+    {
+      "key": [
+        "test",
+        "news",
+        "mistral",
+        "sampling",
+        "yes"
+      ],
+      "n": 339
+    },
+    {
+      "key": [
+        "test",
+        "news",
+        "mistral-chat",
+        "greedy",
+        "no"
+      ],
+      "n": 339
+    },
+    {
+      "key": [
+        "test",
+        "news",
+        "mistral-chat",
+        "greedy",
+        "yes"
+      ],
+      "n": 339
+    },
+    {
+      "key": [
+        "test",
+        "news",
+        "mistral-chat",
+        "sampling",
+        "no"
+      ],
+      "n": 338
+    },
+    {
+      "key": [
+        "test",
+        "news",
+        "mistral-chat",
+        "sampling",
+        "yes"
+      ],
+      "n": 334
+    },
+    {
+      "key": [
+        "test",
+        "news",
+        "mpt",
+        "greedy",
+        "no"
+      ],
+      "n": 339
+    },
+    {
+      "key": [
+        "test",
+        "news",
+        "mpt",
+        "greedy",
+        "yes"
+      ],
+      "n": 310
+    },
+    {
+      "key": [
+        "test",
+        "news",
+        "mpt",
+        "sampling",
+        "no"
+      ],
+      "n": 339
+    },
+    {
+      "key": [
+        "test",
+        "news",
+        "mpt",
+        "sampling",
+        "yes"
+      ],
+      "n": 308
+    },
+    {
+      "key": [
+        "test",
+        "news",
+        "mpt-chat",
+        "greedy",
+        "no"
+      ],
+      "n": 339
+    },
+    {
+      "key": [
+        "test",
+        "news",
+        "mpt-chat",
+        "greedy",
+        "yes"
+      ],
+      "n": 339
+    },
+    {
+      "key": [
+        "test",
+        "news",
+        "mpt-chat",
+        "sampling",
+        "no"
+      ],
+      "n": 339
+    },
+    {
+      "key": [
+        "test",
+        "news",
+        "mpt-chat",
+        "sampling",
+        "yes"
+      ],
+      "n": 338
+    },
+    {
+      "key": [
+        "test",
+        "poetry",
+        "chatgpt",
+        "greedy",
+        "no"
+      ],
+      "n": 350
+    },
+    {
+      "key": [
+        "test",
+        "poetry",
+        "chatgpt",
+        "sampling",
+        "no"
+      ],
+      "n": 350
+    },
+    {
+      "key": [
+        "test",
+        "poetry",
+        "cohere",
+        "greedy",
+        "no"
+      ],
+      "n": 348
+    },
+    {
+      "key": [
+        "test",
+        "poetry",
+        "cohere",
+        "sampling",
+        "no"
+      ],
+      "n": 349
+    },
+    {
+      "key": [
+        "test",
+        "poetry",
+        "cohere-chat",
+        "greedy",
+        "no"
+      ],
+      "n": 349
+    },
+    {
+      "key": [
+        "test",
+        "poetry",
+        "cohere-chat",
+        "sampling",
+        "no"
+      ],
+      "n": 350
+    },
+    {
+      "key": [
+        "test",
+        "poetry",
+        "gpt2",
+        "greedy",
+        "no"
+      ],
+      "n": 350
+    },
+    {
+      "key": [
+        "test",
+        "poetry",
+        "gpt2",
+        "greedy",
+        "yes"
+      ],
+      "n": 350
+    },
+    {
+      "key": [
+        "test",
+        "poetry",
+        "gpt2",
+        "sampling",
+        "no"
+      ],
+      "n": 350
+    },
+    {
+      "key": [
+        "test",
+        "poetry",
+        "gpt2",
+        "sampling",
+        "yes"
+      ],
+      "n": 347
+    },
+    {
+      "key": [
+        "test",
+        "poetry",
+        "gpt3",
+        "greedy",
+        "no"
+      ],
+      "n": 339
+    },
+    {
+      "key": [
+        "test",
+        "poetry",
+        "gpt3",
+        "sampling",
+        "no"
+      ],
+      "n": 336
+    },
+    {
+      "key": [
+        "test",
+        "poetry",
+        "gpt4",
+        "greedy",
+        "no"
+      ],
+      "n": 350
+    },
+    {
+      "key": [
+        "test",
+        "poetry",
+        "gpt4",
+        "sampling",
+        "no"
+      ],
+      "n": 350
+    },
+    {
+      "key": [
+        "test",
+        "poetry",
+        "human",
+        "",
+        ""
+      ],
+      "n": 321
+    },
+    {
+      "key": [
+        "test",
+        "poetry",
+        "llama-chat",
+        "greedy",
+        "no"
+      ],
+      "n": 350
+    },
+    {
+      "key": [
+        "test",
+        "poetry",
+        "llama-chat",
+        "greedy",
+        "yes"
+      ],
+      "n": 350
+    },
+    {
+      "key": [
+        "test",
+        "poetry",
+        "llama-chat",
+        "sampling",
+        "no"
+      ],
+      "n": 350
+    },
+    {
+      "key": [
+        "test",
+        "poetry",
+        "llama-chat",
+        "sampling",
+        "yes"
+      ],
+      "n": 350
+    },
+    {
+      "key": [
+        "test",
+        "poetry",
+        "mistral",
+        "greedy",
+        "no"
+      ],
+      "n": 350
+    },
+    {
+      "key": [
+        "test",
+        "poetry",
+        "mistral",
+        "greedy",
+        "yes"
+      ],
+      "n": 350
+    },
+    {
+      "key": [
+        "test",
+        "poetry",
+        "mistral",
+        "sampling",
+        "no"
+      ],
+      "n": 350
+    },
+    {
+      "key": [
+        "test",
+        "poetry",
+        "mistral",
+        "sampling",
+        "yes"
+      ],
+      "n": 350
+    },
+    {
+      "key": [
+        "test",
+        "poetry",
+        "mistral-chat",
+        "greedy",
+        "no"
+      ],
+      "n": 350
+    },
+    {
+      "key": [
+        "test",
+        "poetry",
+        "mistral-chat",
+        "greedy",
+        "yes"
+      ],
+      "n": 350
+    },
+    {
+      "key": [
+        "test",
+        "poetry",
+        "mistral-chat",
+        "sampling",
+        "no"
+      ],
+      "n": 349
+    },
+    {
+      "key": [
+        "test",
+        "poetry",
+        "mistral-chat",
+        "sampling",
+        "yes"
+      ],
+      "n": 348
+    },
+    {
+      "key": [
+        "test",
+        "poetry",
+        "mpt",
+        "greedy",
+        "no"
+      ],
+      "n": 350
+    },
+    {
+      "key": [
+        "test",
+        "poetry",
+        "mpt",
+        "greedy",
+        "yes"
+      ],
+      "n": 331
+    },
+    {
+      "key": [
+        "test",
+        "poetry",
+        "mpt",
+        "sampling",
+        "no"
+      ],
+      "n": 350
+    },
+    {
+      "key": [
+        "test",
+        "poetry",
+        "mpt",
+        "sampling",
+        "yes"
+      ],
+      "n": 319
+    },
+    {
+      "key": [
+        "test",
+        "poetry",
+        "mpt-chat",
+        "greedy",
+        "no"
+      ],
+      "n": 350
+    },
+    {
+      "key": [
+        "test",
+        "poetry",
+        "mpt-chat",
+        "greedy",
+        "yes"
+      ],
+      "n": 343
+    },
+    {
+      "key": [
+        "test",
+        "poetry",
+        "mpt-chat",
+        "sampling",
+        "no"
+      ],
+      "n": 349
+    },
+    {
+      "key": [
+        "test",
+        "poetry",
+        "mpt-chat",
+        "sampling",
+        "yes"
+      ],
+      "n": 344
+    },
+    {
+      "key": [
+        "test",
+        "recipes",
+        "chatgpt",
+        "greedy",
+        "no"
+      ],
+      "n": 330
+    },
+    {
+      "key": [
+        "test",
+        "recipes",
+        "chatgpt",
+        "sampling",
+        "no"
+      ],
+      "n": 330
+    },
+    {
+      "key": [
+        "test",
+        "recipes",
+        "cohere",
+        "greedy",
+        "no"
+      ],
+      "n": 330
+    },
+    {
+      "key": [
+        "test",
+        "recipes",
+        "cohere",
+        "sampling",
+        "no"
+      ],
+      "n": 330
+    },
+    {
+      "key": [
+        "test",
+        "recipes",
+        "cohere-chat",
+        "greedy",
+        "no"
+      ],
+      "n": 330
+    },
+    {
+      "key": [
+        "test",
+        "recipes",
+        "cohere-chat",
+        "sampling",
+        "no"
+      ],
+      "n": 330
+    },
+    {
+      "key": [
+        "test",
+        "recipes",
+        "gpt2",
+        "greedy",
+        "no"
+      ],
+      "n": 330
+    },
+    {
+      "key": [
+        "test",
+        "recipes",
+        "gpt2",
+        "greedy",
+        "yes"
+      ],
+      "n": 330
+    },
+    {
+      "key": [
+        "test",
+        "recipes",
+        "gpt2",
+        "sampling",
+        "no"
+      ],
+      "n": 328
+    },
+    {
+      "key": [
+        "test",
+        "recipes",
+        "gpt2",
+        "sampling",
+        "yes"
+      ],
+      "n": 327
+    },
+    {
+      "key": [
+        "test",
+        "recipes",
+        "gpt3",
+        "greedy",
+        "no"
+      ],
+      "n": 330
+    },
+    {
+      "key": [
+        "test",
+        "recipes",
+        "gpt3",
+        "sampling",
+        "no"
+      ],
+      "n": 330
+    },
+    {
+      "key": [
+        "test",
+        "recipes",
+        "gpt4",
+        "greedy",
+        "no"
+      ],
+      "n": 330
+    },
+    {
+      "key": [
+        "test",
+        "recipes",
+        "gpt4",
+        "sampling",
+        "no"
+      ],
+      "n": 330
+    },
+    {
+      "key": [
+        "test",
+        "recipes",
+        "human",
+        "",
+        ""
+      ],
+      "n": 322
+    },
+    {
+      "key": [
+        "test",
+        "recipes",
+        "llama-chat",
+        "greedy",
+        "no"
+      ],
+      "n": 330
+    },
+    {
+      "key": [
+        "test",
+        "recipes",
+        "llama-chat",
+        "greedy",
+        "yes"
+      ],
+      "n": 330
+    },
+    {
+      "key": [
+        "test",
+        "recipes",
+        "llama-chat",
+        "sampling",
+        "no"
+      ],
+      "n": 330
+    },
+    {
+      "key": [
+        "test",
+        "recipes",
+        "llama-chat",
+        "sampling",
+        "yes"
+      ],
+      "n": 330
+    },
+    {
+      "key": [
+        "test",
+        "recipes",
+        "mistral",
+        "greedy",
+        "no"
+      ],
+      "n": 330
+    },
+    {
+      "key": [
+        "test",
+        "recipes",
+        "mistral",
+        "greedy",
+        "yes"
+      ],
+      "n": 330
+    },
+    {
+      "key": [
+        "test",
+        "recipes",
+        "mistral",
+        "sampling",
+        "no"
+      ],
+      "n": 330
+    },
+    {
+      "key": [
+        "test",
+        "recipes",
+        "mistral",
+        "sampling",
+        "yes"
+      ],
+      "n": 330
+    },
+    {
+      "key": [
+        "test",
+        "recipes",
+        "mistral-chat",
+        "greedy",
+        "no"
+      ],
+      "n": 330
+    },
+    {
+      "key": [
+        "test",
+        "recipes",
+        "mistral-chat",
+        "greedy",
+        "yes"
+      ],
+      "n": 330
+    },
+    {
+      "key": [
+        "test",
+        "recipes",
+        "mistral-chat",
+        "sampling",
+        "no"
+      ],
+      "n": 330
+    },
+    {
+      "key": [
+        "test",
+        "recipes",
+        "mistral-chat",
+        "sampling",
+        "yes"
+      ],
+      "n": 326
+    },
+    {
+      "key": [
+        "test",
+        "recipes",
+        "mpt",
+        "greedy",
+        "no"
+      ],
+      "n": 330
+    },
+    {
+      "key": [
+        "test",
+        "recipes",
+        "mpt",
+        "greedy",
+        "yes"
+      ],
+      "n": 324
+    },
+    {
+      "key": [
+        "test",
+        "recipes",
+        "mpt",
+        "sampling",
+        "no"
+      ],
+      "n": 330
+    },
+    {
+      "key": [
+        "test",
+        "recipes",
+        "mpt",
+        "sampling",
+        "yes"
+      ],
+      "n": 321
+    },
+    {
+      "key": [
+        "test",
+        "recipes",
+        "mpt-chat",
+        "greedy",
+        "no"
+      ],
+      "n": 330
+    },
+    {
+      "key": [
+        "test",
+        "recipes",
+        "mpt-chat",
+        "greedy",
+        "yes"
+      ],
+      "n": 330
+    },
+    {
+      "key": [
+        "test",
+        "recipes",
+        "mpt-chat",
+        "sampling",
+        "no"
+      ],
+      "n": 330
+    },
+    {
+      "key": [
+        "test",
+        "recipes",
+        "mpt-chat",
+        "sampling",
+        "yes"
+      ],
+      "n": 325
+    },
+    {
+      "key": [
+        "test",
+        "reddit",
+        "chatgpt",
+        "greedy",
+        "no"
+      ],
+      "n": 305
+    },
+    {
+      "key": [
+        "test",
+        "reddit",
+        "chatgpt",
+        "sampling",
+        "no"
+      ],
+      "n": 304
+    },
+    {
+      "key": [
+        "test",
+        "reddit",
+        "cohere",
+        "greedy",
+        "no"
+      ],
+      "n": 304
+    },
+    {
+      "key": [
+        "test",
+        "reddit",
+        "cohere",
+        "sampling",
+        "no"
+      ],
+      "n": 305
+    },
+    {
+      "key": [
+        "test",
+        "reddit",
+        "cohere-chat",
+        "greedy",
+        "no"
+      ],
+      "n": 304
+    },
+    {
+      "key": [
+        "test",
+        "reddit",
+        "cohere-chat",
+        "sampling",
+        "no"
+      ],
+      "n": 305
+    },
+    {
+      "key": [
+        "test",
+        "reddit",
+        "gpt2",
+        "greedy",
+        "no"
+      ],
+      "n": 306
+    },
+    {
+      "key": [
+        "test",
+        "reddit",
+        "gpt2",
+        "greedy",
+        "yes"
+      ],
+      "n": 306
+    },
+    {
+      "key": [
+        "test",
+        "reddit",
+        "gpt2",
+        "sampling",
+        "no"
+      ],
+      "n": 304
+    },
+    {
+      "key": [
+        "test",
+        "reddit",
+        "gpt2",
+        "sampling",
+        "yes"
+      ],
+      "n": 303
+    },
+    {
+      "key": [
+        "test",
+        "reddit",
+        "gpt3",
+        "greedy",
+        "no"
+      ],
+      "n": 288
+    },
+    {
+      "key": [
+        "test",
+        "reddit",
+        "gpt3",
+        "sampling",
+        "no"
+      ],
+      "n": 289
+    },
+    {
+      "key": [
+        "test",
+        "reddit",
+        "gpt4",
+        "greedy",
+        "no"
+      ],
+      "n": 305
+    },
+    {
+      "key": [
+        "test",
+        "reddit",
+        "gpt4",
+        "sampling",
+        "no"
+      ],
+      "n": 306
+    },
+    {
+      "key": [
+        "test",
+        "reddit",
+        "human",
+        "",
+        ""
+      ],
+      "n": 306
+    },
+    {
+      "key": [
+        "test",
+        "reddit",
+        "llama-chat",
+        "greedy",
+        "no"
+      ],
+      "n": 306
+    },
+    {
+      "key": [
+        "test",
+        "reddit",
+        "llama-chat",
+        "greedy",
+        "yes"
+      ],
+      "n": 306
+    },
+    {
+      "key": [
+        "test",
+        "reddit",
+        "llama-chat",
+        "sampling",
+        "no"
+      ],
+      "n": 306
+    },
+    {
+      "key": [
+        "test",
+        "reddit",
+        "llama-chat",
+        "sampling",
+        "yes"
+      ],
+      "n": 306
+    },
+    {
+      "key": [
+        "test",
+        "reddit",
+        "mistral",
+        "greedy",
+        "no"
+      ],
+      "n": 306
+    },
+    {
+      "key": [
+        "test",
+        "reddit",
+        "mistral",
+        "greedy",
+        "yes"
+      ],
+      "n": 306
+    },
+    {
+      "key": [
+        "test",
+        "reddit",
+        "mistral",
+        "sampling",
+        "no"
+      ],
+      "n": 306
+    },
+    {
+      "key": [
+        "test",
+        "reddit",
+        "mistral",
+        "sampling",
+        "yes"
+      ],
+      "n": 306
+    },
+    {
+      "key": [
+        "test",
+        "reddit",
+        "mistral-chat",
+        "greedy",
+        "no"
+      ],
+      "n": 302
+    },
+    {
+      "key": [
+        "test",
+        "reddit",
+        "mistral-chat",
+        "greedy",
+        "yes"
+      ],
+      "n": 298
+    },
+    {
+      "key": [
+        "test",
+        "reddit",
+        "mistral-chat",
+        "sampling",
+        "no"
+      ],
+      "n": 303
+    },
+    {
+      "key": [
+        "test",
+        "reddit",
+        "mistral-chat",
+        "sampling",
+        "yes"
+      ],
+      "n": 299
+    },
+    {
+      "key": [
+        "test",
+        "reddit",
+        "mpt",
+        "greedy",
+        "no"
+      ],
+      "n": 306
+    },
+    {
+      "key": [
+        "test",
+        "reddit",
+        "mpt",
+        "greedy",
+        "yes"
+      ],
+      "n": 303
+    },
+    {
+      "key": [
+        "test",
+        "reddit",
+        "mpt",
+        "sampling",
+        "no"
+      ],
+      "n": 305
+    },
+    {
+      "key": [
+        "test",
+        "reddit",
+        "mpt",
+        "sampling",
+        "yes"
+      ],
+      "n": 286
+    },
+    {
+      "key": [
+        "test",
+        "reddit",
+        "mpt-chat",
+        "greedy",
+        "no"
+      ],
+      "n": 295
+    },
+    {
+      "key": [
+        "test",
+        "reddit",
+        "mpt-chat",
+        "greedy",
+        "yes"
+      ],
+      "n": 301
+    },
+    {
+      "key": [
+        "test",
+        "reddit",
+        "mpt-chat",
+        "sampling",
+        "no"
+      ],
+      "n": 297
+    },
+    {
+      "key": [
+        "test",
+        "reddit",
+        "mpt-chat",
+        "sampling",
+        "yes"
+      ],
+      "n": 292
+    },
+    {
+      "key": [
+        "test",
+        "reviews",
+        "chatgpt",
+        "greedy",
+        "no"
+      ],
+      "n": 167
+    },
+    {
+      "key": [
+        "test",
+        "reviews",
+        "chatgpt",
+        "sampling",
+        "no"
+      ],
+      "n": 167
+    },
+    {
+      "key": [
+        "test",
+        "reviews",
+        "cohere",
+        "greedy",
+        "no"
+      ],
+      "n": 167
+    },
+    {
+      "key": [
+        "test",
+        "reviews",
+        "cohere",
+        "sampling",
+        "no"
+      ],
+      "n": 166
+    },
+    {
+      "key": [
+        "test",
+        "reviews",
+        "cohere-chat",
+        "greedy",
+        "no"
+      ],
+      "n": 167
+    },
+    {
+      "key": [
+        "test",
+        "reviews",
+        "cohere-chat",
+        "sampling",
+        "no"
+      ],
+      "n": 166
+    },
+    {
+      "key": [
+        "test",
+        "reviews",
+        "gpt2",
+        "greedy",
+        "no"
+      ],
+      "n": 167
+    },
+    {
+      "key": [
+        "test",
+        "reviews",
+        "gpt2",
+        "greedy",
+        "yes"
+      ],
+      "n": 167
+    },
+    {
+      "key": [
+        "test",
+        "reviews",
+        "gpt2",
+        "sampling",
+        "no"
+      ],
+      "n": 165
+    },
+    {
+      "key": [
+        "test",
+        "reviews",
+        "gpt2",
+        "sampling",
+        "yes"
+      ],
+      "n": 162
+    },
+    {
+      "key": [
+        "test",
+        "reviews",
+        "gpt3",
+        "greedy",
+        "no"
+      ],
+      "n": 167
+    },
+    {
+      "key": [
+        "test",
+        "reviews",
+        "gpt3",
+        "sampling",
+        "no"
+      ],
+      "n": 166
+    },
+    {
+      "key": [
+        "test",
+        "reviews",
+        "gpt4",
+        "greedy",
+        "no"
+      ],
+      "n": 167
+    },
+    {
+      "key": [
+        "test",
+        "reviews",
+        "gpt4",
+        "sampling",
+        "no"
+      ],
+      "n": 167
+    },
+    {
+      "key": [
+        "test",
+        "reviews",
+        "human",
+        "",
+        ""
+      ],
+      "n": 135
+    },
+    {
+      "key": [
+        "test",
+        "reviews",
+        "llama-chat",
+        "greedy",
+        "no"
+      ],
+      "n": 167
+    },
+    {
+      "key": [
+        "test",
+        "reviews",
+        "llama-chat",
+        "greedy",
+        "yes"
+      ],
+      "n": 167
+    },
+    {
+      "key": [
+        "test",
+        "reviews",
+        "llama-chat",
+        "sampling",
+        "no"
+      ],
+      "n": 167
+    },
+    {
+      "key": [
+        "test",
+        "reviews",
+        "llama-chat",
+        "sampling",
+        "yes"
+      ],
+      "n": 167
+    },
+    {
+      "key": [
+        "test",
+        "reviews",
+        "mistral",
+        "greedy",
+        "no"
+      ],
+      "n": 167
+    },
+    {
+      "key": [
+        "test",
+        "reviews",
+        "mistral",
+        "greedy",
+        "yes"
+      ],
+      "n": 167
+    },
+    {
+      "key": [
+        "test",
+        "reviews",
+        "mistral",
+        "sampling",
+        "no"
+      ],
+      "n": 167
+    },
+    {
+      "key": [
+        "test",
+        "reviews",
+        "mistral",
+        "sampling",
+        "yes"
+      ],
+      "n": 167
+    },
+    {
+      "key": [
+        "test",
+        "reviews",
+        "mistral-chat",
+        "greedy",
+        "no"
+      ],
+      "n": 167
+    },
+    {
+      "key": [
+        "test",
+        "reviews",
+        "mistral-chat",
+        "greedy",
+        "yes"
+      ],
+      "n": 167
+    },
+    {
+      "key": [
+        "test",
+        "reviews",
+        "mistral-chat",
+        "sampling",
+        "no"
+      ],
+      "n": 167
+    },
+    {
+      "key": [
+        "test",
+        "reviews",
+        "mistral-chat",
+        "sampling",
+        "yes"
+      ],
+      "n": 167
+    },
+    {
+      "key": [
+        "test",
+        "reviews",
+        "mpt",
+        "greedy",
+        "no"
+      ],
+      "n": 167
+    },
+    {
+      "key": [
+        "test",
+        "reviews",
+        "mpt",
+        "greedy",
+        "yes"
+      ],
+      "n": 165
+    },
+    {
+      "key": [
+        "test",
+        "reviews",
+        "mpt",
+        "sampling",
+        "no"
+      ],
+      "n": 166
+    },
+    {
+      "key": [
+        "test",
+        "reviews",
+        "mpt",
+        "sampling",
+        "yes"
+      ],
+      "n": 158
+    },
+    {
+      "key": [
+        "test",
+        "reviews",
+        "mpt-chat",
+        "greedy",
+        "no"
+      ],
+      "n": 167
+    },
+    {
+      "key": [
+        "test",
+        "reviews",
+        "mpt-chat",
+        "greedy",
+        "yes"
+      ],
+      "n": 167
+    },
+    {
+      "key": [
+        "test",
+        "reviews",
+        "mpt-chat",
+        "sampling",
+        "no"
+      ],
+      "n": 167
+    },
+    {
+      "key": [
+        "test",
+        "reviews",
+        "mpt-chat",
+        "sampling",
+        "yes"
+      ],
+      "n": 165
+    },
+    {
+      "key": [
+        "test",
+        "wiki",
+        "chatgpt",
+        "greedy",
+        "no"
+      ],
+      "n": 351
+    },
+    {
+      "key": [
+        "test",
+        "wiki",
+        "chatgpt",
+        "sampling",
+        "no"
+      ],
+      "n": 351
+    },
+    {
+      "key": [
+        "test",
+        "wiki",
+        "cohere",
+        "greedy",
+        "no"
+      ],
+      "n": 351
+    },
+    {
+      "key": [
+        "test",
+        "wiki",
+        "cohere",
+        "sampling",
+        "no"
+      ],
+      "n": 351
+    },
+    {
+      "key": [
+        "test",
+        "wiki",
+        "cohere-chat",
+        "greedy",
+        "no"
+      ],
+      "n": 351
+    },
+    {
+      "key": [
+        "test",
+        "wiki",
+        "cohere-chat",
+        "sampling",
+        "no"
+      ],
+      "n": 351
+    },
+    {
+      "key": [
+        "test",
+        "wiki",
+        "gpt2",
+        "greedy",
+        "no"
+      ],
+      "n": 350
+    },
+    {
+      "key": [
+        "test",
+        "wiki",
+        "gpt2",
+        "greedy",
+        "yes"
+      ],
+      "n": 351
+    },
+    {
+      "key": [
+        "test",
+        "wiki",
+        "gpt2",
+        "sampling",
+        "no"
+      ],
+      "n": 350
+    },
+    {
+      "key": [
+        "test",
+        "wiki",
+        "gpt2",
+        "sampling",
+        "yes"
+      ],
+      "n": 349
+    },
+    {
+      "key": [
+        "test",
+        "wiki",
+        "gpt3",
+        "greedy",
+        "no"
+      ],
+      "n": 348
+    },
+    {
+      "key": [
+        "test",
+        "wiki",
+        "gpt3",
+        "sampling",
+        "no"
+      ],
+      "n": 347
+    },
+    {
+      "key": [
+        "test",
+        "wiki",
+        "gpt4",
+        "greedy",
+        "no"
+      ],
+      "n": 349
+    },
+    {
+      "key": [
+        "test",
+        "wiki",
+        "gpt4",
+        "sampling",
+        "no"
+      ],
+      "n": 351
+    },
+    {
+      "key": [
+        "test",
+        "wiki",
+        "human",
+        "",
+        ""
+      ],
+      "n": 351
+    },
+    {
+      "key": [
+        "test",
+        "wiki",
+        "llama-chat",
+        "greedy",
+        "no"
+      ],
+      "n": 351
+    },
+    {
+      "key": [
+        "test",
+        "wiki",
+        "llama-chat",
+        "greedy",
+        "yes"
+      ],
+      "n": 351
+    },
+    {
+      "key": [
+        "test",
+        "wiki",
+        "llama-chat",
+        "sampling",
+        "no"
+      ],
+      "n": 351
+    },
+    {
+      "key": [
+        "test",
+        "wiki",
+        "llama-chat",
+        "sampling",
+        "yes"
+      ],
+      "n": 351
+    },
+    {
+      "key": [
+        "test",
+        "wiki",
+        "mistral",
+        "greedy",
+        "no"
+      ],
+      "n": 351
+    },
+    {
+      "key": [
+        "test",
+        "wiki",
+        "mistral",
+        "greedy",
+        "yes"
+      ],
+      "n": 351
+    },
+    {
+      "key": [
+        "test",
+        "wiki",
+        "mistral",
+        "sampling",
+        "no"
+      ],
+      "n": 351
+    },
+    {
+      "key": [
+        "test",
+        "wiki",
+        "mistral",
+        "sampling",
+        "yes"
+      ],
+      "n": 350
+    },
+    {
+      "key": [
+        "test",
+        "wiki",
+        "mistral-chat",
+        "greedy",
+        "no"
+      ],
+      "n": 351
+    },
+    {
+      "key": [
+        "test",
+        "wiki",
+        "mistral-chat",
+        "greedy",
+        "yes"
+      ],
+      "n": 351
+    },
+    {
+      "key": [
+        "test",
+        "wiki",
+        "mistral-chat",
+        "sampling",
+        "no"
+      ],
+      "n": 350
+    },
+    {
+      "key": [
+        "test",
+        "wiki",
+        "mistral-chat",
+        "sampling",
+        "yes"
+      ],
+      "n": 349
+    },
+    {
+      "key": [
+        "test",
+        "wiki",
+        "mpt",
+        "greedy",
+        "no"
+      ],
+      "n": 351
+    },
+    {
+      "key": [
+        "test",
+        "wiki",
+        "mpt",
+        "greedy",
+        "yes"
+      ],
+      "n": 338
+    },
+    {
+      "key": [
+        "test",
+        "wiki",
+        "mpt",
+        "sampling",
+        "no"
+      ],
+      "n": 349
+    },
+    {
+      "key": [
+        "test",
+        "wiki",
+        "mpt",
+        "sampling",
+        "yes"
+      ],
+      "n": 321
+    },
+    {
+      "key": [
+        "test",
+        "wiki",
+        "mpt-chat",
+        "greedy",
+        "no"
+      ],
+      "n": 351
+    },
+    {
+      "key": [
+        "test",
+        "wiki",
+        "mpt-chat",
+        "greedy",
+        "yes"
+      ],
+      "n": 351
+    },
+    {
+      "key": [
+        "test",
+        "wiki",
+        "mpt-chat",
+        "sampling",
+        "no"
+      ],
+      "n": 351
+    },
+    {
+      "key": [
+        "test",
+        "wiki",
+        "mpt-chat",
+        "sampling",
+        "yes"
+      ],
+      "n": 349
+    },
+    {
+      "key": [
+        "train",
+        "abstracts",
+        "chatgpt",
+        "greedy",
+        "no"
+      ],
+      "n": 1038
+    },
+    {
+      "key": [
+        "train",
+        "abstracts",
+        "chatgpt",
+        "sampling",
+        "no"
+      ],
+      "n": 1038
+    },
+    {
+      "key": [
+        "train",
+        "abstracts",
+        "cohere",
+        "greedy",
+        "no"
+      ],
+      "n": 1032
+    },
+    {
+      "key": [
+        "train",
+        "abstracts",
+        "cohere",
+        "sampling",
+        "no"
+      ],
+      "n": 1037
+    },
+    {
+      "key": [
+        "train",
+        "abstracts",
+        "cohere-chat",
+        "greedy",
+        "no"
+      ],
+      "n": 1037
+    },
+    {
+      "key": [
+        "train",
+        "abstracts",
+        "cohere-chat",
+        "sampling",
+        "no"
+      ],
+      "n": 1034
+    },
+    {
+      "key": [
+        "train",
+        "abstracts",
+        "gpt2",
+        "greedy",
+        "no"
+      ],
+      "n": 1037
+    },
+    {
+      "key": [
+        "train",
+        "abstracts",
+        "gpt2",
+        "greedy",
+        "yes"
+      ],
+      "n": 1038
+    },
+    {
+      "key": [
+        "train",
+        "abstracts",
+        "gpt2",
+        "sampling",
+        "no"
+      ],
+      "n": 1030
+    },
+    {
+      "key": [
+        "train",
+        "abstracts",
+        "gpt2",
+        "sampling",
+        "yes"
+      ],
+      "n": 1012
+    },
+    {
+      "key": [
+        "train",
+        "abstracts",
+        "gpt3",
+        "greedy",
+        "no"
+      ],
+      "n": 1029
+    },
+    {
+      "key": [
+        "train",
+        "abstracts",
+        "gpt3",
+        "sampling",
+        "no"
+      ],
+      "n": 1029
+    },
+    {
+      "key": [
+        "train",
+        "abstracts",
+        "gpt4",
+        "greedy",
+        "no"
+      ],
+      "n": 1038
+    },
+    {
+      "key": [
+        "train",
+        "abstracts",
+        "gpt4",
+        "sampling",
+        "no"
+      ],
+      "n": 1038
+    },
+    {
+      "key": [
+        "train",
+        "abstracts",
+        "human",
+        "",
+        ""
+      ],
+      "n": 1038
+    },
+    {
+      "key": [
+        "train",
+        "abstracts",
+        "llama-chat",
+        "greedy",
+        "no"
+      ],
+      "n": 1038
+    },
+    {
+      "key": [
+        "train",
+        "abstracts",
+        "llama-chat",
+        "greedy",
+        "yes"
+      ],
+      "n": 1038
+    },
+    {
+      "key": [
+        "train",
+        "abstracts",
+        "llama-chat",
+        "sampling",
+        "no"
+      ],
+      "n": 1038
+    },
+    {
+      "key": [
+        "train",
+        "abstracts",
+        "llama-chat",
+        "sampling",
+        "yes"
+      ],
+      "n": 1038
+    },
+    {
+      "key": [
+        "train",
+        "abstracts",
+        "mistral",
+        "greedy",
+        "no"
+      ],
+      "n": 1037
+    },
+    {
+      "key": [
+        "train",
+        "abstracts",
+        "mistral",
+        "greedy",
+        "yes"
+      ],
+      "n": 1037
+    },
+    {
+      "key": [
+        "train",
+        "abstracts",
+        "mistral",
+        "sampling",
+        "no"
+      ],
+      "n": 1038
+    },
+    {
+      "key": [
+        "train",
+        "abstracts",
+        "mistral",
+        "sampling",
+        "yes"
+      ],
+      "n": 1036
+    },
+    {
+      "key": [
+        "train",
+        "abstracts",
+        "mistral-chat",
+        "greedy",
+        "no"
+      ],
+      "n": 1038
+    },
+    {
+      "key": [
+        "train",
+        "abstracts",
+        "mistral-chat",
+        "greedy",
+        "yes"
+      ],
+      "n": 1038
+    },
+    {
+      "key": [
+        "train",
+        "abstracts",
+        "mistral-chat",
+        "sampling",
+        "no"
+      ],
+      "n": 1035
+    },
+    {
+      "key": [
+        "train",
+        "abstracts",
+        "mistral-chat",
+        "sampling",
+        "yes"
+      ],
+      "n": 1033
+    },
+    {
+      "key": [
+        "train",
+        "abstracts",
+        "mpt",
+        "greedy",
+        "no"
+      ],
+      "n": 1037
+    },
+    {
+      "key": [
+        "train",
+        "abstracts",
+        "mpt",
+        "greedy",
+        "yes"
+      ],
+      "n": 1031
+    },
+    {
+      "key": [
+        "train",
+        "abstracts",
+        "mpt",
+        "sampling",
+        "no"
+      ],
+      "n": 1036
+    },
+    {
+      "key": [
+        "train",
+        "abstracts",
+        "mpt",
+        "sampling",
+        "yes"
+      ],
+      "n": 991
+    },
+    {
+      "key": [
+        "train",
+        "abstracts",
+        "mpt-chat",
+        "greedy",
+        "no"
+      ],
+      "n": 1036
+    },
+    {
+      "key": [
+        "train",
+        "abstracts",
+        "mpt-chat",
+        "greedy",
+        "yes"
+      ],
+      "n": 1038
+    },
+    {
+      "key": [
+        "train",
+        "abstracts",
+        "mpt-chat",
+        "sampling",
+        "no"
+      ],
+      "n": 1037
+    },
+    {
+      "key": [
+        "train",
+        "abstracts",
+        "mpt-chat",
+        "sampling",
+        "yes"
+      ],
+      "n": 1031
+    },
+    {
+      "key": [
+        "train",
+        "books",
+        "chatgpt",
+        "greedy",
+        "no"
+      ],
+      "n": 1036
+    },
+    {
+      "key": [
+        "train",
+        "books",
+        "chatgpt",
+        "sampling",
+        "no"
+      ],
+      "n": 1036
+    },
+    {
+      "key": [
+        "train",
+        "books",
+        "cohere",
+        "greedy",
+        "no"
+      ],
+      "n": 1036
+    },
+    {
+      "key": [
+        "train",
+        "books",
+        "cohere",
+        "sampling",
+        "no"
+      ],
+      "n": 1035
+    },
+    {
+      "key": [
+        "train",
+        "books",
+        "cohere-chat",
+        "greedy",
+        "no"
+      ],
+      "n": 1035
+    },
+    {
+      "key": [
+        "train",
+        "books",
+        "cohere-chat",
+        "sampling",
+        "no"
+      ],
+      "n": 1034
+    },
+    {
+      "key": [
+        "train",
+        "books",
+        "gpt2",
+        "greedy",
+        "no"
+      ],
+      "n": 1035
+    },
+    {
+      "key": [
+        "train",
+        "books",
+        "gpt2",
+        "greedy",
+        "yes"
+      ],
+      "n": 1036
+    },
+    {
+      "key": [
+        "train",
+        "books",
+        "gpt2",
+        "sampling",
+        "no"
+      ],
+      "n": 1033
+    },
+    {
+      "key": [
+        "train",
+        "books",
+        "gpt2",
+        "sampling",
+        "yes"
+      ],
+      "n": 1027
+    },
+    {
+      "key": [
+        "train",
+        "books",
+        "gpt3",
+        "greedy",
+        "no"
+      ],
+      "n": 1034
+    },
+    {
+      "key": [
+        "train",
+        "books",
+        "gpt3",
+        "sampling",
+        "no"
+      ],
+      "n": 1032
+    },
+    {
+      "key": [
+        "train",
+        "books",
+        "gpt4",
+        "greedy",
+        "no"
+      ],
+      "n": 1036
+    },
+    {
+      "key": [
+        "train",
+        "books",
+        "gpt4",
+        "sampling",
+        "no"
+      ],
+      "n": 1036
+    },
+    {
+      "key": [
+        "train",
+        "books",
+        "human",
+        "",
+        ""
+      ],
+      "n": 825
+    },
+    {
+      "key": [
+        "train",
+        "books",
+        "llama-chat",
+        "greedy",
+        "no"
+      ],
+      "n": 1036
+    },
+    {
+      "key": [
+        "train",
+        "books",
+        "llama-chat",
+        "greedy",
+        "yes"
+      ],
+      "n": 1036
+    },
+    {
+      "key": [
+        "train",
+        "books",
+        "llama-chat",
+        "sampling",
+        "no"
+      ],
+      "n": 1036
+    },
+    {
+      "key": [
+        "train",
+        "books",
+        "llama-chat",
+        "sampling",
+        "yes"
+      ],
+      "n": 1036
+    },
+    {
+      "key": [
+        "train",
+        "books",
+        "mistral",
+        "greedy",
+        "no"
+      ],
+      "n": 1036
+    },
+    {
+      "key": [
+        "train",
+        "books",
+        "mistral",
+        "greedy",
+        "yes"
+      ],
+      "n": 1036
+    },
+    {
+      "key": [
+        "train",
+        "books",
+        "mistral",
+        "sampling",
+        "no"
+      ],
+      "n": 1036
+    },
+    {
+      "key": [
+        "train",
+        "books",
+        "mistral",
+        "sampling",
+        "yes"
+      ],
+      "n": 1036
+    },
+    {
+      "key": [
+        "train",
+        "books",
+        "mistral-chat",
+        "greedy",
+        "no"
+      ],
+      "n": 1036
+    },
+    {
+      "key": [
+        "train",
+        "books",
+        "mistral-chat",
+        "greedy",
+        "yes"
+      ],
+      "n": 1036
+    },
+    {
+      "key": [
+        "train",
+        "books",
+        "mistral-chat",
+        "sampling",
+        "no"
+      ],
+      "n": 1036
+    },
+    {
+      "key": [
+        "train",
+        "books",
+        "mistral-chat",
+        "sampling",
+        "yes"
+      ],
+      "n": 1035
+    },
+    {
+      "key": [
+        "train",
+        "books",
+        "mpt",
+        "greedy",
+        "no"
+      ],
+      "n": 1036
+    },
+    {
+      "key": [
+        "train",
+        "books",
+        "mpt",
+        "greedy",
+        "yes"
+      ],
+      "n": 1033
+    },
+    {
+      "key": [
+        "train",
+        "books",
+        "mpt",
+        "sampling",
+        "no"
+      ],
+      "n": 1035
+    },
+    {
+      "key": [
+        "train",
+        "books",
+        "mpt",
+        "sampling",
+        "yes"
+      ],
+      "n": 1000
+    },
+    {
+      "key": [
+        "train",
+        "books",
+        "mpt-chat",
+        "greedy",
+        "no"
+      ],
+      "n": 1036
+    },
+    {
+      "key": [
+        "train",
+        "books",
+        "mpt-chat",
+        "greedy",
+        "yes"
+      ],
+      "n": 1036
+    },
+    {
+      "key": [
+        "train",
+        "books",
+        "mpt-chat",
+        "sampling",
+        "no"
+      ],
+      "n": 1033
+    },
+    {
+      "key": [
+        "train",
+        "books",
+        "mpt-chat",
+        "sampling",
+        "yes"
+      ],
+      "n": 1033
+    },
+    {
+      "key": [
+        "train",
+        "news",
+        "chatgpt",
+        "greedy",
+        "no"
+      ],
+      "n": 995
+    },
+    {
+      "key": [
+        "train",
+        "news",
+        "chatgpt",
+        "sampling",
+        "no"
+      ],
+      "n": 994
+    },
+    {
+      "key": [
+        "train",
+        "news",
+        "cohere",
+        "greedy",
+        "no"
+      ],
+      "n": 995
+    },
+    {
+      "key": [
+        "train",
+        "news",
+        "cohere",
+        "sampling",
+        "no"
+      ],
+      "n": 995
+    },
+    {
+      "key": [
+        "train",
+        "news",
+        "cohere-chat",
+        "greedy",
+        "no"
+      ],
+      "n": 995
+    },
+    {
+      "key": [
+        "train",
+        "news",
+        "cohere-chat",
+        "sampling",
+        "no"
+      ],
+      "n": 995
+    },
+    {
+      "key": [
+        "train",
+        "news",
+        "gpt2",
+        "greedy",
+        "no"
+      ],
+      "n": 995
+    },
+    {
+      "key": [
+        "train",
+        "news",
+        "gpt2",
+        "greedy",
+        "yes"
+      ],
+      "n": 993
+    },
+    {
+      "key": [
+        "train",
+        "news",
+        "gpt2",
+        "sampling",
+        "no"
+      ],
+      "n": 991
+    },
+    {
+      "key": [
+        "train",
+        "news",
+        "gpt2",
+        "sampling",
+        "yes"
+      ],
+      "n": 988
+    },
+    {
+      "key": [
+        "train",
+        "news",
+        "gpt3",
+        "greedy",
+        "no"
+      ],
+      "n": 995
+    },
+    {
+      "key": [
+        "train",
+        "news",
+        "gpt3",
+        "sampling",
+        "no"
+      ],
+      "n": 994
+    },
+    {
+      "key": [
+        "train",
+        "news",
+        "gpt4",
+        "greedy",
+        "no"
+      ],
+      "n": 995
+    },
+    {
+      "key": [
+        "train",
+        "news",
+        "gpt4",
+        "sampling",
+        "no"
+      ],
+      "n": 995
+    },
+    {
+      "key": [
+        "train",
+        "news",
+        "human",
+        "",
+        ""
+      ],
+      "n": 894
+    },
+    {
+      "key": [
+        "train",
+        "news",
+        "llama-chat",
+        "greedy",
+        "no"
+      ],
+      "n": 995
+    },
+    {
+      "key": [
+        "train",
+        "news",
+        "llama-chat",
+        "greedy",
+        "yes"
+      ],
+      "n": 995
+    },
+    {
+      "key": [
+        "train",
+        "news",
+        "llama-chat",
+        "sampling",
+        "no"
+      ],
+      "n": 995
+    },
+    {
+      "key": [
+        "train",
+        "news",
+        "llama-chat",
+        "sampling",
+        "yes"
+      ],
+      "n": 995
+    },
+    {
+      "key": [
+        "train",
+        "news",
+        "mistral",
+        "greedy",
+        "no"
+      ],
+      "n": 994
+    },
+    {
+      "key": [
+        "train",
+        "news",
+        "mistral",
+        "greedy",
+        "yes"
+      ],
+      "n": 995
+    },
+    {
+      "key": [
+        "train",
+        "news",
+        "mistral",
+        "sampling",
+        "no"
+      ],
+      "n": 995
+    },
+    {
+      "key": [
+        "train",
+        "news",
+        "mistral",
+        "sampling",
+        "yes"
+      ],
+      "n": 995
+    },
+    {
+      "key": [
+        "train",
+        "news",
+        "mistral-chat",
+        "greedy",
+        "no"
+      ],
+      "n": 995
+    },
+    {
+      "key": [
+        "train",
+        "news",
+        "mistral-chat",
+        "greedy",
+        "yes"
+      ],
+      "n": 995
+    },
+    {
+      "key": [
+        "train",
+        "news",
+        "mistral-chat",
+        "sampling",
+        "no"
+      ],
+      "n": 993
+    },
+    {
+      "key": [
+        "train",
+        "news",
+        "mistral-chat",
+        "sampling",
+        "yes"
+      ],
+      "n": 988
+    },
+    {
+      "key": [
+        "train",
+        "news",
+        "mpt",
+        "greedy",
+        "no"
+      ],
+      "n": 995
+    },
+    {
+      "key": [
+        "train",
+        "news",
+        "mpt",
+        "greedy",
+        "yes"
+      ],
+      "n": 942
+    },
+    {
+      "key": [
+        "train",
+        "news",
+        "mpt",
+        "sampling",
+        "no"
+      ],
+      "n": 993
+    },
+    {
+      "key": [
+        "train",
+        "news",
+        "mpt",
+        "sampling",
+        "yes"
+      ],
+      "n": 904
+    },
+    {
+      "key": [
+        "train",
+        "news",
+        "mpt-chat",
+        "greedy",
+        "no"
+      ],
+      "n": 995
+    },
+    {
+      "key": [
+        "train",
+        "news",
+        "mpt-chat",
+        "greedy",
+        "yes"
+      ],
+      "n": 995
+    },
+    {
+      "key": [
+        "train",
+        "news",
+        "mpt-chat",
+        "sampling",
+        "no"
+      ],
+      "n": 993
+    },
+    {
+      "key": [
+        "train",
+        "news",
+        "mpt-chat",
+        "sampling",
+        "yes"
+      ],
+      "n": 994
+    },
+    {
+      "key": [
+        "train",
+        "poetry",
+        "chatgpt",
+        "greedy",
+        "no"
+      ],
+      "n": 1009
+    },
+    {
+      "key": [
+        "train",
+        "poetry",
+        "chatgpt",
+        "sampling",
+        "no"
+      ],
+      "n": 1009
+    },
+    {
+      "key": [
+        "train",
+        "poetry",
+        "cohere",
+        "greedy",
+        "no"
+      ],
+      "n": 1009
+    },
+    {
+      "key": [
+        "train",
+        "poetry",
+        "cohere",
+        "sampling",
+        "no"
+      ],
+      "n": 1006
+    },
+    {
+      "key": [
+        "train",
+        "poetry",
+        "cohere-chat",
+        "greedy",
+        "no"
+      ],
+      "n": 1003
+    },
+    {
+      "key": [
+        "train",
+        "poetry",
+        "cohere-chat",
+        "sampling",
+        "no"
+      ],
+      "n": 1001
+    },
+    {
+      "key": [
+        "train",
+        "poetry",
+        "gpt2",
+        "greedy",
+        "no"
+      ],
+      "n": 1009
+    },
+    {
+      "key": [
+        "train",
+        "poetry",
+        "gpt2",
+        "greedy",
+        "yes"
+      ],
+      "n": 1008
+    },
+    {
+      "key": [
+        "train",
+        "poetry",
+        "gpt2",
+        "sampling",
+        "no"
+      ],
+      "n": 1002
+    },
+    {
+      "key": [
+        "train",
+        "poetry",
+        "gpt2",
+        "sampling",
+        "yes"
+      ],
+      "n": 997
+    },
+    {
+      "key": [
+        "train",
+        "poetry",
+        "gpt3",
+        "greedy",
+        "no"
+      ],
+      "n": 974
+    },
+    {
+      "key": [
+        "train",
+        "poetry",
+        "gpt3",
+        "sampling",
+        "no"
+      ],
+      "n": 957
+    },
+    {
+      "key": [
+        "train",
+        "poetry",
+        "gpt4",
+        "greedy",
+        "no"
+      ],
+      "n": 1009
+    },
+    {
+      "key": [
+        "train",
+        "poetry",
+        "gpt4",
+        "sampling",
+        "no"
+      ],
+      "n": 1009
+    },
+    {
+      "key": [
+        "train",
+        "poetry",
+        "human",
+        "",
+        ""
+      ],
+      "n": 940
+    },
+    {
+      "key": [
+        "train",
+        "poetry",
+        "llama-chat",
+        "greedy",
+        "no"
+      ],
+      "n": 1009
+    },
+    {
+      "key": [
+        "train",
+        "poetry",
+        "llama-chat",
+        "greedy",
+        "yes"
+      ],
+      "n": 1009
+    },
+    {
+      "key": [
+        "train",
+        "poetry",
+        "llama-chat",
+        "sampling",
+        "no"
+      ],
+      "n": 1009
+    },
+    {
+      "key": [
+        "train",
+        "poetry",
+        "llama-chat",
+        "sampling",
+        "yes"
+      ],
+      "n": 1009
+    },
+    {
+      "key": [
+        "train",
+        "poetry",
+        "mistral",
+        "greedy",
+        "no"
+      ],
+      "n": 1009
+    },
+    {
+      "key": [
+        "train",
+        "poetry",
+        "mistral",
+        "greedy",
+        "yes"
+      ],
+      "n": 1009
+    },
+    {
+      "key": [
+        "train",
+        "poetry",
+        "mistral",
+        "sampling",
+        "no"
+      ],
+      "n": 1009
+    },
+    {
+      "key": [
+        "train",
+        "poetry",
+        "mistral",
+        "sampling",
+        "yes"
+      ],
+      "n": 1009
+    },
+    {
+      "key": [
+        "train",
+        "poetry",
+        "mistral-chat",
+        "greedy",
+        "no"
+      ],
+      "n": 1009
+    },
+    {
+      "key": [
+        "train",
+        "poetry",
+        "mistral-chat",
+        "greedy",
+        "yes"
+      ],
+      "n": 1009
+    },
+    {
+      "key": [
+        "train",
+        "poetry",
+        "mistral-chat",
+        "sampling",
+        "no"
+      ],
+      "n": 1007
+    },
+    {
+      "key": [
+        "train",
+        "poetry",
+        "mistral-chat",
+        "sampling",
+        "yes"
+      ],
+      "n": 999
+    },
+    {
+      "key": [
+        "train",
+        "poetry",
+        "mpt",
+        "greedy",
+        "no"
+      ],
+      "n": 1009
+    },
+    {
+      "key": [
+        "train",
+        "poetry",
+        "mpt",
+        "greedy",
+        "yes"
+      ],
+      "n": 959
+    },
+    {
+      "key": [
+        "train",
+        "poetry",
+        "mpt",
+        "sampling",
+        "no"
+      ],
+      "n": 1006
+    },
+    {
+      "key": [
+        "train",
+        "poetry",
+        "mpt",
+        "sampling",
+        "yes"
+      ],
+      "n": 929
+    },
+    {
+      "key": [
+        "train",
+        "poetry",
+        "mpt-chat",
+        "greedy",
+        "no"
+      ],
+      "n": 1009
+    },
+    {
+      "key": [
+        "train",
+        "poetry",
+        "mpt-chat",
+        "greedy",
+        "yes"
+      ],
+      "n": 998
+    },
+    {
+      "key": [
+        "train",
+        "poetry",
+        "mpt-chat",
+        "sampling",
+        "no"
+      ],
+      "n": 1005
+    },
+    {
+      "key": [
+        "train",
+        "poetry",
+        "mpt-chat",
+        "sampling",
+        "yes"
+      ],
+      "n": 980
+    },
+    {
+      "key": [
+        "train",
+        "recipes",
+        "chatgpt",
+        "greedy",
+        "no"
+      ],
+      "n": 1004
+    },
+    {
+      "key": [
+        "train",
+        "recipes",
+        "chatgpt",
+        "sampling",
+        "no"
+      ],
+      "n": 1004
+    },
+    {
+      "key": [
+        "train",
+        "recipes",
+        "cohere",
+        "greedy",
+        "no"
+      ],
+      "n": 1004
+    },
+    {
+      "key": [
+        "train",
+        "recipes",
+        "cohere",
+        "sampling",
+        "no"
+      ],
+      "n": 1004
+    },
+    {
+      "key": [
+        "train",
+        "recipes",
+        "cohere-chat",
+        "greedy",
+        "no"
+      ],
+      "n": 1004
+    },
+    {
+      "key": [
+        "train",
+        "recipes",
+        "cohere-chat",
+        "sampling",
+        "no"
+      ],
+      "n": 1004
+    },
+    {
+      "key": [
+        "train",
+        "recipes",
+        "gpt2",
+        "greedy",
+        "no"
+      ],
+      "n": 1004
+    },
+    {
+      "key": [
+        "train",
+        "recipes",
+        "gpt2",
+        "greedy",
+        "yes"
+      ],
+      "n": 1003
+    },
+    {
+      "key": [
+        "train",
+        "recipes",
+        "gpt2",
+        "sampling",
+        "no"
+      ],
+      "n": 1001
+    },
+    {
+      "key": [
+        "train",
+        "recipes",
+        "gpt2",
+        "sampling",
+        "yes"
+      ],
+      "n": 989
+    },
+    {
+      "key": [
+        "train",
+        "recipes",
+        "gpt3",
+        "greedy",
+        "no"
+      ],
+      "n": 1004
+    },
+    {
+      "key": [
+        "train",
+        "recipes",
+        "gpt3",
+        "sampling",
+        "no"
+      ],
+      "n": 1004
+    },
+    {
+      "key": [
+        "train",
+        "recipes",
+        "gpt4",
+        "greedy",
+        "no"
+      ],
+      "n": 1004
+    },
+    {
+      "key": [
+        "train",
+        "recipes",
+        "gpt4",
+        "sampling",
+        "no"
+      ],
+      "n": 1004
+    },
+    {
+      "key": [
+        "train",
+        "recipes",
+        "human",
+        "",
+        ""
+      ],
+      "n": 984
+    },
+    {
+      "key": [
+        "train",
+        "recipes",
+        "llama-chat",
+        "greedy",
+        "no"
+      ],
+      "n": 1004
+    },
+    {
+      "key": [
+        "train",
+        "recipes",
+        "llama-chat",
+        "greedy",
+        "yes"
+      ],
+      "n": 1004
+    },
+    {
+      "key": [
+        "train",
+        "recipes",
+        "llama-chat",
+        "sampling",
+        "no"
+      ],
+      "n": 1004
+    },
+    {
+      "key": [
+        "train",
+        "recipes",
+        "llama-chat",
+        "sampling",
+        "yes"
+      ],
+      "n": 1004
+    },
+    {
+      "key": [
+        "train",
+        "recipes",
+        "mistral",
+        "greedy",
+        "no"
+      ],
+      "n": 1004
+    },
+    {
+      "key": [
+        "train",
+        "recipes",
+        "mistral",
+        "greedy",
+        "yes"
+      ],
+      "n": 1004
+    },
+    {
+      "key": [
+        "train",
+        "recipes",
+        "mistral",
+        "sampling",
+        "no"
+      ],
+      "n": 1004
+    },
+    {
+      "key": [
+        "train",
+        "recipes",
+        "mistral",
+        "sampling",
+        "yes"
+      ],
+      "n": 1004
+    },
+    {
+      "key": [
+        "train",
+        "recipes",
+        "mistral-chat",
+        "greedy",
+        "no"
+      ],
+      "n": 1004
+    },
+    {
+      "key": [
+        "train",
+        "recipes",
+        "mistral-chat",
+        "greedy",
+        "yes"
+      ],
+      "n": 1004
+    },
+    {
+      "key": [
+        "train",
+        "recipes",
+        "mistral-chat",
+        "sampling",
+        "no"
+      ],
+      "n": 1004
+    },
+    {
+      "key": [
+        "train",
+        "recipes",
+        "mistral-chat",
+        "sampling",
+        "yes"
+      ],
+      "n": 1001
+    },
+    {
+      "key": [
+        "train",
+        "recipes",
+        "mpt",
+        "greedy",
+        "no"
+      ],
+      "n": 1004
+    },
+    {
+      "key": [
+        "train",
+        "recipes",
+        "mpt",
+        "greedy",
+        "yes"
+      ],
+      "n": 985
+    },
+    {
+      "key": [
+        "train",
+        "recipes",
+        "mpt",
+        "sampling",
+        "no"
+      ],
+      "n": 1003
+    },
+    {
+      "key": [
+        "train",
+        "recipes",
+        "mpt",
+        "sampling",
+        "yes"
+      ],
+      "n": 966
+    },
+    {
+      "key": [
+        "train",
+        "recipes",
+        "mpt-chat",
+        "greedy",
+        "no"
+      ],
+      "n": 1004
+    },
+    {
+      "key": [
+        "train",
+        "recipes",
+        "mpt-chat",
+        "greedy",
+        "yes"
+      ],
+      "n": 1001
+    },
+    {
+      "key": [
+        "train",
+        "recipes",
+        "mpt-chat",
+        "sampling",
+        "no"
+      ],
+      "n": 1004
+    },
+    {
+      "key": [
+        "train",
+        "recipes",
+        "mpt-chat",
+        "sampling",
+        "yes"
+      ],
+      "n": 988
+    },
+    {
+      "key": [
+        "train",
+        "reddit",
+        "chatgpt",
+        "greedy",
+        "no"
+      ],
+      "n": 1050
+    },
+    {
+      "key": [
+        "train",
+        "reddit",
+        "chatgpt",
+        "sampling",
+        "no"
+      ],
+      "n": 1050
+    },
+    {
+      "key": [
+        "train",
+        "reddit",
+        "cohere",
+        "greedy",
+        "no"
+      ],
+      "n": 1036
+    },
+    {
+      "key": [
+        "train",
+        "reddit",
+        "cohere",
+        "sampling",
+        "no"
+      ],
+      "n": 1040
+    },
+    {
+      "key": [
+        "train",
+        "reddit",
+        "cohere-chat",
+        "greedy",
+        "no"
+      ],
+      "n": 1045
+    },
+    {
+      "key": [
+        "train",
+        "reddit",
+        "cohere-chat",
+        "sampling",
+        "no"
+      ],
+      "n": 1044
+    },
+    {
+      "key": [
+        "train",
+        "reddit",
+        "gpt2",
+        "greedy",
+        "no"
+      ],
+      "n": 1049
+    },
+    {
+      "key": [
+        "train",
+        "reddit",
+        "gpt2",
+        "greedy",
+        "yes"
+      ],
+      "n": 1050
+    },
+    {
+      "key": [
+        "train",
+        "reddit",
+        "gpt2",
+        "sampling",
+        "no"
+      ],
+      "n": 1046
+    },
+    {
+      "key": [
+        "train",
+        "reddit",
+        "gpt2",
+        "sampling",
+        "yes"
+      ],
+      "n": 1048
+    },
+    {
+      "key": [
+        "train",
+        "reddit",
+        "gpt3",
+        "greedy",
+        "no"
+      ],
+      "n": 969
+    },
+    {
+      "key": [
+        "train",
+        "reddit",
+        "gpt3",
+        "sampling",
+        "no"
+      ],
+      "n": 985
+    },
+    {
+      "key": [
+        "train",
+        "reddit",
+        "gpt4",
+        "greedy",
+        "no"
+      ],
+      "n": 1045
+    },
+    {
+      "key": [
+        "train",
+        "reddit",
+        "gpt4",
+        "sampling",
+        "no"
+      ],
+      "n": 1047
+    },
+    {
+      "key": [
+        "train",
+        "reddit",
+        "human",
+        "",
+        ""
+      ],
+      "n": 1049
+    },
+    {
+      "key": [
+        "train",
+        "reddit",
+        "llama-chat",
+        "greedy",
+        "no"
+      ],
+      "n": 1051
+    },
+    {
+      "key": [
+        "train",
+        "reddit",
+        "llama-chat",
+        "greedy",
+        "yes"
+      ],
+      "n": 1051
+    },
+    {
+      "key": [
+        "train",
+        "reddit",
+        "llama-chat",
+        "sampling",
+        "no"
+      ],
+      "n": 1051
+    },
+    {
+      "key": [
+        "train",
+        "reddit",
+        "llama-chat",
+        "sampling",
+        "yes"
+      ],
+      "n": 1051
+    },
+    {
+      "key": [
+        "train",
+        "reddit",
+        "mistral",
+        "greedy",
+        "no"
+      ],
+      "n": 1049
+    },
+    {
+      "key": [
+        "train",
+        "reddit",
+        "mistral",
+        "greedy",
+        "yes"
+      ],
+      "n": 1049
+    },
+    {
+      "key": [
+        "train",
+        "reddit",
+        "mistral",
+        "sampling",
+        "no"
+      ],
+      "n": 1051
+    },
+    {
+      "key": [
+        "train",
+        "reddit",
+        "mistral",
+        "sampling",
+        "yes"
+      ],
+      "n": 1050
+    },
+    {
+      "key": [
+        "train",
+        "reddit",
+        "mistral-chat",
+        "greedy",
+        "no"
+      ],
+      "n": 1043
+    },
+    {
+      "key": [
+        "train",
+        "reddit",
+        "mistral-chat",
+        "greedy",
+        "yes"
+      ],
+      "n": 1039
+    },
+    {
+      "key": [
+        "train",
+        "reddit",
+        "mistral-chat",
+        "sampling",
+        "no"
+      ],
+      "n": 1035
+    },
+    {
+      "key": [
+        "train",
+        "reddit",
+        "mistral-chat",
+        "sampling",
+        "yes"
+      ],
+      "n": 1034
+    },
+    {
+      "key": [
+        "train",
+        "reddit",
+        "mpt",
+        "greedy",
+        "no"
+      ],
+      "n": 1048
+    },
+    {
+      "key": [
+        "train",
+        "reddit",
+        "mpt",
+        "greedy",
+        "yes"
+      ],
+      "n": 1032
+    },
+    {
+      "key": [
+        "train",
+        "reddit",
+        "mpt",
+        "sampling",
+        "no"
+      ],
+      "n": 1042
+    },
+    {
+      "key": [
+        "train",
+        "reddit",
+        "mpt",
+        "sampling",
+        "yes"
+      ],
+      "n": 993
+    },
+    {
+      "key": [
+        "train",
+        "reddit",
+        "mpt-chat",
+        "greedy",
+        "no"
+      ],
+      "n": 996
+    },
+    {
+      "key": [
+        "train",
+        "reddit",
+        "mpt-chat",
+        "greedy",
+        "yes"
+      ],
+      "n": 1016
+    },
+    {
+      "key": [
+        "train",
+        "reddit",
+        "mpt-chat",
+        "sampling",
+        "no"
+      ],
+      "n": 1011
+    },
+    {
+      "key": [
+        "train",
+        "reddit",
+        "mpt-chat",
+        "sampling",
+        "yes"
+      ],
+      "n": 1019
+    },
+    {
+      "key": [
+        "train",
+        "reviews",
+        "chatgpt",
+        "greedy",
+        "no"
+      ],
+      "n": 502
+    },
+    {
+      "key": [
+        "train",
+        "reviews",
+        "chatgpt",
+        "sampling",
+        "no"
+      ],
+      "n": 502
+    },
+    {
+      "key": [
+        "train",
+        "reviews",
+        "cohere",
+        "greedy",
+        "no"
+      ],
+      "n": 502
+    },
+    {
+      "key": [
+        "train",
+        "reviews",
+        "cohere",
+        "sampling",
+        "no"
+      ],
+      "n": 502
+    },
+    {
+      "key": [
+        "train",
+        "reviews",
+        "cohere-chat",
+        "greedy",
+        "no"
+      ],
+      "n": 502
+    },
+    {
+      "key": [
+        "train",
+        "reviews",
+        "cohere-chat",
+        "sampling",
+        "no"
+      ],
+      "n": 500
+    },
+    {
+      "key": [
+        "train",
+        "reviews",
+        "gpt2",
+        "greedy",
+        "no"
+      ],
+      "n": 502
+    },
+    {
+      "key": [
+        "train",
+        "reviews",
+        "gpt2",
+        "greedy",
+        "yes"
+      ],
+      "n": 502
+    },
+    {
+      "key": [
+        "train",
+        "reviews",
+        "gpt2",
+        "sampling",
+        "no"
+      ],
+      "n": 497
+    },
+    {
+      "key": [
+        "train",
+        "reviews",
+        "gpt2",
+        "sampling",
+        "yes"
+      ],
+      "n": 491
+    },
+    {
+      "key": [
+        "train",
+        "reviews",
+        "gpt3",
+        "greedy",
+        "no"
+      ],
+      "n": 501
+    },
+    {
+      "key": [
+        "train",
+        "reviews",
+        "gpt3",
+        "sampling",
+        "no"
+      ],
+      "n": 498
+    },
+    {
+      "key": [
+        "train",
+        "reviews",
+        "gpt4",
+        "greedy",
+        "no"
+      ],
+      "n": 502
+    },
+    {
+      "key": [
+        "train",
+        "reviews",
+        "gpt4",
+        "sampling",
+        "no"
+      ],
+      "n": 502
+    },
+    {
+      "key": [
+        "train",
+        "reviews",
+        "human",
+        "",
+        ""
+      ],
+      "n": 401
+    },
+    {
+      "key": [
+        "train",
+        "reviews",
+        "llama-chat",
+        "greedy",
+        "no"
+      ],
+      "n": 502
+    },
+    {
+      "key": [
+        "train",
+        "reviews",
+        "llama-chat",
+        "greedy",
+        "yes"
+      ],
+      "n": 502
+    },
+    {
+      "key": [
+        "train",
+        "reviews",
+        "llama-chat",
+        "sampling",
+        "no"
+      ],
+      "n": 502
+    },
+    {
+      "key": [
+        "train",
+        "reviews",
+        "llama-chat",
+        "sampling",
+        "yes"
+      ],
+      "n": 502
+    },
+    {
+      "key": [
+        "train",
+        "reviews",
+        "mistral",
+        "greedy",
+        "no"
+      ],
+      "n": 502
+    },
+    {
+      "key": [
+        "train",
+        "reviews",
+        "mistral",
+        "greedy",
+        "yes"
+      ],
+      "n": 502
+    },
+    {
+      "key": [
+        "train",
+        "reviews",
+        "mistral",
+        "sampling",
+        "no"
+      ],
+      "n": 502
+    },
+    {
+      "key": [
+        "train",
+        "reviews",
+        "mistral",
+        "sampling",
+        "yes"
+      ],
+      "n": 502
+    },
+    {
+      "key": [
+        "train",
+        "reviews",
+        "mistral-chat",
+        "greedy",
+        "no"
+      ],
+      "n": 502
+    },
+    {
+      "key": [
+        "train",
+        "reviews",
+        "mistral-chat",
+        "greedy",
+        "yes"
+      ],
+      "n": 502
+    },
+    {
+      "key": [
+        "train",
+        "reviews",
+        "mistral-chat",
+        "sampling",
+        "no"
+      ],
+      "n": 502
+    },
+    {
+      "key": [
+        "train",
+        "reviews",
+        "mistral-chat",
+        "sampling",
+        "yes"
+      ],
+      "n": 501
+    },
+    {
+      "key": [
+        "train",
+        "reviews",
+        "mpt",
+        "greedy",
+        "no"
+      ],
+      "n": 501
+    },
+    {
+      "key": [
+        "train",
+        "reviews",
+        "mpt",
+        "greedy",
+        "yes"
+      ],
+      "n": 495
+    },
+    {
+      "key": [
+        "train",
+        "reviews",
+        "mpt",
+        "sampling",
+        "no"
+      ],
+      "n": 499
+    },
+    {
+      "key": [
+        "train",
+        "reviews",
+        "mpt",
+        "sampling",
+        "yes"
+      ],
+      "n": 468
+    },
+    {
+      "key": [
+        "train",
+        "reviews",
+        "mpt-chat",
+        "greedy",
+        "no"
+      ],
+      "n": 502
+    },
+    {
+      "key": [
+        "train",
+        "reviews",
+        "mpt-chat",
+        "greedy",
+        "yes"
+      ],
+      "n": 502
+    },
+    {
+      "key": [
+        "train",
+        "reviews",
+        "mpt-chat",
+        "sampling",
+        "no"
+      ],
+      "n": 501
+    },
+    {
+      "key": [
+        "train",
+        "reviews",
+        "mpt-chat",
+        "sampling",
+        "yes"
+      ],
+      "n": 500
+    },
+    {
+      "key": [
+        "train",
+        "wiki",
+        "chatgpt",
+        "greedy",
+        "no"
+      ],
+      "n": 1035
+    },
+    {
+      "key": [
+        "train",
+        "wiki",
+        "chatgpt",
+        "sampling",
+        "no"
+      ],
+      "n": 1035
+    },
+    {
+      "key": [
+        "train",
+        "wiki",
+        "cohere",
+        "greedy",
+        "no"
+      ],
+      "n": 1034
+    },
+    {
+      "key": [
+        "train",
+        "wiki",
+        "cohere",
+        "sampling",
+        "no"
+      ],
+      "n": 1033
+    },
+    {
+      "key": [
+        "train",
+        "wiki",
+        "cohere-chat",
+        "greedy",
+        "no"
+      ],
+      "n": 1034
+    },
+    {
+      "key": [
+        "train",
+        "wiki",
+        "cohere-chat",
+        "sampling",
+        "no"
+      ],
+      "n": 1032
+    },
+    {
+      "key": [
+        "train",
+        "wiki",
+        "gpt2",
+        "greedy",
+        "no"
+      ],
+      "n": 1034
+    },
+    {
+      "key": [
+        "train",
+        "wiki",
+        "gpt2",
+        "greedy",
+        "yes"
+      ],
+      "n": 1035
+    },
+    {
+      "key": [
+        "train",
+        "wiki",
+        "gpt2",
+        "sampling",
+        "no"
+      ],
+      "n": 1028
+    },
+    {
+      "key": [
+        "train",
+        "wiki",
+        "gpt2",
+        "sampling",
+        "yes"
+      ],
+      "n": 1024
+    },
+    {
+      "key": [
+        "train",
+        "wiki",
+        "gpt3",
+        "greedy",
+        "no"
+      ],
+      "n": 1028
+    },
+    {
+      "key": [
+        "train",
+        "wiki",
+        "gpt3",
+        "sampling",
+        "no"
+      ],
+      "n": 1032
+    },
+    {
+      "key": [
+        "train",
+        "wiki",
+        "gpt4",
+        "greedy",
+        "no"
+      ],
+      "n": 1028
+    },
+    {
+      "key": [
+        "train",
+        "wiki",
+        "gpt4",
+        "sampling",
+        "no"
+      ],
+      "n": 1033
+    },
+    {
+      "key": [
+        "train",
+        "wiki",
+        "human",
+        "",
+        ""
+      ],
+      "n": 1035
+    },
+    {
+      "key": [
+        "train",
+        "wiki",
+        "llama-chat",
+        "greedy",
+        "no"
+      ],
+      "n": 1035
+    },
+    {
+      "key": [
+        "train",
+        "wiki",
+        "llama-chat",
+        "greedy",
+        "yes"
+      ],
+      "n": 1035
+    },
+    {
+      "key": [
+        "train",
+        "wiki",
+        "llama-chat",
+        "sampling",
+        "no"
+      ],
+      "n": 1035
+    },
+    {
+      "key": [
+        "train",
+        "wiki",
+        "llama-chat",
+        "sampling",
+        "yes"
+      ],
+      "n": 1035
+    },
+    {
+      "key": [
+        "train",
+        "wiki",
+        "mistral",
+        "greedy",
+        "no"
+      ],
+      "n": 1033
+    },
+    {
+      "key": [
+        "train",
+        "wiki",
+        "mistral",
+        "greedy",
+        "yes"
+      ],
+      "n": 1035
+    },
+    {
+      "key": [
+        "train",
+        "wiki",
+        "mistral",
+        "sampling",
+        "no"
+      ],
+      "n": 1035
+    },
+    {
+      "key": [
+        "train",
+        "wiki",
+        "mistral",
+        "sampling",
+        "yes"
+      ],
+      "n": 1035
+    },
+    {
+      "key": [
+        "train",
+        "wiki",
+        "mistral-chat",
+        "greedy",
+        "no"
+      ],
+      "n": 1030
+    },
+    {
+      "key": [
+        "train",
+        "wiki",
+        "mistral-chat",
+        "greedy",
+        "yes"
+      ],
+      "n": 1033
+    },
+    {
+      "key": [
+        "train",
+        "wiki",
+        "mistral-chat",
+        "sampling",
+        "no"
+      ],
+      "n": 1031
+    },
+    {
+      "key": [
+        "train",
+        "wiki",
+        "mistral-chat",
+        "sampling",
+        "yes"
+      ],
+      "n": 1032
+    },
+    {
+      "key": [
+        "train",
+        "wiki",
+        "mpt",
+        "greedy",
+        "no"
+      ],
+      "n": 1033
+    },
+    {
+      "key": [
+        "train",
+        "wiki",
+        "mpt",
+        "greedy",
+        "yes"
+      ],
+      "n": 1007
+    },
+    {
+      "key": [
+        "train",
+        "wiki",
+        "mpt",
+        "sampling",
+        "no"
+      ],
+      "n": 1032
+    },
+    {
+      "key": [
+        "train",
+        "wiki",
+        "mpt",
+        "sampling",
+        "yes"
+      ],
+      "n": 953
+    },
+    {
+      "key": [
+        "train",
+        "wiki",
+        "mpt-chat",
+        "greedy",
+        "no"
+      ],
+      "n": 1035
+    },
+    {
+      "key": [
+        "train",
+        "wiki",
+        "mpt-chat",
+        "greedy",
+        "yes"
+      ],
+      "n": 1035
+    },
+    {
+      "key": [
+        "train",
+        "wiki",
+        "mpt-chat",
+        "sampling",
+        "no"
+      ],
+      "n": 1035
+    },
+    {
+      "key": [
+        "train",
+        "wiki",
+        "mpt-chat",
+        "sampling",
+        "yes"
+      ],
+      "n": 1033
+    }
+  ]
+}

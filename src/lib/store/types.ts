@@ -58,10 +58,12 @@ export interface PostAction {
   action: UserAction;
 }
 
-/** Acknowledged only after commit; unresolved targets must stay in the client queue. */
+/** Acknowledged only after commit; missing targets may be retried within client limits. */
 export interface StoreBatchReply {
   ok: true;
   pendingActions: PostAction[];
+  /** Author conflicts cannot succeed on retry. Older workers omit this field. */
+  rejectedActions?: PostAction[];
 }
 
 /** Messages content script → background. */

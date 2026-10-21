@@ -1,7 +1,7 @@
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 import { forceCloseDatabase, IDBFactory, IDBKeyRange } from 'fake-indexeddb';
-import { closeDatabase, DB_VERSION, MAX_POSTS, openDatabase, POST_RETENTION_MS, requestResult, transaction } from '../../../src/lib/store/db';
-import { clearStore, importSnapshot, recordAction, recordSightings } from '../../../src/lib/store/repository';
+import { closeDatabase, DB_NAME, DB_VERSION, MAX_POSTS, migrateDatabase, openDatabase, POST_RETENTION_MS, requestResult, transaction } from '../../../src/lib/store/db';
+import { clearStore, importSnapshot, recordAction, recordBatch, recordSightings } from '../../../src/lib/store/repository';
 import { exportData, getAuthor, getAuthorPosts, getLeaderboard, getStats } from '../../../src/lib/store/query';
 import type { PostRecord, StoredAuthor, StoreExport } from '../../../src/lib/store/model';
 import { sighting } from './helpers';
@@ -124,14 +124,34 @@ describe('Hall of Slop IndexedDB', () => {
 
   it('sorts by points, then max score, and supports pagination and recent posts', async () => {
     const now = Date.now();
-    // 48 and 49 both round to 4 points; maximum breaks the tie.
-    await recordSightings([sighting('a', 48, 'alice', now), sighting('b', 49, 'bob', now), sighting('c', 90, 'charlie', now), sighting('d', 0, 'charlie', now + 1), sighting('clean', 0, 'human', now)]);
+    const posts = (author: string, ...scores: number[]) => scores.map((score, i) => sighting(`${author}-${i}`, score, author, now - 10 + i));
+    await recordSightings([
+      // 48,48,48 and 48,48,49 both round to 13 points; maximum breaks the tie.
+      ...posts('alice', 48, 48, 48), ...posts('bob', 48, 48, 49),
+      ...posts('charlie', 90, 90, 90), sighting('d', 0, 'charlie', now + 1), sighting('clean', 0, 'human', now),
+    ]);
     expect((await getLeaderboard(10)).map((a) => a.id)).toEqual(['charlie', 'bob', 'alice']);
     expect((await getLeaderboard(1, 1)).map((a) => a.id)).toEqual(['bob']);
     expect(await getLeaderboard(0)).toEqual([]);
     expect(await getAuthor('missing')).toBeNull();
-    expect((await getAuthorPosts('charlie', 2)).map((p) => p.postId)).toEqual(['d', 'c']);
-    expect(await getStats()).toMatchObject({ authorsTracked: 4, postsScanned: 5, slopPostsSeen: 3, avgScore: 37.4 });
+    expect((await getAuthorPosts('charlie', 2)).map((p) => p.postId)).toEqual(['d', 'charlie-2']);
+    expect(await getStats()).toMatchObject({ authorsTracked: 4, postsScanned: 11, slopPostsSeen: 9, avgScore: 559 / 11 });
+  });
+
+  it('names nobody in the Hall without a sample: 3+ slop posts, at least half of what we saw', async () => {
+    const now = Date.now();
+    const posts = (author: string, ...scores: number[]) => scores.map((score, i) => sighting(`${author}-${i}`, score, author, now + i));
+    await recordSightings([
+      ...posts('one-bad-day', 100), // the worst post, but only one
+      ...posts('two-strikes', 95, 95), // still too small a sample
+      ...posts('mostly-fine', 70, 70, 70, 0, 0, 0, 0), // 3 of 7: slop is not their habit
+      ...posts('habitual', 45, 45, 45, 0, 0, 0), // 3 of 6: half counts
+    ]);
+    expect((await getLeaderboard(10)).map((a) => a.id)).toEqual(['habitual']);
+    // Points still accrue for everyone, so a later slop post can tip them in.
+    expect((await getAuthor('one-bad-day'))!.slopPoints).toBeGreaterThan((await getAuthor('habitual'))!.slopPoints);
+    await recordSightings(posts('two-strikes', 95, 95, 95).map((s, i) => ({ ...s, postId: `late-${i}` })).slice(0, 1));
+    expect((await getLeaderboard(10)).map((a) => a.id)).toEqual(['two-strikes', 'habitual']);
   });
 
   it('prunes expired details while retaining all aggregates and the archived worst', async () => {
@@ -177,9 +197,10 @@ describe('Hall of Slop IndexedDB', () => {
   }, 15_000);
 
   it('exports/imports exactly, rejects corrupt imports atomically, then clears', async () => {
-    await recordSightings([sighting('a', 80, 'alice'), sighting('b', 10, 'bob')]);
+    await recordSightings([sighting('a', 80, 'alice'), sighting('a2', 80, 'alice'), sighting('a3', 80, 'alice'), sighting('b', 10, 'bob')]);
     await recordAction('a', 'alice', 'shamed');
     const leaderboard = await getLeaderboard(10);
+    expect(leaderboard).toHaveLength(1);
     const stats = await getStats();
     const blob = await exportData();
     expect(blob.type).toBe('application/json');
@@ -214,5 +235,75 @@ describe('Hall of Slop IndexedDB', () => {
     normalized.authors[0]!.slopocalypsePosts = 0;
     normalized.authors[0]!.slopPoints -= 3;
     await expect(importSnapshot(JSON.stringify(normalized))).rejects.toThrow('Posts exceed');
+  });
+});
+
+describe('canonical author ids', () => {
+  /** A snapshot that splits one author across two spellings, as v1 could store it. */
+  async function splitSnapshot(): Promise<StoreExport> {
+    const now = Date.now();
+    await recordSightings([sighting('a', 80, 'in/jane-doe', now), sighting('b', 60, 'in/jane-doe', now + 1), sighting('c', 45, 'in/alias', now + 2)]);
+    await recordAction('a', 'in/jane-doe', 'destroyed');
+    await recordAction('c', 'in/alias', 'shamed');
+    const snapshot = JSON.parse(await (await exportData()).text()) as StoreExport;
+    for (const author of snapshot.authors) if (author.id === 'in/alias') Object.assign(author, { id: 'in/Jane-Doe', name: 'Jane Doe' });
+    for (const post of snapshot.posts) if (post.authorId === 'in/alias') post.authorId = 'in/Jane-Doe';
+    await clearStore();
+    return snapshot;
+  }
+
+  function expectMerged(author: Awaited<ReturnType<typeof getAuthor>>) {
+    expect(author).toMatchObject({
+      id: 'in/jane-doe', name: 'Jane Doe', postsSeen: 3, slopPosts: 3, totalScore: 185, maxScore: 80,
+      destroyedCount: 1, shamedCount: 1, worstPost: { postId: 'a', score: 80 },
+    });
+  }
+
+  it('keeps one record, one Hall entry and working actions across percent-encoding and case', async () => {
+    const now = Date.now();
+    await recordSightings([sighting('a', 80, 'in/Jane-Doe', now), sighting('b', 60, 'in/%6Aane-doe', now), sighting('c', 45, 'in/jane-doe', now)]);
+    expect(await getAuthor('in/JANE-DOE')).toMatchObject({ id: 'in/jane-doe', postsSeen: 3, slopPosts: 3 });
+    expect((await getLeaderboard(10)).map((author) => author.id)).toEqual(['in/jane-doe']);
+    expect(await recordAction('a', 'in/jane-doe', 'destroyed')).toBe(true);
+    // Replies name actions exactly as the caller spelled them.
+    const reply = await recordBatch([], [{ postId: 'b', authorId: 'in/JANE-doe', action: 'shamed' }, { postId: 'later', authorId: 'in/Jane-Doe', action: 'shamed' }]);
+    expect(reply.pendingActions).toEqual([{ postId: 'later', authorId: 'in/Jane-Doe', action: 'shamed' }]);
+    expect(await getAuthor('in/jane-doe')).toMatchObject({ destroyedCount: 1, shamedCount: 1 });
+    // A re-score under another spelling updates the same post.
+    await recordSightings([sighting('c', 90, 'in/JANE-DOE', now + 1)]);
+    expect(await getAuthor('in/jane-doe')).toMatchObject({ postsSeen: 3, maxScore: 90 });
+    expect((await getAuthorPosts('in/Jane-Doe', 10)).map((post) => post.postId).sort()).toEqual(['a', 'b', 'c']);
+  });
+
+  it('merges a v1 database\'s alias records exactly when it upgrades', async () => {
+    const snapshot = await splitSnapshot();
+    await closeDatabase();
+    vi.stubGlobal('indexedDB', new IDBFactory());
+    await new Promise<void>((resolve, reject) => {
+      const request = indexedDB.open(DB_NAME, 1);
+      request.onupgradeneeded = () => {
+        migrateDatabase(request.result, request.transaction!, 0);
+        for (const author of snapshot.authors) request.transaction!.objectStore('authors').put(author);
+        for (const post of snapshot.posts) request.transaction!.objectStore('posts').put(post);
+      };
+      request.onsuccess = () => { request.result.close(); resolve(); };
+      request.onerror = () => reject(request.error);
+    });
+    expect((await openDatabase()).version).toBe(2);
+    expectMerged(await getAuthor('in/Jane-Doe'));
+    expect((await getStats()).authorsTracked).toBe(1);
+    expect((await getAuthorPosts('in/jane-doe', 10)).map((post) => post.postId).sort()).toEqual(['a', 'b', 'c']);
+    expect((await getLeaderboard(10)).map((author) => author.id)).toEqual(['in/jane-doe']);
+    // The merged aggregates are consistent enough to round-trip through import.
+    await expect(importSnapshot(await (await exportData()).text())).resolves.toBeUndefined();
+    expectMerged(await getAuthor('in/jane-doe'));
+  });
+
+  it('merges alias records in an older export on import', async () => {
+    const snapshot = await splitSnapshot();
+    await importSnapshot(JSON.stringify(snapshot));
+    expectMerged(await getAuthor('in/jane-doe'));
+    expect((await getStats()).authorsTracked).toBe(1);
+    expect((await getAuthorPosts('in/jane-doe', 10)).map((post) => post.postId).sort()).toEqual(['a', 'b', 'c']);
   });
 });

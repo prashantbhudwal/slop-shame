@@ -1,0 +1,682 @@
+[
+  {
+    "ref": "zeroslop:data/patterns.json:patterns[29]",
+    "reason": "regex-safety:Nested quantifiers"
+  },
+  {
+    "ref": "zeroslop:data/patterns.json:patterns[40]",
+    "reason": "regex-safety:Nested quantifiers"
+  },
+  {
+    "ref": "zeroslop:data/patterns.json:patterns[44]",
+    "reason": "regex-safety:Nested quantifiers"
+  },
+  {
+    "ref": "zeroslop:data/patterns.json:patterns[49]",
+    "reason": "regex-safety:Lookaround, backreference or inline flags"
+  },
+  {
+    "ref": "zeroslop:data/patterns.json:patterns[56]",
+    "reason": "regex-safety:Nested quantifiers"
+  },
+  {
+    "ref": "zeroslop:data/patterns.json:patterns[60]",
+    "reason": "regex-safety:Nested quantifiers"
+  },
+  {
+    "ref": "zeroslop:data/patterns.json:patterns[61]",
+    "reason": "regex-safety:Nested quantifiers"
+  },
+  {
+    "ref": "zeroslop:data/patterns.json:patterns[61]",
+    "reason": "regex-safety:Nested quantifiers"
+  },
+  {
+    "ref": "zeroslop:data/patterns.json:patterns[61]",
+    "reason": "regex-safety:Nested quantifiers"
+  },
+  {
+    "ref": "zeroslop:data/patterns.json:patterns[61]",
+    "reason": "regex-safety:Nested quantifiers"
+  },
+  {
+    "ref": "zeroslop:data/patterns.json:patterns[66]",
+    "reason": "regex-safety:Nested quantifiers"
+  },
+  {
+    "ref": "zeroslop:data/patterns.json:patterns[68]",
+    "reason": "regex-safety:Lookaround, backreference or inline flags"
+  },
+  {
+    "ref": "zeroslop:data/patterns.json:patterns[128]",
+    "reason": "regex-safety:Nested quantifiers"
+  },
+  {
+    "ref": "zeroslop:data/patterns.json:patterns[272]",
+    "reason": "regex-safety:Lookaround, backreference or inline flags"
+  },
+  {
+    "ref": "zeroslop:data/patterns.json:riders.leverage",
+    "reason": "conditional-rider: upstream requires contextual trigger; a standalone phrase would lose that guard"
+  },
+  {
+    "ref": "zeroslop:data/patterns.json:riders.leveraging",
+    "reason": "conditional-rider: upstream requires contextual trigger; a standalone phrase would lose that guard"
+  },
+  {
+    "ref": "zeroslop:data/patterns.json:riders.robust",
+    "reason": "conditional-rider: upstream requires contextual trigger; a standalone phrase would lose that guard"
+  },
+  {
+    "ref": "zeroslop:data/patterns.json:riders.harness",
+    "reason": "conditional-rider: upstream requires contextual trigger; a standalone phrase would lose that guard"
+  },
+  {
+    "ref": "zeroslop:data/patterns.json:riders.elevat",
+    "reason": "conditional-rider: upstream requires contextual trigger; a standalone phrase would lose that guard"
+  },
+  {
+    "ref": "zeroslop:data/patterns.json:riders.streamline",
+    "reason": "conditional-rider: upstream requires contextual trigger; a standalone phrase would lose that guard"
+  },
+  {
+    "ref": "zeroslop:data/patterns.json:riders.landscape",
+    "reason": "conditional-rider: upstream requires contextual trigger; a standalone phrase would lose that guard"
+  },
+  {
+    "ref": "zeroslop:data/patterns.json:riders.navigate",
+    "reason": "conditional-rider: upstream requires contextual trigger; a standalone phrase would lose that guard"
+  },
+  {
+    "ref": "zeroslop:data/patterns.json:riders.showcas",
+    "reason": "conditional-rider: upstream requires contextual trigger; a standalone phrase would lose that guard"
+  },
+  {
+    "ref": "zeroslop:data/patterns.json:riders.underscore",
+    "reason": "conditional-rider: upstream requires contextual trigger; a standalone phrase would lose that guard"
+  },
+  {
+    "ref": "zeroslop:data/patterns.json:riders.insights",
+    "reason": "conditional-rider: upstream requires contextual trigger; a standalone phrase would lose that guard"
+  },
+  {
+    "ref": "zeroslop:data/patterns.json:riders.journey",
+    "reason": "conditional-rider: upstream requires contextual trigger; a standalone phrase would lose that guard"
+  },
+  {
+    "ref": "zeroslop:data/patterns.json:riders.resonate",
+    "reason": "conditional-rider: upstream requires contextual trigger; a standalone phrase would lose that guard"
+  },
+  {
+    "ref": "zeroslop:data/patterns.json:riders.emphasiz",
+    "reason": "conditional-rider: upstream requires contextual trigger; a standalone phrase would lose that guard"
+  },
+  {
+    "ref": "zeroslop:data/patterns.json:riders.enhanc",
+    "reason": "conditional-rider: upstream requires contextual trigger; a standalone phrase would lose that guard"
+  },
+  {
+    "ref": "zeroslop:data/patterns.json:riders.highlight",
+    "reason": "conditional-rider: upstream requires contextual trigger; a standalone phrase would lose that guard"
+  },
+  {
+    "ref": "zeroslop:data/patterns.json:riders.amplif",
+    "reason": "conditional-rider: upstream requires contextual trigger; a standalone phrase would lose that guard"
+  },
+  {
+    "ref": "zeroslop:data/patterns.json:riders.innovativ",
+    "reason": "conditional-rider: upstream requires contextual trigger; a standalone phrase would lose that guard"
+  },
+  {
+    "ref": "zeroslop:data/patterns.json:riders.comprehensive",
+    "reason": "conditional-rider: upstream requires contextual trigger; a standalone phrase would lose that guard"
+  },
+  {
+    "ref": "zeroslop:data/patterns.json:riders.embrac",
+    "reason": "conditional-rider: upstream requires contextual trigger; a standalone phrase would lose that guard"
+  },
+  {
+    "ref": "zeroslop:data/patterns.json:riders.unpack",
+    "reason": "conditional-rider: upstream requires contextual trigger; a standalone phrase would lose that guard"
+  },
+  {
+    "ref": "zeroslop:data/patterns.json:riders.nuanc",
+    "reason": "conditional-rider: upstream requires contextual trigger; a standalone phrase would lose that guard"
+  },
+  {
+    "ref": "zeroslop:data/patterns.json:riders.catalys",
+    "reason": "conditional-rider: upstream requires contextual trigger; a standalone phrase would lose that guard"
+  },
+  {
+    "ref": "zeroslop:data/patterns.json:riders.profound",
+    "reason": "conditional-rider: upstream requires contextual trigger; a standalone phrase would lose that guard"
+  },
+  {
+    "ref": "zeroslop:data/patterns.json:riders.orchestrat",
+    "reason": "conditional-rider: upstream requires contextual trigger; a standalone phrase would lose that guard"
+  },
+  {
+    "ref": "zeroslop:data/patterns.json:riders.fight against",
+    "reason": "conditional-rider: upstream requires contextual trigger; a standalone phrase would lose that guard"
+  },
+  {
+    "ref": "zeroslop:data/patterns.json:rider_triggers[0]",
+    "reason": "rider-trigger: conditional metadata, not independently positive evidence"
+  },
+  {
+    "ref": "zeroslop:data/patterns.json:rider_triggers[1]",
+    "reason": "rider-trigger: conditional metadata, not independently positive evidence"
+  },
+  {
+    "ref": "zeroslop:data/patterns.json:rider_triggers[2]",
+    "reason": "rider-trigger: conditional metadata, not independently positive evidence"
+  },
+  {
+    "ref": "zeroslop:data/patterns.json:rider_triggers[3]",
+    "reason": "rider-trigger: conditional metadata, not independently positive evidence"
+  },
+  {
+    "ref": "zeroslop:data/patterns.json:rider_triggers[4]",
+    "reason": "rider-trigger: conditional metadata, not independently positive evidence"
+  },
+  {
+    "ref": "zeroslop:data/patterns.json:rider_triggers[5]",
+    "reason": "rider-trigger: conditional metadata, not independently positive evidence"
+  },
+  {
+    "ref": "zeroslop:data/patterns.json:rider_triggers[6]",
+    "reason": "rider-trigger: conditional metadata, not independently positive evidence"
+  },
+  {
+    "ref": "zeroslop:data/patterns.json:rider_triggers[7]",
+    "reason": "rider-trigger: conditional metadata, not independently positive evidence"
+  },
+  {
+    "ref": "zeroslop:data/patterns.json:rider_triggers[8]",
+    "reason": "rider-trigger: conditional metadata, not independently positive evidence"
+  },
+  {
+    "ref": "zeroslop:data/patterns.json:rider_triggers[9]",
+    "reason": "rider-trigger: conditional metadata, not independently positive evidence"
+  },
+  {
+    "ref": "zeroslop:data/patterns.json:rider_triggers[10]",
+    "reason": "rider-trigger: conditional metadata, not independently positive evidence"
+  },
+  {
+    "ref": "zeroslop:data/patterns.json:rider_triggers[11]",
+    "reason": "rider-trigger: conditional metadata, not independently positive evidence"
+  },
+  {
+    "ref": "zeroslop:data/patterns.json:rider_triggers[12]",
+    "reason": "rider-trigger: conditional metadata, not independently positive evidence"
+  },
+  {
+    "ref": "zeroslop:data/patterns.json:rider_triggers[13]",
+    "reason": "rider-trigger: conditional metadata, not independently positive evidence"
+  },
+  {
+    "ref": "zeroslop:data/patterns.json:rider_triggers[14]",
+    "reason": "rider-trigger: conditional metadata, not independently positive evidence"
+  },
+  {
+    "ref": "zeroslop:data/patterns.json:rider_triggers[15]",
+    "reason": "rider-trigger: conditional metadata, not independently positive evidence"
+  },
+  {
+    "ref": "zeroslop:data/patterns.json:rider_triggers[16]",
+    "reason": "rider-trigger: conditional metadata, not independently positive evidence"
+  },
+  {
+    "ref": "zeroslop:data/patterns.json:rider_triggers[17]",
+    "reason": "rider-trigger: conditional metadata, not independently positive evidence"
+  },
+  {
+    "ref": "zeroslop:data/patterns.json:rider_triggers[18]",
+    "reason": "rider-trigger: conditional metadata, not independently positive evidence"
+  },
+  {
+    "ref": "zeroslop:data/patterns.json:rider_triggers[19]",
+    "reason": "rider-trigger: conditional metadata, not independently positive evidence"
+  },
+  {
+    "ref": "zeroslop:data/patterns.json:rider_triggers[20]",
+    "reason": "rider-trigger: conditional metadata, not independently positive evidence"
+  },
+  {
+    "ref": "zeroslop:data/patterns.json:rider_triggers[21]",
+    "reason": "rider-trigger: conditional metadata, not independently positive evidence"
+  },
+  {
+    "ref": "zeroslop:data/patterns.json:rider_triggers[22]",
+    "reason": "rider-trigger: conditional metadata, not independently positive evidence"
+  },
+  {
+    "ref": "zeroslop:data/patterns.json:rider_triggers[23]",
+    "reason": "rider-trigger: conditional metadata, not independently positive evidence"
+  },
+  {
+    "ref": "zeroslop:data/patterns.json:rider_triggers[24]",
+    "reason": "rider-trigger: conditional metadata, not independently positive evidence"
+  },
+  {
+    "ref": "paech-essays:slop_list_phrases.jsonl:6",
+    "reason": "regex-safety:Nested quantifiers"
+  },
+  {
+    "ref": "paech-essays:slop_list_phrases.jsonl:32",
+    "reason": "regex-safety:Unbalanced regex"
+  },
+  {
+    "ref": "paech-essays:slop_list_phrases.jsonl:43",
+    "reason": "regex-safety:Unbalanced regex"
+  },
+  {
+    "ref": "paech-essays:slop_list_phrases.jsonl:55",
+    "reason": "regex-safety:Unbalanced regex"
+  },
+  {
+    "ref": "paech-essays:slop_list_phrases.jsonl:62",
+    "reason": "regex-safety:Unbalanced regex"
+  },
+  {
+    "ref": "paech-essays:slop_list_phrases.jsonl:64",
+    "reason": "regex-safety:Unbalanced regex"
+  },
+  {
+    "ref": "paech-essays:slop_list_phrases.jsonl:93",
+    "reason": "regex-safety:Unbalanced regex"
+  },
+  {
+    "ref": "paech-essays:slop_list_phrases.jsonl:108",
+    "reason": "regex-safety:Unbalanced regex"
+  },
+  {
+    "ref": "paech-essays:slop_list_phrases.jsonl:114",
+    "reason": "regex-safety:Unbalanced regex"
+  },
+  {
+    "ref": "paech-essays:slop_list_phrases.jsonl:148",
+    "reason": "regex-safety:Unbalanced regex"
+  },
+  {
+    "ref": "paech-essays:slop_list_phrases.jsonl:158",
+    "reason": "regex-safety:Unbalanced regex"
+  },
+  {
+    "ref": "paech-essays:slop_list_phrases.jsonl:178",
+    "reason": "regex-safety:Unbalanced regex"
+  },
+  {
+    "ref": "paech-essays:slop_list_phrases.jsonl:180",
+    "reason": "regex-safety:Nested quantifiers"
+  },
+  {
+    "ref": "paech-essays:slop_list_phrases.jsonl:229",
+    "reason": "regex-safety:Unbalanced regex"
+  },
+  {
+    "ref": "paech-essays:slop_list_phrases.jsonl:241",
+    "reason": "regex-safety:Unbalanced regex"
+  },
+  {
+    "ref": "paech-essays:slop_list_phrases.jsonl:248",
+    "reason": "regex-safety:Unbalanced regex"
+  },
+  {
+    "ref": "paech-essays:slop_list_phrases.jsonl:266",
+    "reason": "regex-safety:Unbalanced regex"
+  },
+  {
+    "ref": "paech-essays:slop_list_phrases.jsonl:285",
+    "reason": "regex-safety:Unbalanced regex"
+  },
+  {
+    "ref": "paech-essays:slop_list_phrases.jsonl:317",
+    "reason": "regex-safety:Unbalanced regex"
+  },
+  {
+    "ref": "paech-essays:slop_list_phrases.jsonl:335",
+    "reason": "regex-safety:Unbalanced regex"
+  },
+  {
+    "ref": "paech-essays:slop_list_phrases.jsonl:339",
+    "reason": "regex-safety:Unbalanced regex"
+  },
+  {
+    "ref": "paech-essays:slop_list_phrases.jsonl:342",
+    "reason": "regex-safety:Unbalanced regex"
+  },
+  {
+    "ref": "paech-essays:slop_list_phrases.jsonl:361",
+    "reason": "regex-safety:Unbalanced regex"
+  },
+  {
+    "ref": "paech-essays:slop_list_phrases.jsonl:467",
+    "reason": "regex-safety:Unbalanced regex"
+  },
+  {
+    "ref": "paech-essays:slop_list_phrases.jsonl:487",
+    "reason": "regex-safety:Unbalanced regex"
+  },
+  {
+    "ref": "paech-essays:slop_list_phrases.jsonl:534",
+    "reason": "regex-safety:Unbalanced regex"
+  },
+  {
+    "ref": "paech-essays:slop_list_phrases.jsonl:536",
+    "reason": "regex-safety:Unbalanced regex"
+  },
+  {
+    "ref": "paech-essays:slop_list_phrases.jsonl:551",
+    "reason": "regex-safety:Unbalanced regex"
+  },
+  {
+    "ref": "paech-essays:slop_list_phrases.jsonl:632",
+    "reason": "regex-safety:Nested quantifiers"
+  },
+  {
+    "ref": "paech-essays:slop_list_phrases.jsonl:696",
+    "reason": "regex-safety:Unbalanced regex"
+  },
+  {
+    "ref": "paech-essays:slop_list_phrases.jsonl:708",
+    "reason": "regex-safety:Unbalanced regex"
+  },
+  {
+    "ref": "paech-essays:slop_list_phrases.jsonl:718",
+    "reason": "regex-safety:Unbalanced regex"
+  },
+  {
+    "ref": "paech-essays:slop_list_phrases.jsonl:725",
+    "reason": "regex-safety:Unbalanced regex"
+  },
+  {
+    "ref": "paech-essays:slop_list_phrases.jsonl:759",
+    "reason": "regex-safety:Unbalanced regex"
+  },
+  {
+    "ref": "paech-essays:slop_list_phrases.jsonl:791",
+    "reason": "regex-safety:Unbalanced regex"
+  },
+  {
+    "ref": "paech-essays:slop_list_phrases.jsonl:793",
+    "reason": "regex-safety:Unbalanced regex"
+  },
+  {
+    "ref": "paech-essays:slop_list_phrases.jsonl:827",
+    "reason": "regex-safety:Unbalanced regex"
+  },
+  {
+    "ref": "paech-essays:slop_list_phrases.jsonl:877",
+    "reason": "regex-safety:Unbalanced regex"
+  },
+  {
+    "ref": "paech-essays:slop_list_phrases.jsonl:884",
+    "reason": "regex-safety:Unbalanced regex"
+  },
+  {
+    "ref": "paech-essays:slop_list_phrases.jsonl:902",
+    "reason": "regex-safety:Unbalanced regex"
+  },
+  {
+    "ref": "paech-essays:slop_list_phrases.jsonl:905",
+    "reason": "regex-safety:Unbalanced regex"
+  },
+  {
+    "ref": "paech-essays:slop_list_phrases.jsonl:968",
+    "reason": "regex-safety:Unbalanced regex"
+  },
+  {
+    "ref": "paech-essays:slop_list_phrases.jsonl:986",
+    "reason": "regex-safety:Unbalanced regex"
+  },
+  {
+    "ref": "paech-essays:slop_list_phrases.jsonl:1006",
+    "reason": "regex-safety:Unbalanced regex"
+  },
+  {
+    "ref": "paech-essays:slop_list_phrases.jsonl:1021",
+    "reason": "regex-safety:Unbalanced regex"
+  },
+  {
+    "ref": "paech-essays:slop_list_phrases.jsonl:1066",
+    "reason": "regex-safety:Unbalanced regex"
+  },
+  {
+    "ref": "paech-essays:slop_list_phrases.jsonl:1111",
+    "reason": "regex-safety:Unbalanced regex"
+  },
+  {
+    "ref": "paech-essays:slop_list_phrases.jsonl:1122",
+    "reason": "regex-safety:Unbalanced regex"
+  },
+  {
+    "ref": "paech-essays:slop_list_phrases.jsonl:1217",
+    "reason": "regex-safety:Unbalanced regex"
+  },
+  {
+    "ref": "paech-essays:slop_list_phrases.jsonl:1238",
+    "reason": "regex-safety:Nested quantifiers"
+  },
+  {
+    "ref": "paech-essays:slop_list_phrases.jsonl:1359",
+    "reason": "regex-safety:Nested quantifiers"
+  },
+  {
+    "ref": "paech-essays:slop_list_phrases.jsonl:1360",
+    "reason": "regex-safety:Nested quantifiers"
+  },
+  {
+    "ref": "paech-essays:slop_list_phrases.jsonl:1361",
+    "reason": "regex-safety:Nested quantifiers"
+  },
+  {
+    "ref": "paech-essays:slop_list_phrases.jsonl:1424",
+    "reason": "regex-safety:Nested quantifiers"
+  },
+  {
+    "ref": "paech-essays:slop_list_phrases.jsonl:1445",
+    "reason": "regex-safety:Unbalanced regex"
+  },
+  {
+    "ref": "paech-essays:slop_list_phrases.jsonl:1499",
+    "reason": "regex-safety:Unbalanced regex"
+  },
+  {
+    "ref": "paech-essays:slop_list_phrases.jsonl:1559",
+    "reason": "regex-safety:Unbalanced regex"
+  },
+  {
+    "ref": "paech-essays:slop_list_phrases.jsonl:1574",
+    "reason": "regex-safety:Unbalanced regex"
+  },
+  {
+    "ref": "paech-essays:slop_list_phrases.jsonl:1621",
+    "reason": "regex-safety:Unbalanced regex"
+  },
+  {
+    "ref": "paech-essays:slop_list_phrases.jsonl:1645",
+    "reason": "regex-safety:Nested quantifiers"
+  },
+  {
+    "ref": "paech-essays:slop_list_phrases.jsonl:1688",
+    "reason": "regex-safety:Unbalanced regex"
+  },
+  {
+    "ref": "paech-essays:slop_list_phrases.jsonl:1933",
+    "reason": "regex-safety:Nested quantifiers"
+  },
+  {
+    "ref": "paech-essays:slop_list_phrases.jsonl:1951",
+    "reason": "regex-safety:Unbalanced regex"
+  },
+  {
+    "ref": "paech-essays:slop_list_phrases.jsonl:1976",
+    "reason": "regex-safety:Nested quantifiers"
+  },
+  {
+    "ref": "paech-essays:slop_list_phrases.jsonl:1977",
+    "reason": "regex-safety:Unbalanced regex"
+  },
+  {
+    "ref": "paech-essays:slop_list_phrases.jsonl:1978",
+    "reason": "regex-safety:Nested quantifiers"
+  },
+  {
+    "ref": "paech-essays:slop_list_phrases.jsonl:2013",
+    "reason": "regex-safety:Nested quantifiers"
+  },
+  {
+    "ref": "paech-essays:slop_list_phrases.jsonl:2022",
+    "reason": "regex-safety:Nested quantifiers"
+  },
+  {
+    "ref": "paech-essays:slop_list_phrases.jsonl:2023",
+    "reason": "regex-safety:Nested quantifiers"
+  },
+  {
+    "ref": "paech-essays:slop_list_phrases.jsonl:2040",
+    "reason": "regex-safety:Unbalanced regex"
+  },
+  {
+    "ref": "paech-essays:slop_list_phrases.jsonl:2053",
+    "reason": "regex-safety:Unbalanced regex"
+  },
+  {
+    "ref": "paech-essays:slop_list_phrases.jsonl:2084",
+    "reason": "regex-safety:Unbalanced regex"
+  },
+  {
+    "ref": "paech-essays:slop_list_phrases.jsonl:2103",
+    "reason": "regex-safety:Nested quantifiers"
+  },
+  {
+    "ref": "paech-essays:slop_list_phrases.jsonl:2129",
+    "reason": "regex-safety:Nested quantifiers"
+  },
+  {
+    "ref": "paech-essays:slop_list_phrases.jsonl:2132",
+    "reason": "regex-safety:Unbalanced regex"
+  },
+  {
+    "ref": "paech-essays:slop_list_phrases.jsonl:2153",
+    "reason": "regex-safety:Nested quantifiers"
+  },
+  {
+    "ref": "paech-essays:slop_list_phrases.jsonl:2161",
+    "reason": "regex-safety:Nested quantifiers"
+  },
+  {
+    "ref": "paech-essays:slop_list_phrases.jsonl:2162",
+    "reason": "regex-safety:Nested quantifiers"
+  },
+  {
+    "ref": "paech-essays:slop_list_phrases.jsonl:2218",
+    "reason": "regex-safety:Nested quantifiers"
+  },
+  {
+    "ref": "paech-essays:slop_list_phrases.jsonl:2321",
+    "reason": "regex-safety:Nested quantifiers"
+  },
+  {
+    "ref": "paech-essays:slop_list_phrases.jsonl:2329",
+    "reason": "regex-safety:Nested quantifiers"
+  },
+  {
+    "ref": "paech-essays:slop_list_phrases.jsonl:2340",
+    "reason": "regex-safety:Nested quantifiers"
+  },
+  {
+    "ref": "paech-essays:slop_list_phrases.jsonl:2346",
+    "reason": "regex-safety:Unbalanced regex"
+  },
+  {
+    "ref": "paech-essays:slop_list_phrases.jsonl:2347",
+    "reason": "regex-safety:Unbalanced regex"
+  },
+  {
+    "ref": "paech-essays:slop_list_phrases.jsonl:2350",
+    "reason": "regex-safety:Nested quantifiers"
+  },
+  {
+    "ref": "paech-essays:slop_list_phrases.jsonl:2362",
+    "reason": "regex-safety:Invalid regular expression: /control and prevention [cdc/gi: Unterminated character class"
+  },
+  {
+    "ref": "paech-essays:slop_list_phrases.jsonl:2368",
+    "reason": "regex-safety:Nested quantifiers"
+  },
+  {
+    "ref": "paech-essays:slop_list_phrases.jsonl:2383",
+    "reason": "regex-safety:Nested quantifiers"
+  },
+  {
+    "ref": "paech-essays:slop_list_phrases.jsonl:2397",
+    "reason": "regex-safety:Nested quantifiers"
+  },
+  {
+    "ref": "paech-essays:slop_list_phrases.jsonl:2398",
+    "reason": "regex-safety:Nested quantifiers"
+  },
+  {
+    "ref": "paech-essays:slop_list_phrases.jsonl:2413",
+    "reason": "regex-safety:Unbalanced regex"
+  },
+  {
+    "ref": "paech-essays:slop_list_phrases.jsonl:2449",
+    "reason": "regex-safety:Nested quantifiers"
+  },
+  {
+    "ref": "paech-essays:slop_list_phrases.jsonl:2491",
+    "reason": "regex-safety:Nested quantifiers"
+  },
+  {
+    "ref": "paech-essays:slop_list_phrases.jsonl:2492",
+    "reason": "regex-safety:Unbalanced regex"
+  },
+  {
+    "ref": "paech-essays:slop_list_phrases.jsonl:2493",
+    "reason": "regex-safety:Nested quantifiers"
+  },
+  {
+    "ref": "paech-essays:slop_list_phrases.jsonl:2554",
+    "reason": "regex-safety:Unbalanced regex"
+  },
+  {
+    "ref": "paech-essays:slop_list_phrases.jsonl:2627",
+    "reason": "regex-safety:Nested quantifiers"
+  },
+  {
+    "ref": "paech-essays:slop_list_phrases.jsonl:2628",
+    "reason": "regex-safety:Nested quantifiers"
+  },
+  {
+    "ref": "paech-essays:slop_list_phrases.jsonl:2634",
+    "reason": "regex-safety:Nested quantifiers"
+  },
+  {
+    "ref": "paech-essays:slop_list_phrases.jsonl:2736",
+    "reason": "regex-safety:Nested quantifiers"
+  },
+  {
+    "ref": "paech-essays:slop_list_phrases.jsonl:2772",
+    "reason": "regex-safety:Nested quantifiers"
+  },
+  {
+    "ref": "paech-essays:slop_list_phrases.jsonl:2848",
+    "reason": "regex-safety:Unbalanced regex"
+  },
+  {
+    "ref": "paech-essays:slop_list_phrases.jsonl:2888",
+    "reason": "regex-safety:Unbalanced regex"
+  },
+  {
+    "ref": "slop-radar:src/database/patterns.json:bullet-overload",
+    "reason": "regex-safety:Nested quantifiers"
+  },
+  {
+    "ref": "slop-radar:src/database/patterns.json:triple-adjective",
+    "reason": "regex-safety:Nested quantifiers"
+  }
+]

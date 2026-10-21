@@ -1,0 +1,350 @@
+{
+  "receipts": [
+    {
+      "file": "gemini-3.8-flash-medium.jsonl",
+      "sha256": "3c5bf09c085a68a6f0ca1e314e2fcc36103c17e4ca14aa23d8c40c63ef175a3b",
+      "total": 120,
+      "duplicates": 0,
+      "kept": 120
+    },
+    {
+      "file": "gpt-6-luna-medium.jsonl",
+      "sha256": "645723e94517e322afc355ee62d3dc1d92894614a029b54b28f04435b7d2b233",
+      "total": 120,
+      "duplicates": 0,
+      "kept": 120
+    }
+  ],
+  "metrics": {
+    "overall": {
+      "human": 240,
+      "fp": 6,
+      "fpRate": 0.025,
+      "shameFP": 5,
+      "ai": 0,
+      "tp40": 0,
+      "recall40": null,
+      "tp60": 0,
+      "recall60": null,
+      "auroc": null,
+      "base": 0,
+      "baseRecall40": null,
+      "hardHuman": 0,
+      "hardFP": 0
+    },
+    "domain": {
+      "news": {
+        "human": 72,
+        "fp": 3,
+        "fpRate": 0.041666666666666664,
+        "shameFP": 3,
+        "ai": 0,
+        "tp40": 0,
+        "recall40": null,
+        "tp60": 0,
+        "recall60": null,
+        "auroc": null,
+        "base": 0,
+        "baseRecall40": null,
+        "hardHuman": 0,
+        "hardFP": 0
+      },
+      "reddit": {
+        "human": 128,
+        "fp": 3,
+        "fpRate": 0.0234375,
+        "shameFP": 2,
+        "ai": 0,
+        "tp40": 0,
+        "recall40": null,
+        "tp60": 0,
+        "recall60": null,
+        "auroc": null,
+        "base": 0,
+        "baseRecall40": null,
+        "hardHuman": 0,
+        "hardFP": 0
+      },
+      "reviews": {
+        "human": 40,
+        "fp": 0,
+        "fpRate": 0,
+        "shameFP": 0,
+        "ai": 0,
+        "tp40": 0,
+        "recall40": null,
+        "tp60": 0,
+        "recall60": null,
+        "auroc": null,
+        "base": 0,
+        "baseRecall40": null,
+        "hardHuman": 0,
+        "hardFP": 0
+      }
+    },
+    "model": {
+      "gemini-3.8-flash": {
+        "human": 120,
+        "fp": 5,
+        "fpRate": 0.041666666666666664,
+        "shameFP": 4,
+        "ai": 0,
+        "tp40": 0,
+        "recall40": null,
+        "tp60": 0,
+        "recall60": null,
+        "auroc": null,
+        "base": 0,
+        "baseRecall40": null,
+        "hardHuman": 0,
+        "hardFP": 0
+      },
+      "gpt-6-luna": {
+        "human": 120,
+        "fp": 1,
+        "fpRate": 0.008333333333333333,
+        "shameFP": 1,
+        "ai": 0,
+        "tp40": 0,
+        "recall40": null,
+        "tp60": 0,
+        "recall60": null,
+        "auroc": null,
+        "base": 0,
+        "baseRecall40": null,
+        "hardHuman": 0,
+        "hardFP": 0
+      }
+    },
+    "length": {
+      "300–600": {
+        "human": 240,
+        "fp": 6,
+        "fpRate": 0.025,
+        "shameFP": 5,
+        "ai": 0,
+        "tp40": 0,
+        "recall40": null,
+        "tp60": 0,
+        "recall60": null,
+        "auroc": null,
+        "base": 0,
+        "baseRecall40": null,
+        "hardHuman": 0,
+        "hardFP": 0
+      }
+    },
+    "decoding": {
+      "n/a": {
+        "human": 240,
+        "fp": 6,
+        "fpRate": 0.025,
+        "shameFP": 5,
+        "ai": 0,
+        "tp40": 0,
+        "recall40": null,
+        "tp60": 0,
+        "recall60": null,
+        "auroc": null,
+        "base": 0,
+        "baseRecall40": null,
+        "hardHuman": 0,
+        "hardFP": 0
+      }
+    },
+    "repetition_penalty": {
+      "n/a": {
+        "human": 240,
+        "fp": 6,
+        "fpRate": 0.025,
+        "shameFP": 5,
+        "ai": 0,
+        "tp40": 0,
+        "recall40": null,
+        "tp60": 0,
+        "recall60": null,
+        "auroc": null,
+        "base": 0,
+        "baseRecall40": null,
+        "hardHuman": 0,
+        "hardFP": 0
+      }
+    },
+    "subset": {
+      "n/a": {
+        "human": 240,
+        "fp": 6,
+        "fpRate": 0.025,
+        "shameFP": 5,
+        "ai": 0,
+        "tp40": 0,
+        "recall40": null,
+        "tp60": 0,
+        "recall60": null,
+        "auroc": null,
+        "base": 0,
+        "baseRecall40": null,
+        "hardHuman": 0,
+        "hardFP": 0
+      }
+    },
+    "source": {
+      "n/a": {
+        "human": 240,
+        "fp": 6,
+        "fpRate": 0.025,
+        "shameFP": 5,
+        "ai": 0,
+        "tp40": 0,
+        "recall40": null,
+        "tp60": 0,
+        "recall60": null,
+        "auroc": null,
+        "base": 0,
+        "baseRecall40": null,
+        "hardHuman": 0,
+        "hardFP": 0
+      }
+    },
+    "macroRecall40": null,
+    "smell": {},
+    "set": {},
+    "mode": {
+      "light": {
+        "human": 160,
+        "fp": 2,
+        "fpRate": 0.0125,
+        "shameFP": 2,
+        "ai": 0,
+        "tp40": 0,
+        "recall40": null,
+        "tp60": 0,
+        "recall60": null,
+        "auroc": null,
+        "base": 0,
+        "baseRecall40": null,
+        "hardHuman": 0,
+        "hardFP": 0
+      },
+      "linkedin": {
+        "human": 80,
+        "fp": 4,
+        "fpRate": 0.05,
+        "shameFP": 3,
+        "ai": 0,
+        "tp40": 0,
+        "recall40": null,
+        "tp60": 0,
+        "recall60": null,
+        "auroc": null,
+        "base": 0,
+        "baseRecall40": null,
+        "hardHuman": 0,
+        "hardFP": 0
+      }
+    },
+    "slopClass": {},
+    "modelSmell": {
+      "gemini-3.8-flash": {
+        "obvious": {
+          "human": 0,
+          "fp": 0,
+          "fpRate": null,
+          "shameFP": 0,
+          "ai": 0,
+          "tp40": 0,
+          "recall40": null,
+          "tp60": 0,
+          "recall60": null,
+          "auroc": null,
+          "base": 0,
+          "baseRecall40": null,
+          "hardHuman": 0,
+          "hardFP": 0
+        },
+        "some": {
+          "human": 0,
+          "fp": 0,
+          "fpRate": null,
+          "shameFP": 0,
+          "ai": 0,
+          "tp40": 0,
+          "recall40": null,
+          "tp60": 0,
+          "recall60": null,
+          "auroc": null,
+          "base": 0,
+          "baseRecall40": null,
+          "hardHuman": 0,
+          "hardFP": 0
+        },
+        "none": {
+          "human": 0,
+          "fp": 0,
+          "fpRate": null,
+          "shameFP": 0,
+          "ai": 0,
+          "tp40": 0,
+          "recall40": null,
+          "tp60": 0,
+          "recall60": null,
+          "auroc": null,
+          "base": 0,
+          "baseRecall40": null,
+          "hardHuman": 0,
+          "hardFP": 0
+        }
+      },
+      "gpt-6-luna": {
+        "obvious": {
+          "human": 0,
+          "fp": 0,
+          "fpRate": null,
+          "shameFP": 0,
+          "ai": 0,
+          "tp40": 0,
+          "recall40": null,
+          "tp60": 0,
+          "recall60": null,
+          "auroc": null,
+          "base": 0,
+          "baseRecall40": null,
+          "hardHuman": 0,
+          "hardFP": 0
+        },
+        "some": {
+          "human": 0,
+          "fp": 0,
+          "fpRate": null,
+          "shameFP": 0,
+          "ai": 0,
+          "tp40": 0,
+          "recall40": null,
+          "tp60": 0,
+          "recall60": null,
+          "auroc": null,
+          "base": 0,
+          "baseRecall40": null,
+          "hardHuman": 0,
+          "hardFP": 0
+        },
+        "none": {
+          "human": 0,
+          "fp": 0,
+          "fpRate": null,
+          "shameFP": 0,
+          "ai": 0,
+          "tp40": 0,
+          "recall40": null,
+          "tp60": 0,
+          "recall60": null,
+          "auroc": null,
+          "base": 0,
+          "baseRecall40": null,
+          "hardHuman": 0,
+          "hardFP": 0
+        }
+      }
+    }
+  }
+}

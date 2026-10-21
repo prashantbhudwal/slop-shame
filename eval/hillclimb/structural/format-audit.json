@@ -1,0 +1,8 @@
+{
+  "approvedLinkedInVetoRows": 8189,
+  "postsContainingNewline": 3,
+  "postsContainingBlankLine": 0,
+  "postsContainingLiteralBackslashN": 0,
+  "postsContainingHtmlBr": 0,
+  "decision": "Reject ordinary outline/list shape. Near-universal human text flattening prevents validation of real human broetry, list, emoji-bullet and heading layout. Literal markdown residue stays unregistered and conditional on format-preserving human controls; zero observed veto hits is not proof of general safety."
+}

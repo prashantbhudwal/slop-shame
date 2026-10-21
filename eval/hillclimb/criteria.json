@@ -1,0 +1,51 @@
+{
+  "numericBarMet": true,
+  "externalUsedOnceForSelection": true,
+  "criteria": [
+    {
+      "criterion": "RAID-test chat recall \u2265 baseline +5 pp",
+      "result": "+12.07 pp",
+      "pass": true
+    },
+    {
+      "criterion": "RAID-test human FP \u2264 max(baseline, 1%)",
+      "result": "0.04% \u2264 1.20%",
+      "pass": true
+    },
+    {
+      "criterion": "RAID-test every domain human FP \u22642.5%",
+      "result": "maximum 0.74%",
+      "pass": true
+    },
+    {
+      "criterion": "External human FP count \u2264 baseline",
+      "result": "1 \u2264 19",
+      "pass": true
+    },
+    {
+      "criterion": "External pooled formal/non-native FP \u2264 baseline",
+      "result": "1 \u2264 14",
+      "pass": true
+    },
+    {
+      "criterion": "External shameable FP \u2264 baseline",
+      "result": "1 \u2264 17",
+      "pass": true
+    },
+    {
+      "criterion": "External AI recall \u2265 baseline",
+      "result": "24.46% \u2265 13.67%",
+      "pass": true
+    },
+    {
+      "criterion": "All 12 frozen artifacts score 80",
+      "result": "12/12 exactly 80",
+      "pass": true
+    },
+    {
+      "criterion": "Mean <0.5 ms, worst <1 ms, creation <30 ms",
+      "result": "0.216 / 0.535 / 7.30 ms",
+      "pass": true
+    }
+  ]
+}

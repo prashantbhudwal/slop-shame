@@ -1,0 +1,302 @@
+[
+  {
+    "id": "realism-ai-01",
+    "text": "🚀 After eight months of late nights, whiteboard sessions, and more coffee than I'd like to admit, we're finally launching Ledgerly — a bookkeeping tool built specifically for freelancers who hate bookkeeping.\n\nWe started with a simple question: why does tracking invoices still feel like a second job? Every feature we shipped came from conversations with real freelancers — designers, writers, developers — who told us exactly where their old tools fell short.\n\nWhat you can do with Ledgerly today:\n✅ Auto-categorize expenses from your bank feed\n✅ Send invoices that follow up on their own\n✅ See your quarterly tax estimate at a glance\n\nHuge thanks to our beta testers. You shaped this product more than you know.\n\nTry it free for 30 days — link in the comments 👇\n\n#Freelancing #Startups #ProductLaunch #SmallBusiness",
+    "authorship": "ai",
+    "synthetic": true,
+    "provenance": "independent blind AI generation; writer did not inspect engine rules",
+    "expectTier": [
+      "artisanal",
+      "whiff",
+      "certified",
+      "swamp",
+      "slopocalypse"
+    ],
+    "evaluation": "holdout"
+  },
+  {
+    "id": "realism-ai-02",
+    "text": "I spent most of last quarter trying to fix our onboarding flow by adding things. More tooltips, a checklist, a welcome video. Activation barely moved.\n\nIn September we tried the opposite and cut the setup from seven steps to three. Two of the steps we removed turned out to be things nobody needed on day one anyway; they could happen later, once someone had actually seen the product work.\n\nActivation went up 18% in four weeks.\n\nI keep relearning this one: when something isn't working, the instinct is to add. The better first question is usually what can go.",
+    "authorship": "ai",
+    "synthetic": true,
+    "provenance": "independent blind AI generation; writer did not inspect engine rules",
+    "expectTier": [
+      "artisanal",
+      "whiff",
+      "certified",
+      "swamp",
+      "slopocalypse"
+    ],
+    "evaluation": "holdout"
+  },
+  {
+    "id": "realism-ai-03",
+    "text": "Great teams aren't built on talent alone — they're built on trust.\n\nThis week, our team hit a major milestone on the platform migration. But what I'm most proud of isn't the technical achievement. It's how we got there.\n\nWhen our lead engineer was out sick during a critical cutover window, three people stepped up without being asked. Sarah rewrote the rollback plan overnight. Dev paired with QA to triple-check the data validation. And Marcus kept stakeholders informed every step of the way, so no one was caught off guard.\n\nThat's what collaboration looks like in practice. Not titles. Not org charts. People showing up for each other.\n\nGrateful to work alongside this crew. 🙌\n\n#Teamwork #Leadership #Engineering",
+    "authorship": "ai",
+    "synthetic": true,
+    "provenance": "independent blind AI generation; writer did not inspect engine rules",
+    "expectTier": [
+      "artisanal",
+      "whiff",
+      "certified",
+      "swamp",
+      "slopocalypse"
+    ],
+    "evaluation": "holdout"
+  },
+  {
+    "id": "realism-ai-04",
+    "text": "Let's talk about idempotency — one of those concepts that sounds intimidating but is surprisingly simple once it clicks.\n\nAn operation is idempotent if doing it once has the same effect as doing it many times. Think of an elevator button: pressing \"5\" ten times doesn't send you to the fiftieth floor.\n\nWhy does this matter? In distributed systems, networks fail. Requests time out. Clients retry. If your payment endpoint isn't idempotent, a single retry could charge a customer twice.\n\nThe common fix is an idempotency key: the client sends a unique ID with each request, and the server remembers which IDs it has already processed. Same key, same result, no duplicate side effects.\n\nSmall design choice, big impact on reliability.\n\n#SoftwareEngineering #APIs #DistributedSystems",
+    "authorship": "ai",
+    "synthetic": true,
+    "provenance": "independent blind AI generation; writer did not inspect engine rules",
+    "expectTier": [
+      "artisanal",
+      "whiff",
+      "certified",
+      "swamp",
+      "slopocalypse"
+    ],
+    "evaluation": "holdout"
+  },
+  {
+    "id": "realism-ai-05",
+    "text": "Some personal news: after five incredible years at Northwind, I’m starting a new chapter as Head of Product at Tidewater Health.\n\nLeaving was not an easy decision. Northwind is where I learned how to ship, how to listen to customers, and how to lead a team through both rapid growth and a difficult reorg. To everyone who mentored me, challenged me, and trusted me with hard problems — thank you. I wouldn’t be here without you.\n\nAt Tidewater, I’ll be focused on making care coordination simpler for rural clinics, a problem I care deeply about.\n\nExcited for what’s ahead! 💙\n\n#NewBeginnings #CareerGrowth #HealthTech",
+    "authorship": "ai",
+    "synthetic": true,
+    "provenance": "independent blind AI generation; writer did not inspect engine rules",
+    "expectTier": [
+      "artisanal",
+      "whiff",
+      "certified",
+      "swamp",
+      "slopocalypse"
+    ],
+    "evaluation": "holdout"
+  },
+  {
+    "id": "realism-ai-06",
+    "text": "Introducing Focus Mode in Taskwell ✨\n\nYour calendar is full. Your inbox is overflowing. And somewhere in between, the work that actually matters keeps getting pushed to tomorrow.\n\nFocus Mode is designed to change that. With one click, Taskwell will:\n\n• Silence non-urgent notifications across Slack, email, and Teams\n• Block out a protected window on your calendar\n• Surface the single task that will move your week forward\n\nSessions run 25–90 minutes, and you can set your own rules for what counts as urgent.\n\nAvailable today on all Pro and Team plans. Your best work is waiting.\n\n#Productivity #DeepWork #SaaS",
+    "authorship": "ai",
+    "synthetic": true,
+    "provenance": "independent blind AI generation; writer did not inspect engine rules",
+    "expectTier": [
+      "artisanal",
+      "whiff",
+      "certified",
+      "swamp",
+      "slopocalypse"
+    ],
+    "evaluation": "holdout"
+  },
+  {
+    "id": "realism-ai-07",
+    "text": "A colleague asked me last week why adding an index made one of our queries slower. Fair question.\n\nThe index was on a status column with three possible values, and about 80% of rows were 'active'. When the planner used the index for status = 'active', it ended up doing a lookup per row instead of just scanning the table sequentially, which is cheaper when you're reading most of it anyway.\n\nWe dropped that index and added a partial one covering only the rare statuses. The slow query went back to a sequential scan, and the reports that filter on 'failed' got about forty times faster.\n\nIndexes help when they narrow things down. If they don't, they're overhead.",
+    "authorship": "ai",
+    "synthetic": true,
+    "provenance": "independent blind AI generation; writer did not inspect engine rules",
+    "expectTier": [
+      "artisanal",
+      "whiff",
+      "certified",
+      "swamp",
+      "slopocalypse"
+    ],
+    "evaluation": "holdout"
+  },
+  {
+    "id": "realism-ai-08",
+    "text": "The best career advice I ever received came from an unexpected place: a failed project.\n\nTwo years ago, I led a launch that missed its deadline by four months. At the time, it felt like a personal failure. Looking back, it was one of the most valuable experiences of my career.\n\nHere's what it taught me:\n\n1️⃣ Communicate early, even when the news is bad. Surprises erode trust faster than delays.\n2️⃣ Scope is a decision, not a given. Saying “not yet” to a feature is a sign of strength.\n3️⃣ Your team will mirror your energy. Stay calm, and they will too.\n\nFailure isn't the opposite of success — it's part of the process.\n\nWhat's a setback that shaped how you work today? I'd love to hear your stories in the comments. 👇",
+    "authorship": "ai",
+    "synthetic": true,
+    "provenance": "independent blind AI generation; writer did not inspect engine rules",
+    "expectTier": [
+      "artisanal",
+      "whiff",
+      "certified",
+      "swamp",
+      "slopocalypse"
+    ],
+    "evaluation": "holdout"
+  },
+  {
+    "id": "realism-ai-09",
+    "text": "We moved our weekly team meeting from Monday morning to Thursday afternoon about two months ago, and it's been a surprisingly big improvement.\n\nOn Mondays, half of us were still catching up on weekend messages and the other half hadn't figured out their week yet. Updates were vague. By Thursday, people actually have something to show – a draft, a bug they're stuck on, a decision they need. The conversation is more concrete, and we usually finish early.\n\nSmall change, but if your standing meeting feels like a formality, it might be worth asking whether it's the meeting or just the timing.\n\n#RemoteWork #TeamCulture",
+    "authorship": "ai",
+    "synthetic": true,
+    "provenance": "independent blind AI generation; writer did not inspect engine rules",
+    "expectTier": [
+      "artisanal",
+      "whiff",
+      "certified",
+      "swamp",
+      "slopocalypse"
+    ],
+    "evaluation": "holdout"
+  },
+  {
+    "id": "realism-ai-10",
+    "text": "Excited to share something I've been building on nights and weekends: tidyroute, an open-source library for type-safe routing in TypeScript. 🎉\n\nIf you've ever renamed a route and spent the next hour hunting down broken links, this one's for you. tidyroute generates typed helpers from your route definitions, so the compiler catches mistakes before your users do.\n\nKey features:\n🔹 Zero runtime dependencies\n🔹 Works with React Router, Next.js, and plain fetch\n🔹 Under 3 KB gzipped\n\nIt's still early, and I'd genuinely love feedback. Issues, PRs, and feature ideas are all welcome. If it saves you even one debugging session, it's done its job.\n\n⭐ Check it out on GitHub (link in comments)\n\n#OpenSource #TypeScript #WebDev",
+    "authorship": "ai",
+    "synthetic": true,
+    "provenance": "independent blind AI generation; writer did not inspect engine rules",
+    "expectTier": [
+      "artisanal",
+      "whiff",
+      "certified",
+      "swamp",
+      "slopocalypse"
+    ],
+    "evaluation": "holdout"
+  },
+  {
+    "id": "realism-ai-11",
+    "text": "Today is my last day at the city’s transit planning office. I joined as a data analyst in 2019, mostly cleaning ridership spreadsheets, and I’m leaving after spending the last two years leading the bus network redesign.\n\nThe redesign is the part I’ll miss most. We held 40-some community meetings, got yelled at more than once, and changed the plan in real ways because of what people told us. Route 12 exists in its current form because a group of night-shift nurses showed up with a hand-drawn map.\n\nIn November I’m starting at a consultancy that does similar work for smaller cities. More on that later.",
+    "authorship": "ai",
+    "synthetic": true,
+    "provenance": "independent blind AI generation; writer did not inspect engine rules",
+    "expectTier": [
+      "artisanal",
+      "whiff",
+      "certified",
+      "swamp",
+      "slopocalypse"
+    ],
+    "evaluation": "holdout"
+  },
+  {
+    "id": "realism-ai-12",
+    "text": "Embeddings are one of the most powerful ideas in modern AI — and they're easier to understand than you might think.\n\nAt their core, embeddings turn something messy (a sentence, an image, a product) into a list of numbers. The magic is in how those numbers are arranged: things with similar meaning end up close together in space.\n\nSo “How do I reset my password?” and “I forgot my login” land near each other, even though they share almost no words.\n\nThis unlocks a whole range of use cases:\n→ Semantic search that understands intent\n→ Recommendations based on meaning, not just keywords\n→ Clustering support tickets to spot emerging issues\n\nIf you're building with LLMs, understanding embeddings isn't optional — it's foundational.\n\n#AI #MachineLearning #LLM #TechExplained",
+    "authorship": "ai",
+    "synthetic": true,
+    "provenance": "independent blind AI generation; writer did not inspect engine rules",
+    "expectTier": [
+      "artisanal",
+      "whiff",
+      "certified",
+      "swamp",
+      "slopocalypse"
+    ],
+    "evaluation": "holdout"
+  },
+  {
+    "id": "realism-ai-13",
+    "text": "Meet Harvest Notes: the recipe app that finally understands how people actually cook.\n\nScan a handwritten recipe card from your grandmother’s box, and Harvest Notes turns it into a clean, searchable recipe, measurements and all. Scale servings up or down in a tap. Swap ingredients based on what’s already in your fridge. Build a weekly meal plan, and your grocery list writes itself.\n\nNo ads. No life stories before the ingredient list. Just your recipes, beautifully organized and always within reach.\n\nAvailable now on iOS and Android. 🍲",
+    "authorship": "ai",
+    "synthetic": true,
+    "provenance": "independent blind AI generation; writer did not inspect engine rules",
+    "expectTier": [
+      "artisanal",
+      "whiff",
+      "certified",
+      "swamp",
+      "slopocalypse"
+    ],
+    "evaluation": "holdout"
+  },
+  {
+    "id": "realism-ai-14",
+    "text": "One thing I wish someone had told me earlier in my career: feedback is a gift, but only if you know how to receive it.\n\nFor years, I treated critical feedback as something to defend against. I'd explain, justify, and push back — and in the process, I missed the point entirely.\n\nWhat changed? I started responding with just three words: “Tell me more.”\n\nThat simple shift transformed my conversations. People opened up. I learned things I never would have heard otherwise. And my growth accelerated in ways I didn't expect.\n\nThe truth is, the people who give you honest feedback are investing in you. Treat it that way.\n\n#Leadership #Growth #ProfessionalDevelopment #Feedback",
+    "authorship": "ai",
+    "synthetic": true,
+    "provenance": "independent blind AI generation; writer did not inspect engine rules",
+    "expectTier": [
+      "artisanal",
+      "whiff",
+      "certified",
+      "swamp",
+      "slopocalypse"
+    ],
+    "evaluation": "holdout"
+  },
+  {
+    "id": "realism-ai-15",
+    "text": "Please join me in welcoming Priya Natarajan to the infrastructure team! Priya comes to us from a payments company where she ran their Kubernetes migration and, by her own account, learned more about DNS than anyone should have to.\n\nShe'll be taking over our on-call tooling and the build pipeline work that's been sitting half-finished since spring. If you've complained about CI times in the last six months (so, everyone), she's the person to buy a coffee.\n\nGlad to have you here, Priya.",
+    "authorship": "ai",
+    "synthetic": true,
+    "provenance": "independent blind AI generation; writer did not inspect engine rules",
+    "expectTier": [
+      "artisanal",
+      "whiff",
+      "certified",
+      "swamp",
+      "slopocalypse"
+    ],
+    "evaluation": "holdout"
+  },
+  {
+    "id": "realism-ai-16",
+    "text": "Technical debt gets a bad reputation, but not all debt is bad debt.\n\nLike financial debt, technical debt can be a smart strategic tool. Taking a shortcut to hit a launch window, validate an idea, or learn from real users can be exactly the right call. The problem isn’t taking on debt — it’s failing to track it and pay it down.\n\nA few practices that have worked well for our team:\n\n– Log shortcuts as tickets the moment you take them\n– Reserve roughly 15–20% of each sprint for cleanup\n– Revisit the debt backlog during quarterly planning, not just when something breaks\n\nThe goal isn’t zero debt. It’s intentional debt.\n\n#SoftwareDevelopment #EngineeringLeadership #TechDebt",
+    "authorship": "ai",
+    "synthetic": true,
+    "provenance": "independent blind AI generation; writer did not inspect engine rules",
+    "expectTier": [
+      "artisanal",
+      "whiff",
+      "certified",
+      "swamp",
+      "slopocalypse"
+    ],
+    "evaluation": "holdout"
+  },
+  {
+    "id": "realism-ai-17",
+    "text": "Proud moment for our team today 🎉\n\nWe just rolled out our new internal analytics dashboard to all 1,200 employees, and the early response has been incredible.\n\nBefore this project, getting a simple sales report meant filing a request with the data team and waiting three to five days. Now, anyone in the company can pull real-time numbers in seconds — no SQL required.\n\nThis was a true cross-functional effort. Data engineering built the pipelines, design made the interface intuitive, and our pilot users in finance and ops gave us the honest feedback we needed to get it right.\n\nThis is just the beginning. Next up: automated alerts and mobile access. 📊\n\n#DataDriven #Analytics #Teamwork #DigitalTransformation",
+    "authorship": "ai",
+    "synthetic": true,
+    "provenance": "independent blind AI generation; writer did not inspect engine rules",
+    "expectTier": [
+      "artisanal",
+      "whiff",
+      "certified",
+      "swamp",
+      "slopocalypse"
+    ],
+    "evaluation": "holdout"
+  },
+  {
+    "id": "realism-ai-18",
+    "text": "I was part of the layoff at Brightline last month, along with most of the growth marketing team.\n\nI'm looking for my next role in lifecycle or retention marketing, ideally at a subscription business. Over the past three years I built and ran our email and in-app messaging program, cut first-month churn from 11% to about 7%, and managed a team of two.\n\nI'm open to remote or hybrid in the Denver area. If you know of something, or just want to compare notes on retention, my DMs are open. Thanks to everyone who has already reached out; it's meant more than I can say.",
+    "authorship": "ai",
+    "synthetic": true,
+    "provenance": "independent blind AI generation; writer did not inspect engine rules",
+    "expectTier": [
+      "artisanal",
+      "whiff",
+      "certified",
+      "swamp",
+      "slopocalypse"
+    ],
+    "evaluation": "holdout"
+  },
+  {
+    "id": "realism-ai-19",
+    "text": "Hot take: the most underrated skill in tech isn't coding. It's writing.\n\nEvery design doc, pull request description, and incident report is a chance to make your team faster — or slower. Clear writing reduces meetings, speeds up reviews, and preserves context long after you've moved on to the next project.\n\nA few habits that have helped me:\n\n📝 Lead with the conclusion, then explain how you got there\n📝 Write for someone joining the team six months from now\n📝 Cut every sentence that doesn't earn its place\n\nGood code solves today's problem. Good writing helps your team solve tomorrow's.\n\nWhat's one writing habit that's made you a better engineer?",
+    "authorship": "ai",
+    "synthetic": true,
+    "provenance": "independent blind AI generation; writer did not inspect engine rules",
+    "expectTier": [
+      "artisanal",
+      "whiff",
+      "certified",
+      "swamp",
+      "slopocalypse"
+    ],
+    "evaluation": "holdout"
+  },
+  {
+    "id": "realism-ai-20",
+    "text": "Spent two days at the regional manufacturing summit in Cleveland and came home with a notebook full of ideas.\n\nThe session that stuck with me most was a plant manager walking through how her team cut unplanned downtime by 30% — not with new sensors or software, but by having operators log every minor stoppage on a whiteboard for six weeks. Once the patterns were visible, the fixes were mostly obvious.\n\nIt was a good reminder that data doesn't have to be sophisticated to be useful. Sometimes it just has to be written down.\n\nThanks to the organizers for a well-run event, and to everyone who stopped by our booth! 🏭\n\n#Manufacturing #OperationalExcellence #ContinuousImprovement",
+    "authorship": "ai",
+    "synthetic": true,
+    "provenance": "independent blind AI generation; writer did not inspect engine rules",
+    "expectTier": [
+      "artisanal",
+      "whiff",
+      "certified",
+      "swamp",
+      "slopocalypse"
+    ],
+    "evaluation": "holdout"
+  }
+]

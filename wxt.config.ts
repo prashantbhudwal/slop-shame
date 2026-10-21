@@ -4,6 +4,16 @@ import { defineConfig } from 'wxt';
 export default defineConfig({
   srcDir: 'src',
   modules: ['@wxt-dev/module-svelte'],
+  vite: () => ({ define: { __SLOP_E2E__: process.env.SLOP_E2E === '1' } }),
+  // Source archives (`wxt zip --sources`, Firefox/Opera by default) take only
+  // what rebuilds the extension. WXT ignores .gitignore here, and the repo
+  // holds private eval data, captured feeds and research that must never ship.
+  zip: {
+    includeSources: [
+      'src/**', 'public/**', 'package.json', 'pnpm-lock.yaml', 'wxt.config.ts', 'tsconfig.json', 'wxt-env.d.ts',
+      'README.md', 'LICENSE', 'PRIVACY.md', 'THIRD_PARTY_NOTICES.md',
+    ],
+  },
   manifest: {
     name: 'Slop Shame',
     description: 'Rates every LinkedIn feed post with a Slop Index. Destroy the slop. Shame the slopper.',

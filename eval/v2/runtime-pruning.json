@@ -1,0 +1,68 @@
+{
+  "candidates": 9107,
+  "shipped": 9107,
+  "zero": 0,
+  "sources": {
+    "zeroslop": {
+      "candidates": 2957,
+      "ship": 2957,
+      "zero": 0,
+      "gun": 16,
+      "habit": 2853,
+      "vocabulary": 88
+    },
+    "paech-essays": {
+      "candidates": 3638,
+      "ship": 3638,
+      "zero": 0,
+      "gun": 0,
+      "habit": 2197,
+      "vocabulary": 1441
+    },
+    "vale-ai-tells": {
+      "candidates": 829,
+      "ship": 829,
+      "zero": 0,
+      "gun": 6,
+      "habit": 741,
+      "vocabulary": 82
+    },
+    "kobak": {
+      "candidates": 735,
+      "ship": 735,
+      "zero": 0,
+      "gun": 0,
+      "habit": 0,
+      "vocabulary": 735
+    },
+    "mined": {
+      "candidates": 227,
+      "ship": 227,
+      "zero": 0,
+      "gun": 1,
+      "habit": 155,
+      "vocabulary": 71
+    },
+    "paech-sampler": {
+      "candidates": 485,
+      "ship": 485,
+      "zero": 0,
+      "gun": 0,
+      "habit": 83,
+      "vocabulary": 402
+    },
+    "slop-radar": {
+      "candidates": 236,
+      "ship": 236,
+      "zero": 0,
+      "gun": 9,
+      "habit": 191,
+      "vocabulary": 36
+    }
+  },
+  "uncompressedBytes": 2001714,
+  "deflateBytes": 484421,
+  "base64Bytes": 646166,
+  "payloadSHA256": "f52ab14b9ecd5950f02d0b9b3b458529f71b32b5b8cc188950d91429de01fb3b",
+  "note": "Unseen entries retain a nonzero shrunken source prior, as explicitly required. No source/category dropped."
+}

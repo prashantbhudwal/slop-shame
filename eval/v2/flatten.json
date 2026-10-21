@@ -1,0 +1,23 @@
+{
+  "targetHoldout": {
+    "n": 160,
+    "flags": 18,
+    "flattenedFlags": 18,
+    "flagsLost": 0,
+    "flagsGained": 0
+  },
+  "fresh": {
+    "n": 351,
+    "flags": 7,
+    "flattenedFlags": 7,
+    "flagsLost": 0,
+    "flagsGained": 0
+  },
+  "effortful": {
+    "n": 210,
+    "flags": 23,
+    "flattenedFlags": 20,
+    "flagsLost": 3,
+    "flagsGained": 0
+  }
+}

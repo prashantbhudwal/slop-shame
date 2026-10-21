@@ -1,0 +1,137 @@
+{
+  "threshold": 3.637338348115496,
+  "maxSupportedWords": 600,
+  "changed": [
+    {
+      "id": "pasted-output.unfilled-slot",
+      "before": 6.002649631946812,
+      "after": 6.275925296874579
+    },
+    {
+      "id": "dictionaries.entry-002db2f36507ce7f",
+      "before": 6.000211731442488,
+      "after": 6.253495091169339
+    },
+    {
+      "id": "dictionaries.entry-1872777bd6fa9310",
+      "before": 6,
+      "after": 6.275925296874579
+    },
+    {
+      "id": "dictionaries.entry-1c981a333a1be3a6",
+      "before": 6.000239586060924,
+      "after": 6.253495091169339
+    },
+    {
+      "id": "dictionaries.entry-2a2b8fc9aefd5d3c",
+      "before": 6,
+      "after": 6.253495091169339
+    },
+    {
+      "id": "dictionaries.entry-2b60c57bf8123dea",
+      "before": 6.000032058503006,
+      "after": 6.253495091169339
+    },
+    {
+      "id": "dictionaries.entry-2c84fc7592c8f689",
+      "before": 6.000622249786627,
+      "after": 6.253495091169339
+    },
+    {
+      "id": "dictionaries.entry-485ec8cca2f85cb8",
+      "before": 6.000000018676081,
+      "after": 6.253495091169339
+    },
+    {
+      "id": "dictionaries.entry-679aa5130ae46319",
+      "before": 6.000023508397842,
+      "after": 6.253495091169339
+    },
+    {
+      "id": "dictionaries.entry-8d0b8b9cfc10e292",
+      "before": 6,
+      "after": 6.253495091169339
+    },
+    {
+      "id": "dictionaries.entry-908aff7a77f39600",
+      "before": 6.000041664741088,
+      "after": 6.253495091169339
+    },
+    {
+      "id": "dictionaries.entry-a7e5c92ca47c6731",
+      "before": 6,
+      "after": 6.253495091169339
+    },
+    {
+      "id": "dictionaries.entry-b15eade32f5647a6",
+      "before": 6,
+      "after": 6.253495091169339
+    },
+    {
+      "id": "dictionaries.entry-bb9d44422e558cbb",
+      "before": 6,
+      "after": 6.253495091169339
+    },
+    {
+      "id": "dictionaries.entry-c3af87d79d2e1335",
+      "before": 6.000509412836554,
+      "after": 6.253495091169339
+    },
+    {
+      "id": "dictionaries.entry-c44317e46c77ea33",
+      "before": 6,
+      "after": 6.253495091169339
+    },
+    {
+      "id": "dictionaries.entry-d68639325cdfce0a",
+      "before": 6,
+      "after": 6.253495091169339
+    },
+    {
+      "id": "dictionaries.entry-d8fab524872d849e",
+      "before": 6,
+      "after": 6.253495091169339
+    },
+    {
+      "id": "dictionaries.entry-dbd3c236dd7a5000",
+      "before": 6,
+      "after": 6.253495091169339
+    },
+    {
+      "id": "dictionaries.entry-e0202b0185dce320",
+      "before": 6,
+      "after": 6.275925296874579
+    },
+    {
+      "id": "dictionaries.entry-e0b4a09b3b9c5058",
+      "before": 6,
+      "after": 6.253495091169339
+    },
+    {
+      "id": "dictionaries.entry-e0c7c126bdc629a3",
+      "before": 6,
+      "after": 6.253495091169339
+    },
+    {
+      "id": "dictionaries.entry-e8d0de5334677686",
+      "before": 6.000187579164576,
+      "after": 6.253495091169339
+    },
+    {
+      "id": "dictionaries.entry-e8eae66866fe11ce",
+      "before": 6.000129433452221,
+      "after": 6.253495091169339
+    },
+    {
+      "id": "dictionaries.entry-f8866fbca2846b61",
+      "before": 6.000223082485289,
+      "after": 6.253495091169339
+    },
+    {
+      "id": "dictionaries.entry-f925587d61925333",
+      "before": 6.000009109047123,
+      "after": 6.253495091169339
+    }
+  ],
+  "reason": "Bounded individual gun weights must reach index 40 alone throughout the supported exposure range; no gun has a calibration-negative hit."
+}

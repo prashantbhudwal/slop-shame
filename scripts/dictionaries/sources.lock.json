@@ -1,0 +1,185 @@
+{
+  "version": 1,
+  "sources": [
+    {
+      "id": "zeroslop",
+      "repo": "manavmishra/ZeroSlop",
+      "pin": "16785a69512ee283bd28e64319fa36e33c6ba8ed",
+      "spdx": "MIT",
+      "fetchDate": "2026-10-19",
+      "notice": "absent (HTTP 404 at pinned root NOTICE)",
+      "files": [
+        {
+          "path": "LICENSE",
+          "sha256": "156f11557782d2795cf35c9fe97197b6dea2a00337fa3e513dbe8fce06026631"
+        },
+        {
+          "path": "data/patterns.json",
+          "sha256": "a20499d0c135a4d1df60e104f1b3ff7b382ea67f065eda946ac0fb63b08aeed6"
+        }
+      ]
+    },
+    {
+      "id": "paech-sampler",
+      "repo": "sam-paech/antislop-sampler",
+      "pin": "0ae330e98fbe6f09351f2d1063a51956378a44b2",
+      "spdx": "Apache-2.0",
+      "fetchDate": "2026-10-19",
+      "notice": "No NOTICE/NOTICE.* anywhere in pinned repository tar archive (inspected 2026-10-19).",
+      "files": [
+        {
+          "path": "LICENSE",
+          "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+        },
+        {
+          "path": "slop_phrase_prob_adjustments.json",
+          "sha256": "9f0b1bccbc37bd4234283c2d9bfc17bc4c62cb650d4f1477a1f9d17638530e7f"
+        }
+      ]
+    },
+    {
+      "id": "paech-essays",
+      "repo": "sam-paech/slop-forensics",
+      "pin": "c313f042620f027d49101da3256bd306b628071a",
+      "spdx": "MIT",
+      "fetchDate": "2026-10-19",
+      "notice": "absent (HTTP 404 at pinned root NOTICE)",
+      "files": [
+        {
+          "path": "LICENSE",
+          "sha256": "2b0b89d8acdf168b0480b0af4c956add6d3279aa3cc732a21b6476d97fec78c5"
+        },
+        {
+          "path": "results_by_domain/essays/slop_lists/slop_list_phrases.jsonl",
+          "sha256": "94b97598a87ff76bfe8eaf7383c37ae9d74c6fc60850452ebf9b8bc56cb58c41"
+        },
+        {
+          "path": "results_by_domain/essays/slop_lists/slop_list_by_freq.json",
+          "sha256": "20b96578397f2700153874ec7f251d5c1a34a026ab8d9f4bd6bd731fc565dc4e"
+        }
+      ]
+    },
+    {
+      "id": "vale-ai-tells",
+      "repo": "tbhb/vale-ai-tells",
+      "pin": "51f646e366ba7c9dcb078ebeae345b7ff353eb3b",
+      "spdx": "MIT",
+      "fetchDate": "2026-10-19",
+      "notice": "absent (HTTP 404 at pinned root NOTICE)",
+      "files": [
+        {
+          "path": "LICENSE",
+          "sha256": "adf519814a60378fc45fedaa358c6598cde3621154945180569784c79365d4ed"
+        },
+        {
+          "path": "styles/ai-tells/OverusedVocabulary.yml",
+          "sha256": "542bb76b89c9d06c8e487e76af175cbd7c83c1924d5b483726b5ac99383a5494"
+        },
+        {
+          "path": "styles/ai-tells/OverusedVocabularyVerbs.yml",
+          "sha256": "c3024c0acf85d04b8354e921fc6eca2fc8e53cf24dfac85ff229b566f6efcee8"
+        },
+        {
+          "path": "styles/ai-tells/AICompoundPhrases.yml",
+          "sha256": "b829c24e847d72c992d54daa28383f2230a57d62f3fb14217cfa5cdb2c776624"
+        },
+        {
+          "path": "styles/ai-tells/OpeningCliches.yml",
+          "sha256": "21ca5e0fef4923ef3896d2dc6ac60f50720364a777a55ee611ae6e9e0d86b2e2"
+        },
+        {
+          "path": "styles/ai-tells/ContrastiveFormulas.yml",
+          "sha256": "99d23e10cd483496bb398dd7abfe0d58138dc0121c65726f00f42f6fb67e403e"
+        },
+        {
+          "path": "styles/ai-tells/ClosingPleasantries.yml",
+          "sha256": "68baeb4c5ce2ac5314ebea78e9e4808e72baa8e4a9180918082b738db6843e20"
+        },
+        {
+          "path": "styles/ai-tells/HedgingPhrases.yml",
+          "sha256": "2b28bddcc1d5573b37401194af9f7bc8e1a26631488ff222c0361da32dadfc71"
+        },
+        {
+          "path": "styles/ai-tells/AffirmativeFormulas.yml",
+          "sha256": "c025f4bb252dc3d974faa6ef3efdc434075feb71ff2ccd484ebc9d5c1f410c87"
+        }
+      ]
+    },
+    {
+      "id": "slop-radar",
+      "repo": "renefichtmueller/slop-radar",
+      "pin": "711f3a862a6153d57cc42fe82704d937ab2cbe10",
+      "spdx": "MIT",
+      "fetchDate": "2026-10-19",
+      "notice": "absent (HTTP 404 at pinned root NOTICE)",
+      "files": [
+        {
+          "path": "LICENSE",
+          "sha256": "d2f14c8e50cd5b0705c6e4eeb79cebc0b521c996575783f31de75d162f0f3ba3"
+        },
+        {
+          "path": "src/database/phrases-en.json",
+          "sha256": "4f9e29a0ec860a989d1147a0e7af308e86bf26608f2b833747098ffa7479c878"
+        },
+        {
+          "path": "src/database/patterns.json",
+          "sha256": "e7addec2c8342830f91bf23a3de61e7bc1e8fdc52af6d94b8ae4c22805764ef3"
+        }
+      ]
+    },
+    {
+      "id": "kobak",
+      "repo": "berenslab/llm-excess-vocab",
+      "pin": "53db991afc251782106cd817a1c3fa47a4d41781",
+      "spdx": "MIT",
+      "fetchDate": "2026-10-19",
+      "notice": "absent (HTTP 404 at pinned root NOTICE)",
+      "files": [
+        {
+          "path": "LICENSE",
+          "sha256": "d172c5874bfc07772617aceebf5b5e9165e649a179bea81a3d1c43ba46c74ff5"
+        },
+        {
+          "path": "results/excess_words.csv",
+          "sha256": "f5786f3cc83f9578043aaecf2774c6200cb68b5e774afc3afe40af4eb0cf8285"
+        },
+        {
+          "path": "results/figures_data/figure1.csv",
+          "sha256": "174e4ef12a5bea882efd2e0a2bd23661199a38fdb80eaeae80b4ac488f88596b"
+        },
+        {
+          "path": "README.md",
+          "sha256": "9d526398152c6249b134c4d27a1d4bce0bd9d56ca455644663b2b3bc5d971d8a"
+        }
+      ],
+      "derivedFrom": {
+        "path": "results/yearly-counts.csv.gz",
+        "sha256": "e42e37c9ad5abc4e098e0ea02558399b8557d85332bf350942c6cb9bda9d9d93"
+      },
+      "derivedFile": {
+        "path": "style-counts.json",
+        "sha256": "9fef77e5f1b37538b57f561aee496eedb5358e2106ba9587823624cd642d8334"
+      }
+    },
+    {
+      "id": "human-control-redis",
+      "repo": "redis/redis",
+      "pin": "17dfd7cabbf7954f92b7a1243d4bb27fee5d4500",
+      "spdx": "BSD-3-Clause",
+      "fetchDate": "2026-10-19",
+      "role": "pre-LLM human technical prose negative control; never a scoring pack",
+      "files": [
+        {
+          "path": "LICENSE",
+          "upstreamPath": "COPYING",
+          "sha256": "cbf420a3672475a6e2765e3c0984c1f81efe0212afb94a3c998ee63bfd661063"
+        },
+        {
+          "path": "README.md",
+          "upstreamPath": "README.md",
+          "sha256": "31bfba835c69132e0416cd59d8ac4894b7cc4088b12de2a0ffa653875b5ad87b"
+        }
+      ]
+    }
+  ]
+}

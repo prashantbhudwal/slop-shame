@@ -1,0 +1,167 @@
+{
+  "created": "2026-10-21T09:04:26.908Z",
+  "engineHash": "262d4950092e01b7ac50e6b83d000417d4c150b0e9bd77d53347936efda5d31a",
+  "baselineEngineHash": "f559b25fed76c156dfb54022d570460bf53f242f4e54972167b7638a499199b2",
+  "inputs": [
+    {
+      "file": "data/eval/generated/linkedin-ai-fresh/gemini-3.8-flash-medium.jsonl",
+      "sha256": "cff0e0ca235888902be0acdfe21cd017e4b1da66f04f68a3bd375070a9fcb383"
+    },
+    {
+      "file": "data/eval/generated/linkedin-ai-fresh/gpt-5.6-luna-low.jsonl",
+      "sha256": "6e8120f0ba665e13176edb22e075a4ca7ef2bfb2479d234f68d04ba9ccff662f"
+    },
+    {
+      "file": "data/eval/generated/linkedin-ai-fresh/gpt-6-luna-medium.jsonl",
+      "sha256": "f0bd0a421a5cf299dc0f7cc6af8a5fbf3a4255c2990fc526b7ec8f2e1f7a1152"
+    },
+    {
+      "file": "data/eval/generated/linkedin-ai-loweffort/gemini-3.8-flash-medium.jsonl",
+      "sha256": "0168cdaf984c5ebccab95466fffd027d7c32dee7171eb6ba4b26f4f6383578bd"
+    },
+    {
+      "file": "data/eval/generated/linkedin-ai-loweffort/gpt-5.6-luna-low.jsonl",
+      "sha256": "8b78baa939b27fb2edef426dd95cf6d04e01fb7a6bdff0f4b871f5b9c4171a6b"
+    },
+    {
+      "file": "data/eval/generated/linkedin-ai-loweffort/gpt-6-luna-low.jsonl",
+      "sha256": "15d699efc633cf3b3ac4f786164350e433041f581fbd6477954ad021b37d6bf6"
+    },
+    {
+      "file": "data/eval/generated/linkedin-ai-loweffort/gpt-6-luna-medium.jsonl",
+      "sha256": "dd0c156d1021d03881804159e7106062c9cb6a60517d4e669e4625dd80b396e0"
+    },
+    {
+      "file": "data/eval/generated/linkedin-ai-loweffort/gpt-6.1-sol-low.jsonl",
+      "sha256": "e3526ec1d7b029133bdb66448fe8bbb8fedcfa6ad7e2a6b6e5e46c7a89da3c89"
+    },
+    {
+      "file": "data/eval/generated/linkedin-ai-realprompts/gemini-3.8-flash-medium.jsonl",
+      "sha256": "18693b9714714a51f5db0e6fa52ebfc3188bede04ca17dfdf241fc032481a3e0"
+    },
+    {
+      "file": "data/eval/generated/linkedin-ai-realprompts/gpt-5.6-luna-low.jsonl",
+      "sha256": "c4ed9d106df5af6ad86dc5853af5197bf3875526115d8816f3c5d3c390f84dc5"
+    },
+    {
+      "file": "data/eval/generated/linkedin-ai-realprompts/gpt-6-luna-low.jsonl",
+      "sha256": "295bf413ef2b341ddedea5e1ec99e905b145613e4dfd1ea724f4a0d038cc89b8"
+    },
+    {
+      "file": "data/eval/generated/linkedin-ai-realprompts/gpt-6-luna-medium.jsonl",
+      "sha256": "ddfb3de01853058613d257199d88f69969a152c8cc78e6150fa50171ba310e00"
+    },
+    {
+      "file": "data/eval/generated/linkedin-ai-realprompts/gpt-6.1-sol-low.jsonl",
+      "sha256": "1a09f4f4cd709c5c8c36548ab691bf4dc67aa6c1b6be01c9b2f3a0701e5aae35"
+    },
+    {
+      "file": "data/eval/generated/linkedin-ai/claude-haiku-5-5.jsonl",
+      "sha256": "3d4841ab05f95213616c4b15e05120eddb646ac21afad806315cdb022f701171"
+    },
+    {
+      "file": "data/eval/generated/linkedin-ai/claude-opus-5-5.jsonl",
+      "sha256": "24405308007b8d273dea22c2acd378d6f1814eccd8e068d865a0a252f501bad7"
+    },
+    {
+      "file": "data/eval/generated/linkedin-ai/gemini-3.8-flash-medium.jsonl",
+      "sha256": "29bfeccfacb04dd4abd7035f3f724c3c649fa35733c1394d1ab5d14e94924356"
+    },
+    {
+      "file": "data/eval/generated/linkedin-ai/gemini-3.8-flash.jsonl",
+      "sha256": "44314572199cd7079fe0e593a828b0a39cdf39009826a599780ff4372a1f3f14"
+    },
+    {
+      "file": "data/eval/generated/linkedin-ai/gpt-6-luna.jsonl",
+      "sha256": "053c8fc94e1ece301557f81e081a254c679a6433bfd696c19097cd9431c79080"
+    },
+    {
+      "file": "data/eval/generated/linkedin-ai/gpt-6.1-sol.jsonl",
+      "sha256": "e87a2d4a165db5a3bebde9b0b59012c783fbc045b4b050e76aaf5fe0c581e8d7"
+    },
+    {
+      "file": "data/eval/generated/linkedin-ai/grok-4.7.jsonl",
+      "sha256": "e17b8b59930fdabe35b869ee9d9ebb6255a4adb21320cc4cdcda87a9ff729194"
+    },
+    {
+      "file": "data/eval/raw/hillclimb/detectrlx-test.jsonl",
+      "sha256": "e37c67f8ee1d6b11208280d046a1bfb66d60af417282f2c73fad6889ae1fece4"
+    },
+    {
+      "file": "data/eval/raw/hillclimb/dev.jsonl",
+      "sha256": "1bfee384a122da663d5206863b01830ac867f5fa23cce6514227974eab376805"
+    },
+    {
+      "file": "data/eval/raw/hillclimb/test.jsonl",
+      "sha256": "f00f7f7bdf4adf4ea69b8af26f70a5299cc3eace6913561ba07ef7cd949e65fe"
+    },
+    {
+      "file": "data/eval/raw/hillclimb/train.jsonl",
+      "sha256": "4ce51a65a5a1823587b643bd1209e0a1fc5641cfa38a5fd1fc0a5182f22d38fc"
+    },
+    {
+      "file": "data/eval/raw/judge/panel-labels.json",
+      "sha256": "b76dc774614041c3086518f9b7afffe71e45c80d8f2b197252f9854a8696bb61"
+    },
+    {
+      "file": "data/eval/raw/normalized/aeslc.jsonl",
+      "sha256": "3f60286490543e60c4742daa2f79c6d0a45c86ac9223aec6205cae536fb4e1df"
+    },
+    {
+      "file": "data/eval/raw/normalized/human-detectors-ai.jsonl",
+      "sha256": "662c1bb3e62991bc0b7be10d8f171b350de62b254c50ac7cd4ad92a7fbd8fc86"
+    },
+    {
+      "file": "data/eval/raw/normalized/linkedin-influencers-split.json",
+      "sha256": "21319f782a5ecf0086807d982340745c5c0019cecaa65445483f0d15b2c4023d"
+    },
+    {
+      "file": "data/eval/raw/normalized/linkedin-influencers.jsonl",
+      "sha256": "f3265ecb50f3ef16a33b84b9361b491a762313724e34ca80b0e59558f6325941"
+    },
+    {
+      "file": "data/eval/raw/normalized/raid.jsonl",
+      "sha256": "446f21a8aff37937bc970cd0a3c44d11988ab10eac70679b32fac4389049afd2"
+    },
+    {
+      "file": "data/eval/raw/normalized/wi.jsonl",
+      "sha256": "ab97c8aaf12cd8696cebe2092573a8cfd81a7ae21673d16f0fbc7eae7b2de938"
+    },
+    {
+      "file": "data/eval/raw/polished/gemini-3.8-flash-medium.jsonl",
+      "sha256": "3c5bf09c085a68a6f0ca1e314e2fcc36103c17e4ca14aa23d8c40c63ef175a3b"
+    },
+    {
+      "file": "data/eval/raw/polished/gpt-6-luna-medium.jsonl",
+      "sha256": "645723e94517e322afc355ee62d3dc1d92894614a029b54b28f04435b7d2b233"
+    },
+    {
+      "file": "data/eval/samples/official-releases.jsonl",
+      "sha256": "6258f80ce6e539883bd119bf49346acc8b16a9c1795ccf4e09ff48312c887ea7"
+    },
+    {
+      "file": "data/eval/samples/plos.jsonl",
+      "sha256": "325de3e0bb712cc6f6fc292af8fb44f6aeea8bfc1e30322003d776bbadef170c"
+    },
+    {
+      "file": "data/eval/samples/synthetic-general.jsonl",
+      "sha256": "80febd273c839e72814e255dd6622a34df7b212c15f5187da5d6b63bd52ef577"
+    },
+    {
+      "file": "data/eval/samples/uci-reviews.jsonl",
+      "sha256": "2fb512859a4ca511d7114cba92e0b036a64c2a26286f956c5a1cd990b46c3f39"
+    },
+    {
+      "file": "data/eval/samples/unmasking.jsonl",
+      "sha256": "1ad9b299b654ddca912b575990b6c7c0699966dfd4e1768aebcc295c2ef5c792"
+    }
+  ],
+  "selectedSearch": "conservative-search.json",
+  "qaAdjustments": [
+    "Assistant offer narrowed to an editing offer, 4 phrase points, no fingerprint floor; live browsing limitation has its own explicit fingerprint.",
+    "Labeled list requires each label itself to be a list item; unrelated maintenance statuses cannot combine.",
+    "Fragment and repeated-opening style cues exclude numbered/capital headings and technical command repetitions."
+  ],
+  "devGates": "pass",
+  "holdoutProtocol": "baseline once; final once; no corrective holdout selection"
+}

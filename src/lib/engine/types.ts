@@ -18,7 +18,7 @@ export interface PostInput {
 }
 
 /**
- * Families of slop. Slop = AI-written text (not LinkedIn genres). These group
+ * Families of slop. Slop = obvious low-effort pasted output, not AI assistance. These group
  * the avoid-ai-writing detector's tell types; the shame generator and the
  * category icons (public/assets/categories/<category>.webp) key off them.
  */
@@ -40,7 +40,7 @@ export interface SlopSignal {
   category: SlopCategory;
   /** Short human label for UI, e.g. "Asked 'Agree?'". */
   label: string;
-  /** Points this signal contributed before normalization. */
+  /** Exact index points counted after exposure, overlap, family caps and the gate. */
   weight: number;
   /** Exact snippets that matched, for quoting in shames (max ~3). */
   matches: string[];
@@ -59,7 +59,7 @@ export interface SlopTier {
 export interface SlopReport {
   /** Slop Index, integer 0–100. */
   score: number;
-  /** Score >=40, >=40 words, and positive phrase/discourse evidence. Style alone never permits Shame. */
+  /** Score >=40 with >=40 words and phrase evidence; explicit fingerprints qualify at >=8 words. Style alone never permits Shame. */
   shameable: boolean;
   tier: SlopTier;
   /** Signals sorted by weight, heaviest first. */

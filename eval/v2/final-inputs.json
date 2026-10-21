@@ -1,0 +1,34 @@
+{
+  "targetHoldout": {
+    "rows": 160,
+    "sha256": "760a6397b68f035a7c164139167c7d7ad062b5ae797ecb23748e3671d70f93ea"
+  },
+  "fresh": {
+    "rows": 351,
+    "sha256": "5e42c543838f423011be53f921878edec621e3baf7a4852781f2838a670547e6"
+  },
+  "linkedinHoldout": {
+    "rows": 9743,
+    "sha256": "63e21a6a6a6ed4946369294c043152ba2b597d23bb5cd57e64eacab45ceb5803"
+  },
+  "wayback": {
+    "rows": 410,
+    "sha256": "d5328d2f83ee7e4805982fd729ef31ea66f6926850b5546586518ba978f452e2"
+  },
+  "raidTest": {
+    "rows": 2342,
+    "sha256": "0e5b2b794be524425cf3dd11596950cf00ceb78d858470d23d8704223462b9e3"
+  },
+  "external": {
+    "rows": 2245,
+    "sha256": "3d1eee8be2ec169ea6cafd168ac7d6eac6e6183fe686c11cbf2e0519ec7a4584"
+  },
+  "polishedAudit": {
+    "rows": 80,
+    "sha256": "be32e2bb4e02bde151cf2dc02828c1ea93338af992e1ac434cd479fab4152241"
+  },
+  "effortful": {
+    "rows": 210,
+    "sha256": "2a219e7c11c095d1eb338e2119988da387459d7cfc6cecf7211b52bc0348bd8f"
+  }
+}

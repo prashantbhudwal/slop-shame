@@ -3,22 +3,26 @@
 
 import postCss from './styles/post.css?inline';
 import modalCss from './styles/modal.css?inline';
+import summaryCss from './styles/summary.css?inline';
 
 export type Theme = 'light' | 'dark';
 
 const LIGHT = `:host{
   --ss-text:#1B1F3B; --ss-muted:#5B6178; --ss-surface:#FFFFFF; --ss-line:#1B1F3B; --ss-line-soft:rgba(27,31,59,.22);
   --ss-drop:#1B1F3B; --ss-track:#EEF1E6; --ss-panel:#F6F8F0; --ss-btn:#FFFFFF; --ss-destroy-bg:#FFE6DE;
-  --ss-shame-bg:#FFF1BF; --ss-chip:#F2F3EE; --ss-focus:#0A66C2; --ss-paper:#FFFDF6; color-scheme: light;
+  --ss-shame-bg:#FFF1BF; --ss-chip:#F2F3EE; --ss-focus:#0A66C2; --ss-paper:#FFFDF6; --ss-slopper:#C026D3;
+  --ss-goo:#9BE22D; --ss-goo-ol:#1B1F3B; color-scheme: light;
 }`;
 const DARK = `:host{
   --ss-text:#ECEFF6; --ss-muted:#A6ACBF; --ss-surface:#1D2226; --ss-line:#59627A; --ss-line-soft:rgba(200,210,230,.2);
   --ss-drop:#000000; --ss-track:#2A3038; --ss-panel:#22282E; --ss-btn:#2A3038; --ss-destroy-bg:#3B2622;
-  --ss-shame-bg:#3A3320; --ss-chip:#252B31; --ss-focus:#71B7FB; --ss-paper:#FFFDF6; color-scheme: dark;
+  --ss-shame-bg:#3A3320; --ss-chip:#252B31; --ss-focus:#71B7FB; --ss-paper:#FFFDF6; --ss-slopper:#E879F9;
+  --ss-goo:#A3E635; --ss-goo-ol:#0b0d10; color-scheme: dark;
 }`;
 
 let base: CSSStyleSheet | null = null;
 let modal: CSSStyleSheet | null = null;
+let summary: CSSStyleSheet | null = null;
 let themeSheet: CSSStyleSheet | null = null;
 let current: Theme = 'light';
 
@@ -44,6 +48,15 @@ export function modalSheets(): CSSStyleSheet[] {
     modal.replaceSync(modalCss);
   }
   return [theme(), ...postSheets().slice(1), modal];
+}
+
+/** The profile summary on activity pages: theme + its own sheet (no post styles). */
+export function summarySheets(): CSSStyleSheet[] {
+  if (!summary) {
+    summary = new CSSStyleSheet();
+    summary.replaceSync(summaryCss);
+  }
+  return [theme(), summary];
 }
 
 export function setTheme(next: Theme): void {

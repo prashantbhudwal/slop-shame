@@ -1,0 +1,40 @@
+import assert from 'node:assert/strict';
+import { createHash } from 'node:crypto';
+import { readFileSync } from 'node:fs';
+import { resolve } from 'node:path';
+import { CACHE, OUT, ROOT, loader, save } from './common.mjs';
+
+const s = await loader();
+try {
+  const { structural } = await s.load(resolve(s.engine, 'packs/measured/structural.ts'));
+  const { buildContext } = await s.load(resolve(s.engine, 'context.ts'));
+  const { createEngine } = await s.load(resolve(s.engine, 'index.ts'));
+  const engine = createEngine([structural]);
+  const rule = suffix => structural.rules.find(r => r.id === 'measured-structural.' + suffix);
+  const detail = 'The local group has organized a workshop where neighbors can share practical advice about everyday repairs and discuss upcoming community projects.';
+  const transitions = ['Moreover', 'However', 'Additionally', 'Finally', 'Meanwhile', 'Consequently'].map(word => `${word}, ${detail}`).join(' ');
+  const context = buildContext({ text: transitions });
+  assert(rule('transition-share').detect(context)); assert(rule('transition-count').detect(context));
+  const transitionReport = engine.analyze({ text: transitions });
+  assert.equal(transitionReport.signals.filter(r => /transition/.test(r.ruleId)).length, 1, 'Identical transition spans must count once');
+  assert(transitionReport.score < 40); assert.equal(transitionReport.shameable, false);
+  const summary = `${detail} ${detail} ${detail} ${detail} In summary, ${detail}`;
+  assert(rule('summary-tail').detect(buildContext({ text: summary })));
+  assert.equal(engine.analyze({ text: summary }).shameable, false);
+  assert.equal(engine.analyze({ text: '```\n' + transitions + '\n```' }).score, 0, 'Protected code must not become style evidence');
+  for (const text of ['', 'Moreover, agreed.', detail, 'In summary, thank you.']) assert.equal(engine.analyze({ text }).score, 0);
+  const unicode = `İstanbul is a city where residents discuss transit and neighborhood plans. ${summary}`;
+  assert(rule('summary-tail').detect(buildContext({ text: unicode })), 'Expanded lowercase offsets preserve exact sentence spans');
+  const vague = 'Keep learning. ' + detail + ' ' + detail;
+  assert(rule('vague-platitude-count').detect(buildContext({text:vague})));
+  assert.equal(rule('vague-platitude-count').detect(buildContext({text:vague+' Our team met OpenAI researchers.'})),null,'A mid-sentence named entity blocks the absence conjunction');
+  assert.equal(rule('vague-platitude-count').detect(buildContext({text:detail+' '+detail})),null,'No specifics alone cannot be evidence');
+  assert(rule('visible-markdown-headers').detect(buildContext({text:'### Practical notes\n'+detail})));
+  assert(rule('visible-markdown-bold').detect(buildContext({text:'**First topic**\n'+detail+'\n**Second topic**\n'+detail})));
+  const frozen = JSON.parse(readFileSync(resolve(CACHE, 'engine.json'), 'utf8'));
+  const hash = text => createHash('sha256').update(text).digest('hex');
+  for (const [name, sha] of frozen.files) assert.equal(hash(readFileSync(resolve(CACHE, 'engine-base', name))), sha, `Immutable baseline ${name}`);
+  assert.equal(readFileSync(resolve(ROOT, 'src/lib/engine/packs/measured/structural.ts'), 'utf8'), readFileSync(resolve(s.engine, 'packs/measured/structural.ts'), 'utf8'));
+  const result = { guardrails: 'pass', snapshotSha256: frozen.sha256, snapshotFilesVerified: frozen.files.length, runtimeCopyIdentical: true, styleOnlyBelow40: true, overlappingTransitionWeightsCountOnce: true, protectedCodeExcluded: true };
+  save(resolve(OUT, 'verification.json'), result); console.log(JSON.stringify(result));
+} finally { await s.close(); }

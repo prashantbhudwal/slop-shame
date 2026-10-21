@@ -1,0 +1,14 @@
+{
+  "usedExternalForSelection": true,
+  "numberOfCorrectiveSelections": 1,
+  "reason": "Initial final failed on public PLOS and Federal Reserve controls. Replace dev budget by zero observed human false positives; maximize dev recall among configurations already logged. No new fit, entry filtering or threshold sweep on any external data.",
+  "selectionInputs": [
+    "existing RAID-dev runs",
+    "PLOS aggregate first-final FP",
+    "Federal Reserve aggregate first-final FP"
+  ],
+  "restrictedSourcesUsedForSelection": false,
+  "initial": "27f09434-logistic-l10.0003-l20.0003-scale2-cap3-mix0-style1",
+  "corrected": "27f09434-logistic-l13e-05-l20.0001-scale1-cap3-mix0-style1",
+  "lockedTest": "One baseline, initial final, and this single explicitly permitted corrective final. No test data during climb; no further corrective selection."
+}

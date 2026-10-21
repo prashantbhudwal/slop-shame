@@ -4,7 +4,7 @@
   import type { SlopTierId } from '../../lib/engine/types';
   import { getDailyStats, saveSettings, settings, watchDailyStats, type DailyStats } from '../../lib/settings';
   import { getLeaderboard, subscribe } from '../../lib/store/read';
-  import { rankTitle } from '../../lib/store/ranking';
+  import { HALL_MIN_SLOP_POSTS, rankTitle } from '../../lib/store/ranking';
   import type { AuthorRecord } from '../../lib/store/types';
 
   let today = $state<DailyStats | null>(null);
@@ -52,9 +52,9 @@
   </section>
 
   <section>
-    <h2>Full badge from</h2>
-    <div class="tiers" role="radiogroup" aria-label="Minimum tier for the full badge">
-      {#each TIERS as tier (tier.id)}
+    <h2>Badge from</h2>
+    <div class="tiers" role="radiogroup" aria-label="Minimum tier for a badge">
+      {#each TIERS.filter((t) => t.min >= 40) as tier (tier.id)}
         <button
           role="radio"
           aria-checked={$settings.minTier === tier.id}
@@ -65,7 +65,6 @@
         </button>
       {/each}
     </div>
-    <label class="row"><input type="checkbox" checked={$settings.showClean} onchange={(e) => set({ showClean: e.currentTarget.checked })} /> Quiet chip on cleaner posts</label>
     <label class="row"><input type="checkbox" checked={$settings.sound} onchange={(e) => set({ sound: e.currentTarget.checked })} /> KA-SLOP sound</label>
     <label class="row"><input type="checkbox" checked={$settings.reduceMotion} onchange={(e) => set({ reduceMotion: e.currentTarget.checked })} /> Reduce motion</label>
     <label class="row"><input type="checkbox" checked={$settings.rememberDestroyed} onchange={(e) => set({ rememberDestroyed: e.currentTarget.checked })} /> Keep destroyed posts hidden</label>
@@ -78,13 +77,13 @@
         {#each top as a, i (a.id)}
           <li>
             <span class="pos">{i === 0 ? '👑' : `#${i + 1}`}</span>
-            <span class="who"><b>{a.name}</b><small>{rankTitle(a.slopPoints)} · {a.slopPosts} slop posts</small></span>
+            <span class="who"><b>{a.name}</b><small>{rankTitle(a.slopPoints)} · {a.slopPosts} of {a.postsSeen} posts slop</small></span>
             <span class="pts">{a.slopPoints}</span>
           </li>
         {/each}
       </ol>
     {:else}
-      <p class="empty">No sloppers yet. Go scroll your feed.</p>
+      <p class="empty">No sloppers yet. Authors join after {HALL_MIN_SLOP_POSTS} slop posts that are at least half of what you've seen from them.</p>
     {/if}
   </section>
 </main>

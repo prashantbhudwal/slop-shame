@@ -1,0 +1,22 @@
+{
+  "pass": false,
+  "criteria": {
+    "moreTargetHoldout": false,
+    "moreFresh": false,
+    "noMoreFP-linkedinHoldout": true,
+    "noMoreFP-wayback": true,
+    "noMoreFP-raidTest": true,
+    "noMoreFP-external": true,
+    "noMoreFP-polishedAudit": true,
+    "goodAINone": true,
+    "vetoUpper95": true,
+    "polishedAuditUpper95": false,
+    "performance": false
+  },
+  "latestMvpMeanBudget": {
+    "limitMs": 1,
+    "meanMs": 0.359849918000009,
+    "pass": true
+  },
+  "note": "NO SHIP on locked target and fresh recall. Original strict tail/creation limits are reported separately; no post-audit retuning."
+}

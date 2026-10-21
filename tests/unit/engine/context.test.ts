@@ -38,6 +38,34 @@ describe('shared post context', () => {
     expect(structureOf(ctx).lineWordCounts).toEqual([1, 2]);
     expect(buildContext({ text: ' \n\t' }).wordCount).toBe(0);
   });
+  it('records exact token spans through lowercase expansion and astral characters', () => {
+    const ctx = buildContext({ text: 'İstanbul 🚀 HARNESS elevated foster’s' });
+    expect(structureOf(ctx).wordSpans.map(([start, end]) => ctx.text.slice(start, end))).toEqual(['İstanbul', 'HARNESS', 'elevated', 'foster’s']);
+    expect(structureOf(ctx).wordSpans).toHaveLength(ctx.words.length);
+  });
+
+  it('protects whole multiline quotes and contiguous Markdown blockquotes without changing offsets', () => {
+    const text = 'Intro. “Quoted\nmodel example.”\n> <think>\n> Some reasoning.\n> </think>\nDirect prose.';
+    const ctx = buildContext({ text });
+    const spans = structureOf(ctx).protectedSpans;
+    expect(spans.map(([start, end]) => ctx.text.slice(start, end))).toEqual(['“Quoted\nmodel example.”\n> <think>\n> Some reasoning.\n> </think>']);
+    expect(ctx.text).toBe(text);
+    expect(spans.every(([start, end]) => start < end)).toBe(true);
+    expect(spans[0]![1]).toBeLessThan(text.indexOf('Direct prose.'));
+  });
+
+  it('merges quoted examples separated only by whitespace', () => {
+    const example = '```\n[assistant]\nAn answer.\n[user]\nA question.\n```';
+    const examples = `${example}\n\n${example}`;
+    const ctx = buildContext({ text: `${examples}\nDirect prose.` });
+    expect(structureOf(ctx).protectedSpans).toEqual([[0, examples.length]]);
+  });
+
+  it('keeps recognizing examples after many unmatched multiline quote openers', () => {
+    const prefix = '“word '.repeat(3000);
+    const ctx = buildContext({ text: `${prefix}\`alpha\` \n> beta\nDirect prose.` });
+    expect(structureOf(ctx).protectedSpans).toEqual([[prefix.length, prefix.length + '`alpha` \n> beta'.length]]);
+  });
   it('normalizes mathematical fake bold but retains raw input for its formatting signal', () => {
     const input = { text: '𝗗𝗲𝗹𝘃𝗲 into the 𝘁𝗮𝗽𝗲𝘀𝘁𝗿𝘆.' };
     const ctx = buildContext(input);

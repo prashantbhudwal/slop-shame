@@ -88,19 +88,18 @@ describe('store review regressions', () => {
     expect(await getAuthor('in/alice')).toMatchObject({ postsSeen: 1, shamedCount: 1 });
   });
 
-  it('retains action target snapshots after a permanent rejection and cache eviction', async () => {
+  it('retains action target snapshots through a transport outage and cache eviction', async () => {
     const client = await import('../../../src/lib/store/client');
     const { getAuthor } = await import('../../../src/lib/store/query');
     client.reportSighting(sighting('target'));
-    sendMessage.mockResolvedValueOnce({ type: 'store/error', error: 'Quota full', retryable: false });
-    await expect(client.reportAction('target', 'in/alice', 'destroyed')).rejects.toThrow('Quota full');
+    sendMessage.mockRejectedValue(new Error('Worker unavailable'));
+    await expect(client.reportAction('target', 'in/alice', 'destroyed')).rejects.toThrow('Worker unavailable');
     // Fill both bounded caches while the action's failed snapshot stays pending.
-    sendMessage.mockResolvedValue({ ok: true, pendingActions: [{ postId: 'target', authorId: 'in/alice', action: 'destroyed' }] });
     for (let i = 0; i < 2001; i++) {
       client.reportSighting(sighting(`evict-${i}`, 40, 'other'));
-      if (i % 25 === 24) await client.flushSightings();
+      if (i % 25 === 24) await client.flushSightings().catch(() => {});
     }
-    await client.flushSightings();
+    await client.flushSightings().catch(() => {});
     sendMessage.mockImplementation((message: StoreMessage) => deliver(message));
     await client.flushSightings();
     expect(await getAuthor('in/alice')).toMatchObject({ postsSeen: 1, destroyedCount: 1 });

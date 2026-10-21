@@ -10,6 +10,8 @@
 //
 // `data-slop-shame-mount` makes the feed adapter ignore this subtree.
 
+import { attachUiShadow } from '../ui/shadow';
+
 export type FrameTask = (now: number, dt: number) => boolean; // return false when done
 
 interface Layer {
@@ -70,7 +72,7 @@ function create(): Layer {
   const host = document.createElement('div');
   host.setAttribute('data-slop-shame-mount', '');
   host.setAttribute('data-slop-shame-layer', '');
-  const shadow = host.attachShadow({ mode: 'open' });
+  const shadow = attachUiShadow(host);
   shadow.adoptedStyleSheets = [hostSheets()];
   const slot = document.createElement('slot');
   const canvas = document.createElement('canvas');

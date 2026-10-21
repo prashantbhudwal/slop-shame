@@ -2,71 +2,165 @@
 :host {
   all: initial;
   display: block;
-  contain: layout style;
-  container-type: inline-size;
+  position: relative;
+  contain: style;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, Roboto, "Helvetica Neue", Arial, sans-serif;
-  font-size: 13px;
+  font-size: 12px;
   line-height: 1.35;
   color: var(--ss-text);
   -webkit-font-smoothing: antialiased;
   text-align: left;
+  white-space: normal;
 }
+/* Slots (data-slot on the host, set by the adapter). The host has no box of
+   its own; our .wrap is the flex item, so LinkedIn's CSS can't resize it.
+   The controller sets data-fit from the room the slot leaves, so LinkedIn's
+   own content never gives way.
+
+   bar: the action bar's empty space, right after Send. Font and color are
+   inherited from the bar, so the chip reads like LinkedIn's own actions.
+   name: the end of the author's name line (the Certified Slopper tag);
+   z-index lifts it over the header's stretched profile link.
+   (none): a row under the header, until the action bar hydrates. */
+:host([data-slot]) { display: contents; }
+:host([data-slot='bar']) { color: inherit; font-family: inherit; font-size: inherit; line-height: inherit; }
+:host([data-slot]) .wrap { flex: none; align-self: center; }
+:host([data-slot='bar']) .wrap { margin-left: 4px; }
+:host([data-slot='name']) .wrap { margin-left: 6px; position: relative; z-index: 1; }
 *, *::before, *::after { box-sizing: border-box; }
 button { font: inherit; color: inherit; margin: 0; }
-button:focus-visible { outline: 2.5px solid var(--ss-focus); outline-offset: 2px; }
+button:focus-visible { outline: 2px solid var(--ss-focus); outline-offset: 2px; }
 img { display: block; user-select: none; -webkit-user-drag: none; }
 
-.wrap { padding: 4px 12px 10px; }
-.wrap.slim { padding: 2px 12px 6px; }
+.wrap { display: flex; min-width: 0; max-width: 100%; }
+:host(:not([data-slot])) .wrap { display: block; padding: 2px 16px 6px; }
 
-/* ── Badge ─────────────────────────────────────────────────────────────── */
-.bar {
-  --fill: 0;
-  position: relative;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  min-height: 48px;
-  padding: 5px 6px 5px 6px;
-  border: 2px solid var(--ss-line);
-  border-radius: 14px;
-  background: color-mix(in srgb, var(--tier) 9%, var(--ss-surface));
-  box-shadow: 3px 3px 0 var(--ss-drop);
-  animation: ss-in 0.42s cubic-bezier(0.2, 1.4, 0.4, 1) both;
-}
-.bar[data-tier='whiff'] { border-width: 1.5px; box-shadow: 2px 2px 0 var(--ss-line-soft); }
-.bar[data-tier='slopocalypse'] { animation: ss-in 0.42s cubic-bezier(0.2, 1.4, 0.4, 1) both, ss-alarm 2.4s ease-in-out 0.6s infinite; }
-
+/* ── Chip: one size for every tier; the tier shows in its icon and color ── */
+.bar { display: inline-flex; min-width: 0; max-width: 100%; vertical-align: middle; animation: ss-fade 0.2s ease-out both; }
 .toggle {
-  display: flex;
+  display: inline-flex;
   align-items: center;
-  gap: 9px;
-  flex: 1;
+  gap: 5px;
+  height: 32px;
   min-width: 0;
-  padding: 0;
+  max-width: 100%;
+  overflow: hidden;
+  padding: 0 8px 0 4px;
   border: 0;
-  background: none;
+  border-radius: 6px;
+  background: transparent;
+  color: inherit;
+  font-size: 14px;
+  line-height: 1;
+  white-space: nowrap;
   cursor: pointer;
-  text-align: left;
-  border-radius: 10px;
+  transition: background-color 0.15s;
 }
-.tier-icon {
-  width: 46px;
-  height: 46px;
-  margin: -12px -2px -12px -2px;
-  flex: none;
-  filter: drop-shadow(0 2px 0 rgba(27, 31, 59, 0.22));
-  animation: ss-pop 0.62s cubic-bezier(0.3, 1.7, 0.5, 1) 0.06s both;
-}
-.bar[data-wobble] .toggle:hover .tier-icon { animation: ss-wobble 0.7s ease-in-out; }
-.toggle:hover .tier-icon { transform: rotate(-6deg) scale(1.06); transition: transform 0.2s; }
+.toggle:hover, .toggle[aria-expanded='true'] { background: color-mix(in srgb, currentColor 8%, transparent); }
+.tier-icon { width: 22px; height: 22px; flex: none; }
+.num { flex: none; font-weight: 600; font-variant-numeric: tabular-nums; color: color-mix(in srgb, var(--tier) 60%, currentColor); }
+.toggle .lbl { min-width: 0; overflow: hidden; text-overflow: ellipsis; color: color-mix(in srgb, currentColor 72%, transparent); }
+:host([data-fit='score']) .toggle .lbl,
+:host([data-fit='icon']) .toggle .lbl,
+:host([data-fit='icon']) .toggle .num { display: none; }
+:host([data-fit='icon']) .toggle { padding: 0 4px; }
 
-.score { display: grid; gap: 4px; flex: 1; min-width: 0; }
-.score-top { display: flex; align-items: baseline; gap: 6px; min-width: 0; }
-.kicker { font-size: 9.5px; font-weight: 800; letter-spacing: 0.09em; text-transform: uppercase; color: var(--ss-muted); white-space: nowrap; }
-.num { font-size: 21px; font-weight: 900; line-height: 0.9; letter-spacing: -0.03em; font-variant-numeric: tabular-nums; min-width: 1.3em; }
+/* Fallback row under the header: a small pill, theme colors. */
+:host(:not([data-slot])) .toggle {
+  height: 22px;
+  padding: 0 8px 0 2px;
+  border: 1px solid color-mix(in srgb, var(--tier) 60%, var(--ss-line-soft));
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--tier) 14%, var(--ss-surface));
+  color: var(--ss-text);
+  font-size: 12px;
+}
+:host(:not([data-slot])) .tier-icon { width: 18px; height: 18px; }
+
+/* Attention scales with slop, once, when the chip is first seen. */
+:host([data-seen]) .bar[data-tier='swamp'] .tier-icon { animation: ss-wobble 0.7s ease-in-out 0.1s 1; }
+:host([data-seen]) .bar[data-tier='slopocalypse'] .tier-icon { animation: ss-wobble 0.7s ease-in-out 0.1s 2; }
+.toggle:hover .tier-icon { animation: ss-wobble 0.7s ease-in-out; }
+
+/* ── Certified Slopper tag (name line) ─────────────────────────────────── */
+.tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  height: 18px;
+  padding: 0 7px 0 3px;
+  border: 1px solid color-mix(in srgb, var(--ss-slopper) 55%, transparent);
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--ss-slopper) 14%, transparent);
+  color: var(--ss-text);
+  font-size: 11px;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: 0.01em;
+  white-space: nowrap;
+  animation: ss-fade 0.2s ease-out both;
+}
+.tag .crown { width: 14px; height: 14px; flex: none; }
+.tag .short,
+:host([data-fit='short']) .tag .full,
+:host([data-fit='icon']) .tag .full { display: none; }
+:host([data-fit='short']) .tag .short { display: inline; }
+:host([data-fit='icon']) .tag { padding: 0 2px; }
+
+.ad-chip {
+  padding: 1px 5px;
+  border-radius: 4px;
+  border: 1px solid var(--ss-line-soft);
+  color: var(--ss-muted);
+  font-size: 9.5px;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+/* ── Popover: browser top layer, so no card can clip it ──────────────────
+   It hangs from the control that opened it (same shadow root) through CSS
+   anchor positioning: under the anchor, flipped above when there's no room,
+   kept 8px inside the viewport, hidden the moment the anchor is clipped by
+   LinkedIn's scroller. The browser keeps it attached while the feed scrolls;
+   no script follows the scroll. Without anchor positioning, Panel.svelte
+   places it once and closes it on scroll. */
+.toggle, .ss-avatar-monster { anchor-name: --ss-anchor; }
+.panel {
+  position: fixed;
+  inset: auto;
+  margin: 0;
+  overflow: visible;
+  width: min(340px, calc(100vw - 16px));
+  padding: 10px 12px 12px;
+  border: 1.5px solid var(--ss-line);
+  border-radius: 14px;
+  background: var(--ss-surface);
+  color: var(--ss-text);
+  box-shadow: 3px 3px 0 var(--ss-drop), 0 10px 28px rgba(0, 0, 0, 0.16);
+  font-size: 12.5px;
+  line-height: 1.35;
+  cursor: default;
+  pointer-events: auto; /* the card decoration it may hang from is click-through */
+  animation: ss-fade 0.14s ease-out both;
+}
+@supports (position-anchor: --ss-anchor) {
+  .panel {
+    position-anchor: --ss-anchor;
+    top: anchor(bottom);
+    left: clamp(8px, anchor(left), calc(100% - min(340px, 100% - 16px) - 8px));
+    margin-top: 6px;
+    position-try-fallbacks: flip-block;
+    position-visibility: anchors-visible;
+  }
+}
+.head { display: flex; align-items: center; gap: 8px; }
+.head-icon { width: 34px; height: 34px; flex: none; }
+.head-text { display: grid; gap: 1px; flex: 1; min-width: 0; }
+.kicker { font-size: 9.5px; font-weight: 800; letter-spacing: 0.09em; text-transform: uppercase; color: var(--ss-muted); }
+.head-score { display: flex; align-items: center; gap: 6px; }
+.head-score b { font-size: 20px; font-weight: 900; line-height: 1; font-variant-numeric: tabular-nums; }
 .tier-chip {
-  margin-left: 2px;
   padding: 2px 7px;
   border: 1.5px solid var(--ss-line);
   border-radius: 999px;
@@ -77,42 +171,47 @@ img { display: block; user-select: none; -webkit-user-drag: none; }
   letter-spacing: 0.05em;
   text-transform: uppercase;
   white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  min-width: 0;
 }
-.ad-chip {
-  padding: 1px 6px;
-  border-radius: 6px;
-  border: 1px solid var(--ss-line-soft);
+.close {
+  align-self: flex-start;
+  width: 24px;
+  height: 24px;
+  border: 0;
+  border-radius: 999px;
+  background: none;
   color: var(--ss-muted);
-  font-size: 10px;
-  font-weight: 800;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
+  font-size: 18px;
+  line-height: 1;
+  cursor: pointer;
 }
-.caret { margin-left: auto; flex: none; width: 16px; height: 16px; color: var(--ss-muted); transition: transform 0.25s; }
-.caret[data-open] { transform: rotate(180deg); }
+.close:hover { background: var(--ss-panel); color: var(--ss-text); }
+.blurb { margin: 8px 0 6px; color: var(--ss-muted); font-style: italic; }
+.why { margin: 6px 0 2px; font-size: 10px; font-weight: 900; letter-spacing: 0.09em; text-transform: uppercase; color: var(--ss-muted); }
+.sigs { margin: 0; padding: 0; list-style: none; display: grid; gap: 2px; }
+.sig { display: grid; grid-template-columns: 28px 1fr; column-gap: 8px; align-items: center; padding: 3px 0; }
+.sig .cat { width: 28px; height: 28px; grid-row: span 2; }
+.sig-label { font-weight: 800; }
+.sig-quote { color: var(--ss-muted); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.sig-quote q { color: var(--ss-text); font-style: italic; quotes: '“' '”'; }
+.rank {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 8px;
+  padding-top: 8px;
+  border-top: 1.5px dashed var(--ss-line-soft);
+  font-weight: 700;
+}
+.rank .crown { width: 20px; height: 20px; }
+.rank b { font-weight: 900; }
 
-.meter { position: relative; height: 8px; border: 1.5px solid var(--ss-line); border-radius: 99px; background: var(--ss-track); overflow: hidden; }
-.fill {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(90deg, #c9f27a 0%, #7ed321 38%, #ffc23f 68%, #ff5a1f 100%);
-  clip-path: inset(0 calc(100% - var(--fill) * 1%) 0 0 round 99px);
-}
-.fill::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: repeating-linear-gradient(-45deg, rgba(255, 255, 255, 0.22) 0 6px, transparent 6px 12px);
-}
-
-.actions { display: flex; gap: 6px; flex: none; }
+.panel-actions { display: flex; gap: 6px; margin-top: 10px; }
 .act {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 4px;
+  flex: 1;
   height: 34px;
   padding: 0 11px 0 4px;
   border: 2px solid var(--ss-line);
@@ -121,83 +220,23 @@ img { display: block; user-select: none; -webkit-user-drag: none; }
   box-shadow: 2px 2px 0 var(--ss-drop);
   font-size: 12.5px;
   font-weight: 850;
-  letter-spacing: 0.01em;
   cursor: pointer;
   transition: transform 0.08s ease-out, box-shadow 0.08s ease-out;
   white-space: nowrap;
 }
 .act:hover { transform: translate(-1px, -1px); box-shadow: 3px 3px 0 var(--ss-drop); }
 .act:active { transform: translate(2px, 2px); box-shadow: 0 0 0 var(--ss-drop); }
-.act .ico { width: 28px; height: 28px; margin: -5px 0; flex: none; }
+.act .ico { width: 26px; height: 26px; margin: -4px 0; flex: none; }
 .act.destroy { background: var(--ss-destroy-bg); }
 .act.shame { background: var(--ss-shame-bg); }
 .act.destroy:hover .ico { animation: ss-rattle 0.32s linear infinite; }
 .act.shame:hover .ico { animation: ss-ring 0.6s ease-in-out; transform-origin: 50% 10%; }
 
-@container (max-width: 470px) {
-  .act { padding: 0 4px; }
-  .act .lbl { display: none; }
-  .kicker { display: none; }
-}
-@container (max-width: 360px) {
-  .tier-chip { display: none; }
-}
-
-/* ── Details panel ─────────────────────────────────────────────────────── */
-.panel {
-  margin: 8px 2px 0;
-  padding: 10px 12px 10px;
-  border: 1.5px dashed var(--ss-line-soft);
-  border-radius: 12px;
-  background: var(--ss-panel);
-}
-.blurb { margin: 0 0 6px; color: var(--ss-muted); font-style: italic; }
-.why { margin: 4px 0 2px; font-size: 10px; font-weight: 900; letter-spacing: 0.09em; text-transform: uppercase; color: var(--ss-muted); }
-.sigs { margin: 0; padding: 0; list-style: none; display: grid; gap: 2px; }
-.sig { display: grid; grid-template-columns: 30px 1fr; column-gap: 9px; align-items: center; padding: 4px 0; }
-.sig .cat { width: 30px; height: 30px; grid-row: span 2; }
-.sig-label { font-weight: 800; font-size: 12.5px; }
-.sig-quote { color: var(--ss-muted); font-size: 12.5px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
-.sig-quote q { color: var(--ss-text); font-style: italic; quotes: '“' '”'; }
-.none { color: var(--ss-muted); margin: 2px 0; }
-.rank {
-  display: flex;
-  align-items: center;
-  gap: 7px;
-  margin-top: 8px;
-  padding-top: 8px;
-  border-top: 1.5px dashed var(--ss-line-soft);
-  font-size: 12px;
-  font-weight: 700;
-}
-.rank .crown { width: 22px; height: 22px; }
-.rank b { font-weight: 900; }
-.panel-actions { display: flex; gap: 6px; margin-top: 8px; }
-
-/* ── Clean / below-threshold chip ──────────────────────────────────────── */
-.chip {
-  display: inline-flex;
-  align-items: center;
-  gap: 5px;
-  height: 24px;
-  padding: 0 9px 0 3px;
-  border: 1px solid var(--ss-line-soft);
-  border-radius: 999px;
-  background: var(--ss-chip);
-  color: var(--ss-muted);
-  font-size: 11.5px;
-  font-weight: 700;
-  cursor: pointer;
-  animation: ss-fade 0.3s ease-out both;
-}
-.chip:hover { color: var(--ss-text); }
-.chip .ico { width: 20px; height: 20px; margin: -2px 0; }
-.chip .n { font-variant-numeric: tabular-nums; opacity: 0.8; }
-
 /* ── Tombstone ─────────────────────────────────────────────────────────── */
 .tomb {
   position: relative;
   display: flex;
+  min-width: min(300px, calc(100vw - 32px));
   align-items: center;
   gap: 8px;
   height: 36px;
@@ -231,16 +270,76 @@ img { display: block; user-select: none; -webkit-user-drag: none; }
 .emoji { display: inline-grid; place-items: center; flex: none; line-height: 1; }
 
 /* ── Motion ────────────────────────────────────────────────────────────── */
-@keyframes ss-in { from { opacity: 0; transform: translateY(-6px) scale(0.96); } to { opacity: 1; transform: none; } }
 @keyframes ss-fade { from { opacity: 0; } to { opacity: 1; } }
-@keyframes ss-pop { 0% { transform: scale(0) rotate(-30deg); } 60% { transform: scale(1.18) rotate(8deg); } 100% { transform: scale(1) rotate(0); } }
 @keyframes ss-wobble { 0%, 100% { transform: rotate(0); } 20% { transform: rotate(-12deg) scale(1.08); } 40% { transform: rotate(10deg) scale(1.1); } 60% { transform: rotate(-6deg); } 80% { transform: rotate(3deg); } }
 @keyframes ss-rattle { 0%, 100% { transform: translate(0, 0) rotate(0); } 25% { transform: translate(-1px, 1px) rotate(-6deg); } 75% { transform: translate(1px, -1px) rotate(6deg); } }
 @keyframes ss-ring { 0%, 100% { transform: rotate(0); } 15% { transform: rotate(18deg); } 35% { transform: rotate(-16deg); } 55% { transform: rotate(10deg); } 75% { transform: rotate(-6deg); } }
-@keyframes ss-alarm { 0%, 100% { box-shadow: 3px 3px 0 var(--ss-drop), 0 0 0 0 rgba(255, 90, 31, 0); } 50% { box-shadow: 3px 3px 0 var(--ss-drop), 0 0 0 4px rgba(255, 90, 31, 0.28); } }
 @keyframes ss-drain { from { transform: scaleX(1); } to { transform: scaleX(0); } }
 
 .rm *, .rm *::before, .rm *::after { animation: none !important; transition: none !important; }
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation: none !important; transition: none !important; }
 }
+
+/* ── Drip Edge: slime along the card's top edge (drip.ts, PostDecoration) ──
+   Drawn from a zero-size host inside the card itself (the adapter's
+   decoration host), so it scrolls with the post: nothing is repositioned on
+   scroll and LinkedIn's own layers (nav, sidebars, menus) cover it as they
+   cover the post. post-decoration.ts measures the card's top-left corner and
+   width from the host, and the photo's centre for the SLOPOCALYPSE drip, only
+   when the card or photo changes size, into --card-x/y/w and --ph-x. Our own
+   clip keeps every drip inside the card's top corners even when LinkedIn's
+   card doesn't clip. Click-through: the chip carries the score and panel. */
+.ss-drip { position: absolute; left: var(--card-x, 0); top: var(--card-y, 0); width: var(--card-w, 0); height: 0; pointer-events: none; }
+[data-measured='0'] > .ss-drip { visibility: hidden; }
+.ss-drip-clip { position: absolute; left: 0; top: 0; width: 100%; height: 32px; overflow: hidden; border-radius: 8px 8px 0 0; }
+.ss-drip-goo { display: block; width: 100%; height: 32px; overflow: visible; }
+.ss-drip-goo line { stroke-linecap: round; }
+.ss-drip-goo .ol line { stroke: var(--ss-goo-ol); }
+.ss-drip-goo .ol circle { fill: var(--ss-goo-ol); }
+.ss-drip-goo .fill line { stroke: var(--ss-goo); }
+.ss-drip-goo .fill circle { fill: var(--ss-goo); }
+.ss-drip-goo .hi { fill: #fff; opacity: 0.8; }
+/* The photo drip hangs at the photo's centre: long, running onto it, when the
+   photo is the card's first row; otherwise (a header above it) as short as the
+   others, so it never runs through the header's text. */
+.ss-drip-goo .ph { transform: translateX(var(--ph-x, 14%)); }
+.ss-drip-goo .ph-long, [data-photo='top'] .ss-drip-goo .ph-short { display: none; }
+[data-photo='top'] .ss-drip-goo .ph-long { display: inline; }
+/* The drop falling off the photo drip: only on screen (data-play, set by an
+   IntersectionObserver), never with reduced motion; transform and opacity
+   only. Invisible when not animating. */
+.ss-drip-fall {
+  position: absolute;
+  left: calc(var(--ph-x, 14%) - var(--rx));
+  top: calc(var(--fy) - var(--ry));
+  width: calc(var(--rx) * 2);
+  height: calc(var(--ry) * 2);
+  border: var(--fb) solid var(--ss-goo-ol);
+  border-radius: 50%;
+  background: var(--ss-goo);
+  opacity: 0;
+}
+:not([data-photo='top']) > .ss-drip .ss-drip-fall { display: none; }
+[data-play='1'] > .ss-drip .ss-drip-fall { animation: ss-fall 2.6s ease-in 1.2s infinite; }
+@keyframes ss-fall { 0%, 40% { transform: translateY(-14px); opacity: 0; } 50% { opacity: 1; } 100% { transform: translateY(10px); opacity: 0; } }
+
+/* ── Avatar decorations: scribbled ring, avatar monster ───────────────────
+   Drawn next to the Drip Edge from the same host, so they scroll with the
+   post too. post-decoration.ts measures the photo's offset from the host only
+   when the card or photo changes size, into --av-x/y/s; without a visible
+   photo (data-avatar='0') they hide. The monster opens the same panel as the
+   chip. */
+.ss-deco { position: absolute; left: 0; top: 0; width: 0; height: 0; pointer-events: none; }
+[data-measured='0'] > .ss-deco, [data-avatar='0'] > .ss-deco { visibility: hidden; }
+.ss-avatar-decoration {
+  --monster-size: clamp(12px, calc(var(--av-s) * .43), 32px);
+  position: absolute; left: calc(var(--av-x) - var(--av-s) * .08); top: calc(var(--av-y) - var(--av-s) * .08);
+  width: calc(var(--av-s) * 1.16); height: calc(var(--av-s) * 1.16); pointer-events: none;
+}
+.ss-avatar-scribble { position:absolute; inset:0; width:100%; height:100%; overflow:visible; stroke:currentColor; stroke-width:4.2; stroke-linecap:round; stroke-linejoin:round; transform-origin:50% 50%; }
+.ss-avatar-scribble path + path { stroke-width:2; opacity:.7; }
+.ss-avatar-monster { position:absolute; left:50%; bottom:calc(var(--monster-size) * -.28); transform:translateX(-50%); display:grid; place-items:center; width:var(--monster-size); height:var(--monster-size); padding:0; border:0; border-radius:50%; background:var(--ss-surface); cursor:pointer; pointer-events:auto; filter:drop-shadow(0 1px 2px #0005); }
+.ss-avatar-monster img { width:100%; height:100%; object-fit:contain; }
+.ss-avatar-monster:hover { transform:translateX(-50%) rotate(-9deg) scale(1.12); }
+.ss-avatar-monster:focus-visible { outline:2px solid currentColor; outline-offset:2px; }

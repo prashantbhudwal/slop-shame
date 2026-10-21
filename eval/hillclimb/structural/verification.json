@@ -1,0 +1,9 @@
+{
+  "guardrails": "pass",
+  "snapshotSha256": "055545a3992612b684beed320bbb339edda3c83c015bee92dee2b06f84f44e30",
+  "snapshotFilesVerified": 26,
+  "runtimeCopyIdentical": true,
+  "styleOnlyBelow40": true,
+  "overlappingTransitionWeightsCountOnce": true,
+  "protectedCodeExcluded": true
+}

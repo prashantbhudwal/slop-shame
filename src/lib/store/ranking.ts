@@ -1,5 +1,17 @@
 import { SLOP_THRESHOLD } from './types';
 
+/**
+ * The Hall of Slop names nobody on one bad post. An author joins only with a
+ * real sample: at least this many slop posts seen…
+ */
+export const HALL_MIN_SLOP_POSTS = 3;
+/** …making up at least this share of everything we've seen from them. */
+export const HALL_MIN_SLOP_SHARE = 0.5;
+
+export function inHall(author: { postsSeen: number; slopPosts: number }): boolean {
+  return author.slopPosts >= HALL_MIN_SLOP_POSTS && author.slopPosts >= HALL_MIN_SLOP_SHARE * author.postsSeen;
+}
+
 export interface RankingRecord {
   scoreCounts: Partial<Record<number, number>>;
   slopocalypsePosts: number;

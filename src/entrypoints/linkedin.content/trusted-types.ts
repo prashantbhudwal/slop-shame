@@ -14,13 +14,20 @@ interface PolicyRules {
 
 const factory = (globalThis as { trustedTypes?: { createPolicy: (name: string, rules: PolicyRules) => unknown } }).trustedTypes;
 
+/** Svelte's policy name; linkedin.com's CSP never allowlists it. */
+const SVELTE_POLICY = 'svelte-trusted-html';
+
 if (factory) {
   const createPolicy = factory.createPolicy.bind(factory);
+  const passThrough = (rules: PolicyRules) => ({ createHTML: (input: string) => rules.createHTML?.(input) ?? input });
   factory.createPolicy = (name, rules) => {
+    // Don't even try Svelte's: each refusal is a CSP violation, logged in the
+    // console and possibly reported to LinkedIn, announcing the extension.
+    if (name === SVELTE_POLICY) return passThrough(rules);
     try {
       return createPolicy(name, rules);
     } catch {
-      return { createHTML: (input: string) => rules.createHTML?.(input) ?? input };
+      return passThrough(rules);
     }
   };
 }

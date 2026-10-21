@@ -1,0 +1,286 @@
+{
+  "id": 188,
+  "weights": {
+    "ai-vocabulary.explainer-idioms": 0.25,
+    "ai-vocabulary.tier1": 3,
+    "ai-vocabulary.tier1-common": 1.2,
+    "ai-vocabulary.collocations": 4,
+    "ai-vocabulary.tier2": 1,
+    "ai-vocabulary.tier3": 1.5,
+    "template-phrases.explainer-scaffold": 3,
+    "template-phrases.labeled-fields": 2,
+    "template-phrases.transition": 1.5,
+    "template-phrases.clarity": 1,
+    "template-phrases.filler": 3,
+    "template-phrases.lets-construction": 2,
+    "template-phrases.template": 3,
+    "template-phrases.boilerplate": 2,
+    "chatbot-leak.greeting": 2,
+    "chatbot-leak.assistant-preamble": 14,
+    "chatbot-leak.sycophantic": 5,
+    "chatbot-leak.assistant-closer": 8,
+    "chatbot-leak.cutoff": 14,
+    "chatbot-leak.model-identity": 14,
+    "chatbot-leak.update": 3,
+    "chatbot-leak.reasoning": 8,
+    "chatbot-leak.reasoning-block": 14,
+    "chatbot-leak.reasoning-channel": 14,
+    "chatbot-leak.instruction-template": 14,
+    "chatbot-leak.chat-protocol": 14,
+    "chatbot-leak.role-transcript": 14,
+    "chatbot-leak.tool-transcript": 14,
+    "chatbot-leak.generated-boundary": 14,
+    "chatbot-leak.acknowledgment": 3,
+    "chatbot-leak.placeholder": 5,
+    "chatbot-leak.editor-note": 4,
+    "chatbot-leak.tracking": 4,
+    "chatbot-leak.citation": 14,
+    "negation-pivot.not-x-but-y": 4,
+    "negation-pivot.one-size-fits-all": 2,
+    "negation-pivot.audience-contrast": 4,
+    "negation-pivot.not-only": 3,
+    "negation-pivot.countdown": 5,
+    "negation-pivot.false-concession": 2,
+    "inflation.significance": 4,
+    "inflation.novelty": 3,
+    "inflation.hollow": 1,
+    "inflation.emotional-flatline": 2,
+    "inflation.lingering-attention": 2,
+    "inflation.real-actual": 2,
+    "inflation.future-narrative": 4,
+    "inflation.promotional": 2,
+    "hedging.stack": 4,
+    "hedging.parenthetical": 0.25,
+    "hedging.vague-attribution": 2,
+    "hedging.confidence": 1,
+    "engagement-bait.repost-follow": 4,
+    "engagement-bait.reader-question": 2,
+    "engagement-bait.social-closer": 3,
+    "engagement-bait.keyword-closer": 5,
+    "engagement-bait.rhetorical-question": 2,
+    "engagement-bait.formulaic-opener": 0.25,
+    "engagement-bait.speculative-opener": 4,
+    "engagement-bait.generic-conclusion": 3,
+    "formatting.em-dash": 1,
+    "formatting.unicode-bold": 4,
+    "formatting.section-outline": 1,
+    "formatting.arrow-chain": 2,
+    "formatting.emoji-bullets": 4,
+    "formatting.emoji-density": 3,
+    "formatting.hashtag-stuff": 4,
+    "formatting.bullet-np-list": 3,
+    "formatting.title-case-header": 1.5,
+    "formatting.smart-punct-signature": 1.5,
+    "robotic-rhythm.parallel-pair": 4,
+    "robotic-rhythm.uniformity": 4,
+    "robotic-rhythm.rule-of-three": 1.5,
+    "robotic-rhythm.cross-para-burstiness": 3,
+    "robotic-rhythm.punct-distribution": 2,
+    "bypass-tricks.homoglyphs": 3,
+    "bypass-tricks.zero-width": 3,
+    "pasted-output.template-labels": 12,
+    "pasted-output.unfilled-slot": 8,
+    "pasted-output.markdown-bold": 4.5,
+    "pasted-output.markdown-heading": 4.5,
+    "pasted-output.asterisk-list": 2,
+    "pasted-output.labeled-list": 3,
+    "pasted-output.closing-question": 3,
+    "pasted-output.audience-callout": 2,
+    "pasted-output.aphorism-tail": 1.5,
+    "pasted-output.imperative-triplet": 2.25,
+    "pasted-output.fragment-triplet": 0.25,
+    "pasted-output.repeated-openings": 1,
+    "pasted-output.listicle-hook": 2,
+    "pasted-output.story-turn": 3,
+    "pasted-output.lesson-formula": 2,
+    "pasted-output.motivational-stock": 3,
+    "pasted-output.takeaway-label": 1.5,
+    "pasted-output.save-cta": 1.5,
+    "pasted-output.keyword-request": 3,
+    "pasted-output.stat-hook": 3,
+    "pasted-output.possible-draft": 12,
+    "pasted-output.assistant-offer": 4,
+    "pasted-output.writing-advice": 8,
+    "pasted-output.sure-opener": 2,
+    "pasted-output.title-label": 2
+  },
+  "policy": {
+    "k": 12,
+    "caps": {},
+    "styleMax": 39,
+    "familyBonus": 1,
+    "shortK": 12
+  },
+  "target": {
+    "human": 0,
+    "fp": 0,
+    "shame": 0,
+    "tp": 79,
+    "obvious": 71,
+    "some": 8,
+    "domains": {}
+  },
+  "raid": {
+    "human": 2354,
+    "fp": 21,
+    "shame": 20,
+    "tp": 0,
+    "obvious": 0,
+    "some": 0,
+    "domains": {
+      "poetry": {
+        "n": 303,
+        "fp": 6
+      },
+      "abstracts": {
+        "n": 304,
+        "fp": 6
+      },
+      "recipes": {
+        "n": 353,
+        "fp": 1
+      },
+      "reddit": {
+        "n": 341,
+        "fp": 2
+      },
+      "wiki": {
+        "n": 313,
+        "fp": 1
+      },
+      "books": {
+        "n": 257,
+        "fp": 2
+      },
+      "news": {
+        "n": 332,
+        "fp": 0
+      },
+      "reviews": {
+        "n": 151,
+        "fp": 3
+      }
+    }
+  },
+  "permissive": {
+    "human": 271,
+    "fp": 5,
+    "shame": 5,
+    "tp": 0,
+    "obvious": 0,
+    "some": 0,
+    "domains": {
+      "plos-2020": {
+        "n": 160,
+        "fp": 5
+      },
+      "federal-reserve": {
+        "n": 25,
+        "fp": 0
+      },
+      "uci-sentiment-2015": {
+        "n": 86,
+        "fp": 0
+      }
+    }
+  },
+  "polished": {
+    "human": 160,
+    "fp": 0,
+    "shame": 0,
+    "tp": 0,
+    "obvious": 0,
+    "some": 0,
+    "domains": {
+      "reddit": {
+        "n": 82,
+        "fp": 0
+      },
+      "reviews": {
+        "n": 32,
+        "fp": 0
+      },
+      "news": {
+        "n": 46,
+        "fp": 0
+      }
+    }
+  },
+  "linkedin": {
+    "human": 8189,
+    "fp": 17,
+    "shame": 16,
+    "tp": 0,
+    "obvious": 0,
+    "some": 0,
+    "domains": {
+      "linkedin-influencers-2021": {
+        "n": 8189,
+        "fp": 17
+      }
+    }
+  },
+  "fitTrain": {
+    "human": 7166,
+    "fp": 59,
+    "shame": 58,
+    "tp": 0,
+    "obvious": 0,
+    "some": 0,
+    "domains": {
+      "news": {
+        "n": 894,
+        "fp": 2
+      },
+      "wiki": {
+        "n": 1035,
+        "fp": 7
+      },
+      "reviews": {
+        "n": 401,
+        "fp": 22
+      },
+      "recipes": {
+        "n": 984,
+        "fp": 3
+      },
+      "books": {
+        "n": 825,
+        "fp": 8
+      },
+      "abstracts": {
+        "n": 1038,
+        "fp": 12
+      },
+      "poetry": {
+        "n": 940,
+        "fp": 1
+      },
+      "reddit": {
+        "n": 1049,
+        "fp": 4
+      }
+    }
+  },
+  "chat": {
+    "human": 0,
+    "fp": 0,
+    "shame": 0,
+    "tp": 257,
+    "obvious": 0,
+    "some": 0,
+    "domains": {}
+  },
+  "violation": 0,
+  "feasible": true,
+  "value": 710800.25641,
+  "replayParity": 58110,
+  "tries": 266,
+  "engineHash": "8dbd7ba26e62cd671cff4d164d7cdf9e32e958459fcf9ef6d341642b433a0bd7",
+  "method": "Three bounded coordinate passes; editorial asymmetric floors; target-tune obvious then some; train chat tie-break; all dev gates for every config; LinkedIn reject-only.",
+  "qaAdjustments": [
+    "Assistant offer narrowed to an editing offer, 4 phrase points, no fingerprint floor; live browsing limitation has its own explicit fingerprint.",
+    "Labeled list requires each label itself to be a list item; unrelated maintenance statuses cannot combine.",
+    "Fragment and repeated-opening style cues exclude numbered/capital headings and technical command repetitions."
+  ]
+}

@@ -1,5 +1,7 @@
+import { canonicalAuthorId } from '../linkedin/author-id';
 import { collectCursor, requestResult, transaction } from './db';
 import { publicAuthor } from './model';
+import { inHall } from './ranking';
 import type { PostRecord, StoredAuthor, StoreExport, StoreStats } from './model';
 import type { AuthorRecord } from './types';
 
@@ -7,12 +9,13 @@ function pageSize(value: number): number {
   return Number.isFinite(value) ? Math.max(0, Math.trunc(value)) : 0;
 }
 
+/** The Hall of Slop: authors with a real sample of slop (see inHall), most points first. */
 export async function getLeaderboard(limit: number, offset = 0): Promise<AuthorRecord[]> {
   const size = pageSize(limit);
   if (!size) return [];
   return transaction('readonly', async (tx) => {
     const rows = await collectCursor<StoredAuthor>(
-      tx.objectStore('authors').index('leaderboard').openCursor(IDBKeyRange.lowerBound([1, 0]), 'prev'), size, pageSize(offset),
+      tx.objectStore('authors').index('leaderboard').openCursor(IDBKeyRange.lowerBound([1, 0]), 'prev'), size, pageSize(offset), inHall,
     );
     return rows.map(publicAuthor);
   });
@@ -20,7 +23,7 @@ export async function getLeaderboard(limit: number, offset = 0): Promise<AuthorR
 
 export async function getAuthor(id: string): Promise<AuthorRecord | null> {
   return transaction('readonly', async (tx) => {
-    const author = await requestResult<StoredAuthor | undefined>(tx.objectStore('authors').get(id));
+    const author = await requestResult<StoredAuthor | undefined>(tx.objectStore('authors').get(canonicalAuthorId(id)));
     return author ? publicAuthor(author) : null;
   });
 }
@@ -29,8 +32,9 @@ export async function getAuthor(id: string): Promise<AuthorRecord | null> {
 export async function getAuthorPosts(id: string, limit: number): Promise<PostRecord[]> {
   const size = pageSize(limit);
   if (!size) return [];
+  const key = canonicalAuthorId(id);
   return transaction('readonly', (tx) => collectCursor<PostRecord>(
-    tx.objectStore('posts').index('authorLastSeen').openCursor(IDBKeyRange.bound([id, 0], [id, Infinity]), 'prev'), size,
+    tx.objectStore('posts').index('authorLastSeen').openCursor(IDBKeyRange.bound([key, 0], [key, Infinity]), 'prev'), size,
   ));
 }
 

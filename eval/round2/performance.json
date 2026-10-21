@@ -1,0 +1,26 @@
+{
+  "node": "v26.7.0",
+  "words": 300,
+  "gcAvailable": true,
+  "baseline": {
+    "samples": 200,
+    "calls": 1000,
+    "meanMs": 0.3275519480000032,
+    "worstMs": 1.0744580000000497,
+    "worstPerInputMedianMs": 0.543833000000177,
+    "p95Ms": 0.48212499999999636,
+    "createMeanMs": 1.0458124750000024,
+    "createWorstMs": 6.547499999999957
+  },
+  "final": {
+    "samples": 200,
+    "calls": 1000,
+    "meanMs": 0.36119969999999285,
+    "worstMs": 0.8802919999998267,
+    "worstPerInputMedianMs": 0.5918750000000728,
+    "p95Ms": 0.5222079999998641,
+    "createMeanMs": 1.2335801999999774,
+    "createWorstMs": 8.608999999999924
+  },
+  "pass": true
+}

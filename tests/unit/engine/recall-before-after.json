@@ -1,0 +1,4465 @@
+{
+  "baseline": "Engine snapshot frozen before the recall fixes and first red-test run",
+  "baselineRevision": "e6265fd",
+  "rows": [
+    {
+      "id": "realism-ai-01",
+      "authorship": "ai",
+      "before": {
+        "score": 9,
+        "tier": "artisanal",
+        "shameable": false,
+        "wordCount": 127,
+        "signals": [
+          {
+            "ruleId": "formatting.emoji-bullets",
+            "weight": 3.076164271534105,
+            "matches": [
+              "🚀 After eight months of late nights, whiteboard sessions, and more coffee than I'd like to admit, we're finally launching Ledgerly — a bookkeeping tool built specifically for freelancers who hate bookkeeping.",
+              "✅ Auto-categorize expenses from your bank feed",
+              "✅ Send invoices that follow up on their own"
+            ]
+          }
+        ]
+      },
+      "after": {
+        "score": 9,
+        "tier": "artisanal",
+        "shameable": false,
+        "wordCount": 127,
+        "signals": [
+          {
+            "ruleId": "formatting.emoji-bullets",
+            "weight": 3.076164271534105,
+            "matches": [
+              "🚀 After eight months of late nights, whiteboard sessions, and more coffee than I'd like to admit, we're finally launching Ledgerly — a bookkeeping tool built specifically for freelancers who hate bookkeeping.",
+              "✅ Auto-categorize expenses from your bank feed",
+              "✅ Send invoices that follow up on their own"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "realism-ai-02",
+      "authorship": "ai",
+      "before": {
+        "score": 0,
+        "tier": "artisanal",
+        "shameable": false,
+        "wordCount": 99,
+        "signals": []
+      },
+      "after": {
+        "score": 0,
+        "tier": "artisanal",
+        "shameable": false,
+        "wordCount": 99,
+        "signals": []
+      }
+    },
+    {
+      "id": "realism-ai-03",
+      "authorship": "ai",
+      "before": {
+        "score": 0,
+        "tier": "artisanal",
+        "shameable": false,
+        "wordCount": 117,
+        "signals": []
+      },
+      "after": {
+        "score": 0,
+        "tier": "artisanal",
+        "shameable": false,
+        "wordCount": 117,
+        "signals": []
+      }
+    },
+    {
+      "id": "realism-ai-04",
+      "authorship": "ai",
+      "before": {
+        "score": 2,
+        "tier": "artisanal",
+        "shameable": false,
+        "wordCount": 123,
+        "signals": [
+          {
+            "ruleId": "hedging.confidence",
+            "weight": 0.5600223401500364,
+            "matches": [
+              "surprisingly"
+            ]
+          }
+        ]
+      },
+      "after": {
+        "score": 2,
+        "tier": "artisanal",
+        "shameable": false,
+        "wordCount": 123,
+        "signals": [
+          {
+            "ruleId": "hedging.confidence",
+            "weight": 0.5600223401500364,
+            "matches": [
+              "surprisingly"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "realism-ai-05",
+      "authorship": "ai",
+      "before": {
+        "score": 0,
+        "tier": "artisanal",
+        "shameable": false,
+        "wordCount": 101,
+        "signals": []
+      },
+      "after": {
+        "score": 0,
+        "tier": "artisanal",
+        "shameable": false,
+        "wordCount": 101,
+        "signals": []
+      }
+    },
+    {
+      "id": "realism-ai-06",
+      "authorship": "ai",
+      "before": {
+        "score": 0,
+        "tier": "artisanal",
+        "shameable": false,
+        "wordCount": 99,
+        "signals": []
+      },
+      "after": {
+        "score": 0,
+        "tier": "artisanal",
+        "shameable": false,
+        "wordCount": 99,
+        "signals": []
+      }
+    },
+    {
+      "id": "realism-ai-07",
+      "authorship": "ai",
+      "before": {
+        "score": 0,
+        "tier": "artisanal",
+        "shameable": false,
+        "wordCount": 117,
+        "signals": []
+      },
+      "after": {
+        "score": 0,
+        "tier": "artisanal",
+        "shameable": false,
+        "wordCount": 117,
+        "signals": []
+      }
+    },
+    {
+      "id": "realism-ai-08",
+      "authorship": "ai",
+      "before": {
+        "score": 0,
+        "tier": "artisanal",
+        "shameable": false,
+        "wordCount": 132,
+        "signals": []
+      },
+      "after": {
+        "score": 0,
+        "tier": "artisanal",
+        "shameable": false,
+        "wordCount": 132,
+        "signals": []
+      }
+    },
+    {
+      "id": "realism-ai-09",
+      "authorship": "ai",
+      "before": {
+        "score": 2,
+        "tier": "artisanal",
+        "shameable": false,
+        "wordCount": 103,
+        "signals": [
+          {
+            "ruleId": "hedging.confidence",
+            "weight": 0.7486110791056879,
+            "matches": [
+              "surprisingly"
+            ]
+          }
+        ]
+      },
+      "after": {
+        "score": 2,
+        "tier": "artisanal",
+        "shameable": false,
+        "wordCount": 103,
+        "signals": [
+          {
+            "ruleId": "hedging.confidence",
+            "weight": 0.7486110791056879,
+            "matches": [
+              "surprisingly"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "realism-ai-10",
+      "authorship": "ai",
+      "before": {
+        "score": 11,
+        "tier": "artisanal",
+        "shameable": false,
+        "wordCount": 115,
+        "signals": [
+          {
+            "ruleId": "formatting.emoji-bullets",
+            "weight": 3.2948599583333107,
+            "matches": [
+              "🔹 Zero runtime dependencies",
+              "🔹 Works with React Router, Next.js, and plain fetch",
+              "🔹 Under 3 KB gzipped"
+            ]
+          },
+          {
+            "ruleId": "inflation.hollow",
+            "weight": 0.5663697016465543,
+            "matches": [
+              "genuinely"
+            ]
+          }
+        ]
+      },
+      "after": {
+        "score": 15,
+        "tier": "artisanal",
+        "shameable": false,
+        "wordCount": 115,
+        "signals": [
+          {
+            "ruleId": "formatting.emoji-bullets",
+            "weight": 3.2948599583333107,
+            "matches": [
+              "🔹 Zero runtime dependencies",
+              "🔹 Works with React Router, Next.js, and plain fetch",
+              "🔹 Under 3 KB gzipped"
+            ]
+          },
+          {
+            "ruleId": "robotic-rhythm.rule-of-three",
+            "weight": 1.4729775433529708,
+            "matches": [
+              "Issues, PRs, and feature ideas are all welcome."
+            ]
+          },
+          {
+            "ruleId": "inflation.hollow",
+            "weight": 0.5663697016465543,
+            "matches": [
+              "genuinely"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "realism-ai-11",
+      "authorship": "ai",
+      "before": {
+        "score": 0,
+        "tier": "artisanal",
+        "shameable": false,
+        "wordCount": 109,
+        "signals": []
+      },
+      "after": {
+        "score": 0,
+        "tier": "artisanal",
+        "shameable": false,
+        "wordCount": 109,
+        "signals": []
+      }
+    },
+    {
+      "id": "realism-ai-12",
+      "authorship": "ai",
+      "before": {
+        "score": 0,
+        "tier": "artisanal",
+        "shameable": false,
+        "wordCount": 122,
+        "signals": []
+      },
+      "after": {
+        "score": 0,
+        "tier": "artisanal",
+        "shameable": false,
+        "wordCount": 122,
+        "signals": []
+      }
+    },
+    {
+      "id": "realism-ai-13",
+      "authorship": "ai",
+      "before": {
+        "score": 6,
+        "tier": "artisanal",
+        "shameable": false,
+        "wordCount": 87,
+        "signals": [
+          {
+            "ruleId": "robotic-rhythm.rule-of-three",
+            "weight": 1.989576991348797,
+            "matches": [
+              "Scan a handwritten recipe card from your grandmother’s box, and Harvest Notes turns it into a clean, searchable recipe, measurements and all.",
+              "Just your recipes, beautifully organized and always within reach."
+            ]
+          }
+        ]
+      },
+      "after": {
+        "score": 0,
+        "tier": "artisanal",
+        "shameable": false,
+        "wordCount": 87,
+        "signals": []
+      }
+    },
+    {
+      "id": "realism-ai-14",
+      "authorship": "ai",
+      "before": {
+        "score": 0,
+        "tier": "artisanal",
+        "shameable": false,
+        "wordCount": 112,
+        "signals": []
+      },
+      "after": {
+        "score": 0,
+        "tier": "artisanal",
+        "shameable": false,
+        "wordCount": 112,
+        "signals": []
+      }
+    },
+    {
+      "id": "realism-ai-15",
+      "authorship": "ai",
+      "before": {
+        "score": 0,
+        "tier": "artisanal",
+        "shameable": false,
+        "wordCount": 85,
+        "signals": []
+      },
+      "after": {
+        "score": 0,
+        "tier": "artisanal",
+        "shameable": false,
+        "wordCount": 85,
+        "signals": []
+      }
+    },
+    {
+      "id": "realism-ai-16",
+      "authorship": "ai",
+      "before": {
+        "score": 0,
+        "tier": "artisanal",
+        "shameable": false,
+        "wordCount": 112,
+        "signals": []
+      },
+      "after": {
+        "score": 0,
+        "tier": "artisanal",
+        "shameable": false,
+        "wordCount": 112,
+        "signals": []
+      }
+    },
+    {
+      "id": "realism-ai-17",
+      "authorship": "ai",
+      "before": {
+        "score": 0,
+        "tier": "artisanal",
+        "shameable": false,
+        "wordCount": 116,
+        "signals": []
+      },
+      "after": {
+        "score": 0,
+        "tier": "artisanal",
+        "shameable": false,
+        "wordCount": 116,
+        "signals": []
+      }
+    },
+    {
+      "id": "realism-ai-18",
+      "authorship": "ai",
+      "before": {
+        "score": 0,
+        "tier": "artisanal",
+        "shameable": false,
+        "wordCount": 107,
+        "signals": []
+      },
+      "after": {
+        "score": 0,
+        "tier": "artisanal",
+        "shameable": false,
+        "wordCount": 107,
+        "signals": []
+      }
+    },
+    {
+      "id": "realism-ai-19",
+      "authorship": "ai",
+      "before": {
+        "score": 0,
+        "tier": "artisanal",
+        "shameable": false,
+        "wordCount": 107,
+        "signals": []
+      },
+      "after": {
+        "score": 0,
+        "tier": "artisanal",
+        "shameable": false,
+        "wordCount": 107,
+        "signals": []
+      }
+    },
+    {
+      "id": "realism-ai-20",
+      "authorship": "ai",
+      "before": {
+        "score": 0,
+        "tier": "artisanal",
+        "shameable": false,
+        "wordCount": 113,
+        "signals": []
+      },
+      "after": {
+        "score": 0,
+        "tier": "artisanal",
+        "shameable": false,
+        "wordCount": 113,
+        "signals": []
+      }
+    },
+    {
+      "id": "ai-cert-onboarding",
+      "authorship": "ai",
+      "before": {
+        "score": 46,
+        "tier": "certified",
+        "shameable": true,
+        "wordCount": 52,
+        "signals": [
+          {
+            "ruleId": "engagement-bait.formulaic-opener",
+            "weight": 4.9043069241581145,
+            "matches": [
+              "In today's fast-paced world"
+            ]
+          },
+          {
+            "ruleId": "ai-vocabulary.collocations",
+            "weight": 4.47259454985472,
+            "matches": [
+              "testament to"
+            ]
+          },
+          {
+            "ruleId": "ai-vocabulary.tier1",
+            "weight": 3.35444591239104,
+            "matches": [
+              "delve"
+            ]
+          },
+          {
+            "ruleId": "engagement-bait.generic-conclusion",
+            "weight": 2.9425841544948685,
+            "matches": [
+              "The future looks bright"
+            ]
+          },
+          {
+            "ruleId": "engagement-bait.social-closer",
+            "weight": 2.9425841544948685,
+            "matches": [
+              "What would you add?"
+            ]
+          },
+          {
+            "ruleId": "ai-vocabulary.tier1-common",
+            "weight": 1.341778364956416,
+            "matches": [
+              "seamless"
+            ]
+          }
+        ]
+      },
+      "after": {
+        "score": 46,
+        "tier": "certified",
+        "shameable": true,
+        "wordCount": 52,
+        "signals": [
+          {
+            "ruleId": "engagement-bait.formulaic-opener",
+            "weight": 4.9043069241581145,
+            "matches": [
+              "In today's fast-paced world"
+            ]
+          },
+          {
+            "ruleId": "ai-vocabulary.collocations",
+            "weight": 4.47259454985472,
+            "matches": [
+              "testament to"
+            ]
+          },
+          {
+            "ruleId": "ai-vocabulary.tier1",
+            "weight": 3.35444591239104,
+            "matches": [
+              "delve"
+            ]
+          },
+          {
+            "ruleId": "engagement-bait.generic-conclusion",
+            "weight": 2.9425841544948685,
+            "matches": [
+              "The future looks bright"
+            ]
+          },
+          {
+            "ruleId": "engagement-bait.social-closer",
+            "weight": 2.9425841544948685,
+            "matches": [
+              "What would you add?"
+            ]
+          },
+          {
+            "ruleId": "ai-vocabulary.tier1-common",
+            "weight": 1.341778364956416,
+            "matches": [
+              "seamless"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "ai-cert-transition",
+      "authorship": "ai",
+      "before": {
+        "score": 45,
+        "tier": "certified",
+        "shameable": true,
+        "wordCount": 52,
+        "signals": [
+          {
+            "ruleId": "template-phrases.filler",
+            "weight": 10.210085629469663,
+            "matches": [
+              "It is important to note that",
+              "the reality is that",
+              "At its core"
+            ]
+          },
+          {
+            "ruleId": "template-phrases.transition",
+            "weight": 3.403361876489888,
+            "matches": [
+              "Moreover",
+              "In conclusion"
+            ]
+          },
+          {
+            "ruleId": "engagement-bait.generic-conclusion",
+            "weight": 2.97216320834484,
+            "matches": [
+              "Only time will tell"
+            ]
+          },
+          {
+            "ruleId": "template-phrases.boilerplate",
+            "weight": 2.2689079176599254,
+            "matches": [
+              "the integration of"
+            ]
+          }
+        ]
+      },
+      "after": {
+        "score": 45,
+        "tier": "certified",
+        "shameable": true,
+        "wordCount": 52,
+        "signals": [
+          {
+            "ruleId": "template-phrases.filler",
+            "weight": 10.210085629469663,
+            "matches": [
+              "It is important to note that",
+              "the reality is that",
+              "At its core"
+            ]
+          },
+          {
+            "ruleId": "template-phrases.transition",
+            "weight": 3.403361876489888,
+            "matches": [
+              "Moreover",
+              "In conclusion"
+            ]
+          },
+          {
+            "ruleId": "engagement-bait.generic-conclusion",
+            "weight": 2.97216320834484,
+            "matches": [
+              "Only time will tell"
+            ]
+          },
+          {
+            "ruleId": "template-phrases.boilerplate",
+            "weight": 2.2689079176599254,
+            "matches": [
+              "the integration of"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "ai-cert-hedging",
+      "authorship": "ai",
+      "before": {
+        "score": 40,
+        "tier": "certified",
+        "shameable": true,
+        "wordCount": 50,
+        "signals": [
+          {
+            "ruleId": "hedging.stack",
+            "weight": 6.4354924542435175,
+            "matches": [
+              "could potentially",
+              "may eventually"
+            ]
+          },
+          {
+            "ruleId": "template-phrases.filler",
+            "weight": 3.4129352660028363,
+            "matches": [
+              "It is important to note that"
+            ]
+          },
+          {
+            "ruleId": "engagement-bait.generic-conclusion",
+            "weight": 2.97216320834484,
+            "matches": [
+              "The future looks bright"
+            ]
+          },
+          {
+            "ruleId": "hedging.vague-attribution",
+            "weight": 2.2752901773352243,
+            "matches": [
+              "Experts believe"
+            ]
+          },
+          {
+            "ruleId": "ai-vocabulary.tier1-common",
+            "weight": 1.3651741064011342,
+            "matches": [
+              "holistic"
+            ]
+          }
+        ]
+      },
+      "after": {
+        "score": 60,
+        "tier": "swamp",
+        "shameable": true,
+        "wordCount": 50,
+        "signals": [
+          {
+            "ruleId": "hedging.stack",
+            "weight": 6.4354924542435175,
+            "matches": [
+              "could potentially",
+              "may eventually"
+            ]
+          },
+          {
+            "ruleId": "template-phrases.filler",
+            "weight": 3.4129352660028363,
+            "matches": [
+              "It is important to note that"
+            ]
+          },
+          {
+            "ruleId": "engagement-bait.generic-conclusion",
+            "weight": 2.97216320834484,
+            "matches": [
+              "The future looks bright"
+            ]
+          },
+          {
+            "ruleId": "hedging.vague-attribution",
+            "weight": 2.2752901773352243,
+            "matches": [
+              "Experts believe"
+            ]
+          },
+          {
+            "ruleId": "ai-vocabulary.tier1-common",
+            "weight": 1.3651741064011342,
+            "matches": [
+              "holistic"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "ai-cert-pivot",
+      "authorship": "ai",
+      "before": {
+        "score": 45,
+        "tier": "certified",
+        "shameable": true,
+        "wordCount": 50,
+        "signals": [
+          {
+            "ruleId": "ai-vocabulary.collocations",
+            "weight": 5.988630897138109,
+            "matches": [
+              "testament to",
+              "unlock the potential"
+            ]
+          },
+          {
+            "ruleId": "negation-pivot.not-x-but-y",
+            "weight": 5.786938680574733,
+            "matches": [
+              "It's not about more meetings, it's about better conversations. It's not just about productivity, it's about building trust"
+            ]
+          },
+          {
+            "ruleId": "template-phrases.filler",
+            "weight": 3.1759511380422256,
+            "matches": [
+              "At its core"
+            ]
+          },
+          {
+            "ruleId": "engagement-bait.social-closer",
+            "weight": 2.8934693402873664,
+            "matches": [
+              "What would you add?"
+            ]
+          },
+          {
+            "ruleId": "ai-vocabulary.tier1-common",
+            "weight": 1.2703804552168902,
+            "matches": [
+              "holistic"
+            ]
+          }
+        ]
+      },
+      "after": {
+        "score": 70,
+        "tier": "swamp",
+        "shameable": true,
+        "wordCount": 50,
+        "signals": [
+          {
+            "ruleId": "ai-vocabulary.collocations",
+            "weight": 5.988630897138109,
+            "matches": [
+              "testament to",
+              "unlock the potential"
+            ]
+          },
+          {
+            "ruleId": "negation-pivot.not-x-but-y",
+            "weight": 5.786938680574733,
+            "matches": [
+              "It's not about more meetings, it's about better conversations. It's not just about productivity, it's about building trust"
+            ]
+          },
+          {
+            "ruleId": "template-phrases.filler",
+            "weight": 3.1759511380422256,
+            "matches": [
+              "At its core"
+            ]
+          },
+          {
+            "ruleId": "engagement-bait.social-closer",
+            "weight": 2.8934693402873664,
+            "matches": [
+              "What would you add?"
+            ]
+          },
+          {
+            "ruleId": "ai-vocabulary.tier1-common",
+            "weight": 1.2703804552168902,
+            "matches": [
+              "holistic"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "ai-leaked-model",
+      "authorship": "ai",
+      "before": {
+        "score": 86,
+        "tier": "slopocalypse",
+        "shameable": true,
+        "wordCount": 58,
+        "signals": [
+          {
+            "ruleId": "chatbot-leak.cutoff",
+            "weight": 14,
+            "matches": [
+              "As an AI language model"
+            ]
+          },
+          {
+            "ruleId": "chatbot-leak.assistant-closer",
+            "weight": 8,
+            "matches": [
+              ". I hope this helps!"
+            ]
+          },
+          {
+            "ruleId": "chatbot-leak.greeting",
+            "weight": 7,
+            "matches": [
+              "Certainly!"
+            ]
+          },
+          {
+            "ruleId": "ai-vocabulary.tier1",
+            "weight": 6.007655196361534,
+            "matches": [
+              "delve",
+              "tapestry"
+            ]
+          },
+          {
+            "ruleId": "ai-vocabulary.collocations",
+            "weight": 5.664071637837122,
+            "matches": [
+              "rich tapestry",
+              "testament to"
+            ]
+          },
+          {
+            "ruleId": "negation-pivot.not-x-but-y",
+            "weight": 5.632120558828557,
+            "matches": [
+              "It's not about working alone, it's about unlocking the potential of every team"
+            ]
+          },
+          {
+            "ruleId": "inflation.significance",
+            "weight": 4.005103464241023,
+            "matches": [
+              "transformative potential"
+            ]
+          },
+          {
+            "ruleId": "template-phrases.lets-construction",
+            "weight": 2.0025517321205113,
+            "matches": [
+              "let's delve into"
+            ]
+          },
+          {
+            "ruleId": "ai-vocabulary.tier1-common",
+            "weight": 1.2015310392723069,
+            "matches": [
+              "holistic"
+            ]
+          }
+        ]
+      },
+      "after": {
+        "score": 98,
+        "tier": "slopocalypse",
+        "shameable": true,
+        "wordCount": 58,
+        "signals": [
+          {
+            "ruleId": "chatbot-leak.cutoff",
+            "weight": 14,
+            "matches": [
+              "As an AI language model"
+            ]
+          },
+          {
+            "ruleId": "chatbot-leak.greeting",
+            "weight": 12,
+            "matches": [
+              "Certainly!"
+            ]
+          },
+          {
+            "ruleId": "chatbot-leak.assistant-closer",
+            "weight": 8,
+            "matches": [
+              " I hope this helps!"
+            ]
+          },
+          {
+            "ruleId": "ai-vocabulary.tier1",
+            "weight": 6.007655196361534,
+            "matches": [
+              "delve",
+              "tapestry"
+            ]
+          },
+          {
+            "ruleId": "ai-vocabulary.collocations",
+            "weight": 5.664071637837122,
+            "matches": [
+              "rich tapestry",
+              "testament to"
+            ]
+          },
+          {
+            "ruleId": "negation-pivot.not-x-but-y",
+            "weight": 5.653194009266262,
+            "matches": [
+              "It's not about working alone, it's about unlocking the potential of every team"
+            ]
+          },
+          {
+            "ruleId": "engagement-bait.formulaic-opener",
+            "weight": 4.710995007721885,
+            "matches": [
+              " In today's fast-paced world"
+            ]
+          },
+          {
+            "ruleId": "inflation.significance",
+            "weight": 4.005103464241023,
+            "matches": [
+              "transformative potential"
+            ]
+          },
+          {
+            "ruleId": "template-phrases.lets-construction",
+            "weight": 2.0025517321205113,
+            "matches": [
+              "let's delve into"
+            ]
+          },
+          {
+            "ruleId": "ai-vocabulary.tier1-common",
+            "weight": 1.2015310392723069,
+            "matches": [
+              "holistic"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "ai-leaked-template",
+      "authorship": "ai",
+      "before": {
+        "score": 82,
+        "tier": "slopocalypse",
+        "shameable": true,
+        "wordCount": 63,
+        "signals": [
+          {
+            "ruleId": "chatbot-leak.placeholder",
+            "weight": 12,
+            "matches": [
+              "[Your Name]"
+            ]
+          },
+          {
+            "ruleId": "chatbot-leak.assistant-closer",
+            "weight": 8,
+            "matches": [
+              ". Let me know if you'd like me to expand it."
+            ]
+          },
+          {
+            "ruleId": "ai-vocabulary.collocations",
+            "weight": 5.579081571001175,
+            "matches": [
+              "embark on a journey",
+              "testament to"
+            ]
+          },
+          {
+            "ruleId": "inflation.significance",
+            "weight": 3.9450064116478276,
+            "matches": [
+              "transformative potential"
+            ]
+          },
+          {
+            "ruleId": "engagement-bait.generic-conclusion",
+            "weight": 2.7744217212397473,
+            "matches": [
+              "endless possibilities"
+            ]
+          },
+          {
+            "ruleId": "ai-vocabulary.tier1-common",
+            "weight": 2.3670038469886965,
+            "matches": [
+              "seamless",
+              "holistic"
+            ]
+          }
+        ]
+      },
+      "after": {
+        "score": 98,
+        "tier": "slopocalypse",
+        "shameable": true,
+        "wordCount": 63,
+        "signals": [
+          {
+            "ruleId": "chatbot-leak.assistant-preamble",
+            "weight": 14,
+            "matches": [
+              "Here is your polished announcement for"
+            ]
+          },
+          {
+            "ruleId": "chatbot-leak.placeholder",
+            "weight": 12,
+            "matches": [
+              "[Your Name]"
+            ]
+          },
+          {
+            "ruleId": "chatbot-leak.assistant-closer",
+            "weight": 8,
+            "matches": [
+              " Let me know if you'd like me to expand it."
+            ]
+          },
+          {
+            "ruleId": "ai-vocabulary.collocations",
+            "weight": 5.579081571001175,
+            "matches": [
+              "embark on a journey",
+              "testament to"
+            ]
+          },
+          {
+            "ruleId": "engagement-bait.formulaic-opener",
+            "weight": 4.567548425616648,
+            "matches": [
+              " In today's rapidly evolving landscape"
+            ]
+          },
+          {
+            "ruleId": "inflation.significance",
+            "weight": 3.9450064116478276,
+            "matches": [
+              "transformative potential"
+            ]
+          },
+          {
+            "ruleId": "engagement-bait.generic-conclusion",
+            "weight": 2.740529055369989,
+            "matches": [
+              "endless possibilities"
+            ]
+          },
+          {
+            "ruleId": "ai-vocabulary.tier1-common",
+            "weight": 2.3670038469886965,
+            "matches": [
+              "seamless",
+              "holistic"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "ai-leaked-url",
+      "authorship": "ai",
+      "before": {
+        "score": 82,
+        "tier": "slopocalypse",
+        "shameable": true,
+        "wordCount": 57,
+        "signals": [
+          {
+            "ruleId": "chatbot-leak.tracking",
+            "weight": 12,
+            "matches": [
+              "?utm_source=chatgpt.com"
+            ]
+          },
+          {
+            "ruleId": "chatbot-leak.assistant-closer",
+            "weight": 8,
+            "matches": [
+              ". I hope this helps!"
+            ]
+          },
+          {
+            "ruleId": "ai-vocabulary.tier1",
+            "weight": 5.792221304740205,
+            "matches": [
+              "delve",
+              "tapestry"
+            ]
+          },
+          {
+            "ruleId": "negation-pivot.not-x-but-y",
+            "weight": 5.489895506949696,
+            "matches": [
+              "It's not about replacing people, it's about transformative potential"
+            ]
+          },
+          {
+            "ruleId": "ai-vocabulary.collocations",
+            "weight": 5.460958616953322,
+            "matches": [
+              "unlock the potential",
+              "rich tapestry"
+            ]
+          },
+          {
+            "ruleId": "engagement-bait.formulaic-opener",
+            "weight": 4.57491292245808,
+            "matches": [
+              "In today's fast-paced world"
+            ]
+          },
+          {
+            "ruleId": "inflation.significance",
+            "weight": 3.8614808698268037,
+            "matches": [
+              "transformative potential"
+            ]
+          },
+          {
+            "ruleId": "template-phrases.filler",
+            "weight": 2.8961106523701026,
+            "matches": [
+              "it is important to note that"
+            ]
+          },
+          {
+            "ruleId": "template-phrases.boilerplate",
+            "weight": 1.9307404349134019,
+            "matches": [
+              "the integration of"
+            ]
+          },
+          {
+            "ruleId": "template-phrases.lets-construction",
+            "weight": 1.9307404349134019,
+            "matches": [
+              "Let's delve into"
+            ]
+          },
+          {
+            "ruleId": "ai-vocabulary.tier1-common",
+            "weight": 1.1584442609480412,
+            "matches": [
+              "seamless"
+            ]
+          }
+        ]
+      },
+      "after": {
+        "score": 82,
+        "tier": "slopocalypse",
+        "shameable": true,
+        "wordCount": 57,
+        "signals": [
+          {
+            "ruleId": "chatbot-leak.tracking",
+            "weight": 12,
+            "matches": [
+              "?utm_source=chatgpt.com"
+            ]
+          },
+          {
+            "ruleId": "chatbot-leak.assistant-closer",
+            "weight": 8,
+            "matches": [
+              " I hope this helps!"
+            ]
+          },
+          {
+            "ruleId": "ai-vocabulary.tier1",
+            "weight": 5.792221304740205,
+            "matches": [
+              "delve",
+              "tapestry"
+            ]
+          },
+          {
+            "ruleId": "negation-pivot.not-x-but-y",
+            "weight": 5.489895506949696,
+            "matches": [
+              "It's not about replacing people, it's about transformative potential"
+            ]
+          },
+          {
+            "ruleId": "ai-vocabulary.collocations",
+            "weight": 5.460958616953322,
+            "matches": [
+              "unlock the potential",
+              "rich tapestry"
+            ]
+          },
+          {
+            "ruleId": "engagement-bait.formulaic-opener",
+            "weight": 4.57491292245808,
+            "matches": [
+              "In today's fast-paced world"
+            ]
+          },
+          {
+            "ruleId": "inflation.significance",
+            "weight": 3.8614808698268037,
+            "matches": [
+              "transformative potential"
+            ]
+          },
+          {
+            "ruleId": "template-phrases.filler",
+            "weight": 2.8961106523701026,
+            "matches": [
+              "it is important to note that"
+            ]
+          },
+          {
+            "ruleId": "template-phrases.boilerplate",
+            "weight": 1.9307404349134019,
+            "matches": [
+              "the integration of"
+            ]
+          },
+          {
+            "ruleId": "template-phrases.lets-construction",
+            "weight": 1.9307404349134019,
+            "matches": [
+              "Let's delve into"
+            ]
+          },
+          {
+            "ruleId": "ai-vocabulary.tier1-common",
+            "weight": 1.1584442609480412,
+            "matches": [
+              "seamless"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "ai-bypassed",
+      "authorship": "ai",
+      "before": {
+        "score": 92,
+        "tier": "slopocalypse",
+        "shameable": true,
+        "wordCount": 51,
+        "signals": [
+          {
+            "ruleId": "bypass-tricks.homoglyphs",
+            "weight": 17.32050807568877,
+            "matches": [
+              "dеlve",
+              "tаpestry",
+              "testаment"
+            ]
+          },
+          {
+            "ruleId": "ai-vocabulary.collocations",
+            "weight": 7.411523559925164,
+            "matches": [
+              "rich tapestry",
+              "testament to",
+              "navigate the landscape"
+            ]
+          },
+          {
+            "ruleId": "ai-vocabulary.tier1",
+            "weight": 6.41856768364207,
+            "matches": [
+              "delve",
+              "tapestry"
+            ]
+          },
+          {
+            "ruleId": "inflation.significance",
+            "weight": 4.279045122428047,
+            "matches": [
+              "transformative potential"
+            ]
+          },
+          {
+            "ruleId": "negation-pivot.not-x-but-y",
+            "weight": 4.235294117647059,
+            "matches": [
+              "It's not about technology, it's about unlocking the potential of human connection"
+            ]
+          },
+          {
+            "ruleId": "engagement-bait.formulaic-opener",
+            "weight": 3.5294117647058822,
+            "matches": [
+              "In today's fast-paced world"
+            ]
+          },
+          {
+            "ruleId": "engagement-bait.generic-conclusion",
+            "weight": 2.1176470588235294,
+            "matches": [
+              "the future looks bright"
+            ]
+          },
+          {
+            "ruleId": "engagement-bait.social-closer",
+            "weight": 2.1176470588235294,
+            "matches": [
+              "Agree?"
+            ]
+          },
+          {
+            "ruleId": "template-phrases.transition",
+            "weight": 1.6046419209105176,
+            "matches": [
+              "Moreover"
+            ]
+          },
+          {
+            "ruleId": "ai-vocabulary.tier1-common",
+            "weight": 1.283713536728414,
+            "matches": [
+              "holistic"
+            ]
+          }
+        ]
+      },
+      "after": {
+        "score": 92,
+        "tier": "slopocalypse",
+        "shameable": true,
+        "wordCount": 51,
+        "signals": [
+          {
+            "ruleId": "bypass-tricks.homoglyphs",
+            "weight": 17.32050807568877,
+            "matches": [
+              "dеlve",
+              "tаpestry",
+              "testаment"
+            ]
+          },
+          {
+            "ruleId": "ai-vocabulary.collocations",
+            "weight": 7.411523559925164,
+            "matches": [
+              "rich tapestry",
+              "testament to",
+              "navigate the landscape"
+            ]
+          },
+          {
+            "ruleId": "ai-vocabulary.tier1",
+            "weight": 6.41856768364207,
+            "matches": [
+              "delve",
+              "tapestry"
+            ]
+          },
+          {
+            "ruleId": "inflation.significance",
+            "weight": 4.279045122428047,
+            "matches": [
+              "transformative potential"
+            ]
+          },
+          {
+            "ruleId": "negation-pivot.not-x-but-y",
+            "weight": 4.235294117647059,
+            "matches": [
+              "It's not about technology, it's about unlocking the potential of human connection"
+            ]
+          },
+          {
+            "ruleId": "engagement-bait.formulaic-opener",
+            "weight": 3.5294117647058822,
+            "matches": [
+              "In today's fast-paced world"
+            ]
+          },
+          {
+            "ruleId": "engagement-bait.generic-conclusion",
+            "weight": 2.1176470588235294,
+            "matches": [
+              "the future looks bright"
+            ]
+          },
+          {
+            "ruleId": "engagement-bait.social-closer",
+            "weight": 2.1176470588235294,
+            "matches": [
+              "Agree?"
+            ]
+          },
+          {
+            "ruleId": "template-phrases.transition",
+            "weight": 1.6046419209105176,
+            "matches": [
+              "Moreover"
+            ]
+          },
+          {
+            "ruleId": "ai-vocabulary.tier1-common",
+            "weight": 1.283713536728414,
+            "matches": [
+              "holistic"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "ai-swamp-culture",
+      "authorship": "ai",
+      "before": {
+        "score": 66,
+        "tier": "swamp",
+        "shameable": true,
+        "wordCount": 71,
+        "signals": [
+          {
+            "ruleId": "ai-vocabulary.tier1",
+            "weight": 7.6190094579766505,
+            "matches": [
+              "delve",
+              "tapestry",
+              "interplay"
+            ]
+          },
+          {
+            "ruleId": "ai-vocabulary.collocations",
+            "weight": 5.865116215361499,
+            "matches": [
+              "rich tapestry",
+              "testament to",
+              "intricate interplay"
+            ]
+          },
+          {
+            "ruleId": "negation-pivot.not-x-but-y",
+            "weight": 3.946797025434896,
+            "matches": [
+              "It's not about managing people, it's about unlocking the potential within them"
+            ]
+          },
+          {
+            "ruleId": "inflation.significance",
+            "weight": 3.3862264257674,
+            "matches": [
+              "transformative potential"
+            ]
+          },
+          {
+            "ruleId": "engagement-bait.formulaic-opener",
+            "weight": 3.2889975211957467,
+            "matches": [
+              "In today's fast-paced world"
+            ]
+          },
+          {
+            "ruleId": "ai-vocabulary.tier1-common",
+            "weight": 3.0476037831906595,
+            "matches": [
+              "seamless",
+              "holistic",
+              "intricate"
+            ]
+          },
+          {
+            "ruleId": "engagement-bait.generic-conclusion",
+            "weight": 2.79080694065191,
+            "matches": [
+              "As we move forward",
+              "the future looks bright"
+            ]
+          },
+          {
+            "ruleId": "engagement-bait.social-closer",
+            "weight": 1.973398512717448,
+            "matches": [
+              "Agree?"
+            ]
+          },
+          {
+            "ruleId": "template-phrases.lets-construction",
+            "weight": 1.6931132128837,
+            "matches": [
+              "let's delve into"
+            ]
+          },
+          {
+            "ruleId": "template-phrases.transition",
+            "weight": 1.2698349096627752,
+            "matches": [
+              "Moreover"
+            ]
+          }
+        ]
+      },
+      "after": {
+        "score": 75,
+        "tier": "swamp",
+        "shameable": true,
+        "wordCount": 71,
+        "signals": [
+          {
+            "ruleId": "ai-vocabulary.tier1",
+            "weight": 7.6190094579766505,
+            "matches": [
+              "delve",
+              "tapestry",
+              "interplay"
+            ]
+          },
+          {
+            "ruleId": "ai-vocabulary.collocations",
+            "weight": 5.865116215361499,
+            "matches": [
+              "rich tapestry",
+              "testament to",
+              "intricate interplay"
+            ]
+          },
+          {
+            "ruleId": "negation-pivot.not-x-but-y",
+            "weight": 4.912377429317319,
+            "matches": [
+              "is not just about productivity; it is about a rich tapestry of shared purpose",
+              "It's not about managing people, it's about unlocking the potential within them"
+            ]
+          },
+          {
+            "ruleId": "inflation.significance",
+            "weight": 3.3862264257674,
+            "matches": [
+              "transformative potential"
+            ]
+          },
+          {
+            "ruleId": "ai-vocabulary.tier1-common",
+            "weight": 3.0476037831906595,
+            "matches": [
+              "seamless",
+              "holistic",
+              "intricate"
+            ]
+          },
+          {
+            "ruleId": "engagement-bait.formulaic-opener",
+            "weight": 2.894646160015013,
+            "matches": [
+              "In today's fast-paced world"
+            ]
+          },
+          {
+            "ruleId": "engagement-bait.generic-conclusion",
+            "weight": 2.4561887146586594,
+            "matches": [
+              "As we move forward",
+              "the future looks bright"
+            ]
+          },
+          {
+            "ruleId": "engagement-bait.social-closer",
+            "weight": 1.7367876960090078,
+            "matches": [
+              "Agree?"
+            ]
+          },
+          {
+            "ruleId": "template-phrases.lets-construction",
+            "weight": 1.6931132128837,
+            "matches": [
+              "let's delve into"
+            ]
+          },
+          {
+            "ruleId": "template-phrases.transition",
+            "weight": 1.2698349096627752,
+            "matches": [
+              "Moreover"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "ai-swamp-innovation",
+      "authorship": "ai",
+      "before": {
+        "score": 68,
+        "tier": "swamp",
+        "shameable": true,
+        "wordCount": 71,
+        "signals": [
+          {
+            "ruleId": "ai-vocabulary.collocations",
+            "weight": 6.2482859672755175,
+            "matches": [
+              "harness the power",
+              "rich tapestry",
+              "unlock the potential"
+            ]
+          },
+          {
+            "ruleId": "inflation.significance",
+            "weight": 6.2482859672755175,
+            "matches": [
+              "a defining moment in",
+              "transformative potential"
+            ]
+          },
+          {
+            "ruleId": "negation-pivot.not-x-but-y",
+            "weight": 4.5,
+            "matches": [
+              "It's not just about technology, it's about transformative potential. It is important to note that a holistic approach can create limitless p"
+            ]
+          },
+          {
+            "ruleId": "engagement-bait.speculative-opener",
+            "weight": 3,
+            "matches": [
+              "Imagine a world where"
+            ]
+          },
+          {
+            "ruleId": "ai-vocabulary.tier1",
+            "weight": 2.343107237728319,
+            "matches": [
+              "tapestry"
+            ]
+          },
+          {
+            "ruleId": "template-phrases.filler",
+            "weight": 2.343107237728319,
+            "matches": [
+              "It is important to note that"
+            ]
+          },
+          {
+            "ruleId": "engagement-bait.generic-conclusion",
+            "weight": 2.25,
+            "matches": [
+              "Together, we can shape the future"
+            ]
+          },
+          {
+            "ruleId": "engagement-bait.social-closer",
+            "weight": 2.25,
+            "matches": [
+              "What would you add?"
+            ]
+          },
+          {
+            "ruleId": "ai-vocabulary.tier2",
+            "weight": 2.2091026891266328,
+            "matches": [
+              "harness",
+              "navigate",
+              "transformative"
+            ]
+          },
+          {
+            "ruleId": "ai-vocabulary.tier1-common",
+            "weight": 1.874485790182655,
+            "matches": [
+              "seamless",
+              "holistic"
+            ]
+          },
+          {
+            "ruleId": "inflation.promotional",
+            "weight": 1.5620714918188794,
+            "matches": [
+              "limitless possibilities"
+            ]
+          },
+          {
+            "ruleId": "template-phrases.transition",
+            "weight": 1.1715536188641595,
+            "matches": [
+              "Moreover"
+            ]
+          }
+        ]
+      },
+      "after": {
+        "score": 75,
+        "tier": "swamp",
+        "shameable": true,
+        "wordCount": 71,
+        "signals": [
+          {
+            "ruleId": "ai-vocabulary.collocations",
+            "weight": 6.2482859672755175,
+            "matches": [
+              "harness the power",
+              "rich tapestry",
+              "unlock the potential"
+            ]
+          },
+          {
+            "ruleId": "inflation.significance",
+            "weight": 6.2482859672755175,
+            "matches": [
+              "a defining moment in",
+              "transformative potential"
+            ]
+          },
+          {
+            "ruleId": "negation-pivot.not-x-but-y",
+            "weight": 4.5,
+            "matches": [
+              "It's not just about technology, it's about transformative potential. It is important to note that a holistic approach can create limitless p"
+            ]
+          },
+          {
+            "ruleId": "engagement-bait.speculative-opener",
+            "weight": 3,
+            "matches": [
+              "Imagine a world where"
+            ]
+          },
+          {
+            "ruleId": "ai-vocabulary.tier1",
+            "weight": 2.343107237728319,
+            "matches": [
+              "tapestry"
+            ]
+          },
+          {
+            "ruleId": "template-phrases.filler",
+            "weight": 2.343107237728319,
+            "matches": [
+              "It is important to note that"
+            ]
+          },
+          {
+            "ruleId": "engagement-bait.generic-conclusion",
+            "weight": 2.25,
+            "matches": [
+              "Together, we can shape the future"
+            ]
+          },
+          {
+            "ruleId": "engagement-bait.social-closer",
+            "weight": 2.25,
+            "matches": [
+              "What would you add?"
+            ]
+          },
+          {
+            "ruleId": "ai-vocabulary.tier2",
+            "weight": 2.2091026891266328,
+            "matches": [
+              "harness",
+              "navigate",
+              "transformative"
+            ]
+          },
+          {
+            "ruleId": "ai-vocabulary.tier1-common",
+            "weight": 1.874485790182655,
+            "matches": [
+              "seamless",
+              "holistic"
+            ]
+          },
+          {
+            "ruleId": "inflation.promotional",
+            "weight": 1.5620714918188794,
+            "matches": [
+              "limitless possibilities"
+            ]
+          },
+          {
+            "ruleId": "template-phrases.transition",
+            "weight": 1.1715536188641595,
+            "matches": [
+              "Moreover"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "ai-swamp-sales",
+      "authorship": "ai",
+      "before": {
+        "score": 65,
+        "tier": "swamp",
+        "shameable": true,
+        "wordCount": 70,
+        "signals": [
+          {
+            "ruleId": "ai-vocabulary.tier1",
+            "weight": 8.009335780899221,
+            "matches": [
+              "Delve",
+              "intricacies",
+              "tapestry"
+            ]
+          },
+          {
+            "ruleId": "negation-pivot.not-x-but-y",
+            "weight": 4.870160212876719,
+            "matches": [
+              "It's not about closing deals, it's about a seamless tapestry of meaningful relationships"
+            ]
+          },
+          {
+            "ruleId": "engagement-bait.formulaic-opener",
+            "weight": 4.058466844063933,
+            "matches": [
+              "In the rapidly evolving world of"
+            ]
+          },
+          {
+            "ruleId": "ai-vocabulary.collocations",
+            "weight": 3.5597047915107654,
+            "matches": [
+              "testament to"
+            ]
+          },
+          {
+            "ruleId": "inflation.significance",
+            "weight": 3.5597047915107654,
+            "matches": [
+              "transformative potential"
+            ]
+          },
+          {
+            "ruleId": "ai-vocabulary.tier1-common",
+            "weight": 3.2037343123596886,
+            "matches": [
+              "pivotal",
+              "holistic",
+              "seamless"
+            ]
+          },
+          {
+            "ruleId": "template-phrases.filler",
+            "weight": 2.669778593633074,
+            "matches": [
+              "At its core"
+            ]
+          },
+          {
+            "ruleId": "engagement-bait.generic-conclusion",
+            "weight": 2.4350801064383596,
+            "matches": [
+              "The future looks bright"
+            ]
+          },
+          {
+            "ruleId": "template-phrases.transition",
+            "weight": 1.334889296816537,
+            "matches": [
+              "Moreover"
+            ]
+          }
+        ]
+      },
+      "after": {
+        "score": 75,
+        "tier": "swamp",
+        "shameable": true,
+        "wordCount": 70,
+        "signals": [
+          {
+            "ruleId": "ai-vocabulary.tier1",
+            "weight": 8.009335780899221,
+            "matches": [
+              "Delve",
+              "intricacies",
+              "tapestry"
+            ]
+          },
+          {
+            "ruleId": "negation-pivot.not-x-but-y",
+            "weight": 4.870160212876719,
+            "matches": [
+              "It's not about closing deals, it's about a seamless tapestry of meaningful relationships"
+            ]
+          },
+          {
+            "ruleId": "engagement-bait.formulaic-opener",
+            "weight": 4.058466844063933,
+            "matches": [
+              "In the rapidly evolving world of"
+            ]
+          },
+          {
+            "ruleId": "ai-vocabulary.collocations",
+            "weight": 3.5597047915107654,
+            "matches": [
+              "testament to"
+            ]
+          },
+          {
+            "ruleId": "inflation.significance",
+            "weight": 3.5597047915107654,
+            "matches": [
+              "transformative potential"
+            ]
+          },
+          {
+            "ruleId": "ai-vocabulary.tier1-common",
+            "weight": 3.2037343123596886,
+            "matches": [
+              "pivotal",
+              "holistic",
+              "seamless"
+            ]
+          },
+          {
+            "ruleId": "template-phrases.filler",
+            "weight": 2.669778593633074,
+            "matches": [
+              "At its core"
+            ]
+          },
+          {
+            "ruleId": "engagement-bait.generic-conclusion",
+            "weight": 2.4350801064383596,
+            "matches": [
+              "The future looks bright"
+            ]
+          },
+          {
+            "ruleId": "template-phrases.transition",
+            "weight": 1.334889296816537,
+            "matches": [
+              "Moreover"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "ai-swamp-work",
+      "authorship": "ai",
+      "before": {
+        "score": 66,
+        "tier": "swamp",
+        "shameable": true,
+        "wordCount": 71,
+        "signals": [
+          {
+            "ruleId": "negation-pivot.not-x-but-y",
+            "weight": 4.432776750217552,
+            "matches": [
+              "It's not about working harder, it's about a seamless interplay of purpose and progress"
+            ]
+          },
+          {
+            "ruleId": "ai-vocabulary.collocations",
+            "weight": 3.532782581212449,
+            "matches": [
+              "unlock the potential"
+            ]
+          },
+          {
+            "ruleId": "hedging.stack",
+            "weight": 3.532782581212449,
+            "matches": [
+              "could potentially"
+            ]
+          },
+          {
+            "ruleId": "ai-vocabulary.tier1-common",
+            "weight": 3.1795043230912037,
+            "matches": [
+              "holistic",
+              "thriving",
+              "seamless"
+            ]
+          },
+          {
+            "ruleId": "engagement-bait.generic-conclusion",
+            "weight": 3.134446499564898,
+            "matches": [
+              "As we move forward",
+              "endless possibilities"
+            ]
+          },
+          {
+            "ruleId": "template-phrases.filler",
+            "weight": 2.6495869359093365,
+            "matches": [
+              "It is important to note that"
+            ]
+          },
+          {
+            "ruleId": "ai-vocabulary.tier1",
+            "weight": 2.6495869359093365,
+            "matches": [
+              "interplay"
+            ]
+          },
+          {
+            "ruleId": "negation-pivot.not-only",
+            "weight": 2.216388375108776,
+            "matches": [
+              "not just about tools but also about people"
+            ]
+          },
+          {
+            "ruleId": "engagement-bait.social-closer",
+            "weight": 2.216388375108776,
+            "matches": [
+              "Agree?"
+            ]
+          },
+          {
+            "ruleId": "template-phrases.boilerplate",
+            "weight": 1.7663912906062245,
+            "matches": [
+              "the integration of"
+            ]
+          },
+          {
+            "ruleId": "hedging.vague-attribution",
+            "weight": 1.7663912906062245,
+            "matches": [
+              "Experts believe"
+            ]
+          },
+          {
+            "ruleId": "template-phrases.lets-construction",
+            "weight": 1.7663912906062245,
+            "matches": [
+              "let's explore"
+            ]
+          },
+          {
+            "ruleId": "template-phrases.transition",
+            "weight": 1.3247934679546682,
+            "matches": [
+              "Moreover"
+            ]
+          }
+        ]
+      },
+      "after": {
+        "score": 75,
+        "tier": "swamp",
+        "shameable": true,
+        "wordCount": 71,
+        "signals": [
+          {
+            "ruleId": "negation-pivot.not-x-but-y",
+            "weight": 4.432776750217552,
+            "matches": [
+              "It's not about working harder, it's about a seamless interplay of purpose and progress"
+            ]
+          },
+          {
+            "ruleId": "ai-vocabulary.collocations",
+            "weight": 3.532782581212449,
+            "matches": [
+              "unlock the potential"
+            ]
+          },
+          {
+            "ruleId": "hedging.stack",
+            "weight": 3.532782581212449,
+            "matches": [
+              "could potentially"
+            ]
+          },
+          {
+            "ruleId": "ai-vocabulary.tier1-common",
+            "weight": 3.1795043230912037,
+            "matches": [
+              "holistic",
+              "thriving",
+              "seamless"
+            ]
+          },
+          {
+            "ruleId": "engagement-bait.generic-conclusion",
+            "weight": 3.134446499564898,
+            "matches": [
+              "As we move forward",
+              "endless possibilities"
+            ]
+          },
+          {
+            "ruleId": "template-phrases.filler",
+            "weight": 2.6495869359093365,
+            "matches": [
+              "It is important to note that"
+            ]
+          },
+          {
+            "ruleId": "ai-vocabulary.tier1",
+            "weight": 2.6495869359093365,
+            "matches": [
+              "interplay"
+            ]
+          },
+          {
+            "ruleId": "negation-pivot.not-only",
+            "weight": 2.216388375108776,
+            "matches": [
+              "not just about tools but also about people"
+            ]
+          },
+          {
+            "ruleId": "engagement-bait.social-closer",
+            "weight": 2.216388375108776,
+            "matches": [
+              "Agree?"
+            ]
+          },
+          {
+            "ruleId": "template-phrases.boilerplate",
+            "weight": 1.7663912906062245,
+            "matches": [
+              "the integration of"
+            ]
+          },
+          {
+            "ruleId": "hedging.vague-attribution",
+            "weight": 1.7663912906062245,
+            "matches": [
+              "Experts believe"
+            ]
+          },
+          {
+            "ruleId": "template-phrases.lets-construction",
+            "weight": 1.7663912906062245,
+            "matches": [
+              "let's explore"
+            ]
+          },
+          {
+            "ruleId": "template-phrases.transition",
+            "weight": 1.3247934679546682,
+            "matches": [
+              "Moreover"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "ai-swamp-data",
+      "authorship": "ai",
+      "before": {
+        "score": 68,
+        "tier": "swamp",
+        "shameable": true,
+        "wordCount": 69,
+        "signals": [
+          {
+            "ruleId": "ai-vocabulary.tier1",
+            "weight": 6.6873065015479884,
+            "matches": [
+              "beacon",
+              "tapestry",
+              "interplay"
+            ]
+          },
+          {
+            "ruleId": "ai-vocabulary.collocations",
+            "weight": 5.944272445820434,
+            "matches": [
+              "unlock the potential",
+              "rich tapestry",
+              "testament to"
+            ]
+          },
+          {
+            "ruleId": "negation-pivot.not-x-but-y",
+            "weight": 4.235294117647059,
+            "matches": [
+              "It's not just about collecting information, it's about transformative potential"
+            ]
+          },
+          {
+            "ruleId": "ai-vocabulary.tier1-common",
+            "weight": 3.56656346749226,
+            "matches": [
+              "robust",
+              "comprehensive",
+              "holistic"
+            ]
+          },
+          {
+            "ruleId": "engagement-bait.formulaic-opener",
+            "weight": 3.5294117647058822,
+            "matches": [
+              "In today's rapidly evolving digital landscape"
+            ]
+          },
+          {
+            "ruleId": "inflation.significance",
+            "weight": 2.972136222910217,
+            "matches": [
+              "transformative potential"
+            ]
+          },
+          {
+            "ruleId": "template-phrases.filler",
+            "weight": 2.2291021671826625,
+            "matches": [
+              "It is important to note that"
+            ]
+          },
+          {
+            "ruleId": "engagement-bait.generic-conclusion",
+            "weight": 2.1176470588235294,
+            "matches": [
+              "the future looks bright"
+            ]
+          },
+          {
+            "ruleId": "engagement-bait.social-closer",
+            "weight": 2.1176470588235294,
+            "matches": [
+              "What would you add?"
+            ]
+          },
+          {
+            "ruleId": "template-phrases.boilerplate",
+            "weight": 1.4860681114551084,
+            "matches": [
+              "the integration of"
+            ]
+          },
+          {
+            "ruleId": "template-phrases.transition",
+            "weight": 1.1145510835913313,
+            "matches": [
+              "Moreover"
+            ]
+          }
+        ]
+      },
+      "after": {
+        "score": 75,
+        "tier": "swamp",
+        "shameable": true,
+        "wordCount": 69,
+        "signals": [
+          {
+            "ruleId": "ai-vocabulary.tier1",
+            "weight": 6.6873065015479884,
+            "matches": [
+              "beacon",
+              "tapestry",
+              "interplay"
+            ]
+          },
+          {
+            "ruleId": "ai-vocabulary.collocations",
+            "weight": 5.944272445820434,
+            "matches": [
+              "unlock the potential",
+              "rich tapestry",
+              "testament to"
+            ]
+          },
+          {
+            "ruleId": "negation-pivot.not-x-but-y",
+            "weight": 4.235294117647059,
+            "matches": [
+              "It's not just about collecting information, it's about transformative potential"
+            ]
+          },
+          {
+            "ruleId": "ai-vocabulary.tier1-common",
+            "weight": 3.56656346749226,
+            "matches": [
+              "robust",
+              "comprehensive",
+              "holistic"
+            ]
+          },
+          {
+            "ruleId": "engagement-bait.formulaic-opener",
+            "weight": 3.5294117647058822,
+            "matches": [
+              "In today's rapidly evolving digital landscape"
+            ]
+          },
+          {
+            "ruleId": "inflation.significance",
+            "weight": 2.972136222910217,
+            "matches": [
+              "transformative potential"
+            ]
+          },
+          {
+            "ruleId": "template-phrases.filler",
+            "weight": 2.2291021671826625,
+            "matches": [
+              "It is important to note that"
+            ]
+          },
+          {
+            "ruleId": "engagement-bait.generic-conclusion",
+            "weight": 2.1176470588235294,
+            "matches": [
+              "the future looks bright"
+            ]
+          },
+          {
+            "ruleId": "engagement-bait.social-closer",
+            "weight": 2.1176470588235294,
+            "matches": [
+              "What would you add?"
+            ]
+          },
+          {
+            "ruleId": "template-phrases.boilerplate",
+            "weight": 1.4860681114551084,
+            "matches": [
+              "the integration of"
+            ]
+          },
+          {
+            "ruleId": "template-phrases.transition",
+            "weight": 1.1145510835913313,
+            "matches": [
+              "Moreover"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "ai-swamp-design",
+      "authorship": "ai",
+      "before": {
+        "score": 68,
+        "tier": "swamp",
+        "shameable": true,
+        "wordCount": 67,
+        "signals": [
+          {
+            "ruleId": "ai-vocabulary.tier1",
+            "weight": 7.307949559744155,
+            "matches": [
+              "delve",
+              "intricacies",
+              "tapestry"
+            ]
+          },
+          {
+            "ruleId": "ai-vocabulary.collocations",
+            "weight": 4.593333946901633,
+            "matches": [
+              "rich tapestry",
+              "testament to"
+            ]
+          },
+          {
+            "ruleId": "negation-pivot.not-x-but-y",
+            "weight": 4.5,
+            "matches": [
+              "It's not about adding features, it's about unlocking the potential of human connection"
+            ]
+          },
+          {
+            "ruleId": "hedging.stack",
+            "weight": 3.247977582108513,
+            "matches": [
+              "could potentially"
+            ]
+          },
+          {
+            "ruleId": "engagement-bait.speculative-opener",
+            "weight": 3,
+            "matches": [
+              "Imagine a future where"
+            ]
+          },
+          {
+            "ruleId": "template-phrases.filler",
+            "weight": 2.435983186581385,
+            "matches": [
+              "The reality is that"
+            ]
+          },
+          {
+            "ruleId": "engagement-bait.generic-conclusion",
+            "weight": 2.25,
+            "matches": [
+              "Together, we can shape the future"
+            ]
+          },
+          {
+            "ruleId": "engagement-bait.social-closer",
+            "weight": 2.25,
+            "matches": [
+              "Agree?"
+            ]
+          },
+          {
+            "ruleId": "ai-vocabulary.tier1-common",
+            "weight": 1.9487865492651077,
+            "matches": [
+              "seamless",
+              "holistic"
+            ]
+          },
+          {
+            "ruleId": "template-phrases.lets-construction",
+            "weight": 1.6239887910542565,
+            "matches": [
+              "Let's delve into"
+            ]
+          },
+          {
+            "ruleId": "inflation.promotional",
+            "weight": 1.6239887910542565,
+            "matches": [
+              "redefine the future"
+            ]
+          },
+          {
+            "ruleId": "template-phrases.transition",
+            "weight": 1.2179915932906924,
+            "matches": [
+              "Moreover"
+            ]
+          }
+        ]
+      },
+      "after": {
+        "score": 75,
+        "tier": "swamp",
+        "shameable": true,
+        "wordCount": 67,
+        "signals": [
+          {
+            "ruleId": "ai-vocabulary.tier1",
+            "weight": 7.307949559744155,
+            "matches": [
+              "delve",
+              "intricacies",
+              "tapestry"
+            ]
+          },
+          {
+            "ruleId": "ai-vocabulary.collocations",
+            "weight": 4.593333946901633,
+            "matches": [
+              "rich tapestry",
+              "testament to"
+            ]
+          },
+          {
+            "ruleId": "negation-pivot.not-x-but-y",
+            "weight": 4.5,
+            "matches": [
+              "It's not about adding features, it's about unlocking the potential of human connection"
+            ]
+          },
+          {
+            "ruleId": "hedging.stack",
+            "weight": 3.247977582108513,
+            "matches": [
+              "could potentially"
+            ]
+          },
+          {
+            "ruleId": "engagement-bait.speculative-opener",
+            "weight": 3,
+            "matches": [
+              "Imagine a future where"
+            ]
+          },
+          {
+            "ruleId": "template-phrases.filler",
+            "weight": 2.435983186581385,
+            "matches": [
+              "The reality is that"
+            ]
+          },
+          {
+            "ruleId": "engagement-bait.generic-conclusion",
+            "weight": 2.25,
+            "matches": [
+              "Together, we can shape the future"
+            ]
+          },
+          {
+            "ruleId": "engagement-bait.social-closer",
+            "weight": 2.25,
+            "matches": [
+              "Agree?"
+            ]
+          },
+          {
+            "ruleId": "ai-vocabulary.tier1-common",
+            "weight": 1.9487865492651077,
+            "matches": [
+              "seamless",
+              "holistic"
+            ]
+          },
+          {
+            "ruleId": "template-phrases.lets-construction",
+            "weight": 1.6239887910542565,
+            "matches": [
+              "Let's delve into"
+            ]
+          },
+          {
+            "ruleId": "inflation.promotional",
+            "weight": 1.6239887910542565,
+            "matches": [
+              "redefine the future"
+            ]
+          },
+          {
+            "ruleId": "template-phrases.transition",
+            "weight": 1.2179915932906924,
+            "matches": [
+              "Moreover"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "ai-swamp-bullets",
+      "authorship": "ai",
+      "before": {
+        "score": 75,
+        "tier": "swamp",
+        "shameable": true,
+        "wordCount": 61,
+        "signals": [
+          {
+            "ruleId": "ai-vocabulary.collocations",
+            "weight": 7.1833632074159395,
+            "matches": [
+              "Unlock the potential",
+              "rich tapestry",
+              "Harness the power"
+            ]
+          },
+          {
+            "ruleId": "ai-vocabulary.tier1",
+            "weight": 5.387522405561955,
+            "matches": [
+              "delve",
+              "tapestry"
+            ]
+          },
+          {
+            "ruleId": "negation-pivot.not-x-but-y",
+            "weight": 5.142857142857143,
+            "matches": [
+              "It's not just about results, it's about people"
+            ]
+          },
+          {
+            "ruleId": "formatting.emoji-bullets",
+            "weight": 4.68629150101524,
+            "matches": [
+              "✅ Build a seamless culture.",
+              "🚀 Unlock the potential of your team.",
+              "🔥 Embrace a rich tapestry of ideas."
+            ]
+          },
+          {
+            "ruleId": "engagement-bait.formulaic-opener",
+            "weight": 4.285714285714286,
+            "matches": [
+              "In today's fast-paced world"
+            ]
+          },
+          {
+            "ruleId": "inflation.significance",
+            "weight": 3.5916816037079697,
+            "matches": [
+              "transformative potential"
+            ]
+          },
+          {
+            "ruleId": "formatting.hashtag-stuff",
+            "weight": 3.3137084989847607,
+            "matches": [
+              "#leadership",
+              "#growth",
+              "#mindset"
+            ]
+          },
+          {
+            "ruleId": "engagement-bait.generic-conclusion",
+            "weight": 2.5714285714285716,
+            "matches": [
+              "the future looks bright"
+            ]
+          },
+          {
+            "ruleId": "ai-vocabulary.tier2",
+            "weight": 2.5397024178448797,
+            "matches": [
+              "transformative",
+              "harness",
+              "navigate"
+            ]
+          },
+          {
+            "ruleId": "ai-vocabulary.tier1-common",
+            "weight": 2.1550089622247817,
+            "matches": [
+              "holistic",
+              "seamless"
+            ]
+          },
+          {
+            "ruleId": "template-phrases.lets-construction",
+            "weight": 1.7958408018539849,
+            "matches": [
+              "let's delve into"
+            ]
+          },
+          {
+            "ruleId": "template-phrases.transition",
+            "weight": 1.3468806013904888,
+            "matches": [
+              "Moreover"
+            ]
+          }
+        ]
+      },
+      "after": {
+        "score": 75,
+        "tier": "swamp",
+        "shameable": true,
+        "wordCount": 61,
+        "signals": [
+          {
+            "ruleId": "ai-vocabulary.collocations",
+            "weight": 7.1833632074159395,
+            "matches": [
+              "Unlock the potential",
+              "rich tapestry",
+              "Harness the power"
+            ]
+          },
+          {
+            "ruleId": "ai-vocabulary.tier1",
+            "weight": 5.387522405561955,
+            "matches": [
+              "delve",
+              "tapestry"
+            ]
+          },
+          {
+            "ruleId": "formatting.emoji-bullets",
+            "weight": 4.68629150101524,
+            "matches": [
+              "✅ Build a seamless culture.",
+              "🚀 Unlock the potential of your team.",
+              "🔥 Embrace a rich tapestry of ideas."
+            ]
+          },
+          {
+            "ruleId": "negation-pivot.not-x-but-y",
+            "weight": 4.235294117647059,
+            "matches": [
+              "It's not just about results, it's about people"
+            ]
+          },
+          {
+            "ruleId": "inflation.significance",
+            "weight": 3.5916816037079697,
+            "matches": [
+              "transformative potential"
+            ]
+          },
+          {
+            "ruleId": "engagement-bait.formulaic-opener",
+            "weight": 3.5294117647058822,
+            "matches": [
+              "In today's fast-paced world"
+            ]
+          },
+          {
+            "ruleId": "formatting.hashtag-stuff",
+            "weight": 3.3137084989847607,
+            "matches": [
+              "#leadership",
+              "#growth",
+              "#mindset"
+            ]
+          },
+          {
+            "ruleId": "ai-vocabulary.tier2",
+            "weight": 2.5397024178448797,
+            "matches": [
+              "transformative",
+              "harness",
+              "navigate"
+            ]
+          },
+          {
+            "ruleId": "ai-vocabulary.tier1-common",
+            "weight": 2.1550089622247817,
+            "matches": [
+              "holistic",
+              "seamless"
+            ]
+          },
+          {
+            "ruleId": "engagement-bait.generic-conclusion",
+            "weight": 2.1176470588235294,
+            "matches": [
+              "the future looks bright"
+            ]
+          },
+          {
+            "ruleId": "engagement-bait.social-closer",
+            "weight": 2.1176470588235294,
+            "matches": [
+              "Agree?"
+            ]
+          },
+          {
+            "ruleId": "template-phrases.lets-construction",
+            "weight": 1.7958408018539849,
+            "matches": [
+              "let's delve into"
+            ]
+          },
+          {
+            "ruleId": "template-phrases.transition",
+            "weight": 1.3468806013904888,
+            "matches": [
+              "Moreover"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "ai-swamp-contrasts",
+      "authorship": "ai",
+      "before": {
+        "score": 68,
+        "tier": "swamp",
+        "shameable": true,
+        "wordCount": 68,
+        "signals": [
+          {
+            "ruleId": "ai-vocabulary.tier1",
+            "weight": 8.072697858497243,
+            "matches": [
+              "tapestry",
+              "delve",
+              "interplay"
+            ]
+          },
+          {
+            "ruleId": "negation-pivot.not-x-but-y",
+            "weight": 7.02943725152286,
+            "matches": [
+              "It's not about a title, it's about the transformative potential of shared purpose. It's not about control, it's about a seamless tapestry of trust",
+              "It's not just about strategy, it's about a holistic approach"
+            ]
+          },
+          {
+            "ruleId": "ai-vocabulary.collocations",
+            "weight": 5.074008353967574,
+            "matches": [
+              "intricate interplay",
+              "testament to"
+            ]
+          },
+          {
+            "ruleId": "inflation.significance",
+            "weight": 3.5878657148876636,
+            "matches": [
+              "transformative potential"
+            ]
+          },
+          {
+            "ruleId": "ai-vocabulary.tier1-common",
+            "weight": 3.229079143398897,
+            "matches": [
+              "seamless",
+              "holistic",
+              "intricate"
+            ]
+          },
+          {
+            "ruleId": "template-phrases.filler",
+            "weight": 2.6908992861657475,
+            "matches": [
+              "At its core"
+            ]
+          },
+          {
+            "ruleId": "engagement-bait.generic-conclusion",
+            "weight": 2.48528137423857,
+            "matches": [
+              "The future looks bright"
+            ]
+          },
+          {
+            "ruleId": "engagement-bait.social-closer",
+            "weight": 2.48528137423857,
+            "matches": [
+              "Read that again."
+            ]
+          },
+          {
+            "ruleId": "template-phrases.transition",
+            "weight": 1.3454496430828737,
+            "matches": [
+              "Moreover"
+            ]
+          }
+        ]
+      },
+      "after": {
+        "score": 75,
+        "tier": "swamp",
+        "shameable": true,
+        "wordCount": 68,
+        "signals": [
+          {
+            "ruleId": "ai-vocabulary.tier1",
+            "weight": 8.072697858497243,
+            "matches": [
+              "tapestry",
+              "delve",
+              "interplay"
+            ]
+          },
+          {
+            "ruleId": "negation-pivot.not-x-but-y",
+            "weight": 7.02943725152286,
+            "matches": [
+              "It's not about a title, it's about the transformative potential of shared purpose. It's not about control, it's about a seamless tapestry of trust",
+              "It's not just about strategy, it's about a holistic approach"
+            ]
+          },
+          {
+            "ruleId": "ai-vocabulary.collocations",
+            "weight": 5.074008353967574,
+            "matches": [
+              "intricate interplay",
+              "testament to"
+            ]
+          },
+          {
+            "ruleId": "inflation.significance",
+            "weight": 3.5878657148876636,
+            "matches": [
+              "transformative potential"
+            ]
+          },
+          {
+            "ruleId": "ai-vocabulary.tier1-common",
+            "weight": 3.229079143398897,
+            "matches": [
+              "seamless",
+              "holistic",
+              "intricate"
+            ]
+          },
+          {
+            "ruleId": "template-phrases.filler",
+            "weight": 2.6908992861657475,
+            "matches": [
+              "At its core"
+            ]
+          },
+          {
+            "ruleId": "engagement-bait.generic-conclusion",
+            "weight": 2.48528137423857,
+            "matches": [
+              "The future looks bright"
+            ]
+          },
+          {
+            "ruleId": "engagement-bait.social-closer",
+            "weight": 2.48528137423857,
+            "matches": [
+              "Read that again."
+            ]
+          },
+          {
+            "ruleId": "template-phrases.transition",
+            "weight": 1.3454496430828737,
+            "matches": [
+              "Moreover"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "normal-job",
+      "authorship": "human",
+      "before": {
+        "score": 0,
+        "tier": "artisanal",
+        "shameable": false,
+        "wordCount": 41,
+        "signals": []
+      },
+      "after": {
+        "score": 0,
+        "tier": "artisanal",
+        "shameable": false,
+        "wordCount": 41,
+        "signals": []
+      }
+    },
+    {
+      "id": "normal-technical",
+      "authorship": "human",
+      "before": {
+        "score": 0,
+        "tier": "artisanal",
+        "shameable": false,
+        "wordCount": 46,
+        "signals": []
+      },
+      "after": {
+        "score": 0,
+        "tier": "artisanal",
+        "shameable": false,
+        "wordCount": 46,
+        "signals": []
+      }
+    },
+    {
+      "id": "normal-event",
+      "authorship": "human",
+      "before": {
+        "score": 0,
+        "tier": "artisanal",
+        "shameable": false,
+        "wordCount": 44,
+        "signals": []
+      },
+      "after": {
+        "score": 0,
+        "tier": "artisanal",
+        "shameable": false,
+        "wordCount": 44,
+        "signals": []
+      }
+    },
+    {
+      "id": "normal-question",
+      "authorship": "human",
+      "before": {
+        "score": 0,
+        "tier": "artisanal",
+        "shameable": false,
+        "wordCount": 41,
+        "signals": []
+      },
+      "after": {
+        "score": 0,
+        "tier": "artisanal",
+        "shameable": false,
+        "wordCount": 41,
+        "signals": []
+      }
+    },
+    {
+      "id": "normal-hiring",
+      "authorship": "human",
+      "before": {
+        "score": 0,
+        "tier": "artisanal",
+        "shameable": false,
+        "wordCount": 46,
+        "signals": []
+      },
+      "after": {
+        "score": 0,
+        "tier": "artisanal",
+        "shameable": false,
+        "wordCount": 46,
+        "signals": []
+      }
+    },
+    {
+      "id": "normal-thanks",
+      "authorship": "human",
+      "before": {
+        "score": 0,
+        "tier": "artisanal",
+        "shameable": false,
+        "wordCount": 39,
+        "signals": []
+      },
+      "after": {
+        "score": 0,
+        "tier": "artisanal",
+        "shameable": false,
+        "wordCount": 39,
+        "signals": []
+      }
+    },
+    {
+      "id": "normal-poll",
+      "authorship": "human",
+      "before": {
+        "score": 0,
+        "tier": "artisanal",
+        "shameable": false,
+        "wordCount": 37,
+        "signals": []
+      },
+      "after": {
+        "score": 0,
+        "tier": "artisanal",
+        "shameable": false,
+        "wordCount": 37,
+        "signals": []
+      }
+    },
+    {
+      "id": "normal-ai-research",
+      "authorship": "human",
+      "before": {
+        "score": 0,
+        "tier": "artisanal",
+        "shameable": false,
+        "wordCount": 45,
+        "signals": []
+      },
+      "after": {
+        "score": 0,
+        "tier": "artisanal",
+        "shameable": false,
+        "wordCount": 45,
+        "signals": []
+      }
+    },
+    {
+      "id": "normal-dash",
+      "authorship": "human",
+      "before": {
+        "score": 0,
+        "tier": "artisanal",
+        "shameable": false,
+        "wordCount": 44,
+        "signals": []
+      },
+      "after": {
+        "score": 0,
+        "tier": "artisanal",
+        "shameable": false,
+        "wordCount": 44,
+        "signals": []
+      }
+    },
+    {
+      "id": "normal-checklist",
+      "authorship": "human",
+      "before": {
+        "score": 0,
+        "tier": "artisanal",
+        "shameable": false,
+        "wordCount": 51,
+        "signals": []
+      },
+      "after": {
+        "score": 0,
+        "tier": "artisanal",
+        "shameable": false,
+        "wordCount": 51,
+        "signals": []
+      }
+    },
+    {
+      "id": "normal-offer-help",
+      "authorship": "human",
+      "before": {
+        "score": 0,
+        "tier": "artisanal",
+        "shameable": false,
+        "wordCount": 48,
+        "signals": []
+      },
+      "after": {
+        "score": 0,
+        "tier": "artisanal",
+        "shameable": false,
+        "wordCount": 48,
+        "signals": []
+      }
+    },
+    {
+      "id": "normal-launch",
+      "authorship": "human",
+      "before": {
+        "score": 0,
+        "tier": "artisanal",
+        "shameable": false,
+        "wordCount": 52,
+        "signals": []
+      },
+      "after": {
+        "score": 0,
+        "tier": "artisanal",
+        "shameable": false,
+        "wordCount": 52,
+        "signals": []
+      }
+    },
+    {
+      "id": "normal-triple-list",
+      "authorship": "human",
+      "before": {
+        "score": 0,
+        "tier": "artisanal",
+        "shameable": false,
+        "wordCount": 40,
+        "signals": []
+      },
+      "after": {
+        "score": 0,
+        "tier": "artisanal",
+        "shameable": false,
+        "wordCount": 40,
+        "signals": []
+      }
+    },
+    {
+      "id": "normal-emoji",
+      "authorship": "human",
+      "before": {
+        "score": 0,
+        "tier": "artisanal",
+        "shameable": false,
+        "wordCount": 40,
+        "signals": []
+      },
+      "after": {
+        "score": 0,
+        "tier": "artisanal",
+        "shameable": false,
+        "wordCount": 40,
+        "signals": []
+      }
+    },
+    {
+      "id": "normal-terms",
+      "authorship": "human",
+      "before": {
+        "score": 5,
+        "tier": "artisanal",
+        "shameable": false,
+        "wordCount": 44,
+        "signals": [
+          {
+            "ruleId": "ai-vocabulary.tier1-common",
+            "weight": 1.5438077407660544,
+            "matches": [
+              "leverage"
+            ]
+          }
+        ]
+      },
+      "after": {
+        "score": 5,
+        "tier": "artisanal",
+        "shameable": false,
+        "wordCount": 44,
+        "signals": [
+          {
+            "ruleId": "ai-vocabulary.tier1-common",
+            "weight": 1.5438077407660544,
+            "matches": [
+              "leverage"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "normal-plain-promotion",
+      "authorship": "human",
+      "before": {
+        "score": 0,
+        "tier": "artisanal",
+        "shameable": false,
+        "wordCount": 45,
+        "signals": []
+      },
+      "after": {
+        "score": 0,
+        "tier": "artisanal",
+        "shameable": false,
+        "wordCount": 45,
+        "signals": []
+      }
+    },
+    {
+      "id": "normal-story-child",
+      "authorship": "human",
+      "before": {
+        "score": 0,
+        "tier": "artisanal",
+        "shameable": false,
+        "wordCount": 41,
+        "signals": []
+      },
+      "after": {
+        "score": 0,
+        "tier": "artisanal",
+        "shameable": false,
+        "wordCount": 41,
+        "signals": []
+      }
+    },
+    {
+      "id": "normal-headline",
+      "authorship": "human",
+      "before": {
+        "score": 0,
+        "tier": "artisanal",
+        "shameable": false,
+        "wordCount": 40,
+        "signals": []
+      },
+      "after": {
+        "score": 0,
+        "tier": "artisanal",
+        "shameable": false,
+        "wordCount": 40,
+        "signals": []
+      }
+    },
+    {
+      "id": "normal-short",
+      "authorship": "human",
+      "before": {
+        "score": 0,
+        "tier": "artisanal",
+        "shameable": false,
+        "wordCount": 7,
+        "signals": []
+      },
+      "after": {
+        "score": 0,
+        "tier": "artisanal",
+        "shameable": false,
+        "wordCount": 7,
+        "signals": []
+      }
+    },
+    {
+      "id": "normal-empty",
+      "authorship": "human",
+      "before": {
+        "score": 0,
+        "tier": "artisanal",
+        "shameable": false,
+        "wordCount": 0,
+        "signals": []
+      },
+      "after": {
+        "score": 0,
+        "tier": "artisanal",
+        "shameable": false,
+        "wordCount": 0,
+        "signals": []
+      }
+    },
+    {
+      "id": "human-formal-non-native",
+      "authorship": "human",
+      "before": {
+        "score": 0,
+        "tier": "artisanal",
+        "shameable": false,
+        "wordCount": 83,
+        "signals": []
+      },
+      "after": {
+        "score": 0,
+        "tier": "artisanal",
+        "shameable": false,
+        "wordCount": 83,
+        "signals": []
+      }
+    },
+    {
+      "id": "human-casual-dashes",
+      "authorship": "human",
+      "before": {
+        "score": 0,
+        "tier": "artisanal",
+        "shameable": false,
+        "wordCount": 57,
+        "signals": []
+      },
+      "after": {
+        "score": 0,
+        "tier": "artisanal",
+        "shameable": false,
+        "wordCount": 57,
+        "signals": []
+      }
+    },
+    {
+      "id": "human-broetry",
+      "authorship": "human",
+      "before": {
+        "score": 0,
+        "tier": "artisanal",
+        "shameable": false,
+        "wordCount": 49,
+        "signals": []
+      },
+      "after": {
+        "score": 0,
+        "tier": "artisanal",
+        "shameable": false,
+        "wordCount": 49,
+        "signals": []
+      }
+    },
+    {
+      "id": "human-typos",
+      "authorship": "human",
+      "before": {
+        "score": 0,
+        "tier": "artisanal",
+        "shameable": false,
+        "wordCount": 45,
+        "signals": []
+      },
+      "after": {
+        "score": 0,
+        "tier": "artisanal",
+        "shameable": false,
+        "wordCount": 45,
+        "signals": []
+      }
+    },
+    {
+      "id": "human-ai-engineer",
+      "authorship": "human",
+      "before": {
+        "score": 0,
+        "tier": "artisanal",
+        "shameable": false,
+        "wordCount": 50,
+        "signals": []
+      },
+      "after": {
+        "score": 0,
+        "tier": "artisanal",
+        "shameable": false,
+        "wordCount": 50,
+        "signals": []
+      }
+    },
+    {
+      "id": "human-share-certainly",
+      "authorship": "human",
+      "before": {
+        "score": 0,
+        "tier": "artisanal",
+        "shameable": false,
+        "wordCount": 47,
+        "signals": []
+      },
+      "after": {
+        "score": 0,
+        "tier": "artisanal",
+        "shameable": false,
+        "wordCount": 47,
+        "signals": []
+      }
+    },
+    {
+      "id": "human-weaver",
+      "authorship": "human",
+      "before": {
+        "score": 11,
+        "tier": "artisanal",
+        "shameable": false,
+        "wordCount": 49,
+        "signals": [
+          {
+            "ruleId": "ai-vocabulary.tier1",
+            "weight": 3.6804080208620995,
+            "matches": [
+              "tapestry"
+            ]
+          }
+        ]
+      },
+      "after": {
+        "score": 11,
+        "tier": "artisanal",
+        "shameable": false,
+        "wordCount": 49,
+        "signals": [
+          {
+            "ruleId": "ai-vocabulary.tier1",
+            "weight": 3.6804080208620995,
+            "matches": [
+              "tapestry"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "human-formal-engineering",
+      "authorship": "human",
+      "before": {
+        "score": 8,
+        "tier": "artisanal",
+        "shameable": false,
+        "wordCount": 60,
+        "signals": [
+          {
+            "ruleId": "ai-vocabulary.tier1-common",
+            "weight": 2.7912318895144654,
+            "matches": [
+              "comprehensive",
+              "robust"
+            ]
+          }
+        ]
+      },
+      "after": {
+        "score": 8,
+        "tier": "artisanal",
+        "shameable": false,
+        "wordCount": 60,
+        "signals": [
+          {
+            "ruleId": "ai-vocabulary.tier1-common",
+            "weight": 2.7912318895144654,
+            "matches": [
+              "comprehensive",
+              "robust"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "human-negation-literal",
+      "authorship": "human",
+      "before": {
+        "score": 9,
+        "tier": "artisanal",
+        "shameable": false,
+        "wordCount": 61,
+        "signals": [
+          {
+            "ruleId": "negation-pivot.not-only",
+            "weight": 3.0492204038736728,
+            "matches": [
+              "not only the retry timer but also the queue cleanup task"
+            ]
+          }
+        ]
+      },
+      "after": {
+        "score": 9,
+        "tier": "artisanal",
+        "shameable": false,
+        "wordCount": 61,
+        "signals": [
+          {
+            "ruleId": "negation-pivot.not-only",
+            "weight": 3.0492204038736728,
+            "matches": [
+              "not only the retry timer but also the queue cleanup task"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "human-emoji-checklist",
+      "authorship": "human",
+      "before": {
+        "score": 15,
+        "tier": "artisanal",
+        "shameable": false,
+        "wordCount": 54,
+        "signals": [
+          {
+            "ruleId": "formatting.emoji-bullets",
+            "weight": 5.17635026854222,
+            "matches": [
+              "✅ Hard hat and boots.",
+              "✅ Printed wiring diagram.",
+              "✅ Spare batteries for the meter."
+            ]
+          }
+        ]
+      },
+      "after": {
+        "score": 15,
+        "tier": "artisanal",
+        "shameable": false,
+        "wordCount": 54,
+        "signals": [
+          {
+            "ruleId": "formatting.emoji-bullets",
+            "weight": 5.17635026854222,
+            "matches": [
+              "✅ Hard hat and boots.",
+              "✅ Printed wiring diagram.",
+              "✅ Spare batteries for the meter."
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "human-maths-bold",
+      "authorship": "human",
+      "before": {
+        "score": 11,
+        "tier": "artisanal",
+        "shameable": false,
+        "wordCount": 54,
+        "signals": [
+          {
+            "ruleId": "formatting.unicode-bold",
+            "weight": 3.8199162143007417,
+            "matches": [
+              "𝗔",
+              "𝗾𝘂𝗶𝗰𝗸",
+              "𝗿𝗲𝗺𝗶𝗻𝗱𝗲𝗿"
+            ]
+          }
+        ]
+      },
+      "after": {
+        "score": 11,
+        "tier": "artisanal",
+        "shameable": false,
+        "wordCount": 54,
+        "signals": [
+          {
+            "ruleId": "formatting.unicode-bold",
+            "weight": 3.8199162143007417,
+            "matches": [
+              "𝗔",
+              "𝗾𝘂𝗶𝗰𝗸",
+              "𝗿𝗲𝗺𝗶𝗻𝗱𝗲𝗿"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "human-careful-hedge",
+      "authorship": "human",
+      "before": {
+        "score": 14,
+        "tier": "artisanal",
+        "shameable": false,
+        "wordCount": 55,
+        "signals": [
+          {
+            "ruleId": "hedging.stack",
+            "weight": 4.793081976235557,
+            "matches": [
+              "could potentially"
+            ]
+          }
+        ]
+      },
+      "after": {
+        "score": 14,
+        "tier": "artisanal",
+        "shameable": false,
+        "wordCount": 55,
+        "signals": [
+          {
+            "ruleId": "hedging.stack",
+            "weight": 4.793081976235557,
+            "matches": [
+              "could potentially"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "human-russian-mixed-slang",
+      "authorship": "human",
+      "before": {
+        "score": 0,
+        "tier": "artisanal",
+        "shameable": false,
+        "wordCount": 47,
+        "signals": []
+      },
+      "after": {
+        "score": 0,
+        "tier": "artisanal",
+        "shameable": false,
+        "wordCount": 47,
+        "signals": []
+      }
+    },
+    {
+      "id": "human-editor-note",
+      "authorship": "human",
+      "before": {
+        "score": 12,
+        "tier": "artisanal",
+        "shameable": false,
+        "wordCount": 49,
+        "signals": [
+          {
+            "ruleId": "chatbot-leak.editor-note",
+            "weight": 4,
+            "matches": [
+              "[insert link in comments]"
+            ]
+          }
+        ]
+      },
+      "after": {
+        "score": 12,
+        "tier": "artisanal",
+        "shameable": false,
+        "wordCount": 49,
+        "signals": [
+          {
+            "ruleId": "chatbot-leak.editor-note",
+            "weight": 4,
+            "matches": [
+              "[insert link in comments]"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "human-code-any",
+      "authorship": "human",
+      "before": {
+        "score": 0,
+        "tier": "artisanal",
+        "shameable": false,
+        "wordCount": 55,
+        "signals": []
+      },
+      "after": {
+        "score": 0,
+        "tier": "artisanal",
+        "shameable": false,
+        "wordCount": 55,
+        "signals": []
+      }
+    },
+    {
+      "id": "human-survey-title",
+      "authorship": "human",
+      "before": {
+        "score": 0,
+        "tier": "artisanal",
+        "shameable": false,
+        "wordCount": 64,
+        "signals": []
+      },
+      "after": {
+        "score": 0,
+        "tier": "artisanal",
+        "shameable": false,
+        "wordCount": 64,
+        "signals": []
+      }
+    },
+    {
+      "id": "mixed-launch",
+      "authorship": "mixed",
+      "before": {
+        "score": 28,
+        "tier": "whiff",
+        "shameable": false,
+        "wordCount": 62,
+        "signals": [
+          {
+            "ruleId": "ai-vocabulary.collocations",
+            "weight": 5.950642002777421,
+            "matches": [
+              "rich tapestry",
+              "testament to"
+            ]
+          },
+          {
+            "ruleId": "ai-vocabulary.tier1",
+            "weight": 3.1558044844330597,
+            "matches": [
+              "tapestry"
+            ]
+          },
+          {
+            "ruleId": "ai-vocabulary.tier1-common",
+            "weight": 1.2623217937732238,
+            "matches": [
+              "seamless"
+            ]
+          }
+        ]
+      },
+      "after": {
+        "score": 28,
+        "tier": "whiff",
+        "shameable": false,
+        "wordCount": 62,
+        "signals": [
+          {
+            "ruleId": "ai-vocabulary.collocations",
+            "weight": 5.950642002777421,
+            "matches": [
+              "rich tapestry",
+              "testament to"
+            ]
+          },
+          {
+            "ruleId": "ai-vocabulary.tier1",
+            "weight": 3.1558044844330597,
+            "matches": [
+              "tapestry"
+            ]
+          },
+          {
+            "ruleId": "ai-vocabulary.tier1-common",
+            "weight": 1.2623217937732238,
+            "matches": [
+              "seamless"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "mixed-meetup",
+      "authorship": "mixed",
+      "before": {
+        "score": 27,
+        "tier": "whiff",
+        "shameable": false,
+        "wordCount": 53,
+        "signals": [
+          {
+            "ruleId": "ai-vocabulary.collocations",
+            "weight": 4.356183224552433,
+            "matches": [
+              "testament to"
+            ]
+          },
+          {
+            "ruleId": "inflation.significance",
+            "weight": 4.356183224552433,
+            "matches": [
+              "transformative potential"
+            ]
+          },
+          {
+            "ruleId": "ai-vocabulary.tier1-common",
+            "weight": 1.3068549673657301,
+            "matches": [
+              "pivotal"
+            ]
+          }
+        ]
+      },
+      "after": {
+        "score": 27,
+        "tier": "whiff",
+        "shameable": false,
+        "wordCount": 53,
+        "signals": [
+          {
+            "ruleId": "ai-vocabulary.collocations",
+            "weight": 4.356183224552433,
+            "matches": [
+              "testament to"
+            ]
+          },
+          {
+            "ruleId": "inflation.significance",
+            "weight": 4.356183224552433,
+            "matches": [
+              "transformative potential"
+            ]
+          },
+          {
+            "ruleId": "ai-vocabulary.tier1-common",
+            "weight": 1.3068549673657301,
+            "matches": [
+              "pivotal"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "mixed-hiring",
+      "authorship": "mixed",
+      "before": {
+        "score": 17,
+        "tier": "artisanal",
+        "shameable": false,
+        "wordCount": 54,
+        "signals": [
+          {
+            "ruleId": "ai-vocabulary.collocations",
+            "weight": 4.670986292159451,
+            "matches": [
+              "navigating the landscape"
+            ]
+          },
+          {
+            "ruleId": "ai-vocabulary.tier1-common",
+            "weight": 1.4012958876478354,
+            "matches": [
+              "seamless"
+            ]
+          }
+        ]
+      },
+      "after": {
+        "score": 17,
+        "tier": "artisanal",
+        "shameable": false,
+        "wordCount": 54,
+        "signals": [
+          {
+            "ruleId": "ai-vocabulary.collocations",
+            "weight": 4.670986292159451,
+            "matches": [
+              "navigating the landscape"
+            ]
+          },
+          {
+            "ruleId": "ai-vocabulary.tier1-common",
+            "weight": 1.4012958876478354,
+            "matches": [
+              "seamless"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "mixed-edit",
+      "authorship": "mixed",
+      "before": {
+        "score": 26,
+        "tier": "whiff",
+        "shameable": false,
+        "wordCount": 52,
+        "signals": [
+          {
+            "ruleId": "ai-vocabulary.collocations",
+            "weight": 6.211245428429716,
+            "matches": [
+              "harness the power",
+              "rich tapestry"
+            ]
+          },
+          {
+            "ruleId": "ai-vocabulary.tier1",
+            "weight": 3.2940103215424457,
+            "matches": [
+              "tapestry"
+            ]
+          }
+        ]
+      },
+      "after": {
+        "score": 33,
+        "tier": "whiff",
+        "shameable": false,
+        "wordCount": 52,
+        "signals": [
+          {
+            "ruleId": "ai-vocabulary.collocations",
+            "weight": 6.211245428429716,
+            "matches": [
+              "harness the power",
+              "rich tapestry"
+            ]
+          },
+          {
+            "ruleId": "ai-vocabulary.tier1",
+            "weight": 3.2940103215424457,
+            "matches": [
+              "tapestry"
+            ]
+          },
+          {
+            "ruleId": "robotic-rhythm.rule-of-three",
+            "weight": 3.0902040104310498,
+            "matches": [
+              "We actually joined two CSV files, found duplicate accounts, and emailed the owners."
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "mixed-report",
+      "authorship": "mixed",
+      "before": {
+        "score": 26,
+        "tier": "whiff",
+        "shameable": false,
+        "wordCount": 54,
+        "signals": [
+          {
+            "ruleId": "ai-vocabulary.collocations",
+            "weight": 4.151613246308614,
+            "matches": [
+              "testament to"
+            ]
+          },
+          {
+            "ruleId": "inflation.significance",
+            "weight": 4.151613246308614,
+            "matches": [
+              "transformative potential"
+            ]
+          },
+          {
+            "ruleId": "ai-vocabulary.tier1-common",
+            "weight": 1.245483973892584,
+            "matches": [
+              "holistic"
+            ]
+          }
+        ]
+      },
+      "after": {
+        "score": 26,
+        "tier": "whiff",
+        "shameable": false,
+        "wordCount": 54,
+        "signals": [
+          {
+            "ruleId": "ai-vocabulary.collocations",
+            "weight": 4.151613246308614,
+            "matches": [
+              "testament to"
+            ]
+          },
+          {
+            "ruleId": "inflation.significance",
+            "weight": 4.151613246308614,
+            "matches": [
+              "transformative potential"
+            ]
+          },
+          {
+            "ruleId": "ai-vocabulary.tier1-common",
+            "weight": 1.245483973892584,
+            "matches": [
+              "holistic"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "mixed-course",
+      "authorship": "mixed",
+      "before": {
+        "score": 31,
+        "tier": "whiff",
+        "shameable": false,
+        "wordCount": 50,
+        "signals": [
+          {
+            "ruleId": "ai-vocabulary.tier1",
+            "weight": 6.358617074831555,
+            "matches": [
+              "delve",
+              "tapestry"
+            ]
+          },
+          {
+            "ruleId": "ai-vocabulary.collocations",
+            "weight": 4.239078049887703,
+            "matches": [
+              "rich tapestry"
+            ]
+          },
+          {
+            "ruleId": "ai-vocabulary.tier1-common",
+            "weight": 1.271723414966311,
+            "matches": [
+              "seamless"
+            ]
+          }
+        ]
+      },
+      "after": {
+        "score": 31,
+        "tier": "whiff",
+        "shameable": false,
+        "wordCount": 50,
+        "signals": [
+          {
+            "ruleId": "ai-vocabulary.tier1",
+            "weight": 6.358617074831555,
+            "matches": [
+              "delve",
+              "tapestry"
+            ]
+          },
+          {
+            "ruleId": "ai-vocabulary.collocations",
+            "weight": 4.239078049887703,
+            "matches": [
+              "rich tapestry"
+            ]
+          },
+          {
+            "ruleId": "ai-vocabulary.tier1-common",
+            "weight": 1.271723414966311,
+            "matches": [
+              "seamless"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "mixed-clean-edit",
+      "authorship": "mixed",
+      "before": {
+        "score": 0,
+        "tier": "artisanal",
+        "shameable": false,
+        "wordCount": 49,
+        "signals": []
+      },
+      "after": {
+        "score": 0,
+        "tier": "artisanal",
+        "shameable": false,
+        "wordCount": 49,
+        "signals": []
+      }
+    },
+    {
+      "id": "mixed-technical",
+      "authorship": "mixed",
+      "before": {
+        "score": 38,
+        "tier": "whiff",
+        "shameable": false,
+        "wordCount": 54,
+        "signals": [
+          {
+            "ruleId": "hedging.stack",
+            "weight": 4.533450089758809,
+            "matches": [
+              "could potentially"
+            ]
+          },
+          {
+            "ruleId": "template-phrases.filler",
+            "weight": 3.400087567319107,
+            "matches": [
+              "It is important to note that"
+            ]
+          },
+          {
+            "ruleId": "template-phrases.template",
+            "weight": 3.400087567319107,
+            "matches": [
+              "a significant step forward"
+            ]
+          },
+          {
+            "ruleId": "template-phrases.boilerplate",
+            "weight": 2.2667250448794043,
+            "matches": [
+              "the integration of"
+            ]
+          },
+          {
+            "ruleId": "template-phrases.transition",
+            "weight": 1.7000437836595534,
+            "matches": [
+              "Moreover"
+            ]
+          }
+        ]
+      },
+      "after": {
+        "score": 38,
+        "tier": "whiff",
+        "shameable": false,
+        "wordCount": 54,
+        "signals": [
+          {
+            "ruleId": "hedging.stack",
+            "weight": 4.533450089758809,
+            "matches": [
+              "could potentially"
+            ]
+          },
+          {
+            "ruleId": "template-phrases.filler",
+            "weight": 3.400087567319107,
+            "matches": [
+              "It is important to note that"
+            ]
+          },
+          {
+            "ruleId": "template-phrases.template",
+            "weight": 3.400087567319107,
+            "matches": [
+              "a significant step forward"
+            ]
+          },
+          {
+            "ruleId": "template-phrases.boilerplate",
+            "weight": 2.2667250448794043,
+            "matches": [
+              "the integration of"
+            ]
+          },
+          {
+            "ruleId": "template-phrases.transition",
+            "weight": 1.7000437836595534,
+            "matches": [
+              "Moreover"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "probe-textbook-ai",
+      "authorship": "ai",
+      "before": {
+        "score": 23,
+        "tier": "whiff",
+        "shameable": false,
+        "wordCount": 65,
+        "signals": [
+          {
+            "ruleId": "template-phrases.filler",
+            "weight": 5.66463618948426,
+            "matches": [
+              "Here's the thing",
+              "Let that sink in"
+            ]
+          },
+          {
+            "ruleId": "ai-vocabulary.tier1",
+            "weight": 2.83231809474213,
+            "matches": [
+              "ever-evolving"
+            ]
+          }
+        ]
+      },
+      "after": {
+        "score": 74,
+        "tier": "swamp",
+        "shameable": true,
+        "wordCount": 65,
+        "signals": [
+          {
+            "ruleId": "template-phrases.filler",
+            "weight": 5.523406434867776,
+            "matches": [
+              "Here's the thing",
+              "Let that sink in"
+            ]
+          },
+          {
+            "ruleId": "negation-pivot.not-x-but-y",
+            "weight": 4.235294117647059,
+            "matches": [
+              "isn't about having all the answers — it's about asking the right questions"
+            ]
+          },
+          {
+            "ruleId": "ai-vocabulary.collocations",
+            "weight": 3.682270956578517,
+            "matches": [
+              "navigate the ever-evolving landscape"
+            ]
+          },
+          {
+            "ruleId": "engagement-bait.formulaic-opener",
+            "weight": 3.5294117647058822,
+            "matches": [
+              "\n\nIn today's fast-paced world"
+            ]
+          },
+          {
+            "ruleId": "ai-vocabulary.tier1",
+            "weight": 2.761703217433888,
+            "matches": [
+              "ever-evolving"
+            ]
+          },
+          {
+            "ruleId": "engagement-bait.social-closer",
+            "weight": 2.1176470588235294,
+            "matches": [
+              "Agree? 👇"
+            ]
+          },
+          {
+            "ruleId": "robotic-rhythm.rule-of-three",
+            "weight": 2.1176470588235294,
+            "matches": [
+              "In today's fast-paced world, we must navigate the ever-evolving landscape of work with empathy, resilience, and purpose."
+            ]
+          },
+          {
+            "ruleId": "formatting.hashtag-stuff",
+            "weight": 1.6644476226509655,
+            "matches": [
+              "#leadership",
+              "#growth",
+              "#mindset"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "probe-chatbot-launch",
+      "authorship": "ai",
+      "before": {
+        "score": 36,
+        "tier": "whiff",
+        "shameable": false,
+        "wordCount": 37,
+        "signals": [
+          {
+            "ruleId": "chatbot-leak.greeting",
+            "weight": 7,
+            "matches": [
+              "Certainly!"
+            ]
+          },
+          {
+            "ruleId": "ai-vocabulary.collocations",
+            "weight": 4.873436474120571,
+            "matches": [
+              "testament to"
+            ]
+          },
+          {
+            "ruleId": "inflation.promotional",
+            "weight": 2.4367182370602856,
+            "matches": [
+              "game-changing"
+            ]
+          }
+        ]
+      },
+      "after": {
+        "score": 100,
+        "tier": "slopocalypse",
+        "shameable": true,
+        "wordCount": 37,
+        "signals": [
+          {
+            "ruleId": "chatbot-leak.assistant-preamble",
+            "weight": 14,
+            "matches": [
+              " Here's a LinkedIn post about"
+            ]
+          },
+          {
+            "ruleId": "chatbot-leak.greeting",
+            "weight": 12,
+            "matches": [
+              "Certainly!"
+            ]
+          },
+          {
+            "ruleId": "chatbot-leak.placeholder",
+            "weight": 12,
+            "matches": [
+              "[Product Name]"
+            ]
+          },
+          {
+            "ruleId": "ai-vocabulary.collocations",
+            "weight": 6.7723381570402195,
+            "matches": [
+              "unlock their full potential",
+              "testament to"
+            ]
+          },
+          {
+            "ruleId": "inflation.promotional",
+            "weight": 2.3943831176657726,
+            "matches": [
+              "game-changing"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "probe-subtle-modern",
+      "authorship": "ai",
+      "before": {
+        "score": 4,
+        "tier": "artisanal",
+        "shameable": false,
+        "wordCount": 27,
+        "signals": [
+          {
+            "ruleId": "inflation.hollow",
+            "weight": 1.2938881586614912,
+            "matches": [
+              "genuinely"
+            ]
+          }
+        ]
+      },
+      "after": {
+        "score": 4,
+        "tier": "artisanal",
+        "shameable": false,
+        "wordCount": 27,
+        "signals": [
+          {
+            "ruleId": "inflation.hollow",
+            "weight": 1.2938881586614912,
+            "matches": [
+              "genuinely"
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "groups": [
+    {
+      "group": "human",
+      "posts": 36,
+      "beforeMean": 2.36,
+      "afterMean": 2.36,
+      "beforeAt60": 0,
+      "afterAt60": 0,
+      "beforeShameable": 0,
+      "afterShameable": 0
+    },
+    {
+      "group": "mixed",
+      "posts": 8,
+      "beforeMean": 24.13,
+      "afterMean": 25,
+      "beforeAt60": 0,
+      "afterAt60": 0,
+      "beforeShameable": 0,
+      "afterShameable": 0
+    },
+    {
+      "group": "original-ai",
+      "posts": 16,
+      "beforeMean": 66.38,
+      "afterMean": 74.44,
+      "beforeAt60": 12,
+      "afterAt60": 14,
+      "beforeShameable": 16,
+      "afterShameable": 16
+    },
+    {
+      "group": "blind-ai",
+      "posts": 20,
+      "beforeMean": 1.5,
+      "afterMean": 1.4,
+      "beforeAt60": 0,
+      "afterAt60": 0,
+      "beforeShameable": 0,
+      "afterShameable": 0
+    },
+    {
+      "group": "probes",
+      "posts": 3,
+      "beforeMean": 21,
+      "afterMean": 59.33,
+      "beforeAt60": 0,
+      "afterAt60": 2,
+      "beforeShameable": 0,
+      "afterShameable": 2
+    }
+  ]
+}

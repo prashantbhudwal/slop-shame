@@ -6,6 +6,19 @@ pnpm test:e2e --project=fixture-feed  # only the three synthetic feeds
 SLOP_HEADED=1 pnpm test:e2e --project=fixture-feed
 ```
 
+`test:e2e` builds with `SLOP_E2E=1`. Only these test builds expose open shadow
+roots for Playwright locators and the `slop-shame:debug` object-count hook.
+For a separate build/run, use `SLOP_E2E=1 pnpm build` then
+`pnpm exec playwright test --project=ui --project=fixture-feed`.
+Plain `pnpm build` and `pnpm zip` use closed roots and omit the debug hook.
+Rebuild without the flag after testing before loading or distributing a release.
+To verify closed roots and the absent debug hook on that release build, run:
+
+```sh
+pnpm build
+SLOP_PRODUCTION=1 pnpm exec playwright test --project=ui --grep 'production build hides roots'
+```
+
 `helpers.ts` exports `test`, `expect`, `launchWithExtension(options)`,
 `openFixtureFeed(page, 'sdui' | 'classic' | 'hashed')`, and
 `waitForContentScript(page, extensionId)`. The extended `test` provides a fresh
@@ -20,7 +33,17 @@ on the current live feed. It includes `feed-full-update` wrappers, expanded/focu
 component keys, an initial lazy list plus later sibling batches, social headers,
 duplicate actor anchors, unnamed headline paragraphs, inline commentary links,
 clipped full text, and separate comment tools. `classic.html` and `hashed.html`
-exercise older markup and structural fallbacks. Every fixture has 12 posts.
+exercise older markup and structural fallbacks. Each of these three has 12 posts.
+
+`activity.html` is a synthetic activity page (`/in/jane-doe/recent-activity/all/`)
+in the structure captured from the live SDUI page: a left `Sidebar` profile card
+(cover, round photo, name) whose block is sticky inside the `<main>` scroller,
+nine `CREATOR_PROFILE` posts without `data-view-name` hooks (one a bare repost of
+another author, one too short to judge) and a right `Aside`. The `profile`
+project (`profile.spec.ts`) swaps corpus samples into its posts and checks the
+profile summary: placement above the photo, own-post filtering, small-sample
+wording, stickiness, SPA navigation, card re-render and cleanup. Screenshots go
+to `test-results/ui-profile-summary/`.
 
 The real project is opt-in and uses the owner's existing login:
 

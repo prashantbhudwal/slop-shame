@@ -1,0 +1,24 @@
+import {resolve} from 'node:path';
+import {performance} from 'node:perf_hooks';
+import {CACHE,ROOT,OUT,loader,jsonl,save}from'./common.mjs';
+const inputs=[];let human=0,ai=0;
+for await(const r of jsonl(resolve(ROOT,'data/eval/raw/hillclimb/dev.jsonl'))) {
+ if(r.family==='base'||(r.label==='human'?human>=100:ai>=100))continue;
+ const words=r.text.trim().split(/\s+/u);if(words.length<300)continue;
+ inputs.push({text:words.slice(0,300).join(' ')});if(r.label==='human')human++;else ai++;
+ if(human===100&&ai===100)break;
+}
+const s=await loader();const results={node:process.version,words:300,gcAvailable:!!global.gc};
+try {
+ for(const [name,path]of [['baseline',resolve(CACHE,'engine-base')],['final',resolve(ROOT,'src/lib/engine')]]) {
+  const e=await s.load(resolve(path,'index.ts')),{packs}=await s.load(resolve(path,'packs/index.ts'));
+  const create=[];for(let i=0;i<40;i++){const t=performance.now();e.createEngine(packs);create.push(performance.now()-t);}
+  for(let i=0;i<2500;i++)e.analyzePost(inputs[i%inputs.length]);global.gc?.();
+  const times=[],medians=[];
+  for(const input of inputs){const trials=[];for(let i=0;i<5;i++){const t=performance.now();e.analyzePost(input);trials.push(performance.now()-t);}times.push(...trials);trials.sort((a,b)=>a-b);medians.push(trials[2]);}
+  times.sort((a,b)=>a-b);
+  results[name]={samples:inputs.length,calls:times.length,meanMs:times.reduce((a,b)=>a+b,0)/times.length,worstMs:times.at(-1),worstPerInputMedianMs:Math.max(...medians),p95Ms:times[Math.floor(times.length*.95)],createMeanMs:create.reduce((a,b)=>a+b,0)/create.length,createWorstMs:Math.max(...create)};
+ }
+ results.pass=results.final.meanMs<.5&&results.final.worstMs<1&&results.final.createWorstMs<30;
+ save(resolve(OUT,'performance.json'),results);console.log(results);
+}finally{await s.close();}

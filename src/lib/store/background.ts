@@ -3,7 +3,8 @@ import { getAuthor, getLeaderboard } from './query';
 import type { PageMessage } from './model';
 import type { StoreMessage } from './types';
 import type { StoreErrorReply } from './transport';
-import { validateAction } from './validation';
+import { validId, validateAction } from './validation';
+import { MAX_BATCH_SIZE, MAX_JSON_LENGTH } from './limits';
 
 /** One listener per service-worker lifetime. All durable state lives in IDB. */
 export function registerStoreHandlers(): void {
@@ -48,23 +49,24 @@ export function registerStoreHandlers(): void {
       case 'store/sightings':
         if (!Array.isArray(msg.sightings)) return rejected('Invalid sightings batch');
         if (msg.actions !== undefined && !Array.isArray(msg.actions)) return rejected('Invalid actions batch');
+        if (msg.sightings.length > MAX_BATCH_SIZE || (msg.actions?.length ?? 0) > MAX_BATCH_SIZE) return rejected('Store batch exceeds size limit');
         try { msg.actions?.forEach(validateAction); } catch { return rejected('Invalid store action'); }
-        return respond(recordBatch(msg.sightings, msg.actions).then(({ wrote, pendingActions }) => {
+        return respond(recordBatch(msg.sightings, msg.actions).then(({ wrote, pendingActions, rejectedActions }) => {
           if (wrote) changed();
-          return { ok: true, pendingActions };
+          return { ok: true, pendingActions, rejectedActions };
         }));
       case 'store/action':
         try { validateAction(msg); } catch { return rejected('Invalid action'); }
         return respond(recordBatch([], [{ postId: msg.postId, authorId: msg.authorId, action: msg.action }])
-          .then(({ wrote, pendingActions }) => {
+          .then(({ wrote, pendingActions, rejectedActions }) => {
             if (wrote) changed();
-            return { ok: true, pendingActions };
+            return { ok: true, pendingActions, rejectedActions };
           }));
       case 'store/author':
-        if (typeof msg.authorId !== 'string') return rejected('Invalid author identity');
+        if (!validId(msg.authorId)) return rejected('Invalid author identity');
         return respond(getAuthor(msg.authorId));
       case 'store/leaderboard':
-        if (typeof msg.limit !== 'number') return rejected('Invalid leaderboard limit');
+        if (!Number.isSafeInteger(msg.limit) || msg.limit < 0 || msg.limit > 1000) return rejected('Invalid leaderboard limit');
         return respond(getLeaderboard(msg.limit));
       case 'store/import':
       case 'store/clear': {
@@ -72,6 +74,7 @@ export function registerStoreHandlers(): void {
         // page may replace or clear the complete snapshot.
         if (!sender.url?.startsWith(browser.runtime.getURL('/'))) return rejected('Store management requires an extension page');
         if (msg.type === 'store/import' && typeof msg.json !== 'string') return rejected('Invalid import JSON');
+        if (msg.type === 'store/import' && msg.json.length > MAX_JSON_LENGTH) return rejected('Import JSON exceeds size limit');
         return respond((msg.type === 'store/import' ? importSnapshot(msg.json) : clearStore()).then(() => {
           changed();
           void resetClients().catch(() => {});

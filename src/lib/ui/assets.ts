@@ -30,12 +30,17 @@ export interface TierLook {
   wobble: boolean;
 }
 
+/**
+ * Tier colors avoid traffic-light meaning: green reads "passed", red reads
+ * "error". Slop gets a violet → magenta ramp instead: rubber-stamp ink, and
+ * the color AI products wear. Intensity rises with the tier.
+ */
 export const TIER_LOOK: Readonly<Record<SlopTierId, TierLook>> = {
-  artisanal: { emoji: '🧡', color: '#C9874A', ink: '#1B1F3B', wobble: false },
-  whiff: { emoji: '☕', color: '#A9B84A', ink: '#1B1F3B', wobble: false },
-  certified: { emoji: '🏅', color: '#7ED321', ink: '#1B1F3B', wobble: false },
-  swamp: { emoji: '🐊', color: '#2FA84F', ink: '#FFFFFF', wobble: true },
-  slopocalypse: { emoji: '☢️', color: '#FF5A1F', ink: '#FFFFFF', wobble: true },
+  artisanal: { emoji: '🧡', color: '#9AA0A6', ink: '#1B1F3B', wobble: false },
+  whiff: { emoji: '☕', color: '#C4B5FD', ink: '#1B1F3B', wobble: false },
+  certified: { emoji: '🏅', color: '#8B5CF6', ink: '#FFFFFF', wobble: false },
+  swamp: { emoji: '🐊', color: '#6D28D9', ink: '#FFFFFF', wobble: true },
+  slopocalypse: { emoji: '☢️', color: '#C026D3', ink: '#FFFFFF', wobble: true },
 };
 
 export const tierIcon = (id: SlopTierId) => asset(`/assets/tiers/${id}.webp`);

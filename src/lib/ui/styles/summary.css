@@ -1,0 +1,103 @@
+/* A profile's slop summary (ProfileSummary.svelte), the first thing in their
+   profile card on their activity page. Lives in its own shadow root. The card
+   clips and rounds it; it brings its own tint and a hairline to the cover. */
+:host {
+  all: initial;
+  display: block;
+  contain: style;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-size: 12px;
+  line-height: 1.35;
+  color: var(--ss-text);
+  -webkit-font-smoothing: antialiased;
+  text-align: left;
+  white-space: normal;
+}
+*, *::before, *::after { box-sizing: border-box; }
+p { margin: 0; }
+img { display: block; user-select: none; -webkit-user-drag: none; }
+.emoji { display: inline-grid; place-items: center; flex: none; line-height: 1; }
+
+.summary {
+  display: grid;
+  gap: 6px;
+  padding: 10px 12px 9px;
+  background: color-mix(in srgb, var(--tier) 14%, var(--ss-surface));
+  border-bottom: 1px solid color-mix(in srgb, var(--tier) 40%, var(--ss-line-soft));
+  transition: background-color 0.4s ease-out, border-color 0.4s ease-out;
+  cursor: default;
+}
+
+/* Headline: tier art (the mascot until there's a verdict), the number, the verdict. */
+.top { display: flex; align-items: center; gap: 8px; min-width: 0; }
+.art { width: 44px; height: 44px; flex: none; filter: drop-shadow(0 1px 1px rgba(0, 0, 0, 0.18)); }
+.head { display: grid; gap: 3px; min-width: 0; }
+.big { display: flex; align-items: baseline; gap: 5px; min-width: 0; white-space: nowrap; }
+.big b {
+  font-size: 23px;
+  font-weight: 900;
+  line-height: 1;
+  letter-spacing: -0.01em;
+  font-variant-numeric: tabular-nums;
+  color: color-mix(in srgb, var(--tier) 72%, var(--ss-text));
+}
+.big span { font-size: 12.5px; font-weight: 700; overflow: hidden; text-overflow: ellipsis; }
+.verdict {
+  font-size: 9.5px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ss-muted);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* One segment per checked post, slop in its tier's color; grouped when dense. */
+.strip {
+  display: flex;
+  gap: 2px;
+  height: 7px;
+  border-radius: 999px;
+  overflow: hidden;
+  background: color-mix(in srgb, var(--ss-muted) 16%, transparent);
+}
+.strip.dense { gap: 0; }
+.seg { display: block; flex: 1 1 0; min-width: 1px; background: color-mix(in srgb, var(--ss-muted) 30%, transparent); transform-origin: 50% 100%; animation: ss-grow 0.35s ease-out both; }
+.seg.slop { background: var(--seg); }
+
+.rows { display: grid; gap: 4px; margin: 0; }
+.row { display: grid; grid-template-columns: 58px minmax(0, 1fr); align-items: baseline; gap: 6px; min-width: 0; }
+.row.all { padding-top: 5px; border-top: 1px dashed var(--ss-line-soft); }
+dt {
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: var(--ss-muted);
+  white-space: nowrap;
+}
+dd {
+  min-width: 0;
+  margin: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  font-size: 11.5px;
+  color: var(--ss-muted);
+}
+dd b { color: var(--ss-text); font-weight: 750; font-variant-numeric: tabular-nums; }
+.rank { display: inline-flex; align-items: center; gap: 1px; margin-left: 2px; vertical-align: -2px; color: var(--ss-text); font-weight: 750; }
+.crown { width: 13px; height: 13px; flex: none; }
+
+/* Motion scales with slop: louder verdicts wobble once when they arrive. */
+.top[data-art='swamp'] .art { animation: ss-wobble 0.7s ease-in-out 0.05s 1; }
+.top[data-art='slopocalypse'] .art { animation: ss-wobble 0.7s ease-in-out 0.05s 2; }
+
+@keyframes ss-grow { from { transform: scaleY(0); opacity: 0; } to { transform: scaleY(1); opacity: 1; } }
+@keyframes ss-wobble { 0%, 100% { transform: rotate(0); } 20% { transform: rotate(-12deg) scale(1.08); } 40% { transform: rotate(10deg) scale(1.1); } 60% { transform: rotate(-6deg); } 80% { transform: rotate(3deg); } }
+
+.rm *, .rm *::before, .rm *::after, .rm { animation: none !important; transition: none !important; }
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+}

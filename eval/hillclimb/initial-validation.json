@@ -1,0 +1,15 @@
+{
+  "test": {
+    "command": "pnpm test --maxWorkers=2",
+    "exitCode": 1,
+    "seconds": 32.14747500419617,
+    "log": "data/eval/raw/hillclimb/validation-test.log"
+  },
+  "check": {
+    "command": "pnpm check",
+    "exitCode": 0,
+    "seconds": 3.4981439113616943,
+    "log": "data/eval/raw/hillclimb/validation-check.log"
+  },
+  "scratchRemoved": true
+}

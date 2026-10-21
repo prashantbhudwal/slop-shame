@@ -1,0 +1,12 @@
+{
+  "targetHoldout": true,
+  "fresh": true,
+  "linkedinHoldout": true,
+  "raidTest": true,
+  "external": true,
+  "polishedLight": true,
+  "fingerprints": true,
+  "performance": true,
+  "unitTests": true,
+  "typeCheck": true
+}

@@ -1,0 +1,834 @@
+{
+  "targetHoldout": {
+    "main": {
+      "all": 18,
+      "human": 0,
+      "obvious": 18,
+      "none": 0
+    },
+    "withoutDictionary-all": {
+      "all": 18,
+      "human": 0,
+      "obvious": 18,
+      "none": 0
+    },
+    "withoutDictionary-gun": {
+      "all": 18,
+      "human": 0,
+      "obvious": 18,
+      "none": 0
+    },
+    "withoutDictionary-habit": {
+      "all": 18,
+      "human": 0,
+      "obvious": 18,
+      "none": 0
+    },
+    "withoutDictionary-vocabulary": {
+      "all": 18,
+      "human": 0,
+      "obvious": 18,
+      "none": 0
+    },
+    "withoutFamily-ai-vocabulary": {
+      "all": 18,
+      "human": 0,
+      "obvious": 18,
+      "none": 0
+    },
+    "withoutFamily-chatbot-leak": {
+      "all": 18,
+      "human": 0,
+      "obvious": 18,
+      "none": 0
+    },
+    "withoutFamily-draft-habit": {
+      "all": 18,
+      "human": 0,
+      "obvious": 18,
+      "none": 0
+    },
+    "withoutFamily-engagement": {
+      "all": 18,
+      "human": 0,
+      "obvious": 18,
+      "none": 0
+    },
+    "withoutFamily-engagement-bait": {
+      "all": 18,
+      "human": 0,
+      "obvious": 18,
+      "none": 0
+    },
+    "withoutFamily-hedging": {
+      "all": 18,
+      "human": 0,
+      "obvious": 18,
+      "none": 0
+    },
+    "withoutFamily-inflation": {
+      "all": 18,
+      "human": 0,
+      "obvious": 18,
+      "none": 0
+    },
+    "withoutFamily-list-structure": {
+      "all": 18,
+      "human": 0,
+      "obvious": 18,
+      "none": 0
+    },
+    "withoutFamily-negation-pivot": {
+      "all": 18,
+      "human": 0,
+      "obvious": 18,
+      "none": 0
+    },
+    "withoutFamily-presentation": {
+      "all": 18,
+      "human": 0,
+      "obvious": 18,
+      "none": 0
+    },
+    "withoutFamily-stock-story": {
+      "all": 18,
+      "human": 0,
+      "obvious": 18,
+      "none": 0
+    },
+    "withoutFamily-template-phrases": {
+      "all": 18,
+      "human": 0,
+      "obvious": 18,
+      "none": 0
+    }
+  },
+  "fresh": {
+    "main": {
+      "all": 7,
+      "human": 0,
+      "obvious": 0,
+      "none": 0
+    },
+    "withoutDictionary-all": {
+      "all": 7,
+      "human": 0,
+      "obvious": 0,
+      "none": 0
+    },
+    "withoutDictionary-gun": {
+      "all": 7,
+      "human": 0,
+      "obvious": 0,
+      "none": 0
+    },
+    "withoutDictionary-habit": {
+      "all": 7,
+      "human": 0,
+      "obvious": 0,
+      "none": 0
+    },
+    "withoutDictionary-vocabulary": {
+      "all": 7,
+      "human": 0,
+      "obvious": 0,
+      "none": 0
+    },
+    "withoutFamily-ai-vocabulary": {
+      "all": 7,
+      "human": 0,
+      "obvious": 0,
+      "none": 0
+    },
+    "withoutFamily-chatbot-leak": {
+      "all": 7,
+      "human": 0,
+      "obvious": 0,
+      "none": 0
+    },
+    "withoutFamily-draft-habit": {
+      "all": 7,
+      "human": 0,
+      "obvious": 0,
+      "none": 0
+    },
+    "withoutFamily-engagement": {
+      "all": 7,
+      "human": 0,
+      "obvious": 0,
+      "none": 0
+    },
+    "withoutFamily-engagement-bait": {
+      "all": 8,
+      "human": 0,
+      "obvious": 0,
+      "none": 0
+    },
+    "withoutFamily-hedging": {
+      "all": 7,
+      "human": 0,
+      "obvious": 0,
+      "none": 0
+    },
+    "withoutFamily-inflation": {
+      "all": 7,
+      "human": 0,
+      "obvious": 0,
+      "none": 0
+    },
+    "withoutFamily-list-structure": {
+      "all": 7,
+      "human": 0,
+      "obvious": 0,
+      "none": 0
+    },
+    "withoutFamily-negation-pivot": {
+      "all": 7,
+      "human": 0,
+      "obvious": 0,
+      "none": 0
+    },
+    "withoutFamily-presentation": {
+      "all": 7,
+      "human": 0,
+      "obvious": 0,
+      "none": 0
+    },
+    "withoutFamily-stock-story": {
+      "all": 7,
+      "human": 0,
+      "obvious": 0,
+      "none": 0
+    },
+    "withoutFamily-template-phrases": {
+      "all": 7,
+      "human": 0,
+      "obvious": 0,
+      "none": 0
+    }
+  },
+  "linkedinHoldout": {
+    "main": {
+      "all": 38,
+      "human": 38,
+      "obvious": 0,
+      "none": 0
+    },
+    "withoutDictionary-all": {
+      "all": 0,
+      "human": 0,
+      "obvious": 0,
+      "none": 0
+    },
+    "withoutDictionary-gun": {
+      "all": 5,
+      "human": 5,
+      "obvious": 0,
+      "none": 0
+    },
+    "withoutDictionary-habit": {
+      "all": 33,
+      "human": 33,
+      "obvious": 0,
+      "none": 0
+    },
+    "withoutDictionary-vocabulary": {
+      "all": 35,
+      "human": 35,
+      "obvious": 0,
+      "none": 0
+    },
+    "withoutFamily-ai-vocabulary": {
+      "all": 35,
+      "human": 35,
+      "obvious": 0,
+      "none": 0
+    },
+    "withoutFamily-chatbot-leak": {
+      "all": 38,
+      "human": 38,
+      "obvious": 0,
+      "none": 0
+    },
+    "withoutFamily-draft-habit": {
+      "all": 38,
+      "human": 38,
+      "obvious": 0,
+      "none": 0
+    },
+    "withoutFamily-engagement": {
+      "all": 36,
+      "human": 36,
+      "obvious": 0,
+      "none": 0
+    },
+    "withoutFamily-engagement-bait": {
+      "all": 36,
+      "human": 36,
+      "obvious": 0,
+      "none": 0
+    },
+    "withoutFamily-hedging": {
+      "all": 37,
+      "human": 37,
+      "obvious": 0,
+      "none": 0
+    },
+    "withoutFamily-inflation": {
+      "all": 35,
+      "human": 35,
+      "obvious": 0,
+      "none": 0
+    },
+    "withoutFamily-list-structure": {
+      "all": 38,
+      "human": 38,
+      "obvious": 0,
+      "none": 0
+    },
+    "withoutFamily-negation-pivot": {
+      "all": 34,
+      "human": 34,
+      "obvious": 0,
+      "none": 0
+    },
+    "withoutFamily-presentation": {
+      "all": 35,
+      "human": 35,
+      "obvious": 0,
+      "none": 0
+    },
+    "withoutFamily-stock-story": {
+      "all": 38,
+      "human": 38,
+      "obvious": 0,
+      "none": 0
+    },
+    "withoutFamily-template-phrases": {
+      "all": 33,
+      "human": 33,
+      "obvious": 0,
+      "none": 0
+    }
+  },
+  "wayback": {
+    "main": {
+      "all": 1,
+      "human": 1,
+      "obvious": 0,
+      "none": 0
+    },
+    "withoutDictionary-all": {
+      "all": 0,
+      "human": 0,
+      "obvious": 0,
+      "none": 0
+    },
+    "withoutDictionary-gun": {
+      "all": 1,
+      "human": 1,
+      "obvious": 0,
+      "none": 0
+    },
+    "withoutDictionary-habit": {
+      "all": 0,
+      "human": 0,
+      "obvious": 0,
+      "none": 0
+    },
+    "withoutDictionary-vocabulary": {
+      "all": 1,
+      "human": 1,
+      "obvious": 0,
+      "none": 0
+    },
+    "withoutFamily-ai-vocabulary": {
+      "all": 1,
+      "human": 1,
+      "obvious": 0,
+      "none": 0
+    },
+    "withoutFamily-chatbot-leak": {
+      "all": 1,
+      "human": 1,
+      "obvious": 0,
+      "none": 0
+    },
+    "withoutFamily-draft-habit": {
+      "all": 1,
+      "human": 1,
+      "obvious": 0,
+      "none": 0
+    },
+    "withoutFamily-engagement": {
+      "all": 1,
+      "human": 1,
+      "obvious": 0,
+      "none": 0
+    },
+    "withoutFamily-engagement-bait": {
+      "all": 1,
+      "human": 1,
+      "obvious": 0,
+      "none": 0
+    },
+    "withoutFamily-hedging": {
+      "all": 1,
+      "human": 1,
+      "obvious": 0,
+      "none": 0
+    },
+    "withoutFamily-inflation": {
+      "all": 0,
+      "human": 0,
+      "obvious": 0,
+      "none": 0
+    },
+    "withoutFamily-list-structure": {
+      "all": 1,
+      "human": 1,
+      "obvious": 0,
+      "none": 0
+    },
+    "withoutFamily-negation-pivot": {
+      "all": 0,
+      "human": 0,
+      "obvious": 0,
+      "none": 0
+    },
+    "withoutFamily-presentation": {
+      "all": 0,
+      "human": 0,
+      "obvious": 0,
+      "none": 0
+    },
+    "withoutFamily-stock-story": {
+      "all": 1,
+      "human": 1,
+      "obvious": 0,
+      "none": 0
+    },
+    "withoutFamily-template-phrases": {
+      "all": 0,
+      "human": 0,
+      "obvious": 0,
+      "none": 0
+    }
+  },
+  "raidTest": {
+    "main": {
+      "all": 7,
+      "human": 7,
+      "obvious": 0,
+      "none": 0
+    },
+    "withoutDictionary-all": {
+      "all": 0,
+      "human": 0,
+      "obvious": 0,
+      "none": 0
+    },
+    "withoutDictionary-gun": {
+      "all": 6,
+      "human": 6,
+      "obvious": 0,
+      "none": 0
+    },
+    "withoutDictionary-habit": {
+      "all": 1,
+      "human": 1,
+      "obvious": 0,
+      "none": 0
+    },
+    "withoutDictionary-vocabulary": {
+      "all": 6,
+      "human": 6,
+      "obvious": 0,
+      "none": 0
+    },
+    "withoutFamily-ai-vocabulary": {
+      "all": 5,
+      "human": 5,
+      "obvious": 0,
+      "none": 0
+    },
+    "withoutFamily-chatbot-leak": {
+      "all": 7,
+      "human": 7,
+      "obvious": 0,
+      "none": 0
+    },
+    "withoutFamily-draft-habit": {
+      "all": 6,
+      "human": 6,
+      "obvious": 0,
+      "none": 0
+    },
+    "withoutFamily-engagement": {
+      "all": 7,
+      "human": 7,
+      "obvious": 0,
+      "none": 0
+    },
+    "withoutFamily-engagement-bait": {
+      "all": 7,
+      "human": 7,
+      "obvious": 0,
+      "none": 0
+    },
+    "withoutFamily-hedging": {
+      "all": 4,
+      "human": 4,
+      "obvious": 0,
+      "none": 0
+    },
+    "withoutFamily-inflation": {
+      "all": 6,
+      "human": 6,
+      "obvious": 0,
+      "none": 0
+    },
+    "withoutFamily-list-structure": {
+      "all": 7,
+      "human": 7,
+      "obvious": 0,
+      "none": 0
+    },
+    "withoutFamily-negation-pivot": {
+      "all": 1,
+      "human": 1,
+      "obvious": 0,
+      "none": 0
+    },
+    "withoutFamily-presentation": {
+      "all": 6,
+      "human": 6,
+      "obvious": 0,
+      "none": 0
+    },
+    "withoutFamily-stock-story": {
+      "all": 7,
+      "human": 7,
+      "obvious": 0,
+      "none": 0
+    },
+    "withoutFamily-template-phrases": {
+      "all": 2,
+      "human": 2,
+      "obvious": 0,
+      "none": 0
+    }
+  },
+  "external": {
+    "main": {
+      "all": 126,
+      "human": 6,
+      "obvious": 0,
+      "none": 0
+    },
+    "withoutDictionary-all": {
+      "all": 5,
+      "human": 0,
+      "obvious": 0,
+      "none": 0
+    },
+    "withoutDictionary-gun": {
+      "all": 118,
+      "human": 3,
+      "obvious": 0,
+      "none": 0
+    },
+    "withoutDictionary-habit": {
+      "all": 17,
+      "human": 3,
+      "obvious": 0,
+      "none": 0
+    },
+    "withoutDictionary-vocabulary": {
+      "all": 87,
+      "human": 4,
+      "obvious": 0,
+      "none": 0
+    },
+    "withoutFamily-ai-vocabulary": {
+      "all": 67,
+      "human": 4,
+      "obvious": 0,
+      "none": 0
+    },
+    "withoutFamily-chatbot-leak": {
+      "all": 125,
+      "human": 6,
+      "obvious": 0,
+      "none": 0
+    },
+    "withoutFamily-draft-habit": {
+      "all": 125,
+      "human": 6,
+      "obvious": 0,
+      "none": 0
+    },
+    "withoutFamily-engagement": {
+      "all": 122,
+      "human": 5,
+      "obvious": 0,
+      "none": 0
+    },
+    "withoutFamily-engagement-bait": {
+      "all": 122,
+      "human": 6,
+      "obvious": 0,
+      "none": 0
+    },
+    "withoutFamily-hedging": {
+      "all": 118,
+      "human": 4,
+      "obvious": 0,
+      "none": 0
+    },
+    "withoutFamily-inflation": {
+      "all": 64,
+      "human": 5,
+      "obvious": 0,
+      "none": 0
+    },
+    "withoutFamily-list-structure": {
+      "all": 117,
+      "human": 6,
+      "obvious": 0,
+      "none": 0
+    },
+    "withoutFamily-negation-pivot": {
+      "all": 106,
+      "human": 4,
+      "obvious": 0,
+      "none": 0
+    },
+    "withoutFamily-presentation": {
+      "all": 78,
+      "human": 5,
+      "obvious": 0,
+      "none": 0
+    },
+    "withoutFamily-stock-story": {
+      "all": 126,
+      "human": 6,
+      "obvious": 0,
+      "none": 0
+    },
+    "withoutFamily-template-phrases": {
+      "all": 36,
+      "human": 3,
+      "obvious": 0,
+      "none": 0
+    }
+  },
+  "polishedAudit": {
+    "main": {
+      "all": 0,
+      "human": 0,
+      "obvious": 0,
+      "none": 0
+    },
+    "withoutDictionary-all": {
+      "all": 0,
+      "human": 0,
+      "obvious": 0,
+      "none": 0
+    },
+    "withoutDictionary-gun": {
+      "all": 0,
+      "human": 0,
+      "obvious": 0,
+      "none": 0
+    },
+    "withoutDictionary-habit": {
+      "all": 0,
+      "human": 0,
+      "obvious": 0,
+      "none": 0
+    },
+    "withoutDictionary-vocabulary": {
+      "all": 0,
+      "human": 0,
+      "obvious": 0,
+      "none": 0
+    },
+    "withoutFamily-ai-vocabulary": {
+      "all": 0,
+      "human": 0,
+      "obvious": 0,
+      "none": 0
+    },
+    "withoutFamily-chatbot-leak": {
+      "all": 0,
+      "human": 0,
+      "obvious": 0,
+      "none": 0
+    },
+    "withoutFamily-draft-habit": {
+      "all": 0,
+      "human": 0,
+      "obvious": 0,
+      "none": 0
+    },
+    "withoutFamily-engagement": {
+      "all": 0,
+      "human": 0,
+      "obvious": 0,
+      "none": 0
+    },
+    "withoutFamily-engagement-bait": {
+      "all": 0,
+      "human": 0,
+      "obvious": 0,
+      "none": 0
+    },
+    "withoutFamily-hedging": {
+      "all": 0,
+      "human": 0,
+      "obvious": 0,
+      "none": 0
+    },
+    "withoutFamily-inflation": {
+      "all": 0,
+      "human": 0,
+      "obvious": 0,
+      "none": 0
+    },
+    "withoutFamily-list-structure": {
+      "all": 0,
+      "human": 0,
+      "obvious": 0,
+      "none": 0
+    },
+    "withoutFamily-negation-pivot": {
+      "all": 0,
+      "human": 0,
+      "obvious": 0,
+      "none": 0
+    },
+    "withoutFamily-presentation": {
+      "all": 0,
+      "human": 0,
+      "obvious": 0,
+      "none": 0
+    },
+    "withoutFamily-stock-story": {
+      "all": 0,
+      "human": 0,
+      "obvious": 0,
+      "none": 0
+    },
+    "withoutFamily-template-phrases": {
+      "all": 0,
+      "human": 0,
+      "obvious": 0,
+      "none": 0
+    }
+  },
+  "effortful": {
+    "main": {
+      "all": 23,
+      "human": 5,
+      "obvious": 18,
+      "none": 0
+    },
+    "withoutDictionary-all": {
+      "all": 15,
+      "human": 5,
+      "obvious": 10,
+      "none": 0
+    },
+    "withoutDictionary-gun": {
+      "all": 18,
+      "human": 5,
+      "obvious": 13,
+      "none": 0
+    },
+    "withoutDictionary-habit": {
+      "all": 20,
+      "human": 5,
+      "obvious": 15,
+      "none": 0
+    },
+    "withoutDictionary-vocabulary": {
+      "all": 21,
+      "human": 5,
+      "obvious": 16,
+      "none": 0
+    },
+    "withoutFamily-ai-vocabulary": {
+      "all": 21,
+      "human": 5,
+      "obvious": 16,
+      "none": 0
+    },
+    "withoutFamily-chatbot-leak": {
+      "all": 23,
+      "human": 5,
+      "obvious": 18,
+      "none": 0
+    },
+    "withoutFamily-draft-habit": {
+      "all": 23,
+      "human": 5,
+      "obvious": 18,
+      "none": 0
+    },
+    "withoutFamily-engagement": {
+      "all": 21,
+      "human": 5,
+      "obvious": 16,
+      "none": 0
+    },
+    "withoutFamily-engagement-bait": {
+      "all": 21,
+      "human": 5,
+      "obvious": 16,
+      "none": 0
+    },
+    "withoutFamily-hedging": {
+      "all": 22,
+      "human": 5,
+      "obvious": 17,
+      "none": 0
+    },
+    "withoutFamily-inflation": {
+      "all": 22,
+      "human": 5,
+      "obvious": 17,
+      "none": 0
+    },
+    "withoutFamily-list-structure": {
+      "all": 20,
+      "human": 5,
+      "obvious": 15,
+      "none": 0
+    },
+    "withoutFamily-negation-pivot": {
+      "all": 21,
+      "human": 5,
+      "obvious": 16,
+      "none": 0
+    },
+    "withoutFamily-presentation": {
+      "all": 22,
+      "human": 5,
+      "obvious": 17,
+      "none": 0
+    },
+    "withoutFamily-stock-story": {
+      "all": 23,
+      "human": 5,
+      "obvious": 18,
+      "none": 0
+    },
+    "withoutFamily-template-phrases": {
+      "all": 20,
+      "human": 5,
+      "obvious": 15,
+      "none": 0
+    }
+  }
+}

@@ -13,6 +13,7 @@ import { acquire, addTask, release } from './layer';
 import { drawCracks, drawFlash, drawKaboom, drawShockwave, ParticleSystem, preloadFx } from './particles';
 import { shatter, type Shard } from './shatter';
 import { playKaslop, playPoof } from './sound';
+import { attachUiShadow, uiShadow } from '../ui/shadow';
 
 export { preloadFx };
 
@@ -30,7 +31,13 @@ export interface EruptOptions {
 const CRACK = 0.16;
 const SHARD_LIFE = 1.0;
 const COLLAPSE_AT = 0.38;
-const MAX_CLONE_NODES = 2500;
+/**
+ * Every shard is a full clone of the post, so the effect creates
+ * shards × elements nodes: keep that total bounded. Light posts get 24
+ * shards, heavier ones 12; past that, the canvas-only effect.
+ */
+const CLONE_BUDGET = 18_000;
+const MAX_CLONE_NODES = CLONE_BUDGET / 12;
 const OWN_MOUNT = '[data-slop-shame-mount]';
 
 /** First element under `el` that actually has a box (handles display: contents). */
@@ -89,22 +96,31 @@ function buildShards(box: HTMLElement, rect: DOMRect, shards: Shard[], offsetY: 
     }
     for (const n of template.querySelectorAll('script, noscript, iframe, object, embed, audio, source, track')) n.replaceWith(document.createElement('div'));
 
-    // Videos and canvases don't clone their pixels: snapshot each once.
+    // Videos and canvases don't clone their pixels: snapshot each once, at
+    // its displayed size (not a 4K source's), and share that one image across
+    // every shard. A cross-origin frame taints the canvas and can't become an
+    // image URL: then each shard draws its own copy of the small snapshot.
     const snaps: HTMLCanvasElement[] = [];
     const origMedia = box.querySelectorAll<HTMLVideoElement | HTMLCanvasElement>('video, canvas');
     const cloneMedia = template.querySelectorAll<HTMLElement>('video, canvas');
+    const dpr = Math.min(2, window.devicePixelRatio || 1);
     origMedia.forEach((m, i) => {
+      const natW = m instanceof HTMLVideoElement ? m.videoWidth : m.width;
+      const natH = m instanceof HTMLVideoElement ? m.videoHeight : m.height;
       const c = document.createElement('canvas');
-      const w = m instanceof HTMLVideoElement ? m.videoWidth : m.width;
-      const h = m instanceof HTMLVideoElement ? m.videoHeight : m.height;
-      c.width = w || 1;
-      c.height = h || 1;
-      try { c.getContext('2d')?.drawImage(m, 0, 0); } catch { /* not ready: black frame */ }
-      snaps.push(c);
-      const placeholder = document.createElement('canvas');
+      c.width = Math.max(1, Math.round(Math.min(natW || m.offsetWidth, m.offsetWidth * dpr)));
+      c.height = Math.max(1, Math.round(natW && natH ? (c.width * natH) / natW : m.offsetHeight * dpr));
+      try { c.getContext('2d')?.drawImage(m, 0, 0, c.width, c.height); } catch { /* not ready: black frame */ }
+      let src = '';
+      try { src = c.toDataURL('image/jpeg', 0.85); } catch { /* tainted */ }
+      const placeholder = document.createElement(src ? 'img' : 'canvas');
       placeholder.className = m.className;
       placeholder.style.cssText = `display:block;width:${m.offsetWidth}px;height:${m.offsetHeight}px;background:#000`;
-      placeholder.setAttribute('data-ss-snap', String(i));
+      if (src) placeholder.setAttribute('src', src);
+      else {
+        snaps.push(c);
+        placeholder.setAttribute('data-ss-snap', String(snaps.length - 1));
+      }
       cloneMedia[i]?.replaceWith(placeholder);
     });
 
@@ -132,10 +148,11 @@ function buildShards(box: HTMLElement, rect: DOMRect, shards: Shard[], offsetY: 
       const clone = template.cloneNode(true) as HTMLElement;
       // Re-render the badge into the clone so it shatters with the post.
       const badge = clone.querySelector<HTMLElement>('[data-ss-badge]');
-      if (badge && origMount?.shadowRoot) {
-        const sr = badge.attachShadow({ mode: 'open' });
-        sr.adoptedStyleSheets = origMount.shadowRoot.adoptedStyleSheets;
-        sr.innerHTML = origMount.shadowRoot.innerHTML;
+      const originalShadow = origMount ? uiShadow(origMount) : undefined;
+      if (badge && originalShadow) {
+        const sr = attachUiShadow(badge);
+        sr.adoptedStyleSheets = originalShadow.adoptedStyleSheets;
+        sr.innerHTML = originalShadow.innerHTML;
       }
       for (const c of clone.querySelectorAll<HTMLCanvasElement>('canvas[data-ss-snap]')) {
         const snap = snaps[Number(c.getAttribute('data-ss-snap'))];
@@ -193,7 +210,7 @@ export function erupt(el: HTMLElement, opts: EruptOptions): Promise<void> {
   const offsetY = visTop - rect.top;
   const lx = ox - rect.left;
   const ly = oy - visTop;
-  const big = box.getElementsByTagName('*').length > 900;
+  const big = box.getElementsByTagName('*').length * 24 > CLONE_BUDGET;
   const pattern = shatter(rect.width, visH, lx, ly, { rays: big ? 6 : 8, rings: big ? 2 : 3 });
   const els = rect.width > 0 && rect.height > 0 ? buildShards(box, rect, pattern, offsetY, layer.host) : null;
 

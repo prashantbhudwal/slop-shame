@@ -19,6 +19,71 @@ const LETTERS = /\p{L}/gu;
 const LATIN_LETTERS = /[a-z]/gi;
 const RAW_WORDS = /[\p{L}\p{M}]+/gu;
 const EMBEDDED_NON_LATIN = /[a-z][\u0370-\u03ff\u0400-\u04ff]+[a-z]/i;
+const FOOTER_LINE = /^(?:#[\p{L}\p{M}\p{N}_]+\s*|[\p{Extended_Pictographic}\p{Emoji_Modifier}\p{Regional_Indicator}\uFE0F\u200D]\s*)+$/u;
+// Keep complete examples, including newlines between Markdown quote lines.
+// Matching never removes characters or changes evidence offsets.
+const PROTECTED_OPEN = /```|~~~|`|“|‘|"|(?:^|\n)[\t ]*>/g;
+const NON_WHITESPACE = /\S/;
+type Span = readonly [number, number];
+
+function protectedRanges(text: string): Span[] {
+  const spans: [number, number][] = [];
+  const unclosed = new Set<string>();
+  PROTECTED_OPEN.lastIndex = 0;
+  let match: RegExpExecArray | null;
+  while ((match = PROTECTED_OPEN.exec(text))) {
+    const start = match.index;
+    const opening = match[0];
+    let end: number;
+    if (opening === '```' || opening === '~~~') {
+      const closing = text.indexOf(opening, PROTECTED_OPEN.lastIndex);
+      end = closing < 0 ? text.length : closing + 3;
+    } else if (opening === '`') {
+      const closing = text.indexOf('`', PROTECTED_OPEN.lastIndex);
+      if (closing <= start + 1 || text.slice(start + 1, closing).includes('\n')) continue;
+      end = closing + 1;
+    } else if (opening === '“' || opening === '‘' || opening === '"') {
+      // Cache absent closers: retrying a negated-class regex at every stray
+      // opener would scan an unmatched multiline quotation quadratically.
+      if (unclosed.has(opening)) continue;
+      let closing = -1;
+      if (opening === '"') {
+        for (let i = start + 1; i < text.length; i++) {
+          if (text[i] === '\\') i++;
+          else if (text[i] === '"') { closing = i; break; }
+        }
+      } else closing = text.indexOf(opening === '“' ? '”' : '’', start + 1);
+      if (closing < 0) { unclosed.add(opening); continue; }
+      end = closing + 1;
+    } else {
+      // Consume the entire run of Markdown quote lines, not each line's text.
+      const newline = text.indexOf('\n', PROTECTED_OPEN.lastIndex);
+      end = newline < 0 ? text.length : newline;
+      while (end < text.length) {
+        let next = end + 1;
+        while (text[next] === ' ' || text[next] === '\t') next++;
+        if (text[next] !== '>') break;
+        const newline = text.indexOf('\n', next + 1);
+        end = newline < 0 ? text.length : newline;
+      }
+    }
+    const previous = spans[spans.length - 1];
+    if (previous && (start <= previous[1] || !NON_WHITESPACE.test(text.slice(previous[1], start)))) previous[1] = Math.max(previous[1], end);
+    else spans.push([start, end]);
+    PROTECTED_OPEN.lastIndex = end;
+  }
+  return spans;
+}
+
+/** Protected ranges are ordered and merged; test containment in O(log n). */
+export function isProtectedSpan(ranges: readonly Span[], span: Span): boolean {
+  let lo = 0; let hi = ranges.length;
+  while (lo < hi) {
+    const mid = (lo + hi) >>> 1;
+    if (ranges[mid]![0] <= span[0]) lo = mid + 1; else hi = mid;
+  }
+  return lo > 0 && ranges[lo - 1]![1] >= span[1];
+}
 
 function mixedScriptWords(text: string): string[] {
   if (!NON_LATIN_LOOKALIKE_RANGE.test(text)) return [];
@@ -44,11 +109,17 @@ export function straighten(text: string): string {
 /** Extra structural data stays internal; contributors still receive PostContext. */
 export interface PostStructure {
   straight: string;
+  /** Exact ctx.text ranges corresponding to ctx.words, including case folds. */
+  wordSpans: readonly Span[];
+  /** Complete quoted/code examples, ordered and merged. */
+  protectedSpans: readonly Span[];
   sentenceSpans: readonly (readonly [number, number])[];
   sentenceWordCounts: readonly number[];
   lineWordCounts: readonly number[];
   openingEnd: number;
   closingStart: number;
+  /** End of prose, excluding trailing hashtag/emoji-only lines. */
+  bodyEnd: number;
   blankBreaks: number;
   emojiBullets: number;
   rockets: number;
@@ -96,6 +167,7 @@ export function buildContext(input: PostInput): PostContext {
     lowerOffsets.push(text.length);
   }
   const words: string[] = [];
+  const wordSpans: [number, number][] = [];
   const sentences: string[] = [];
   const sentenceSpans: [number, number][] = [];
   const sentenceWordCounts: number[] = [];
@@ -112,6 +184,8 @@ export function buildContext(input: PostInput): PostContext {
   for (const match of lower.matchAll(WORDS)) {
     words.push(match[0]);
     const offset = lowerOffsets?.[match.index] ?? match.index;
+    const lowerEnd = match.index + match[0].length;
+    wordSpans.push([offset, lowerOffsets?.[lowerEnd] ?? lowerEnd]);
     while (lineIndex + 1 < starts.length && offset >= starts[lineIndex + 1]!) lineIndex++;
     if (lines.length) lineWordCounts[lineIndex] = lineWordCounts[lineIndex]! + 1;
     while (sentenceIndex + 1 < sentenceSpans.length && offset >= sentenceSpans[sentenceIndex + 1]![0]) sentenceIndex++;
@@ -130,11 +204,14 @@ export function buildContext(input: PostInput): PostContext {
     emojiCount: Array.from(text.matchAll(PICTOGRAPH)).length,
     hashtags: [...hashtags],
   };
+  let lastBodyLine = lines.length - 1;
+  while (lastBodyLine >= 0 && FOOTER_LINE.test(lines[lastBodyLine]!)) lastBodyLine--;
   structures.set(ctx, {
-    straight, sentenceSpans, sentenceWordCounts,
+    straight, wordSpans, protectedSpans: protectedRanges(text), sentenceSpans, sentenceWordCounts,
     lineWordCounts,
     openingEnd: ends[Math.min(1, ends.length - 1)] ?? 0,
-    closingStart: starts[Math.max(0, starts.length - 2)] ?? text.length,
+    closingStart: lastBodyLine >= 0 ? starts[Math.max(0, lastBodyLine - 1)]! : text.length,
+    bodyEnd: ends[lastBodyLine] ?? 0,
     blankBreaks: (text.match(/\n[\t ]*\n/g) ?? []).length,
     emojiBullets,
     rockets: (text.match(/🚀/gu) ?? []).length,

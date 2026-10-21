@@ -1,0 +1,129 @@
+{
+  "status": "passed",
+  "measuredAt": "2026-10-19T10:02:55.440Z",
+  "node": "v26.7.0",
+  "sample": {
+    "posts": 2000,
+    "minWords": 50,
+    "maxWords": 400,
+    "description": "Project synthetic human/AI/mixed fixtures padded to 50-400 words; one third contain an additional vendor phrase. No cached reports."
+  },
+  "counts": {
+    "packs": 6,
+    "phrases": 2630,
+    "patterns": 182
+  },
+  "baseline": {
+    "creationMs": 2.5306659999999965,
+    "msPerPost": 0.1436335209999999,
+    "rounds": [
+      0.1425256455,
+      0.1436335209999999,
+      0.149891583
+    ],
+    "checksum": 27816
+  },
+  "all": {
+    "creationMs": 16.938916999999947,
+    "msPerPost": 0.28327372900000003,
+    "rounds": [
+      0.27485479150000014,
+      0.28327372900000003,
+      0.29415052100000005
+    ],
+    "checksum": 41186
+  },
+  "vendorsOnly": {
+    "creationMs": 11.762499999999818,
+    "msPerPost": 0.19669095850000007,
+    "rounds": [
+      0.19321425000000023,
+      0.19669095850000007,
+      0.1981777709999999
+    ],
+    "checksum": 26768
+  },
+  "perPack": [
+    {
+      "pack": "vendor-zeroslop",
+      "creationMs": 7.305040999999619,
+      "msPerPost": 0.18690387499999997,
+      "rounds": [
+        0.18690387499999997
+      ],
+      "checksum": 39460
+    },
+    {
+      "pack": "vendor-paech-sampler",
+      "creationMs": 0.6775410000000193,
+      "msPerPost": 0.1425763750000001,
+      "rounds": [
+        0.1425763750000001
+      ],
+      "checksum": 27836
+    },
+    {
+      "pack": "vendor-paech-essays",
+      "creationMs": 0.7586249999994834,
+      "msPerPost": 0.14261362499999997,
+      "rounds": [
+        0.14261362499999997
+      ],
+      "checksum": 27849
+    },
+    {
+      "pack": "vendor-vale-ai-tells",
+      "creationMs": 2.2420830000000933,
+      "msPerPost": 0.2121010624999999,
+      "rounds": [
+        0.2121010624999999
+      ],
+      "checksum": 29313
+    },
+    {
+      "pack": "vendor-slop-radar",
+      "creationMs": 0.9298340000004828,
+      "msPerPost": 0.1478804164999997,
+      "rounds": [
+        0.1478804164999997
+      ],
+      "checksum": 28760
+    },
+    {
+      "pack": "vendor-kobak",
+      "creationMs": 0.4835830000001806,
+      "msPerPost": 0.14329410399999962,
+      "rounds": [
+        0.14329410399999962
+      ],
+      "checksum": 27816
+    }
+  ],
+  "slowestPack": "vendor-vale-ai-tells",
+  "regex": {
+    "maxWarmed10KBMs": 0.16687499999989086,
+    "slowest": [
+      {
+        "rule": "vendor-vale-ai-tells.pattern-e23bd5c5441d",
+        "worstWarmed10KBMs": 0.16687499999989086
+      },
+      {
+        "rule": "vendor-zeroslop.pattern-8cd63c91ffdf",
+        "worstWarmed10KBMs": 0.09166600000025937
+      },
+      {
+        "rule": "vendor-zeroslop.pattern-b1bd923c91ff",
+        "worstWarmed10KBMs": 0.08520799999951123
+      },
+      {
+        "rule": "vendor-vale-ai-tells.pattern-0d6d58cdae61",
+        "worstWarmed10KBMs": 0.08495899999979883
+      },
+      {
+        "rule": "vendor-zeroslop.pattern-e1b9f9e4b030",
+        "worstWarmed10KBMs": 0.08483400000022812
+      }
+    ]
+  },
+  "syntheticHumanControlsWithVendorHits": []
+}
