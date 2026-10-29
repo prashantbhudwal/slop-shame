@@ -1,34 +1,12 @@
-import { GUARD_IDS, GUARD_NODES, GUARD_COUNT } from './compiled-prefilters';
-import { LITERAL_NODES, LITERAL_SIGNATURES } from './compiled-literals';
-import { requiredLiterals } from './regex-prefilter';
 import { normalizeText, straighten, structureOf } from './context';
 import type { PhraseRule, PostContext, RuleHit } from './rule-types';
 
-interface Output { rule: number | string; length: number }
-interface Node { next: Record<string, number>; fail: number; outputs: Output[] }
-interface RegexRule { rule: number; matcher: RegExp; required?: string[][] | null; guards?: number[][] }
+interface Output { rule: number; length: number }
+interface Node { next: Map<string, number>; fail: number; outputs: Output[] }
+interface RegexRule { rule: number; matcher: RegExp }
 interface RegexGroup { closing: boolean; entries: RegexRule[]; sources: string[]; candidate: RegExp | null }
-const MATCH_TOKEN = /[\p{L}\p{M}\p{N}_]+|[^\p{L}\p{M}\p{N}_]/gu;
 const WORD_CHAR = /[\p{L}\p{M}\p{N}_]/u;
 const LITERAL_WHITESPACE = /\p{White_Space}+/gu;
-// Dense ASCII transitions remove repeated property/failure lookups from the
-// shared guard scan. Generated fallback edges still handle non-ASCII literals.
-let guardDfa: Uint32Array | undefined;
-function guardTransitions(): Uint32Array {
-  if (guardDfa) return guardDfa;
-  const table = new Uint32Array(GUARD_NODES.length * 128);
-  const alphabet = Array.from({ length: 128 }, (_, i) => String.fromCharCode(i));
-  const queue = [0];
-  for (let head = 0; head < queue.length; head++) {
-    const state = queue[head]!, node = GUARD_NODES[state]!;
-    for (let c = 0; c < 128; c++) {
-      const direct = node.next[alphabet[c]!];
-      table[state * 128 + c] = typeof direct === 'number' ? direct : state ? table[node.fail * 128 + c]! : 0;
-    }
-    queue.push(...Object.values(node.next));
-  }
-  return guardDfa = table;
-}
 /** All unique candidate spans survive until cross-rule evidence selection. */
 export interface CompiledHit extends RuleHit { spans: readonly (readonly [number, number])[] }
 
@@ -63,13 +41,7 @@ function literalView(lower: string): { text: string; offsets: readonly number[] 
  * All regex construction and trie failure links are done at registration.
  */
 export function compilePhrases(rules: readonly PhraseRule[]): (ctx: PostContext) => Map<PhraseRule, CompiledHit> {
-  const guardTable = guardTransitions();
-  const signature = (values: readonly string[]) => values.join('\u0000');
-  const prepared = rules.every(r => !r.phrases?.length || LITERAL_SIGNATURES[r.id] === signature(r.phrases));
-  const nodes: readonly Node[] = prepared ? LITERAL_NODES : [{ next: Object.create(null), fail: 0, outputs: [] }];
-  const mutable = nodes as Node[];
-  const byId = new Map(rules.map((r, i) => [r.id, i]));
-  const nextFor = (state: number, token: string): number | undefined => { const next = nodes[state]!.next[token]; return typeof next === 'number' ? next : undefined; };
+  const nodes: Node[] = [{ next: new Map(), fail: 0, outputs: [] }];
   const groups: RegexGroup[] = [
     { closing: false, entries: [], sources: [], candidate: null },
     { closing: true, entries: [], sources: [], candidate: null },
@@ -77,15 +49,15 @@ export function compilePhrases(rules: readonly PhraseRule[]): (ctx: PostContext)
   const isolated: RegexRule[] = [];
   for (let index = 0; index < rules.length; index++) {
     const rule = rules[index]!;
-    for (const literal of prepared ? [] : new Set(rule.phrases?.map((p) => straighten(normalizeText(p).toLowerCase()).replace(LITERAL_WHITESPACE, ' ').trim()))) {
+    for (const literal of new Set(rule.phrases?.map((p) => straighten(normalizeText(p).toLowerCase()).replace(LITERAL_WHITESPACE, ' ').trim()))) {
       if (!literal) continue;
       let state = 0;
-      for (const [char] of literal.matchAll(MATCH_TOKEN)) {
-        let next = nextFor(state, char);
+      for (const char of literal) {
+        let next = nodes[state]!.next.get(char);
         if (next === undefined) {
           next = nodes.length;
-          nodes[state]!.next[char] = next;
-          mutable.push({ next: Object.create(null), fail: 0, outputs: [] });
+          nodes[state]!.next.set(char, next);
+          nodes.push({ next: new Map(), fail: 0, outputs: [] });
         }
         state = next;
       }
@@ -98,11 +70,7 @@ export function compilePhrases(rules: readonly PhraseRule[]): (ctx: PostContext)
         // Captures are legal in contributed patterns, including backreferences.
         // Do not renumber them by inserting them in the candidate alternation.
         const hasCaptures = /\((?!\?(?::|=|!|<=|<!))/.test(compatible);
-        const required = requiredLiterals(compatible);
-        if (hasCaptures || required || rule.id.startsWith('dictionaries.')) {
-          const guards = required?.every(clause => clause.every(s => GUARD_IDS[s] !== undefined)) ? required.map(clause => clause.map(s => GUARD_IDS[s]!)) : undefined;
-          isolated.push({ rule: index, matcher: new RegExp(compatible, 'gi'), required, guards });
-        }
+        if (hasCaptures) isolated.push({ rule: index, matcher: new RegExp(compatible, 'gi') });
         else {
           const closing = rule.position === 'closing';
           // Each hit checks at most sixteen sources instead of every regex in
@@ -118,13 +86,13 @@ export function compilePhrases(rules: readonly PhraseRule[]): (ctx: PostContext)
       }
     }
   }
-  const queue = prepared ? [] : Object.values(nodes[0]!.next);
+  const queue = [...nodes[0]!.next.values()];
   for (let head = 0; head < queue.length; head++) {
     const state = queue[head]!;
-    for (const [char, next] of Object.entries(nodes[state]!.next)) {
+    for (const [char, next] of nodes[state]!.next) {
       let fail = nodes[state]!.fail;
-      while (fail && nextFor(fail, char) === undefined) fail = nodes[fail]!.fail;
-      nodes[next]!.fail = nextFor(fail, char) ?? 0;
+      while (fail && !nodes[fail]!.next.has(char)) fail = nodes[fail]!.fail;
+      nodes[next]!.fail = nodes[fail]!.next.get(char) ?? 0;
       nodes[next]!.outputs.push(...nodes[nodes[next]!.fail]!.outputs);
       queue.push(next);
     }
@@ -152,10 +120,9 @@ export function compilePhrases(rules: readonly PhraseRule[]): (ctx: PostContext)
       const view = literalView(ctx.lower);
       let state = 0;
       let offset = 0;
-      for (const token of view.text.matchAll(MATCH_TOKEN)) {
-        const char = token[0];
-        while (state && nextFor(state, char) === undefined) state = nodes[state]!.fail;
-        state = nextFor(state, char) ?? 0;
+      for (const char of view.text) {
+        while (state && !nodes[state]!.next.has(char)) state = nodes[state]!.fail;
+        state = nodes[state]!.next.get(char) ?? 0;
         offset += char.length;
         for (const output of nodes[state]!.outputs) {
           const start = offset - output.length;
@@ -164,9 +131,7 @@ export function compilePhrases(rules: readonly PhraseRule[]): (ctx: PostContext)
           if (before && WORD_CHAR.test(before) || after && WORD_CHAR.test(after)) continue;
           const lowerStart = view.offsets?.[start] ?? start;
           const lowerEnd = view.offsets?.[offset] ?? offset;
-          const index = typeof output.rule === 'number' ? output.rule : byId.get(output.rule);
-          if (index === undefined) continue;
-          record(index, structure.lowerOffsets?.[lowerStart] ?? lowerStart, structure.lowerOffsets?.[lowerEnd] ?? lowerEnd);
+          record(output.rule, structure.lowerOffsets?.[lowerStart] ?? lowerStart, structure.lowerOffsets?.[lowerEnd] ?? lowerEnd);
         }
       }
     }
@@ -187,21 +152,7 @@ export function compilePhrases(rules: readonly PhraseRule[]): (ctx: PostContext)
         candidate.lastIndex = match.index + (ctx.text.codePointAt(match.index)! > 0xffff ? 2 : 1);
       }
     }
-    const present = new Uint8Array(GUARD_COUNT);
-    let guardState = 0;
-    for (let i = 0; i < ctx.lower.length; i++) {
-      const code = ctx.lower.charCodeAt(i);
-      if (code < 128) guardState = guardTable[guardState * 128 + code]!;
-      else {
-        const point = ctx.lower.codePointAt(i)!, char = String.fromCodePoint(point);
-        if (point > 65535) i++;
-        while (guardState && typeof GUARD_NODES[guardState]!.next[char] !== 'number') guardState = GUARD_NODES[guardState]!.fail;
-        const next = GUARD_NODES[guardState]!.next[char]; guardState = typeof next === 'number' ? next : 0;
-      }
-      for (const id of GUARD_NODES[guardState]!.outputs) present[id] = 1;
-    }
     for (const entry of isolated) {
-      if (entry.guards ? !entry.guards.every(clause => clause.some(id => present[id])) : entry.required && !entry.required.every(clause => clause.some(literal => ctx.lower.includes(literal)))) continue;
       const target = rules[entry.rule]!.position === 'closing' ? closingText : structure.straight;
       entry.matcher.lastIndex = 0;
       let match: RegExpExecArray | null;

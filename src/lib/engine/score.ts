@@ -14,19 +14,37 @@ export interface MatchEvidence {
   construction?: boolean;
 }
 
-import { SCORECARD, THRESHOLD } from './scorecard';
-import { GUN_CAP, HABIT_CAP, ruleSchema, type EvidenceRule } from './scorecard-schema';
+/** Add independent evidence, never divide it by document length. These are
+ * editorial points on a Slop Index, not probabilities of AI authorship.
+ * Category caps limit repeated wording; style cannot establish a verdict.
+ * Fingerprints are an explicit rule property, never inferred from weight.
+ */
+const K = 12;
+const CAP: Record<SlopCategory, number> = {
+  'ai-vocabulary': 20, 'template-phrases': 20, 'negation-pivot': 16,
+  inflation: 16, hedging: 12, 'engagement-bait': 16,
+  formatting: 12, 'robotic-rhythm': 8, 'chatbot-leak': 20, 'bypass-tricks': 8,
+};
 const STYLE_CATEGORIES = new Set<SlopCategory>(['formatting', 'robotic-rhythm', 'bypass-tricks']);
+const CORROBORATING = new Set(['formatting.em-dash', 'robotic-rhythm.rule-of-three']);
 const FINGERPRINT_FLOOR = 80;
+const STYLE_ONLY_MAX = 39;
 
-/** The public index is linear up to 60, then smoothly compressed. */
-export function evidenceIndex(u: number): number {
-  return u <= 1.5 ? 40 * u : 100 - 40 * Math.exp(-(u - 1.5));
+/** Internal calibration knobs. Defaults are frozen after tune/dev gates; the
+ * public engine API does not accept caller-supplied scoring policies. */
+export interface ScoringPolicy {
+  k: number;
+  caps: Partial<Record<SlopCategory, number>>;
+  styleMax: number;
+  familyBonus: number;
+  shortK: number;
 }
-/** Retained for contributor tools; k now means evidence at index 40. */
-export function saturate(evidence: number, k = THRESHOLD): number {
-  return evidenceIndex(evidence / k);
+export const SCORING_POLICY: ScoringPolicy = {"k":12,"caps":{},"styleMax":39,"familyBonus":1,"shortK":12};
+
+export function saturate(evidence: number, k = K): number {
+  return 100 * -Math.expm1(-evidence / k);
 }
+
 interface Counted {
   signal: SlopSignal;
   evidence: MatchEvidence;
@@ -76,8 +94,6 @@ function independentSignals(raw: SlopSignal[], ctx: PostContext, evidence: reado
   }
   occurrences.sort((a, b) =>
     Number(b.entry.kind === 'fingerprint') - Number(a.entry.kind === 'fingerprint')
-    || Number(SCORECARD[b.entry.signal.ruleId]?.gun ?? false) - Number(SCORECARD[a.entry.signal.ruleId]?.gun ?? false)
-    || Number(SCORECARD[b.entry.signal.ruleId]?.tier !== 'vocabulary') - Number(SCORECARD[a.entry.signal.ruleId]?.tier !== 'vocabulary')
     || (b.entry.evidence.baseWeight ?? b.entry.signal.weight) - (a.entry.evidence.baseWeight ?? a.entry.signal.weight)
     || (b.span[1] - b.span[0]) - (a.span[1] - a.span[0])
     || a.entry.signal.ruleId.localeCompare(b.entry.signal.ruleId)
@@ -108,98 +124,59 @@ function independentSignals(raw: SlopSignal[], ctx: PostContext, evidence: reado
   });
 }
 
-export interface EvidenceUnit {
-  signal: SlopSignal;
-  kind: EvidenceKind;
-  count: number;
-  model: EvidenceRule;
-}
+export function scoreSignals(rawSignals: SlopSignal[], ctx: PostContext, evidence: readonly MatchEvidence[] = [], policy = SCORING_POLICY): SlopReport {
+  const independent = independentSignals(rawSignals, ctx, evidence);
+  const phrasePoints = independent.reduce((sum, e) => sum + (e.kind === 'style' ? 0 : e.signal.weight), 0);
+  const counted = independent.filter((e) => !CORROBORATING.has(e.signal.ruleId) || phrasePoints >= 3);
+  const rawPhraseCategory: Partial<Record<SlopCategory, number>> = {};
+  const rawStyleCategory: Partial<Record<SlopCategory, number>> = {};
+  for (const { signal, kind } of counted) {
+    const category = kind === 'style' ? rawStyleCategory : rawPhraseCategory;
+    category[signal.category] = (category[signal.category] ?? 0) + signal.weight;
+  }
 
-/** Shared by the offline fitter and production. Counts are actual surviving
- * occurrences, never a detector's old square-root point multiplier. A post
- * predicate (a list, a cadence, a closing question) is one unit. */
-export function evidenceUnits(raw: SlopSignal[], ctx: PostContext, evidence: readonly MatchEvidence[] = []): EvidenceUnit[] {
-  const candidates: EvidenceUnit[] = [];
-  for (const e of independentSignals(raw, ctx, evidence)) {
-    const model = SCORECARD[e.signal.ruleId] ?? ruleSchema(e.signal.ruleId, e.signal.category, e.evidence.baseWeight ?? e.signal.weight, e.kind, e.evidence.repeat === 'once');
-    if (model.disabled || model.weight <= 0) continue;
-    const count = model.mode === 'post' ? 1 : e.kept.length || e.evidence.spans.length || 1;
-    candidates.push({ signal: e.signal, kind: e.kind, count, model });
+  let phrase = 0; let style = 0;
+  for (const entry of counted) {
+    const signal = entry.signal;
+    const cap = policy.caps[signal.category] ?? CAP[signal.category];
+    const phraseUsed = Math.min(cap, rawPhraseCategory[signal.category] ?? 0);
+    const raw = (entry.kind === 'style' ? rawStyleCategory : rawPhraseCategory)[signal.category]!;
+    // Phrase/fingerprint evidence owns the category budget first. Typography
+    // can use only the remaining capacity, never dilute existing wording.
+    const available = entry.kind === 'style' ? cap - phraseUsed : cap;
+    entry.signal = { ...signal, weight: signal.weight * Math.min(1, available / raw) };
+    if (entry.kind === 'style') style += entry.signal.weight; else phrase += entry.signal.weight;
   }
-  const bundles = new Map<string, EvidenceUnit>();
-  const kept: EvidenceUnit[] = [];
-  for (const e of candidates) {
-    if (!e.model.bundle) { kept.push(e); continue; }
-    const old = bundles.get(e.model.bundle);
-    if (!old || (e.model.priority ?? 0) > (old.model.priority ?? 0)
-      || e.model.priority === old.model.priority && e.signal.ruleId < old.signal.ruleId) bundles.set(e.model.bundle, e);
+  // Weak wording cannot unlock arbitrarily strong typography. Keep the larger
+  // of the style-only index and phrase-supported evidence, so adding a weak
+  // phrase cannot lower an existing style-only index either.
+  const families = new Set(counted.filter(e=>e.kind !== 'style' && e.signal.weight > 0).map(e=>e.signal.category));
+  // The optional corroboration bonus is distributed over visible phrase tells,
+  // so the displayed contributions still sum to the evidence actually used.
+  const bonus = Math.min(2, Math.max(0, families.size - 2) * policy.familyBonus);
+  if (bonus && phrase) {
+    for (const e of counted) if(e.kind !== 'style') e.signal = {...e.signal, weight:e.signal.weight * (phrase + bonus) / phrase};
+    phrase += bonus;
   }
-  return kept.concat([...bundles.values()]);
-}
-
-export function humanExpectation(rule: EvidenceRule, words: number): number {
-  return typeof rule.rate === 'number' ? rule.rate * words : rule.rate[words < 100 ? 0 : words < 250 ? 1 : 2];
-}
-
-export function scoreSignals(rawSignals: SlopSignal[], ctx: PostContext, evidence: readonly MatchEvidence[] = []): SlopReport {
-  const units = evidenceUnits(rawSignals, ctx, evidence);
-  const groups = new Map<string, { raw: number; cap: number; entries: { unit: EvidenceUnit; value: number }[] }>();
-  for (const unit of units) {
-    const phi = Math.max(0, Math.log1p(unit.count) - Math.log1p(humanExpectation(unit.model, ctx.wordCount)));
-    if (!phi) continue;
-    const value = unit.model.weight * phi;
-    let group = groups.get(unit.model.family);
-    if (!group) { group = { raw: 0, cap: unit.model.gun ? GUN_CAP : HABIT_CAP, entries: [] }; groups.set(unit.model.family, group); }
-    group.raw += value;
-    group.entries.push({ unit, value });
-  }
-  let total = 0;
-  let gun = false;
-  let fingerprint = false;
-  let phrase = false;
-  const families = new Set<string>();
-  const signals: SlopSignal[] = [];
-  const fingerprintSignals: SlopSignal[] = [];
-  for (const [family, group] of groups) {
-    const contribution = group.cap * -Math.expm1(-group.raw / group.cap);
-    total += contribution;
-    for (const { unit, value } of group.entries) {
-      gun ||= unit.model.gun;
-      fingerprint ||= unit.kind === 'fingerprint' && unit.model.gun;
-      phrase ||= unit.kind !== 'style';
-      if (!unit.model.gun && unit.model.tier !== 'vocabulary') families.add(family);
-      const signal = { ...unit.signal, weight: contribution * value / group.raw, matches: unit.signal.matches.slice(0, 3) };
-      signals.push(signal);
-      if (unit.kind === 'fingerprint' && unit.model.gun) fingerprintSignals.push(signal);
-    }
-  }
-  // Frozen explicit artifacts keep the historical floor. Allocate its evidence
-  // uplift to the visible artifact; do not invent an unexplained score bonus.
-  if (fingerprint && total < THRESHOLD * (1.5 + Math.LN2)) {
-    const uplift = THRESHOLD * (1.5 + Math.LN2) - total;
-    const raw = fingerprintSignals.reduce((sum, s) => sum + s.weight, 0);
-    for (const s of fingerprintSignals) s.weight += uplift * s.weight / raw;
-    total += uplift;
-  }
-  const eligible = gun || families.size >= 2 && phrase;
-  let index = evidenceIndex(total / THRESHOLD);
-  if (!eligible) index = Math.min(39, index);
-  // Signals carry exact index points after smooth family saturation and index
-  // compression. Rounding is confined to the badge, never individual tells.
-  const ratio = total > 0 ? index / total : 0;
+  const k = ctx.wordCount >= 40 && ctx.wordCount < 100 && counted.length >= 3 && families.size >= 2 ? policy.shortK : policy.k;
+  const styleEvidence = Math.min(style, -k * Math.log1p(-policy.styleMax / 100));
+  const supported = phrase + Math.min(style, phrase);
+  const total = Math.max(styleEvidence, supported);
+  const styleBudget = total - phrase;
+  const styleRatio = style > 0 ? Math.max(0, styleBudget) / style : 0;
   const categoryWeights: Partial<Record<SlopCategory, number>> = {};
-  let topCategory: SlopCategory | null = null;
-  let highest = 0;
-  for (const s of signals) {
-    s.weight *= ratio;
-    categoryWeights[s.category] = (categoryWeights[s.category] ?? 0) + s.weight;
-  }
+  const signals = counted.map((entry) => {
+    const signal = entry.kind === 'style' ? { ...entry.signal, weight: entry.signal.weight * styleRatio } : entry.signal;
+    categoryWeights[signal.category] = (categoryWeights[signal.category] ?? 0) + signal.weight;
+    return { ...signal, matches: signal.matches.slice(0, 3) };
+  }).filter((signal) => signal.weight > 0);
+  let topCategory: SlopCategory | null = null; let highest = 0;
   for (const [category, weight] of Object.entries(categoryWeights) as [SlopCategory, number][]) {
     if (weight > highest || weight === highest && topCategory !== null && category < topCategory) { highest = weight; topCategory = category; }
   }
-  // Floor (rather than round) preserves the calibrated >=40 boundary exactly.
-  const score = Math.max(fingerprint ? FINGERPRINT_FLOOR : 0, Math.min(100, Math.floor(index + 1e-10)));
-  const shameable = score >= 40 && (fingerprint ? ctx.wordCount >= 8 : ctx.wordCount >= 40 && phrase);
+  const fingerprint = counted.some((entry) => entry.kind === 'fingerprint');
+  const score = Math.max(0, Math.min(100, Math.round(Math.max(saturate(total, k), fingerprint ? FINGERPRINT_FLOOR : 0))));
+  const shameable = ctx.wordCount >= 8 && (fingerprint || score >= 40 && phrase >= 4 && ctx.wordCount >= 40);
   signals.sort((a, b) => b.weight - a.weight || a.ruleId.localeCompare(b.ruleId));
   return { score, shameable, tier: tierFor(score), signals, topCategory, categoryWeights, wordCount: ctx.wordCount };
 }

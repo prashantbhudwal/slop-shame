@@ -51,10 +51,7 @@ function customSpans(ctx: PostContext, hit: RuleHit, ruleId: string): [number, n
   return spans.filter((span, i) => !i || span[0] !== spans[i - 1]![0] || span[1] !== spans[i - 1]![1]);
 }
 
-const immutableDictionary = builtInPacks.find(pack => pack.id === 'dictionaries');
-let immutableBuiltIn: { analyze(input: PostInput): SlopReport } | undefined;
 export function createEngine(packs: RulePack[]): { analyze(input: PostInput): SlopReport } {
-  if (packs === builtInPacks && immutableBuiltIn) return immutableBuiltIn;
   const ids = new Set<string>();
   const packIds = new Set<string>();
   const phraseRules: PhraseRule[] = [];
@@ -65,13 +62,6 @@ export function createEngine(packs: RulePack[]): { analyze(input: PostInput): Sl
     if (!NAMESPACE.test(pack.id)) throw new Error(`Invalid pack id "${pack.id}". Use lowercase kebab-case.`);
     if (packIds.has(pack.id)) throw new Error(`Duplicate pack id "${pack.id}".`);
     packIds.add(pack.id);
-    // Generated records are frozen at module evaluation and verified by the
-    // offline pipeline. Reuse them without revalidating/copying 9k records on
-    // every tab; arbitrary contributor packs still receive all validation.
-    if (pack === immutableDictionary) {
-      for (const rule of pack.rules) phraseRules.push(rule as PhraseRule);
-      continue;
-    }
     for (const rule of pack.rules) {
       if (!rule || typeof rule.id !== 'string') throw new Error(`Pack "${pack.id}" has a rule without a string id.`);
       if (!rule.id.startsWith(`${pack.id}.`) || !NAMESPACE.test(rule.id.slice(pack.id.length + 1))) {
@@ -98,7 +88,7 @@ export function createEngine(packs: RulePack[]): { analyze(input: PostInput): Sl
     }
   }
   const matchPhrases = compilePhrases(phraseRules);
-  const engine: { analyze(input: PostInput): SlopReport } = {
+  return {
     analyze(input) {
       const ctx = buildContext(input);
       if (!ctx.wordCount) return scoreSignals([], ctx, []);
@@ -127,8 +117,6 @@ export function createEngine(packs: RulePack[]): { analyze(input: PostInput): Sl
       return scoreSignals(signals, ctx, evidence);
     },
   };
-  if (packs === builtInPacks) immutableBuiltIn = engine;
-  return engine;
 }
 
 let defaultEngine: ReturnType<typeof createEngine> | undefined;

@@ -74,13 +74,4 @@ describe('round 2 visible draft and formula tells',()=>{
  it('does not turn a service offer or a code header into a fingerprint',()=>{
    for(const text of ["Let me know if you'd like to book a table.", '### System\nThe ventilation needs an inspection.', 'Headline: The local shop opens today.'])expect(analyzePost({text:text+'\n'+release}).score).toBeLessThan(40);
  });
- // v2 removes the editorial family bonus and reports actual index points.
- it('accumulates three small families with exact visible contributions',()=>{
-   const ctx=buildContext({text:'alpha beta gamma '+release});
-   const categories=['template-phrases','engagement-bait','hedging'] as const;
-   const report=scoreSignals(categories.map((category,i)=>({ruleId:`test.tell-${i}`,category,label:'Visible test tell',weight:2,matches:[['alpha','beta','gamma'][i]!]})),ctx,
-     [[0,5],[6,10],[11,16]].map(span=>({weight:2,spans:[span as [number,number]],kind:'phrase',baseWeight:2,repeat:'once'})));
-   expect(report.score).toBeGreaterThan(0);
-   expect(Math.floor(report.signals.reduce((sum,s)=>sum+s.weight,0))).toBe(report.score);
- });
 });

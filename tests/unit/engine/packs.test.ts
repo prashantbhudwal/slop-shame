@@ -36,8 +36,8 @@ describe('precision and research guardrails', () => {
   it('maps all 48 upstream types into the ten families', () => {
     expect(Object.keys(UPSTREAM_FAMILIES)).toHaveLength(48);
     expect(new Set(Object.values(UPSTREAM_FAMILIES)).size).toBe(10);
-    expect(packs).toHaveLength(12);
-    expect(packs.filter((pack)=>!['pasted-output','dictionaries'].includes(pack.id)).every((pack) => pack.attribution?.includes('MIT'))).toBe(true);
+    expect(packs).toHaveLength(11);
+    expect(packs.filter((pack)=>pack.id!=='pasted-output').every((pack) => pack.attribution?.includes('MIT'))).toBe(true);
   });
   it('does not score headlines, human genre choices, one emoji, one dash, or thanks', () => {
     const inputs = [

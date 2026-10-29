@@ -1,4 +1,4 @@
-// v2 bundles duplicate descriptions and adjusts exposure; historical exact tier bands are not calibrated boundaries.
+// Historical exact tier bands are not calibrated boundaries.
 import { describe, expect, it } from 'vitest';
 import { analyzePost } from '../../../src/lib/engine';
 import { corpus, holdoutCorpus } from './corpus';
@@ -7,15 +7,13 @@ const probe = (id: string) => corpus.find((post) => post.id === id)!;
 const signalIds = (id: string) => analyzePost(probe(id)).signals.map((signal) => signal.ruleId);
 
 describe('real-feed explainer regressions, using synthetic paraphrases', () => {
-  it.each(['probe-synthetic-cache-explainer', 'probe-synthetic-evaluation-explainer'])('%s retains calibrated evidence and action eligibility', (id) => {
+  it.each(['probe-synthetic-cache-explainer', 'probe-synthetic-evaluation-explainer'])('%s reaches 40 with actionable evidence', (id) => {
     const report = analyzePost(probe(id));
-    // v2 bundles repeated list descriptions; the cache example stays below the independently calibrated accusation threshold.
-    if(id==='probe-synthetic-cache-explainer') { expect(report.score).toBeLessThan(40); expect(report.shameable).toBe(false); expect(report.signals.length).toBeGreaterThan(0); }
-    else { expect(report.score).toBeGreaterThanOrEqual(40); expect(report.shameable).toBe(true); }
+    expect(report.score).toBeGreaterThanOrEqual(40);
+    expect(report.shameable).toBe(true);
   });
   it('recognizes repeated labels and emoji-numbered section headers', () => {
     expect(analyzePost(probe('probe-synthetic-cache-explainer')).signals.some(s=>s.category==='formatting'||/list|field/.test(s.ruleId))).toBe(true);
-    expect(signalIds('probe-synthetic-cache-explainer').filter(id=>['template-phrases.labeled-fields','formatting.section-outline','pasted-output.listicle-hook'].includes(id)).length).toBeLessThanOrEqual(1);
   });
   it('recognizes missing-apostrophe cross-line pivots, arrows, and parallel pairs', () => {
     const ids = signalIds('probe-synthetic-evaluation-explainer');
@@ -27,10 +25,8 @@ describe('real-feed explainer regressions, using synthetic paraphrases', () => {
   it('retains repeated structural evidence as an explainer gets longer', () => {
     const source = probe('probe-synthetic-cache-explainer');
     const report = analyzePost({ text: source.text + '\n' + 'We measured the result and checked the records before making the change. '.repeat(70) });
-    // v2 shows the same construction without multiplying list witnesses into a verdict.
-    expect(report.score).toBeLessThan(40);
-    expect(report.signals.length).toBeGreaterThan(0);
-    expect(report.shameable).toBe(false);
+    expect(report.score).toBeGreaterThanOrEqual(40);
+    expect(report.shameable).toBe(true);
   });
   it('keeps all existing hard human negatives below 20 and ineligible', () => {
     for (const id of ['human-formal-non-native', 'human-casual-dashes', 'human-broetry', 'human-formal-engineering', 'human-typos']) {
