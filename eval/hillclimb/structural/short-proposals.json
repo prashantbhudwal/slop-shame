@@ -1,0 +1,1736 @@
+{
+  "policy": "Predeclared, not fitted: density K=11.5 only at 40–79 words with >=3 counted phrase points; corroboration adds <=0.25 style evidence only at score39/40–79 words/>=4 phrase points and a final prose question or >=2 hashtags. Style support remains bounded by independent phrase points. Neither proposal is implemented.",
+  "datasets": {
+    "train": {
+      "overall": {
+        "rows": 35966,
+        "human": 7166,
+        "ai": 28800,
+        "short39": 9,
+        "short39Phrase6": 6,
+        "short39QuestionOrPair": 0,
+        "score": {
+          "fp": 79,
+          "tp": 3286,
+          "newFP": 0,
+          "addedAI": 0,
+          "shameFP": 73
+        },
+        "density": {
+          "fp": 79,
+          "tp": 3295,
+          "newFP": 0,
+          "addedAI": 9,
+          "shameFP": 73
+        },
+        "corroborated": {
+          "fp": 79,
+          "tp": 3286,
+          "newFP": 0,
+          "addedAI": 0,
+          "shameFP": 73
+        }
+      },
+      "groups": {
+        "abstracts": {
+          "rows": 4638,
+          "human": 1038,
+          "ai": 3600,
+          "short39": 4,
+          "short39Phrase6": 1,
+          "short39QuestionOrPair": 0,
+          "score": {
+            "fp": 17,
+            "tp": 459,
+            "newFP": 0,
+            "addedAI": 0,
+            "shameFP": 11
+          },
+          "density": {
+            "fp": 17,
+            "tp": 463,
+            "newFP": 0,
+            "addedAI": 4,
+            "shameFP": 11
+          },
+          "corroborated": {
+            "fp": 17,
+            "tp": 459,
+            "newFP": 0,
+            "addedAI": 0,
+            "shameFP": 11
+          }
+        },
+        "books": {
+          "rows": 4425,
+          "human": 825,
+          "ai": 3600,
+          "short39": 0,
+          "short39Phrase6": 0,
+          "short39QuestionOrPair": 0,
+          "score": {
+            "fp": 8,
+            "tp": 397,
+            "newFP": 0,
+            "addedAI": 0,
+            "shameFP": 8
+          },
+          "density": {
+            "fp": 8,
+            "tp": 397,
+            "newFP": 0,
+            "addedAI": 0,
+            "shameFP": 8
+          },
+          "corroborated": {
+            "fp": 8,
+            "tp": 397,
+            "newFP": 0,
+            "addedAI": 0,
+            "shameFP": 8
+          }
+        },
+        "news": {
+          "rows": 4494,
+          "human": 894,
+          "ai": 3600,
+          "short39": 0,
+          "short39Phrase6": 0,
+          "short39QuestionOrPair": 0,
+          "score": {
+            "fp": 5,
+            "tp": 452,
+            "newFP": 0,
+            "addedAI": 0,
+            "shameFP": 5
+          },
+          "density": {
+            "fp": 5,
+            "tp": 452,
+            "newFP": 0,
+            "addedAI": 0,
+            "shameFP": 5
+          },
+          "corroborated": {
+            "fp": 5,
+            "tp": 452,
+            "newFP": 0,
+            "addedAI": 0,
+            "shameFP": 5
+          }
+        },
+        "poetry": {
+          "rows": 4540,
+          "human": 940,
+          "ai": 3600,
+          "short39": 1,
+          "short39Phrase6": 1,
+          "short39QuestionOrPair": 0,
+          "score": {
+            "fp": 3,
+            "tp": 488,
+            "newFP": 0,
+            "addedAI": 0,
+            "shameFP": 3
+          },
+          "density": {
+            "fp": 3,
+            "tp": 489,
+            "newFP": 0,
+            "addedAI": 1,
+            "shameFP": 3
+          },
+          "corroborated": {
+            "fp": 3,
+            "tp": 488,
+            "newFP": 0,
+            "addedAI": 0,
+            "shameFP": 3
+          }
+        },
+        "recipes": {
+          "rows": 4584,
+          "human": 984,
+          "ai": 3600,
+          "short39": 0,
+          "short39Phrase6": 0,
+          "short39QuestionOrPair": 0,
+          "score": {
+            "fp": 1,
+            "tp": 8,
+            "newFP": 0,
+            "addedAI": 0,
+            "shameFP": 1
+          },
+          "density": {
+            "fp": 1,
+            "tp": 8,
+            "newFP": 0,
+            "addedAI": 0,
+            "shameFP": 1
+          },
+          "corroborated": {
+            "fp": 1,
+            "tp": 8,
+            "newFP": 0,
+            "addedAI": 0,
+            "shameFP": 1
+          }
+        },
+        "reddit": {
+          "rows": 4649,
+          "human": 1049,
+          "ai": 3600,
+          "short39": 4,
+          "short39Phrase6": 4,
+          "short39QuestionOrPair": 0,
+          "score": {
+            "fp": 5,
+            "tp": 182,
+            "newFP": 0,
+            "addedAI": 0,
+            "shameFP": 5
+          },
+          "density": {
+            "fp": 5,
+            "tp": 186,
+            "newFP": 0,
+            "addedAI": 4,
+            "shameFP": 5
+          },
+          "corroborated": {
+            "fp": 5,
+            "tp": 182,
+            "newFP": 0,
+            "addedAI": 0,
+            "shameFP": 5
+          }
+        },
+        "reviews": {
+          "rows": 4001,
+          "human": 401,
+          "ai": 3600,
+          "short39": 0,
+          "short39Phrase6": 0,
+          "short39QuestionOrPair": 0,
+          "score": {
+            "fp": 30,
+            "tp": 851,
+            "newFP": 0,
+            "addedAI": 0,
+            "shameFP": 30
+          },
+          "density": {
+            "fp": 30,
+            "tp": 851,
+            "newFP": 0,
+            "addedAI": 0,
+            "shameFP": 30
+          },
+          "corroborated": {
+            "fp": 30,
+            "tp": 851,
+            "newFP": 0,
+            "addedAI": 0,
+            "shameFP": 30
+          }
+        },
+        "wiki": {
+          "rows": 4635,
+          "human": 1035,
+          "ai": 3600,
+          "short39": 0,
+          "short39Phrase6": 0,
+          "short39QuestionOrPair": 0,
+          "score": {
+            "fp": 10,
+            "tp": 449,
+            "newFP": 0,
+            "addedAI": 0,
+            "shameFP": 10
+          },
+          "density": {
+            "fp": 10,
+            "tp": 449,
+            "newFP": 0,
+            "addedAI": 0,
+            "shameFP": 10
+          },
+          "corroborated": {
+            "fp": 10,
+            "tp": 449,
+            "newFP": 0,
+            "addedAI": 0,
+            "shameFP": 10
+          }
+        }
+      }
+    },
+    "dev": {
+      "overall": {
+        "rows": 13154,
+        "human": 2354,
+        "ai": 10800,
+        "short39": 4,
+        "short39Phrase6": 2,
+        "short39QuestionOrPair": 1,
+        "score": {
+          "fp": 29,
+          "tp": 1206,
+          "newFP": 0,
+          "addedAI": 0,
+          "shameFP": 26
+        },
+        "density": {
+          "fp": 29,
+          "tp": 1210,
+          "newFP": 0,
+          "addedAI": 4,
+          "shameFP": 26
+        },
+        "corroborated": {
+          "fp": 29,
+          "tp": 1207,
+          "newFP": 0,
+          "addedAI": 1,
+          "shameFP": 26
+        }
+      },
+      "groups": {
+        "abstracts": {
+          "rows": 1654,
+          "human": 304,
+          "ai": 1350,
+          "short39": 0,
+          "short39Phrase6": 0,
+          "short39QuestionOrPair": 0,
+          "score": {
+            "fp": 11,
+            "tp": 174,
+            "newFP": 0,
+            "addedAI": 0,
+            "shameFP": 8
+          },
+          "density": {
+            "fp": 11,
+            "tp": 174,
+            "newFP": 0,
+            "addedAI": 0,
+            "shameFP": 8
+          },
+          "corroborated": {
+            "fp": 11,
+            "tp": 174,
+            "newFP": 0,
+            "addedAI": 0,
+            "shameFP": 8
+          }
+        },
+        "books": {
+          "rows": 1607,
+          "human": 257,
+          "ai": 1350,
+          "short39": 0,
+          "short39Phrase6": 0,
+          "short39QuestionOrPair": 0,
+          "score": {
+            "fp": 3,
+            "tp": 159,
+            "newFP": 0,
+            "addedAI": 0,
+            "shameFP": 3
+          },
+          "density": {
+            "fp": 3,
+            "tp": 159,
+            "newFP": 0,
+            "addedAI": 0,
+            "shameFP": 3
+          },
+          "corroborated": {
+            "fp": 3,
+            "tp": 159,
+            "newFP": 0,
+            "addedAI": 0,
+            "shameFP": 3
+          }
+        },
+        "news": {
+          "rows": 1682,
+          "human": 332,
+          "ai": 1350,
+          "short39": 0,
+          "short39Phrase6": 0,
+          "short39QuestionOrPair": 0,
+          "score": {
+            "fp": 0,
+            "tp": 149,
+            "newFP": 0,
+            "addedAI": 0,
+            "shameFP": 0
+          },
+          "density": {
+            "fp": 0,
+            "tp": 149,
+            "newFP": 0,
+            "addedAI": 0,
+            "shameFP": 0
+          },
+          "corroborated": {
+            "fp": 0,
+            "tp": 149,
+            "newFP": 0,
+            "addedAI": 0,
+            "shameFP": 0
+          }
+        },
+        "poetry": {
+          "rows": 1653,
+          "human": 303,
+          "ai": 1350,
+          "short39": 1,
+          "short39Phrase6": 0,
+          "short39QuestionOrPair": 0,
+          "score": {
+            "fp": 5,
+            "tp": 198,
+            "newFP": 0,
+            "addedAI": 0,
+            "shameFP": 5
+          },
+          "density": {
+            "fp": 5,
+            "tp": 199,
+            "newFP": 0,
+            "addedAI": 1,
+            "shameFP": 5
+          },
+          "corroborated": {
+            "fp": 5,
+            "tp": 198,
+            "newFP": 0,
+            "addedAI": 0,
+            "shameFP": 5
+          }
+        },
+        "recipes": {
+          "rows": 1703,
+          "human": 353,
+          "ai": 1350,
+          "short39": 0,
+          "short39Phrase6": 0,
+          "short39QuestionOrPair": 0,
+          "score": {
+            "fp": 0,
+            "tp": 3,
+            "newFP": 0,
+            "addedAI": 0,
+            "shameFP": 0
+          },
+          "density": {
+            "fp": 0,
+            "tp": 3,
+            "newFP": 0,
+            "addedAI": 0,
+            "shameFP": 0
+          },
+          "corroborated": {
+            "fp": 0,
+            "tp": 3,
+            "newFP": 0,
+            "addedAI": 0,
+            "shameFP": 0
+          }
+        },
+        "reddit": {
+          "rows": 1691,
+          "human": 341,
+          "ai": 1350,
+          "short39": 3,
+          "short39Phrase6": 2,
+          "short39QuestionOrPair": 1,
+          "score": {
+            "fp": 3,
+            "tp": 63,
+            "newFP": 0,
+            "addedAI": 0,
+            "shameFP": 3
+          },
+          "density": {
+            "fp": 3,
+            "tp": 66,
+            "newFP": 0,
+            "addedAI": 3,
+            "shameFP": 3
+          },
+          "corroborated": {
+            "fp": 3,
+            "tp": 64,
+            "newFP": 0,
+            "addedAI": 1,
+            "shameFP": 3
+          }
+        },
+        "reviews": {
+          "rows": 1501,
+          "human": 151,
+          "ai": 1350,
+          "short39": 0,
+          "short39Phrase6": 0,
+          "short39QuestionOrPair": 0,
+          "score": {
+            "fp": 6,
+            "tp": 307,
+            "newFP": 0,
+            "addedAI": 0,
+            "shameFP": 6
+          },
+          "density": {
+            "fp": 6,
+            "tp": 307,
+            "newFP": 0,
+            "addedAI": 0,
+            "shameFP": 6
+          },
+          "corroborated": {
+            "fp": 6,
+            "tp": 307,
+            "newFP": 0,
+            "addedAI": 0,
+            "shameFP": 6
+          }
+        },
+        "wiki": {
+          "rows": 1663,
+          "human": 313,
+          "ai": 1350,
+          "short39": 0,
+          "short39Phrase6": 0,
+          "short39QuestionOrPair": 0,
+          "score": {
+            "fp": 1,
+            "tp": 153,
+            "newFP": 0,
+            "addedAI": 0,
+            "shameFP": 1
+          },
+          "density": {
+            "fp": 1,
+            "tp": 153,
+            "newFP": 0,
+            "addedAI": 0,
+            "shameFP": 1
+          },
+          "corroborated": {
+            "fp": 1,
+            "tp": 153,
+            "newFP": 0,
+            "addedAI": 0,
+            "shameFP": 1
+          }
+        }
+      }
+    },
+    "veto": {
+      "overall": {
+        "rows": 8189,
+        "human": 8189,
+        "ai": 0,
+        "short39": 19,
+        "short39Phrase6": 7,
+        "short39QuestionOrPair": 13,
+        "score": {
+          "fp": 19,
+          "tp": 0,
+          "newFP": 0,
+          "addedAI": 0,
+          "shameFP": 17
+        },
+        "density": {
+          "fp": 36,
+          "tp": 0,
+          "newFP": 17,
+          "addedAI": 0,
+          "shameFP": 24
+        },
+        "corroborated": {
+          "fp": 22,
+          "tp": 0,
+          "newFP": 3,
+          "addedAI": 0,
+          "shameFP": 20
+        }
+      },
+      "groups": {
+        "AJ Wilcox": {
+          "rows": 252,
+          "human": 252,
+          "ai": 0,
+          "short39": 0,
+          "short39Phrase6": 0,
+          "short39QuestionOrPair": 0,
+          "score": {
+            "fp": 0,
+            "tp": 0,
+            "newFP": 0,
+            "addedAI": 0,
+            "shameFP": 0
+          },
+          "density": {
+            "fp": 0,
+            "tp": 0,
+            "newFP": 0,
+            "addedAI": 0,
+            "shameFP": 0
+          },
+          "corroborated": {
+            "fp": 0,
+            "tp": 0,
+            "newFP": 0,
+            "addedAI": 0,
+            "shameFP": 0
+          }
+        },
+        "Andrew Yang": {
+          "rows": 143,
+          "human": 143,
+          "ai": 0,
+          "short39": 2,
+          "short39Phrase6": 1,
+          "short39QuestionOrPair": 0,
+          "score": {
+            "fp": 0,
+            "tp": 0,
+            "newFP": 0,
+            "addedAI": 0,
+            "shameFP": 0
+          },
+          "density": {
+            "fp": 2,
+            "tp": 0,
+            "newFP": 2,
+            "addedAI": 0,
+            "shameFP": 1
+          },
+          "corroborated": {
+            "fp": 0,
+            "tp": 0,
+            "newFP": 0,
+            "addedAI": 0,
+            "shameFP": 0
+          }
+        },
+        "Ben Casselman": {
+          "rows": 42,
+          "human": 42,
+          "ai": 0,
+          "short39": 0,
+          "short39Phrase6": 0,
+          "short39QuestionOrPair": 0,
+          "score": {
+            "fp": 0,
+            "tp": 0,
+            "newFP": 0,
+            "addedAI": 0,
+            "shameFP": 0
+          },
+          "density": {
+            "fp": 0,
+            "tp": 0,
+            "newFP": 0,
+            "addedAI": 0,
+            "shameFP": 0
+          },
+          "corroborated": {
+            "fp": 0,
+            "tp": 0,
+            "newFP": 0,
+            "addedAI": 0,
+            "shameFP": 0
+          }
+        },
+        "Bertalan Meskó, MD, PhD": {
+          "rows": 1624,
+          "human": 1624,
+          "ai": 0,
+          "short39": 3,
+          "short39Phrase6": 1,
+          "short39QuestionOrPair": 3,
+          "score": {
+            "fp": 4,
+            "tp": 0,
+            "newFP": 0,
+            "addedAI": 0,
+            "shameFP": 4
+          },
+          "density": {
+            "fp": 7,
+            "tp": 0,
+            "newFP": 3,
+            "addedAI": 0,
+            "shameFP": 5
+          },
+          "corroborated": {
+            "fp": 5,
+            "tp": 0,
+            "newFP": 1,
+            "addedAI": 0,
+            "shameFP": 5
+          }
+        },
+        "Chris McCann": {
+          "rows": 42,
+          "human": 42,
+          "ai": 0,
+          "short39": 0,
+          "short39Phrase6": 0,
+          "short39QuestionOrPair": 0,
+          "score": {
+            "fp": 0,
+            "tp": 0,
+            "newFP": 0,
+            "addedAI": 0,
+            "shameFP": 0
+          },
+          "density": {
+            "fp": 0,
+            "tp": 0,
+            "newFP": 0,
+            "addedAI": 0,
+            "shameFP": 0
+          },
+          "corroborated": {
+            "fp": 0,
+            "tp": 0,
+            "newFP": 0,
+            "addedAI": 0,
+            "shameFP": 0
+          }
+        },
+        "Gary Frisch": {
+          "rows": 46,
+          "human": 46,
+          "ai": 0,
+          "short39": 0,
+          "short39Phrase6": 0,
+          "short39QuestionOrPair": 0,
+          "score": {
+            "fp": 0,
+            "tp": 0,
+            "newFP": 0,
+            "addedAI": 0,
+            "shameFP": 0
+          },
+          "density": {
+            "fp": 0,
+            "tp": 0,
+            "newFP": 0,
+            "addedAI": 0,
+            "shameFP": 0
+          },
+          "corroborated": {
+            "fp": 0,
+            "tp": 0,
+            "newFP": 0,
+            "addedAI": 0,
+            "shameFP": 0
+          }
+        },
+        "Geoffrey Garrett": {
+          "rows": 136,
+          "human": 136,
+          "ai": 0,
+          "short39": 0,
+          "short39Phrase6": 0,
+          "short39QuestionOrPair": 0,
+          "score": {
+            "fp": 0,
+            "tp": 0,
+            "newFP": 0,
+            "addedAI": 0,
+            "shameFP": 0
+          },
+          "density": {
+            "fp": 0,
+            "tp": 0,
+            "newFP": 0,
+            "addedAI": 0,
+            "shameFP": 0
+          },
+          "corroborated": {
+            "fp": 0,
+            "tp": 0,
+            "newFP": 0,
+            "addedAI": 0,
+            "shameFP": 0
+          }
+        },
+        "Gillian Zoe Segal": {
+          "rows": 6,
+          "human": 6,
+          "ai": 0,
+          "short39": 0,
+          "short39Phrase6": 0,
+          "short39QuestionOrPair": 0,
+          "score": {
+            "fp": 0,
+            "tp": 0,
+            "newFP": 0,
+            "addedAI": 0,
+            "shameFP": 0
+          },
+          "density": {
+            "fp": 0,
+            "tp": 0,
+            "newFP": 0,
+            "addedAI": 0,
+            "shameFP": 0
+          },
+          "corroborated": {
+            "fp": 0,
+            "tp": 0,
+            "newFP": 0,
+            "addedAI": 0,
+            "shameFP": 0
+          }
+        },
+        "Glenn Leibowitz": {
+          "rows": 207,
+          "human": 207,
+          "ai": 0,
+          "short39": 1,
+          "short39Phrase6": 0,
+          "short39QuestionOrPair": 1,
+          "score": {
+            "fp": 1,
+            "tp": 0,
+            "newFP": 0,
+            "addedAI": 0,
+            "shameFP": 1
+          },
+          "density": {
+            "fp": 2,
+            "tp": 0,
+            "newFP": 1,
+            "addedAI": 0,
+            "shameFP": 1
+          },
+          "corroborated": {
+            "fp": 1,
+            "tp": 0,
+            "newFP": 0,
+            "addedAI": 0,
+            "shameFP": 1
+          }
+        },
+        "Hansi Mehrotra": {
+          "rows": 170,
+          "human": 170,
+          "ai": 0,
+          "short39": 0,
+          "short39Phrase6": 0,
+          "short39QuestionOrPair": 0,
+          "score": {
+            "fp": 1,
+            "tp": 0,
+            "newFP": 0,
+            "addedAI": 0,
+            "shameFP": 1
+          },
+          "density": {
+            "fp": 1,
+            "tp": 0,
+            "newFP": 0,
+            "addedAI": 0,
+            "shameFP": 1
+          },
+          "corroborated": {
+            "fp": 1,
+            "tp": 0,
+            "newFP": 0,
+            "addedAI": 0,
+            "shameFP": 1
+          }
+        },
+        "Ian Bremmer": {
+          "rows": 233,
+          "human": 233,
+          "ai": 0,
+          "short39": 1,
+          "short39Phrase6": 0,
+          "short39QuestionOrPair": 1,
+          "score": {
+            "fp": 0,
+            "tp": 0,
+            "newFP": 0,
+            "addedAI": 0,
+            "shameFP": 0
+          },
+          "density": {
+            "fp": 1,
+            "tp": 0,
+            "newFP": 1,
+            "addedAI": 0,
+            "shameFP": 0
+          },
+          "corroborated": {
+            "fp": 0,
+            "tp": 0,
+            "newFP": 0,
+            "addedAI": 0,
+            "shameFP": 0
+          }
+        },
+        "Jody Padar": {
+          "rows": 402,
+          "human": 402,
+          "ai": 0,
+          "short39": 2,
+          "short39Phrase6": 0,
+          "short39QuestionOrPair": 2,
+          "score": {
+            "fp": 1,
+            "tp": 0,
+            "newFP": 0,
+            "addedAI": 0,
+            "shameFP": 0
+          },
+          "density": {
+            "fp": 1,
+            "tp": 0,
+            "newFP": 0,
+            "addedAI": 0,
+            "shameFP": 0
+          },
+          "corroborated": {
+            "fp": 1,
+            "tp": 0,
+            "newFP": 0,
+            "addedAI": 0,
+            "shameFP": 0
+          }
+        },
+        "Julie Kliger": {
+          "rows": 228,
+          "human": 228,
+          "ai": 0,
+          "short39": 1,
+          "short39Phrase6": 1,
+          "short39QuestionOrPair": 0,
+          "score": {
+            "fp": 0,
+            "tp": 0,
+            "newFP": 0,
+            "addedAI": 0,
+            "shameFP": 0
+          },
+          "density": {
+            "fp": 1,
+            "tp": 0,
+            "newFP": 1,
+            "addedAI": 0,
+            "shameFP": 1
+          },
+          "corroborated": {
+            "fp": 0,
+            "tp": 0,
+            "newFP": 0,
+            "addedAI": 0,
+            "shameFP": 0
+          }
+        },
+        "Justin Bariso": {
+          "rows": 358,
+          "human": 358,
+          "ai": 0,
+          "short39": 1,
+          "short39Phrase6": 1,
+          "short39QuestionOrPair": 1,
+          "score": {
+            "fp": 2,
+            "tp": 0,
+            "newFP": 0,
+            "addedAI": 0,
+            "shameFP": 2
+          },
+          "density": {
+            "fp": 3,
+            "tp": 0,
+            "newFP": 1,
+            "addedAI": 0,
+            "shameFP": 3
+          },
+          "corroborated": {
+            "fp": 3,
+            "tp": 0,
+            "newFP": 1,
+            "addedAI": 0,
+            "shameFP": 3
+          }
+        },
+        "Kaia Niambi Shivers Ph.D.": {
+          "rows": 63,
+          "human": 63,
+          "ai": 0,
+          "short39": 0,
+          "short39Phrase6": 0,
+          "short39QuestionOrPair": 0,
+          "score": {
+            "fp": 1,
+            "tp": 0,
+            "newFP": 0,
+            "addedAI": 0,
+            "shameFP": 1
+          },
+          "density": {
+            "fp": 1,
+            "tp": 0,
+            "newFP": 0,
+            "addedAI": 0,
+            "shameFP": 1
+          },
+          "corroborated": {
+            "fp": 1,
+            "tp": 0,
+            "newFP": 0,
+            "addedAI": 0,
+            "shameFP": 1
+          }
+        },
+        "Kevin O'Leary": {
+          "rows": 252,
+          "human": 252,
+          "ai": 0,
+          "short39": 1,
+          "short39Phrase6": 1,
+          "short39QuestionOrPair": 0,
+          "score": {
+            "fp": 0,
+            "tp": 0,
+            "newFP": 0,
+            "addedAI": 0,
+            "shameFP": 0
+          },
+          "density": {
+            "fp": 1,
+            "tp": 0,
+            "newFP": 1,
+            "addedAI": 0,
+            "shameFP": 1
+          },
+          "corroborated": {
+            "fp": 0,
+            "tp": 0,
+            "newFP": 0,
+            "addedAI": 0,
+            "shameFP": 0
+          }
+        },
+        "Marianne Griebler": {
+          "rows": 59,
+          "human": 59,
+          "ai": 0,
+          "short39": 0,
+          "short39Phrase6": 0,
+          "short39QuestionOrPair": 0,
+          "score": {
+            "fp": 0,
+            "tp": 0,
+            "newFP": 0,
+            "addedAI": 0,
+            "shameFP": 0
+          },
+          "density": {
+            "fp": 0,
+            "tp": 0,
+            "newFP": 0,
+            "addedAI": 0,
+            "shameFP": 0
+          },
+          "corroborated": {
+            "fp": 0,
+            "tp": 0,
+            "newFP": 0,
+            "addedAI": 0,
+            "shameFP": 0
+          }
+        },
+        "Mohamed El-Erian": {
+          "rows": 1352,
+          "human": 1352,
+          "ai": 0,
+          "short39": 5,
+          "short39Phrase6": 1,
+          "short39QuestionOrPair": 5,
+          "score": {
+            "fp": 0,
+            "tp": 0,
+            "newFP": 0,
+            "addedAI": 0,
+            "shameFP": 0
+          },
+          "density": {
+            "fp": 5,
+            "tp": 0,
+            "newFP": 5,
+            "addedAI": 0,
+            "shameFP": 1
+          },
+          "corroborated": {
+            "fp": 1,
+            "tp": 0,
+            "newFP": 1,
+            "addedAI": 0,
+            "shameFP": 1
+          }
+        },
+        "Natalie Riso": {
+          "rows": 140,
+          "human": 140,
+          "ai": 0,
+          "short39": 0,
+          "short39Phrase6": 0,
+          "short39QuestionOrPair": 0,
+          "score": {
+            "fp": 0,
+            "tp": 0,
+            "newFP": 0,
+            "addedAI": 0,
+            "shameFP": 0
+          },
+          "density": {
+            "fp": 0,
+            "tp": 0,
+            "newFP": 0,
+            "addedAI": 0,
+            "shameFP": 0
+          },
+          "corroborated": {
+            "fp": 0,
+            "tp": 0,
+            "newFP": 0,
+            "addedAI": 0,
+            "shameFP": 0
+          }
+        },
+        "Rachel Jones": {
+          "rows": 915,
+          "human": 915,
+          "ai": 0,
+          "short39": 0,
+          "short39Phrase6": 0,
+          "short39QuestionOrPair": 0,
+          "score": {
+            "fp": 2,
+            "tp": 0,
+            "newFP": 0,
+            "addedAI": 0,
+            "shameFP": 2
+          },
+          "density": {
+            "fp": 2,
+            "tp": 0,
+            "newFP": 0,
+            "addedAI": 0,
+            "shameFP": 2
+          },
+          "corroborated": {
+            "fp": 2,
+            "tp": 0,
+            "newFP": 0,
+            "addedAI": 0,
+            "shameFP": 2
+          }
+        },
+        "Richard Branson": {
+          "rows": 296,
+          "human": 296,
+          "ai": 0,
+          "short39": 0,
+          "short39Phrase6": 0,
+          "short39QuestionOrPair": 0,
+          "score": {
+            "fp": 0,
+            "tp": 0,
+            "newFP": 0,
+            "addedAI": 0,
+            "shameFP": 0
+          },
+          "density": {
+            "fp": 0,
+            "tp": 0,
+            "newFP": 0,
+            "addedAI": 0,
+            "shameFP": 0
+          },
+          "corroborated": {
+            "fp": 0,
+            "tp": 0,
+            "newFP": 0,
+            "addedAI": 0,
+            "shameFP": 0
+          }
+        },
+        "Russell Benaroya": {
+          "rows": 94,
+          "human": 94,
+          "ai": 0,
+          "short39": 0,
+          "short39Phrase6": 0,
+          "short39QuestionOrPair": 0,
+          "score": {
+            "fp": 0,
+            "tp": 0,
+            "newFP": 0,
+            "addedAI": 0,
+            "shameFP": 0
+          },
+          "density": {
+            "fp": 0,
+            "tp": 0,
+            "newFP": 0,
+            "addedAI": 0,
+            "shameFP": 0
+          },
+          "corroborated": {
+            "fp": 0,
+            "tp": 0,
+            "newFP": 0,
+            "addedAI": 0,
+            "shameFP": 0
+          }
+        },
+        "Simon Owens": {
+          "rows": 17,
+          "human": 17,
+          "ai": 0,
+          "short39": 0,
+          "short39Phrase6": 0,
+          "short39QuestionOrPair": 0,
+          "score": {
+            "fp": 0,
+            "tp": 0,
+            "newFP": 0,
+            "addedAI": 0,
+            "shameFP": 0
+          },
+          "density": {
+            "fp": 0,
+            "tp": 0,
+            "newFP": 0,
+            "addedAI": 0,
+            "shameFP": 0
+          },
+          "corroborated": {
+            "fp": 0,
+            "tp": 0,
+            "newFP": 0,
+            "addedAI": 0,
+            "shameFP": 0
+          }
+        },
+        "Steve Blakeman": {
+          "rows": 13,
+          "human": 13,
+          "ai": 0,
+          "short39": 0,
+          "short39Phrase6": 0,
+          "short39QuestionOrPair": 0,
+          "score": {
+            "fp": 0,
+            "tp": 0,
+            "newFP": 0,
+            "addedAI": 0,
+            "shameFP": 0
+          },
+          "density": {
+            "fp": 0,
+            "tp": 0,
+            "newFP": 0,
+            "addedAI": 0,
+            "shameFP": 0
+          },
+          "corroborated": {
+            "fp": 0,
+            "tp": 0,
+            "newFP": 0,
+            "addedAI": 0,
+            "shameFP": 0
+          }
+        },
+        "String Nguyen": {
+          "rows": 293,
+          "human": 293,
+          "ai": 0,
+          "short39": 0,
+          "short39Phrase6": 0,
+          "short39QuestionOrPair": 0,
+          "score": {
+            "fp": 7,
+            "tp": 0,
+            "newFP": 0,
+            "addedAI": 0,
+            "shameFP": 6
+          },
+          "density": {
+            "fp": 7,
+            "tp": 0,
+            "newFP": 0,
+            "addedAI": 0,
+            "shameFP": 6
+          },
+          "corroborated": {
+            "fp": 7,
+            "tp": 0,
+            "newFP": 0,
+            "addedAI": 0,
+            "shameFP": 6
+          }
+        },
+        "Tom Foremski": {
+          "rows": 84,
+          "human": 84,
+          "ai": 0,
+          "short39": 0,
+          "short39Phrase6": 0,
+          "short39QuestionOrPair": 0,
+          "score": {
+            "fp": 0,
+            "tp": 0,
+            "newFP": 0,
+            "addedAI": 0,
+            "shameFP": 0
+          },
+          "density": {
+            "fp": 0,
+            "tp": 0,
+            "newFP": 0,
+            "addedAI": 0,
+            "shameFP": 0
+          },
+          "corroborated": {
+            "fp": 0,
+            "tp": 0,
+            "newFP": 0,
+            "addedAI": 0,
+            "shameFP": 0
+          }
+        },
+        "Vikram Mansharamani": {
+          "rows": 61,
+          "human": 61,
+          "ai": 0,
+          "short39": 0,
+          "short39Phrase6": 0,
+          "short39QuestionOrPair": 0,
+          "score": {
+            "fp": 0,
+            "tp": 0,
+            "newFP": 0,
+            "addedAI": 0,
+            "shameFP": 0
+          },
+          "density": {
+            "fp": 0,
+            "tp": 0,
+            "newFP": 0,
+            "addedAI": 0,
+            "shameFP": 0
+          },
+          "corroborated": {
+            "fp": 0,
+            "tp": 0,
+            "newFP": 0,
+            "addedAI": 0,
+            "shameFP": 0
+          }
+        },
+        "Yasi Baiani": {
+          "rows": 244,
+          "human": 244,
+          "ai": 0,
+          "short39": 0,
+          "short39Phrase6": 0,
+          "short39QuestionOrPair": 0,
+          "score": {
+            "fp": 0,
+            "tp": 0,
+            "newFP": 0,
+            "addedAI": 0,
+            "shameFP": 0
+          },
+          "density": {
+            "fp": 0,
+            "tp": 0,
+            "newFP": 0,
+            "addedAI": 0,
+            "shameFP": 0
+          },
+          "corroborated": {
+            "fp": 0,
+            "tp": 0,
+            "newFP": 0,
+            "addedAI": 0,
+            "shameFP": 0
+          }
+        },
+        "🏉 Pascal Bouvier": {
+          "rows": 417,
+          "human": 417,
+          "ai": 0,
+          "short39": 2,
+          "short39Phrase6": 1,
+          "short39QuestionOrPair": 0,
+          "score": {
+            "fp": 0,
+            "tp": 0,
+            "newFP": 0,
+            "addedAI": 0,
+            "shameFP": 0
+          },
+          "density": {
+            "fp": 2,
+            "tp": 0,
+            "newFP": 2,
+            "addedAI": 0,
+            "shameFP": 1
+          },
+          "corroborated": {
+            "fp": 0,
+            "tp": 0,
+            "newFP": 0,
+            "addedAI": 0,
+            "shameFP": 0
+          }
+        }
+      }
+    },
+    "loweffort": {
+      "overall": {
+        "rows": 150,
+        "human": 0,
+        "ai": 150,
+        "short39": 15,
+        "short39Phrase6": 15,
+        "short39QuestionOrPair": 5,
+        "score": {
+          "fp": 0,
+          "tp": 11,
+          "newFP": 0,
+          "addedAI": 0,
+          "shameFP": 0
+        },
+        "density": {
+          "fp": 0,
+          "tp": 26,
+          "newFP": 0,
+          "addedAI": 15,
+          "shameFP": 0
+        },
+        "corroborated": {
+          "fp": 0,
+          "tp": 16,
+          "newFP": 0,
+          "addedAI": 5,
+          "shameFP": 0
+        }
+      },
+      "groups": {
+        "gemini-3.8-flash / medium": {
+          "rows": 30,
+          "human": 0,
+          "ai": 30,
+          "short39": 0,
+          "short39Phrase6": 0,
+          "short39QuestionOrPair": 0,
+          "score": {
+            "fp": 0,
+            "tp": 8,
+            "newFP": 0,
+            "addedAI": 0,
+            "shameFP": 0
+          },
+          "density": {
+            "fp": 0,
+            "tp": 8,
+            "newFP": 0,
+            "addedAI": 0,
+            "shameFP": 0
+          },
+          "corroborated": {
+            "fp": 0,
+            "tp": 8,
+            "newFP": 0,
+            "addedAI": 0,
+            "shameFP": 0
+          }
+        },
+        "gpt-5.6-luna / low": {
+          "rows": 30,
+          "human": 0,
+          "ai": 30,
+          "short39": 7,
+          "short39Phrase6": 7,
+          "short39QuestionOrPair": 0,
+          "score": {
+            "fp": 0,
+            "tp": 1,
+            "newFP": 0,
+            "addedAI": 0,
+            "shameFP": 0
+          },
+          "density": {
+            "fp": 0,
+            "tp": 8,
+            "newFP": 0,
+            "addedAI": 7,
+            "shameFP": 0
+          },
+          "corroborated": {
+            "fp": 0,
+            "tp": 1,
+            "newFP": 0,
+            "addedAI": 0,
+            "shameFP": 0
+          }
+        },
+        "gpt-6-luna / low": {
+          "rows": 30,
+          "human": 0,
+          "ai": 30,
+          "short39": 5,
+          "short39Phrase6": 5,
+          "short39QuestionOrPair": 5,
+          "score": {
+            "fp": 0,
+            "tp": 2,
+            "newFP": 0,
+            "addedAI": 0,
+            "shameFP": 0
+          },
+          "density": {
+            "fp": 0,
+            "tp": 7,
+            "newFP": 0,
+            "addedAI": 5,
+            "shameFP": 0
+          },
+          "corroborated": {
+            "fp": 0,
+            "tp": 7,
+            "newFP": 0,
+            "addedAI": 5,
+            "shameFP": 0
+          }
+        },
+        "gpt-6-luna / medium": {
+          "rows": 30,
+          "human": 0,
+          "ai": 30,
+          "short39": 3,
+          "short39Phrase6": 3,
+          "short39QuestionOrPair": 0,
+          "score": {
+            "fp": 0,
+            "tp": 0,
+            "newFP": 0,
+            "addedAI": 0,
+            "shameFP": 0
+          },
+          "density": {
+            "fp": 0,
+            "tp": 3,
+            "newFP": 0,
+            "addedAI": 3,
+            "shameFP": 0
+          },
+          "corroborated": {
+            "fp": 0,
+            "tp": 0,
+            "newFP": 0,
+            "addedAI": 0,
+            "shameFP": 0
+          }
+        },
+        "gpt-6.1-sol / low": {
+          "rows": 30,
+          "human": 0,
+          "ai": 30,
+          "short39": 0,
+          "short39Phrase6": 0,
+          "short39QuestionOrPair": 0,
+          "score": {
+            "fp": 0,
+            "tp": 0,
+            "newFP": 0,
+            "addedAI": 0,
+            "shameFP": 0
+          },
+          "density": {
+            "fp": 0,
+            "tp": 0,
+            "newFP": 0,
+            "addedAI": 0,
+            "shameFP": 0
+          },
+          "corroborated": {
+            "fp": 0,
+            "tp": 0,
+            "newFP": 0,
+            "addedAI": 0,
+            "shameFP": 0
+          }
+        }
+      }
+    },
+    "modern": {
+      "overall": {
+        "rows": 120,
+        "human": 0,
+        "ai": 120,
+        "short39": 0,
+        "short39Phrase6": 0,
+        "short39QuestionOrPair": 0,
+        "score": {
+          "fp": 0,
+          "tp": 5,
+          "newFP": 0,
+          "addedAI": 0,
+          "shameFP": 0
+        },
+        "density": {
+          "fp": 0,
+          "tp": 5,
+          "newFP": 0,
+          "addedAI": 0,
+          "shameFP": 0
+        },
+        "corroborated": {
+          "fp": 0,
+          "tp": 5,
+          "newFP": 0,
+          "addedAI": 0,
+          "shameFP": 0
+        }
+      },
+      "groups": {
+        "claude-opus-5-5": {
+          "rows": 30,
+          "human": 0,
+          "ai": 30,
+          "short39": 0,
+          "short39Phrase6": 0,
+          "short39QuestionOrPair": 0,
+          "score": {
+            "fp": 0,
+            "tp": 2,
+            "newFP": 0,
+            "addedAI": 0,
+            "shameFP": 0
+          },
+          "density": {
+            "fp": 0,
+            "tp": 2,
+            "newFP": 0,
+            "addedAI": 0,
+            "shameFP": 0
+          },
+          "corroborated": {
+            "fp": 0,
+            "tp": 2,
+            "newFP": 0,
+            "addedAI": 0,
+            "shameFP": 0
+          }
+        },
+        "gemini-3.8-flash": {
+          "rows": 30,
+          "human": 0,
+          "ai": 30,
+          "short39": 0,
+          "short39Phrase6": 0,
+          "short39QuestionOrPair": 0,
+          "score": {
+            "fp": 0,
+            "tp": 2,
+            "newFP": 0,
+            "addedAI": 0,
+            "shameFP": 0
+          },
+          "density": {
+            "fp": 0,
+            "tp": 2,
+            "newFP": 0,
+            "addedAI": 0,
+            "shameFP": 0
+          },
+          "corroborated": {
+            "fp": 0,
+            "tp": 2,
+            "newFP": 0,
+            "addedAI": 0,
+            "shameFP": 0
+          }
+        },
+        "gpt-6.1-sol": {
+          "rows": 30,
+          "human": 0,
+          "ai": 30,
+          "short39": 0,
+          "short39Phrase6": 0,
+          "short39QuestionOrPair": 0,
+          "score": {
+            "fp": 0,
+            "tp": 0,
+            "newFP": 0,
+            "addedAI": 0,
+            "shameFP": 0
+          },
+          "density": {
+            "fp": 0,
+            "tp": 0,
+            "newFP": 0,
+            "addedAI": 0,
+            "shameFP": 0
+          },
+          "corroborated": {
+            "fp": 0,
+            "tp": 0,
+            "newFP": 0,
+            "addedAI": 0,
+            "shameFP": 0
+          }
+        },
+        "grok-4.7": {
+          "rows": 30,
+          "human": 0,
+          "ai": 30,
+          "short39": 0,
+          "short39Phrase6": 0,
+          "short39QuestionOrPair": 0,
+          "score": {
+            "fp": 0,
+            "tp": 1,
+            "newFP": 0,
+            "addedAI": 0,
+            "shameFP": 0
+          },
+          "density": {
+            "fp": 0,
+            "tp": 1,
+            "newFP": 0,
+            "addedAI": 0,
+            "shameFP": 0
+          },
+          "corroborated": {
+            "fp": 0,
+            "tp": 1,
+            "newFP": 0,
+            "addedAI": 0,
+            "shameFP": 0
+          }
+        }
+      }
+    }
+  }
+}
