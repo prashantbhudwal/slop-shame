@@ -38,10 +38,10 @@ button (a funny generated shame card for the post's author).
   or category because of one aggregate metric.
 - Scraped LinkedIn text (Kaggle 2021, Wayback) is for false-alarm checks and
   threshold setting only: never for weights, never committed or shipped.
-- **The engine in `src/lib/engine/` is the v2 experiment, which was rejected**
-  (it caught 7/351 fresh slop posts against round 2's 61). The shipped
-  round-2 engine isn't in git yet. Don't build a release from the v2 engine,
-  and don't tune on the final eval sets.
+- **Two engines.** On `master`, `src/lib/engine/` is the v2 experiment, which
+  was rejected (it caught 7/351 fresh slop posts against round 2's 61). Branch
+  `round2-engine` is `master` with the shipped round-2 engine. Build releases
+  from `round2-engine` only, and don't tune on the final eval sets.
 
 ## Stack
 

@@ -43,19 +43,29 @@ pnpm build        # → .output/chrome-mv3, then "Load unpacked" in chrome://ext
 ```
 
 All of these pass on a fresh clone with no extra data (checked 2026-10-29):
-0 type errors, 714 unit tests, and 25 e2e tests (1 skipped). The e2e suite uses synthetic fixtures and never
+0 type errors, 714 unit tests on `master` and 656 on `round2-engine`, and 25 e2e
+tests (1 skipped) on both. The round-2 engine is a little slower, so its timing
+tests can fail when the machine is busy; `pnpm test --maxWorkers=1` passes. The e2e suite uses synthetic fixtures and never
 logs in to LinkedIn.
 
 ## Where things stand
 
+- **Use the `round2-engine` branch to build what Prashant runs.** It is
+  `master` with the shipped round-2 engine in `src/lib/engine/`,
+  byte-identical to the engine in his installed build. Everything outside the
+  engine matches `master`, so it also carries the 9 review fixes below.
+  Results for round 2 are in `eval/round2/REPORT.md`.
+
+  ```bash
+  git switch round2-engine
+  pnpm build
+  ```
 - **The engine on `master` is the rejected v2 experiment.** Classifier v2
   (`src/lib/engine/scorecard.ts`, `compiled-literals.ts`, the tiered
   dictionaries) failed its final comparison: it caught 7 of 351 fresh slop
-  posts, against 61 for the round-2 engine. Builds from `master` therefore
-  badge far fewer posts than the version Prashant runs.
-- **The round-2 engine (what actually shipped) is not in git yet.** It lives in
-  a gitignored snapshot on Prashant's machine. Ask him for it before doing
-  scoring work or building a release. Results are in `eval/round2/REPORT.md`.
+  posts, against 61 for round 2. Builds from `master` badge far fewer posts.
+  It stays on `master` as a record of the experiment until Prashant decides
+  which engine `master` should carry.
 - **Feed UI works:** action-bar chip, avatar ring and monster, Drip Edge along
   the top of the card, Destroy, Shame cards, and a slop summary on author
   activity pages.
@@ -116,8 +126,8 @@ Some committed experiment scripts under `eval/` import files from
 
 ## Good next steps
 
-1. Get the round-2 engine into git and make it the base again (or decide with
-   Prashant what replaces it).
+1. Decide with Prashant whether `round2-engine` should replace the engine on
+   `master`.
 2. Check the adversarial-review fixes on the live feed.
 3. Fix the stale parts of `README.md`.
 4. Scoring: FINDINGS §5 lists the giveaways human readers spot that our rules

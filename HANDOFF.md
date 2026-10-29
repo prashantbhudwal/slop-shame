@@ -505,3 +505,17 @@ INTENTIONS 28–29. Frontend only: no engine, eval, data or dictionary files tou
   1 skipped.
 - Gap: `src/lib/engine` on master is the rejected v2; the shipped round-2
   engine (`data/eval/raw/v2/engine-r2`) is still only local.
+
+## Round-2 engine pushed as a branch — 2026-10-29
+
+- Branch `round2-engine` is master with `src/lib/engine` replaced by
+  `data/eval/raw/v2/engine-r2`, byte-identical to the engine in the installed
+  `mvp-20261021T103441Z` build source. Non-engine code is master, so it adds the
+  nine adversarial-review fixes the installed build lacks.
+- Tests: removed v2-only `inflate`, `score` and `scorecard` test files; put
+  three v2-rewritten assertions back to round-2 behaviour (11 packs, no
+  exact-sum check, explainer probes reach 40).
+- Validation on the branch: `pnpm check` 0 errors; `pnpm test --maxWorkers=1`
+  656 passed, 1 skipped (timing tests can fail under parallel load); e2e 25
+  passed, 1 skipped. Content script 287 kB (installed: 286 kB). Not installed
+  to `~/slop-shame-extension` and not checked on live LinkedIn.
