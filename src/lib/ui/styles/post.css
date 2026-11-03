@@ -172,7 +172,7 @@ img { display: block; user-select: none; -webkit-user-drag: none; }
   text-transform: uppercase;
   white-space: nowrap;
 }
-.close {
+.panel .close {
   align-self: flex-start;
   width: 24px;
   height: 24px;
@@ -184,12 +184,12 @@ img { display: block; user-select: none; -webkit-user-drag: none; }
   line-height: 1;
   cursor: pointer;
 }
-.close:hover { background: var(--ss-panel); color: var(--ss-text); }
+.panel .close:hover { background: var(--ss-panel); color: var(--ss-text); }
 .blurb { margin: 8px 0 6px; color: var(--ss-muted); font-style: italic; }
 .why { margin: 6px 0 2px; font-size: 10px; font-weight: 900; letter-spacing: 0.09em; text-transform: uppercase; color: var(--ss-muted); }
 .sigs { margin: 0; padding: 0; list-style: none; display: grid; gap: 2px; }
-.sig { display: grid; grid-template-columns: 28px 1fr; column-gap: 8px; align-items: center; padding: 3px 0; }
-.sig .cat { width: 28px; height: 28px; grid-row: span 2; }
+.panel .sig { display: grid; grid-template-columns: 28px 1fr; column-gap: 8px; align-items: center; padding: 3px 0; }
+.panel .sig .cat { width: 28px; height: 28px; grid-row: span 2; }
 .sig-label { font-weight: 800; }
 .sig-quote { color: var(--ss-muted); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 .sig-quote q { color: var(--ss-text); font-style: italic; quotes: '“' '”'; }

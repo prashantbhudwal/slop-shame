@@ -373,6 +373,22 @@ test('Shame opens the modal in every layout, with no leftover slots', async ({ p
     if (layout && !seen.has(layout)) {
       seen.add(layout);
       await page.waitForTimeout(1000); // slam + stamp
+      const close = modal.locator('.toolbar').getByRole('button', { name: 'Close', exact: true });
+      expect(await close.evaluate((button) => button.scrollWidth <= button.clientWidth)).toBe(true);
+      if (layout === 'certificate') {
+        const signatures = modal.locator('.certificate .sig');
+        await expect(signatures).toHaveCount(2);
+        for (const signature of await signatures.all()) {
+          const script = (await signature.locator('.script').boundingBox())!;
+          const line = (await signature.locator('.line').boundingBox())!;
+          expect(line.y).toBeGreaterThanOrEqual(script.y + script.height - 1);
+        }
+        expect(await modal.locator('.script.date').evaluate((date) => {
+          const range = document.createRange();
+          range.selectNodeContents(date);
+          return range.getClientRects().length;
+        })).toBe(1);
+      }
       await page.locator('.dialog').screenshot({ path: `${SHOTS}/shame-${layout}.png` });
       const download = page.waitForEvent('download');
       await page.getByRole('button', { name: 'Download image' }).click();
